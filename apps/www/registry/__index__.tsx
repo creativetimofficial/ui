@@ -658,6 +658,258 @@ export const Index: Record<string, any> = {
     categories: ["blog-sections"],
     meta: {"iframeHeight":"700px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component"},
   },
+  "simple-product-details-01": {
+    name: "simple-product-details-01",
+    description: "Simple product details grid",
+    type: "registry:block",
+    registryDependencies: ["button","card"],
+    files: [{
+      path: "registry/elevenlabs-ui/blocks/simple-product-details-01/page.tsx",
+      type: "registry:page",
+      target: "app/simple-product-details/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/elevenlabs-ui/blocks/simple-product-details-01/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["ecommerce"],
+    meta: {"iframeHeight":"1000px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component"},
+  },
+  "grid-ecommerce-01": {
+    name: "grid-ecommerce-01",
+    description: "Product grid with filters",
+    type: "registry:block",
+    registryDependencies: ["button","card","select"],
+    files: [{
+      path: "registry/elevenlabs-ui/blocks/grid-ecommerce-01/page.tsx",
+      type: "registry:page",
+      target: "app/grid-ecommerce/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/elevenlabs-ui/blocks/grid-ecommerce-01/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["ecommerce"],
+    meta: {"iframeHeight":"1200px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component"},
+  },
+  "promotional-cards-01": {
+    name: "promotional-cards-01",
+    description: "Promotional product cards",
+    type: "registry:block",
+    registryDependencies: ["button","card"],
+    files: [{
+      path: "registry/elevenlabs-ui/blocks/promotional-cards-01/page.tsx",
+      type: "registry:page",
+      target: "app/promotional-cards/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/elevenlabs-ui/blocks/promotional-cards-01/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["ecommerce"],
+    meta: {"iframeHeight":"800px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component"},
+  },
+  "order-history-01": {
+    name: "order-history-01",
+    description: "Order history table",
+    type: "registry:block",
+    registryDependencies: ["badge","button","card"],
+    files: [{
+      path: "registry/elevenlabs-ui/blocks/order-history-01/page.tsx",
+      type: "registry:page",
+      target: "app/order-history/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/elevenlabs-ui/blocks/order-history-01/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["ecommerce"],
+    meta: {"iframeHeight":"1000px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component"},
+  },
+  "empty-shopping-cart-01": {
+    name: "empty-shopping-cart-01",
+    description: "Empty shopping cart state",
+    type: "registry:block",
+    registryDependencies: ["button"],
+    files: [{
+      path: "registry/elevenlabs-ui/blocks/empty-shopping-cart-01/page.tsx",
+      type: "registry:page",
+      target: "app/empty-shopping-cart/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/elevenlabs-ui/blocks/empty-shopping-cart-01/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["ecommerce"],
+    meta: {"iframeHeight":"800px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component"},
+  },
+  "digital-product-overview-01": {
+    name: "digital-product-overview-01",
+    description: "Digital product with plan options",
+    type: "registry:block",
+    registryDependencies: ["button","label","radio-group"],
+    files: [{
+      path: "registry/elevenlabs-ui/blocks/digital-product-overview-01/page.tsx",
+      type: "registry:page",
+      target: "app/digital-product-overview/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/elevenlabs-ui/blocks/digital-product-overview-01/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["ecommerce"],
+    meta: {"iframeHeight":"1000px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component"},
+  },
+  "product-description-01": {
+    name: "product-description-01",
+    description: "Product description with gallery",
+    type: "registry:block",
+    registryDependencies: ["button"],
+    files: [{
+      path: "registry/elevenlabs-ui/blocks/product-description-01/page.tsx",
+      type: "registry:page",
+      target: "app/product-description/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/elevenlabs-ui/blocks/product-description-01/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["ecommerce"],
+    meta: {"iframeHeight":"1200px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component"},
+  },
+  "dark-product-overview-01": {
+    name: "dark-product-overview-01",
+    description: "Dark themed product overview",
+    type: "registry:block",
+    registryDependencies: ["button","tabs"],
+    files: [{
+      path: "registry/elevenlabs-ui/blocks/dark-product-overview-01/page.tsx",
+      type: "registry:page",
+      target: "app/dark-product-overview/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/elevenlabs-ui/blocks/dark-product-overview-01/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["ecommerce"],
+    meta: {"iframeHeight":"1000px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component"},
+  },
+  "shopping-cart-01": {
+    name: "shopping-cart-01",
+    description: "Shopping cart with summary",
+    type: "registry:block",
+    registryDependencies: ["button","card","input","select"],
+    files: [{
+      path: "registry/elevenlabs-ui/blocks/shopping-cart-01/page.tsx",
+      type: "registry:page",
+      target: "app/shopping-cart/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/elevenlabs-ui/blocks/shopping-cart-01/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["ecommerce"],
+    meta: {"iframeHeight":"1100px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component"},
+  },
+  "checkout-01": {
+    name: "checkout-01",
+    description: "Checkout form with order summary",
+    type: "registry:block",
+    registryDependencies: ["button","checkbox","input","label"],
+    files: [{
+      path: "registry/elevenlabs-ui/blocks/checkout-01/page.tsx",
+      type: "registry:page",
+      target: "app/checkout/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/elevenlabs-ui/blocks/checkout-01/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["ecommerce"],
+    meta: {"iframeHeight":"900px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component"},
+  },
+  "complex-product-description-01": {
+    name: "complex-product-description-01",
+    description: "Product description with accordion",
+    type: "registry:block",
+    registryDependencies: ["accordion","button"],
+    files: [{
+      path: "registry/elevenlabs-ui/blocks/complex-product-description-01/page.tsx",
+      type: "registry:page",
+      target: "app/complex-product-description/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/elevenlabs-ui/blocks/complex-product-description-01/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["ecommerce"],
+    meta: {"iframeHeight":"1200px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component"},
+  },
+  "interactive-product-preview-01": {
+    name: "interactive-product-preview-01",
+    description: "Interactive room product preview",
+    type: "registry:block",
+    registryDependencies: ["button"],
+    files: [{
+      path: "registry/elevenlabs-ui/blocks/interactive-product-preview-01/page.tsx",
+      type: "registry:page",
+      target: "app/interactive-product-preview/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/elevenlabs-ui/blocks/interactive-product-preview-01/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["ecommerce"],
+    meta: {"iframeHeight":"1100px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component"},
+  },
+  "order-details-01": {
+    name: "order-details-01",
+    description: "Order details with timeline",
+    type: "registry:block",
+    registryDependencies: ["button","card"],
+    files: [{
+      path: "registry/elevenlabs-ui/blocks/order-details-01/page.tsx",
+      type: "registry:page",
+      target: "app/order-details/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/elevenlabs-ui/blocks/order-details-01/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["ecommerce"],
+    meta: {"iframeHeight":"1000px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component"},
+  },
+  "product-details-01": {
+    name: "product-details-01",
+    description: "Product details with image carousel",
+    type: "registry:block",
+    registryDependencies: ["button","card"],
+    files: [{
+      path: "registry/elevenlabs-ui/blocks/product-details-01/page.tsx",
+      type: "registry:page",
+      target: "app/product-details/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/elevenlabs-ui/blocks/product-details-01/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["ecommerce"],
+    meta: {"iframeHeight":"1000px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component"},
+  },
   "use-mobile": {
     name: "use-mobile",
     description: "",
