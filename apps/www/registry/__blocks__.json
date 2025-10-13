@@ -103,5 +103,75 @@
     "name": "large-blog-preview-01",
     "description": "Large blog post preview",
     "categories": ["blog-sections"]
+  },
+  {
+    "name": "simple-product-details-01",
+    "description": "Simple product details grid",
+    "categories": ["ecommerce"]
+  },
+  {
+    "name": "grid-ecommerce-01",
+    "description": "Product grid with filters",
+    "categories": ["ecommerce"]
+  },
+  {
+    "name": "promotional-cards-01",
+    "description": "Promotional product cards",
+    "categories": ["ecommerce"]
+  },
+  {
+    "name": "order-history-01",
+    "description": "Order history table",
+    "categories": ["ecommerce"]
+  },
+  {
+    "name": "empty-shopping-cart-01",
+    "description": "Empty shopping cart state",
+    "categories": ["ecommerce"]
+  },
+  {
+    "name": "digital-product-overview-01",
+    "description": "Digital product with plan options",
+    "categories": ["ecommerce"]
+  },
+  {
+    "name": "product-description-01",
+    "description": "Product description with gallery",
+    "categories": ["ecommerce"]
+  },
+  {
+    "name": "dark-product-overview-01",
+    "description": "Dark themed product overview",
+    "categories": ["ecommerce"]
+  },
+  {
+    "name": "shopping-cart-01",
+    "description": "Shopping cart with summary",
+    "categories": ["ecommerce"]
+  },
+  {
+    "name": "checkout-01",
+    "description": "Checkout form with order summary",
+    "categories": ["ecommerce"]
+  },
+  {
+    "name": "complex-product-description-01",
+    "description": "Product description with accordion",
+    "categories": ["ecommerce"]
+  },
+  {
+    "name": "interactive-product-preview-01",
+    "description": "Interactive room product preview",
+    "categories": ["ecommerce"]
+  },
+  {
+    "name": "order-details-01",
+    "description": "Order details with timeline",
+    "categories": ["ecommerce"]
+  },
+  {
+    "name": "product-details-01",
+    "description": "Product details with image carousel",
+    "categories": ["ecommerce"]
   }
 ]
