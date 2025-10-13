@@ -2,176 +2,246 @@
   {
     "name": "speaker-01",
     "description": "EL-01 Speaker",
-    "categories": ["audio"]
+    "categories": [
+      "audio"
+    ]
   },
   {
     "name": "transcriber-01",
     "description": "Transcriber",
-    "categories": ["audio"]
+    "categories": [
+      "audio"
+    ]
   },
   {
     "name": "voice-chat-01",
     "description": "Voice chat 1",
-    "categories": ["agents"]
+    "categories": [
+      "agents"
+    ]
   },
   {
     "name": "voice-chat-02",
     "description": "Voice chat 2",
-    "categories": ["agents"]
+    "categories": [
+      "agents"
+    ]
   },
   {
     "name": "voice-chat-03",
     "description": "Voice chat 3",
-    "categories": ["agents"]
+    "categories": [
+      "agents"
+    ]
   },
   {
     "name": "music-player-01",
     "description": "Music player with playlist",
-    "categories": ["audio"]
+    "categories": [
+      "audio"
+    ]
   },
   {
     "name": "music-player-02",
     "description": "Simple music player",
-    "categories": ["audio"]
+    "categories": [
+      "audio"
+    ]
   },
   {
     "name": "voice-form-01",
     "description": "Voice-fill form",
-    "categories": ["audio"]
+    "categories": [
+      "audio"
+    ]
   },
   {
     "name": "voice-nav-01",
     "description": "Voice-nav site navigation",
-    "categories": ["audio"]
+    "categories": [
+      "audio"
+    ]
   },
   {
     "name": "software-purchase-01",
     "description": "Software purchase approval card",
-    "categories": ["forms"]
+    "categories": [
+      "forms"
+    ]
   },
   {
     "name": "billing-information-01",
     "description": "Billing information management",
-    "categories": ["billing"]
+    "categories": [
+      "billing"
+    ]
   },
   {
     "name": "card-display-01",
     "description": "Credit card display",
-    "categories": ["billing"]
+    "categories": [
+      "billing"
+    ]
   },
   {
     "name": "payment-method-01",
     "description": "Payment methods management",
-    "categories": ["billing"]
+    "categories": [
+      "billing"
+    ]
   },
   {
     "name": "transaction-history-01",
     "description": "Transaction history with date picker",
-    "categories": ["billing"]
+    "categories": [
+      "billing"
+    ]
   },
   {
     "name": "invoices-01",
     "description": "Invoices list with status badges",
-    "categories": ["billing"]
+    "categories": [
+      "billing"
+    ]
   },
   {
     "name": "simple-blog-content-01",
     "description": "Simple blog content cards",
-    "categories": ["blog-sections"]
+    "categories": [
+      "blog-sections"
+    ]
   },
   {
     "name": "blog-cards-layout-01",
     "description": "Blog cards with view more button",
-    "categories": ["blog-sections"]
+    "categories": [
+      "blog-sections"
+    ]
   },
   {
     "name": "blog-post-preview-tags-01",
     "description": "Blog posts with tags",
-    "categories": ["blog-sections"]
+    "categories": [
+      "blog-sections"
+    ]
   },
   {
     "name": "highlighted-blog-posts-01",
     "description": "Highlighted blog posts with icons",
-    "categories": ["blog-sections"]
+    "categories": [
+      "blog-sections"
+    ]
   },
   {
     "name": "blog-rectangular-images-01",
     "description": "Blog posts with rectangular images",
-    "categories": ["blog-sections"]
+    "categories": [
+      "blog-sections"
+    ]
   },
   {
     "name": "large-blog-preview-01",
     "description": "Large blog post preview",
-    "categories": ["blog-sections"]
+    "categories": [
+      "blog-sections"
+    ]
   },
   {
     "name": "simple-product-details-01",
     "description": "Simple product details grid",
-    "categories": ["ecommerce"]
+    "categories": [
+      "ecommerce"
+    ]
   },
   {
     "name": "grid-ecommerce-01",
     "description": "Product grid with filters",
-    "categories": ["ecommerce"]
+    "categories": [
+      "ecommerce"
+    ]
   },
   {
     "name": "promotional-cards-01",
     "description": "Promotional product cards",
-    "categories": ["ecommerce"]
+    "categories": [
+      "ecommerce"
+    ]
   },
   {
     "name": "order-history-01",
     "description": "Order history table",
-    "categories": ["ecommerce"]
+    "categories": [
+      "ecommerce"
+    ]
   },
   {
     "name": "empty-shopping-cart-01",
     "description": "Empty shopping cart state",
-    "categories": ["ecommerce"]
+    "categories": [
+      "ecommerce"
+    ]
   },
   {
     "name": "digital-product-overview-01",
     "description": "Digital product with plan options",
-    "categories": ["ecommerce"]
+    "categories": [
+      "ecommerce"
+    ]
   },
   {
     "name": "product-description-01",
     "description": "Product description with gallery",
-    "categories": ["ecommerce"]
+    "categories": [
+      "ecommerce"
+    ]
   },
   {
     "name": "dark-product-overview-01",
     "description": "Dark themed product overview",
-    "categories": ["ecommerce"]
+    "categories": [
+      "ecommerce"
+    ]
   },
   {
     "name": "shopping-cart-01",
     "description": "Shopping cart with summary",
-    "categories": ["ecommerce"]
+    "categories": [
+      "ecommerce"
+    ]
   },
   {
     "name": "checkout-01",
     "description": "Checkout form with order summary",
-    "categories": ["ecommerce"]
+    "categories": [
+      "ecommerce"
+    ]
   },
   {
     "name": "complex-product-description-01",
     "description": "Product description with accordion",
-    "categories": ["ecommerce"]
+    "categories": [
+      "ecommerce"
+    ]
   },
   {
     "name": "interactive-product-preview-01",
     "description": "Interactive room product preview",
-    "categories": ["ecommerce"]
+    "categories": [
+      "ecommerce"
+    ]
   },
   {
     "name": "order-details-01",
     "description": "Order details with timeline",
-    "categories": ["ecommerce"]
+    "categories": [
+      "ecommerce"
+    ]
   },
   {
     "name": "product-details-01",
     "description": "Product details with image carousel",
-    "categories": ["ecommerce"]
+    "categories": [
+      "ecommerce"
+    ]
   }
 ]
