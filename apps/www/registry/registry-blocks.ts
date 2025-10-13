@@ -386,4 +386,124 @@ export const blocks: Registry["items"] = [
     },
     categories: ["billing"],
   },
+  {
+    name: "simple-blog-content-01",
+    description: "Simple blog content cards",
+    type: "registry:block",
+    registryDependencies: ["avatar", "badge", "card"],
+    files: [
+      {
+        path: "blocks/simple-blog-content-01/page.tsx",
+        type: "registry:page",
+        target: "app/simple-blog-content/page.tsx",
+      },
+    ],
+    meta: {
+      iframeHeight: "800px",
+      container:
+        "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
+      mobile: "component",
+    },
+    categories: ["blog-sections"],
+  },
+  {
+    name: "blog-cards-layout-01",
+    description: "Blog cards with view more button",
+    type: "registry:block",
+    registryDependencies: ["avatar", "badge", "button", "card"],
+    files: [
+      {
+        path: "blocks/blog-cards-layout-01/page.tsx",
+        type: "registry:page",
+        target: "app/blog-cards-layout/page.tsx",
+      },
+    ],
+    meta: {
+      iframeHeight: "1200px",
+      container:
+        "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
+      mobile: "component",
+    },
+    categories: ["blog-sections"],
+  },
+  {
+    name: "blog-post-preview-tags-01",
+    description: "Blog posts with tags",
+    type: "registry:block",
+    registryDependencies: ["badge", "button"],
+    files: [
+      {
+        path: "blocks/blog-post-preview-tags-01/page.tsx",
+        type: "registry:page",
+        target: "app/blog-post-preview-tags/page.tsx",
+      },
+    ],
+    meta: {
+      iframeHeight: "1100px",
+      container:
+        "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
+      mobile: "component",
+    },
+    categories: ["blog-sections"],
+  },
+  {
+    name: "highlighted-blog-posts-01",
+    description: "Highlighted blog posts with icons",
+    type: "registry:block",
+    registryDependencies: ["button", "card"],
+    files: [
+      {
+        path: "blocks/highlighted-blog-posts-01/page.tsx",
+        type: "registry:page",
+        target: "app/highlighted-blog-posts/page.tsx",
+      },
+    ],
+    meta: {
+      iframeHeight: "800px",
+      container:
+        "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
+      mobile: "component",
+    },
+    categories: ["blog-sections"],
+  },
+  {
+    name: "blog-rectangular-images-01",
+    description: "Blog posts with rectangular images",
+    type: "registry:block",
+    registryDependencies: ["avatar", "badge"],
+    files: [
+      {
+        path: "blocks/blog-rectangular-images-01/page.tsx",
+        type: "registry:page",
+        target: "app/blog-rectangular-images/page.tsx",
+      },
+    ],
+    meta: {
+      iframeHeight: "1000px",
+      container:
+        "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
+      mobile: "component",
+    },
+    categories: ["blog-sections"],
+  },
+  {
+    name: "large-blog-preview-01",
+    description: "Large blog post preview",
+    type: "registry:block",
+    registryDependencies: ["avatar"],
+    files: [
+      {
+        path: "blocks/large-blog-preview-01/page.tsx",
+        type: "registry:page",
+        target: "app/large-blog-preview/page.tsx",
+      },
+    ],
+    meta: {
+      iframeHeight: "700px",
+      container:
+        "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
+      mobile: "component",
+    },
+    categories: ["blog-sections"],
+  },
 ]
