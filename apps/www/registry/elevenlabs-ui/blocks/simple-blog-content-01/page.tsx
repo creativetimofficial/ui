@@ -55,7 +55,7 @@ export default function SimpleBlogContent01() {
                 />
               </div>
             </CardHeader>
-            <CardContent className="px-6 pb-0 pt-2">
+            <CardContent className="px-6 pt-2 pb-0">
               <Badge variant="secondary" className="mb-2">
                 {tag}
               </Badge>

@@ -43,7 +43,7 @@ export default function HighlightedBlogPosts01() {
         </p>
       </div>
       <div className="grid grid-cols-1 gap-x-0 gap-y-6 md:grid-cols-3 md:gap-x-6">
-        <Card className="bg-primary flex flex-col justify-between text-primary-foreground">
+        <Card className="bg-primary text-primary-foreground flex flex-col justify-between">
           <CardHeader className="p-6 sm:p-8">
             <p className="block text-center font-semibold opacity-80">
               Landscape

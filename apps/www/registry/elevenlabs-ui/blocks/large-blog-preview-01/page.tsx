@@ -22,7 +22,7 @@ export default function LargeBlogPreview01() {
           in a lawsuit against the major…{" "}
           <a
             href="#"
-            className="ml-2 inline-block font-semibold text-foreground hover:underline"
+            className="text-foreground ml-2 inline-block font-semibold hover:underline"
           >
             Read More
           </a>

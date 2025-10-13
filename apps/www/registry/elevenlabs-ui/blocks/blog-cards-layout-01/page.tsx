@@ -106,7 +106,7 @@ export default function BlogCardsLayout01() {
               <h3 className="mb-2 text-xl font-semibold">{title}</h3>
               <p className="text-muted-foreground text-sm">{desc}</p>
             </CardContent>
-            <CardFooter className="flex items-center gap-3 px-6 pb-6 pt-0">
+            <CardFooter className="flex items-center gap-3 px-6 pt-0 pb-6">
               <Avatar className="h-8 w-8">
                 <AvatarImage src={author.img} alt={author.name} />
                 <AvatarFallback>{author.name.charAt(0)}</AvatarFallback>

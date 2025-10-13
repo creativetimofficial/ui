@@ -550,6 +550,114 @@ export const Index: Record<string, any> = {
     categories: ["billing"],
     meta: {"iframeHeight":"700px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component"},
   },
+  "simple-blog-content-01": {
+    name: "simple-blog-content-01",
+    description: "Simple blog content cards",
+    type: "registry:block",
+    registryDependencies: ["avatar","badge","card"],
+    files: [{
+      path: "registry/elevenlabs-ui/blocks/simple-blog-content-01/page.tsx",
+      type: "registry:page",
+      target: "app/simple-blog-content/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/elevenlabs-ui/blocks/simple-blog-content-01/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["blog-sections"],
+    meta: {"iframeHeight":"800px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component"},
+  },
+  "blog-cards-layout-01": {
+    name: "blog-cards-layout-01",
+    description: "Blog cards with view more button",
+    type: "registry:block",
+    registryDependencies: ["avatar","badge","button","card"],
+    files: [{
+      path: "registry/elevenlabs-ui/blocks/blog-cards-layout-01/page.tsx",
+      type: "registry:page",
+      target: "app/blog-cards-layout/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/elevenlabs-ui/blocks/blog-cards-layout-01/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["blog-sections"],
+    meta: {"iframeHeight":"1200px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component"},
+  },
+  "blog-post-preview-tags-01": {
+    name: "blog-post-preview-tags-01",
+    description: "Blog posts with tags",
+    type: "registry:block",
+    registryDependencies: ["badge","button"],
+    files: [{
+      path: "registry/elevenlabs-ui/blocks/blog-post-preview-tags-01/page.tsx",
+      type: "registry:page",
+      target: "app/blog-post-preview-tags/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/elevenlabs-ui/blocks/blog-post-preview-tags-01/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["blog-sections"],
+    meta: {"iframeHeight":"1100px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component"},
+  },
+  "highlighted-blog-posts-01": {
+    name: "highlighted-blog-posts-01",
+    description: "Highlighted blog posts with icons",
+    type: "registry:block",
+    registryDependencies: ["button","card"],
+    files: [{
+      path: "registry/elevenlabs-ui/blocks/highlighted-blog-posts-01/page.tsx",
+      type: "registry:page",
+      target: "app/highlighted-blog-posts/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/elevenlabs-ui/blocks/highlighted-blog-posts-01/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["blog-sections"],
+    meta: {"iframeHeight":"800px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component"},
+  },
+  "blog-rectangular-images-01": {
+    name: "blog-rectangular-images-01",
+    description: "Blog posts with rectangular images",
+    type: "registry:block",
+    registryDependencies: ["avatar","badge"],
+    files: [{
+      path: "registry/elevenlabs-ui/blocks/blog-rectangular-images-01/page.tsx",
+      type: "registry:page",
+      target: "app/blog-rectangular-images/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/elevenlabs-ui/blocks/blog-rectangular-images-01/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["blog-sections"],
+    meta: {"iframeHeight":"1000px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component"},
+  },
+  "large-blog-preview-01": {
+    name: "large-blog-preview-01",
+    description: "Large blog post preview",
+    type: "registry:block",
+    registryDependencies: ["avatar"],
+    files: [{
+      path: "registry/elevenlabs-ui/blocks/large-blog-preview-01/page.tsx",
+      type: "registry:page",
+      target: "app/large-blog-preview/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/elevenlabs-ui/blocks/large-blog-preview-01/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["blog-sections"],
+    meta: {"iframeHeight":"700px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component"},
+  },
   "use-mobile": {
     name: "use-mobile",
     description: "",
