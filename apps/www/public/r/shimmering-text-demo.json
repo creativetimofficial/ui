@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "shimmering-text-demo",
+  "type": "registry:example",
+  "registryDependencies": [
+    "https://ui.elevenlabs.io/r/shimmering-text.json"
+  ],
+  "files": [
+    {
+      "path": "examples/shimmering-text-demo.tsx",
+      "content": "\"use client\"\n\nimport { useEffect, useState } from \"react\"\nimport { AnimatePresence, motion } from \"motion/react\"\n\nimport { ShimmeringText } from \"@/components/ui/shimmering-text\"\n\nconst phrases = [\n  \"Agent is thinking...\",\n  \"Processing your request...\",\n  \"Analyzing the data...\",\n  \"Generating response...\",\n  \"Almost there...\",\n]\n\nexport default function TextShimmerDemo() {\n  const [currentIndex, setCurrentIndex] = useState(0)\n\n  useEffect(() => {\n    const interval = setInterval(() => {\n      setCurrentIndex((prev) => (prev + 1) % phrases.length)\n    }, 3000)\n\n    return () => clearInterval(interval)\n  }, [])\n\n  return (\n    <div className=\"bg-card w-full rounded-lg border p-6\">\n      <div className=\"mb-4\">\n        <h3 className=\"text-lg font-semibold\">Text Shimmer Effect</h3>\n        <p className=\"text-muted-foreground text-sm\">\n          Animated gradient text with automatic cycling\n        </p>\n      </div>\n\n      <div className=\"space-y-4\">\n        <div className=\"bg-muted/10 flex items-center justify-center rounded-lg py-8\">\n          <AnimatePresence mode=\"wait\">\n            <motion.div\n              key={currentIndex}\n              initial={{ opacity: 0, y: 10 }}\n              animate={{ opacity: 1, y: 0 }}\n              exit={{ opacity: 0, y: -10 }}\n              transition={{ duration: 0.3 }}\n            >\n              <ShimmeringText text={phrases[currentIndex]} />\n            </motion.div>\n          </AnimatePresence>\n        </div>\n      </div>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

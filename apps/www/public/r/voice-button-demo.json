@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "voice-button-demo",
+  "type": "registry:example",
+  "registryDependencies": [
+    "https://ui.elevenlabs.io/r/voice-button.json"
+  ],
+  "files": [
+    {
+      "path": "examples/voice-button-demo.tsx",
+      "content": "\"use client\"\n\nimport { useEffect, useState } from \"react\"\n\nimport { VoiceButton } from \"@/components/ui/voice-button\"\n\nexport default function VoiceButtonDemo() {\n  const [state, setState] = useState<\n    \"idle\" | \"recording\" | \"processing\" | \"success\" | \"error\"\n  >(\"idle\")\n\n  const handlePress = () => {\n    if (state === \"idle\") {\n      setState(\"recording\")\n    } else if (state === \"recording\") {\n      setState(\"processing\")\n\n      setTimeout(() => {\n        setState(\"success\")\n\n        setTimeout(() => {\n          setState(\"idle\")\n        }, 1500)\n      }, 1000)\n    }\n  }\n\n  useEffect(() => {\n    const handleKeyDown = (e: KeyboardEvent) => {\n      if (e.altKey && e.code === \"Space\") {\n        e.preventDefault()\n        handlePress()\n      }\n    }\n\n    window.addEventListener(\"keydown\", handleKeyDown)\n    return () => window.removeEventListener(\"keydown\", handleKeyDown)\n  }, [state])\n\n  return (\n    <div className=\"flex min-h-[200px] w-full items-center justify-center\">\n      <VoiceButton\n        label=\"Voice\"\n        trailing=\"⌥Space\"\n        state={state}\n        onPress={handlePress}\n        className=\"min-w-[180px]\"\n      />\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

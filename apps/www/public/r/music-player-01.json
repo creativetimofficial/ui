@@ -1,0 +1,27 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "music-player-01",
+  "type": "registry:block",
+  "description": "Music player with playlist",
+  "registryDependencies": [
+    "https://ui.elevenlabs.io/r/audio-player.json",
+    "button",
+    "scroll-area"
+  ],
+  "files": [
+    {
+      "path": "blocks/music-player-01/page.tsx",
+      "content": "\"use client\"\n\nimport { PauseIcon, PlayIcon } from \"lucide-react\"\n\nimport { cn } from \"@/lib/utils\"\nimport {\n  AudioPlayerButton,\n  AudioPlayerDuration,\n  AudioPlayerProgress,\n  AudioPlayerProvider,\n  AudioPlayerTime,\n  exampleTracks,\n  useAudioPlayer,\n} from \"@/components/ui/audio-player\"\nimport { Button } from \"@/components/ui/button\"\nimport { Card } from \"@/components/ui/card\"\nimport { ScrollArea } from \"@/components/ui/scroll-area\"\n\ninterface Track {\n  id: string\n  name: string\n  url: string\n}\n\nexport default function Page() {\n  return (\n    <AudioPlayerProvider<Track>>\n      <MusicPlayer />\n    </AudioPlayerProvider>\n  )\n}\n\nconst MusicPlayer = () => {\n  return (\n    <Card className=\"mx-auto w-full overflow-hidden p-0\">\n      <div className=\"flex flex-col lg:h-[180px] lg:flex-row\">\n        <div className=\"bg-muted/50 flex flex-col overflow-hidden lg:h-full lg:w-64\">\n          <ScrollArea className=\"h-48 w-full lg:h-full\">\n            <div className=\"space-y-1 p-3\">\n              {exampleTracks.map((song, index) => (\n                <SongListItem\n                  key={song.id}\n                  song={song}\n                  trackNumber={index + 1}\n                />\n              ))}\n            </div>\n          </ScrollArea>\n        </div>\n        <Player />\n      </div>\n    </Card>\n  )\n}\n\nconst Player = () => {\n  const player = useAudioPlayer<Track>()\n\n  return (\n    <div className=\"flex flex-1 items-center p-4 sm:p-6\">\n      <div className=\"mx-auto w-full max-w-2xl\">\n        <div className=\"mb-4\">\n          <h3 className=\"text-base font-semibold sm:text-lg\">\n            {player.activeItem?.data?.name ?? \"No track selected\"}\n          </h3>\n        </div>\n        <div className=\"flex items-center gap-3 sm:gap-4\">\n          <AudioPlayerButton\n            variant=\"outline\"\n            size=\"default\"\n            className=\"h-12 w-12 shrink-0 sm:h-10 sm:w-10\"\n            disabled={!player.activeItem}\n          />\n          <div className=\"flex flex-1 items-center gap-2 sm:gap-3\">\n            <AudioPlayerTime className=\"text-xs tabular-nums\" />\n            <AudioPlayerProgress className=\"flex-1\" />\n            <AudioPlayerDuration className=\"text-xs tabular-nums\" />\n          </div>\n        </div>\n      </div>\n    </div>\n  )\n}\n\nconst SongListItem = ({\n  song,\n  trackNumber,\n}: {\n  song: Track\n  trackNumber: number\n}) => {\n  const player = useAudioPlayer<Track>()\n  const isActive = player.isItemActive(song.id)\n  const isCurrentlyPlaying = isActive && player.isPlaying\n\n  return (\n    <div className=\"group/song relative\">\n      <Button\n        variant={isActive ? \"secondary\" : \"ghost\"}\n        size=\"sm\"\n        className={cn(\n          \"h-10 w-full justify-start px-3 font-normal sm:h-9 sm:px-2\",\n          isActive && \"bg-secondary\"\n        )}\n        onClick={() => {\n          if (isCurrentlyPlaying) {\n            player.pause()\n          } else {\n            player.play({\n              id: song.id,\n              src: song.url,\n              data: song,\n            })\n          }\n        }}\n      >\n        <div className=\"flex w-full items-center gap-3\">\n          <div className=\"flex w-5 shrink-0 items-center justify-center\">\n            {isCurrentlyPlaying ? (\n              <PauseIcon className=\"h-4 w-4 sm:h-3.5 sm:w-3.5\" />\n            ) : (\n              <>\n                <span className=\"text-muted-foreground/60 text-sm tabular-nums group-hover/song:invisible\">\n                  {trackNumber}\n                </span>\n                <PlayIcon className=\"invisible absolute h-4 w-4 group-hover/song:visible sm:h-3.5 sm:w-3.5\" />\n              </>\n            )}\n          </div>\n          <span className=\"truncate text-left text-sm\">{song.name}</span>\n        </div>\n      </Button>\n    </div>\n  )\n}\n",
+      "type": "registry:page",
+      "target": "app/music-player/page.tsx"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "600px",
+    "container": "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
+    "mobile": "component"
+  },
+  "categories": [
+    "audio"
+  ]
+}

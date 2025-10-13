@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "response",
+  "type": "registry:ui",
+  "dependencies": [
+    "streamdown"
+  ],
+  "files": [
+    {
+      "path": "components/ui/response.tsx",
+      "content": "\"use client\"\n\nimport { memo, type ComponentProps } from \"react\"\nimport { Streamdown } from \"streamdown\"\n\nimport { cn } from \"@/lib/utils\"\n\ntype ResponseProps = ComponentProps<typeof Streamdown>\n\nexport const Response = memo(\n  ({ className, ...props }: ResponseProps) => (\n    <Streamdown\n      className={cn(\n        \"size-full [&>*:first-child]:mt-0 [&>*:last-child]:mb-0\",\n        className\n      )}\n      {...props}\n    />\n  ),\n  (prevProps, nextProps) => prevProps.children === nextProps.children\n)\n\nResponse.displayName = \"Response\"\n",
+      "type": "registry:ui"
+    }
+  ]
+}

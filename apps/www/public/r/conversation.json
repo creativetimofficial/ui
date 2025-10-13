@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "conversation",
+  "type": "registry:ui",
+  "dependencies": [
+    "use-stick-to-bottom"
+  ],
+  "registryDependencies": [
+    "button"
+  ],
+  "files": [
+    {
+      "path": "components/ui/conversation.tsx",
+      "content": "\"use client\"\n\nimport type { ComponentProps } from \"react\"\nimport { useCallback } from \"react\"\nimport { ArrowDownIcon } from \"lucide-react\"\nimport { StickToBottom, useStickToBottomContext } from \"use-stick-to-bottom\"\n\nimport { cn } from \"@/lib/utils\"\nimport { Button } from \"@/components/ui/button\"\n\nexport type ConversationProps = ComponentProps<typeof StickToBottom>\n\nexport const Conversation = ({ className, ...props }: ConversationProps) => (\n  <StickToBottom\n    className={cn(\"relative flex-1 overflow-y-auto\", className)}\n    initial=\"smooth\"\n    resize=\"smooth\"\n    role=\"log\"\n    {...props}\n  />\n)\n\nexport type ConversationContentProps = ComponentProps<\n  typeof StickToBottom.Content\n>\n\nexport const ConversationContent = ({\n  className,\n  ...props\n}: ConversationContentProps) => (\n  <StickToBottom.Content className={cn(\"p-4\", className)} {...props} />\n)\n\nexport type ConversationEmptyStateProps = Omit<\n  ComponentProps<\"div\">,\n  \"title\"\n> & {\n  title?: React.ReactNode\n  description?: React.ReactNode\n  icon?: React.ReactNode\n}\n\nexport const ConversationEmptyState = ({\n  className,\n  title = \"No messages yet\",\n  description = \"Start a conversation to see messages here\",\n  icon,\n  children,\n  ...props\n}: ConversationEmptyStateProps) => (\n  <div\n    className={cn(\n      \"flex size-full flex-col items-center justify-center gap-3 p-8 text-center\",\n      className\n    )}\n    {...props}\n  >\n    {children ?? (\n      <>\n        {icon && <div className=\"text-muted-foreground\">{icon}</div>}\n        <div className=\"space-y-1\">\n          <h3 className=\"text-sm font-medium\">{title}</h3>\n          {description && (\n            <p className=\"text-muted-foreground text-sm\">{description}</p>\n          )}\n        </div>\n      </>\n    )}\n  </div>\n)\n\nexport type ConversationScrollButtonProps = ComponentProps<typeof Button>\n\nexport const ConversationScrollButton = ({\n  className,\n  ...props\n}: ConversationScrollButtonProps) => {\n  const { isAtBottom, scrollToBottom } = useStickToBottomContext()\n\n  const handleScrollToBottom = useCallback(() => {\n    scrollToBottom()\n  }, [scrollToBottom])\n\n  return (\n    !isAtBottom && (\n      <Button\n        className={cn(\n          \"bg-background dark:bg-background absolute bottom-4 left-[50%] translate-x-[-50%] rounded-full shadow-md\",\n          className\n        )}\n        onClick={handleScrollToBottom}\n        size=\"icon\"\n        type=\"button\"\n        variant=\"outline\"\n        {...props}\n      >\n        <ArrowDownIcon className=\"size-4\" />\n      </Button>\n    )\n  )\n}\n",
+      "type": "registry:ui"
+    }
+  ]
+}

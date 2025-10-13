@@ -1,0 +1,48 @@
+---
+title: ElevenLabs UI
+description: Introduction
+---
+
+ElevenLabs UI is a component library and custom registry built on top of [shadcn/ui](https://ui.shadcn.com/) to help you build multimodal agentic experiences faster. It provides pre-built components for agents, transcription, audio & more.
+
+Components are available via the `@elevenlabs/agents-cli` command.
+
+```bash
+npx @elevenlabs/agents-cli@latest components add <component>
+```
+
+For example, to install the [Orb](/docs/components/orb) component, you can run:
+
+```bash
+npx @elevenlabs/agents-cli@latest components add orb
+```
+
+Here are some basic examples of what you can achieve using components from ElevenLabs UI.
+
+[Voice Chat](/blocks#voice-chat-01)
+
+<ComponentPreview
+  name="voice-chat-01"
+  title="Voice Chat"
+  hideCode={true}
+  description="A voice chat interface."
+/>
+[Transcriber](/blocks#transcriber-01)
+
+<ComponentPreview
+  name="transcriber-01"
+  title="Transcriber"
+  hideCode={true}
+  description="A transcriber interface."
+/>
+
+[Voice Form](/blocks#voice-form-01)
+
+<ComponentPreview
+  name="voice-form-01"
+  title="Voice Form"
+  hideCode={true}
+  description="A voice form interface."
+/>
+
+You can explore more examples [here](/blocks) or view the [source code](https://github.com/elevenlabs/ui) for all components on GitHub.

@@ -1,0 +1,16 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "voice-picker-demo",
+  "type": "registry:example",
+  "registryDependencies": [
+    "https://ui.elevenlabs.io/r/voice-picker.json",
+    "https://ui.elevenlabs.io/r/audio-player.json"
+  ],
+  "files": [
+    {
+      "path": "examples/voice-picker-demo.tsx",
+      "content": "\"use client\"\n\nimport { useState } from \"react\"\nimport type { ElevenLabs } from \"@elevenlabs/elevenlabs-js\"\n\nimport { VoicePicker } from \"@/components/ui/voice-picker\"\n\nconst voices: ElevenLabs.Voice[] = [\n  {\n    voiceId: \"21m00Tcm4TlvDq8ikWAM\",\n    name: \"Rachel\",\n    category: \"premade\",\n    labels: {\n      accent: \"american\",\n      descriptive: \"casual\",\n      age: \"young\",\n      gender: \"female\",\n      language: \"en\",\n      use_case: \"conversational\",\n    },\n    description:\n      \"Matter-of-fact, personable woman. Great for conversational use cases.\",\n    previewUrl:\n      \"https://storage.googleapis.com/eleven-public-prod/premade/voices/21m00Tcm4TlvDq8ikWAM/b4928a68-c03b-411f-8533-3d5c299fd451.mp3\",\n  },\n  {\n    voiceId: \"29vD33N1CtxCmqQRPOHJ\",\n    name: \"Drew\",\n    category: \"premade\",\n    labels: {\n      accent: \"american\",\n      description: \"well-rounded\",\n      age: \"middle_aged\",\n      gender: \"male\",\n      use_case: \"news\",\n    },\n    previewUrl:\n      \"https://storage.googleapis.com/eleven-public-prod/premade/voices/29vD33N1CtxCmqQRPOHJ/b99fc51d-12d3-4312-b480-a8a45a7d51ef.mp3\",\n  },\n  {\n    voiceId: \"2EiwWnXFnvU5JabPnv8n\",\n    name: \"Clyde\",\n    category: \"premade\",\n    labels: {\n      accent: \"american\",\n      descriptive: \"intense\",\n      age: \"middle_aged\",\n      gender: \"male\",\n      language: \"en\",\n      use_case: \"characters_animation\",\n    },\n    description: \"Great for character use-cases\",\n    previewUrl:\n      \"https://storage.googleapis.com/eleven-public-prod/premade/voices/2EiwWnXFnvU5JabPnv8n/65d80f52-703f-4cae-a91d-75d4e200ed02.mp3\",\n  },\n]\n\nexport default function VoicePickerDemo() {\n  const [selectedVoice, setSelectedVoice] = useState<string>(\n    \"21m00Tcm4TlvDq8ikWAM\"\n  )\n  const [open, setOpen] = useState(false)\n\n  return (\n    <div className=\"w-full max-w-lg\">\n      <VoicePicker\n        voices={voices}\n        value={selectedVoice}\n        onValueChange={(value) => {\n          setSelectedVoice(value)\n          // Keep dropdown open after selection\n          setOpen(true)\n        }}\n        open={open}\n        onOpenChange={setOpen}\n        placeholder=\"Select a voice...\"\n      />\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

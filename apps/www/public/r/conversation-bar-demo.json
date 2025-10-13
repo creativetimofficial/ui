@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "conversation-bar-demo",
+  "type": "registry:example",
+  "registryDependencies": [
+    "https://ui.elevenlabs.io/r/conversation-bar.json"
+  ],
+  "files": [
+    {
+      "path": "examples/conversation-bar-demo.tsx",
+      "content": "\"use client\"\n\nimport { ConversationBar } from \"@/components/ui/conversation-bar\"\n\nconst DEFAULT_AGENT = {\n  agentId: process.env.NEXT_PUBLIC_ELEVENLABS_AGENT_ID!,\n}\n\nexport default function ConversationBarDemo() {\n  return (\n    <div className=\"flex min-h-[200px] w-full items-center justify-center\">\n      <div className=\"w-full max-w-md\">\n        <ConversationBar\n          agentId={DEFAULT_AGENT.agentId}\n          onConnect={() => console.log(\"Connected\")}\n          onDisconnect={() => console.log(\"Disconnected\")}\n          onMessage={(message) => console.log(\"Message:\", message)}\n          onError={(error) => console.error(\"Error:\", error)}\n        />\n      </div>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

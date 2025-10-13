@@ -1,0 +1,318 @@
+---
+title: Waveform
+description: Canvas-based audio waveform visualization components with recording, playback scrubbing, and microphone input support.
+featured: true
+component: true
+---
+
+<ComponentPreview
+  name="waveform-demo"
+  description="A live scrolling waveform visualization with smooth animations."
+/>
+
+## Installation
+
+<CodeTabs>
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx @elevenlabs/agents-cli@latest components add waveform
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="waveform" title="components/ui/waveform.tsx" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</CodeTabs>
+
+## Usage
+
+```tsx showLineNumbers
+import {
+  AudioScrubber,
+  LiveMicrophoneWaveform,
+  MicrophoneWaveform,
+  RecordingWaveform,
+  ScrollingWaveform,
+  StaticWaveform,
+  Waveform,
+} from "@/components/ui/waveform"
+```
+
+### Basic Waveform
+
+```tsx showLineNumbers
+const data = Array.from({ length: 50 }, () => Math.random())
+
+<Waveform data={data} height={100} barWidth={4} barGap={2} />
+```
+
+### Scrolling Animation
+
+```tsx showLineNumbers
+<ScrollingWaveform
+  height={80} 
+  speed={50}
+  barCount={60}
+  barColor="hsl(var(--primary))"
+  fadeEdges={true}
+/>
+```
+
+### Microphone Input
+
+```tsx showLineNumbers
+const [isRecording, setIsRecording] = useState(false)
+
+<MicrophoneWaveform
+  active={isRecording}
+  height={100}
+  sensitivity={1.5}
+  onError={(error) => console.error("Microphone error:", error)}
+/>
+```
+
+## API Reference
+
+### Waveform
+
+The base waveform component that displays audio data as bars.
+
+```tsx
+<Waveform data={audioData} />
+```
+
+#### Props
+
+| Prop       | Type                                     | Description                                        |
+| ---------- | ---------------------------------------- | -------------------------------------------------- |
+| data       | `number[]`                               | Array of values between 0 and 1 for each bar       |
+| barWidth   | `number`                                 | Width of each bar in pixels. Default: 4            |
+| barGap     | `number`                                 | Gap between bars in pixels. Default: 2             |
+| barRadius  | `number`                                 | Border radius of bars. Default: 2                  |
+| barColor   | `string`                                 | Custom bar color. Uses foreground color by default |
+| fadeEdges  | `boolean`                                | Apply fade effect to edges. Default: true          |
+| fadeWidth  | `number`                                 | Width of fade effect in pixels. Default: 24        |
+| height     | `string \| number`                       | Height of the waveform. Default: 128               |
+| onBarClick | `(index: number, value: number) => void` | Callback when a bar is clicked                     |
+
+### ScrollingWaveform
+
+Continuously scrolling waveform with auto-generated bars.
+
+```tsx
+<ScrollingWaveform speed={50} />
+```
+
+#### Props
+
+| Prop     | Type            | Description                                       |
+| -------- | --------------- | ------------------------------------------------- |
+| speed    | `number`        | Scroll speed in pixels per second. Default: 50    |
+| barCount | `number`        | Number of bars to display. Default: 60            |
+| ...props | `WaveformProps` | All Waveform props except `data` and `onBarClick` |
+
+### AudioScrubber
+
+Interactive waveform for audio playback with seek functionality.
+
+```tsx
+<AudioScrubber
+  data={waveformData}
+  currentTime={playbackTime}
+  duration={totalDuration}
+  onSeek={handleSeek}
+/>
+```
+
+#### Props
+
+| Prop        | Type                     | Description                             |
+| ----------- | ------------------------ | --------------------------------------- |
+| currentTime | `number`                 | Current playback time in seconds        |
+| duration    | `number`                 | Total duration in seconds. Default: 100 |
+| onSeek      | `(time: number) => void` | Callback when user seeks to a new time  |
+| showHandle  | `boolean`                | Show draggable handle. Default: true    |
+| ...props    | `WaveformProps`          | All standard Waveform props             |
+
+### MicrophoneWaveform
+
+Real-time microphone input visualization.
+
+```tsx
+<MicrophoneWaveform active={isListening} sensitivity={1.5} />
+```
+
+#### Props
+
+| Prop                  | Type                     | Description                                     |
+| --------------------- | ------------------------ | ----------------------------------------------- |
+| active                | `boolean`                | Enable/disable microphone input. Default: false |
+| fftSize               | `number`                 | FFT size for frequency analysis. Default: 256   |
+| smoothingTimeConstant | `number`                 | Smoothing factor (0-1). Default: 0.8            |
+| sensitivity           | `number`                 | Amplitude sensitivity. Default: 1               |
+| onError               | `(error: Error) => void` | Error callback                                  |
+| ...props              | `WaveformProps`          | All standard Waveform props                     |
+
+### StaticWaveform
+
+Waveform with deterministic random data based on seed.
+
+```tsx
+<StaticWaveform bars={40} seed={42} />
+```
+
+#### Props
+
+| Prop     | Type            | Description                             |
+| -------- | --------------- | --------------------------------------- |
+| bars     | `number`        | Number of bars to generate. Default: 40 |
+| seed     | `number`        | Random seed for consistent data         |
+| ...props | `WaveformProps` | All standard Waveform props             |
+
+### LiveMicrophoneWaveform
+
+Advanced microphone visualization with recording history and playback scrubbing.
+
+```tsx
+<LiveMicrophoneWaveform
+  active={isRecording}
+  enableAudioPlayback={true}
+  playbackRate={1}
+/>
+```
+
+#### Props
+
+| Prop                | Type                               | Description                                        |
+| ------------------- | ---------------------------------- | -------------------------------------------------- |
+| active              | `boolean`                          | Enable/disable recording                           |
+| historySize         | `number`                           | Max bars to keep in history. Default: 150          |
+| updateRate          | `number`                           | Update interval in ms. Default: 50                 |
+| enableAudioPlayback | `boolean`                          | Enable audio scrubbing when stopped. Default: true |
+| playbackRate        | `number`                           | Audio playback speed. Default: 1                   |
+| savedHistoryRef     | `React.MutableRefObject<number[]>` | External ref to persist history                    |
+| dragOffset          | `number`                           | External drag offset control                       |
+| setDragOffset       | `(offset: number) => void`         | External drag offset setter                        |
+| ...props            | `ScrollingWaveformProps`           | All ScrollingWaveform props                        |
+
+### RecordingWaveform
+
+Recording interface with scrubbing through recorded audio.
+
+```tsx
+<RecordingWaveform
+  recording={isRecording}
+  onRecordingComplete={(data) => console.log("Recording data:", data)}
+/>
+```
+
+#### Props
+
+| Prop                | Type                       | Description                          |
+| ------------------- | -------------------------- | ------------------------------------ |
+| recording           | `boolean`                  | Recording state. Default: false      |
+| onRecordingComplete | `(data: number[]) => void` | Callback with recorded waveform data |
+| showHandle          | `boolean`                  | Show scrubbing handle. Default: true |
+| updateRate          | `number`                   | Update interval in ms. Default: 50   |
+| ...props            | `WaveformProps`            | All standard Waveform props          |
+
+## Examples
+
+### Music Player Visualization
+
+```tsx showLineNumbers
+function MusicPlayer() {
+  const [audioData] = useState(() =>
+    Array.from({ length: 100 }, () => 0.2 + Math.random() * 0.6)
+  )
+
+  return (
+    <AudioScrubber
+      data={audioData}
+      currentTime={currentTime}
+      duration={duration}
+      onSeek={handleSeek}
+      height={60}
+      barWidth={3}
+      barGap={1}
+      barColor="hsl(var(--primary))"
+    />
+  )
+}
+```
+
+### Voice Recorder
+
+```tsx showLineNumbers
+function VoiceRecorder() {
+  const [recording, setRecording] = useState(false)
+
+  return (
+    <div className="space-y-4">
+      <RecordingWaveform
+        recording={recording}
+        height={100}
+        onRecordingComplete={(data) => {
+          console.log("Recording complete", data)
+        }}
+      />
+      <Button onClick={() => setRecording(!recording)}>
+        {recording ? "Stop" : "Start"} Recording
+      </Button>
+    </div>
+  )
+}
+```
+
+### Live Audio Monitor
+
+```tsx showLineNumbers
+function AudioMonitor() {
+  const [active, setActive] = useState(false)
+
+  return (
+    <MicrophoneWaveform
+      active={active}
+      height={80}
+      sensitivity={2}
+      barWidth={2}
+      barGap={1}
+      onError={(error) => {
+        console.error("Microphone error:", error)
+        setActive(false)
+      }}
+    />
+  )
+}
+```
+
+## Notes
+
+- All waveform components use HTML5 Canvas for high-performance rendering
+- Animations are synchronized using `requestAnimationFrame` for smooth 60fps updates
+- Microphone components require user permission to access audio input devices
+- The components automatically handle device pixel ratio for crisp rendering on high-DPI displays
+- Bar colors default to the CSS variable `--foreground` but can be customized
+- Canvas-based implementation ensures high performance even with hundreds of bars
+- ResizeObserver used for responsive canvas sizing
+- Proper cleanup of audio contexts and media streams on unmount
+- Supports both static data visualization and real-time audio input
+- Click handlers available on bars for interactive waveforms

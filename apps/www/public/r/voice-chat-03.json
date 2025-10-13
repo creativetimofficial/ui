@@ -1,0 +1,35 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "voice-chat-03",
+  "type": "registry:block",
+  "description": "Voice chat 3",
+  "dependencies": [
+    "@elevenlabs/react"
+  ],
+  "registryDependencies": [
+    "https://ui.elevenlabs.io/r/conversation-bar.json",
+    "https://ui.elevenlabs.io/r/conversation.json",
+    "https://ui.elevenlabs.io/r/message.json",
+    "https://ui.elevenlabs.io/r/orb.json",
+    "https://ui.elevenlabs.io/r/response.json",
+    "tooltip",
+    "card",
+    "button"
+  ],
+  "files": [
+    {
+      "path": "blocks/voice-chat-03/page.tsx",
+      "content": "\"use client\"\n\nimport { useState } from \"react\"\nimport { CheckIcon, CopyIcon } from \"lucide-react\"\n\nimport { cn } from \"@/lib/utils\"\nimport { Button } from \"@/components/ui/button\"\nimport { Card, CardContent } from \"@/components/ui/card\"\nimport {\n  Conversation,\n  ConversationContent,\n  ConversationEmptyState,\n  ConversationScrollButton,\n} from \"@/components/ui/conversation\"\nimport { ConversationBar } from \"@/components/ui/conversation-bar\"\nimport { Message, MessageContent } from \"@/components/ui/message\"\nimport { Orb } from \"@/components/ui/orb\"\nimport { Response } from \"@/components/ui/response\"\nimport {\n  Tooltip,\n  TooltipContent,\n  TooltipProvider,\n  TooltipTrigger,\n} from \"@/components/ui/tooltip\"\n\nconst DEFAULT_AGENT_ID = process.env.NEXT_PUBLIC_ELEVENLABS_AGENT_ID!\n\ninterface ChatMessage {\n  role: \"user\" | \"assistant\"\n  content: string\n}\n\nexport default function Page() {\n  const [messages, setMessages] = useState<ChatMessage[]>([])\n  const [copiedIndex, setCopiedIndex] = useState<number | null>(null)\n\n  return (\n    <div className=\"relative mx-auto h-[600px] w-full\">\n      <Card className=\"flex h-full w-full flex-col gap-0 overflow-hidden\">\n        <CardContent className=\"relative flex-1 overflow-hidden p-0\">\n          <Conversation className=\"absolute inset-0 pb-[88px]\">\n            <ConversationContent className=\"flex min-w-0 flex-col gap-2 p-6 pb-6\">\n              {messages.length === 0 ? (\n                <ConversationEmptyState\n                  icon={<Orb className=\"size-12\" />}\n                  title=\"Start a conversation\"\n                  description=\"Tap the phone button or type a message\"\n                />\n              ) : (\n                messages.map((message, index) => {\n                  return (\n                    <div key={index} className=\"flex w-full flex-col gap-1\">\n                      <Message from={message.role}>\n                        <MessageContent className=\"max-w-full min-w-0\">\n                          <Response className=\"w-auto [overflow-wrap:anywhere] whitespace-pre-wrap\">\n                            {message.content}\n                          </Response>\n                        </MessageContent>\n                        {message.role === \"assistant\" && (\n                          <div className=\"ring-border size-6 flex-shrink-0 self-end overflow-hidden rounded-full ring-1\">\n                            <Orb className=\"h-full w-full\" />\n                          </div>\n                        )}\n                      </Message>\n                      {message.role === \"assistant\" && (\n                        <div className=\"flex items-center gap-1\">\n                          <TooltipProvider>\n                            <Tooltip>\n                              <TooltipTrigger asChild>\n                                <Button\n                                  className={cn(\n                                    \"text-muted-foreground hover:text-foreground relative size-9 p-1.5\"\n                                  )}\n                                  size=\"sm\"\n                                  type=\"button\"\n                                  variant=\"ghost\"\n                                  onClick={() => {\n                                    navigator.clipboard.writeText(\n                                      message.content\n                                    )\n                                    setCopiedIndex(index)\n                                    setTimeout(() => setCopiedIndex(null), 2000)\n                                  }}\n                                >\n                                  {copiedIndex === index ? (\n                                    <CheckIcon className=\"size-4\" />\n                                  ) : (\n                                    <CopyIcon className=\"size-4\" />\n                                  )}\n                                  <span className=\"sr-only\">\n                                    {copiedIndex === index ? \"Copied!\" : \"Copy\"}\n                                  </span>\n                                </Button>\n                              </TooltipTrigger>\n                              <TooltipContent>\n                                <p>\n                                  {copiedIndex === index ? \"Copied!\" : \"Copy\"}\n                                </p>\n                              </TooltipContent>\n                            </Tooltip>\n                          </TooltipProvider>\n                        </div>\n                      )}\n                    </div>\n                  )\n                })\n              )}\n            </ConversationContent>\n            <ConversationScrollButton className=\"bottom-[100px]\" />\n          </Conversation>\n          <div className=\"absolute right-0 bottom-0 left-0 flex justify-center\">\n            <ConversationBar\n              className=\"w-full max-w-2xl\"\n              agentId={DEFAULT_AGENT_ID}\n              onConnect={() => setMessages([])}\n              onDisconnect={() => setMessages([])}\n              onSendMessage={(message) => {\n                const userMessage: ChatMessage = {\n                  role: \"user\",\n                  content: message,\n                }\n                setMessages((prev) => [...prev, userMessage])\n              }}\n              onMessage={(message) => {\n                const newMessage: ChatMessage = {\n                  role: message.source === \"user\" ? \"user\" : \"assistant\",\n                  content: message.message,\n                }\n                setMessages((prev) => [...prev, newMessage])\n              }}\n              onError={(error) => console.error(\"Conversation error:\", error)}\n            />\n          </div>\n        </CardContent>\n      </Card>\n    </div>\n  )\n}\n",
+      "type": "registry:page",
+      "target": "app/voice-chat/page.tsx"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "800px",
+    "container": "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
+    "mobile": "component"
+  },
+  "categories": [
+    "agents"
+  ]
+}

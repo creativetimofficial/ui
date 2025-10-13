@@ -1,0 +1,16 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "bar-visualizer-demo",
+  "type": "registry:example",
+  "registryDependencies": [
+    "https://ui.elevenlabs.io/r/bar-visualizer.json",
+    "button"
+  ],
+  "files": [
+    {
+      "path": "examples/bar-visualizer-demo.tsx",
+      "content": "\"use client\"\n\nimport { useState } from \"react\"\n\nimport {\n  BarVisualizer,\n  type AgentState,\n} from \"@/components/ui/bar-visualizer\"\nimport { Button } from \"@/components/ui/button\"\nimport {\n  Card,\n  CardContent,\n  CardDescription,\n  CardHeader,\n  CardTitle,\n} from \"@/components/ui/card\"\n\nexport default function BarVisualizerDemo() {\n  const [state, setState] = useState<AgentState>(\"listening\")\n\n  return (\n    <Card className=\"\">\n      <CardHeader>\n        <CardTitle>Audio Frequency Visualizer</CardTitle>\n        <CardDescription>\n          Real-time frequency band visualization with animated state transitions\n        </CardDescription>\n      </CardHeader>\n      <CardContent>\n        <div className=\"space-y-4\">\n          <BarVisualizer\n            state={state}\n            demo={true}\n            barCount={20}\n            minHeight={15}\n            maxHeight={90}\n            className=\"h-40 max-w-full\"\n          />\n\n          <div className=\"flex flex-wrap gap-2\">\n            <Button\n              size=\"sm\"\n              variant={state === \"connecting\" ? \"default\" : \"outline\"}\n              onClick={() => setState(\"connecting\")}\n            >\n              Connecting\n            </Button>\n            <Button\n              size=\"sm\"\n              variant={state === \"initializing\" ? \"default\" : \"outline\"}\n              onClick={() => setState(\"initializing\")}\n            >\n              Initializing\n            </Button>\n            <Button\n              size=\"sm\"\n              variant={state === \"listening\" ? \"default\" : \"outline\"}\n              onClick={() => setState(\"listening\")}\n            >\n              Listening\n            </Button>\n            <Button\n              size=\"sm\"\n              variant={state === \"speaking\" ? \"default\" : \"outline\"}\n              onClick={() => setState(\"speaking\")}\n            >\n              Speaking\n            </Button>\n            <Button\n              size=\"sm\"\n              variant={state === \"thinking\" ? \"default\" : \"outline\"}\n              onClick={() => setState(\"thinking\")}\n            >\n              Thinking\n            </Button>\n          </div>\n        </div>\n      </CardContent>\n    </Card>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

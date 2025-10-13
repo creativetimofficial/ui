@@ -1,0 +1,16 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "live-waveform-demo",
+  "type": "registry:example",
+  "registryDependencies": [
+    "https://ui.elevenlabs.io/r/live-waveform.json",
+    "button"
+  ],
+  "files": [
+    {
+      "path": "examples/live-waveform-demo.tsx",
+      "content": "\"use client\"\n\nimport { useState } from \"react\"\n\nimport { Button } from \"@/components/ui/button\"\nimport { LiveWaveform } from \"@/components/ui/live-waveform\"\n\nexport default function LiveWaveformDemo() {\n  const [active, setActive] = useState(false)\n  const [processing, setProcessing] = useState(false)\n  const [mode, setMode] = useState<\"static\" | \"scrolling\">(\"static\")\n\n  const handleToggleActive = () => {\n    setActive(!active)\n    if (!active) {\n      setProcessing(false)\n    }\n  }\n\n  const handleToggleProcessing = () => {\n    setProcessing(!processing)\n    if (!processing) {\n      setActive(false)\n    }\n  }\n\n  return (\n    <div className=\"bg-card w-full rounded-lg border p-6\">\n      <div className=\"mb-4\">\n        <h3 className=\"text-lg font-semibold\">Live Audio Waveform</h3>\n        <p className=\"text-muted-foreground text-sm\">\n          Real-time microphone input visualization with audio reactivity\n        </p>\n      </div>\n\n      <div className=\"space-y-4\">\n        <LiveWaveform\n          active={active}\n          processing={processing}\n          height={80}\n          barWidth={3}\n          barGap={2}\n          mode={mode}\n          fadeEdges={true}\n          barColor=\"gray\"\n          historySize={120}\n        />\n\n        <div className=\"flex flex-wrap justify-center gap-2\">\n          <Button\n            size=\"sm\"\n            variant={active ? \"default\" : \"outline\"}\n            onClick={handleToggleActive}\n          >\n            {active ? \"Stop\" : \"Start\"} Listening\n          </Button>\n          <Button\n            size=\"sm\"\n            variant={processing ? \"default\" : \"outline\"}\n            onClick={handleToggleProcessing}\n          >\n            {processing ? \"Stop\" : \"Start\"} Processing\n          </Button>\n          <Button\n            size=\"sm\"\n            variant=\"outline\"\n            onClick={() => setMode(mode === \"static\" ? \"scrolling\" : \"static\")}\n          >\n            Mode: {mode === \"static\" ? \"Static\" : \"Scrolling\"}\n          </Button>\n        </div>\n      </div>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

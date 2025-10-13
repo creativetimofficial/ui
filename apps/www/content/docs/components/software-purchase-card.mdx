@@ -1,0 +1,236 @@
+---
+title: Software Purchase Card
+description: A card component for displaying and approving software purchase requests with details like start date, seats, pricing type, and price.
+featured: true
+component: true
+---
+
+<ComponentPreview
+  name="software-purchase-card-demo"
+  description="A software purchase approval card."
+/>
+
+## Installation
+
+<CodeTabs>
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx shadcn@latest add software-purchase-card
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>Install the following dependencies:</Step>
+
+```bash
+npm install lucide-react
+```
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource
+  name="software-purchase-card"
+  title="components/cards/software-purchase.tsx"
+/>
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</CodeTabs>
+
+## Usage
+
+```tsx showLineNumbers
+import { SoftwarePurchaseCard } from "@/components/cards/software-purchase"
+```
+
+### Basic Usage
+
+```tsx showLineNumbers
+<SoftwarePurchaseCard
+  softwareName="Enterprise Cloud Suite"
+  startDate="2025-01-15"
+  seats={50}
+  pricingType="per-seat"
+  price="$2,500"
+  onApprove={() => console.log("Approved")}
+  onDiscard={() => console.log("Discarded")}
+/>
+```
+
+### Flat Rate Pricing
+
+```tsx showLineNumbers
+<SoftwarePurchaseCard
+  softwareName="Design Tools Pro"
+  startDate="2025-02-01"
+  seats={25}
+  pricingType="flat-rate"
+  price="$999"
+  onApprove={handleApprove}
+  onDiscard={handleDiscard}
+/>
+```
+
+### Usage-Based Pricing
+
+```tsx showLineNumbers
+<SoftwarePurchaseCard
+  softwareName="API Gateway Service"
+  startDate="2025-01-20"
+  seats={10}
+  pricingType="usage-based"
+  price="$0.05/request"
+  onApprove={handleApprove}
+  onDiscard={handleDiscard}
+/>
+```
+
+## API Reference
+
+### SoftwarePurchaseCard
+
+The main card component for displaying software purchase details.
+
+#### Props
+
+| Prop         | Type                                         | Default                    | Description                                   |
+| ------------ | -------------------------------------------- | -------------------------- | --------------------------------------------- |
+| softwareName | `string`                                     | `"Enterprise Cloud Suite"` | Name of the software                          |
+| startDate    | `string`                                     | `"2025-01-15"`             | Start date in ISO format (YYYY-MM-DD)         |
+| seats        | `number`                                     | `50`                       | Number of user seats/licenses                 |
+| pricingType  | `"per-seat" \| "flat-rate" \| "usage-based"` | `"per-seat"`               | Type of pricing model                         |
+| price        | `string`                                     | `"$2,500"`                 | Price display string (can include formatting) |
+| onApprove    | `() => void`                                 | `undefined`                | Callback function when approve button clicked |
+| onDiscard    | `() => void`                                 | `undefined`                | Callback function when discard button clicked |
+
+## Examples
+
+### With State Management
+
+```tsx showLineNumbers
+function PurchaseApproval() {
+  const [status, setStatus] = useState<"pending" | "approved" | "discarded">(
+    "pending"
+  )
+
+  const handleApprove = () => {
+    setStatus("approved")
+    // API call to approve purchase
+    approvePurchase(purchaseId)
+  }
+
+  const handleDiscard = () => {
+    setStatus("discarded")
+    // API call to discard purchase
+    discardPurchase(purchaseId)
+  }
+
+  return (
+    <SoftwarePurchaseCard
+      softwareName="Marketing Automation Suite"
+      startDate="2025-03-01"
+      seats={75}
+      pricingType="per-seat"
+      price="$3,750"
+      onApprove={handleApprove}
+      onDiscard={handleDiscard}
+    />
+  )
+}
+```
+
+### With Loading State
+
+```tsx showLineNumbers
+function PurchaseApprovalWithLoading() {
+  const [loading, setLoading] = useState(false)
+
+  const handleApprove = async () => {
+    setLoading(true)
+    try {
+      await approvePurchaseRequest()
+      toast.success("Purchase approved successfully")
+    } catch (error) {
+      toast.error("Failed to approve purchase")
+    } finally {
+      setLoading(false)
+    }
+  }
+
+  return (
+    <SoftwarePurchaseCard
+      softwareName="Analytics Platform"
+      startDate="2025-02-15"
+      seats={100}
+      pricingType="flat-rate"
+      price="$5,000"
+      onApprove={handleApprove}
+      onDiscard={() => {}}
+    />
+  )
+}
+```
+
+### Multiple Cards in a List
+
+```tsx showLineNumbers
+function PurchaseRequestList() {
+  const requests = [
+    {
+      id: 1,
+      softwareName: "CRM Software",
+      startDate: "2025-01-15",
+      seats: 50,
+      pricingType: "per-seat" as const,
+      price: "$2,500",
+    },
+    {
+      id: 2,
+      softwareName: "Project Management Tool",
+      startDate: "2025-02-01",
+      seats: 30,
+      pricingType: "flat-rate" as const,
+      price: "$999",
+    },
+  ]
+
+  return (
+    <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+      {requests.map((request) => (
+        <SoftwarePurchaseCard
+          key={request.id}
+          {...request}
+          onApprove={() => handleApprove(request.id)}
+          onDiscard={() => handleDiscard(request.id)}
+        />
+      ))}
+    </div>
+  )
+}
+```
+
+## Block Example
+
+For a full-page implementation with detailed purchase information, check out the [software-purchase-01](/blocks/software-purchase-01) block.
+
+## Notes
+
+- The date is automatically formatted using `toLocaleDateString` with US locale
+- The pricing type badge displays in a secondary variant for visual hierarchy
+- Icons from `lucide-react` are used for visual clarity (Calendar, Users, CreditCard, DollarSign)
+- The component uses the shadcn/ui Card, Button, and Badge components
+- The card is fully responsive with a max width of `md` (28rem)

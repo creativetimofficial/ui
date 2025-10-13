@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "message",
+  "type": "registry:ui",
+  "dependencies": [
+    "class-variance-authority"
+  ],
+  "registryDependencies": [
+    "avatar"
+  ],
+  "files": [
+    {
+      "path": "components/ui/message.tsx",
+      "content": "import type { ComponentProps, HTMLAttributes } from \"react\"\nimport { cva, type VariantProps } from \"class-variance-authority\"\n\nimport { cn } from \"@/lib/utils\"\nimport {\n  Avatar,\n  AvatarFallback,\n  AvatarImage,\n} from \"@/components/ui/avatar\"\n\nexport type MessageProps = HTMLAttributes<HTMLDivElement> & {\n  from: \"user\" | \"assistant\"\n}\n\nexport const Message = ({ className, from, ...props }: MessageProps) => (\n  <div\n    className={cn(\n      \"group flex w-full items-end justify-end gap-2 py-4\",\n      from === \"user\" ? \"is-user\" : \"is-assistant flex-row-reverse justify-end\",\n      className\n    )}\n    {...props}\n  />\n)\n\nconst messageContentVariants = cva(\n  \"is-user:dark flex flex-col gap-2 overflow-hidden rounded-lg text-sm\",\n  {\n    variants: {\n      variant: {\n        contained: [\n          \"max-w-[80%] px-4 py-3\",\n          \"group-[.is-user]:bg-primary group-[.is-user]:text-primary-foreground\",\n          \"group-[.is-assistant]:bg-secondary group-[.is-assistant]:text-foreground\",\n        ],\n        flat: [\n          \"group-[.is-user]:max-w-[80%] group-[.is-user]:bg-secondary group-[.is-user]:px-4 group-[.is-user]:py-3 group-[.is-user]:text-foreground\",\n          \"group-[.is-assistant]:text-foreground\",\n        ],\n      },\n    },\n    defaultVariants: {\n      variant: \"contained\",\n    },\n  }\n)\n\nexport type MessageContentProps = HTMLAttributes<HTMLDivElement> &\n  VariantProps<typeof messageContentVariants>\n\nexport const MessageContent = ({\n  children,\n  className,\n  variant,\n  ...props\n}: MessageContentProps) => (\n  <div\n    className={cn(messageContentVariants({ variant, className }))}\n    {...props}\n  >\n    {children}\n  </div>\n)\n\nexport type MessageAvatarProps = ComponentProps<typeof Avatar> & {\n  src: string\n  name?: string\n}\n\nexport const MessageAvatar = ({\n  src,\n  name,\n  className,\n  ...props\n}: MessageAvatarProps) => (\n  <Avatar className={cn(\"ring-border size-8 ring-1\", className)} {...props}>\n    <AvatarImage alt=\"\" className=\"mt-0 mb-0\" src={src} />\n    <AvatarFallback>{name?.slice(0, 2) || \"ME\"}</AvatarFallback>\n  </Avatar>\n)\n",
+      "type": "registry:ui"
+    }
+  ]
+}

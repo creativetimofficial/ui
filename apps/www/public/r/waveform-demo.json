@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "waveform-demo",
+  "type": "registry:example",
+  "registryDependencies": [
+    "https://ui.elevenlabs.io/r/waveform.json"
+  ],
+  "files": [
+    {
+      "path": "examples/waveform-demo.tsx",
+      "content": "\"use client\"\n\nimport { ScrollingWaveform } from \"@/components/ui/waveform\"\n\nexport default function WaveformDemo() {\n  return (\n    <div className=\"bg-card w-full rounded-lg border p-6\">\n      <div className=\"mb-4\">\n        <h3 className=\"text-lg font-semibold\">Waveform</h3>\n        <p className=\"text-muted-foreground text-sm\">\n          Real-time audio visualization with smooth scrolling animation\n        </p>\n      </div>\n      <ScrollingWaveform\n        height={80}\n        barWidth={3}\n        barGap={2}\n        speed={30}\n        fadeEdges={true}\n        barColor=\"gray\"\n      />\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

@@ -1,0 +1,202 @@
+---
+title: Voice Button
+description: Interactive button with voice recording states, live waveform visualization, and automatic feedback transitions.
+featured: true
+component: true
+---
+
+<ComponentPreview
+  name="voice-button-demo"
+  description="A beautiful button for voice and audio interactions"
+/>
+
+## Installation
+
+<CodeTabs>
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx @elevenlabs/agents-cli@latest components add voice-button
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="voice-button" title="components/ui/voice-button.tsx" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</CodeTabs>
+
+## Usage
+
+```tsx showLineNumbers
+import { VoiceButton } from "@/components/ui/voice-button"
+```
+
+### Basic Usage
+
+```tsx showLineNumbers
+const [state, setState] = useState<"idle" | "recording" | "processing">("idle")
+
+<VoiceButton
+  state={state}
+  onPress={() => {
+    if (state === "idle") {
+      setState("recording")
+    } else {
+      setState("processing")
+    }
+  }}
+/>
+```
+
+### With Label and Keyboard Shortcut
+
+```tsx showLineNumbers
+<VoiceButton
+  state="idle"
+  label="Press to speak"
+  trailing="⌥Space"
+  onPress={() => console.log("Button pressed")}
+/>
+```
+
+### Different States
+
+```tsx showLineNumbers
+{
+  /* Idle state */
+}
+<VoiceButton state="idle" />
+
+{
+  /* Recording with waveform */
+}
+<VoiceButton state="recording" />
+
+{
+  /* Processing */
+}
+<VoiceButton state="processing" />
+
+{
+  /* Success feedback */
+}
+<VoiceButton state="success" />
+
+{
+  /* Error feedback */
+}
+<VoiceButton state="error" />
+```
+
+### Icon Button
+
+```tsx showLineNumbers
+import { MicIcon } from "lucide-react"
+
+<VoiceButton state="idle" size="icon" icon={<MicIcon />} />
+```
+
+### Custom Styling
+
+```tsx showLineNumbers
+<VoiceButton
+  state="recording"
+  variant="default"
+  size="lg"
+  className="w-full"
+  waveformClassName="bg-primary/10"
+/>
+```
+
+### Auto-transitioning States
+
+```tsx showLineNumbers
+const [state, setState] = useState<VoiceButtonState>("idle")
+
+const handlePress = () => {
+  if (state === "idle") {
+    setState("recording")
+  } else if (state === "recording") {
+    setState("processing")
+    // Simulate API call
+    setTimeout(() => {
+      setState("success")
+      // Auto-return to idle after feedback
+    }, 2000)
+  }
+}
+
+<VoiceButton state={state} onPress={handlePress} />
+```
+
+## API Reference
+
+### VoiceButton
+
+A button component with multiple states for voice recording workflows, including live waveform visualization.
+
+#### Props
+
+| Prop              | Type                                                                          | Default     | Description                                       |
+| ----------------- | ----------------------------------------------------------------------------- | ----------- | ------------------------------------------------- |
+| state             | `"idle" \| "recording" \| "processing" \| "success" \| "error"`               | `"idle"`    | Current state of the voice button                 |
+| onPress           | `() => void`                                                                  | -           | Callback when button is clicked                   |
+| label             | `ReactNode`                                                                   | -           | Content to display on the left side               |
+| trailing          | `ReactNode`                                                                   | -           | Content to display on the right (e.g., shortcuts) |
+| icon              | `ReactNode`                                                                   | -           | Icon to display when idle (for icon size buttons) |
+| variant           | `"default" \| "destructive" \| "outline" \| "secondary" \| "ghost" \| "link"` | `"outline"` | Button variant                                    |
+| size              | `"default" \| "sm" \| "lg" \| "icon"`                                         | `"default"` | Button size                                       |
+| className         | `string`                                                                      | -           | Optional CSS classes for the button               |
+| waveformClassName | `string`                                                                      | -           | Optional CSS classes for the waveform container   |
+| feedbackDuration  | `number`                                                                      | `1500`      | Duration in ms to show success/error states       |
+| ...props          | `HTMLButtonElement`                                                           | -           | All standard button element props                 |
+
+#### VoiceButtonState Type
+
+```tsx
+type VoiceButtonState =
+  | "idle"
+  | "recording"
+  | "processing"
+  | "success"
+  | "error"
+```
+
+## Features
+
+- **State Management**: Five distinct states (idle, recording, processing, success, error)
+- **Live Waveform**: Displays real-time audio visualization during recording
+- **Automatic Transitions**: Success/error states auto-transition back to idle
+- **Keyboard Shortcuts**: Display keyboard shortcuts in the trailing slot
+- **Flexible Layouts**: Supports label/trailing content or icon-only mode
+- **Customizable Feedback**: Configurable duration for success/error states
+- **Accessibility**: Proper ARIA labels and button semantics
+
+## Notes
+
+- Integrates with the LiveWaveform component for audio visualization
+- Success state shows a checkmark icon with automatic timeout
+- Error state shows an X icon with automatic timeout
+- Processing state displays a subtle pulsing animation
+- Recording state activates the live waveform visualization
+- Uses the Button component as base with all its variants
+- Waveform only appears in recording state
+- Feedback states (success/error) automatically return to idle after `feedbackDuration`
+- Compatible with all button sizes and variants

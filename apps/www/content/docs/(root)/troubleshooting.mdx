@@ -1,0 +1,47 @@
+---
+title: Troubleshooting
+description: Troubleshooting ElevenLabs UI components.
+---
+
+## Why are my components not styled?
+
+Make sure your project is configured correctly for shadcn/ui in Tailwind 4 - this means having a `globals.css` file that imports Tailwind and includes the shadcn/ui base styles.
+
+---
+
+## I ran the ElevenLabs UI CLI but nothing was added to my project
+
+Double-check that:
+
+- Your current working directory is the root of your project (where package.json lives).
+- Your components.json file (if using shadcn-style config) is set up correctly.
+- You're using the latest version of the ElevenLabs UI CLI:
+
+```bash
+npx @elevenlabs/agents-cli@latest components add orb
+```
+
+## Theme switching doesn’t work — my app stays in light mode
+
+Ensure your app is using the same data-theme system that shadcn/ui and AI Elements expect. The default implementation toggles a data-theme attribute on the `<html>` element. Make sure your tailwind.config.js is using class or data- selectors accordingly:
+
+## The component imports fail with “module not found”
+
+Check the file exists. If it does, make sure your tsconfig.json has a proper paths alias for @/ i.e.
+
+```json
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/_": ["./_"]
+    }
+  }
+}
+```
+
+---
+
+## Still stuck?
+
+If all else fails, feel free to open an issue on [GitHub](https://github.com/elevenlabs/ui/issues).

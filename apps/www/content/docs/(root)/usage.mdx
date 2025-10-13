@@ -1,0 +1,27 @@
+---
+title: Usage
+description: How to use ElevenLabs UI components in your application.
+---
+
+Once an ElevenLabs UI component is installed, you can import it and use it in your application like any other React component. The components are added as part of your codebase (not hidden in a library), so you can edit the components to suit your specific needs.
+
+---
+
+## Example
+
+After installing ElevenLabs UI components, you can use them in your application like any other React component. For example:
+
+```tsx
+"use client"
+
+import { Card } from "@/components/ui/card"
+import { Orb } from "@/components/ui/orb"
+
+export default function Page() {
+  return (
+    <Card className="flex items-center justify-center p-8">
+      <Orb />
+    </Card>
+  )
+}
+```

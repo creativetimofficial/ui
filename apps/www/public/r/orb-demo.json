@@ -1,0 +1,16 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "orb-demo",
+  "type": "registry:example",
+  "registryDependencies": [
+    "https://ui.elevenlabs.io/r/orb.json",
+    "button"
+  ],
+  "files": [
+    {
+      "path": "examples/orb-demo.tsx",
+      "content": "\"use client\"\n\nimport { useState } from \"react\"\n\nimport { Button } from \"@/components/ui/button\"\nimport { AgentState, Orb } from \"@/components/ui/orb\"\n\nlet ORBS: [string, string][] = [\n  [\"#CADCFC\", \"#A0B9D1\"],\n  [\"#F6E7D8\", \"#E0CFC2\"],\n  [\"#E5E7EB\", \"#9CA3AF\"],\n]\n\nexport default function OrbDemo({ small = false }: { small?: boolean }) {\n  const [agent, setAgent] = useState<AgentState>(null)\n\n  ORBS = small ? [ORBS[0]] : ORBS\n\n  return (\n    <div className=\"bg-card w-full rounded-lg border p-6\">\n      <div className=\"mb-4\">\n        <h3 className=\"text-lg font-semibold\">Agent Orbs</h3>\n        <p className=\"text-muted-foreground text-sm\">\n          Interactive orb visualization with agent states\n        </p>\n      </div>\n\n      <div className=\"space-y-4\">\n        <div className=\"flex justify-center gap-8\">\n          {ORBS.map((colors, index) => (\n            <div\n              key={index}\n              className={`relative ${index === 1 ? \"block md:block\" : \"hidden md:block\"}`}\n            >\n              <div className=\"bg-muted relative h-32 w-32 rounded-full p-1 shadow-[inset_0_2px_8px_rgba(0,0,0,0.1)] dark:shadow-[inset_0_2px_8px_rgba(0,0,0,0.5)]\">\n                <div className=\"bg-background h-full w-full overflow-hidden rounded-full shadow-[inset_0_0_12px_rgba(0,0,0,0.05)] dark:shadow-[inset_0_0_12px_rgba(0,0,0,0.3)]\">\n                  <Orb\n                    colors={colors}\n                    seed={(index + 1) * 1000}\n                    agentState={agent}\n                  />\n                </div>\n              </div>\n            </div>\n          ))}\n        </div>\n\n        <div className=\"flex flex-wrap justify-center gap-2\">\n          <Button\n            size=\"sm\"\n            variant=\"outline\"\n            onClick={() => setAgent(null)}\n            disabled={agent === null}\n          >\n            Idle\n          </Button>\n          <Button\n            size=\"sm\"\n            variant=\"outline\"\n            onClick={() => setAgent(\"listening\")}\n            disabled={agent === \"listening\"}\n          >\n            Listening\n          </Button>\n          <Button\n            size=\"sm\"\n            variant=\"outline\"\n            disabled={agent === \"talking\"}\n            onClick={() => setAgent(\"talking\")}\n          >\n            Talking\n          </Button>\n        </div>\n      </div>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

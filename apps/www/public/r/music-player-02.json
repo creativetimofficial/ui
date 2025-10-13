@@ -1,0 +1,26 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "music-player-02",
+  "type": "registry:block",
+  "description": "Simple music player",
+  "registryDependencies": [
+    "https://ui.elevenlabs.io/r/audio-player.json",
+    "card"
+  ],
+  "files": [
+    {
+      "path": "blocks/music-player-02/page.tsx",
+      "content": "\"use client\"\n\nimport {\n  AudioPlayerButton,\n  AudioPlayerDuration,\n  AudioPlayerProgress,\n  AudioPlayerProvider,\n  AudioPlayerTime,\n  exampleTracks,\n  useAudioPlayer,\n} from \"@/components/ui/audio-player\"\nimport { Card } from \"@/components/ui/card\"\n\nexport default function Page() {\n  return (\n    <AudioPlayerProvider>\n      <MusicPlayerDemo />\n    </AudioPlayerProvider>\n  )\n}\n\nconst MusicPlayerDemo = () => {\n  const player = useAudioPlayer<{ name: string }>()\n\n  const track = exampleTracks[9]\n\n  return (\n    <Card className=\"w-full overflow-hidden p-4\">\n      <div className=\"space-y-4\">\n        <div>\n          <h3 className=\"text-base font-semibold\">\n            {player.activeItem?.data?.name || track.name}\n          </h3>\n        </div>\n        <div className=\"flex items-center gap-3\">\n          <AudioPlayerButton\n            variant=\"outline\"\n            size=\"default\"\n            className=\"h-10 w-10 shrink-0\"\n            item={{\n              id: track.id,\n              src: track.url,\n              data: track,\n            }}\n          />\n          <div className=\"flex flex-1 items-center gap-2\">\n            <AudioPlayerTime className=\"text-xs tabular-nums\" />\n            <AudioPlayerProgress className=\"flex-1\" />\n            <AudioPlayerDuration className=\"text-xs tabular-nums\" />\n          </div>\n        </div>\n      </div>\n    </Card>\n  )\n}\n",
+      "type": "registry:page",
+      "target": "app/music-player/page.tsx"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "400px",
+    "container": "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
+    "mobile": "component"
+  },
+  "categories": [
+    "audio"
+  ]
+}
