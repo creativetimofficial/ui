@@ -19,4 +19,9 @@ export const registryCategories = [
     slug: "blog-sections",
     hidden: false,
   },
+  {
+    name: "Ecommerce",
+    slug: "ecommerce",
+    hidden: false,
+  },
 ]
