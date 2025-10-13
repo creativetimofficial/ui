@@ -513,7 +513,7 @@ export const blocks: Registry["items"] = [
     registryDependencies: ["button", "card"],
     files: [
       {
-        path: "blocks/ecommerce/simple-product-details-01.tsx",
+        path: "blocks/simple-product-details-01/page.tsx",
         type: "registry:page",
         target: "app/simple-product-details/page.tsx",
       },
@@ -533,7 +533,7 @@ export const blocks: Registry["items"] = [
     registryDependencies: ["button", "card", "select"],
     files: [
       {
-        path: "blocks/ecommerce/grid-ecommerce-01.tsx",
+        path: "blocks/grid-ecommerce-01/page.tsx",
         type: "registry:page",
         target: "app/grid-ecommerce/page.tsx",
       },
@@ -553,7 +553,7 @@ export const blocks: Registry["items"] = [
     registryDependencies: ["button", "card"],
     files: [
       {
-        path: "blocks/ecommerce/promotional-cards-01.tsx",
+        path: "blocks/promotional-cards-01/page.tsx",
         type: "registry:page",
         target: "app/promotional-cards/page.tsx",
       },
@@ -573,7 +573,7 @@ export const blocks: Registry["items"] = [
     registryDependencies: ["badge", "button", "card"],
     files: [
       {
-        path: "blocks/ecommerce/order-history-01.tsx",
+        path: "blocks/order-history-01/page.tsx",
         type: "registry:page",
         target: "app/order-history/page.tsx",
       },
@@ -593,7 +593,7 @@ export const blocks: Registry["items"] = [
     registryDependencies: ["button"],
     files: [
       {
-        path: "blocks/ecommerce/empty-shopping-cart-01.tsx",
+        path: "blocks/empty-shopping-cart-01/page.tsx",
         type: "registry:page",
         target: "app/empty-shopping-cart/page.tsx",
       },
@@ -613,7 +613,7 @@ export const blocks: Registry["items"] = [
     registryDependencies: ["button", "label", "radio-group"],
     files: [
       {
-        path: "blocks/ecommerce/digital-product-overview-01.tsx",
+        path: "blocks/digital-product-overview-01/page.tsx",
         type: "registry:page",
         target: "app/digital-product-overview/page.tsx",
       },
@@ -633,7 +633,7 @@ export const blocks: Registry["items"] = [
     registryDependencies: ["button"],
     files: [
       {
-        path: "blocks/ecommerce/product-description-01.tsx",
+        path: "blocks/product-description-01/page.tsx",
         type: "registry:page",
         target: "app/product-description/page.tsx",
       },
@@ -653,7 +653,7 @@ export const blocks: Registry["items"] = [
     registryDependencies: ["button", "tabs"],
     files: [
       {
-        path: "blocks/ecommerce/dark-product-overview-01.tsx",
+        path: "blocks/dark-product-overview-01/page.tsx",
         type: "registry:page",
         target: "app/dark-product-overview/page.tsx",
       },
@@ -673,7 +673,7 @@ export const blocks: Registry["items"] = [
     registryDependencies: ["button", "card", "input", "select"],
     files: [
       {
-        path: "blocks/ecommerce/shopping-cart-01.tsx",
+        path: "blocks/shopping-cart-01/page.tsx",
         type: "registry:page",
         target: "app/shopping-cart/page.tsx",
       },
@@ -693,7 +693,7 @@ export const blocks: Registry["items"] = [
     registryDependencies: ["button", "checkbox", "input", "label"],
     files: [
       {
-        path: "blocks/ecommerce/checkout-01.tsx",
+        path: "blocks/checkout-01/page.tsx",
         type: "registry:page",
         target: "app/checkout/page.tsx",
       },
@@ -713,7 +713,7 @@ export const blocks: Registry["items"] = [
     registryDependencies: ["accordion", "button"],
     files: [
       {
-        path: "blocks/ecommerce/complex-product-description-01.tsx",
+        path: "blocks/complex-product-description-01/page.tsx",
         type: "registry:page",
         target: "app/complex-product-description/page.tsx",
       },
@@ -733,7 +733,7 @@ export const blocks: Registry["items"] = [
     registryDependencies: ["button"],
     files: [
       {
-        path: "blocks/ecommerce/interactive-product-preview-01.tsx",
+        path: "blocks/interactive-product-preview-01/page.tsx",
         type: "registry:page",
         target: "app/interactive-product-preview/page.tsx",
       },
@@ -753,7 +753,7 @@ export const blocks: Registry["items"] = [
     registryDependencies: ["button", "card"],
     files: [
       {
-        path: "blocks/ecommerce/order-details-01.tsx",
+        path: "blocks/order-details-01/page.tsx",
         type: "registry:page",
         target: "app/order-details/page.tsx",
       },
@@ -773,7 +773,7 @@ export const blocks: Registry["items"] = [
     registryDependencies: ["button", "card"],
     files: [
       {
-        path: "blocks/ecommerce/product-details-01.tsx",
+        path: "blocks/product-details-01/page.tsx",
         type: "registry:page",
         target: "app/product-details/page.tsx",
       },
