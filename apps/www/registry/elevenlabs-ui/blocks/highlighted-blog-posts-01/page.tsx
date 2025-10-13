@@ -2,8 +2,13 @@
 
 import { Globe, Heart, Mic, Puzzle } from "lucide-react"
 
-import { Button } from "@/components/ui/button"
-import { Card, CardBody, CardFooter, CardHeader } from "@/components/ui/card"
+import { Button } from "@/registry/elevenlabs-ui/ui/button"
+import {
+  Card,
+  CardContent,
+  CardFooter,
+  CardHeader,
+} from "@/registry/elevenlabs-ui/ui/card"
 
 const POSTS = [
   {
@@ -49,7 +54,7 @@ export default function HighlightedBlogPosts01() {
               Landscape
             </p>
           </CardHeader>
-          <CardBody className="p-6 sm:p-8">
+          <CardContent className="p-6 sm:p-8">
             <h3 className="text-center text-2xl font-bold">
               Nature&apos;s Light
             </h3>
@@ -57,7 +62,7 @@ export default function HighlightedBlogPosts01() {
               It really matters and then like it really doesn&apos;t matter.
               What matters is the people who are sparked by it.
             </p>
-          </CardBody>
+          </CardContent>
           <CardFooter className="p-6 text-center sm:p-8">
             <Button
               size="sm"
@@ -80,13 +85,13 @@ export default function HighlightedBlogPosts01() {
                 className="absolute inset-0 h-full w-full object-cover object-center"
               />
               <div className="absolute inset-0 h-full w-full bg-black/60" />
-              <CardBody className="relative flex h-full flex-col justify-between p-6">
+              <CardContent className="relative flex h-full flex-col justify-between p-6">
                 <Icon className="h-8 w-8 stroke-2 text-white" />
                 <div className="space-y-0.5">
                   <h3 className="text-xl font-semibold text-white">{title}</h3>
                   <p className="text-sm text-white/80">{desc}</p>
                 </div>
-              </CardBody>
+              </CardContent>
             </Card>
           ))}
         </div>
