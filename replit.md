@@ -43,6 +43,26 @@ Preferred communication style: Simple, everyday language.
 - **Registry Integration**: All blog section blocks registered in registry-blocks.ts with proper metadata and CLI installation support
 - **Design Consistency**: Components use shadcn UI primitives (Avatar, Badge, Button, Card) and Lucide icons for consistency
 
+### Ecommerce Blocks Addition (October 13, 2025)
+- **New Category**: Added "Ecommerce" category to the component registry (visible at /blocks/ecommerce)
+- **Component Conversion**: Migrated 14 ecommerce blocks from Material Tailwind to shadcn UI design system
+  - simple-product-details-01: Simple product details grid with cards
+  - grid-ecommerce-01: Product grid with filtering options
+  - promotional-cards-01: Promotional product cards
+  - order-history-01: Order history table with status badges
+  - empty-shopping-cart-01: Empty cart state with illustration
+  - digital-product-overview-01: Digital product with plan selection using radio groups
+  - product-description-01: Product page with image gallery and size selection
+  - dark-product-overview-01: Dark themed product overview with tabs
+  - shopping-cart-01: Shopping cart with order summary and checkout
+  - checkout-01: Checkout form with shipping and payment details
+  - complex-product-description-01: Product description with accordion sections
+  - interactive-product-preview-01: Interactive room preview with product overlay
+  - order-details-01: Order details page with timeline and delivery tracking
+  - product-details-01: Product details with image carousel navigation
+- **Registry Integration**: All ecommerce blocks registered in registry-blocks.ts with proper metadata and CLI installation support
+- **Design Consistency**: Components use shadcn UI primitives (Button, Card, Input, Select, Checkbox, RadioGroup, Tabs, Accordion) and Lucide icons for consistency
+
 ### CLI Rebranding (October 13, 2025)
 - **Package Name Change**: Rebranded CLI from `@elevenlabs/agents-cli` to `@creative-tim/ui`
 - **Documentation Updates**: Updated all references across README, MDX docs, command-menu, and block-viewer components
