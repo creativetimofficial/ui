@@ -506,4 +506,284 @@ export const blocks: Registry["items"] = [
     },
     categories: ["blog-sections"],
   },
+  {
+    name: "simple-product-details-01",
+    description: "Simple product details grid",
+    type: "registry:block",
+    registryDependencies: ["button", "card"],
+    files: [
+      {
+        path: "blocks/ecommerce/simple-product-details-01.tsx",
+        type: "registry:page",
+        target: "app/simple-product-details/page.tsx",
+      },
+    ],
+    meta: {
+      iframeHeight: "1000px",
+      container:
+        "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
+      mobile: "component",
+    },
+    categories: ["ecommerce"],
+  },
+  {
+    name: "grid-ecommerce-01",
+    description: "Product grid with filters",
+    type: "registry:block",
+    registryDependencies: ["button", "card", "select"],
+    files: [
+      {
+        path: "blocks/ecommerce/grid-ecommerce-01.tsx",
+        type: "registry:page",
+        target: "app/grid-ecommerce/page.tsx",
+      },
+    ],
+    meta: {
+      iframeHeight: "1200px",
+      container:
+        "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
+      mobile: "component",
+    },
+    categories: ["ecommerce"],
+  },
+  {
+    name: "promotional-cards-01",
+    description: "Promotional product cards",
+    type: "registry:block",
+    registryDependencies: ["button", "card"],
+    files: [
+      {
+        path: "blocks/ecommerce/promotional-cards-01.tsx",
+        type: "registry:page",
+        target: "app/promotional-cards/page.tsx",
+      },
+    ],
+    meta: {
+      iframeHeight: "800px",
+      container:
+        "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
+      mobile: "component",
+    },
+    categories: ["ecommerce"],
+  },
+  {
+    name: "order-history-01",
+    description: "Order history table",
+    type: "registry:block",
+    registryDependencies: ["badge", "button", "card"],
+    files: [
+      {
+        path: "blocks/ecommerce/order-history-01.tsx",
+        type: "registry:page",
+        target: "app/order-history/page.tsx",
+      },
+    ],
+    meta: {
+      iframeHeight: "1000px",
+      container:
+        "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
+      mobile: "component",
+    },
+    categories: ["ecommerce"],
+  },
+  {
+    name: "empty-shopping-cart-01",
+    description: "Empty shopping cart state",
+    type: "registry:block",
+    registryDependencies: ["button"],
+    files: [
+      {
+        path: "blocks/ecommerce/empty-shopping-cart-01.tsx",
+        type: "registry:page",
+        target: "app/empty-shopping-cart/page.tsx",
+      },
+    ],
+    meta: {
+      iframeHeight: "800px",
+      container:
+        "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
+      mobile: "component",
+    },
+    categories: ["ecommerce"],
+  },
+  {
+    name: "digital-product-overview-01",
+    description: "Digital product with plan options",
+    type: "registry:block",
+    registryDependencies: ["button", "label", "radio-group"],
+    files: [
+      {
+        path: "blocks/ecommerce/digital-product-overview-01.tsx",
+        type: "registry:page",
+        target: "app/digital-product-overview/page.tsx",
+      },
+    ],
+    meta: {
+      iframeHeight: "1000px",
+      container:
+        "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
+      mobile: "component",
+    },
+    categories: ["ecommerce"],
+  },
+  {
+    name: "product-description-01",
+    description: "Product description with gallery",
+    type: "registry:block",
+    registryDependencies: ["button"],
+    files: [
+      {
+        path: "blocks/ecommerce/product-description-01.tsx",
+        type: "registry:page",
+        target: "app/product-description/page.tsx",
+      },
+    ],
+    meta: {
+      iframeHeight: "1200px",
+      container:
+        "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
+      mobile: "component",
+    },
+    categories: ["ecommerce"],
+  },
+  {
+    name: "dark-product-overview-01",
+    description: "Dark themed product overview",
+    type: "registry:block",
+    registryDependencies: ["button", "tabs"],
+    files: [
+      {
+        path: "blocks/ecommerce/dark-product-overview-01.tsx",
+        type: "registry:page",
+        target: "app/dark-product-overview/page.tsx",
+      },
+    ],
+    meta: {
+      iframeHeight: "1000px",
+      container:
+        "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
+      mobile: "component",
+    },
+    categories: ["ecommerce"],
+  },
+  {
+    name: "shopping-cart-01",
+    description: "Shopping cart with summary",
+    type: "registry:block",
+    registryDependencies: ["button", "card", "input", "select"],
+    files: [
+      {
+        path: "blocks/ecommerce/shopping-cart-01.tsx",
+        type: "registry:page",
+        target: "app/shopping-cart/page.tsx",
+      },
+    ],
+    meta: {
+      iframeHeight: "1100px",
+      container:
+        "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
+      mobile: "component",
+    },
+    categories: ["ecommerce"],
+  },
+  {
+    name: "checkout-01",
+    description: "Checkout form with order summary",
+    type: "registry:block",
+    registryDependencies: ["button", "checkbox", "input", "label"],
+    files: [
+      {
+        path: "blocks/ecommerce/checkout-01.tsx",
+        type: "registry:page",
+        target: "app/checkout/page.tsx",
+      },
+    ],
+    meta: {
+      iframeHeight: "900px",
+      container:
+        "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
+      mobile: "component",
+    },
+    categories: ["ecommerce"],
+  },
+  {
+    name: "complex-product-description-01",
+    description: "Product description with accordion",
+    type: "registry:block",
+    registryDependencies: ["accordion", "button"],
+    files: [
+      {
+        path: "blocks/ecommerce/complex-product-description-01.tsx",
+        type: "registry:page",
+        target: "app/complex-product-description/page.tsx",
+      },
+    ],
+    meta: {
+      iframeHeight: "1200px",
+      container:
+        "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
+      mobile: "component",
+    },
+    categories: ["ecommerce"],
+  },
+  {
+    name: "interactive-product-preview-01",
+    description: "Interactive room product preview",
+    type: "registry:block",
+    registryDependencies: ["button"],
+    files: [
+      {
+        path: "blocks/ecommerce/interactive-product-preview-01.tsx",
+        type: "registry:page",
+        target: "app/interactive-product-preview/page.tsx",
+      },
+    ],
+    meta: {
+      iframeHeight: "1100px",
+      container:
+        "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
+      mobile: "component",
+    },
+    categories: ["ecommerce"],
+  },
+  {
+    name: "order-details-01",
+    description: "Order details with timeline",
+    type: "registry:block",
+    registryDependencies: ["button", "card"],
+    files: [
+      {
+        path: "blocks/ecommerce/order-details-01.tsx",
+        type: "registry:page",
+        target: "app/order-details/page.tsx",
+      },
+    ],
+    meta: {
+      iframeHeight: "1000px",
+      container:
+        "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
+      mobile: "component",
+    },
+    categories: ["ecommerce"],
+  },
+  {
+    name: "product-details-01",
+    description: "Product details with image carousel",
+    type: "registry:block",
+    registryDependencies: ["button", "card"],
+    files: [
+      {
+        path: "blocks/ecommerce/product-details-01.tsx",
+        type: "registry:page",
+        target: "app/product-details/page.tsx",
+      },
+    ],
+    meta: {
+      iframeHeight: "1000px",
+      container:
+        "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
+      mobile: "component",
+    },
+    categories: ["ecommerce"],
+  },
 ]
