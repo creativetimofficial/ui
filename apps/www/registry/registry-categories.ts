@@ -9,4 +9,9 @@ export const registryCategories = [
     slug: "audio",
     hidden: false,
   },
+  {
+    name: "Billing",
+    slug: "billing",
+    hidden: false,
+  },
 ]
