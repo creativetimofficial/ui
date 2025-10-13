@@ -55,10 +55,7 @@ export default function BlogRectangularImages01() {
     <section className="py-16">
       <div className="container my-auto grid grid-cols-1 gap-8 lg:grid-cols-2">
         {POSTS.map(({ img, tag, title, desc, date, author }) => (
-          <div
-            key={title}
-            className="grid items-center gap-4 sm:grid-cols-2"
-          >
+          <div key={title} className="grid items-center gap-4 sm:grid-cols-2">
             <div className="h-full max-h-72 overflow-hidden rounded-lg lg:max-h-full">
               <img
                 src={img}
