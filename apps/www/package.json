@@ -107,6 +107,7 @@
     "zod": "^3.24.1"
   },
   "devDependencies": {
+    "@types/google.accounts": "^0.0.18",
     "@eslint/eslintrc": "^3",
     "@ianvs/prettier-plugin-sort-imports": "^4.4.1",
     "@tailwindcss/postcss": "^4",

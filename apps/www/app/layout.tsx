@@ -11,6 +11,7 @@ import { ThemeProvider } from "@/components/theme-provider"
 import { Toaster } from "@/registry/elevenlabs-ui/ui/sonner"
 
 import "@/styles/globals.css"
+import Script from "next/script"
 
 export const metadata: Metadata = {
   title: {
@@ -66,6 +67,10 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        <Script
+          src="https://accounts.google.com/gsi/client"
+          strategy="afterInteractive"
+        />
         <script
           dangerouslySetInnerHTML={{
             __html: `
