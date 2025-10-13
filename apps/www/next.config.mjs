@@ -6,6 +6,7 @@ const nextConfig = {
   typescript: {
     ignoreBuildErrors: true,
   },
+  allowedDevOrigins: ["https://*.replit.dev"],
   outputFileTracingIncludes: {
     "/*": ["./registry/**/*"],
   },
