@@ -31,6 +31,18 @@ Preferred communication style: Simple, everyday language.
 - **Registry Integration**: All billing blocks registered in registry-blocks.ts with proper metadata and CLI installation support
 - **Design Consistency**: Components now use shadcn UI primitives (Card, Table, Button, Input, Select) for consistency with the rest of the library
 
+### Blog Sections Addition (October 13, 2025)
+- **New Category**: Added "Blog Sections" category to the component registry (visible at /blocks/blog-sections)
+- **Component Conversion**: Migrated 6 blog section blocks from Material Tailwind to shadcn UI design system
+  - simple-blog-content-01: Simple blog content cards with author avatars
+  - blog-cards-layout-01: Blog cards grid with "View More" button
+  - blog-post-preview-tags-01: Blog posts with tag badges
+  - highlighted-blog-posts-01: Highlighted blog posts with icons and image overlays
+  - blog-rectangular-images-01: Blog posts with rectangular images and author info
+  - large-blog-preview-01: Large hero-style blog post preview
+- **Registry Integration**: All blog section blocks registered in registry-blocks.ts with proper metadata and CLI installation support
+- **Design Consistency**: Components use shadcn UI primitives (Avatar, Badge, Button, Card) and Lucide icons for consistency
+
 ## System Architecture
 
 ### Monorepo Structure
