@@ -1,5 +1,7 @@
 "use client"
 
+import { Pencil, Plus, Trash2 } from "lucide-react"
+
 import { Button } from "@/registry/elevenlabs-ui/ui/button"
 import { Card } from "@/registry/elevenlabs-ui/ui/card"
 import {
@@ -8,7 +10,6 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/registry/elevenlabs-ui/ui/tooltip"
-import { Pencil, Plus, Trash2 } from "lucide-react"
 
 interface PaymentMethodProps {
   type: "visa" | "mastercard"
@@ -24,12 +25,18 @@ function PaymentMethod({ type, number }: PaymentMethodProps) {
   return (
     <Card className="flex items-center gap-4 border p-4">
       <img src={cardImg} alt={type} className="h-8 w-auto" />
-      <p className="mx-4 block text-sm font-semibold">**** **** **** {number}</p>
+      <p className="mx-4 block text-sm font-semibold">
+        **** **** **** {number}
+      </p>
       <div className="ml-auto flex items-center gap-2">
         <TooltipProvider>
           <Tooltip>
             <TooltipTrigger asChild>
-              <Button size="icon" variant="ghost" className="h-8 w-8 text-destructive hover:text-destructive">
+              <Button
+                size="icon"
+                variant="ghost"
+                className="text-destructive hover:text-destructive h-8 w-8"
+              >
                 <Trash2 className="h-4 w-4" />
               </Button>
             </TooltipTrigger>
@@ -61,7 +68,7 @@ export default function PaymentMethod01() {
       <div className="flex flex-col items-start justify-between gap-4 sm:flex-row">
         <div>
           <h2 className="font-semibold">Payment Method</h2>
-          <p className="text-sm text-muted-foreground">
+          <p className="text-muted-foreground text-sm">
             Manage your preferred payment methods securely and conveniently.
           </p>
         </div>

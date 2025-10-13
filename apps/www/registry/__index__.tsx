@@ -460,6 +460,96 @@ export const Index: Record<string, any> = {
     categories: ["forms"],
     meta: {"iframeHeight":"900px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component"},
   },
+  "billing-information-01": {
+    name: "billing-information-01",
+    description: "Billing information management",
+    type: "registry:block",
+    registryDependencies: ["button","card"],
+    files: [{
+      path: "registry/elevenlabs-ui/blocks/billing-information-01/page.tsx",
+      type: "registry:page",
+      target: "app/billing-information/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/elevenlabs-ui/blocks/billing-information-01/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["billing"],
+    meta: {"iframeHeight":"700px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component"},
+  },
+  "card-display-01": {
+    name: "card-display-01",
+    description: "Credit card display",
+    type: "registry:block",
+    registryDependencies: ["card"],
+    files: [{
+      path: "registry/elevenlabs-ui/blocks/card-display-01/page.tsx",
+      type: "registry:page",
+      target: "app/card-display/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/elevenlabs-ui/blocks/card-display-01/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["billing"],
+    meta: {"iframeHeight":"400px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component"},
+  },
+  "payment-method-01": {
+    name: "payment-method-01",
+    description: "Payment methods management",
+    type: "registry:block",
+    registryDependencies: ["button","card","tooltip"],
+    files: [{
+      path: "registry/elevenlabs-ui/blocks/payment-method-01/page.tsx",
+      type: "registry:page",
+      target: "app/payment-method/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/elevenlabs-ui/blocks/payment-method-01/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["billing"],
+    meta: {"iframeHeight":"500px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component"},
+  },
+  "transaction-history-01": {
+    name: "transaction-history-01",
+    description: "Transaction history with date picker",
+    type: "registry:block",
+    registryDependencies: ["button","calendar","card","popover"],
+    files: [{
+      path: "registry/elevenlabs-ui/blocks/transaction-history-01/page.tsx",
+      type: "registry:page",
+      target: "app/transaction-history/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/elevenlabs-ui/blocks/transaction-history-01/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["billing"],
+    meta: {"iframeHeight":"800px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component"},
+  },
+  "invoices-01": {
+    name: "invoices-01",
+    description: "Invoices list with status badges",
+    type: "registry:block",
+    registryDependencies: ["badge","button","separator"],
+    files: [{
+      path: "registry/elevenlabs-ui/blocks/invoices-01/page.tsx",
+      type: "registry:page",
+      target: "app/invoices/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/elevenlabs-ui/blocks/invoices-01/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["billing"],
+    meta: {"iframeHeight":"700px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component"},
+  },
   "use-mobile": {
     name: "use-mobile",
     description: "",

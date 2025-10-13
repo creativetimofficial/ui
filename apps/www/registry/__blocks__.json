@@ -48,5 +48,30 @@
     "name": "software-purchase-01",
     "description": "Software purchase approval card",
     "categories": ["forms"]
+  },
+  {
+    "name": "billing-information-01",
+    "description": "Billing information management",
+    "categories": ["billing"]
+  },
+  {
+    "name": "card-display-01",
+    "description": "Credit card display",
+    "categories": ["billing"]
+  },
+  {
+    "name": "payment-method-01",
+    "description": "Payment methods management",
+    "categories": ["billing"]
+  },
+  {
+    "name": "transaction-history-01",
+    "description": "Transaction history with date picker",
+    "categories": ["billing"]
+  },
+  {
+    "name": "invoices-01",
+    "description": "Invoices list with status badges",
+    "categories": ["billing"]
   }
 ]
