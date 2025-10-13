@@ -216,7 +216,7 @@ function BlockViewerToolbar() {
         >
           {isCopied ? <Check /> : <Terminal />}
           <span>
-            npx @elevenlabs/agents-cli@latest components add {item.name}
+            npx @creativetim/ui@latest components add {item.name}
           </span>
         </Button>
         <Separator orientation="vertical" className="mx-1 !h-4" />
