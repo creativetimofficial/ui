@@ -13,7 +13,7 @@ The CLI makes it easy to add these components to your Next.js project.
 You can use the ElevenLabs Agents CLI directly with npx, or install it globally:
 ```bash
 # Use directly (recommended)
-npx @creativetim/ui@latest components add <component-name>
+npx @creative-tim/ui@latest components add <component-name>
 
 # Or using shadcn cli
 npx shadcn@latest add https://ui.elevenlabs.io/r/all.json
@@ -30,7 +30,7 @@ Before using ElevenLabs UI, ensure your Next.js project meets these requirements
 ### Install All Components
 Install all available ElevenLabs UI components at once:
 ```bash
-npx @creativetim/ui@latest components add all
+npx @creative-tim/ui@latest components add all
 ```
 This command will:
 - Set up shadcn/ui if not already configured
@@ -40,12 +40,12 @@ This command will:
 ### Install Specific Components
 Install individual components using the `components add` command:
 ```bash
-npx @creativetim/ui@latest components add <component-name>
+npx @creative-tim/ui@latest components add <component-name>
 ```
 Examples:
 ```bash
 # Install the orb component
-npx @creativetim/ui@latest components add orb
+npx @creative-tim/ui@latest components add orb
 ```
 
 ### Alternative: Use with shadcn CLI
