@@ -1,7 +1,8 @@
 "use client"
 
-import { Card } from "@/registry/elevenlabs-ui/ui/card"
 import { Wifi } from "lucide-react"
+
+import { Card } from "@/registry/elevenlabs-ui/ui/card"
 
 interface CreditCardProps {
   variant?: "dark" | "light"
@@ -10,7 +11,12 @@ interface CreditCardProps {
   expires: string
 }
 
-function CreditCard({ variant = "light", number, holder, expires }: CreditCardProps) {
+function CreditCard({
+  variant = "light",
+  number,
+  holder,
+  expires,
+}: CreditCardProps) {
   const isDark = variant === "dark"
 
   return (

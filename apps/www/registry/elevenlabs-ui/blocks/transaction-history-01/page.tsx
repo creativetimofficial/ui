@@ -1,7 +1,10 @@
 "use client"
 
 import * as React from "react"
+import { format } from "date-fns"
+import { CalendarIcon, ChevronDown, ChevronUp, Clock } from "lucide-react"
 
+import { cn } from "@/lib/utils"
 import { Button } from "@/registry/elevenlabs-ui/ui/button"
 import { Calendar } from "@/registry/elevenlabs-ui/ui/calendar"
 import { Card } from "@/registry/elevenlabs-ui/ui/card"
@@ -10,14 +13,6 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "@/registry/elevenlabs-ui/ui/popover"
-import { cn } from "@/lib/utils"
-import { format } from "date-fns"
-import {
-  CalendarIcon,
-  ChevronDown,
-  ChevronUp,
-  Clock,
-} from "lucide-react"
 
 const DATA = {
   "March 2023": [
@@ -88,7 +83,7 @@ export default function TransactionHistory01() {
       <div className="flex flex-wrap items-start justify-between gap-4">
         <div>
           <h2 className="font-semibold">History Transactions</h2>
-          <p className="text-sm text-muted-foreground">
+          <p className="text-muted-foreground text-sm">
             Track and monitor your financial activity.
           </p>
         </div>
@@ -119,21 +114,31 @@ export default function TransactionHistory01() {
         {(Object.keys(DATA) as Array<keyof typeof DATA>).map((month, key) => {
           return (
             <div key={key} className="mb-6 last:mb-0">
-              <p className="mb-2 ml-2.5 font-semibold text-muted-foreground">{month}</p>
+              <p className="text-muted-foreground mb-2 ml-2.5 font-semibold">
+                {month}
+              </p>
               <div className="space-y-2">
                 {DATA[month].map(({ name, value, date, status }) => {
                   const Icon = ICONS[status]
 
                   return (
-                    <div key={name} className="flex items-center gap-4 rounded-lg border p-4">
+                    <div
+                      key={name}
+                      className="flex items-center gap-4 rounded-lg border p-4"
+                    >
                       <Card className="hidden h-12 w-12 place-items-center border sm:grid">
                         <Icon className="h-5 w-5" />
                       </Card>
                       <div className="mx-0 space-y-0.5 sm:mx-2">
                         <p className="font-semibold">{name}</p>
-                        <p className="text-sm text-muted-foreground">{date}</p>
+                        <p className="text-muted-foreground text-sm">{date}</p>
                       </div>
-                      <p className={cn("mx-2 ml-auto text-sm font-semibold", COLORS[status])}>
+                      <p
+                        className={cn(
+                          "mx-2 ml-auto text-sm font-semibold",
+                          COLORS[status]
+                        )}
+                      >
                         {PREFIX[status]}{" "}
                         {value
                           ? new Intl.NumberFormat("en-US", {
