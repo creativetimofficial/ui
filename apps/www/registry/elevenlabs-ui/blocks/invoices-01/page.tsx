@@ -1,9 +1,10 @@
 "use client"
 
+import { Download } from "lucide-react"
+
 import { Badge } from "@/registry/elevenlabs-ui/ui/badge"
 import { Button } from "@/registry/elevenlabs-ui/ui/button"
 import { Separator } from "@/registry/elevenlabs-ui/ui/separator"
-import { Download } from "lucide-react"
 
 const DATA = [
   {
@@ -49,7 +50,7 @@ export default function Invoices01() {
       <div className="flex items-start justify-between gap-4">
         <div>
           <h2 className="font-semibold">Invoices</h2>
-          <p className="text-sm text-muted-foreground">
+          <p className="text-muted-foreground text-sm">
             Track and monitor your financial activity.
           </p>
         </div>
@@ -63,7 +64,7 @@ export default function Invoices01() {
             <div className="flex flex-wrap items-center justify-between gap-6 py-6">
               <div className="basis-full space-y-0.5 sm:basis-auto">
                 <p className="text-lg font-semibold">{name}</p>
-                <p className="text-sm text-muted-foreground">{date}</p>
+                <p className="text-muted-foreground text-sm">{date}</p>
               </div>
               <Badge
                 variant={isOverdue ? "destructive" : "default"}

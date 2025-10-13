@@ -545,6 +545,132 @@
       ]
     },
     {
+      "name": "billing-information-01",
+      "type": "registry:block",
+      "description": "Billing information management",
+      "registryDependencies": [
+        "button",
+        "card"
+      ],
+      "files": [
+        {
+          "path": "registry/elevenlabs-ui/blocks/billing-information-01/page.tsx",
+          "type": "registry:page",
+          "target": "app/billing-information/page.tsx"
+        }
+      ],
+      "meta": {
+        "iframeHeight": "700px",
+        "container": "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
+        "mobile": "component"
+      },
+      "categories": [
+        "billing"
+      ]
+    },
+    {
+      "name": "card-display-01",
+      "type": "registry:block",
+      "description": "Credit card display",
+      "registryDependencies": [
+        "card"
+      ],
+      "files": [
+        {
+          "path": "registry/elevenlabs-ui/blocks/card-display-01/page.tsx",
+          "type": "registry:page",
+          "target": "app/card-display/page.tsx"
+        }
+      ],
+      "meta": {
+        "iframeHeight": "400px",
+        "container": "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
+        "mobile": "component"
+      },
+      "categories": [
+        "billing"
+      ]
+    },
+    {
+      "name": "payment-method-01",
+      "type": "registry:block",
+      "description": "Payment methods management",
+      "registryDependencies": [
+        "button",
+        "card",
+        "tooltip"
+      ],
+      "files": [
+        {
+          "path": "registry/elevenlabs-ui/blocks/payment-method-01/page.tsx",
+          "type": "registry:page",
+          "target": "app/payment-method/page.tsx"
+        }
+      ],
+      "meta": {
+        "iframeHeight": "500px",
+        "container": "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
+        "mobile": "component"
+      },
+      "categories": [
+        "billing"
+      ]
+    },
+    {
+      "name": "transaction-history-01",
+      "type": "registry:block",
+      "description": "Transaction history with date picker",
+      "dependencies": [
+        "date-fns"
+      ],
+      "registryDependencies": [
+        "button",
+        "calendar",
+        "card",
+        "popover"
+      ],
+      "files": [
+        {
+          "path": "registry/elevenlabs-ui/blocks/transaction-history-01/page.tsx",
+          "type": "registry:page",
+          "target": "app/transaction-history/page.tsx"
+        }
+      ],
+      "meta": {
+        "iframeHeight": "800px",
+        "container": "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
+        "mobile": "component"
+      },
+      "categories": [
+        "billing"
+      ]
+    },
+    {
+      "name": "invoices-01",
+      "type": "registry:block",
+      "description": "Invoices list with status badges",
+      "registryDependencies": [
+        "badge",
+        "button",
+        "separator"
+      ],
+      "files": [
+        {
+          "path": "registry/elevenlabs-ui/blocks/invoices-01/page.tsx",
+          "type": "registry:page",
+          "target": "app/invoices/page.tsx"
+        }
+      ],
+      "meta": {
+        "iframeHeight": "700px",
+        "container": "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
+        "mobile": "component"
+      },
+      "categories": [
+        "billing"
+      ]
+    },
+    {
       "name": "use-mobile",
       "type": "registry:hook",
       "files": [
