@@ -43,6 +43,12 @@ Preferred communication style: Simple, everyday language.
 - **Registry Integration**: All blog section blocks registered in registry-blocks.ts with proper metadata and CLI installation support
 - **Design Consistency**: Components use shadcn UI primitives (Avatar, Badge, Button, Card) and Lucide icons for consistency
 
+### CLI Rebranding (October 13, 2025)
+- **Package Name Change**: Rebranded CLI from `@elevenlabs/agents-cli` to `@creativetim/ui`
+- **Documentation Updates**: Updated all references across README, MDX docs, command-menu, and block-viewer components
+- **CLI Location**: The CLI package is external to this repository and needs to be created/forked separately
+- **Installation Command**: Components now install via `npx @creativetim/ui@latest components add <component-name>`
+
 ## System Architecture
 
 ### Monorepo Structure
