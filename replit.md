@@ -20,6 +20,17 @@ Preferred communication style: Simple, everyday language.
 - **Environment Variables**: ELEVENLABS_API_KEY configured for voice functionality
 - **Known Warnings**: Cross-origin warnings may appear in Next.js 15.3.1 logs but don't affect functionality (future Next.js versions will require allowedDevOrigins configuration)
 
+### Billing Blocks Addition (October 13, 2025)
+- **New Category**: Added "Billing" category to the component registry (visible at /blocks/billing)
+- **Component Conversion**: Migrated 5 billing blocks from Material Tailwind to shadcn UI design system
+  - billing-information-01: Billing information management form
+  - card-display-01: Credit card display component
+  - payment-method-01: Payment method selection interface
+  - transaction-history-01: Transaction history table with filtering
+  - invoices-01: Invoices management with download functionality
+- **Registry Integration**: All billing blocks registered in registry-blocks.ts with proper metadata and CLI installation support
+- **Design Consistency**: Components now use shadcn UI primitives (Card, Table, Button, Input, Select) for consistency with the rest of the library
+
 ## System Architecture
 
 ### Monorepo Structure
