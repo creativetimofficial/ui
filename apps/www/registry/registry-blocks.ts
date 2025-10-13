@@ -285,4 +285,105 @@ export const blocks: Registry["items"] = [
     },
     categories: ["forms"],
   },
+  {
+    name: "billing-information-01",
+    description: "Billing information management",
+    type: "registry:block",
+    registryDependencies: ["button", "card"],
+    files: [
+      {
+        path: "blocks/billing-information-01/page.tsx",
+        type: "registry:page",
+        target: "app/billing-information/page.tsx",
+      },
+    ],
+    meta: {
+      iframeHeight: "700px",
+      container:
+        "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
+      mobile: "component",
+    },
+    categories: ["billing"],
+  },
+  {
+    name: "card-display-01",
+    description: "Credit card display",
+    type: "registry:block",
+    registryDependencies: ["card"],
+    files: [
+      {
+        path: "blocks/card-display-01/page.tsx",
+        type: "registry:page",
+        target: "app/card-display/page.tsx",
+      },
+    ],
+    meta: {
+      iframeHeight: "400px",
+      container:
+        "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
+      mobile: "component",
+    },
+    categories: ["billing"],
+  },
+  {
+    name: "payment-method-01",
+    description: "Payment methods management",
+    type: "registry:block",
+    registryDependencies: ["button", "card", "tooltip"],
+    files: [
+      {
+        path: "blocks/payment-method-01/page.tsx",
+        type: "registry:page",
+        target: "app/payment-method/page.tsx",
+      },
+    ],
+    meta: {
+      iframeHeight: "500px",
+      container:
+        "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
+      mobile: "component",
+    },
+    categories: ["billing"],
+  },
+  {
+    name: "transaction-history-01",
+    description: "Transaction history with date picker",
+    type: "registry:block",
+    registryDependencies: ["button", "calendar", "card", "popover"],
+    dependencies: ["date-fns"],
+    files: [
+      {
+        path: "blocks/transaction-history-01/page.tsx",
+        type: "registry:page",
+        target: "app/transaction-history/page.tsx",
+      },
+    ],
+    meta: {
+      iframeHeight: "800px",
+      container:
+        "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
+      mobile: "component",
+    },
+    categories: ["billing"],
+  },
+  {
+    name: "invoices-01",
+    description: "Invoices list with status badges",
+    type: "registry:block",
+    registryDependencies: ["badge", "button", "separator"],
+    files: [
+      {
+        path: "blocks/invoices-01/page.tsx",
+        type: "registry:page",
+        target: "app/invoices/page.tsx",
+      },
+    ],
+    meta: {
+      iframeHeight: "700px",
+      container:
+        "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
+      mobile: "component",
+    },
+    categories: ["billing"],
+  },
 ]
