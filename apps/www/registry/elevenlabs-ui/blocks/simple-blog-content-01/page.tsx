@@ -1,8 +1,17 @@
 "use client"
 
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
-import { Badge } from "@/components/ui/badge"
-import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card"
+import {
+  Avatar,
+  AvatarFallback,
+  AvatarImage,
+} from "@/registry/elevenlabs-ui/ui/avatar"
+import { Badge } from "@/registry/elevenlabs-ui/ui/badge"
+import {
+  Card,
+  CardContent,
+  CardFooter,
+  CardHeader,
+} from "@/registry/elevenlabs-ui/ui/card"
 
 const POSTS = [
   {

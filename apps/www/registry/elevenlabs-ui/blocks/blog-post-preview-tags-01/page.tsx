@@ -1,7 +1,7 @@
 "use client"
 
-import { Badge } from "@/components/ui/badge"
-import { Button } from "@/components/ui/button"
+import { Badge } from "@/registry/elevenlabs-ui/ui/badge"
+import { Button } from "@/registry/elevenlabs-ui/ui/button"
 
 const POSTS = [
   {

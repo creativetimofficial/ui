@@ -1,7 +1,11 @@
 "use client"
 
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
-import { Badge } from "@/components/ui/badge"
+import {
+  Avatar,
+  AvatarFallback,
+  AvatarImage,
+} from "@/registry/elevenlabs-ui/ui/avatar"
+import { Badge } from "@/registry/elevenlabs-ui/ui/badge"
 
 const POSTS = [
   {
