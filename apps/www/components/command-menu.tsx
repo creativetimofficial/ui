@@ -57,7 +57,7 @@ export function CommandMenu({
         const componentName = item.url.split("/").pop()
         setSelectedType("component")
         setCopyPayload(
-          `${packageManager} dlx @elevenlabs/agents-cli@latest add ${componentName}`
+          `${packageManager} dlx @creativetim/ui@latest add ${componentName}`
         )
       } else {
         setSelectedType("page")
@@ -71,7 +71,7 @@ export function CommandMenu({
     (block: { name: string; description: string; categories: string[] }) => {
       setSelectedType("block")
       setCopyPayload(
-        `${packageManager} dlx @elevenlabs/agents-cli@latest add ${block.name}`
+        `${packageManager} dlx @creativetim/ui@latest add ${block.name}`
       )
     },
     [setSelectedType, setCopyPayload, packageManager]
