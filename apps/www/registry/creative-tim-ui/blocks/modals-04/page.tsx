@@ -23,7 +23,7 @@ import {
 import { Textarea } from "@/registry/creative-tim-ui/ui/textarea"
 
 export default function ModalsBlock() {
-  const [isOpen, setIsOpen] = React.useState(true)
+  const [isOpen, setIsOpen] = React.useState(false)
 
   return (
     <div className="grid min-h-screen w-full place-items-center">

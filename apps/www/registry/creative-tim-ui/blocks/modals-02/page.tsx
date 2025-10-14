@@ -30,7 +30,7 @@ const NOTIFICATION = ["Email", "SMS", "Push Notification"]
 const TOOLS = ["React", "Material Tailwind", "TailwindCSS", "Next.js"]
 
 export default function ModalsBlock() {
-  const [isOpen, setIsOpen] = React.useState(true)
+  const [isOpen, setIsOpen] = React.useState(false)
 
   return (
     <div className="grid min-h-screen w-full place-items-center">

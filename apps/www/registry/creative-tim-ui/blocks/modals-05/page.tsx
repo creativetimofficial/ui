@@ -25,7 +25,7 @@ const IMAGES = [
 ]
 
 export default function ModalsBlock() {
-  const [isOpen, setIsOpen] = React.useState(true)
+  const [isOpen, setIsOpen] = React.useState(false)
 
   return (
     <div className="grid min-h-screen w-full place-items-center">
