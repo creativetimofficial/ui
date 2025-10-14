@@ -195,3 +195,22 @@ Preferred communication style: Simple, everyday language.
 - **Registry Integration**: All web3 blocks registered in registry-blocks.ts with proper metadata and CLI installation support
 - **Category Configuration**: Added "Web3" category to registry-categories.ts for blocks page navigation
 - **Design Consistency**: Components use shadcn UI primitives (Avatar, Badge, Button, Card, Select) and Lucide icons for consistency
+
+### Private Registry Authentication (October 14, 2025)
+- **Authentication System**: Implemented private component registry following shadcn authentication patterns
+- **API Route**: Created `/api/r/[name]/route.ts` for authenticated component access with API key validation
+- **Private Components**: Marked testimonials-03 and testimonials-04 as private components requiring API_KEY authentication
+- **Middleware Enhancement**: Updated middleware.ts to redirect private component requests to authenticated API route
+- **Authentication Methods**: Supports multiple authentication patterns:
+  - Bearer token via Authorization header
+  - API key via X-API-Key header
+  - Query parameter token (?token=)
+  - Environment variable (API_KEY in .env.local)
+- **Security Features**: 
+  - 401 Unauthorized for missing/invalid API keys with helpful error messages
+  - Private components served through authenticated endpoint
+  - Public components continue to work without authentication
+  - Registry metadata includes "private: true" flag in meta object
+- **Documentation**: Created comprehensive private-registry.md guide with usage examples, security best practices, and error handling
+- **Environment Setup**: Added .env.example with API_KEY configuration template
+- **Total Private Components**: 2 components (testimonials-03, testimonials-04) secured with authentication
