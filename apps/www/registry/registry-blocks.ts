@@ -906,4 +906,304 @@ export const blocks: Registry["items"] = [
     },
     categories: ["faqs"],
   },
+  {
+    name: "contact-sections-01",
+    description: "Simple contact form with contact info",
+    type: "registry:block",
+    registryDependencies: ["button", "card", "checkbox", "input", "label", "textarea"],
+    files: [
+      {
+        path: "blocks/contact-sections-01/page.tsx",
+        type: "registry:page",
+        target: "app/contact-sections-01/page.tsx",
+      },
+    ],
+    meta: {
+      iframeHeight: "900px",
+      container:
+        "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
+      mobile: "component",
+    },
+    categories: ["contact"],
+  },
+  {
+    name: "contact-sections-02",
+    description: "Contact form with image background",
+    type: "registry:block",
+    registryDependencies: ["button", "checkbox", "input", "label", "textarea"],
+    files: [
+      {
+        path: "blocks/contact-sections-02/page.tsx",
+        type: "registry:page",
+        target: "app/contact-sections-02/page.tsx",
+      },
+    ],
+    meta: {
+      iframeHeight: "900px",
+      container:
+        "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
+      mobile: "component",
+    },
+    categories: ["contact"],
+  },
+  {
+    name: "contact-sections-03",
+    description: "Contact form with dark info panel",
+    type: "registry:block",
+    registryDependencies: ["button", "card", "input", "label", "textarea"],
+    files: [
+      {
+        path: "blocks/contact-sections-03/page.tsx",
+        type: "registry:page",
+        target: "app/contact-sections-03/page.tsx",
+      },
+    ],
+    meta: {
+      iframeHeight: "900px",
+      container:
+        "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
+      mobile: "component",
+    },
+    categories: ["contact"],
+  },
+  {
+    name: "contact-sections-04",
+    description: "Minimalist contact with icon cards",
+    type: "registry:block",
+    registryDependencies: ["card"],
+    files: [
+      {
+        path: "blocks/contact-sections-04/page.tsx",
+        type: "registry:page",
+        target: "app/contact-sections-04/page.tsx",
+      },
+    ],
+    meta: {
+      iframeHeight: "800px",
+      container:
+        "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
+      mobile: "component",
+    },
+    categories: ["contact"],
+  },
+  {
+    name: "contact-sections-05",
+    description: "Contact form with map and option selection",
+    type: "registry:block",
+    registryDependencies: ["badge", "button", "input", "label", "textarea"],
+    files: [
+      {
+        path: "blocks/contact-sections-05/page.tsx",
+        type: "registry:page",
+        target: "app/contact-sections-05/page.tsx",
+      },
+    ],
+    meta: {
+      iframeHeight: "1000px",
+      container:
+        "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
+      mobile: "component",
+    },
+    categories: ["contact"],
+  },
+  {
+    name: "contact-sections-06",
+    description: "Centered contact with circular icon badges",
+    type: "registry:block",
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/contact-sections-06/page.tsx",
+        type: "registry:page",
+        target: "app/contact-sections-06/page.tsx",
+      },
+    ],
+    meta: {
+      iframeHeight: "800px",
+      container:
+        "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
+      mobile: "component",
+    },
+    categories: ["contact"],
+  },
+  {
+    name: "contact-sections-07",
+    description: "Contact form with office location details",
+    type: "registry:block",
+    registryDependencies: ["button", "card", "checkbox", "input", "label", "textarea"],
+    files: [
+      {
+        path: "blocks/contact-sections-07/page.tsx",
+        type: "registry:page",
+        target: "app/contact-sections-07/page.tsx",
+      },
+    ],
+    meta: {
+      iframeHeight: "900px",
+      container:
+        "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
+      mobile: "component",
+    },
+    categories: ["contact"],
+  },
+  {
+    name: "contact-sections-08",
+    description: "Contact form with area of interest selection",
+    type: "registry:block",
+    registryDependencies: ["button", "card", "input", "label", "radio-group", "textarea"],
+    files: [
+      {
+        path: "blocks/contact-sections-08/page.tsx",
+        type: "registry:page",
+        target: "app/contact-sections-08/page.tsx",
+      },
+    ],
+    meta: {
+      iframeHeight: "1000px",
+      container:
+        "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
+      mobile: "component",
+    },
+    categories: ["contact"],
+  },
+  {
+    name: "contact-sections-09",
+    description: "Dark background contact with detailed info",
+    type: "registry:block",
+    registryDependencies: ["button", "card", "checkbox", "input", "label", "textarea"],
+    files: [
+      {
+        path: "blocks/contact-sections-09/page.tsx",
+        type: "registry:page",
+        target: "app/contact-sections-09/page.tsx",
+      },
+    ],
+    meta: {
+      iframeHeight: "900px",
+      container:
+        "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
+      mobile: "component",
+    },
+    categories: ["contact"],
+  },
+  {
+    name: "contact-sections-10",
+    description: "Contact form with info cards",
+    type: "registry:block",
+    registryDependencies: ["button", "card", "input", "label", "textarea"],
+    files: [
+      {
+        path: "blocks/contact-sections-10/page.tsx",
+        type: "registry:page",
+        target: "app/contact-sections-10/page.tsx",
+      },
+    ],
+    meta: {
+      iframeHeight: "1000px",
+      container:
+        "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
+      mobile: "component",
+    },
+    categories: ["contact"],
+  },
+  {
+    name: "contact-sections-11",
+    description: "Dark gradient contact form with backdrop blur",
+    type: "registry:block",
+    registryDependencies: ["button", "input", "label", "textarea"],
+    files: [
+      {
+        path: "blocks/contact-sections-11/page.tsx",
+        type: "registry:page",
+        target: "app/contact-sections-11/page.tsx",
+      },
+    ],
+    meta: {
+      iframeHeight: "1000px",
+      container:
+        "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
+      mobile: "component",
+    },
+    categories: ["contact"],
+  },
+  {
+    name: "contact-sections-12",
+    description: "Contact form with background image overlay",
+    type: "registry:block",
+    registryDependencies: ["button", "input", "label", "textarea"],
+    files: [
+      {
+        path: "blocks/contact-sections-12/page.tsx",
+        type: "registry:page",
+        target: "app/contact-sections-12/page.tsx",
+      },
+    ],
+    meta: {
+      iframeHeight: "1000px",
+      container:
+        "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
+      mobile: "component",
+    },
+    categories: ["contact"],
+  },
+  {
+    name: "contact-sections-13",
+    description: "Contact information cards with form",
+    type: "registry:block",
+    registryDependencies: ["button", "card", "input", "label", "textarea"],
+    files: [
+      {
+        path: "blocks/contact-sections-13/page.tsx",
+        type: "registry:page",
+        target: "app/contact-sections-13/page.tsx",
+      },
+    ],
+    meta: {
+      iframeHeight: "1200px",
+      container:
+        "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
+      mobile: "component",
+    },
+    categories: ["contact"],
+  },
+  {
+    name: "contact-sections-14",
+    description: "Gradient background contact form with asterisk fields",
+    type: "registry:block",
+    registryDependencies: ["button", "input", "label", "textarea"],
+    files: [
+      {
+        path: "blocks/contact-sections-14/page.tsx",
+        type: "registry:page",
+        target: "app/contact-sections-14/page.tsx",
+      },
+    ],
+    meta: {
+      iframeHeight: "1100px",
+      container:
+        "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
+      mobile: "component",
+    },
+    categories: ["contact"],
+  },
+  {
+    name: "contact-sections-15",
+    description: "Contact options with quick contact form",
+    type: "registry:block",
+    registryDependencies: ["button", "card", "input", "label"],
+    files: [
+      {
+        path: "blocks/contact-sections-15/page.tsx",
+        type: "registry:page",
+        target: "app/contact-sections-15/page.tsx",
+      },
+    ],
+    meta: {
+      iframeHeight: "1000px",
+      container:
+        "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
+      mobile: "component",
+    },
+    categories: ["contact"],
+  },
 ]
