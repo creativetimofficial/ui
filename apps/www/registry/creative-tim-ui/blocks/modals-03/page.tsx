@@ -69,7 +69,7 @@ function User({ name, img, email }: UserProps) {
 }
 
 export default function ModalsBlock() {
-  const [isOpen, setIsOpen] = React.useState(false)
+  const [isOpen, setIsOpen] = React.useState(true)
 
   return (
     <div className="grid min-h-screen w-full place-items-center">
