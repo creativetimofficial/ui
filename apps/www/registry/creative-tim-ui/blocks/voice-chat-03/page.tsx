@@ -3,25 +3,25 @@
 import { useState } from "react"
 import { CheckIcon, CopyIcon } from "lucide-react"
 
-import { cn } from "@/registry/elevenlabs-ui/lib/utils"
-import { Button } from "@/registry/elevenlabs-ui/ui/button"
-import { Card, CardContent } from "@/registry/elevenlabs-ui/ui/card"
+import { cn } from "@/registry/creative-tim-ui/lib/utils"
+import { Button } from "@/registry/creative-tim-ui/ui/button"
+import { Card, CardContent } from "@/registry/creative-tim-ui/ui/card"
 import {
   Conversation,
   ConversationContent,
   ConversationEmptyState,
   ConversationScrollButton,
-} from "@/registry/elevenlabs-ui/ui/conversation"
-import { ConversationBar } from "@/registry/elevenlabs-ui/ui/conversation-bar"
-import { Message, MessageContent } from "@/registry/elevenlabs-ui/ui/message"
-import { Orb } from "@/registry/elevenlabs-ui/ui/orb"
-import { Response } from "@/registry/elevenlabs-ui/ui/response"
+} from "@/registry/creative-tim-ui/ui/conversation"
+import { ConversationBar } from "@/registry/creative-tim-ui/ui/conversation-bar"
+import { Message, MessageContent } from "@/registry/creative-tim-ui/ui/message"
+import { Orb } from "@/registry/creative-tim-ui/ui/orb"
+import { Response } from "@/registry/creative-tim-ui/ui/response"
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from "@/registry/elevenlabs-ui/ui/tooltip"
+} from "@/registry/creative-tim-ui/ui/tooltip"
 
 const DEFAULT_AGENT_ID = process.env.NEXT_PUBLIC_ELEVENLABS_AGENT_ID!
 

@@ -5,19 +5,19 @@ import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
 
 import { cn } from "@/lib/utils"
-import { voiceToFormAction } from "@/registry/elevenlabs-ui/blocks/voice-form-01/actions/voice-to-form"
+import { voiceToFormAction } from "@/registry/creative-tim-ui/blocks/voice-form-01/actions/voice-to-form"
 import {
   exampleFormSchema,
   ExampleFormValues,
-} from "@/registry/elevenlabs-ui/blocks/voice-form-01/schema"
-import { Button } from "@/registry/elevenlabs-ui/ui/button"
+} from "@/registry/creative-tim-ui/blocks/voice-form-01/schema"
+import { Button } from "@/registry/creative-tim-ui/ui/button"
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/registry/elevenlabs-ui/ui/card"
+} from "@/registry/creative-tim-ui/ui/card"
 import {
   Form,
   FormControl,
@@ -25,9 +25,9 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "@/registry/elevenlabs-ui/ui/form"
-import { Input } from "@/registry/elevenlabs-ui/ui/input"
-import { VoiceButton } from "@/registry/elevenlabs-ui/ui/voice-button"
+} from "@/registry/creative-tim-ui/ui/form"
+import { Input } from "@/registry/creative-tim-ui/ui/input"
+import { VoiceButton } from "@/registry/creative-tim-ui/ui/voice-button"
 
 const AUDIO_CONSTRAINTS: MediaStreamConstraints = {
   audio: {

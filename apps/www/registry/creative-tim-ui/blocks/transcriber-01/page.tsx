@@ -8,12 +8,12 @@ import { cn } from "@/lib/utils"
 import {
   transcribeAudio,
   type TranscriptionResult,
-} from "@/registry/elevenlabs-ui/blocks/transcriber-01/actions/transcribe"
-import { Button } from "@/registry/elevenlabs-ui/ui/button"
-import { Card } from "@/registry/elevenlabs-ui/ui/card"
-import { LiveWaveform } from "@/registry/elevenlabs-ui/ui/live-waveform"
-import { ScrollArea } from "@/registry/elevenlabs-ui/ui/scroll-area"
-import { Separator } from "@/registry/elevenlabs-ui/ui/separator"
+} from "@/registry/creative-tim-ui/blocks/transcriber-01/actions/transcribe"
+import { Button } from "@/registry/creative-tim-ui/ui/button"
+import { Card } from "@/registry/creative-tim-ui/ui/card"
+import { LiveWaveform } from "@/registry/creative-tim-ui/ui/live-waveform"
+import { ScrollArea } from "@/registry/creative-tim-ui/ui/scroll-area"
+import { Separator } from "@/registry/creative-tim-ui/ui/separator"
 
 interface RecordingState {
   isRecording: boolean

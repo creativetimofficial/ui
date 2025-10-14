@@ -1,5 +1,5 @@
-import { Button } from "@/registry/elevenlabs-ui/ui/button";
-import { Card, CardContent, CardHeader } from "@/registry/elevenlabs-ui/ui/card";
+import { Button } from "@/registry/creative-tim-ui/ui/button";
+import { Card, CardContent, CardHeader } from "@/registry/creative-tim-ui/ui/card";
 
 const DATA = [
   {

@@ -1,6 +1,6 @@
 import { source } from "@/lib/source"
 import { DocsSidebar } from "@/components/docs-sidebar"
-import { SidebarProvider } from "@/registry/elevenlabs-ui/ui/sidebar"
+import { SidebarProvider } from "@/registry/creative-tim-ui/ui/sidebar"
 
 export default function DocsLayout({
   children,

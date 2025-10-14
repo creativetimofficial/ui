@@ -1,8 +1,8 @@
 "use client"
 
-import { Badge } from "@/registry/elevenlabs-ui/ui/badge"
-import { Button } from "@/registry/elevenlabs-ui/ui/button"
-import { Card, CardContent } from "@/registry/elevenlabs-ui/ui/card"
+import { Badge } from "@/registry/creative-tim-ui/ui/badge"
+import { Button } from "@/registry/creative-tim-ui/ui/button"
+import { Card, CardContent } from "@/registry/creative-tim-ui/ui/card"
 import {
   Table,
   TableBody,
@@ -10,7 +10,7 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@/registry/elevenlabs-ui/ui/table"
+} from "@/registry/creative-tim-ui/ui/table"
 
 const OPTIONS = [
   {

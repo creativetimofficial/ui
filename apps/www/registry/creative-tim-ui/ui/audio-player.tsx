@@ -17,13 +17,13 @@ import * as SliderPrimitive from "@radix-ui/react-slider"
 import { Check, PauseIcon, PlayIcon, Settings } from "lucide-react"
 
 import { cn } from "@/lib/utils"
-import { Button } from "@/registry/elevenlabs-ui/ui/button"
+import { Button } from "@/registry/creative-tim-ui/ui/button"
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@/registry/elevenlabs-ui/ui/dropdown-menu"
+} from "@/registry/creative-tim-ui/ui/dropdown-menu"
 
 enum ReadyState {
   HAVE_NOTHING = 0,

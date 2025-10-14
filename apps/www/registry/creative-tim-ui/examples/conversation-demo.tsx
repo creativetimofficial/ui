@@ -2,17 +2,17 @@
 
 import { useEffect, useState } from "react"
 
-import { Card } from "@/registry/elevenlabs-ui/ui/card"
+import { Card } from "@/registry/creative-tim-ui/ui/card"
 import {
   Conversation,
   ConversationContent,
   ConversationEmptyState,
   ConversationScrollButton,
-} from "@/registry/elevenlabs-ui/ui/conversation"
-import { Message, MessageContent } from "@/registry/elevenlabs-ui/ui/message"
-import { Orb } from "@/registry/elevenlabs-ui/ui/orb"
-import { Response } from "@/registry/elevenlabs-ui/ui/response"
-import { ShimmeringText } from "@/registry/elevenlabs-ui/ui/shimmering-text"
+} from "@/registry/creative-tim-ui/ui/conversation"
+import { Message, MessageContent } from "@/registry/creative-tim-ui/ui/message"
+import { Orb } from "@/registry/creative-tim-ui/ui/orb"
+import { Response } from "@/registry/creative-tim-ui/ui/response"
+import { ShimmeringText } from "@/registry/creative-tim-ui/ui/shimmering-text"
 
 const allMessages = [
   {

@@ -2,8 +2,8 @@
 
 import { useState } from "react"
 
-import { Button } from "@/registry/elevenlabs-ui/ui/button"
-import { AgentState, Orb } from "@/registry/elevenlabs-ui/ui/orb"
+import { Button } from "@/registry/creative-tim-ui/ui/button"
+import { AgentState, Orb } from "@/registry/creative-tim-ui/ui/orb"
 
 let ORBS: [string, string][] = [
   ["#CADCFC", "#A0B9D1"],

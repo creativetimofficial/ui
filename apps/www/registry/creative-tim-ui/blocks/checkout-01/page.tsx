@@ -1,9 +1,9 @@
 "use client"
 
-import { Button } from "@/registry/elevenlabs-ui/ui/button"
-import { Checkbox } from "@/registry/elevenlabs-ui/ui/checkbox"
-import { Input } from "@/registry/elevenlabs-ui/ui/input"
-import { Label } from "@/registry/elevenlabs-ui/ui/label"
+import { Button } from "@/registry/creative-tim-ui/ui/button"
+import { Checkbox } from "@/registry/creative-tim-ui/ui/checkbox"
+import { Input } from "@/registry/creative-tim-ui/ui/input"
+import { Label } from "@/registry/creative-tim-ui/ui/label"
 
 const OPTIONS = [
   {

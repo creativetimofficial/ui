@@ -7,8 +7,8 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/registry/elevenlabs-ui/ui/accordion"
-import { Button } from "@/registry/elevenlabs-ui/ui/button"
+} from "@/registry/creative-tim-ui/ui/accordion"
+import { Button } from "@/registry/creative-tim-ui/ui/button"
 
 const IMAGES = [
   "https://v3.material-tailwind.com/coat-1.png",

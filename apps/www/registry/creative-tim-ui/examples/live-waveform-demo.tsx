@@ -2,8 +2,8 @@
 
 import { useState } from "react"
 
-import { Button } from "@/registry/elevenlabs-ui/ui/button"
-import { LiveWaveform } from "@/registry/elevenlabs-ui/ui/live-waveform"
+import { Button } from "@/registry/creative-tim-ui/ui/button"
+import { LiveWaveform } from "@/registry/creative-tim-ui/ui/live-waveform"
 
 export default function LiveWaveformDemo() {
   const [active, setActive] = useState(false)

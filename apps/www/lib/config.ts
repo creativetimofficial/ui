@@ -1,12 +1,12 @@
 export const siteConfig = {
-  name: "ElevenLabs UI",
-  url: "https://ui.elevenlabs.io",
-  ogImage: "https://ui.elevenlabs.io/og.jpg",
+  name: "Creative Tim UI",
+  url: "https://ui.creative-tim.com",
+  ogImage: "https://ui.creative-tim.com/og.jpg",
   description:
     "A collection of Open Source agent and audio components that you can customize, extend, and build on.",
   links: {
-    twitter: "https://twitter.com/louisjoejordan",
-    github: "https://github.com/elevenlabs/ui",
+    twitter: "https://twitter.com/creativetim",
+    github: "https://github.com/creative-tim/ui",
   },
   navItems: [
     {
@@ -23,11 +23,11 @@ export const siteConfig = {
     },
   ],
   utm: {
-    main: "https://elevenlabs.io?utm_source=ui_elevenlabs&utm_medium=web&utm_campaign=growth_experiments_ui_components",
+    main: "https://creative-tim.com?utm_source=ui_creativetim&utm_medium=web&utm_campaign=growth_experiments_ui_components",
     agents:
-      "https://elevenlabs.io/agents?utm_source=ui_elevenlabs&utm_medium=web&utm_campaign=growth_experiments_ui_components",
+      "https://creative-tim.com/agents?utm_source=ui_creativetim&utm_medium=web&utm_campaign=growth_experiments_ui_components",
     sales:
-      "https://elevenlabs.io/contact-sales?utm_source=ui_elevenlabs&utm_medium=web&utm_campaign=growth_experiments_ui_components",
+      "https://creative-tim.com/contact-sales?utm_source=ui_creativetim&utm_medium=web&utm_campaign=growth_experiments_ui_components",
   },
 }
 

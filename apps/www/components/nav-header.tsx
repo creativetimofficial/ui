@@ -8,7 +8,7 @@ import {
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
-} from "@/registry/elevenlabs-ui/ui/navigation-menu"
+} from "@/registry/creative-tim-ui/ui/navigation-menu"
 
 export function NavHeader() {
   const pathname = usePathname()

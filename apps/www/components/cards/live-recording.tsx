@@ -2,8 +2,8 @@
 
 import { useEffect, useState } from "react"
 
-import { Card, CardContent } from "@/registry/elevenlabs-ui/ui/card"
-import { ScrollingWaveform } from "@/registry/elevenlabs-ui/ui/waveform"
+import { Card, CardContent } from "@/registry/creative-tim-ui/ui/card"
+import { ScrollingWaveform } from "@/registry/creative-tim-ui/ui/waveform"
 
 export function CardsLiveRecording() {
   const [remountKey, setRemountKey] = useState(0)

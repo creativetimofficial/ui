@@ -4,13 +4,13 @@ import * as React from "react"
 import { IconMenu3 } from "@tabler/icons-react"
 
 import { cn } from "@/lib/utils"
-import { Button } from "@/registry/elevenlabs-ui/ui/button"
+import { Button } from "@/registry/creative-tim-ui/ui/button"
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@/registry/elevenlabs-ui/ui/dropdown-menu"
+} from "@/registry/creative-tim-ui/ui/dropdown-menu"
 
 function useActiveItem(itemIds: string[]) {
   const [activeId, setActiveId] = React.useState<string | null>(null)

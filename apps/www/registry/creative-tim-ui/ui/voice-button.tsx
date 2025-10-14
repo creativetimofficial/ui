@@ -4,8 +4,8 @@ import * as React from "react"
 import { CheckIcon, XIcon } from "lucide-react"
 
 import { cn } from "@/lib/utils"
-import { Button } from "@/registry/elevenlabs-ui/ui/button"
-import { LiveWaveform } from "@/registry/elevenlabs-ui/ui/live-waveform"
+import { Button } from "@/registry/creative-tim-ui/ui/button"
+import { LiveWaveform } from "@/registry/creative-tim-ui/ui/live-waveform"
 
 export type VoiceButtonState =
   | "idle"

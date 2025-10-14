@@ -2,7 +2,7 @@
 
 import { PauseIcon, PlayIcon } from "lucide-react"
 
-import { cn } from "@/registry/elevenlabs-ui/lib/utils"
+import { cn } from "@/registry/creative-tim-ui/lib/utils"
 import {
   AudioPlayerButton,
   AudioPlayerDuration,
@@ -12,10 +12,10 @@ import {
   AudioPlayerTime,
   exampleTracks,
   useAudioPlayer,
-} from "@/registry/elevenlabs-ui/ui/audio-player"
-import { Button } from "@/registry/elevenlabs-ui/ui/button"
-import { Card } from "@/registry/elevenlabs-ui/ui/card"
-import { ScrollArea } from "@/registry/elevenlabs-ui/ui/scroll-area"
+} from "@/registry/creative-tim-ui/ui/audio-player"
+import { Button } from "@/registry/creative-tim-ui/ui/button"
+import { Card } from "@/registry/creative-tim-ui/ui/card"
+import { ScrollArea } from "@/registry/creative-tim-ui/ui/scroll-area"
 
 interface Track {
   id: string

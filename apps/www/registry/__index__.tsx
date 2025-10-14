@@ -32,12 +32,12 @@ export const Index: Record<string, any> = {
     type: "registry:ui",
     registryDependencies: undefined,
     files: [{
-      path: "registry/elevenlabs-ui/ui/orb.tsx",
+      path: "registry/creative-tim-ui/ui/orb.tsx",
       type: "registry:ui",
       target: ""
     }],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/elevenlabs-ui/ui/orb.tsx")
+      const mod = await import("@/registry/creative-tim-ui/ui/orb.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
@@ -50,12 +50,12 @@ export const Index: Record<string, any> = {
     type: "registry:ui",
     registryDependencies: undefined,
     files: [{
-      path: "registry/elevenlabs-ui/ui/waveform.tsx",
+      path: "registry/creative-tim-ui/ui/waveform.tsx",
       type: "registry:ui",
       target: ""
     }],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/elevenlabs-ui/ui/waveform.tsx")
+      const mod = await import("@/registry/creative-tim-ui/ui/waveform.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
@@ -68,12 +68,12 @@ export const Index: Record<string, any> = {
     type: "registry:ui",
     registryDependencies: undefined,
     files: [{
-      path: "registry/elevenlabs-ui/ui/live-waveform.tsx",
+      path: "registry/creative-tim-ui/ui/live-waveform.tsx",
       type: "registry:ui",
       target: ""
     }],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/elevenlabs-ui/ui/live-waveform.tsx")
+      const mod = await import("@/registry/creative-tim-ui/ui/live-waveform.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
@@ -86,12 +86,12 @@ export const Index: Record<string, any> = {
     type: "registry:ui",
     registryDependencies: undefined,
     files: [{
-      path: "registry/elevenlabs-ui/ui/shimmering-text.tsx",
+      path: "registry/creative-tim-ui/ui/shimmering-text.tsx",
       type: "registry:ui",
       target: ""
     }],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/elevenlabs-ui/ui/shimmering-text.tsx")
+      const mod = await import("@/registry/creative-tim-ui/ui/shimmering-text.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
@@ -104,12 +104,12 @@ export const Index: Record<string, any> = {
     type: "registry:ui",
     registryDependencies: ["button","dropdown-menu"],
     files: [{
-      path: "registry/elevenlabs-ui/ui/audio-player.tsx",
+      path: "registry/creative-tim-ui/ui/audio-player.tsx",
       type: "registry:ui",
       target: ""
     }],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/elevenlabs-ui/ui/audio-player.tsx")
+      const mod = await import("@/registry/creative-tim-ui/ui/audio-player.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
@@ -122,12 +122,12 @@ export const Index: Record<string, any> = {
     type: "registry:ui",
     registryDependencies: ["avatar"],
     files: [{
-      path: "registry/elevenlabs-ui/ui/message.tsx",
+      path: "registry/creative-tim-ui/ui/message.tsx",
       type: "registry:ui",
       target: ""
     }],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/elevenlabs-ui/ui/message.tsx")
+      const mod = await import("@/registry/creative-tim-ui/ui/message.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
@@ -140,12 +140,12 @@ export const Index: Record<string, any> = {
     type: "registry:ui",
     registryDependencies: ["button"],
     files: [{
-      path: "registry/elevenlabs-ui/ui/conversation.tsx",
+      path: "registry/creative-tim-ui/ui/conversation.tsx",
       type: "registry:ui",
       target: ""
     }],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/elevenlabs-ui/ui/conversation.tsx")
+      const mod = await import("@/registry/creative-tim-ui/ui/conversation.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
@@ -158,12 +158,12 @@ export const Index: Record<string, any> = {
     type: "registry:ui",
     registryDependencies: undefined,
     files: [{
-      path: "registry/elevenlabs-ui/ui/response.tsx",
+      path: "registry/creative-tim-ui/ui/response.tsx",
       type: "registry:ui",
       target: ""
     }],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/elevenlabs-ui/ui/response.tsx")
+      const mod = await import("@/registry/creative-tim-ui/ui/response.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
@@ -176,12 +176,12 @@ export const Index: Record<string, any> = {
     type: "registry:ui",
     registryDependencies: undefined,
     files: [{
-      path: "registry/elevenlabs-ui/ui/bar-visualizer.tsx",
+      path: "registry/creative-tim-ui/ui/bar-visualizer.tsx",
       type: "registry:ui",
       target: ""
     }],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/elevenlabs-ui/ui/bar-visualizer.tsx")
+      const mod = await import("@/registry/creative-tim-ui/ui/bar-visualizer.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
@@ -194,12 +194,12 @@ export const Index: Record<string, any> = {
     type: "registry:ui",
     registryDependencies: ["button","badge","command","popover","https://ui.elevenlabs.io/r/orb.json","https://ui.elevenlabs.io/r/audio-player.json"],
     files: [{
-      path: "registry/elevenlabs-ui/ui/voice-picker.tsx",
+      path: "registry/creative-tim-ui/ui/voice-picker.tsx",
       type: "registry:ui",
       target: ""
     }],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/elevenlabs-ui/ui/voice-picker.tsx")
+      const mod = await import("@/registry/creative-tim-ui/ui/voice-picker.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
@@ -212,12 +212,12 @@ export const Index: Record<string, any> = {
     type: "registry:ui",
     registryDependencies: ["button","https://ui.elevenlabs.io/r/live-waveform.json"],
     files: [{
-      path: "registry/elevenlabs-ui/ui/voice-button.tsx",
+      path: "registry/creative-tim-ui/ui/voice-button.tsx",
       type: "registry:ui",
       target: ""
     }],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/elevenlabs-ui/ui/voice-button.tsx")
+      const mod = await import("@/registry/creative-tim-ui/ui/voice-button.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
@@ -230,12 +230,12 @@ export const Index: Record<string, any> = {
     type: "registry:ui",
     registryDependencies: ["button","https://ui.elevenlabs.io/r/live-waveform.json","card","separator","textarea"],
     files: [{
-      path: "registry/elevenlabs-ui/ui/conversation-bar.tsx",
+      path: "registry/creative-tim-ui/ui/conversation-bar.tsx",
       type: "registry:ui",
       target: ""
     }],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/elevenlabs-ui/ui/conversation-bar.tsx")
+      const mod = await import("@/registry/creative-tim-ui/ui/conversation-bar.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
@@ -248,12 +248,12 @@ export const Index: Record<string, any> = {
     type: "registry:ui",
     registryDependencies: ["button","card","badge"],
     files: [{
-      path: "registry/elevenlabs-ui/ui/software-purchase-card.tsx",
+      path: "registry/creative-tim-ui/ui/software-purchase-card.tsx",
       type: "registry:ui",
       target: ""
     }],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/elevenlabs-ui/ui/software-purchase-card.tsx")
+      const mod = await import("@/registry/creative-tim-ui/ui/software-purchase-card.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
@@ -266,16 +266,16 @@ export const Index: Record<string, any> = {
     type: "registry:block",
     registryDependencies: ["https://ui.elevenlabs.io/r/audio-player.json","https://ui.elevenlabs.io/r/orb.json","https://ui.elevenlabs.io/r/waveform.json","button","card"],
     files: [{
-      path: "registry/elevenlabs-ui/blocks/speaker-01/page.tsx",
+      path: "registry/creative-tim-ui/blocks/speaker-01/page.tsx",
       type: "registry:page",
       target: "app/speaker/page.tsx"
     },{
-      path: "registry/elevenlabs-ui/blocks/speaker-01/components/speaker.tsx",
+      path: "registry/creative-tim-ui/blocks/speaker-01/components/speaker.tsx",
       type: "registry:component",
       target: "components/speaker.tsx"
     }],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/elevenlabs-ui/blocks/speaker-01/page.tsx")
+      const mod = await import("@/registry/creative-tim-ui/blocks/speaker-01/page.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
@@ -288,16 +288,16 @@ export const Index: Record<string, any> = {
     type: "registry:block",
     registryDependencies: ["https://ui.elevenlabs.io/r/live-waveform.json","button","card","scroll-area","separator"],
     files: [{
-      path: "registry/elevenlabs-ui/blocks/transcriber-01/page.tsx",
+      path: "registry/creative-tim-ui/blocks/transcriber-01/page.tsx",
       type: "registry:page",
       target: "app/transcriber-01/page.tsx"
     },{
-      path: "registry/elevenlabs-ui/blocks/transcriber-01/actions/transcribe.ts",
+      path: "registry/creative-tim-ui/blocks/transcriber-01/actions/transcribe.ts",
       type: "registry:file",
       target: "app/transcriber-01/actions/transcribe.ts"
     }],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/elevenlabs-ui/blocks/transcriber-01/page.tsx")
+      const mod = await import("@/registry/creative-tim-ui/blocks/transcriber-01/page.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
@@ -310,12 +310,12 @@ export const Index: Record<string, any> = {
     type: "registry:block",
     registryDependencies: ["https://ui.elevenlabs.io/r/orb.json","https://ui.elevenlabs.io/r/shimmering-text.json","button","card","https://ui.elevenlabs.io/r/message.json","https://ui.elevenlabs.io/r/response.json","https://ui.elevenlabs.io/r/conversation.json","scroll-area"],
     files: [{
-      path: "registry/elevenlabs-ui/blocks/voice-chat-01/page.tsx",
+      path: "registry/creative-tim-ui/blocks/voice-chat-01/page.tsx",
       type: "registry:page",
       target: "app/voice-chat/page.tsx"
     }],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/elevenlabs-ui/blocks/voice-chat-01/page.tsx")
+      const mod = await import("@/registry/creative-tim-ui/blocks/voice-chat-01/page.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
@@ -328,12 +328,12 @@ export const Index: Record<string, any> = {
     type: "registry:block",
     registryDependencies: ["https://ui.elevenlabs.io/r/orb.json","https://ui.elevenlabs.io/r/shimmering-text.json","button","card"],
     files: [{
-      path: "registry/elevenlabs-ui/blocks/voice-chat-02/page.tsx",
+      path: "registry/creative-tim-ui/blocks/voice-chat-02/page.tsx",
       type: "registry:page",
       target: "app/voice-chat/page.tsx"
     }],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/elevenlabs-ui/blocks/voice-chat-02/page.tsx")
+      const mod = await import("@/registry/creative-tim-ui/blocks/voice-chat-02/page.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
@@ -346,12 +346,12 @@ export const Index: Record<string, any> = {
     type: "registry:block",
     registryDependencies: ["https://ui.elevenlabs.io/r/conversation-bar.json","https://ui.elevenlabs.io/r/conversation.json","https://ui.elevenlabs.io/r/message.json","https://ui.elevenlabs.io/r/orb.json","https://ui.elevenlabs.io/r/response.json","tooltip","card","button"],
     files: [{
-      path: "registry/elevenlabs-ui/blocks/voice-chat-03/page.tsx",
+      path: "registry/creative-tim-ui/blocks/voice-chat-03/page.tsx",
       type: "registry:page",
       target: "app/voice-chat/page.tsx"
     }],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/elevenlabs-ui/blocks/voice-chat-03/page.tsx")
+      const mod = await import("@/registry/creative-tim-ui/blocks/voice-chat-03/page.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
@@ -364,12 +364,12 @@ export const Index: Record<string, any> = {
     type: "registry:block",
     registryDependencies: ["https://ui.elevenlabs.io/r/audio-player.json","button","scroll-area"],
     files: [{
-      path: "registry/elevenlabs-ui/blocks/music-player-01/page.tsx",
+      path: "registry/creative-tim-ui/blocks/music-player-01/page.tsx",
       type: "registry:page",
       target: "app/music-player/page.tsx"
     }],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/elevenlabs-ui/blocks/music-player-01/page.tsx")
+      const mod = await import("@/registry/creative-tim-ui/blocks/music-player-01/page.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
@@ -382,12 +382,12 @@ export const Index: Record<string, any> = {
     type: "registry:block",
     registryDependencies: ["https://ui.elevenlabs.io/r/audio-player.json","card"],
     files: [{
-      path: "registry/elevenlabs-ui/blocks/music-player-02/page.tsx",
+      path: "registry/creative-tim-ui/blocks/music-player-02/page.tsx",
       type: "registry:page",
       target: "app/music-player/page.tsx"
     }],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/elevenlabs-ui/blocks/music-player-02/page.tsx")
+      const mod = await import("@/registry/creative-tim-ui/blocks/music-player-02/page.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
@@ -400,20 +400,20 @@ export const Index: Record<string, any> = {
     type: "registry:block",
     registryDependencies: ["https://ui.elevenlabs.io/r/voice-button.json","https://ui.elevenlabs.io/r/live-waveform.json","button","card","form","input"],
     files: [{
-      path: "registry/elevenlabs-ui/blocks/voice-form-01/page.tsx",
+      path: "registry/creative-tim-ui/blocks/voice-form-01/page.tsx",
       type: "registry:page",
       target: "app/voice-form/page.tsx"
     },{
-      path: "registry/elevenlabs-ui/blocks/voice-form-01/schema.ts",
+      path: "registry/creative-tim-ui/blocks/voice-form-01/schema.ts",
       type: "registry:file",
       target: "app/voice-form/schema.ts"
     },{
-      path: "registry/elevenlabs-ui/blocks/voice-form-01/actions/voice-to-form.ts",
+      path: "registry/creative-tim-ui/blocks/voice-form-01/actions/voice-to-form.ts",
       type: "registry:file",
       target: "app/voice-form/actions/voice-to-form.ts"
     }],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/elevenlabs-ui/blocks/voice-form-01/page.tsx")
+      const mod = await import("@/registry/creative-tim-ui/blocks/voice-form-01/page.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
@@ -426,16 +426,16 @@ export const Index: Record<string, any> = {
     type: "registry:block",
     registryDependencies: ["https://ui.elevenlabs.io/r/voice-button.json","button","card"],
     files: [{
-      path: "registry/elevenlabs-ui/blocks/voice-nav-01/page.tsx",
+      path: "registry/creative-tim-ui/blocks/voice-nav-01/page.tsx",
       type: "registry:page",
       target: "app/voice-nav/page.tsx"
     },{
-      path: "registry/elevenlabs-ui/blocks/voice-nav-01/actions/voice-to-site.ts",
+      path: "registry/creative-tim-ui/blocks/voice-nav-01/actions/voice-to-site.ts",
       type: "registry:file",
       target: "app/voice-nav/actions/voice-to-site.ts"
     }],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/elevenlabs-ui/blocks/voice-nav-01/page.tsx")
+      const mod = await import("@/registry/creative-tim-ui/blocks/voice-nav-01/page.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
@@ -448,12 +448,12 @@ export const Index: Record<string, any> = {
     type: "registry:block",
     registryDependencies: ["software-purchase-card","separator"],
     files: [{
-      path: "registry/elevenlabs-ui/blocks/software-purchase-01/page.tsx",
+      path: "registry/creative-tim-ui/blocks/software-purchase-01/page.tsx",
       type: "registry:page",
       target: "app/software-purchase/page.tsx"
     }],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/elevenlabs-ui/blocks/software-purchase-01/page.tsx")
+      const mod = await import("@/registry/creative-tim-ui/blocks/software-purchase-01/page.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
@@ -466,12 +466,12 @@ export const Index: Record<string, any> = {
     type: "registry:block",
     registryDependencies: ["button","card"],
     files: [{
-      path: "registry/elevenlabs-ui/blocks/billing-information-01/page.tsx",
+      path: "registry/creative-tim-ui/blocks/billing-information-01/page.tsx",
       type: "registry:page",
       target: "app/billing-information/page.tsx"
     }],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/elevenlabs-ui/blocks/billing-information-01/page.tsx")
+      const mod = await import("@/registry/creative-tim-ui/blocks/billing-information-01/page.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
@@ -484,12 +484,12 @@ export const Index: Record<string, any> = {
     type: "registry:block",
     registryDependencies: ["card"],
     files: [{
-      path: "registry/elevenlabs-ui/blocks/card-display-01/page.tsx",
+      path: "registry/creative-tim-ui/blocks/card-display-01/page.tsx",
       type: "registry:page",
       target: "app/card-display/page.tsx"
     }],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/elevenlabs-ui/blocks/card-display-01/page.tsx")
+      const mod = await import("@/registry/creative-tim-ui/blocks/card-display-01/page.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
@@ -502,12 +502,12 @@ export const Index: Record<string, any> = {
     type: "registry:block",
     registryDependencies: ["button","card","tooltip"],
     files: [{
-      path: "registry/elevenlabs-ui/blocks/payment-method-01/page.tsx",
+      path: "registry/creative-tim-ui/blocks/payment-method-01/page.tsx",
       type: "registry:page",
       target: "app/payment-method/page.tsx"
     }],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/elevenlabs-ui/blocks/payment-method-01/page.tsx")
+      const mod = await import("@/registry/creative-tim-ui/blocks/payment-method-01/page.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
@@ -520,12 +520,12 @@ export const Index: Record<string, any> = {
     type: "registry:block",
     registryDependencies: ["button","calendar","card","popover"],
     files: [{
-      path: "registry/elevenlabs-ui/blocks/transaction-history-01/page.tsx",
+      path: "registry/creative-tim-ui/blocks/transaction-history-01/page.tsx",
       type: "registry:page",
       target: "app/transaction-history/page.tsx"
     }],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/elevenlabs-ui/blocks/transaction-history-01/page.tsx")
+      const mod = await import("@/registry/creative-tim-ui/blocks/transaction-history-01/page.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
@@ -538,12 +538,12 @@ export const Index: Record<string, any> = {
     type: "registry:block",
     registryDependencies: ["badge","button","separator"],
     files: [{
-      path: "registry/elevenlabs-ui/blocks/invoices-01/page.tsx",
+      path: "registry/creative-tim-ui/blocks/invoices-01/page.tsx",
       type: "registry:page",
       target: "app/invoices/page.tsx"
     }],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/elevenlabs-ui/blocks/invoices-01/page.tsx")
+      const mod = await import("@/registry/creative-tim-ui/blocks/invoices-01/page.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
@@ -556,12 +556,12 @@ export const Index: Record<string, any> = {
     type: "registry:block",
     registryDependencies: ["avatar","badge","card"],
     files: [{
-      path: "registry/elevenlabs-ui/blocks/simple-blog-content-01/page.tsx",
+      path: "registry/creative-tim-ui/blocks/simple-blog-content-01/page.tsx",
       type: "registry:page",
       target: "app/simple-blog-content/page.tsx"
     }],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/elevenlabs-ui/blocks/simple-blog-content-01/page.tsx")
+      const mod = await import("@/registry/creative-tim-ui/blocks/simple-blog-content-01/page.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
@@ -574,12 +574,12 @@ export const Index: Record<string, any> = {
     type: "registry:block",
     registryDependencies: ["avatar","badge","button","card"],
     files: [{
-      path: "registry/elevenlabs-ui/blocks/blog-cards-layout-01/page.tsx",
+      path: "registry/creative-tim-ui/blocks/blog-cards-layout-01/page.tsx",
       type: "registry:page",
       target: "app/blog-cards-layout/page.tsx"
     }],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/elevenlabs-ui/blocks/blog-cards-layout-01/page.tsx")
+      const mod = await import("@/registry/creative-tim-ui/blocks/blog-cards-layout-01/page.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
@@ -592,12 +592,12 @@ export const Index: Record<string, any> = {
     type: "registry:block",
     registryDependencies: ["badge","button"],
     files: [{
-      path: "registry/elevenlabs-ui/blocks/blog-post-preview-tags-01/page.tsx",
+      path: "registry/creative-tim-ui/blocks/blog-post-preview-tags-01/page.tsx",
       type: "registry:page",
       target: "app/blog-post-preview-tags/page.tsx"
     }],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/elevenlabs-ui/blocks/blog-post-preview-tags-01/page.tsx")
+      const mod = await import("@/registry/creative-tim-ui/blocks/blog-post-preview-tags-01/page.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
@@ -610,12 +610,12 @@ export const Index: Record<string, any> = {
     type: "registry:block",
     registryDependencies: ["button","card"],
     files: [{
-      path: "registry/elevenlabs-ui/blocks/highlighted-blog-posts-01/page.tsx",
+      path: "registry/creative-tim-ui/blocks/highlighted-blog-posts-01/page.tsx",
       type: "registry:page",
       target: "app/highlighted-blog-posts/page.tsx"
     }],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/elevenlabs-ui/blocks/highlighted-blog-posts-01/page.tsx")
+      const mod = await import("@/registry/creative-tim-ui/blocks/highlighted-blog-posts-01/page.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
@@ -628,12 +628,12 @@ export const Index: Record<string, any> = {
     type: "registry:block",
     registryDependencies: ["avatar","badge"],
     files: [{
-      path: "registry/elevenlabs-ui/blocks/blog-rectangular-images-01/page.tsx",
+      path: "registry/creative-tim-ui/blocks/blog-rectangular-images-01/page.tsx",
       type: "registry:page",
       target: "app/blog-rectangular-images/page.tsx"
     }],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/elevenlabs-ui/blocks/blog-rectangular-images-01/page.tsx")
+      const mod = await import("@/registry/creative-tim-ui/blocks/blog-rectangular-images-01/page.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
@@ -646,12 +646,12 @@ export const Index: Record<string, any> = {
     type: "registry:block",
     registryDependencies: ["avatar"],
     files: [{
-      path: "registry/elevenlabs-ui/blocks/large-blog-preview-01/page.tsx",
+      path: "registry/creative-tim-ui/blocks/large-blog-preview-01/page.tsx",
       type: "registry:page",
       target: "app/large-blog-preview/page.tsx"
     }],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/elevenlabs-ui/blocks/large-blog-preview-01/page.tsx")
+      const mod = await import("@/registry/creative-tim-ui/blocks/large-blog-preview-01/page.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
@@ -664,12 +664,12 @@ export const Index: Record<string, any> = {
     type: "registry:block",
     registryDependencies: ["button","card"],
     files: [{
-      path: "registry/elevenlabs-ui/blocks/simple-product-details-01/page.tsx",
+      path: "registry/creative-tim-ui/blocks/simple-product-details-01/page.tsx",
       type: "registry:page",
       target: "app/simple-product-details/page.tsx"
     }],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/elevenlabs-ui/blocks/simple-product-details-01/page.tsx")
+      const mod = await import("@/registry/creative-tim-ui/blocks/simple-product-details-01/page.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
@@ -682,12 +682,12 @@ export const Index: Record<string, any> = {
     type: "registry:block",
     registryDependencies: ["button","card","select"],
     files: [{
-      path: "registry/elevenlabs-ui/blocks/grid-ecommerce-01/page.tsx",
+      path: "registry/creative-tim-ui/blocks/grid-ecommerce-01/page.tsx",
       type: "registry:page",
       target: "app/grid-ecommerce/page.tsx"
     }],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/elevenlabs-ui/blocks/grid-ecommerce-01/page.tsx")
+      const mod = await import("@/registry/creative-tim-ui/blocks/grid-ecommerce-01/page.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
@@ -700,12 +700,12 @@ export const Index: Record<string, any> = {
     type: "registry:block",
     registryDependencies: ["button","card"],
     files: [{
-      path: "registry/elevenlabs-ui/blocks/promotional-cards-01/page.tsx",
+      path: "registry/creative-tim-ui/blocks/promotional-cards-01/page.tsx",
       type: "registry:page",
       target: "app/promotional-cards/page.tsx"
     }],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/elevenlabs-ui/blocks/promotional-cards-01/page.tsx")
+      const mod = await import("@/registry/creative-tim-ui/blocks/promotional-cards-01/page.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
@@ -718,12 +718,12 @@ export const Index: Record<string, any> = {
     type: "registry:block",
     registryDependencies: ["badge","button","card"],
     files: [{
-      path: "registry/elevenlabs-ui/blocks/order-history-01/page.tsx",
+      path: "registry/creative-tim-ui/blocks/order-history-01/page.tsx",
       type: "registry:page",
       target: "app/order-history/page.tsx"
     }],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/elevenlabs-ui/blocks/order-history-01/page.tsx")
+      const mod = await import("@/registry/creative-tim-ui/blocks/order-history-01/page.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
@@ -736,12 +736,12 @@ export const Index: Record<string, any> = {
     type: "registry:block",
     registryDependencies: ["button"],
     files: [{
-      path: "registry/elevenlabs-ui/blocks/empty-shopping-cart-01/page.tsx",
+      path: "registry/creative-tim-ui/blocks/empty-shopping-cart-01/page.tsx",
       type: "registry:page",
       target: "app/empty-shopping-cart/page.tsx"
     }],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/elevenlabs-ui/blocks/empty-shopping-cart-01/page.tsx")
+      const mod = await import("@/registry/creative-tim-ui/blocks/empty-shopping-cart-01/page.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
@@ -754,12 +754,12 @@ export const Index: Record<string, any> = {
     type: "registry:block",
     registryDependencies: ["button","label","radio-group"],
     files: [{
-      path: "registry/elevenlabs-ui/blocks/digital-product-overview-01/page.tsx",
+      path: "registry/creative-tim-ui/blocks/digital-product-overview-01/page.tsx",
       type: "registry:page",
       target: "app/digital-product-overview/page.tsx"
     }],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/elevenlabs-ui/blocks/digital-product-overview-01/page.tsx")
+      const mod = await import("@/registry/creative-tim-ui/blocks/digital-product-overview-01/page.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
@@ -772,12 +772,12 @@ export const Index: Record<string, any> = {
     type: "registry:block",
     registryDependencies: ["button"],
     files: [{
-      path: "registry/elevenlabs-ui/blocks/product-description-01/page.tsx",
+      path: "registry/creative-tim-ui/blocks/product-description-01/page.tsx",
       type: "registry:page",
       target: "app/product-description/page.tsx"
     }],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/elevenlabs-ui/blocks/product-description-01/page.tsx")
+      const mod = await import("@/registry/creative-tim-ui/blocks/product-description-01/page.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
@@ -790,12 +790,12 @@ export const Index: Record<string, any> = {
     type: "registry:block",
     registryDependencies: ["button","tabs"],
     files: [{
-      path: "registry/elevenlabs-ui/blocks/dark-product-overview-01/page.tsx",
+      path: "registry/creative-tim-ui/blocks/dark-product-overview-01/page.tsx",
       type: "registry:page",
       target: "app/dark-product-overview/page.tsx"
     }],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/elevenlabs-ui/blocks/dark-product-overview-01/page.tsx")
+      const mod = await import("@/registry/creative-tim-ui/blocks/dark-product-overview-01/page.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
@@ -808,12 +808,12 @@ export const Index: Record<string, any> = {
     type: "registry:block",
     registryDependencies: ["button","card","input","select"],
     files: [{
-      path: "registry/elevenlabs-ui/blocks/shopping-cart-01/page.tsx",
+      path: "registry/creative-tim-ui/blocks/shopping-cart-01/page.tsx",
       type: "registry:page",
       target: "app/shopping-cart/page.tsx"
     }],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/elevenlabs-ui/blocks/shopping-cart-01/page.tsx")
+      const mod = await import("@/registry/creative-tim-ui/blocks/shopping-cart-01/page.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
@@ -826,12 +826,12 @@ export const Index: Record<string, any> = {
     type: "registry:block",
     registryDependencies: ["button","checkbox","input","label"],
     files: [{
-      path: "registry/elevenlabs-ui/blocks/checkout-01/page.tsx",
+      path: "registry/creative-tim-ui/blocks/checkout-01/page.tsx",
       type: "registry:page",
       target: "app/checkout/page.tsx"
     }],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/elevenlabs-ui/blocks/checkout-01/page.tsx")
+      const mod = await import("@/registry/creative-tim-ui/blocks/checkout-01/page.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
@@ -844,12 +844,12 @@ export const Index: Record<string, any> = {
     type: "registry:block",
     registryDependencies: ["accordion","button"],
     files: [{
-      path: "registry/elevenlabs-ui/blocks/complex-product-description-01/page.tsx",
+      path: "registry/creative-tim-ui/blocks/complex-product-description-01/page.tsx",
       type: "registry:page",
       target: "app/complex-product-description/page.tsx"
     }],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/elevenlabs-ui/blocks/complex-product-description-01/page.tsx")
+      const mod = await import("@/registry/creative-tim-ui/blocks/complex-product-description-01/page.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
@@ -862,12 +862,12 @@ export const Index: Record<string, any> = {
     type: "registry:block",
     registryDependencies: ["button"],
     files: [{
-      path: "registry/elevenlabs-ui/blocks/interactive-product-preview-01/page.tsx",
+      path: "registry/creative-tim-ui/blocks/interactive-product-preview-01/page.tsx",
       type: "registry:page",
       target: "app/interactive-product-preview/page.tsx"
     }],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/elevenlabs-ui/blocks/interactive-product-preview-01/page.tsx")
+      const mod = await import("@/registry/creative-tim-ui/blocks/interactive-product-preview-01/page.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
@@ -880,12 +880,12 @@ export const Index: Record<string, any> = {
     type: "registry:block",
     registryDependencies: ["button","card"],
     files: [{
-      path: "registry/elevenlabs-ui/blocks/order-details-01/page.tsx",
+      path: "registry/creative-tim-ui/blocks/order-details-01/page.tsx",
       type: "registry:page",
       target: "app/order-details/page.tsx"
     }],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/elevenlabs-ui/blocks/order-details-01/page.tsx")
+      const mod = await import("@/registry/creative-tim-ui/blocks/order-details-01/page.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
@@ -898,12 +898,12 @@ export const Index: Record<string, any> = {
     type: "registry:block",
     registryDependencies: ["button","card"],
     files: [{
-      path: "registry/elevenlabs-ui/blocks/product-details-01/page.tsx",
+      path: "registry/creative-tim-ui/blocks/product-details-01/page.tsx",
       type: "registry:page",
       target: "app/product-details/page.tsx"
     }],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/elevenlabs-ui/blocks/product-details-01/page.tsx")
+      const mod = await import("@/registry/creative-tim-ui/blocks/product-details-01/page.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
@@ -916,12 +916,12 @@ export const Index: Record<string, any> = {
     type: "registry:block",
     registryDependencies: [],
     files: [{
-      path: "registry/elevenlabs-ui/blocks/simple-faq-01/page.tsx",
+      path: "registry/creative-tim-ui/blocks/simple-faq-01/page.tsx",
       type: "registry:page",
       target: "app/simple-faq/page.tsx"
     }],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/elevenlabs-ui/blocks/simple-faq-01/page.tsx")
+      const mod = await import("@/registry/creative-tim-ui/blocks/simple-faq-01/page.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
@@ -934,12 +934,12 @@ export const Index: Record<string, any> = {
     type: "registry:block",
     registryDependencies: ["accordion"],
     files: [{
-      path: "registry/elevenlabs-ui/blocks/faqs-list-01/page.tsx",
+      path: "registry/creative-tim-ui/blocks/faqs-list-01/page.tsx",
       type: "registry:page",
       target: "app/faqs-list/page.tsx"
     }],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/elevenlabs-ui/blocks/faqs-list-01/page.tsx")
+      const mod = await import("@/registry/creative-tim-ui/blocks/faqs-list-01/page.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
@@ -952,12 +952,12 @@ export const Index: Record<string, any> = {
     type: "registry:block",
     registryDependencies: ["card"],
     files: [{
-      path: "registry/elevenlabs-ui/blocks/faq-left-title-01/page.tsx",
+      path: "registry/creative-tim-ui/blocks/faq-left-title-01/page.tsx",
       type: "registry:page",
       target: "app/faq-left-title/page.tsx"
     }],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/elevenlabs-ui/blocks/faq-left-title-01/page.tsx")
+      const mod = await import("@/registry/creative-tim-ui/blocks/faq-left-title-01/page.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
@@ -970,12 +970,12 @@ export const Index: Record<string, any> = {
     type: "registry:block",
     registryDependencies: ["button","card"],
     files: [{
-      path: "registry/elevenlabs-ui/blocks/faqs-grid-cta-01/page.tsx",
+      path: "registry/creative-tim-ui/blocks/faqs-grid-cta-01/page.tsx",
       type: "registry:page",
       target: "app/faqs-grid-cta/page.tsx"
     }],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/elevenlabs-ui/blocks/faqs-grid-cta-01/page.tsx")
+      const mod = await import("@/registry/creative-tim-ui/blocks/faqs-grid-cta-01/page.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
@@ -988,12 +988,12 @@ export const Index: Record<string, any> = {
     type: "registry:block",
     registryDependencies: ["button","card"],
     files: [{
-      path: "registry/elevenlabs-ui/blocks/faqs-cards-icons-01/page.tsx",
+      path: "registry/creative-tim-ui/blocks/faqs-cards-icons-01/page.tsx",
       type: "registry:page",
       target: "app/faqs-cards-icons/page.tsx"
     }],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/elevenlabs-ui/blocks/faqs-cards-icons-01/page.tsx")
+      const mod = await import("@/registry/creative-tim-ui/blocks/faqs-cards-icons-01/page.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
@@ -1006,12 +1006,12 @@ export const Index: Record<string, any> = {
     type: "registry:block",
     registryDependencies: ["card"],
     files: [{
-      path: "registry/elevenlabs-ui/blocks/faqs-grid-01/page.tsx",
+      path: "registry/creative-tim-ui/blocks/faqs-grid-01/page.tsx",
       type: "registry:page",
       target: "app/faqs-grid/page.tsx"
     }],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/elevenlabs-ui/blocks/faqs-grid-01/page.tsx")
+      const mod = await import("@/registry/creative-tim-ui/blocks/faqs-grid-01/page.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
@@ -1024,12 +1024,12 @@ export const Index: Record<string, any> = {
     type: "registry:hook",
     registryDependencies: undefined,
     files: [{
-      path: "registry/elevenlabs-ui/hooks/use-mobile.ts",
+      path: "registry/creative-tim-ui/hooks/use-mobile.ts",
       type: "registry:hook",
       target: ""
     }],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/elevenlabs-ui/hooks/use-mobile.ts")
+      const mod = await import("@/registry/creative-tim-ui/hooks/use-mobile.ts")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
@@ -1042,12 +1042,12 @@ export const Index: Record<string, any> = {
     type: "registry:example",
     registryDependencies: ["https://ui.elevenlabs.io/r/audio-player.json","button","card","scroll-area"],
     files: [{
-      path: "registry/elevenlabs-ui/examples/audio-player-demo.tsx",
+      path: "registry/creative-tim-ui/examples/audio-player-demo.tsx",
       type: "registry:example",
       target: ""
     }],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/elevenlabs-ui/examples/audio-player-demo.tsx")
+      const mod = await import("@/registry/creative-tim-ui/examples/audio-player-demo.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
@@ -1060,12 +1060,12 @@ export const Index: Record<string, any> = {
     type: "registry:example",
     registryDependencies: ["https://ui.elevenlabs.io/r/orb.json","button"],
     files: [{
-      path: "registry/elevenlabs-ui/examples/orb-demo.tsx",
+      path: "registry/creative-tim-ui/examples/orb-demo.tsx",
       type: "registry:example",
       target: ""
     }],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/elevenlabs-ui/examples/orb-demo.tsx")
+      const mod = await import("@/registry/creative-tim-ui/examples/orb-demo.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
@@ -1078,12 +1078,12 @@ export const Index: Record<string, any> = {
     type: "registry:example",
     registryDependencies: ["https://ui.elevenlabs.io/r/waveform.json"],
     files: [{
-      path: "registry/elevenlabs-ui/examples/waveform-demo.tsx",
+      path: "registry/creative-tim-ui/examples/waveform-demo.tsx",
       type: "registry:example",
       target: ""
     }],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/elevenlabs-ui/examples/waveform-demo.tsx")
+      const mod = await import("@/registry/creative-tim-ui/examples/waveform-demo.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
@@ -1096,12 +1096,12 @@ export const Index: Record<string, any> = {
     type: "registry:example",
     registryDependencies: ["https://ui.elevenlabs.io/r/live-waveform.json","button"],
     files: [{
-      path: "registry/elevenlabs-ui/examples/live-waveform-demo.tsx",
+      path: "registry/creative-tim-ui/examples/live-waveform-demo.tsx",
       type: "registry:example",
       target: ""
     }],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/elevenlabs-ui/examples/live-waveform-demo.tsx")
+      const mod = await import("@/registry/creative-tim-ui/examples/live-waveform-demo.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
@@ -1114,12 +1114,12 @@ export const Index: Record<string, any> = {
     type: "registry:example",
     registryDependencies: ["https://ui.elevenlabs.io/r/bar-visualizer.json","button"],
     files: [{
-      path: "registry/elevenlabs-ui/examples/bar-visualizer-demo.tsx",
+      path: "registry/creative-tim-ui/examples/bar-visualizer-demo.tsx",
       type: "registry:example",
       target: ""
     }],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/elevenlabs-ui/examples/bar-visualizer-demo.tsx")
+      const mod = await import("@/registry/creative-tim-ui/examples/bar-visualizer-demo.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
@@ -1132,12 +1132,12 @@ export const Index: Record<string, any> = {
     type: "registry:example",
     registryDependencies: ["https://ui.elevenlabs.io/r/message.json","https://ui.elevenlabs.io/r/response.json"],
     files: [{
-      path: "registry/elevenlabs-ui/examples/message-demo.tsx",
+      path: "registry/creative-tim-ui/examples/message-demo.tsx",
       type: "registry:example",
       target: ""
     }],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/elevenlabs-ui/examples/message-demo.tsx")
+      const mod = await import("@/registry/creative-tim-ui/examples/message-demo.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
@@ -1150,12 +1150,12 @@ export const Index: Record<string, any> = {
     type: "registry:example",
     registryDependencies: ["https://ui.elevenlabs.io/r/response.json"],
     files: [{
-      path: "registry/elevenlabs-ui/examples/response-demo.tsx",
+      path: "registry/creative-tim-ui/examples/response-demo.tsx",
       type: "registry:example",
       target: ""
     }],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/elevenlabs-ui/examples/response-demo.tsx")
+      const mod = await import("@/registry/creative-tim-ui/examples/response-demo.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
@@ -1168,12 +1168,12 @@ export const Index: Record<string, any> = {
     type: "registry:example",
     registryDependencies: ["https://ui.elevenlabs.io/r/shimmering-text.json"],
     files: [{
-      path: "registry/elevenlabs-ui/examples/shimmering-text-demo.tsx",
+      path: "registry/creative-tim-ui/examples/shimmering-text-demo.tsx",
       type: "registry:example",
       target: ""
     }],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/elevenlabs-ui/examples/shimmering-text-demo.tsx")
+      const mod = await import("@/registry/creative-tim-ui/examples/shimmering-text-demo.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
@@ -1186,12 +1186,12 @@ export const Index: Record<string, any> = {
     type: "registry:example",
     registryDependencies: ["https://ui.elevenlabs.io/r/voice-picker.json","https://ui.elevenlabs.io/r/audio-player.json"],
     files: [{
-      path: "registry/elevenlabs-ui/examples/voice-picker-demo.tsx",
+      path: "registry/creative-tim-ui/examples/voice-picker-demo.tsx",
       type: "registry:example",
       target: ""
     }],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/elevenlabs-ui/examples/voice-picker-demo.tsx")
+      const mod = await import("@/registry/creative-tim-ui/examples/voice-picker-demo.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
@@ -1204,12 +1204,12 @@ export const Index: Record<string, any> = {
     type: "registry:example",
     registryDependencies: ["https://ui.elevenlabs.io/r/voice-button.json"],
     files: [{
-      path: "registry/elevenlabs-ui/examples/voice-button-demo.tsx",
+      path: "registry/creative-tim-ui/examples/voice-button-demo.tsx",
       type: "registry:example",
       target: ""
     }],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/elevenlabs-ui/examples/voice-button-demo.tsx")
+      const mod = await import("@/registry/creative-tim-ui/examples/voice-button-demo.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
@@ -1222,12 +1222,12 @@ export const Index: Record<string, any> = {
     type: "registry:example",
     registryDependencies: ["https://ui.elevenlabs.io/r/conversation-bar.json"],
     files: [{
-      path: "registry/elevenlabs-ui/examples/conversation-bar-demo.tsx",
+      path: "registry/creative-tim-ui/examples/conversation-bar-demo.tsx",
       type: "registry:example",
       target: ""
     }],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/elevenlabs-ui/examples/conversation-bar-demo.tsx")
+      const mod = await import("@/registry/creative-tim-ui/examples/conversation-bar-demo.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
@@ -1240,12 +1240,12 @@ export const Index: Record<string, any> = {
     type: "registry:example",
     registryDependencies: ["https://ui.elevenlabs.io/r/message.json","https://ui.elevenlabs.io/r/response.json","https://ui.elevenlabs.io/r/conversation.json"],
     files: [{
-      path: "registry/elevenlabs-ui/examples/conversation-demo.tsx",
+      path: "registry/creative-tim-ui/examples/conversation-demo.tsx",
       type: "registry:example",
       target: ""
     }],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/elevenlabs-ui/examples/conversation-demo.tsx")
+      const mod = await import("@/registry/creative-tim-ui/examples/conversation-demo.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
@@ -1258,12 +1258,12 @@ export const Index: Record<string, any> = {
     type: "registry:example",
     registryDependencies: ["software-purchase-card"],
     files: [{
-      path: "registry/elevenlabs-ui/examples/software-purchase-card-demo.tsx",
+      path: "registry/creative-tim-ui/examples/software-purchase-card-demo.tsx",
       type: "registry:example",
       target: ""
     }],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/elevenlabs-ui/examples/software-purchase-card-demo.tsx")
+      const mod = await import("@/registry/creative-tim-ui/examples/software-purchase-card-demo.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),

@@ -1,6 +1,6 @@
 "use client"
 
-import { Button } from "@/registry/elevenlabs-ui/ui/button"
+import { Button } from "@/registry/creative-tim-ui/ui/button"
 
 export default function EmptyShoppingCart01() {
   return (

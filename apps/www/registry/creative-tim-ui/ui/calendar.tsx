@@ -9,7 +9,7 @@ import {
 import { DayButton, DayPicker, getDefaultClassNames } from "react-day-picker"
 
 import { cn } from "@/lib/utils"
-import { Button, buttonVariants } from "@/registry/elevenlabs-ui/ui/button"
+import { Button, buttonVariants } from "@/registry/creative-tim-ui/ui/button"
 
 function Calendar({
   className,

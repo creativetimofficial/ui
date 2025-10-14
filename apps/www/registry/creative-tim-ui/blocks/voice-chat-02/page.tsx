@@ -6,10 +6,10 @@ import { AnimatePresence, motion } from "framer-motion"
 import { Loader2Icon, PhoneIcon, PhoneOffIcon } from "lucide-react"
 
 import { cn } from "@/lib/utils"
-import { Button } from "@/registry/elevenlabs-ui/ui/button"
-import { Card } from "@/registry/elevenlabs-ui/ui/card"
-import { Orb } from "@/registry/elevenlabs-ui/ui/orb"
-import { ShimmeringText } from "@/registry/elevenlabs-ui/ui/shimmering-text"
+import { Button } from "@/registry/creative-tim-ui/ui/button"
+import { Card } from "@/registry/creative-tim-ui/ui/card"
+import { Orb } from "@/registry/creative-tim-ui/ui/orb"
+import { ShimmeringText } from "@/registry/creative-tim-ui/ui/shimmering-text"
 
 const DEFAULT_AGENT = {
   agentId: process.env.NEXT_PUBLIC_ELEVENLABS_AGENT_ID!,

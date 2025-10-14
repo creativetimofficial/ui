@@ -3,7 +3,7 @@
 import { useState } from "react"
 import type { ElevenLabs } from "@elevenlabs/elevenlabs-js"
 
-import { VoicePicker } from "@/registry/elevenlabs-ui/ui/voice-picker"
+import { VoicePicker } from "@/registry/creative-tim-ui/ui/voice-picker"
 
 const voices: ElevenLabs.Voice[] = [
   {

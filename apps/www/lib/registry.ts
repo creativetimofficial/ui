@@ -68,7 +68,7 @@ function buildPathMappings(
 
   files.forEach((file) => {
     if (file.path && file.target) {
-      // Extract the source path relative to registry/elevenlabs-ui/
+      // Extract the source path relative to registry/creative-tim-ui/
       const match = file.path.match(/registry\/elevenlabs-ui\/(.+)$/)
       if (match) {
         mappings.set(match[1], file.target)
@@ -197,21 +197,21 @@ export function fixImport(content: string, pathMappings: Map<string, string>) {
 
   // Fix UI component imports
   content = content.replaceAll(
-    "@/registry/elevenlabs-ui/ui/",
+    "@/registry/creative-tim-ui/ui/",
     "@/components/ui/"
   )
 
   // Fix example imports
   content = content.replaceAll(
-    "@/registry/elevenlabs-ui/examples/",
+    "@/registry/creative-tim-ui/examples/",
     "@/components/examples/"
   )
 
   // Fix hook imports
-  content = content.replaceAll("@/registry/elevenlabs-ui/hooks/", "@/hooks/")
+  content = content.replaceAll("@/registry/creative-tim-ui/hooks/", "@/hooks/")
 
   // Fix lib imports
-  content = content.replaceAll("@/registry/elevenlabs-ui/lib/", "@/lib/")
+  content = content.replaceAll("@/registry/creative-tim-ui/lib/", "@/lib/")
 
   return content
 }

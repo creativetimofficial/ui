@@ -2,14 +2,14 @@
 
 import { Pencil, Plus, Trash2 } from "lucide-react"
 
-import { Button } from "@/registry/elevenlabs-ui/ui/button"
-import { Card } from "@/registry/elevenlabs-ui/ui/card"
+import { Button } from "@/registry/creative-tim-ui/ui/button"
+import { Card } from "@/registry/creative-tim-ui/ui/card"
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from "@/registry/elevenlabs-ui/ui/tooltip"
+} from "@/registry/creative-tim-ui/ui/tooltip"
 
 interface PaymentMethodProps {
   type: "visa" | "mastercard"

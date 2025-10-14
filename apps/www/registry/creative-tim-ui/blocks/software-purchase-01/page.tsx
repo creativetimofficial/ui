@@ -1,8 +1,8 @@
 "use client"
 
-import { Badge } from "@/registry/elevenlabs-ui/ui/badge"
-import { Separator } from "@/registry/elevenlabs-ui/ui/separator"
-import { SoftwarePurchaseCard } from "@/registry/elevenlabs-ui/ui/software-purchase-card"
+import { Badge } from "@/registry/creative-tim-ui/ui/badge"
+import { Separator } from "@/registry/creative-tim-ui/ui/separator"
+import { SoftwarePurchaseCard } from "@/registry/creative-tim-ui/ui/software-purchase-card"
 
 export default function Page() {
   const handleApprove = () => {

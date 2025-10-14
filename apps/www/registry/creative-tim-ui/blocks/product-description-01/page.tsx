@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import { Heart } from "lucide-react"
-import { Button } from "@/registry/elevenlabs-ui/ui/button"
+import { Button } from "@/registry/creative-tim-ui/ui/button"
 
 const IMAGES = [
   { imgelink: "https://v3.material-tailwind.com/coat-1.png" },

@@ -1,6 +1,6 @@
 "use client"
 
-import { Button } from "@/registry/elevenlabs-ui/ui/button"
+import { Button } from "@/registry/creative-tim-ui/ui/button"
 import {
   Card,
   CardContent,
@@ -8,15 +8,15 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/registry/elevenlabs-ui/ui/card"
-import { Checkbox } from "@/registry/elevenlabs-ui/ui/checkbox"
-import { Input } from "@/registry/elevenlabs-ui/ui/input"
-import { Label } from "@/registry/elevenlabs-ui/ui/label"
+} from "@/registry/creative-tim-ui/ui/card"
+import { Checkbox } from "@/registry/creative-tim-ui/ui/checkbox"
+import { Input } from "@/registry/creative-tim-ui/ui/input"
+import { Label } from "@/registry/creative-tim-ui/ui/label"
 import {
   RadioGroup,
   RadioGroupItem,
-} from "@/registry/elevenlabs-ui/ui/radio-group"
-import { Textarea } from "@/registry/elevenlabs-ui/ui/textarea"
+} from "@/registry/creative-tim-ui/ui/radio-group"
+import { Textarea } from "@/registry/creative-tim-ui/ui/textarea"
 
 const plans = [
   {

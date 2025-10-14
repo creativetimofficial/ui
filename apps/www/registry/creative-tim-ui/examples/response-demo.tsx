@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react"
 
-import { Response } from "@/registry/elevenlabs-ui/ui/response"
+import { Response } from "@/registry/creative-tim-ui/ui/response"
 
 const tokens = [
   "### Welcome",

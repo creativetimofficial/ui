@@ -11,31 +11,31 @@ import {
   SendIcon,
 } from "lucide-react"
 
-import { cn } from "@/registry/elevenlabs-ui/lib/utils"
-import { Button } from "@/registry/elevenlabs-ui/ui/button"
+import { cn } from "@/registry/creative-tim-ui/lib/utils"
+import { Button } from "@/registry/creative-tim-ui/ui/button"
 import {
   Card,
   CardContent,
   CardFooter,
   CardHeader,
-} from "@/registry/elevenlabs-ui/ui/card"
+} from "@/registry/creative-tim-ui/ui/card"
 import {
   Conversation,
   ConversationContent,
   ConversationEmptyState,
   ConversationScrollButton,
-} from "@/registry/elevenlabs-ui/ui/conversation"
-import { Input } from "@/registry/elevenlabs-ui/ui/input"
-import { Message, MessageContent } from "@/registry/elevenlabs-ui/ui/message"
-import { Orb } from "@/registry/elevenlabs-ui/ui/orb"
-import { Response } from "@/registry/elevenlabs-ui/ui/response"
-import { ShimmeringText } from "@/registry/elevenlabs-ui/ui/shimmering-text"
+} from "@/registry/creative-tim-ui/ui/conversation"
+import { Input } from "@/registry/creative-tim-ui/ui/input"
+import { Message, MessageContent } from "@/registry/creative-tim-ui/ui/message"
+import { Orb } from "@/registry/creative-tim-ui/ui/orb"
+import { Response } from "@/registry/creative-tim-ui/ui/response"
+import { ShimmeringText } from "@/registry/creative-tim-ui/ui/shimmering-text"
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from "@/registry/elevenlabs-ui/ui/tooltip"
+} from "@/registry/creative-tim-ui/ui/tooltip"
 
 type SystemMessageType = "initial" | "connecting" | "connected" | "error"
 
