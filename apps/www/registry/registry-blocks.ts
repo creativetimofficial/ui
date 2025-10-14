@@ -1338,7 +1338,14 @@ export const blocks: Registry["items"] = [
     name: "cruds-01",
     description: "Edit apparel item form with product details",
     type: "registry:block",
-    registryDependencies: ["button", "card", "input", "label", "select", "textarea"],
+    registryDependencies: [
+      "button",
+      "card",
+      "input",
+      "label",
+      "select",
+      "textarea",
+    ],
     files: [
       {
         path: "blocks/cruds-01/page.tsx",
