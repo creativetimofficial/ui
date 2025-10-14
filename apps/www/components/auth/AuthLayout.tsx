@@ -40,7 +40,7 @@ export function AuthLayout({
 
   if (!bootstrapDone) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-white">
+      <div className="min-h-screen flex items-center justify-center">
         <div className="text-slate-500 text-sm">Loading…</div>
       </div>
     );
@@ -50,13 +50,13 @@ export function AuthLayout({
   if (user) return null;
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen">
       <div className="grid grid-cols-1 lg:grid-cols-2 md:items-center min-h-screen">
         {/* LEFT SIDE */}
         <div className="flex items-center justify-center w-10/12 sm:w-6/12 mx-auto">
           <div className="w-full">
             {/* Title + subtitle */}
-            <h2 className="mt-16 text-3xl font-bold leading-tight sm:text-3xl text-slate-900">
+            <h2 className="mt-16 text-3xl font-bold leading-tight sm:text-3xl text-slate-900 dark:text-slate-100">
               {title}
             </h2>
             {subtitle && (

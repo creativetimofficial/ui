@@ -48,13 +48,13 @@ export default function ForgotPasswordPage() {
 
         <Label
           htmlFor="email"
-          className="text-sm font-semibold mb-2 block text-slate-900"
+          className="text-sm font-semibold mb-2 block text-slate-900 dark:text-slate-100"
         >
           Email Address
         </Label>
         <Input
           id="email"
-          type="email"
+          type="email" 
           placeholder="you@example.com"
           value={email}
           onChange={(e) => setEmail(e.target.value)}

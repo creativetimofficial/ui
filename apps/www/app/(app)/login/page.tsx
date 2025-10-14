@@ -74,7 +74,7 @@ export default function LoginPage() {
             <span className="w-full border-t" />
           </div>
           <div className="relative flex justify-center text-xs uppercase">
-            <span className="bg-white px-2 text-muted-foreground font-semibold">Or</span>
+            <span className="bg-white px-2 text-muted-foreground font-semibold dark:text-slate-100 dark:bg-background">Or</span>
           </div>
         </div>
       </div>
@@ -82,7 +82,7 @@ export default function LoginPage() {
       <form onSubmit={handleLogin} className="space-y-3">
         {error && <p className="text-red-500 text-sm my-4">{error}</p>}
 
-        <Label htmlFor="email" className="text-sm font-semibold mb-2 block text-slate-900">
+        <Label htmlFor="email" className="text-sm font-semibold mb-2 block text-slate-900 dark:text-slate-100">
           Email Address
         </Label>
         <Input
@@ -95,7 +95,7 @@ export default function LoginPage() {
           required
         />
 
-        <Label htmlFor="password" className="text-sm font-semibold mb-2 mt-4 block text-slate-900">
+        <Label htmlFor="password" className="text-sm font-semibold mb-2 mt-4 block text-slate-900 dark:text-slate-100">
           Password
         </Label>
         <Input

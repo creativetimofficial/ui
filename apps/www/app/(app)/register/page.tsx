@@ -88,7 +88,7 @@ export default function RegisterPage() {
             <span className="w-full border-t" />
           </div>
           <div className="relative flex justify-center text-xs uppercase">
-            <span className="bg-white px-2 text-muted-foreground font-semibold">Or</span>
+            <span className="bg-white px-2 text-muted-foreground dark:text-slate-100 dark:bg-background font-semibold">Or</span>
           </div>
         </div>
       </div>
@@ -99,7 +99,7 @@ export default function RegisterPage() {
 
         <Label
           htmlFor="email"
-          className="text-sm font-semibold mb-2 mt-4 block text-slate-900"
+          className="text-sm font-semibold mb-2 mt-4 block text-slate-900 dark:text-slate-100"
         >
           Email Address
         </Label>
@@ -115,7 +115,7 @@ export default function RegisterPage() {
 
         <Label
           htmlFor="password"
-          className="text-sm font-semibold mb-2 mt-4 block text-slate-900"
+          className="text-sm font-semibold mb-2 mt-4 block text-slate-900 dark:text-slate-100"
         >
           Password
         </Label>
@@ -131,7 +131,7 @@ export default function RegisterPage() {
 
         <Label
           htmlFor="confirm"
-          className="text-sm font-semibold mb-2 mt-4 block text-slate-900"
+          className="text-sm font-semibold mb-2 mt-4 block text-slate-900 dark:text-slate-100"
         >
           Confirm Password
         </Label>
