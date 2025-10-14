@@ -1,0 +1,116 @@
+<section class="container mx-auto py-16">
+  <div class="w-full rounded-lg border overflow-hidden bg-transparent border-slate-200 shadow-slate-950/5 shadow-none">
+    <div class="h-max rounded p-6 w-full flex items-start justify-between gap-6 flex-wrap m-0">
+      <div>
+        <h1 class="font-sans antialiased font-bold text-lg md:text-xl lg:text-2xl text-slate-800 dark:text-white mb-1">Trending Collections</h1>
+        <p class="font-sans antialiased text-base md:text-lg text-slate-600 max-w-2xl [text-wrap:balance]">The most sought-after collections across the entire ecosystem.</p>
+      </div>
+      <div class="flex items-center flex-wrap gap-2">
+        <!-- Date Selection Dropdown -->
+        <select class="flex items-center cursor-pointer h-max outline-none focus:outline-none text-slate-600 bg-transparent ring-transparent border border-slate-200 transition-all duration-300 ease-in text-sm rounded-md py-2 px-2.5 ring shadow-sm hover:border-slate-800 hover:ring-slate-800/10 focus:border-slate-800 focus:ring-slate-800/10 w-max shrink-0" aria-expanded="false" aria-haspopup="listbox">
+          <option value="Last 6H">Last 6H</option>
+          <option value="Last 12H">Last 12H</option>
+          <option value="Last 24H" selected>Last 24H</option>
+        </select>
+        <button class="inline-grid place-items-center border align-middle select-none font-sans font-medium text-center transition-all duration-300 ease-in disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none data-[shape=circular]:rounded-full text-sm min-w-[38px] min-h-[38px] rounded-md shadow-sm hover:shadow-md bg-transparent border-slate-200 text-slate-800 hover:bg-slate-200" data-shape="default">
+          <svg width="1.5em" height="1.5em" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="currentColor" class="w-4 h-4">
+            <path d="M3 5H21" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M3 12H21" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M3 19H21" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg>
+        </button>
+        <button class="inline-grid place-items-center border align-middle select-none font-sans font-medium text-center transition-all duration-300 ease-in disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none data-[shape=circular]:rounded-full text-sm min-w-[38px] min-h-[38px] rounded-md shadow-sm hover:shadow-md bg-transparent border-slate-200 text-slate-800 hover:bg-slate-200" data-shape="default">
+          <svg width="1.5em" height="1.5em" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="currentColor" class="w-4 h-4">
+            <path d="M14 20.4V14.6C14 14.2686 14.2686 14 14.6 14H20.4C20.7314 14 21 14.2686 21 14.6V20.4C21 20.7314 20.7314 21 20.4 21H14.6C14.2686 21 14 20.7314 14 20.4Z" stroke="currentColor"></path>
+            <path d="M3 20.4V14.6C3 14.2686 3.26863 14 3.6 14H9.4C9.73137 14 10 14.2686 10 14.6V20.4C10 20.7314 9.73137 21 9.4 21H3.6C3.26863 21 3 20.7314 3 20.4Z" stroke="currentColor"></path>
+            <path d="M14 9.4V3.6C14 3.26863 14.2686 3 14.6 3H20.4C20.7314 3 21 3.26863 21 3.6V9.4C21 9.73137 20.7314 10 20.4 10H14.6C14.2686 10 14 9.73137 14 9.4Z" stroke="currentColor"></path>
+            <path d="M3 9.4V3.6C3 3.26863 3.26863 3 3.6 3H9.4C9.73137 3 10 3.26863 10 3.6V9.4C10 9.73137 9.73137 10 9.4 10H3.6C3.26863 10 3 9.73137 3 9.4Z" stroke="currentColor"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div class="w-full h-max rounded py-2.5 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6 px-6 pb-6 pt-0">
+      <div class="w-full rounded-lg border shadow-sm overflow-hidden bg-white border-slate-200 shadow-slate-950/5 relative">
+        <img src="https://v3.material-tailwind.com/nft-1.svg" alt="@thedreamytrees" class="h-full absolute inset-0 w-full object-cover object-center" />
+        <div class="absolute inset-0 h-full w-full bg-gradient-to-t from-black/80 to-bg-black/20"></div>
+        <div class="w-full rounded relative z-10 h-[28rem] flex flex-col justify-between p-6">
+          <small class="font-sans antialiased text-sm font-semibold flex items-center gap-2 text-white">
+            <svg width="1.5em" height="1.5em" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="currentColor" class="h-4 w-4">
+              <path d="M21 7.35304L21 16.647C21 16.8649 20.8819 17.0656 20.6914 17.1715L12.2914 21.8381C12.1102 21.9388 11.8898 21.9388 11.7086 21.8381L3.30861 17.1715C3.11814 17.0656 3 16.8649 3 16.647L2.99998 7.35304C2.99998 7.13514 3.11812 6.93437 3.3086 6.82855L11.7086 2.16188C11.8898 2.06121 12.1102 2.06121 12.2914 2.16188L20.6914 6.82855C20.8818 6.93437 21 7.13514 21 7.35304Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+              <path d="M3.52844 7.29357L11.7086 11.8381C11.8898 11.9388 12.1102 11.9388 12.2914 11.8381L20.5 7.27777" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+              <path d="M12 21L12 12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+              <path d="M11.6914 11.8285L3.89139 7.49521C3.49147 7.27304 3 7.56222 3 8.01971V16.647C3 16.8649 3.11813 17.0656 3.30861 17.1715L11.1086 21.5048C11.5085 21.727 12 21.4378 12 20.9803V12.353C12 12.1351 11.8819 11.9344 11.6914 11.8285Z" fill="currentColor" stroke="currentColor" stroke-linejoin="round"></path>
+            </svg>Collection </small>
+          <div>
+            <h6 class="font-sans antialiased font-bold text-base md:text-lg lg:text-xl mb-1 flex items-center gap-2 text-white">Dreamy Trees <svg width="1.5em" height="1.5em" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="currentColor" class="h-5 w-5 text-blue-500">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M12 1.25C6.06294 1.25 1.25 6.06294 1.25 12C1.25 17.9371 6.06294 22.75 12 22.75C17.9371 22.75 22.75 17.9371 22.75 12C22.75 6.06294 17.9371 1.25 12 1.25ZM7.53044 11.9697C7.23755 11.6768 6.76268 11.6768 6.46978 11.9697C6.17689 12.2626 6.17689 12.7374 6.46978 13.0303L9.46978 16.0303C9.76268 16.3232 10.2376 16.3232 10.5304 16.0303L17.5304 9.03033C17.8233 8.73744 17.8233 8.26256 17.5304 7.96967C17.2375 7.67678 16.7627 7.67678 16.4698 7.96967L10.0001 14.4393L7.53044 11.9697Z" fill="currentColor"></path>
+              </svg>
+            </h6>
+            <p class="font-sans antialiased text-base text-white/80">Website visitors today demand a frictionless user experience.</p>
+            <div class="flex items-center flex-wrap gap-y-4 justify-between mt-4">
+              <div class="flex gap-2 items-center">
+                <img src="https://v3.material-tailwind.com/woman-profile-1.jpg" alt="@thedreamytrees" class="inline-block object-cover object-center data-[shape=square]:rounded-none data-[shape=circular]:rounded-full data-[shape=rounded]:rounded-[current] w-6 h-6 rounded-sm" data-shape="circular" />
+                <small class="font-sans antialiased text-sm font-semibold text-white block">@thedreamytrees</small>
+              </div>
+              <small class="font-sans antialiased text-sm font-semibold text-white block">9,999 NFTs</small>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="w-full rounded-lg border shadow-sm overflow-hidden bg-white border-slate-200 shadow-slate-950/5 relative">
+        <img src="https://v3.material-tailwind.com/nft-2.svg" alt="@3dfaces" class="h-full absolute inset-0 w-full object-cover object-center" />
+        <div class="absolute inset-0 h-full w-full bg-gradient-to-t from-black/80 to-bg-black/20"></div>
+        <div class="w-full rounded relative z-10 h-[28rem] flex flex-col justify-between p-6">
+          <small class="font-sans antialiased text-sm font-semibold flex items-center gap-2 text-white">
+            <svg width="1.5em" height="1.5em" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="currentColor" class="h-4 w-4">
+              <path d="M21 7.35304L21 16.647C21 16.8649 20.8819 17.0656 20.6914 17.1715L12.2914 21.8381C12.1102 21.9388 11.8898 21.9388 11.7086 21.8381L3.30861 17.1715C3.11814 17.0656 3 16.8649 3 16.647L2.99998 7.35304C2.99998 7.13514 3.11812 6.93437 3.3086 6.82855L11.7086 2.16188C11.8898 2.06121 12.1102 2.06121 12.2914 2.16188L20.6914 6.82855C20.8818 6.93437 21 7.13514 21 7.35304Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+              <path d="M3.52844 7.29357L11.7086 11.8381C11.8898 11.9388 12.1102 11.9388 12.2914 11.8381L20.5 7.27777" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+              <path d="M12 21L12 12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+              <path d="M11.6914 11.8285L3.89139 7.49521C3.49147 7.27304 3 7.56222 3 8.01971V16.647C3 16.8649 3.11813 17.0656 3.30861 17.1715L11.1086 21.5048C11.5085 21.727 12 21.4378 12 20.9803V12.353C12 12.1351 11.8819 11.9344 11.6914 11.8285Z" fill="currentColor" stroke="currentColor" stroke-linejoin="round"></path>
+            </svg>Collection </small>
+          <div>
+            <h6 class="font-sans antialiased font-bold text-base md:text-lg lg:text-xl mb-1 flex items-center gap-2 text-white">Face NFTs <svg width="1.5em" height="1.5em" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="currentColor" class="h-5 w-5 text-blue-500">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M12 1.25C6.06294 1.25 1.25 6.06294 1.25 12C1.25 17.9371 6.06294 22.75 12 22.75C17.9371 22.75 22.75 17.9371 22.75 12C22.75 6.06294 17.9371 1.25 12 1.25ZM7.53044 11.9697C7.23755 11.6768 6.76268 11.6768 6.46978 11.9697C6.17689 12.2626 6.17689 12.7374 6.46978 13.0303L9.46978 16.0303C9.76268 16.3232 10.2376 16.3232 10.5304 16.0303L17.5304 9.03033C17.8233 8.73744 17.8233 8.26256 17.5304 7.96967C17.2375 7.67678 16.7627 7.67678 16.4698 7.96967L10.0001 14.4393L7.53044 11.9697Z" fill="currentColor"></path>
+              </svg>
+            </h6>
+            <p class="font-sans antialiased text-base text-white/80">Website visitors today demand a frictionless user experience.</p>
+            <div class="flex items-center flex-wrap gap-y-4 justify-between mt-4">
+              <div class="flex gap-2 items-center">
+                <img src="https://v3.material-tailwind.com/man-profile-1.jpg" alt="@3dfaces" class="inline-block object-cover object-center data-[shape=square]:rounded-none data-[shape=circular]:rounded-full data-[shape=rounded]:rounded-[current] w-6 h-6 rounded-sm" data-shape="circular" />
+                <small class="font-sans antialiased text-sm font-semibold text-white block">@3dfaces</small>
+              </div>
+              <small class="font-sans antialiased text-sm font-semibold text-white block">3,000 NFTs</small>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="w-full rounded-lg border shadow-sm overflow-hidden bg-white border-slate-200 shadow-slate-950/5 relative">
+        <img src="https://v3.material-tailwind.com/nft-3.svg" alt="@theplanetsoftheuniverse" class="h-full absolute inset-0 w-full object-cover object-center" />
+        <div class="absolute inset-0 h-full w-full bg-gradient-to-t from-black/80 to-bg-black/20"></div>
+        <div class="w-full rounded relative z-10 h-[28rem] flex flex-col justify-between p-6">
+          <small class="font-sans antialiased text-sm font-semibold flex items-center gap-2 text-white">
+            <svg width="1.5em" height="1.5em" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="currentColor" class="h-4 w-4">
+              <path d="M21 7.35304L21 16.647C21 16.8649 20.8819 17.0656 20.6914 17.1715L12.2914 21.8381C12.1102 21.9388 11.8898 21.9388 11.7086 21.8381L3.30861 17.1715C3.11814 17.0656 3 16.8649 3 16.647L2.99998 7.35304C2.99998 7.13514 3.11812 6.93437 3.3086 6.82855L11.7086 2.16188C11.8898 2.06121 12.1102 2.06121 12.2914 2.16188L20.6914 6.82855C20.8818 6.93437 21 7.13514 21 7.35304Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+              <path d="M3.52844 7.29357L11.7086 11.8381C11.8898 11.9388 12.1102 11.9388 12.2914 11.8381L20.5 7.27777" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+              <path d="M12 21L12 12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+              <path d="M11.6914 11.8285L3.89139 7.49521C3.49147 7.27304 3 7.56222 3 8.01971V16.647C3 16.8649 3.11813 17.0656 3.30861 17.1715L11.1086 21.5048C11.5085 21.727 12 21.4378 12 20.9803V12.353C12 12.1351 11.8819 11.9344 11.6914 11.8285Z" fill="currentColor" stroke="currentColor" stroke-linejoin="round"></path>
+            </svg>Collection </small>
+          <div>
+            <h6 class="font-sans antialiased font-bold text-base md:text-lg lg:text-xl mb-1 flex items-center gap-2 text-white">The Planets Of The Universe <svg width="1.5em" height="1.5em" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="currentColor" class="h-5 w-5 text-blue-500">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M12 1.25C6.06294 1.25 1.25 6.06294 1.25 12C1.25 17.9371 6.06294 22.75 12 22.75C17.9371 22.75 22.75 17.9371 22.75 12C22.75 6.06294 17.9371 1.25 12 1.25ZM7.53044 11.9697C7.23755 11.6768 6.76268 11.6768 6.46978 11.9697C6.17689 12.2626 6.17689 12.7374 6.46978 13.0303L9.46978 16.0303C9.76268 16.3232 10.2376 16.3232 10.5304 16.0303L17.5304 9.03033C17.8233 8.73744 17.8233 8.26256 17.5304 7.96967C17.2375 7.67678 16.7627 7.67678 16.4698 7.96967L10.0001 14.4393L7.53044 11.9697Z" fill="currentColor"></path>
+              </svg>
+            </h6>
+            <p class="font-sans antialiased text-base text-white/80">Website visitors today demand a frictionless user experience.</p>
+            <div class="flex items-center flex-wrap gap-y-4 justify-between mt-4">
+              <div class="flex gap-2 items-center">
+                <img src="https://v3.material-tailwind.com/man-profile-2.jpg" alt="@theplanetsoftheuniverse" class="inline-block object-cover object-center data-[shape=square]:rounded-none data-[shape=circular]:rounded-full data-[shape=rounded]:rounded-[current] w-6 h-6 rounded-sm" data-shape="circular" />
+                <small class="font-sans antialiased text-sm font-semibold text-white block">@theplanetsoftheuniverse</small>
+              </div>
+              <small class="font-sans antialiased text-sm font-semibold text-white block">9,999 NFTs</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
