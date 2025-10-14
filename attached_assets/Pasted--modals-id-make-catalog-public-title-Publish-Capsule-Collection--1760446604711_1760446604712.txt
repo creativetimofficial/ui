@@ -1,0 +1,119 @@
+{
+  "modals": [
+    {
+      "id": "make-catalog-public",
+      "title": "Publish Capsule Collection",
+      "description": "This action will expose your private capsule collection to public viewing across all fashion storefronts.",
+      "icon": "unlock",
+      "metadata": {
+        "collection": "fall-winter-vault",
+        "views": "0",
+        "likes": "0"
+      },
+      "buttons": [
+        {
+          "label": "Make Collection Public",
+          "variant": "default",
+          "action": "confirm"
+        }
+      ]
+    },
+    {
+      "id": "change-collection-visibility",
+      "title": "Visibility Settings",
+      "description": "This collection is currently restricted to internal collaborators. You can modify who can view or access it from this setting.",
+      "buttons": [
+        {
+          "label": "Change Visibility",
+          "variant": "destructive",
+          "action": "open-modal"
+        }
+      ]
+    },
+    {
+      "id": "disable-edit-rules",
+      "title": "Disable Collection Lock Rules",
+      "description": "Removing edit rules will allow unrestricted changes to your seasonal campaign folders and product groups.",
+      "alert": {
+        "title": "Access Restrictions Will Be Removed",
+        "message": "Disabling these rules unlocks direct edits to sensitive assets and might affect internal syncs."
+      },
+      "impact": [
+        "Designer review checkpoints",
+        "Version freeze policies"
+      ],
+      "note": "0 edit lock rules currently active",
+      "buttons": [
+        {
+          "label": "Disable Edit Locks",
+          "variant": "destructive",
+          "action": "confirm"
+        }
+      ]
+    },
+    {
+      "id": "transfer-showroom-access",
+      "title": "Transfer Showroom Ownership",
+      "description": "Switch control of this fashion showroom space to another user or organization.",
+      "fields": [
+        {
+          "label": "Select new owner",
+          "type": "select",
+          "options": ["Styling Team", "Content Studio", "Retail Partner"]
+        },
+        {
+          "label": "Confirm collection handle",
+          "type": "text",
+          "placeholder": "resort-collection-2026"
+        }
+      ],
+      "warning": {
+        "text": "Transferring ownership will revoke your access to draft sets, unpublished campaigns, and internal analytics."
+      },
+      "buttons": [
+        {
+          "label": "Transfer Access",
+          "variant": "destructive",
+          "action": "confirm"
+        }
+      ]
+    },
+    {
+      "id": "delete-fashion-vault",
+      "title": "Permanently Remove Archive",
+      "description": "Erasing this fashion vault will wipe its data across your platform and collaborators.",
+      "alert": {
+        "title": "Review Before Deleting",
+        "message": "Once removed, associated content (lookbooks, notes, edits) will be lost forever."
+      },
+      "effects": [
+        "Deletes all digital outfits and metadata",
+        "Disconnects synced creative briefs",
+        "No change to billing or usage limits"
+      ],
+      "buttons": [
+        {
+          "label": "I acknowledge and confirm",
+          "variant": "default",
+          "action": "confirm"
+        }
+      ]
+    },
+    {
+      "id": "confirm-vault-deletion",
+      "title": "Erase Fashion Vault",
+      "description": "Type the full collection handle to confirm irreversible deletion of this vault.",
+      "input": {
+        "label": "Collection identifier",
+        "placeholder": "spring-edit-collection"
+      },
+      "buttons": [
+        {
+          "label": "Delete Vault",
+          "variant": "destructive",
+          "action": "confirm"
+        }
+      ]
+    }
+  ]
+}
