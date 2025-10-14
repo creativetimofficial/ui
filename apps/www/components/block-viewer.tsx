@@ -210,7 +210,7 @@ function BlockViewerToolbar() {
           size="sm"
           onClick={() => {
             copyToClipboard(
-              `npx shadcn@latest add "https://ui.elevenlabs.io/r/${item.name}.json"`
+              `npx shadcn@latest add "https://ui.creative-tim.com/r/${item.name}.json"`
             )
           }}
         >
