@@ -2008,6 +2008,96 @@ export const Index: Record<string, any> = {
     categories: ["testimonials"],
     meta: {"iframeHeight":"600px","container":"w-full bg-surface","mobile":"component"},
   },
+  "modals-01": {
+    name: "modals-01",
+    description: "Alert modal with confirmation input for reset settings",
+    type: "registry:block",
+    registryDependencies: ["dialog","button","input","label"],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/modals-01/page.tsx",
+      type: "registry:page",
+      target: "app/modals-01/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/modals-01/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["modals"],
+    meta: {"iframeHeight":"600px","container":"w-full bg-surface","mobile":"component"},
+  },
+  "modals-02": {
+    name: "modals-02",
+    description: "Edit profile modal with form inputs and preferences",
+    type: "registry:block",
+    registryDependencies: ["dialog","button","input","label","select","checkbox","radio-group"],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/modals-02/page.tsx",
+      type: "registry:page",
+      target: "app/modals-02/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/modals-02/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["modals"],
+    meta: {"iframeHeight":"700px","container":"w-full bg-surface","mobile":"component"},
+  },
+  "modals-03": {
+    name: "modals-03",
+    description: "Invite members modal with team management",
+    type: "registry:block",
+    registryDependencies: ["dialog","button","input","avatar","dropdown-menu"],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/modals-03/page.tsx",
+      type: "registry:page",
+      target: "app/modals-03/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/modals-03/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["modals"],
+    meta: {"iframeHeight":"700px","container":"w-full bg-surface","mobile":"component"},
+  },
+  "modals-04": {
+    name: "modals-04",
+    description: "Update product modal with image gallery and form",
+    type: "registry:block",
+    registryDependencies: ["dialog","button","input","label","select","textarea"],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/modals-04/page.tsx",
+      type: "registry:page",
+      target: "app/modals-04/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/modals-04/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["modals"],
+    meta: {"iframeHeight":"800px","container":"w-full bg-surface","mobile":"component"},
+  },
+  "modals-05": {
+    name: "modals-05",
+    description: "Upload files modal with drag and drop",
+    type: "registry:block",
+    registryDependencies: ["dialog","button","card"],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/modals-05/page.tsx",
+      type: "registry:page",
+      target: "app/modals-05/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/modals-05/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["modals"],
+    meta: {"iframeHeight":"700px","container":"w-full bg-surface","mobile":"component"},
+  },
   "use-mobile": {
     name: "use-mobile",
     description: "",

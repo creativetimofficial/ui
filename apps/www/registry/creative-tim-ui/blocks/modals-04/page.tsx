@@ -1,77 +1,77 @@
-"use client";
+"use client"
 
-import * as React from "react";
-import { X, Trash } from "lucide-react";
+import * as React from "react"
+import { Trash, X } from "lucide-react"
 
-import { Button } from "@/registry/creative-tim-ui/ui/button";
+import { Button } from "@/registry/creative-tim-ui/ui/button"
 import {
   Dialog,
   DialogContent,
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/registry/creative-tim-ui/ui/dialog";
-import { Input } from "@/registry/creative-tim-ui/ui/input";
-import { Label } from "@/registry/creative-tim-ui/ui/label";
+} from "@/registry/creative-tim-ui/ui/dialog"
+import { Input } from "@/registry/creative-tim-ui/ui/input"
+import { Label } from "@/registry/creative-tim-ui/ui/label"
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/registry/creative-tim-ui/ui/select";
-import { Textarea } from "@/registry/creative-tim-ui/ui/textarea";
+} from "@/registry/creative-tim-ui/ui/select"
+import { Textarea } from "@/registry/creative-tim-ui/ui/textarea"
 
 export default function ModalsBlock() {
-  const [isOpen, setIsOpen] = React.useState(false);
+  const [isOpen, setIsOpen] = React.useState(false)
 
   return (
-    <div className="grid place-items-center w-full min-h-screen">
+    <div className="grid min-h-screen w-full place-items-center">
       <Dialog open={isOpen} onOpenChange={setIsOpen}>
         <DialogTrigger asChild>
           <Button onClick={() => setIsOpen(true)}>Open Modal</Button>
         </DialogTrigger>
-        <DialogContent className="sm:max-w-[700px] max-h-[90vh] overflow-y-auto">
+        <DialogContent className="max-h-[90vh] overflow-y-auto sm:max-w-[700px]">
           <button
             onClick={() => setIsOpen(false)}
-            className="absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none"
+            className="ring-offset-background focus:ring-ring absolute top-4 right-4 rounded-sm opacity-70 transition-opacity hover:opacity-100 focus:ring-2 focus:ring-offset-2 focus:outline-none disabled:pointer-events-none"
           >
             <X className="h-4 w-4" />
             <span className="sr-only">Close</span>
           </button>
           <DialogHeader>
-            <DialogTitle className="text-xl mb-1">
+            <DialogTitle className="mb-1 text-xl">
               Update Product Modal
             </DialogTitle>
-            <p className="text-sm text-muted-foreground">
+            <p className="text-muted-foreground text-sm">
               Edit product features and save it.
             </p>
           </DialogHeader>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 my-6">
+          <div className="my-6 grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
             {[...new Array(3)].map((_, i) => (
               <div
                 key={i}
-                className="relative w-full h-44 rounded-md overflow-hidden bg-muted"
+                className="bg-muted relative h-44 w-full overflow-hidden rounded-md"
               >
                 <img
                   src={`https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400&h=400&fit=crop&crop=center&q=80`}
                   alt={`Product ${i + 1}`}
-                  className="w-full h-full object-cover object-center"
+                  className="h-full w-full object-cover object-center"
                 />
                 <Button
                   size="sm"
                   variant="ghost"
-                  className="!absolute bottom-2 right-2"
+                  className="!absolute right-2 bottom-2"
                 >
-                  <Trash className="w-4 h-4" />
+                  <Trash className="h-4 w-4" />
                 </Button>
               </div>
             ))}
           </div>
 
           <form className="space-y-6">
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
               <div className="space-y-2">
                 <Label htmlFor="productName" className="font-semibold">
                   Product Name
@@ -95,7 +95,7 @@ export default function ModalsBlock() {
               </div>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
               <div className="space-y-2">
                 <Label htmlFor="price" className="font-semibold">
                   Price
@@ -153,5 +153,5 @@ export default function ModalsBlock() {
         </DialogContent>
       </Dialog>
     </div>
-  );
+  )
 }

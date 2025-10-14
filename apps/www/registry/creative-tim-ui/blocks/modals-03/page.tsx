@@ -1,36 +1,40 @@
-"use client";
+"use client"
 
-import * as React from "react";
-import { X, ChevronDown, Pencil } from "lucide-react";
+import * as React from "react"
+import { ChevronDown, Pencil, X } from "lucide-react"
 
-import { Avatar, AvatarFallback, AvatarImage } from "@/registry/creative-tim-ui/ui/avatar";
-import { Button } from "@/registry/creative-tim-ui/ui/button";
+import {
+  Avatar,
+  AvatarFallback,
+  AvatarImage,
+} from "@/registry/creative-tim-ui/ui/avatar"
+import { Button } from "@/registry/creative-tim-ui/ui/button"
 import {
   Dialog,
   DialogContent,
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/registry/creative-tim-ui/ui/dialog";
+} from "@/registry/creative-tim-ui/ui/dialog"
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@/registry/creative-tim-ui/ui/dropdown-menu";
-import { Input } from "@/registry/creative-tim-ui/ui/input";
+} from "@/registry/creative-tim-ui/ui/dropdown-menu"
+import { Input } from "@/registry/creative-tim-ui/ui/input"
 
 interface UserProps {
-  name: string;
-  img: string;
-  email: string;
+  name: string
+  img: string
+  email: string
 }
 
 function User({ name, img, email }: UserProps) {
-  const [selected, setSelected] = React.useState("Can View");
+  const [selected, setSelected] = React.useState("Can View")
 
   return (
-    <div className="flex items-center gap-4 justify-between">
+    <div className="flex items-center justify-between gap-4">
       <div className="flex items-center gap-4">
         <Avatar>
           <AvatarImage src={img} alt={name} />
@@ -38,7 +42,7 @@ function User({ name, img, email }: UserProps) {
         </Avatar>
         <div className="space-y-0.5">
           <p className="text-sm font-semibold">{name}</p>
-          <p className="text-sm text-muted-foreground">{email}</p>
+          <p className="text-muted-foreground text-sm">{email}</p>
         </div>
       </div>
       <DropdownMenu>
@@ -46,9 +50,9 @@ function User({ name, img, email }: UserProps) {
           <Button variant="ghost" size="sm" className="group">
             <span className="hidden items-center gap-1 sm:flex">
               {selected}{" "}
-              <ChevronDown className="w-4 h-4 transition-transform group-data-[state=open]:rotate-180" />
+              <ChevronDown className="h-4 w-4 transition-transform group-data-[state=open]:rotate-180" />
             </span>
-            <Pencil className="w-4 h-4 block sm:hidden" />
+            <Pencil className="block h-4 w-4 sm:hidden" />
           </Button>
         </DropdownMenuTrigger>
         <DropdownMenuContent align="end">
@@ -61,14 +65,14 @@ function User({ name, img, email }: UserProps) {
         </DropdownMenuContent>
       </DropdownMenu>
     </div>
-  );
+  )
 }
 
 export default function ModalsBlock() {
-  const [isOpen, setIsOpen] = React.useState(false);
+  const [isOpen, setIsOpen] = React.useState(false)
 
   return (
-    <div className="grid place-items-center w-full min-h-screen">
+    <div className="grid min-h-screen w-full place-items-center">
       <Dialog open={isOpen} onOpenChange={setIsOpen}>
         <DialogTrigger asChild>
           <Button onClick={() => setIsOpen(true)}>Open Modal</Button>
@@ -76,31 +80,31 @@ export default function ModalsBlock() {
         <DialogContent className="sm:max-w-[550px]">
           <button
             onClick={() => setIsOpen(false)}
-            className="absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none"
+            className="ring-offset-background focus:ring-ring absolute top-4 right-4 rounded-sm opacity-70 transition-opacity hover:opacity-100 focus:ring-2 focus:ring-offset-2 focus:outline-none disabled:pointer-events-none"
           >
             <X className="h-4 w-4" />
             <span className="sr-only">Close</span>
           </button>
           <DialogHeader>
-            <DialogTitle className="text-xl mb-1">
+            <DialogTitle className="mb-1 text-xl">
               Share with New Members
             </DialogTitle>
-            <p className="text-sm text-muted-foreground max-w-xl">
+            <p className="text-muted-foreground max-w-xl text-sm">
               Welcome new members to your team! Use this modal to seamlessly add
-              individuals to your dashboard, enabling collaboration and enhancing
-              productivity.
+              individuals to your dashboard, enabling collaboration and
+              enhancing productivity.
             </p>
           </DialogHeader>
 
-          <form className="flex w-full my-6 items-center flex-col sm:flex-row gap-2">
+          <form className="my-6 flex w-full flex-col items-center gap-2 sm:flex-row">
             <Input type="email" placeholder="Email, comma separated" />
-            <Button type="submit" className="shrink-0 w-full sm:w-auto">
+            <Button type="submit" className="w-full shrink-0 sm:w-auto">
               Invite
             </Button>
             <Button
               type="button"
               variant="outline"
-              className="shrink-0 w-full sm:w-auto"
+              className="w-full shrink-0 sm:w-auto"
             >
               Copy Link
             </Button>
@@ -126,5 +130,5 @@ export default function ModalsBlock() {
         </DialogContent>
       </Dialog>
     </div>
-  );
+  )
 }
