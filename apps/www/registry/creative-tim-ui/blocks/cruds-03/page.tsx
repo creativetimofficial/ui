@@ -18,9 +18,13 @@ export default function Cruds03() {
   return (
     <section className="grid min-h-screen place-items-center py-16">
       <Card className="mx-auto w-full max-w-3xl p-6 lg:p-8">
-        <h3 className="mb-6 text-2xl font-semibold">
-          Stylist Account Settings
-        </h3>
+        <div className="mb-6">
+          <h3 className="text-2xl font-semibold">Stylist Account Settings</h3>
+          <p className="text-muted-foreground mt-1 text-sm">
+            Configure your profile, roles, and permissions for your stylist
+            account.
+          </p>
+        </div>
         <form action="#" className="space-y-6">
           <div className="space-y-2">
             <Label htmlFor="avatar">Profile Photo</Label>
@@ -64,7 +68,7 @@ export default function Cruds03() {
             <div className="space-y-2">
               <Label htmlFor="userRole">Role</Label>
               <Select name="userRole">
-                <SelectTrigger id="userRole">
+                <SelectTrigger id="userRole" className="w-full">
                   <SelectValue placeholder="Select a role" />
                 </SelectTrigger>
                 <SelectContent>
@@ -100,7 +104,7 @@ export default function Cruds03() {
             <div className="space-y-2">
               <Label htmlFor="accountType">Account Type</Label>
               <Select name="accountType">
-                <SelectTrigger id="accountType">
+                <SelectTrigger id="accountType" className="w-full">
                   <SelectValue placeholder="Select account type" />
                 </SelectTrigger>
                 <SelectContent>
@@ -116,7 +120,7 @@ export default function Cruds03() {
             <div className="space-y-2">
               <Label htmlFor="permissionLevel">Permission Level</Label>
               <Select name="permissionLevel">
-                <SelectTrigger id="permissionLevel">
+                <SelectTrigger id="permissionLevel" className="w-full">
                   <SelectValue placeholder="Select permission level" />
                 </SelectTrigger>
                 <SelectContent>

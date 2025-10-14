@@ -17,7 +17,13 @@ export default function Cruds01() {
   return (
     <section className="grid min-h-screen place-items-center py-16">
       <Card className="mx-auto w-full max-w-2xl p-6 lg:p-8">
-        <h3 className="mb-6 text-2xl font-semibold">Edit Apparel Item</h3>
+        <div className="mb-6">
+          <h3 className="text-2xl font-semibold">Edit Apparel Item</h3>
+          <p className="text-muted-foreground mt-1 text-sm">
+            Update product information, pricing, and categorization for your
+            fashion inventory.
+          </p>
+        </div>
         <form action="#" className="space-y-6">
           <div className="space-y-2">
             <Label htmlFor="productName">Product Name</Label>
@@ -52,7 +58,7 @@ export default function Cruds01() {
           <div className="space-y-2">
             <Label htmlFor="category">Category</Label>
             <Select name="category">
-              <SelectTrigger id="category">
+              <SelectTrigger id="category" className="w-full">
                 <SelectValue placeholder="Select a category" />
               </SelectTrigger>
               <SelectContent>

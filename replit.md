@@ -113,6 +113,9 @@ Preferred communication style: Simple, everyday language.
 - **Registry Integration**: All CRUD blocks registered in registry-blocks.ts with proper metadata and CLI installation support
 - **Category Configuration**: Added "CRUDs" category to registry-categories.ts for blocks page navigation
 - **Design Pattern**: Form-based blocks using shadcn UI primitives (Button, Card, Input, Label, Select, Textarea) with responsive layouts
+- **Visual Enhancements**: Applied UX improvements to all CRUD blocks
+  - Added descriptive text below card titles for better context (e.g., "Update product information, pricing, and categorization for your fashion inventory")
+  - Ensured all Select dropdown components occupy full container width (`className="w-full"`) for consistent form layout
 - **Total Registry Items**: Registry now contains 108+ total items (93+ blocks plus UI components, examples, and hooks)
 
 ### Web3 Blocks Addition (October 14, 2025)

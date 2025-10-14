@@ -9,9 +9,15 @@ export default function Cruds02() {
   return (
     <section className="grid min-h-screen place-items-center py-16">
       <Card className="mx-auto w-full max-w-2xl p-6 lg:p-8">
-        <h3 className="mb-6 text-2xl font-semibold">
-          Update Retail Staff Profile
-        </h3>
+        <div className="mb-6">
+          <h3 className="text-2xl font-semibold">
+            Update Retail Staff Profile
+          </h3>
+          <p className="text-muted-foreground mt-1 text-sm">
+            Manage employee account credentials and contact information for
+            retail team members.
+          </p>
+        </div>
         <form action="#" className="space-y-6">
           <div className="space-y-2">
             <Label htmlFor="username">Username</Label>
