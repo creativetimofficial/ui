@@ -44,4 +44,9 @@ export const registryCategories = [
     slug: "cruds",
     hidden: false,
   },
+  {
+    name: "Footers",
+    slug: "footers",
+    hidden: false,
+  },
 ]
