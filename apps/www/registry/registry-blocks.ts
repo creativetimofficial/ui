@@ -1334,4 +1334,64 @@ export const blocks: Registry["items"] = [
     },
     categories: ["web3"],
   },
+  {
+    name: "cruds-01",
+    description: "Edit apparel item form with product details",
+    type: "registry:block",
+    registryDependencies: ["button", "card", "input", "label", "select", "textarea"],
+    files: [
+      {
+        path: "blocks/cruds-01/page.tsx",
+        type: "registry:page",
+        target: "app/cruds-01/page.tsx",
+      },
+    ],
+    meta: {
+      iframeHeight: "1000px",
+      container:
+        "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
+      mobile: "component",
+    },
+    categories: ["cruds"],
+  },
+  {
+    name: "cruds-02",
+    description: "Update retail staff profile form",
+    type: "registry:block",
+    registryDependencies: ["button", "card", "input", "label"],
+    files: [
+      {
+        path: "blocks/cruds-02/page.tsx",
+        type: "registry:page",
+        target: "app/cruds-02/page.tsx",
+      },
+    ],
+    meta: {
+      iframeHeight: "800px",
+      container:
+        "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
+      mobile: "component",
+    },
+    categories: ["cruds"],
+  },
+  {
+    name: "cruds-03",
+    description: "Stylist account settings with profile photo upload",
+    type: "registry:block",
+    registryDependencies: ["button", "card", "input", "label", "select"],
+    files: [
+      {
+        path: "blocks/cruds-03/page.tsx",
+        type: "registry:page",
+        target: "app/cruds-03/page.tsx",
+      },
+    ],
+    meta: {
+      iframeHeight: "1200px",
+      container:
+        "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
+      mobile: "component",
+    },
+    categories: ["cruds"],
+  },
 ]
