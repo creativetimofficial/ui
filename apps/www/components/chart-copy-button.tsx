@@ -5,12 +5,12 @@ import { CheckIcon, ClipboardIcon } from "lucide-react"
 
 import { Event, trackEvent } from "@/lib/events"
 import { cn } from "@/lib/utils"
-import { Button } from "@/registry/elevenlabs-ui/ui/button"
+import { Button } from "@/registry/creative-tim-ui/ui/button"
 import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
-} from "@/registry/elevenlabs-ui/ui/tooltip"
+} from "@/registry/creative-tim-ui/ui/tooltip"
 
 export function ChartCopyButton({
   event,

@@ -5,14 +5,14 @@ import { format } from "date-fns"
 import { CalendarIcon, ChevronDown, ChevronUp, Clock } from "lucide-react"
 
 import { cn } from "@/lib/utils"
-import { Button } from "@/registry/elevenlabs-ui/ui/button"
-import { Calendar } from "@/registry/elevenlabs-ui/ui/calendar"
-import { Card } from "@/registry/elevenlabs-ui/ui/card"
+import { Button } from "@/registry/creative-tim-ui/ui/button"
+import { Calendar } from "@/registry/creative-tim-ui/ui/calendar"
+import { Card } from "@/registry/creative-tim-ui/ui/card"
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/registry/elevenlabs-ui/ui/popover"
+} from "@/registry/creative-tim-ui/ui/popover"
 
 const DATA = {
   "March 2023": [

@@ -4,7 +4,7 @@ import Link from "next/link"
 import { usePathname } from "next/navigation"
 
 import { cn } from "@/lib/utils"
-import { Button } from "@/registry/elevenlabs-ui/ui/button"
+import { Button } from "@/registry/creative-tim-ui/ui/button"
 
 export function MainNav({
   items,

@@ -4,7 +4,7 @@ import { memo, useCallback, useEffect, useMemo, useRef, useState } from "react"
 import Link from "next/link"
 import { Music, SkipBack, SkipForward, Sparkles, Volume2 } from "lucide-react"
 
-import { cn } from "@/registry/elevenlabs-ui/lib/utils"
+import { cn } from "@/registry/creative-tim-ui/lib/utils"
 import {
   AudioPlayerButton,
   AudioPlayerDuration,
@@ -13,11 +13,11 @@ import {
   AudioPlayerTime,
   exampleTracks,
   useAudioPlayer,
-} from "@/registry/elevenlabs-ui/ui/audio-player"
-import { Button } from "@/registry/elevenlabs-ui/ui/button"
-import { Card } from "@/registry/elevenlabs-ui/ui/card"
-import { Orb } from "@/registry/elevenlabs-ui/ui/orb"
-import { Waveform } from "@/registry/elevenlabs-ui/ui/waveform"
+} from "@/registry/creative-tim-ui/ui/audio-player"
+import { Button } from "@/registry/creative-tim-ui/ui/button"
+import { Card } from "@/registry/creative-tim-ui/ui/card"
+import { Orb } from "@/registry/creative-tim-ui/ui/orb"
+import { Waveform } from "@/registry/creative-tim-ui/ui/waveform"
 
 const globalAudioState = {
   isPlaying: false,

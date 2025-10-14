@@ -3,14 +3,14 @@
 import { useCallback, useEffect, useRef, useState } from "react"
 
 import { cn } from "@/lib/utils"
-import { voiceToSiteAction } from "@/registry/elevenlabs-ui/blocks/voice-nav-01/actions/voice-to-site"
+import { voiceToSiteAction } from "@/registry/creative-tim-ui/blocks/voice-nav-01/actions/voice-to-site"
 import {
   Card,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/registry/elevenlabs-ui/ui/card"
-import { VoiceButton } from "@/registry/elevenlabs-ui/ui/voice-button"
+} from "@/registry/creative-tim-ui/ui/card"
+import { VoiceButton } from "@/registry/creative-tim-ui/ui/voice-button"
 
 const AUDIO_CONSTRAINTS: MediaStreamConstraints = {
   audio: {

@@ -6,7 +6,7 @@ import {
   Avatar,
   AvatarFallback,
   AvatarImage,
-} from "@/registry/elevenlabs-ui/ui/avatar"
+} from "@/registry/creative-tim-ui/ui/avatar"
 
 export type MessageProps = HTMLAttributes<HTMLDivElement> & {
   from: "user" | "assistant"

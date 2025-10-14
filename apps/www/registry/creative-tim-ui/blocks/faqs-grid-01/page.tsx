@@ -1,4 +1,4 @@
-import { Card, CardContent, CardHeader } from "@/registry/elevenlabs-ui/ui/card";
+import { Card, CardContent, CardHeader } from "@/registry/creative-tim-ui/ui/card";
 
 const DATA = [
   {

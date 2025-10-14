@@ -4,7 +4,7 @@ import { ElevenLabsClient } from "@elevenlabs/elevenlabs-js"
 import { SpeechToTextChunkResponseModel } from "@elevenlabs/elevenlabs-js/api/types/SpeechToTextChunkResponseModel"
 import { generateObject } from "ai"
 
-import { exampleFormSchema } from "@/registry/elevenlabs-ui/blocks/voice-form-01/schema"
+import { exampleFormSchema } from "@/registry/creative-tim-ui/blocks/voice-form-01/schema"
 
 const extractionSchema = exampleFormSchema.partial()
 

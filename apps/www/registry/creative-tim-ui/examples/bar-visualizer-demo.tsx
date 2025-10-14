@@ -5,15 +5,15 @@ import { useState } from "react"
 import {
   BarVisualizer,
   type AgentState,
-} from "@/registry/elevenlabs-ui/ui/bar-visualizer"
-import { Button } from "@/registry/elevenlabs-ui/ui/button"
+} from "@/registry/creative-tim-ui/ui/bar-visualizer"
+import { Button } from "@/registry/creative-tim-ui/ui/button"
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/registry/elevenlabs-ui/ui/card"
+} from "@/registry/creative-tim-ui/ui/card"
 
 export default function BarVisualizerDemo() {
   const [state, setState] = useState<AgentState>("listening")

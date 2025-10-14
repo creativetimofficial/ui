@@ -2,8 +2,8 @@
 
 import { useState } from "react"
 import { ChevronLeft, ChevronRight, Heart } from "lucide-react"
-import { Button } from "@/registry/elevenlabs-ui/ui/button"
-import { Card, CardContent } from "@/registry/elevenlabs-ui/ui/card"
+import { Button } from "@/registry/creative-tim-ui/ui/button"
+import { Card, CardContent } from "@/registry/creative-tim-ui/ui/card"
 
 const IMAGES = [
   "https://v3.material-tailwind.com/coat-1.png",

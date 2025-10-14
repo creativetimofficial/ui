@@ -12,7 +12,7 @@ import { useConfig } from "@/hooks/use-config"
 import { useIsMac } from "@/hooks/use-is-mac"
 import { useMutationObserver } from "@/hooks/use-mutation-observer"
 import { copyToClipboardWithMeta } from "@/components/copy-button"
-import { Button } from "@/registry/elevenlabs-ui/ui/button"
+import { Button } from "@/registry/creative-tim-ui/ui/button"
 import {
   Command,
   CommandEmpty,
@@ -20,7 +20,7 @@ import {
   CommandInput,
   CommandItem,
   CommandList,
-} from "@/registry/elevenlabs-ui/ui/command"
+} from "@/registry/creative-tim-ui/ui/command"
 import {
   Dialog,
   DialogContent,
@@ -28,8 +28,8 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/registry/elevenlabs-ui/ui/dialog"
-import { Separator } from "@/registry/elevenlabs-ui/ui/separator"
+} from "@/registry/creative-tim-ui/ui/dialog"
+import { Separator } from "@/registry/creative-tim-ui/ui/separator"
 
 export function CommandMenu({
   tree,

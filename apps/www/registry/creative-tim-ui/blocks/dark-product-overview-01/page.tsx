@@ -1,8 +1,8 @@
 "use client"
 
 import { Heart } from "lucide-react"
-import { Button } from "@/registry/elevenlabs-ui/ui/button"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/registry/elevenlabs-ui/ui/tabs"
+import { Button } from "@/registry/creative-tim-ui/ui/button"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/registry/creative-tim-ui/ui/tabs"
 
 const DATA = [
   {

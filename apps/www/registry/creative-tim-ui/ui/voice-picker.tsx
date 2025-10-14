@@ -8,8 +8,8 @@ import { cn } from "@/lib/utils"
 import {
   AudioPlayerProvider,
   useAudioPlayer,
-} from "@/registry/elevenlabs-ui/ui/audio-player"
-import { Button } from "@/registry/elevenlabs-ui/ui/button"
+} from "@/registry/creative-tim-ui/ui/audio-player"
+import { Button } from "@/registry/creative-tim-ui/ui/button"
 import {
   Command,
   CommandEmpty,
@@ -17,13 +17,13 @@ import {
   CommandInput,
   CommandItem,
   CommandList,
-} from "@/registry/elevenlabs-ui/ui/command"
-import { Orb } from "@/registry/elevenlabs-ui/ui/orb"
+} from "@/registry/creative-tim-ui/ui/command"
+import { Orb } from "@/registry/creative-tim-ui/ui/orb"
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/registry/elevenlabs-ui/ui/popover"
+} from "@/registry/creative-tim-ui/ui/popover"
 
 interface VoicePickerProps {
   voices: ElevenLabs.Voice[]

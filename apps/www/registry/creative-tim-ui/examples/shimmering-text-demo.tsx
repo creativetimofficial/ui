@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react"
 import { AnimatePresence, motion } from "motion/react"
 
-import { ShimmeringText } from "@/registry/elevenlabs-ui/ui/shimmering-text"
+import { ShimmeringText } from "@/registry/creative-tim-ui/ui/shimmering-text"
 
 const phrases = [
   "Agent is thinking...",

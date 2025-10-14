@@ -1,7 +1,7 @@
 "use client"
 
 import { Heart } from "lucide-react"
-import { Button } from "@/registry/elevenlabs-ui/ui/button"
+import { Button } from "@/registry/creative-tim-ui/ui/button"
 
 export default function SimpleProductDetails01() {
   return (

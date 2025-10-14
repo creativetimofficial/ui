@@ -2,9 +2,9 @@
 
 import { useEffect, useState } from "react"
 
-import { Message, MessageContent } from "@/registry/elevenlabs-ui/ui/message"
-import { Orb } from "@/registry/elevenlabs-ui/ui/orb"
-import { Response } from "@/registry/elevenlabs-ui/ui/response"
+import { Message, MessageContent } from "@/registry/creative-tim-ui/ui/message"
+import { Orb } from "@/registry/creative-tim-ui/ui/orb"
+import { Response } from "@/registry/creative-tim-ui/ui/response"
 
 const assistantMessageTokens = [
   "To",

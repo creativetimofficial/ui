@@ -1,6 +1,6 @@
 "use client"
 
-import { ConversationBar } from "@/registry/elevenlabs-ui/ui/conversation-bar"
+import { ConversationBar } from "@/registry/creative-tim-ui/ui/conversation-bar"
 
 const DEFAULT_AGENT = {
   agentId: process.env.NEXT_PUBLIC_ELEVENLABS_AGENT_ID!,

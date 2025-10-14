@@ -6,15 +6,15 @@ import {
   Avatar,
   AvatarFallback,
   AvatarImage,
-} from "@/registry/elevenlabs-ui/ui/avatar"
-import { Badge } from "@/registry/elevenlabs-ui/ui/badge"
-import { Button } from "@/registry/elevenlabs-ui/ui/button"
+} from "@/registry/creative-tim-ui/ui/avatar"
+import { Badge } from "@/registry/creative-tim-ui/ui/badge"
+import { Button } from "@/registry/creative-tim-ui/ui/button"
 import {
   Card,
   CardContent,
   CardFooter,
   CardHeader,
-} from "@/registry/elevenlabs-ui/ui/card"
+} from "@/registry/creative-tim-ui/ui/card"
 
 const POSTS = [
   {

@@ -8,8 +8,8 @@ import {
   AudioPlayerTime,
   exampleTracks,
   useAudioPlayer,
-} from "@/registry/elevenlabs-ui/ui/audio-player"
-import { Card } from "@/registry/elevenlabs-ui/ui/card"
+} from "@/registry/creative-tim-ui/ui/audio-player"
+import { Card } from "@/registry/creative-tim-ui/ui/card"
 
 export default function Page() {
   return (

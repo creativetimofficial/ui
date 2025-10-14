@@ -1,6 +1,6 @@
 "use client"
 
-import { SoftwarePurchaseCard } from "@/registry/elevenlabs-ui/ui/software-purchase-card"
+import { SoftwarePurchaseCard } from "@/registry/creative-tim-ui/ui/software-purchase-card"
 
 export default function SoftwarePurchaseCardDemo() {
   const handleApprove = () => {

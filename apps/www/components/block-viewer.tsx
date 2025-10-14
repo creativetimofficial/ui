@@ -26,18 +26,18 @@ import { cn } from "@/lib/utils"
 import { useCopyToClipboard } from "@/hooks/use-copy-to-clipboard"
 import { getIconForLanguageExtension } from "@/components/icons"
 import { OpenInV0Button } from "@/components/open-in-v0-button"
-import { Button } from "@/registry/elevenlabs-ui/ui/button"
+import { Button } from "@/registry/creative-tim-ui/ui/button"
 import {
   Collapsible,
   CollapsibleContent,
   CollapsibleTrigger,
-} from "@/registry/elevenlabs-ui/ui/collapsible"
+} from "@/registry/creative-tim-ui/ui/collapsible"
 import {
   ResizableHandle,
   ResizablePanel,
   ResizablePanelGroup,
-} from "@/registry/elevenlabs-ui/ui/resizable"
-import { Separator } from "@/registry/elevenlabs-ui/ui/separator"
+} from "@/registry/creative-tim-ui/ui/resizable"
+import { Separator } from "@/registry/creative-tim-ui/ui/separator"
 import {
   Sidebar,
   SidebarGroup,
@@ -48,12 +48,12 @@ import {
   SidebarMenuItem,
   SidebarMenuSub,
   SidebarProvider,
-} from "@/registry/elevenlabs-ui/ui/sidebar"
-import { Tabs, TabsList, TabsTrigger } from "@/registry/elevenlabs-ui/ui/tabs"
+} from "@/registry/creative-tim-ui/ui/sidebar"
+import { Tabs, TabsList, TabsTrigger } from "@/registry/creative-tim-ui/ui/tabs"
 import {
   ToggleGroup,
   ToggleGroupItem,
-} from "@/registry/elevenlabs-ui/ui/toggle-group"
+} from "@/registry/creative-tim-ui/ui/toggle-group"
 
 type BlockViewerContext = {
   item: z.infer<typeof registryItemSchema>

@@ -1,9 +1,9 @@
 "use client"
 
 import { Lock } from "lucide-react"
-import { Button } from "@/registry/elevenlabs-ui/ui/button"
-import { Label } from "@/registry/elevenlabs-ui/ui/label"
-import { RadioGroup, RadioGroupItem } from "@/registry/elevenlabs-ui/ui/radio-group"
+import { Button } from "@/registry/creative-tim-ui/ui/button"
+import { Label } from "@/registry/creative-tim-ui/ui/label"
+import { RadioGroup, RadioGroupItem } from "@/registry/creative-tim-ui/ui/radio-group"
 
 const data = [
   {

@@ -1,16 +1,16 @@
 "use client"
 
 import { Lock, X } from "lucide-react"
-import { Button } from "@/registry/elevenlabs-ui/ui/button"
-import { Card, CardContent, CardHeader } from "@/registry/elevenlabs-ui/ui/card"
-import { Input } from "@/registry/elevenlabs-ui/ui/input"
+import { Button } from "@/registry/creative-tim-ui/ui/button"
+import { Card, CardContent, CardHeader } from "@/registry/creative-tim-ui/ui/card"
+import { Input } from "@/registry/creative-tim-ui/ui/input"
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/registry/elevenlabs-ui/ui/select"
+} from "@/registry/creative-tim-ui/ui/select"
 
 const CHECKOUT_PRODUCTS = [
   {

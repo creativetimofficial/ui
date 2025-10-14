@@ -3,7 +3,7 @@ import {
   Alert,
   AlertDescription,
   AlertTitle,
-} from "@/registry/elevenlabs-ui/ui/alert"
+} from "@/registry/creative-tim-ui/ui/alert"
 
 export function Callout({
   title,

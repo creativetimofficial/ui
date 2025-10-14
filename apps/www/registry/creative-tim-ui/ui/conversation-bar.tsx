@@ -13,11 +13,11 @@ import {
 } from "lucide-react"
 
 import { cn } from "@/lib/utils"
-import { Button } from "@/registry/elevenlabs-ui/ui/button"
-import { Card } from "@/registry/elevenlabs-ui/ui/card"
-import { LiveWaveform } from "@/registry/elevenlabs-ui/ui/live-waveform"
-import { Separator } from "@/registry/elevenlabs-ui/ui/separator"
-import { Textarea } from "@/registry/elevenlabs-ui/ui/textarea"
+import { Button } from "@/registry/creative-tim-ui/ui/button"
+import { Card } from "@/registry/creative-tim-ui/ui/card"
+import { LiveWaveform } from "@/registry/creative-tim-ui/ui/live-waveform"
+import { Separator } from "@/registry/creative-tim-ui/ui/separator"
+import { Textarea } from "@/registry/creative-tim-ui/ui/textarea"
 
 export interface ConversationBarProps {
   /**

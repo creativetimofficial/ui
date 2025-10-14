@@ -1,12 +1,12 @@
 "use client"
 
-import { Button } from "@/registry/elevenlabs-ui/ui/button"
+import { Button } from "@/registry/creative-tim-ui/ui/button"
 import {
   Card,
   CardContent,
   CardFooter,
   CardHeader,
-} from "@/registry/elevenlabs-ui/ui/card"
+} from "@/registry/creative-tim-ui/ui/card"
 
 const CARDS = [
   {

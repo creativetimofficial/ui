@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react"
 
-import { VoiceButton } from "@/registry/elevenlabs-ui/ui/voice-button"
+import { VoiceButton } from "@/registry/creative-tim-ui/ui/voice-button"
 
 export default function VoiceButtonDemo() {
   const [state, setState] = useState<
