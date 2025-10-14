@@ -478,5 +478,30 @@
     "name": "testimonials-17",
     "description": "Background image carousel testimonials",
     "categories": ["testimonials"]
+  },
+  {
+    "name": "modals-01",
+    "description": "Alert modal with confirmation input for reset settings",
+    "categories": ["modals"]
+  },
+  {
+    "name": "modals-02",
+    "description": "Edit profile modal with form inputs and preferences",
+    "categories": ["modals"]
+  },
+  {
+    "name": "modals-03",
+    "description": "Invite members modal with team management",
+    "categories": ["modals"]
+  },
+  {
+    "name": "modals-04",
+    "description": "Update product modal with image gallery and form",
+    "categories": ["modals"]
+  },
+  {
+    "name": "modals-05",
+    "description": "Upload files modal with drag and drop",
+    "categories": ["modals"]
   }
 ]

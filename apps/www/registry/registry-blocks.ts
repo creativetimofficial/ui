@@ -2032,7 +2032,15 @@ export const blocks: Registry["items"] = [
     name: "modals-02",
     description: "Edit profile modal with form inputs and preferences",
     type: "registry:block",
-    registryDependencies: ["dialog", "button", "input", "label", "select", "checkbox", "radio-group"],
+    registryDependencies: [
+      "dialog",
+      "button",
+      "input",
+      "label",
+      "select",
+      "checkbox",
+      "radio-group",
+    ],
     files: [
       {
         path: "blocks/modals-02/page.tsx",
@@ -2051,7 +2059,13 @@ export const blocks: Registry["items"] = [
     name: "modals-03",
     description: "Invite members modal with team management",
     type: "registry:block",
-    registryDependencies: ["dialog", "button", "input", "avatar", "dropdown-menu"],
+    registryDependencies: [
+      "dialog",
+      "button",
+      "input",
+      "avatar",
+      "dropdown-menu",
+    ],
     files: [
       {
         path: "blocks/modals-03/page.tsx",
@@ -2070,7 +2084,14 @@ export const blocks: Registry["items"] = [
     name: "modals-04",
     description: "Update product modal with image gallery and form",
     type: "registry:block",
-    registryDependencies: ["dialog", "button", "input", "label", "select", "textarea"],
+    registryDependencies: [
+      "dialog",
+      "button",
+      "input",
+      "label",
+      "select",
+      "textarea",
+    ],
     files: [
       {
         path: "blocks/modals-04/page.tsx",
