@@ -1754,7 +1754,7 @@ export const Index: Record<string, any> = {
       return { default: mod.default || mod[exportName] }
     }),
     categories: ["testimonials"],
-    meta: {"iframeHeight":"500px","container":"w-full bg-surface","mobile":"component"},
+    meta: {"iframeHeight":"500px","container":"w-full bg-surface","mobile":"component","private":true},
   },
   "testimonials-04": {
     name: "testimonials-04",
@@ -1772,7 +1772,7 @@ export const Index: Record<string, any> = {
       return { default: mod.default || mod[exportName] }
     }),
     categories: ["testimonials"],
-    meta: {"iframeHeight":"700px","container":"w-full bg-surface","mobile":"component"},
+    meta: {"iframeHeight":"700px","container":"w-full bg-surface","mobile":"component","private":true},
   },
   "testimonials-05": {
     name: "testimonials-05",

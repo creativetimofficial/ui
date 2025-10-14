@@ -17,7 +17,8 @@
   "meta": {
     "iframeHeight": "700px",
     "container": "w-full bg-surface",
-    "mobile": "component"
+    "mobile": "component",
+    "private": true
   },
   "categories": [
     "testimonials"
