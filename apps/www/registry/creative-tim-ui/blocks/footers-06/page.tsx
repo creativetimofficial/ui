@@ -1,7 +1,8 @@
 "use client"
 
-import { Button } from "@/registry/creative-tim-ui/ui/button"
 import { Github, Instagram, Twitter, Youtube } from "lucide-react"
+
+import { Button } from "@/registry/creative-tim-ui/ui/button"
 
 const LINKS = [
   {
@@ -46,7 +47,7 @@ const YEAR = new Date().getFullYear()
 
 export default function Footers06() {
   return (
-    <footer className="pb-8 pt-16">
+    <footer className="pt-16 pb-8">
       <div className="container mx-auto">
         <div className="grid grid-cols-1 justify-between gap-4 md:grid-cols-2">
           <div>

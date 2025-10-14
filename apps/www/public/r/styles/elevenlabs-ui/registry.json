@@ -1900,6 +1900,355 @@
       ]
     },
     {
+      "name": "footers-01",
+      "type": "registry:block",
+      "description": "Simple footer with social links",
+      "registryDependencies": [
+        "button"
+      ],
+      "files": [
+        {
+          "path": "registry/creative-tim-ui/blocks/footers-01/page.tsx",
+          "type": "registry:page",
+          "target": "app/footers-01/page.tsx"
+        }
+      ],
+      "meta": {
+        "iframeHeight": "300px",
+        "container": "w-full bg-surface",
+        "mobile": "component"
+      },
+      "categories": [
+        "footers"
+      ]
+    },
+    {
+      "name": "footers-02",
+      "type": "registry:block",
+      "description": "Footer with navigation links and subscription",
+      "registryDependencies": [
+        "button",
+        "checkbox",
+        "input",
+        "label"
+      ],
+      "files": [
+        {
+          "path": "registry/creative-tim-ui/blocks/footers-02/page.tsx",
+          "type": "registry:page",
+          "target": "app/footers-02/page.tsx"
+        }
+      ],
+      "meta": {
+        "iframeHeight": "500px",
+        "container": "w-full bg-surface",
+        "mobile": "component"
+      },
+      "categories": [
+        "footers"
+      ]
+    },
+    {
+      "name": "footers-03",
+      "type": "registry:block",
+      "description": "Website footer with CTA",
+      "registryDependencies": [
+        "button"
+      ],
+      "files": [
+        {
+          "path": "registry/creative-tim-ui/blocks/footers-03/page.tsx",
+          "type": "registry:page",
+          "target": "app/footers-03/page.tsx"
+        }
+      ],
+      "meta": {
+        "iframeHeight": "300px",
+        "container": "w-full bg-surface",
+        "mobile": "component"
+      },
+      "categories": [
+        "footers"
+      ]
+    },
+    {
+      "name": "footers-04",
+      "type": "registry:block",
+      "description": "Simple dark footer",
+      "registryDependencies": [
+        "button",
+        "card",
+        "input"
+      ],
+      "files": [
+        {
+          "path": "registry/creative-tim-ui/blocks/footers-04/page.tsx",
+          "type": "registry:page",
+          "target": "app/footers-04/page.tsx"
+        }
+      ],
+      "meta": {
+        "iframeHeight": "600px",
+        "container": "w-full bg-surface",
+        "mobile": "component"
+      },
+      "categories": [
+        "footers"
+      ]
+    },
+    {
+      "name": "footers-05",
+      "type": "registry:block",
+      "description": "Complex dark footer",
+      "registryDependencies": [
+        "button",
+        "input",
+        "label",
+        "select"
+      ],
+      "files": [
+        {
+          "path": "registry/creative-tim-ui/blocks/footers-05/page.tsx",
+          "type": "registry:page",
+          "target": "app/footers-05/page.tsx"
+        }
+      ],
+      "meta": {
+        "iframeHeight": "700px",
+        "container": "w-full bg-surface",
+        "mobile": "component"
+      },
+      "categories": [
+        "footers"
+      ]
+    },
+    {
+      "name": "footers-06",
+      "type": "registry:block",
+      "description": "Advanced light footer",
+      "registryDependencies": [
+        "button"
+      ],
+      "files": [
+        {
+          "path": "registry/creative-tim-ui/blocks/footers-06/page.tsx",
+          "type": "registry:page",
+          "target": "app/footers-06/page.tsx"
+        }
+      ],
+      "meta": {
+        "iframeHeight": "500px",
+        "container": "w-full bg-surface",
+        "mobile": "component"
+      },
+      "categories": [
+        "footers"
+      ]
+    },
+    {
+      "name": "footers-07",
+      "type": "registry:block",
+      "description": "Simple footer with country selection",
+      "registryDependencies": [
+        "button",
+        "select"
+      ],
+      "files": [
+        {
+          "path": "registry/creative-tim-ui/blocks/footers-07/page.tsx",
+          "type": "registry:page",
+          "target": "app/footers-07/page.tsx"
+        }
+      ],
+      "meta": {
+        "iframeHeight": "300px",
+        "container": "w-full bg-surface",
+        "mobile": "component"
+      },
+      "categories": [
+        "footers"
+      ]
+    },
+    {
+      "name": "footers-08",
+      "type": "registry:block",
+      "description": "Simple footer with version number",
+      "registryDependencies": [
+        "badge",
+        "button"
+      ],
+      "files": [
+        {
+          "path": "registry/creative-tim-ui/blocks/footers-08/page.tsx",
+          "type": "registry:page",
+          "target": "app/footers-08/page.tsx"
+        }
+      ],
+      "meta": {
+        "iframeHeight": "300px",
+        "container": "w-full bg-surface",
+        "mobile": "component"
+      },
+      "categories": [
+        "footers"
+      ]
+    },
+    {
+      "name": "footers-09",
+      "type": "registry:block",
+      "description": "Footer with notification and CTA",
+      "registryDependencies": [
+        "button"
+      ],
+      "files": [
+        {
+          "path": "registry/creative-tim-ui/blocks/footers-09/page.tsx",
+          "type": "registry:page",
+          "target": "app/footers-09/page.tsx"
+        }
+      ],
+      "meta": {
+        "iframeHeight": "350px",
+        "container": "w-full bg-surface",
+        "mobile": "component"
+      },
+      "categories": [
+        "footers"
+      ]
+    },
+    {
+      "name": "footers-10",
+      "type": "registry:block",
+      "description": "Footer with page links",
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "registry/creative-tim-ui/blocks/footers-10/page.tsx",
+          "type": "registry:page",
+          "target": "app/footers-10/page.tsx"
+        }
+      ],
+      "meta": {
+        "iframeHeight": "350px",
+        "container": "w-full bg-surface",
+        "mobile": "component"
+      },
+      "categories": [
+        "footers"
+      ]
+    },
+    {
+      "name": "footers-11",
+      "type": "registry:block",
+      "description": "Website footer with statement",
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "registry/creative-tim-ui/blocks/footers-11/page.tsx",
+          "type": "registry:page",
+          "target": "app/footers-11/page.tsx"
+        }
+      ],
+      "meta": {
+        "iframeHeight": "450px",
+        "container": "w-full bg-surface",
+        "mobile": "component"
+      },
+      "categories": [
+        "footers"
+      ]
+    },
+    {
+      "name": "footers-12",
+      "type": "registry:block",
+      "description": "Website footer with navigation",
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "registry/creative-tim-ui/blocks/footers-12/page.tsx",
+          "type": "registry:page",
+          "target": "app/footers-12/page.tsx"
+        }
+      ],
+      "meta": {
+        "iframeHeight": "300px",
+        "container": "w-full bg-surface",
+        "mobile": "component"
+      },
+      "categories": [
+        "footers"
+      ]
+    },
+    {
+      "name": "footers-13",
+      "type": "registry:block",
+      "description": "Simple centered website footer",
+      "registryDependencies": [
+        "button"
+      ],
+      "files": [
+        {
+          "path": "registry/creative-tim-ui/blocks/footers-13/page.tsx",
+          "type": "registry:page",
+          "target": "app/footers-13/page.tsx"
+        }
+      ],
+      "meta": {
+        "iframeHeight": "450px",
+        "container": "w-full bg-surface",
+        "mobile": "component"
+      },
+      "categories": [
+        "footers"
+      ]
+    },
+    {
+      "name": "footers-14",
+      "type": "registry:block",
+      "description": "Website footer for apps",
+      "registryDependencies": [
+        "button"
+      ],
+      "files": [
+        {
+          "path": "registry/creative-tim-ui/blocks/footers-14/page.tsx",
+          "type": "registry:page",
+          "target": "app/footers-14/page.tsx"
+        }
+      ],
+      "meta": {
+        "iframeHeight": "700px",
+        "container": "w-full bg-surface",
+        "mobile": "component"
+      },
+      "categories": [
+        "footers"
+      ]
+    },
+    {
+      "name": "footers-15",
+      "type": "registry:block",
+      "description": "Website footer with quote",
+      "registryDependencies": [
+        "button"
+      ],
+      "files": [
+        {
+          "path": "registry/creative-tim-ui/blocks/footers-15/page.tsx",
+          "type": "registry:page",
+          "target": "app/footers-15/page.tsx"
+        }
+      ],
+      "meta": {
+        "iframeHeight": "400px",
+        "container": "w-full bg-surface",
+        "mobile": "component"
+      },
+      "categories": [
+        "footers"
+      ]
+    },
+    {
       "name": "use-mobile",
       "type": "registry:hook",
       "files": [

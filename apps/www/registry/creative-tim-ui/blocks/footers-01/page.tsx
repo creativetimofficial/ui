@@ -1,13 +1,14 @@
 "use client"
 
-import { Button } from "@/registry/creative-tim-ui/ui/button"
 import { Github, Instagram, Twitter, Youtube } from "lucide-react"
+
+import { Button } from "@/registry/creative-tim-ui/ui/button"
 
 const YEAR = new Date().getFullYear()
 
 export default function Footers01() {
   return (
-    <footer className="pb-8 pt-16">
+    <footer className="pt-16 pb-8">
       <div className="container mx-auto">
         <div className="flex flex-row flex-wrap items-center !justify-center gap-x-10 gap-y-2 md:!justify-between">
           <p className="text-foreground text-center text-sm font-medium">

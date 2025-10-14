@@ -1432,6 +1432,276 @@ export const Index: Record<string, any> = {
     categories: ["cruds"],
     meta: {"iframeHeight":"1200px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component"},
   },
+  "footers-01": {
+    name: "footers-01",
+    description: "Simple footer with social links",
+    type: "registry:block",
+    registryDependencies: ["button"],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/footers-01/page.tsx",
+      type: "registry:page",
+      target: "app/footers-01/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/footers-01/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["footers"],
+    meta: {"iframeHeight":"300px","container":"w-full bg-surface","mobile":"component"},
+  },
+  "footers-02": {
+    name: "footers-02",
+    description: "Footer with navigation links and subscription",
+    type: "registry:block",
+    registryDependencies: ["button","checkbox","input","label"],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/footers-02/page.tsx",
+      type: "registry:page",
+      target: "app/footers-02/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/footers-02/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["footers"],
+    meta: {"iframeHeight":"500px","container":"w-full bg-surface","mobile":"component"},
+  },
+  "footers-03": {
+    name: "footers-03",
+    description: "Website footer with CTA",
+    type: "registry:block",
+    registryDependencies: ["button"],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/footers-03/page.tsx",
+      type: "registry:page",
+      target: "app/footers-03/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/footers-03/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["footers"],
+    meta: {"iframeHeight":"300px","container":"w-full bg-surface","mobile":"component"},
+  },
+  "footers-04": {
+    name: "footers-04",
+    description: "Simple dark footer",
+    type: "registry:block",
+    registryDependencies: ["button","card","input"],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/footers-04/page.tsx",
+      type: "registry:page",
+      target: "app/footers-04/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/footers-04/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["footers"],
+    meta: {"iframeHeight":"600px","container":"w-full bg-surface","mobile":"component"},
+  },
+  "footers-05": {
+    name: "footers-05",
+    description: "Complex dark footer",
+    type: "registry:block",
+    registryDependencies: ["button","input","label","select"],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/footers-05/page.tsx",
+      type: "registry:page",
+      target: "app/footers-05/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/footers-05/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["footers"],
+    meta: {"iframeHeight":"700px","container":"w-full bg-surface","mobile":"component"},
+  },
+  "footers-06": {
+    name: "footers-06",
+    description: "Advanced light footer",
+    type: "registry:block",
+    registryDependencies: ["button"],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/footers-06/page.tsx",
+      type: "registry:page",
+      target: "app/footers-06/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/footers-06/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["footers"],
+    meta: {"iframeHeight":"500px","container":"w-full bg-surface","mobile":"component"},
+  },
+  "footers-07": {
+    name: "footers-07",
+    description: "Simple footer with country selection",
+    type: "registry:block",
+    registryDependencies: ["button","select"],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/footers-07/page.tsx",
+      type: "registry:page",
+      target: "app/footers-07/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/footers-07/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["footers"],
+    meta: {"iframeHeight":"300px","container":"w-full bg-surface","mobile":"component"},
+  },
+  "footers-08": {
+    name: "footers-08",
+    description: "Simple footer with version number",
+    type: "registry:block",
+    registryDependencies: ["badge","button"],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/footers-08/page.tsx",
+      type: "registry:page",
+      target: "app/footers-08/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/footers-08/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["footers"],
+    meta: {"iframeHeight":"300px","container":"w-full bg-surface","mobile":"component"},
+  },
+  "footers-09": {
+    name: "footers-09",
+    description: "Footer with notification and CTA",
+    type: "registry:block",
+    registryDependencies: ["button"],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/footers-09/page.tsx",
+      type: "registry:page",
+      target: "app/footers-09/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/footers-09/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["footers"],
+    meta: {"iframeHeight":"350px","container":"w-full bg-surface","mobile":"component"},
+  },
+  "footers-10": {
+    name: "footers-10",
+    description: "Footer with page links",
+    type: "registry:block",
+    registryDependencies: [],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/footers-10/page.tsx",
+      type: "registry:page",
+      target: "app/footers-10/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/footers-10/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["footers"],
+    meta: {"iframeHeight":"350px","container":"w-full bg-surface","mobile":"component"},
+  },
+  "footers-11": {
+    name: "footers-11",
+    description: "Website footer with statement",
+    type: "registry:block",
+    registryDependencies: [],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/footers-11/page.tsx",
+      type: "registry:page",
+      target: "app/footers-11/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/footers-11/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["footers"],
+    meta: {"iframeHeight":"450px","container":"w-full bg-surface","mobile":"component"},
+  },
+  "footers-12": {
+    name: "footers-12",
+    description: "Website footer with navigation",
+    type: "registry:block",
+    registryDependencies: [],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/footers-12/page.tsx",
+      type: "registry:page",
+      target: "app/footers-12/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/footers-12/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["footers"],
+    meta: {"iframeHeight":"300px","container":"w-full bg-surface","mobile":"component"},
+  },
+  "footers-13": {
+    name: "footers-13",
+    description: "Simple centered website footer",
+    type: "registry:block",
+    registryDependencies: ["button"],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/footers-13/page.tsx",
+      type: "registry:page",
+      target: "app/footers-13/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/footers-13/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["footers"],
+    meta: {"iframeHeight":"450px","container":"w-full bg-surface","mobile":"component"},
+  },
+  "footers-14": {
+    name: "footers-14",
+    description: "Website footer for apps",
+    type: "registry:block",
+    registryDependencies: ["button"],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/footers-14/page.tsx",
+      type: "registry:page",
+      target: "app/footers-14/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/footers-14/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["footers"],
+    meta: {"iframeHeight":"700px","container":"w-full bg-surface","mobile":"component"},
+  },
+  "footers-15": {
+    name: "footers-15",
+    description: "Website footer with quote",
+    type: "registry:block",
+    registryDependencies: ["button"],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/footers-15/page.tsx",
+      type: "registry:page",
+      target: "app/footers-15/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/footers-15/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["footers"],
+    meta: {"iframeHeight":"400px","container":"w-full bg-surface","mobile":"component"},
+  },
   "use-mobile": {
     name: "use-mobile",
     description: "",

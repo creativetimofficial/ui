@@ -12,7 +12,7 @@ const LINKS = [
 
 export default function Footers12() {
   return (
-    <footer className="pb-8 pt-16">
+    <footer className="pt-16 pb-8">
       <div className="container mx-auto text-center">
         <div className="flex flex-row flex-wrap items-center !justify-center gap-6 lg:!justify-between">
           <ul className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
