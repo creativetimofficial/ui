@@ -1,6 +1,6 @@
 "use client"
 
-import { MapPin, Mail, Phone } from "lucide-react"
+import { Mail, MapPin, Phone } from "lucide-react"
 
 const OPTIONS = [
   {
@@ -27,25 +27,25 @@ export default function ContactSections06() {
   return (
     <section className="py-16">
       <div className="container mx-auto">
-        <div className="text-center mb-16">
-          <span className="block text-sm font-semibold text-primary">
+        <div className="mb-16 text-center">
+          <span className="text-primary block text-sm font-semibold">
             Contact Us
           </span>
-          <h2 className="text-3xl font-bold text-center my-4">
+          <h2 className="my-4 text-center text-3xl font-bold">
             Got a Question?
           </h2>
-          <p className="text-lg text-center text-muted-foreground max-w-lg mx-auto">
+          <p className="text-muted-foreground mx-auto max-w-lg text-center text-lg">
             We&apos;d like to talk more about what you need
           </p>
         </div>
-        <div className="grid grid-cols-1 justify-items-center md:grid-cols-2 lg:grid-cols-3 gap-y-16 gap-x-8">
+        <div className="grid grid-cols-1 justify-items-center gap-x-8 gap-y-16 md:grid-cols-2 lg:grid-cols-3">
           {OPTIONS.map(({ icon: Icon, title, subTitle, description }, key) => (
             <div key={key} className="text-center">
-              <div className="w-14 mx-auto mb-6 h-14 rounded-full grid place-items-center bg-primary">
-                <Icon className="w-6 h-6 text-primary-foreground" />
+              <div className="bg-primary mx-auto mb-6 grid h-14 w-14 place-items-center rounded-full">
+                <Icon className="text-primary-foreground h-6 w-6" />
               </div>
               <p className="text-lg font-semibold">{title}</p>
-              <p className="text-muted-foreground block my-3">{subTitle}</p>
+              <p className="text-muted-foreground my-3 block">{subTitle}</p>
               <p>{description}</p>
             </div>
           ))}

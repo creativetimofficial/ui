@@ -1,4 +1,8 @@
-import { Card, CardContent, CardHeader } from "@/registry/creative-tim-ui/ui/card";
+import {
+  Card,
+  CardContent,
+  CardHeader,
+} from "@/registry/creative-tim-ui/ui/card"
 
 const DATA = [
   {
@@ -17,23 +21,23 @@ const DATA = [
     title: "Can I resell the products?",
     desc: "I always felt like I could do anything. That's the main thing people are controlled by! Thoughts- their perception of themselves! They're slowed down by their perception of themselves. If you're taught you can't do anything, you won't do anything. I was taught I could do everything.",
   },
-];
+]
 
 export default function FaqLeftTitle01() {
   return (
-    <section className="py-16 px-6">
-      <div className="container mx-auto grid lg:grid-cols-5 gap-6 justify-between">
+    <section className="px-6 py-16">
+      <div className="container mx-auto grid justify-between gap-6 lg:grid-cols-5">
         <div className="col-span-2">
-          <h2 className="text-3xl font-bold mb-4 leading-snug">
+          <h2 className="mb-4 text-3xl leading-snug font-bold">
             Frequently asked questions
           </h2>
-          <p className="text-lg text-muted-foreground max-w-sm">
+          <p className="text-muted-foreground max-w-sm text-lg">
             A lot of people don&apos;t appreciate the moment until it&apos;s
             passed. I&apos;m not trying my hardest, and I&apos;m not trying to
             do
           </p>
         </div>
-        <div className="col-span-3 grid md:grid-cols-2 grid-cols-1 gap-6">
+        <div className="col-span-3 grid grid-cols-1 gap-6 md:grid-cols-2">
           {DATA.map(({ title, desc }, key) => (
             <Card key={key} className="border-none shadow-none">
               <CardHeader className="p-2">
@@ -47,5 +51,5 @@ export default function FaqLeftTitle01() {
         </div>
       </div>
     </section>
-  );
+  )
 }

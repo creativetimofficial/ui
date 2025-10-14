@@ -59,11 +59,11 @@ export default function OrderHistory01() {
           See your recent orders, download your invoices.
         </p>
         <Card className="mt-8 mb-4">
-          <CardContent className="p-4 flex items-center flex-wrap gap-4 justify-between">
+          <CardContent className="flex flex-wrap items-center justify-between gap-4 p-4">
             <div className="flex gap-10">
               {OPTIONS.map((option, i) => (
                 <div key={i}>
-                  <p className="text-sm text-muted-foreground mb-0.5">
+                  <p className="text-muted-foreground mb-0.5 text-sm">
                     {option.data}
                   </p>
                   <p className="font-semibold">{option.value}</p>
@@ -89,18 +89,21 @@ export default function OrderHistory01() {
                     <TableCell>
                       <div className="flex items-center gap-3">
                         <img src={img} alt={product} className="h-16" />
-                        <span className="font-semibold text-sm">{product}</span>
+                        <span className="text-sm font-semibold">{product}</span>
                       </div>
                     </TableCell>
-                    <TableCell className="text-sm text-muted-foreground">
+                    <TableCell className="text-muted-foreground text-sm">
                       {amount}
                     </TableCell>
                     <TableCell>
-                      <Badge variant="secondary" className="bg-green-100 text-green-700">
+                      <Badge
+                        variant="secondary"
+                        className="bg-green-100 text-green-700"
+                      >
                         Delivered
                       </Badge>
                     </TableCell>
-                    <TableCell className="text-sm text-muted-foreground">
+                    <TableCell className="text-muted-foreground text-sm">
                       {date}
                     </TableCell>
                     <TableCell>

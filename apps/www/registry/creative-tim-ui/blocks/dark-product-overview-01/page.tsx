@@ -1,8 +1,14 @@
 "use client"
 
 import { Heart } from "lucide-react"
+
 import { Button } from "@/registry/creative-tim-ui/ui/button"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/registry/creative-tim-ui/ui/tabs"
+import {
+  Tabs,
+  TabsContent,
+  TabsList,
+  TabsTrigger,
+} from "@/registry/creative-tim-ui/ui/tabs"
 
 const DATA = [
   {
@@ -32,45 +38,49 @@ const DATA = [
 
 export default function DarkProductOverview01() {
   return (
-    <section className="container mx-auto bg-primary rounded-lg">
-      <div className="py-16 max-w-5xl mx-auto px-4">
-        <div className="text-center mb-16">
-          <p className="text-white font-semibold">Shop Previewer</p>
-          <h2 className="text-3xl font-bold text-white my-4">New Collection</h2>
-          <p className="text-lg max-w-3xl mx-auto text-white/80">
+    <section className="bg-primary container mx-auto rounded-lg">
+      <div className="mx-auto max-w-5xl px-4 py-16">
+        <div className="mb-16 text-center">
+          <p className="font-semibold text-white">Shop Previewer</p>
+          <h2 className="my-4 text-3xl font-bold text-white">New Collection</h2>
+          <p className="mx-auto max-w-3xl text-lg text-white/80">
             Easily preview furniture, decor, and more in your space, ensuring
-            everything fits perfectly and looks just right. It&apos;s the ultimate
-            tool for hassle-free home customization and design!
+            everything fits perfectly and looks just right. It&apos;s the
+            ultimate tool for hassle-free home customization and design!
           </p>
         </div>
-        <div className="justify-between gap-x-6 gap-y-12 items-center flex flex-col lg:flex-row">
+        <div className="flex flex-col items-center justify-between gap-x-6 gap-y-12 lg:flex-row">
           <div>
             <h3 className="text-lg text-white">Elegant Suite</h3>
-            <p className="text-2xl font-bold text-white my-4">$449,90</p>
-            <p className="text-lg text-white/80 max-w-md">
+            <p className="my-4 text-2xl font-bold text-white">$449,90</p>
+            <p className="max-w-md text-lg text-white/80">
               Add a touch of sophistication to your home with our handcrafted
-              ceramic vase. Each piece is uniquely made, blending seamlessly into
-              both modern and classic decors.
+              ceramic vase. Each piece is uniquely made, blending seamlessly
+              into both modern and classic decors.
             </p>
-            <div className="mb-4 mt-8 flex w-full items-center gap-2">
+            <div className="mt-8 mb-4 flex w-full items-center gap-2">
               <Button
                 size="lg"
-                className="w-56 bg-white hover:bg-white/90 text-black"
+                className="w-56 bg-white text-black hover:bg-white/90"
               >
                 Add to Cart
               </Button>
-              <Button size="lg" variant="ghost" className="text-red-500 hover:text-red-600">
+              <Button
+                size="lg"
+                variant="ghost"
+                className="text-red-500 hover:text-red-600"
+              >
                 <Heart className="h-5 w-5" />
               </Button>
             </div>
             <div className="mt-16 max-w-xl">
               <Tabs defaultValue="Features" className="w-full">
-                <TabsList className="w-full bg-transparent border-b border-white/20 rounded-none justify-start h-auto p-0">
+                <TabsList className="h-auto w-full justify-start rounded-none border-b border-white/20 bg-transparent p-0">
                   {DATA.map(({ title }) => (
                     <TabsTrigger
                       key={title}
                       value={title}
-                      className="text-white data-[state=active]:bg-transparent data-[state=active]:shadow-none data-[state=active]:border-b-2 data-[state=active]:border-white rounded-none px-4 py-3"
+                      className="rounded-none px-4 py-3 text-white data-[state=active]:border-b-2 data-[state=active]:border-white data-[state=active]:bg-transparent data-[state=active]:shadow-none"
                     >
                       {title}
                     </TabsTrigger>
@@ -88,7 +98,7 @@ export default function DarkProductOverview01() {
             <img
               src="https://v3.material-tailwind.com/dark-bg-preview-3.png"
               alt="Elegant Suite"
-              className="rounded-lg w-full"
+              className="w-full rounded-lg"
             />
           </div>
         </div>

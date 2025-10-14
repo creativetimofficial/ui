@@ -910,7 +910,14 @@ export const blocks: Registry["items"] = [
     name: "contact-sections-01",
     description: "Simple contact form with contact info",
     type: "registry:block",
-    registryDependencies: ["button", "card", "checkbox", "input", "label", "textarea"],
+    registryDependencies: [
+      "button",
+      "card",
+      "checkbox",
+      "input",
+      "label",
+      "textarea",
+    ],
     files: [
       {
         path: "blocks/contact-sections-01/page.tsx",
@@ -1030,7 +1037,14 @@ export const blocks: Registry["items"] = [
     name: "contact-sections-07",
     description: "Contact form with office location details",
     type: "registry:block",
-    registryDependencies: ["button", "card", "checkbox", "input", "label", "textarea"],
+    registryDependencies: [
+      "button",
+      "card",
+      "checkbox",
+      "input",
+      "label",
+      "textarea",
+    ],
     files: [
       {
         path: "blocks/contact-sections-07/page.tsx",
@@ -1050,7 +1064,14 @@ export const blocks: Registry["items"] = [
     name: "contact-sections-08",
     description: "Contact form with area of interest selection",
     type: "registry:block",
-    registryDependencies: ["button", "card", "input", "label", "radio-group", "textarea"],
+    registryDependencies: [
+      "button",
+      "card",
+      "input",
+      "label",
+      "radio-group",
+      "textarea",
+    ],
     files: [
       {
         path: "blocks/contact-sections-08/page.tsx",
@@ -1070,7 +1091,14 @@ export const blocks: Registry["items"] = [
     name: "contact-sections-09",
     description: "Dark background contact with detailed info",
     type: "registry:block",
-    registryDependencies: ["button", "card", "checkbox", "input", "label", "textarea"],
+    registryDependencies: [
+      "button",
+      "card",
+      "checkbox",
+      "input",
+      "label",
+      "textarea",
+    ],
     files: [
       {
         path: "blocks/contact-sections-09/page.tsx",

@@ -1,6 +1,11 @@
-import { ShoppingCart, CreditCard, Users } from "lucide-react";
-import { Button } from "@/registry/creative-tim-ui/ui/button";
-import { Card, CardContent, CardHeader } from "@/registry/creative-tim-ui/ui/card";
+import { CreditCard, ShoppingCart, Users } from "lucide-react"
+
+import { Button } from "@/registry/creative-tim-ui/ui/button"
+import {
+  Card,
+  CardContent,
+  CardHeader,
+} from "@/registry/creative-tim-ui/ui/card"
 
 const DATA = [
   {
@@ -18,28 +23,28 @@ const DATA = [
     title: "How much time does it take to receive the order?",
     desc: "The time is now for it to be okay to be great. People in this world shun people for being great. For being a bright color. For standing out. But the time is now to be okay to be the greatest you. Would you believe in what you believe in, if you were the only one who believed it?",
   },
-];
+]
 
 export default function FaqsCardsIcons01() {
   return (
-    <section className="py-16 px-6">
+    <section className="px-6 py-16">
       <div className="container mx-auto">
         <div className="text-center">
-          <h2 className="text-3xl font-bold mb-4">
+          <h2 className="mb-4 text-3xl font-bold">
             Frequently asked questions
           </h2>
-          <p className="text-lg text-muted-foreground max-w-xl mx-auto">
+          <p className="text-muted-foreground mx-auto max-w-xl text-lg">
             A lot of people don&apos;t appreciate the moment until it&apos;s
             passed. I&apos;m not trying my hardest, and I&apos;m not trying to
             do
           </p>
         </div>
-        <div className="my-20 grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-6">
+        <div className="my-20 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {DATA.map(({ icon: Icon, title, desc }, key) => (
             <Card key={key}>
               <CardHeader className="border-b pb-6">
-                <div className="w-12 mb-6 h-12 rounded-lg bg-primary grid place-items-center">
-                  <Icon className="w-6 h-6 text-primary-foreground" />
+                <div className="bg-primary mb-6 grid h-12 w-12 place-items-center rounded-lg">
+                  <Icon className="text-primary-foreground h-6 w-6" />
                 </div>
                 <h3 className="text-base font-semibold">{title}</h3>
               </CardHeader>
@@ -51,12 +56,12 @@ export default function FaqsCardsIcons01() {
         </div>
         <div className="text-center">
           <h3 className="text-2xl font-bold">Need more help?</h3>
-          <p className="text-lg text-muted-foreground mx-auto mt-4 mb-6">
+          <p className="text-muted-foreground mx-auto mt-4 mb-6 text-lg">
             Send us an email with more details about your specific needs.
           </p>
           <Button size="lg">Submit a Request</Button>
         </div>
       </div>
     </section>
-  );
+  )
 }

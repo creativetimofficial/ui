@@ -1,6 +1,6 @@
 "use client"
 
-import { MessageSquare, Headphones, FileText } from "lucide-react"
+import { FileText, Headphones, MessageSquare } from "lucide-react"
 
 import { Button } from "@/registry/creative-tim-ui/ui/button"
 import { Card } from "@/registry/creative-tim-ui/ui/card"
@@ -32,12 +32,12 @@ export default function ContactSections15() {
   return (
     <section className="py-16">
       <div className="container mx-auto">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid items-center gap-12 lg:grid-cols-2">
           <div>
-            <h2 className="text-4xl font-bold mb-4">
+            <h2 className="mb-4 text-4xl font-bold">
               Let's start a conversation
             </h2>
-            <p className="text-lg text-muted-foreground mb-8">
+            <p className="text-muted-foreground mb-8 text-lg">
               We're always happy to help with any questions you might have. Get
               in touch with us and we'll respond as soon as possible.
             </p>
@@ -46,15 +46,15 @@ export default function ContactSections15() {
                 ({ icon: Icon, title, description, action }, key) => (
                   <Card key={key} className="p-6">
                     <div className="flex items-start gap-4">
-                      <div className="shrink-0 w-12 h-12 rounded-lg bg-primary/10 grid place-items-center">
-                        <Icon className="w-6 h-6 text-primary" />
+                      <div className="bg-primary/10 grid h-12 w-12 shrink-0 place-items-center rounded-lg">
+                        <Icon className="text-primary h-6 w-6" />
                       </div>
                       <div className="flex-1">
-                        <h3 className="font-semibold mb-1">{title}</h3>
-                        <p className="text-sm text-muted-foreground mb-3">
+                        <h3 className="mb-1 font-semibold">{title}</h3>
+                        <p className="text-muted-foreground mb-3 text-sm">
                           {description}
                         </p>
-                        <Button variant="link" className="p-0 h-auto">
+                        <Button variant="link" className="h-auto p-0">
                           {action} →
                         </Button>
                       </div>
@@ -65,7 +65,7 @@ export default function ContactSections15() {
             </div>
           </div>
           <Card className="p-8">
-            <h3 className="text-2xl font-bold mb-6">Quick Contact</h3>
+            <h3 className="mb-6 text-2xl font-bold">Quick Contact</h3>
             <form action="#" className="space-y-6">
               <div className="space-y-2">
                 <Label htmlFor="name">Your Name</Label>
@@ -73,11 +73,7 @@ export default function ContactSections15() {
               </div>
               <div className="space-y-2">
                 <Label htmlFor="email">Your Email</Label>
-                <Input
-                  id="email"
-                  type="email"
-                  placeholder="Enter your email"
-                />
+                <Input id="email" type="email" placeholder="Enter your email" />
               </div>
               <div className="space-y-2">
                 <Label htmlFor="phone">Phone Number (Optional)</Label>

@@ -9,18 +9,21 @@ import { Textarea } from "@/registry/creative-tim-ui/ui/textarea"
 
 export default function ContactSections11() {
   return (
-    <section className="py-16 bg-gradient-to-br from-gray-900 to-gray-800 text-white min-h-screen grid place-items-center">
+    <section className="grid min-h-screen place-items-center bg-gradient-to-br from-gray-900 to-gray-800 py-16 text-white">
       <div className="container mx-auto">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold mb-4">Get In Touch</h2>
-          <p className="text-gray-300 max-w-2xl mx-auto">
+        <div className="mb-12 text-center">
+          <h2 className="mb-4 text-3xl font-bold">Get In Touch</h2>
+          <p className="mx-auto max-w-2xl text-gray-300">
             Have a question or want to work together? Leave your details and
             we'll get back to you as soon as possible.
           </p>
         </div>
-        <div className="max-w-2xl mx-auto">
-          <form action="#" className="space-y-6 bg-white/10 backdrop-blur-sm p-8 rounded-2xl">
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        <div className="mx-auto max-w-2xl">
+          <form
+            action="#"
+            className="space-y-6 rounded-2xl bg-white/10 p-8 backdrop-blur-sm"
+          >
+            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
               <div className="space-y-2">
                 <Label htmlFor="name" className="text-white">
                   Name
@@ -28,7 +31,7 @@ export default function ContactSections11() {
                 <Input
                   id="name"
                   placeholder="Your name"
-                  className="bg-white/20 border-white/30 text-white placeholder:text-gray-300"
+                  className="border-white/30 bg-white/20 text-white placeholder:text-gray-300"
                 />
               </div>
               <div className="space-y-2">
@@ -39,18 +42,18 @@ export default function ContactSections11() {
                   id="email"
                   type="email"
                   placeholder="your@email.com"
-                  className="bg-white/20 border-white/30 text-white placeholder:text-gray-300"
+                  className="border-white/30 bg-white/20 text-white placeholder:text-gray-300"
                 />
               </div>
             </div>
             <div className="space-y-2">
               <Label htmlFor="subject" className="text-white">
                 Subject
-                </Label>
+              </Label>
               <Input
                 id="subject"
                 placeholder="How can we help?"
-                className="bg-white/20 border-white/30 text-white placeholder:text-gray-300"
+                className="border-white/30 bg-white/20 text-white placeholder:text-gray-300"
               />
             </div>
             <div className="space-y-2">
@@ -61,7 +64,7 @@ export default function ContactSections11() {
                 id="message"
                 placeholder="Your message..."
                 rows={6}
-                className="bg-white/20 border-white/30 text-white placeholder:text-gray-300"
+                className="border-white/30 bg-white/20 text-white placeholder:text-gray-300"
               />
             </div>
             <Button className="w-full" size="lg">
@@ -70,11 +73,11 @@ export default function ContactSections11() {
           </form>
           <div className="mt-12 flex justify-center gap-12">
             <div className="text-center">
-              <Phone className="w-6 h-6 mx-auto mb-2" />
+              <Phone className="mx-auto mb-2 h-6 w-6" />
               <p className="text-sm text-gray-300">+1 (424) 535-3523</p>
             </div>
             <div className="text-center">
-              <Mail className="w-6 h-6 mx-auto mb-2" />
+              <Mail className="mx-auto mb-2 h-6 w-6" />
               <p className="text-sm text-gray-300">hello@mail.com</p>
             </div>
           </div>

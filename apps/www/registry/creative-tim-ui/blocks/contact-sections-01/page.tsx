@@ -1,6 +1,6 @@
 "use client"
 
-import { Phone, Mail, Ticket } from "lucide-react"
+import { Mail, Phone, Ticket } from "lucide-react"
 
 import { Button } from "@/registry/creative-tim-ui/ui/button"
 import { Card } from "@/registry/creative-tim-ui/ui/card"
@@ -26,12 +26,12 @@ const OPTIONS = [
 
 export default function ContactSections01() {
   return (
-    <section className="py-16 min-h-screen grid place-items-center">
-      <div className="container mx-auto grid items-center lg:grid-cols-2 grid-cols-1 gap-10">
-        <Card className="lg:p-12 p-6 lg:max-w-lg mx-auto">
-          <h3 className="text-2xl font-semibold mb-6">Contact us</h3>
+    <section className="grid min-h-screen place-items-center py-16">
+      <div className="container mx-auto grid grid-cols-1 items-center gap-10 lg:grid-cols-2">
+        <Card className="mx-auto p-6 lg:max-w-lg lg:p-12">
+          <h3 className="mb-6 text-2xl font-semibold">Contact us</h3>
           <form action="#" className="space-y-6">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-y-6 gap-x-4">
+            <div className="grid grid-cols-1 gap-x-4 gap-y-6 lg:grid-cols-2">
               <div className="space-y-2">
                 <Label htmlFor="first-name">First Name</Label>
                 <Input id="first-name" placeholder="John" />
@@ -60,7 +60,7 @@ export default function ContactSections01() {
               <Checkbox id="privacy-policy" />
               <Label
                 htmlFor="privacy-policy"
-                className="text-sm font-normal cursor-pointer"
+                className="cursor-pointer text-sm font-normal"
               >
                 You agree to your friendly{" "}
                 <a href="#" className="text-primary hover:underline">
@@ -71,16 +71,16 @@ export default function ContactSections01() {
             <Button className="w-full">Send Message</Button>
           </form>
         </Card>
-        <div className="lg:max-w-lg mx-auto">
-          <h2 className="text-3xl font-bold mb-4">Get in Touch</h2>
-          <p className="text-lg text-muted-foreground lg:max-w-lg">
+        <div className="mx-auto lg:max-w-lg">
+          <h2 className="mb-4 text-3xl font-bold">Get in Touch</h2>
+          <p className="text-muted-foreground text-lg lg:max-w-lg">
             You need more information? Check what other persons are saying about
             our product. They are very happy with their purchase.
           </p>
-          <div className="space-y-4 mt-14">
+          <div className="mt-14 space-y-4">
             {OPTIONS.map(({ icon: Icon, info }, key) => (
               <div key={key} className="flex items-center gap-4">
-                <Icon className="w-5 h-5" />
+                <Icon className="h-5 w-5" />
                 <span>{info}</span>
               </div>
             ))}

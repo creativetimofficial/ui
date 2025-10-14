@@ -25,20 +25,20 @@ const DATA = [
 export default function ContactSections09() {
   return (
     <section className="p-6">
-      <div className="bg-black rounded-xl lg:p-8 p-4 grid gap-6 items-center lg:grid-cols-2">
-        <div className="lg:max-w-lg lg:mx-auto lg:p-0 p-8">
-          <h2 className="text-3xl font-bold mb-4 text-white">Get in Touch</h2>
+      <div className="grid items-center gap-6 rounded-xl bg-black p-4 lg:grid-cols-2 lg:p-8">
+        <div className="p-8 lg:mx-auto lg:max-w-lg lg:p-0">
+          <h2 className="mb-4 text-3xl font-bold text-white">Get in Touch</h2>
           <p className="text-lg text-gray-400 lg:max-w-xl">
             You need more information? Check what other persons are saying about
             our product. They are very happy with their purchase.
           </p>
           {DATA.map(({ icon: Icon, title, options }, key) => (
             <div key={key} className="mt-12">
-              <div className="flex items-center gap-3 mb-6">
-                <Icon className="w-7 h-7 text-gray-400" />
+              <div className="mb-6 flex items-center gap-3">
+                <Icon className="h-7 w-7 text-gray-400" />
                 <h4 className="text-lg font-semibold text-gray-400">{title}</h4>
               </div>
-              <div className="space-y-2 ml-10">
+              <div className="ml-10 space-y-2">
                 {options.map((option, idx) => (
                   <p key={idx} className="text-gray-400">
                     {option}
@@ -49,9 +49,9 @@ export default function ContactSections09() {
           ))}
         </div>
         <Card className="p-6 lg:p-8">
-          <h3 className="text-2xl font-semibold mb-6">Contact us</h3>
+          <h3 className="mb-6 text-2xl font-semibold">Contact us</h3>
           <form action="#" className="space-y-6">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-y-6 gap-x-4">
+            <div className="grid grid-cols-1 gap-x-4 gap-y-6 lg:grid-cols-2">
               <div className="space-y-2">
                 <Label htmlFor="first-name">First Name</Label>
                 <Input id="first-name" placeholder="John" />
@@ -80,7 +80,7 @@ export default function ContactSections09() {
               <Checkbox id="privacy-policy" />
               <Label
                 htmlFor="privacy-policy"
-                className="text-sm font-normal cursor-pointer"
+                className="cursor-pointer text-sm font-normal"
               >
                 You agree to your friendly{" "}
                 <a href="#" className="text-primary hover:underline">

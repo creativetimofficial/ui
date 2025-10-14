@@ -9,20 +9,22 @@ import { Textarea } from "@/registry/creative-tim-ui/ui/textarea"
 
 export default function ContactSections14() {
   return (
-    <section className="py-20 bg-gradient-to-b from-background to-muted/20">
+    <section className="from-background to-muted/20 bg-gradient-to-b py-20">
       <div className="container mx-auto max-w-4xl">
-        <div className="text-center mb-12">
-          <span className="text-sm font-semibold text-primary">
+        <div className="mb-12 text-center">
+          <span className="text-primary text-sm font-semibold">
             GET IN TOUCH
           </span>
-          <h2 className="text-4xl font-bold mt-2 mb-4">We'd Love to Hear From You</h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <h2 className="mt-2 mb-4 text-4xl font-bold">
+            We'd Love to Hear From You
+          </h2>
+          <p className="text-muted-foreground mx-auto max-w-2xl text-lg">
             Whether you have a question about features, pricing, or anything
             else, our team is ready to answer all your questions.
           </p>
         </div>
         <form action="#" className="space-y-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
             <div className="space-y-2">
               <Label htmlFor="name">Full Name *</Label>
               <Input id="name" placeholder="John Doe" required />
@@ -37,7 +39,7 @@ export default function ContactSections14() {
               />
             </div>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
             <div className="space-y-2">
               <Label htmlFor="phone">Phone Number</Label>
               <Input id="phone" type="tel" placeholder="+1 (555) 000-0000" />
@@ -58,7 +60,7 @@ export default function ContactSections14() {
           </div>
           <div className="flex justify-center">
             <Button size="lg" className="gap-2">
-              <Send className="w-4 h-4" />
+              <Send className="h-4 w-4" />
               Send Message
             </Button>
           </div>

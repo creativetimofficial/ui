@@ -1,5 +1,9 @@
-import { Button } from "@/registry/creative-tim-ui/ui/button";
-import { Card, CardContent, CardHeader } from "@/registry/creative-tim-ui/ui/card";
+import { Button } from "@/registry/creative-tim-ui/ui/button"
+import {
+  Card,
+  CardContent,
+  CardHeader,
+} from "@/registry/creative-tim-ui/ui/card"
 
 const DATA = [
   {
@@ -26,23 +30,23 @@ const DATA = [
     title: "How do I order?",
     desc: "We're not always in the position that we want to be at. We're constantly growing. We're constantly making mistakes. We're constantly trying to express ourselves and actualize our dreams. If you have the opportunity to play this game of life you need to appreciate every moment. A lot of people don't appreciate the moment until it's passed.",
   },
-];
+]
 
 export default function FaqsGridCta01() {
   return (
-    <section className="py-16 px-6">
+    <section className="px-6 py-16">
       <div className="container mx-auto">
-        <div className="text-center mb-20">
-          <h2 className="text-3xl font-bold mb-4">
+        <div className="mb-20 text-center">
+          <h2 className="mb-4 text-3xl font-bold">
             Frequently asked questions
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-muted-foreground mx-auto max-w-2xl text-lg">
             A lot of people don&apos;t appreciate the moment until it&apos;s
             passed. I&apos;m not trying my hardest, and I&apos;m not trying to
             do
           </p>
         </div>
-        <div className="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-6">
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {DATA.map(({ title, desc }, key) => (
             <Card key={key}>
               <CardHeader className="border-b pb-6">
@@ -54,14 +58,14 @@ export default function FaqsGridCta01() {
             </Card>
           ))}
         </div>
-        <div className="text-center mt-20">
+        <div className="mt-20 text-center">
           <h3 className="text-2xl font-bold">Need more help?</h3>
-          <p className="text-lg text-muted-foreground mx-auto mt-4 mb-6">
+          <p className="text-muted-foreground mx-auto mt-4 mb-6 text-lg">
             Send us an email with more details about your specific needs.
           </p>
           <Button size="lg">Submit a Request</Button>
         </div>
       </div>
     </section>
-  );
+  )
 }

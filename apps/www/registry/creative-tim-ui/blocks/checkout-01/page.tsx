@@ -31,18 +31,25 @@ const PRICE_OPTIONS = [
 export default function Checkout01() {
   return (
     <section className="p-6">
-      <div className="grid lg:grid-cols-2 h-full min-h-[calc(100vh-48px)] grid-cols-1 items-center gap-x-10 gap-y-4">
-        <div className="row-start-2 lg:row-start-1 lg:max-w-xl lg:mx-auto">
-          <form className="space-y-12 mt-6">
+      <div className="grid h-full min-h-[calc(100vh-48px)] grid-cols-1 items-center gap-x-10 gap-y-4 lg:grid-cols-2">
+        <div className="row-start-2 lg:row-start-1 lg:mx-auto lg:max-w-xl">
+          <form className="mt-6 space-y-12">
             <div className="space-y-4">
               <h3 className="text-lg font-semibold">Contact</h3>
               <div className="space-y-2">
                 <Label htmlFor="email">Your Email</Label>
-                <Input id="email" type="email" placeholder="someone@example.com" />
+                <Input
+                  id="email"
+                  type="email"
+                  placeholder="someone@example.com"
+                />
               </div>
               <div className="flex items-start gap-2">
                 <Checkbox id="terms" className="mt-1" />
-                <Label htmlFor="terms" className="text-sm text-muted-foreground">
+                <Label
+                  htmlFor="terms"
+                  className="text-muted-foreground text-sm"
+                >
                   I agree the{" "}
                   <a href="#" className="text-primary">
                     Terms & Conditions
@@ -56,7 +63,7 @@ export default function Checkout01() {
                 <Label htmlFor="address">Address</Label>
                 <Input id="address" placeholder="Street no." />
               </div>
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div className="flex flex-col gap-4 sm:flex-row">
                 <div className="flex-1 space-y-2">
                   <Label htmlFor="city">City</Label>
                   <Input id="city" placeholder="City" />
@@ -77,7 +84,7 @@ export default function Checkout01() {
                 <Label htmlFor="card">Card Details</Label>
                 <Input id="card" placeholder="0000 0000 0000 0000" />
               </div>
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div className="flex flex-col gap-4 sm:flex-row">
                 <div className="flex-1 space-y-2">
                   <Label htmlFor="expiry">Expiration Date</Label>
                   <Input id="expiry" placeholder="00/00" />
@@ -94,22 +101,28 @@ export default function Checkout01() {
           </form>
         </div>
         <div className="row-start-1 lg:row-start-1">
-          <h2 className="text-2xl font-bold mb-6">Order Summary</h2>
+          <h2 className="mb-6 text-2xl font-bold">Order Summary</h2>
           <div className="space-y-6">
-            {OPTIONS.map(({ image, title, description, size, price }, index) => (
-              <div key={index} className="flex items-center gap-4">
-                <div className="relative w-20 h-20 border rounded-md">
-                  <img src={image} alt={title} className="w-full h-full object-cover p-1" />
+            {OPTIONS.map(
+              ({ image, title, description, size, price }, index) => (
+                <div key={index} className="flex items-center gap-4">
+                  <div className="relative h-20 w-20 rounded-md border">
+                    <img
+                      src={image}
+                      alt={title}
+                      className="h-full w-full object-cover p-1"
+                    />
+                  </div>
+                  <div className="flex-1">
+                    <p className="font-semibold">{title}</p>
+                    <p className="text-muted-foreground text-sm">
+                      {description} · Size {size}
+                    </p>
+                  </div>
+                  <p className="font-semibold">{price}</p>
                 </div>
-                <div className="flex-1">
-                  <p className="font-semibold">{title}</p>
-                  <p className="text-sm text-muted-foreground">
-                    {description} · Size {size}
-                  </p>
-                </div>
-                <p className="font-semibold">{price}</p>
-              </div>
-            ))}
+              )
+            )}
           </div>
           <div className="mt-8 space-y-2 border-t pt-4">
             {PRICE_OPTIONS.map(({ value, price }) => (
@@ -118,7 +131,7 @@ export default function Checkout01() {
                 <span className="text-muted-foreground">{price}</span>
               </div>
             ))}
-            <div className="flex justify-between font-semibold text-lg pt-2 border-t">
+            <div className="flex justify-between border-t pt-2 text-lg font-semibold">
               <span>Total</span>
               <span>$795</span>
             </div>
