@@ -1401,4 +1401,289 @@ export const blocks: Registry["items"] = [
     },
     categories: ["cruds"],
   },
+  {
+    name: "footers-01",
+    description: "Simple footer with social links",
+    type: "registry:block",
+    registryDependencies: ["button"],
+    files: [
+      {
+        path: "blocks/footers-01/page.tsx",
+        type: "registry:page",
+        target: "app/footers-01/page.tsx",
+      },
+    ],
+    meta: {
+      iframeHeight: "300px",
+      container: "w-full bg-surface",
+      mobile: "component",
+    },
+    categories: ["footers"],
+  },
+  {
+    name: "footers-02",
+    description: "Footer with navigation links and subscription",
+    type: "registry:block",
+    registryDependencies: ["button", "checkbox", "input", "label"],
+    files: [
+      {
+        path: "blocks/footers-02/page.tsx",
+        type: "registry:page",
+        target: "app/footers-02/page.tsx",
+      },
+    ],
+    meta: {
+      iframeHeight: "500px",
+      container: "w-full bg-surface",
+      mobile: "component",
+    },
+    categories: ["footers"],
+  },
+  {
+    name: "footers-03",
+    description: "Website footer with CTA",
+    type: "registry:block",
+    registryDependencies: ["button"],
+    files: [
+      {
+        path: "blocks/footers-03/page.tsx",
+        type: "registry:page",
+        target: "app/footers-03/page.tsx",
+      },
+    ],
+    meta: {
+      iframeHeight: "300px",
+      container: "w-full bg-surface",
+      mobile: "component",
+    },
+    categories: ["footers"],
+  },
+  {
+    name: "footers-04",
+    description: "Simple dark footer",
+    type: "registry:block",
+    registryDependencies: ["button", "card", "input"],
+    files: [
+      {
+        path: "blocks/footers-04/page.tsx",
+        type: "registry:page",
+        target: "app/footers-04/page.tsx",
+      },
+    ],
+    meta: {
+      iframeHeight: "600px",
+      container: "w-full bg-surface",
+      mobile: "component",
+    },
+    categories: ["footers"],
+  },
+  {
+    name: "footers-05",
+    description: "Complex dark footer",
+    type: "registry:block",
+    registryDependencies: ["button", "input", "label", "select"],
+    files: [
+      {
+        path: "blocks/footers-05/page.tsx",
+        type: "registry:page",
+        target: "app/footers-05/page.tsx",
+      },
+    ],
+    meta: {
+      iframeHeight: "700px",
+      container: "w-full bg-surface",
+      mobile: "component",
+    },
+    categories: ["footers"],
+  },
+  {
+    name: "footers-06",
+    description: "Advanced light footer",
+    type: "registry:block",
+    registryDependencies: ["button"],
+    files: [
+      {
+        path: "blocks/footers-06/page.tsx",
+        type: "registry:page",
+        target: "app/footers-06/page.tsx",
+      },
+    ],
+    meta: {
+      iframeHeight: "500px",
+      container: "w-full bg-surface",
+      mobile: "component",
+    },
+    categories: ["footers"],
+  },
+  {
+    name: "footers-07",
+    description: "Simple footer with country selection",
+    type: "registry:block",
+    registryDependencies: ["button", "select"],
+    files: [
+      {
+        path: "blocks/footers-07/page.tsx",
+        type: "registry:page",
+        target: "app/footers-07/page.tsx",
+      },
+    ],
+    meta: {
+      iframeHeight: "300px",
+      container: "w-full bg-surface",
+      mobile: "component",
+    },
+    categories: ["footers"],
+  },
+  {
+    name: "footers-08",
+    description: "Simple footer with version number",
+    type: "registry:block",
+    registryDependencies: ["badge", "button"],
+    files: [
+      {
+        path: "blocks/footers-08/page.tsx",
+        type: "registry:page",
+        target: "app/footers-08/page.tsx",
+      },
+    ],
+    meta: {
+      iframeHeight: "300px",
+      container: "w-full bg-surface",
+      mobile: "component",
+    },
+    categories: ["footers"],
+  },
+  {
+    name: "footers-09",
+    description: "Footer with notification and CTA",
+    type: "registry:block",
+    registryDependencies: ["button"],
+    files: [
+      {
+        path: "blocks/footers-09/page.tsx",
+        type: "registry:page",
+        target: "app/footers-09/page.tsx",
+      },
+    ],
+    meta: {
+      iframeHeight: "350px",
+      container: "w-full bg-surface",
+      mobile: "component",
+    },
+    categories: ["footers"],
+  },
+  {
+    name: "footers-10",
+    description: "Footer with page links",
+    type: "registry:block",
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/footers-10/page.tsx",
+        type: "registry:page",
+        target: "app/footers-10/page.tsx",
+      },
+    ],
+    meta: {
+      iframeHeight: "350px",
+      container: "w-full bg-surface",
+      mobile: "component",
+    },
+    categories: ["footers"],
+  },
+  {
+    name: "footers-11",
+    description: "Website footer with statement",
+    type: "registry:block",
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/footers-11/page.tsx",
+        type: "registry:page",
+        target: "app/footers-11/page.tsx",
+      },
+    ],
+    meta: {
+      iframeHeight: "450px",
+      container: "w-full bg-surface",
+      mobile: "component",
+    },
+    categories: ["footers"],
+  },
+  {
+    name: "footers-12",
+    description: "Website footer with navigation",
+    type: "registry:block",
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/footers-12/page.tsx",
+        type: "registry:page",
+        target: "app/footers-12/page.tsx",
+      },
+    ],
+    meta: {
+      iframeHeight: "300px",
+      container: "w-full bg-surface",
+      mobile: "component",
+    },
+    categories: ["footers"],
+  },
+  {
+    name: "footers-13",
+    description: "Simple centered website footer",
+    type: "registry:block",
+    registryDependencies: ["button"],
+    files: [
+      {
+        path: "blocks/footers-13/page.tsx",
+        type: "registry:page",
+        target: "app/footers-13/page.tsx",
+      },
+    ],
+    meta: {
+      iframeHeight: "450px",
+      container: "w-full bg-surface",
+      mobile: "component",
+    },
+    categories: ["footers"],
+  },
+  {
+    name: "footers-14",
+    description: "Website footer for apps",
+    type: "registry:block",
+    registryDependencies: ["button"],
+    files: [
+      {
+        path: "blocks/footers-14/page.tsx",
+        type: "registry:page",
+        target: "app/footers-14/page.tsx",
+      },
+    ],
+    meta: {
+      iframeHeight: "700px",
+      container: "w-full bg-surface",
+      mobile: "component",
+    },
+    categories: ["footers"],
+  },
+  {
+    name: "footers-15",
+    description: "Website footer with quote",
+    type: "registry:block",
+    registryDependencies: ["button"],
+    files: [
+      {
+        path: "blocks/footers-15/page.tsx",
+        type: "registry:page",
+        target: "app/footers-15/page.tsx",
+      },
+    ],
+    meta: {
+      iframeHeight: "400px",
+      container: "w-full bg-surface",
+      mobile: "component",
+    },
+    categories: ["footers"],
+  },
 ]
