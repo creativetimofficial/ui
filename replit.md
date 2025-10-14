@@ -1,8 +1,8 @@
-# ElevenLabs UI Component Library
+# Creative Tim UI Component Library
 
 ## Overview
 
-ElevenLabs UI is a comprehensive React component library built on top of shadcn/ui, specifically designed for building audio and agentic applications. The project is a monorepo that provides pre-built, customizable components including orbs, waveforms, voice agents, audio players, and conversation interfaces. It serves as both a documentation website and a component registry that developers can install via CLI.
+Creative Tim UI is a comprehensive React component library built on top of shadcn/ui, specifically designed for building audio and agentic applications. The project is a monorepo that provides pre-built, customizable components including orbs, waveforms, voice agents, audio players, and conversation interfaces. It serves as both a documentation website and a component registry that developers can install via CLI.
 
 The library emphasizes developer experience with a streamlined installation process, comprehensive documentation, and ready-to-use examples. Components are designed to be copy-paste friendly while maintaining full customization capabilities through Tailwind CSS and TypeScript.
 
