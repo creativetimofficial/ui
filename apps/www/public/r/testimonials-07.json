@@ -1,0 +1,25 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "testimonials-07",
+  "type": "registry:block",
+  "description": "Interactive testimonials with profile switcher",
+  "registryDependencies": [
+    "avatar"
+  ],
+  "files": [
+    {
+      "path": "registry/creative-tim-ui/blocks/testimonials-07/page.tsx",
+      "content": "\"use client\";\n\nimport * as React from \"react\";\nimport { Avatar, AvatarFallback, AvatarImage } from \"@/registry/creative-tim-ui/ui/avatar\";\n\nconst TESTIMONIALS = [\n  {\n    image: \"https://v3.material-tailwind.com/woman-profile-2.jpg\",\n    name: \"Jessica Devis\",\n    role: \"CEO @ Marketing Digital LTD\",\n    quote:\n      \"We're not always in the position that we want to be at. We're constantly growing. We're constantly making mistakes. We're constantly trying to express ourselves and actualize our dreams.\",\n  },\n  {\n    image: \"https://v3.material-tailwind.com/man-profile-1.jpg\",\n    name: \"Mary Joshiash\",\n    role: \"Marketing @ Apple INC\",\n    quote:\n      \"We're not always in the position that we want to be at. We're constantly growing. We're constantly making mistakes. We're constantly trying to express ourselves and actualize our dreams.\",\n  },\n  {\n    image: \"https://v3.material-tailwind.com/woman-profile-1.jpg\",\n    name: \"Marcell Glock\",\n    role: \"CFO @ Apple INC\",\n    quote:\n      \"If you can't decide, the answer is no. If two equally difficult paths, choose the one more painful in the short term (pain avoidance is creating an illusion of equality). Choose the path that leaves you more equanimous in the long term.\",\n  },\n];\n\nexport default function TestimonialsBlock() {\n  const [selectedTestimonial, setSelectedTestimonial] = React.useState(0);\n\n  return (\n    <section className=\"py-16\">\n      <div className=\"container mx-auto px-4 grid grid-cols-12 gap-y-8 items-center\">\n        <div className=\"col-span-full md:col-span-8 row-start-2 md:row-start-auto\">\n          <h2 className=\"text-3xl font-bold\">Work with us</h2>\n          <p className=\"text-muted-foreground my-4 max-w-lg\">\n            {TESTIMONIALS[selectedTestimonial].quote}\n          </p>\n          <div>\n            <p className=\"font-semibold\">\n              {TESTIMONIALS[selectedTestimonial].name}\n            </p>\n            <p className=\"text-sm text-muted-foreground\">\n              {TESTIMONIALS[selectedTestimonial].role}\n            </p>\n          </div>\n          <div className=\"flex mt-8 divide-x divide-border items-center\">\n            {TESTIMONIALS.map((testimonial, index) => (\n              <div className={index !== 0 ? \"px-4\" : \"pr-4\"} key={index}>\n                <Avatar\n                  role=\"button\"\n                  className=\"cursor-pointer rounded-lg w-12 h-12\"\n                  onClick={() => setSelectedTestimonial(index)}\n                >\n                  <AvatarImage src={testimonial.image} />\n                  <AvatarFallback>{testimonial.name.split(' ').map(n => n[0]).join('')}</AvatarFallback>\n                </Avatar>\n              </div>\n            ))}\n          </div>\n        </div>\n        <div className=\"col-span-full md:col-span-4\">\n          <img\n            src={TESTIMONIALS[selectedTestimonial].image}\n            alt=\"user profile\"\n            className=\"w-full h-full max-h-96 max-w-96 rounded-xl object-cover object-center\"\n          />\n        </div>\n      </div>\n    </section>\n  );\n}\n",
+      "type": "registry:page",
+      "target": "app/testimonials-07/page.tsx"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "600px",
+    "container": "w-full bg-surface",
+    "mobile": "component"
+  },
+  "categories": [
+    "testimonials"
+  ]
+}

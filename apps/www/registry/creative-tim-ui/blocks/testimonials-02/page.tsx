@@ -1,9 +1,18 @@
-"use client";
+"use client"
 
-import { Avatar, AvatarFallback, AvatarImage } from "@/registry/creative-tim-ui/ui/avatar";
-import { Card, CardContent, CardFooter, CardHeader } from "@/registry/creative-tim-ui/ui/card";
-import { BadgeCheck } from "lucide-react";
-import { Twitter } from "lucide-react";
+import { BadgeCheck, Twitter } from "lucide-react"
+
+import {
+  Avatar,
+  AvatarFallback,
+  AvatarImage,
+} from "@/registry/creative-tim-ui/ui/avatar"
+import {
+  Card,
+  CardContent,
+  CardFooter,
+  CardHeader,
+} from "@/registry/creative-tim-ui/ui/card"
 
 const TESTIMONIALS = [
   {
@@ -54,16 +63,18 @@ const TESTIMONIALS = [
       "Active community support make it easy to get started. It's the ideal framework for achieving design excellence in web applications.",
     date: "Jan 22, 2024",
   },
-];
+]
 
 export default function TestimonialsBlock() {
   return (
     <section className="py-16">
       <div className="container mx-auto px-4">
         <div className="mb-16">
-          <p className="text-sm font-semibold uppercase tracking-wide mb-2">Testimonials</p>
-          <h2 className="text-3xl font-bold mb-4">Think about us</h2>
-          <p className="text-lg text-muted-foreground max-w-lg">
+          <p className="mb-2 text-sm font-semibold tracking-wide uppercase">
+            Testimonials
+          </p>
+          <h2 className="mb-4 text-3xl font-bold">Think about us</h2>
+          <p className="text-muted-foreground max-w-lg text-lg">
             That&apos;s the main thing people are controlled by! Thoughts -
             their perception of themselves!
           </p>
@@ -74,14 +85,19 @@ export default function TestimonialsBlock() {
               <CardHeader className="flex flex-row items-center gap-4 p-6">
                 <Avatar>
                   <AvatarImage src={image} alt={`${name} image`} />
-                  <AvatarFallback>{name.split(' ').map(n => n[0]).join('')}</AvatarFallback>
+                  <AvatarFallback>
+                    {name
+                      .split(" ")
+                      .map((n) => n[0])
+                      .join("")}
+                  </AvatarFallback>
                 </Avatar>
                 <div className="flex-1">
-                  <div className="flex items-center gap-1.5 mb-1">
+                  <div className="mb-1 flex items-center gap-1.5">
                     <p className="font-semibold">{name}</p>
-                    <BadgeCheck className="w-4 h-4 text-blue-500" />
+                    <BadgeCheck className="h-4 w-4 text-blue-500" />
                   </div>
-                  <p className="text-sm text-muted-foreground">{username}</p>
+                  <p className="text-muted-foreground text-sm">{username}</p>
                 </div>
               </CardHeader>
               <CardContent className="px-6">
@@ -92,16 +108,16 @@ export default function TestimonialsBlock() {
               <CardFooter className="flex items-center justify-between gap-4 p-6">
                 <a
                   href="#"
-                  className="text-sm font-semibold flex items-center gap-1.5 hover:underline"
+                  className="flex items-center gap-1.5 text-sm font-semibold hover:underline"
                 >
-                  See on <Twitter className="w-3.5 h-3.5" />
+                  See on <Twitter className="h-3.5 w-3.5" />
                 </a>
-                <p className="text-sm text-muted-foreground">{date}</p>
+                <p className="text-muted-foreground text-sm">{date}</p>
               </CardFooter>
             </Card>
           ))}
         </div>
       </div>
     </section>
-  );
+  )
 }

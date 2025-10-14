@@ -393,5 +393,90 @@
     "name": "footers-15",
     "description": "Website footer with quote",
     "categories": ["footers"]
+  },
+  {
+    "name": "testimonials-01",
+    "description": "Simple centered testimonials with avatars",
+    "categories": ["testimonials"]
+  },
+  {
+    "name": "testimonials-02",
+    "description": "Testimonial cards with social proof badges",
+    "categories": ["testimonials"]
+  },
+  {
+    "name": "testimonials-03",
+    "description": "Testimonial with statistics and metrics",
+    "categories": ["testimonials"]
+  },
+  {
+    "name": "testimonials-04",
+    "description": "Three column testimonials with star ratings",
+    "categories": ["testimonials"]
+  },
+  {
+    "name": "testimonials-05",
+    "description": "Dark testimonials with avatar and star ratings",
+    "categories": ["testimonials"]
+  },
+  {
+    "name": "testimonials-06",
+    "description": "Company logo testimonial with large quote",
+    "categories": ["testimonials"]
+  },
+  {
+    "name": "testimonials-07",
+    "description": "Interactive testimonials with profile switcher",
+    "categories": ["testimonials"]
+  },
+  {
+    "name": "testimonials-08",
+    "description": "Light testimonials with star ratings",
+    "categories": ["testimonials"]
+  },
+  {
+    "name": "testimonials-09",
+    "description": "Customer story with large heading and avatar",
+    "categories": ["testimonials"]
+  },
+  {
+    "name": "testimonials-10",
+    "description": "Monochromatic testimonials with company logos",
+    "categories": ["testimonials"]
+  },
+  {
+    "name": "testimonials-11",
+    "description": "Testimonial cards with focus state",
+    "categories": ["testimonials"]
+  },
+  {
+    "name": "testimonials-12",
+    "description": "Grid layout testimonials with company logos",
+    "categories": ["testimonials"]
+  },
+  {
+    "name": "testimonials-13",
+    "description": "Dark card testimonial with rounded avatar",
+    "categories": ["testimonials"]
+  },
+  {
+    "name": "testimonials-14",
+    "description": "Light testimonials with card shadow",
+    "categories": ["testimonials"]
+  },
+  {
+    "name": "testimonials-15",
+    "description": "Testimonials with submit button",
+    "categories": ["testimonials"]
+  },
+  {
+    "name": "testimonials-16",
+    "description": "Dark carousel testimonials with navigation",
+    "categories": ["testimonials"]
+  },
+  {
+    "name": "testimonials-17",
+    "description": "Background image carousel testimonials",
+    "categories": ["testimonials"]
   }
 ]

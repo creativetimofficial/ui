@@ -1,7 +1,12 @@
-"use client";
+"use client"
 
-import * as React from "react";
-import { Avatar, AvatarFallback, AvatarImage } from "@/registry/creative-tim-ui/ui/avatar";
+import * as React from "react"
+
+import {
+  Avatar,
+  AvatarFallback,
+  AvatarImage,
+} from "@/registry/creative-tim-ui/ui/avatar"
 
 const TESTIMONIALS = [
   {
@@ -25,15 +30,15 @@ const TESTIMONIALS = [
     quote:
       "If you can't decide, the answer is no. If two equally difficult paths, choose the one more painful in the short term (pain avoidance is creating an illusion of equality). Choose the path that leaves you more equanimous in the long term.",
   },
-];
+]
 
 export default function TestimonialsBlock() {
-  const [selectedTestimonial, setSelectedTestimonial] = React.useState(0);
+  const [selectedTestimonial, setSelectedTestimonial] = React.useState(0)
 
   return (
     <section className="py-16">
-      <div className="container mx-auto px-4 grid grid-cols-12 gap-y-8 items-center">
-        <div className="col-span-full md:col-span-8 row-start-2 md:row-start-auto">
+      <div className="container mx-auto grid grid-cols-12 items-center gap-y-8 px-4">
+        <div className="col-span-full row-start-2 md:col-span-8 md:row-start-auto">
           <h2 className="text-3xl font-bold">Work with us</h2>
           <p className="text-muted-foreground my-4 max-w-lg">
             {TESTIMONIALS[selectedTestimonial].quote}
@@ -42,20 +47,25 @@ export default function TestimonialsBlock() {
             <p className="font-semibold">
               {TESTIMONIALS[selectedTestimonial].name}
             </p>
-            <p className="text-sm text-muted-foreground">
+            <p className="text-muted-foreground text-sm">
               {TESTIMONIALS[selectedTestimonial].role}
             </p>
           </div>
-          <div className="flex mt-8 divide-x divide-border items-center">
+          <div className="divide-border mt-8 flex items-center divide-x">
             {TESTIMONIALS.map((testimonial, index) => (
               <div className={index !== 0 ? "px-4" : "pr-4"} key={index}>
                 <Avatar
                   role="button"
-                  className="cursor-pointer rounded-lg w-12 h-12"
+                  className="h-12 w-12 cursor-pointer rounded-lg"
                   onClick={() => setSelectedTestimonial(index)}
                 >
                   <AvatarImage src={testimonial.image} />
-                  <AvatarFallback>{testimonial.name.split(' ').map(n => n[0]).join('')}</AvatarFallback>
+                  <AvatarFallback>
+                    {testimonial.name
+                      .split(" ")
+                      .map((n) => n[0])
+                      .join("")}
+                  </AvatarFallback>
                 </Avatar>
               </div>
             ))}
@@ -65,10 +75,10 @@ export default function TestimonialsBlock() {
           <img
             src={TESTIMONIALS[selectedTestimonial].image}
             alt="user profile"
-            className="w-full h-full max-h-96 max-w-96 rounded-xl object-cover object-center"
+            className="h-full max-h-96 w-full max-w-96 rounded-xl object-cover object-center"
           />
         </div>
       </div>
     </section>
-  );
+  )
 }

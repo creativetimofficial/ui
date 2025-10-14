@@ -1,0 +1,26 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "testimonials-17",
+  "type": "registry:block",
+  "description": "Background image carousel testimonials",
+  "registryDependencies": [
+    "card",
+    "button"
+  ],
+  "files": [
+    {
+      "path": "registry/creative-tim-ui/blocks/testimonials-17/page.tsx",
+      "content": "\"use client\";\n\nimport * as React from \"react\";\nimport { Card, CardContent } from \"@/registry/creative-tim-ui/ui/card\";\nimport { Button } from \"@/registry/creative-tim-ui/ui/button\";\nimport { ChevronLeft, ChevronRight } from \"lucide-react\";\n\nconst SLIDES = [\n  {\n    image: \"https://v3.material-tailwind.com/logo/netflix.svg\",\n    name: \"Louis Miriam\",\n    role: \"COO @ Netflix\",\n    quote:\n      \"Knowledge is either from direct experience or from verifiable, falsifiable science. There is knowledge that is transmitted but not verifiable / falsifiable. They're slowed down by their perception of themselves.\",\n  },\n  {\n    image: \"https://v3.material-tailwind.com/logo/coinbase.svg\",\n    name: \"John Down\",\n    role: \"CEO @ Coinbase\",\n    quote:\n      \"Knowledge is either from direct experience or from verifiable, falsifiable science. There is knowledge that is transmitted but not verifiable / falsifiable. They're slowed down by their perception of themselves.\",\n  },\n];\n\nexport default function TestimonialsBlock() {\n  const [currentSlide, setCurrentSlide] = React.useState(0);\n\n  const nextSlide = () => {\n    setCurrentSlide((prev) => (prev + 1) % SLIDES.length);\n  };\n\n  const prevSlide = () => {\n    setCurrentSlide((prev) => (prev - 1 + SLIDES.length) % SLIDES.length);\n  };\n\n  return (\n    <section className=\"py-16\">\n      <div className=\"container mx-auto px-4\">\n        <Card className=\"rounded-xl p-4 bg-[url('/earth-outer-space.jpg')] bg-cover bg-center relative\">\n          <span className=\"absolute inset-0 bg-black/75 w-full h-full rounded-xl\" />\n          <CardContent className=\"relative px-4 sm:px-12 pt-4 sm:pt-16 md:pt-24 pb-24 items-center w-full grid grid-cols-1 gap-8 md:grid-cols-12\">\n            <div className=\"col-span-full text-left md:col-span-8 pl-4 md:row-start-auto row-start-2\">\n              <blockquote className=\"text-xl text-white font-medium mb-8\">\n                &quot;{SLIDES[currentSlide].quote}&quot;\n              </blockquote>\n              <div className=\"flex items-center gap-2\">\n                <p className=\"text-white font-medium\">\n                  {SLIDES[currentSlide].name}\n                </p>\n                <p className=\"text-sm text-white/80\">\n                  {SLIDES[currentSlide].role}\n                </p>\n              </div>\n            </div>\n            <div className=\"col-span-full md:col-span-4 grid justify-items-start md:justify-items-end\">\n              <img\n                src={SLIDES[currentSlide].image}\n                alt=\"company logo\"\n                className=\"h-20 md:h-24 md:mx-auto md:mb-8\"\n              />\n            </div>\n          </CardContent>\n\n          <div className=\"absolute bottom-8 left-1/2 -translate-x-1/2 flex items-center gap-2\">\n            {SLIDES.map((_, index) => (\n              <button\n                key={index}\n                onClick={() => setCurrentSlide(index)}\n                className={`w-4 h-4 rounded-full transition-opacity ${\n                  index === currentSlide\n                    ? \"opacity-100 bg-white\"\n                    : \"opacity-50 bg-white\"\n                }`}\n              />\n            ))}\n          </div>\n\n          <Button\n            size=\"icon\"\n            variant=\"ghost\"\n            onClick={prevSlide}\n            className=\"!absolute text-white left-2 top-1/2 z-10 -translate-y-1/2 hidden sm:inline-flex\"\n          >\n            <ChevronLeft className=\"h-7 w-7\" />\n          </Button>\n          <Button\n            size=\"icon\"\n            variant=\"ghost\"\n            onClick={nextSlide}\n            className=\"!absolute text-white right-2 top-1/2 z-10 -translate-y-1/2 hidden sm:inline-flex\"\n          >\n            <ChevronRight className=\"h-7 w-7\" />\n          </Button>\n        </Card>\n      </div>\n    </section>\n  );\n}\n",
+      "type": "registry:page",
+      "target": "app/testimonials-17/page.tsx"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "600px",
+    "container": "w-full bg-surface",
+    "mobile": "component"
+  },
+  "categories": [
+    "testimonials"
+  ]
+}
