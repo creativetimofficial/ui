@@ -104,6 +104,19 @@ Preferred communication style: Simple, everyday language.
 
 ## Recent Changes
 
+### Modal Blocks Addition (October 14, 2025)
+- **New Category**: Added "Modals" category to the component registry (visible at /blocks/modals)
+- **Component Conversion**: Migrated 5 modal blocks from Material Tailwind to shadcn UI design system
+  - modals-01: Alert modal with confirmation input for reset settings
+  - modals-02: Edit profile modal with form inputs and preferences
+  - modals-03: Invite members modal with team management
+  - modals-04: Update product modal with image gallery and form
+  - modals-05: Upload files modal with drag and drop
+- **Registry Integration**: All modal blocks registered in registry-blocks.ts with proper metadata and CLI installation support
+- **Category Configuration**: Added "Modals" category to registry-categories.ts for blocks page navigation
+- **Design Pattern**: Modal blocks using shadcn UI primitives (Dialog, Button, Input, Select, Textarea, Checkbox, Radio Group, Avatar, Dropdown Menu, Card) with responsive layouts
+- **Total Registry Items**: Registry now contains 145+ total items (130+ blocks plus UI components, examples, and hooks)
+
 ### Testimonial Blocks Addition (October 14, 2025)
 - **New Category**: Added "Testimonials" category to the component registry (visible at /blocks/testimonials)
 - **Component Conversion**: Migrated 17 testimonial blocks from Material Tailwind to shadcn UI design system
