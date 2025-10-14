@@ -1234,4 +1234,104 @@ export const blocks: Registry["items"] = [
     },
     categories: ["contact"],
   },
+  {
+    name: "web3-01",
+    description: "NFT collection preview with pixel art",
+    type: "registry:block",
+    registryDependencies: ["avatar", "card"],
+    files: [
+      {
+        path: "blocks/web3-01/page.tsx",
+        type: "registry:page",
+        target: "app/web3-01/page.tsx",
+      },
+    ],
+    meta: {
+      iframeHeight: "900px",
+      container:
+        "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
+      mobile: "component",
+    },
+    categories: ["web3"],
+  },
+  {
+    name: "web3-02",
+    description: "NFT creator profile with collection gallery",
+    type: "registry:block",
+    registryDependencies: ["avatar", "badge", "button", "card"],
+    files: [
+      {
+        path: "blocks/web3-02/page.tsx",
+        type: "registry:page",
+        target: "app/web3-02/page.tsx",
+      },
+    ],
+    meta: {
+      iframeHeight: "1100px",
+      container:
+        "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
+      mobile: "component",
+    },
+    categories: ["web3"],
+  },
+  {
+    name: "web3-03",
+    description: "Top crypto auctions with countdown timer",
+    type: "registry:block",
+    registryDependencies: ["avatar", "badge", "button", "card", "select"],
+    files: [
+      {
+        path: "blocks/web3-03/page.tsx",
+        type: "registry:page",
+        target: "app/web3-03/page.tsx",
+      },
+    ],
+    meta: {
+      iframeHeight: "1100px",
+      container:
+        "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
+      mobile: "component",
+    },
+    categories: ["web3"],
+  },
+  {
+    name: "web3-04",
+    description: "Trending NFT collections with gradient overlay",
+    type: "registry:block",
+    registryDependencies: ["avatar", "badge", "button", "card", "select"],
+    files: [
+      {
+        path: "blocks/web3-04/page.tsx",
+        type: "registry:page",
+        target: "app/web3-04/page.tsx",
+      },
+    ],
+    meta: {
+      iframeHeight: "1100px",
+      container:
+        "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
+      mobile: "component",
+    },
+    categories: ["web3"],
+  },
+  {
+    name: "web3-05",
+    description: "Top NFT creators with time filter",
+    type: "registry:block",
+    registryDependencies: ["avatar", "button", "card"],
+    files: [
+      {
+        path: "blocks/web3-05/page.tsx",
+        type: "registry:page",
+        target: "app/web3-05/page.tsx",
+      },
+    ],
+    meta: {
+      iframeHeight: "1000px",
+      container:
+        "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
+      mobile: "component",
+    },
+    categories: ["web3"],
+  },
 ]
