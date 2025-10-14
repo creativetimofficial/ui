@@ -101,3 +101,18 @@ Preferred communication style: Simple, everyday language.
 - **clsx + tailwind-merge**: Conditional className composition.
 - **date-fns**: Date manipulation.
 - **class-variance-authority**: Variant-based component APIs.
+
+## Recent Changes
+
+### Web3 Blocks Addition (October 14, 2025)
+- **New Category**: Added "Web3" category to the component registry (visible at /blocks/web3)
+- **Component Conversion**: Migrated 5 Web3/NFT/Crypto themed blocks from Material Tailwind to shadcn UI design system
+  - web3-01: NFT collection preview with pixel art gallery
+  - web3-02: NFT creator profile with collection gallery and follow button
+  - web3-03: Top crypto auctions with countdown timers and bid information
+  - web3-04: Trending NFT collections with gradient overlay cards
+  - web3-05: Top NFT creators with time filter and image grids
+- **Registry Integration**: All web3 blocks registered in registry-blocks.ts with proper metadata and CLI installation support
+- **Category Configuration**: Added "Web3" category to registry-categories.ts for blocks page navigation
+- **Design Consistency**: Components use shadcn UI primitives (Avatar, Badge, Button, Card, Select) and Lucide icons for consistency
+- **Total Registry Items**: Registry now contains 105+ total items (90+ blocks plus UI components, examples, and hooks)
