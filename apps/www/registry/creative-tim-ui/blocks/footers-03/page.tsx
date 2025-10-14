@@ -1,0 +1,39 @@
+"use client"
+
+import { Button } from "@/registry/creative-tim-ui/ui/button"
+
+const YEAR = new Date().getFullYear()
+
+const LINKS = [
+  { title: "Home", href: "#" },
+  { title: "About Us", href: "#" },
+  { title: "Blog", href: "#" },
+  { title: "Service", href: "#" },
+]
+
+export default function Footers03() {
+  return (
+    <footer className="pb-8 pt-16">
+      <div className="container mx-auto">
+        <div className="border-surface flex flex-row flex-wrap items-center !justify-center gap-x-10 gap-y-3 border-t pt-8 text-center md:!justify-between">
+          <p className="text-foreground">
+            Copyright &copy; {YEAR} Creative Tim
+          </p>
+          <ul className="flex flex-wrap items-center justify-center gap-6">
+            {LINKS.map(({ title, href }, key) => (
+              <li key={key}>
+                <a
+                  href={href}
+                  className="text-foreground hover:text-primary font-semibold"
+                >
+                  {title}
+                </a>
+              </li>
+            ))}
+            <Button className="w-full sm:max-w-fit">Sign in</Button>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  )
+}
