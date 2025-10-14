@@ -2009,4 +2009,99 @@ export const blocks: Registry["items"] = [
     },
     categories: ["testimonials"],
   },
+  {
+    name: "modals-01",
+    description: "Alert modal with confirmation input for reset settings",
+    type: "registry:block",
+    registryDependencies: ["dialog", "button", "input", "label"],
+    files: [
+      {
+        path: "blocks/modals-01/page.tsx",
+        type: "registry:page",
+        target: "app/modals-01/page.tsx",
+      },
+    ],
+    meta: {
+      iframeHeight: "600px",
+      container: "w-full bg-surface",
+      mobile: "component",
+    },
+    categories: ["modals"],
+  },
+  {
+    name: "modals-02",
+    description: "Edit profile modal with form inputs and preferences",
+    type: "registry:block",
+    registryDependencies: ["dialog", "button", "input", "label", "select", "checkbox", "radio-group"],
+    files: [
+      {
+        path: "blocks/modals-02/page.tsx",
+        type: "registry:page",
+        target: "app/modals-02/page.tsx",
+      },
+    ],
+    meta: {
+      iframeHeight: "700px",
+      container: "w-full bg-surface",
+      mobile: "component",
+    },
+    categories: ["modals"],
+  },
+  {
+    name: "modals-03",
+    description: "Invite members modal with team management",
+    type: "registry:block",
+    registryDependencies: ["dialog", "button", "input", "avatar", "dropdown-menu"],
+    files: [
+      {
+        path: "blocks/modals-03/page.tsx",
+        type: "registry:page",
+        target: "app/modals-03/page.tsx",
+      },
+    ],
+    meta: {
+      iframeHeight: "700px",
+      container: "w-full bg-surface",
+      mobile: "component",
+    },
+    categories: ["modals"],
+  },
+  {
+    name: "modals-04",
+    description: "Update product modal with image gallery and form",
+    type: "registry:block",
+    registryDependencies: ["dialog", "button", "input", "label", "select", "textarea"],
+    files: [
+      {
+        path: "blocks/modals-04/page.tsx",
+        type: "registry:page",
+        target: "app/modals-04/page.tsx",
+      },
+    ],
+    meta: {
+      iframeHeight: "800px",
+      container: "w-full bg-surface",
+      mobile: "component",
+    },
+    categories: ["modals"],
+  },
+  {
+    name: "modals-05",
+    description: "Upload files modal with drag and drop",
+    type: "registry:block",
+    registryDependencies: ["dialog", "button", "card"],
+    files: [
+      {
+        path: "blocks/modals-05/page.tsx",
+        type: "registry:page",
+        target: "app/modals-05/page.tsx",
+      },
+    ],
+    meta: {
+      iframeHeight: "700px",
+      container: "w-full bg-surface",
+      mobile: "component",
+    },
+    categories: ["modals"],
+  },
 ]
