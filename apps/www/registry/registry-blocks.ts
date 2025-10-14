@@ -2165,7 +2165,8 @@ export const blocks: Registry["items"] = [
   },
   {
     name: "modals-08",
-    description: "Disable collection lock rules modal with alert and impact list",
+    description:
+      "Disable collection lock rules modal with alert and impact list",
     type: "registry:block",
     registryDependencies: ["dialog", "button", "card"],
     files: [
@@ -2184,9 +2185,17 @@ export const blocks: Registry["items"] = [
   },
   {
     name: "modals-09",
-    description: "Transfer showroom ownership modal with form fields and warning",
+    description:
+      "Transfer showroom ownership modal with form fields and warning",
     type: "registry:block",
-    registryDependencies: ["dialog", "button", "input", "label", "select", "card"],
+    registryDependencies: [
+      "dialog",
+      "button",
+      "input",
+      "label",
+      "select",
+      "card",
+    ],
     files: [
       {
         path: "blocks/modals-09/page.tsx",

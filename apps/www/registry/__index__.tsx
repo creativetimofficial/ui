@@ -2098,6 +2098,114 @@ export const Index: Record<string, any> = {
     categories: ["modals"],
     meta: {"iframeHeight":"700px","container":"w-full bg-surface","mobile":"component"},
   },
+  "modals-06": {
+    name: "modals-06",
+    description: "Publish capsule collection modal with metadata display",
+    type: "registry:block",
+    registryDependencies: ["dialog","button","card"],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/modals-06/page.tsx",
+      type: "registry:page",
+      target: "app/modals-06/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/modals-06/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["modals"],
+    meta: {"iframeHeight":"650px","container":"w-full bg-surface","mobile":"component"},
+  },
+  "modals-07": {
+    name: "modals-07",
+    description: "Change collection visibility settings modal",
+    type: "registry:block",
+    registryDependencies: ["dialog","button"],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/modals-07/page.tsx",
+      type: "registry:page",
+      target: "app/modals-07/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/modals-07/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["modals"],
+    meta: {"iframeHeight":"500px","container":"w-full bg-surface","mobile":"component"},
+  },
+  "modals-08": {
+    name: "modals-08",
+    description: "Disable collection lock rules modal with alert and impact list",
+    type: "registry:block",
+    registryDependencies: ["dialog","button","card"],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/modals-08/page.tsx",
+      type: "registry:page",
+      target: "app/modals-08/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/modals-08/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["modals"],
+    meta: {"iframeHeight":"750px","container":"w-full bg-surface","mobile":"component"},
+  },
+  "modals-09": {
+    name: "modals-09",
+    description: "Transfer showroom ownership modal with form fields and warning",
+    type: "registry:block",
+    registryDependencies: ["dialog","button","input","label","select","card"],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/modals-09/page.tsx",
+      type: "registry:page",
+      target: "app/modals-09/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/modals-09/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["modals"],
+    meta: {"iframeHeight":"750px","container":"w-full bg-surface","mobile":"component"},
+  },
+  "modals-10": {
+    name: "modals-10",
+    description: "Permanently remove archive modal with effects list",
+    type: "registry:block",
+    registryDependencies: ["dialog","button","card"],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/modals-10/page.tsx",
+      type: "registry:page",
+      target: "app/modals-10/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/modals-10/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["modals"],
+    meta: {"iframeHeight":"750px","container":"w-full bg-surface","mobile":"component"},
+  },
+  "modals-11": {
+    name: "modals-11",
+    description: "Confirm vault deletion modal with text input verification",
+    type: "registry:block",
+    registryDependencies: ["dialog","button","input","label"],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/modals-11/page.tsx",
+      type: "registry:page",
+      target: "app/modals-11/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/modals-11/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["modals"],
+    meta: {"iframeHeight":"550px","container":"w-full bg-surface","mobile":"component"},
+  },
   "use-mobile": {
     name: "use-mobile",
     description: "",

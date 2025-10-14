@@ -2789,6 +2789,159 @@
       ]
     },
     {
+      "name": "modals-06",
+      "type": "registry:block",
+      "description": "Publish capsule collection modal with metadata display",
+      "registryDependencies": [
+        "dialog",
+        "button",
+        "card"
+      ],
+      "files": [
+        {
+          "path": "registry/creative-tim-ui/blocks/modals-06/page.tsx",
+          "type": "registry:page",
+          "target": "app/modals-06/page.tsx"
+        }
+      ],
+      "meta": {
+        "iframeHeight": "650px",
+        "container": "w-full bg-surface",
+        "mobile": "component"
+      },
+      "categories": [
+        "modals"
+      ]
+    },
+    {
+      "name": "modals-07",
+      "type": "registry:block",
+      "description": "Change collection visibility settings modal",
+      "registryDependencies": [
+        "dialog",
+        "button"
+      ],
+      "files": [
+        {
+          "path": "registry/creative-tim-ui/blocks/modals-07/page.tsx",
+          "type": "registry:page",
+          "target": "app/modals-07/page.tsx"
+        }
+      ],
+      "meta": {
+        "iframeHeight": "500px",
+        "container": "w-full bg-surface",
+        "mobile": "component"
+      },
+      "categories": [
+        "modals"
+      ]
+    },
+    {
+      "name": "modals-08",
+      "type": "registry:block",
+      "description": "Disable collection lock rules modal with alert and impact list",
+      "registryDependencies": [
+        "dialog",
+        "button",
+        "card"
+      ],
+      "files": [
+        {
+          "path": "registry/creative-tim-ui/blocks/modals-08/page.tsx",
+          "type": "registry:page",
+          "target": "app/modals-08/page.tsx"
+        }
+      ],
+      "meta": {
+        "iframeHeight": "750px",
+        "container": "w-full bg-surface",
+        "mobile": "component"
+      },
+      "categories": [
+        "modals"
+      ]
+    },
+    {
+      "name": "modals-09",
+      "type": "registry:block",
+      "description": "Transfer showroom ownership modal with form fields and warning",
+      "registryDependencies": [
+        "dialog",
+        "button",
+        "input",
+        "label",
+        "select",
+        "card"
+      ],
+      "files": [
+        {
+          "path": "registry/creative-tim-ui/blocks/modals-09/page.tsx",
+          "type": "registry:page",
+          "target": "app/modals-09/page.tsx"
+        }
+      ],
+      "meta": {
+        "iframeHeight": "750px",
+        "container": "w-full bg-surface",
+        "mobile": "component"
+      },
+      "categories": [
+        "modals"
+      ]
+    },
+    {
+      "name": "modals-10",
+      "type": "registry:block",
+      "description": "Permanently remove archive modal with effects list",
+      "registryDependencies": [
+        "dialog",
+        "button",
+        "card"
+      ],
+      "files": [
+        {
+          "path": "registry/creative-tim-ui/blocks/modals-10/page.tsx",
+          "type": "registry:page",
+          "target": "app/modals-10/page.tsx"
+        }
+      ],
+      "meta": {
+        "iframeHeight": "750px",
+        "container": "w-full bg-surface",
+        "mobile": "component"
+      },
+      "categories": [
+        "modals"
+      ]
+    },
+    {
+      "name": "modals-11",
+      "type": "registry:block",
+      "description": "Confirm vault deletion modal with text input verification",
+      "registryDependencies": [
+        "dialog",
+        "button",
+        "input",
+        "label"
+      ],
+      "files": [
+        {
+          "path": "registry/creative-tim-ui/blocks/modals-11/page.tsx",
+          "type": "registry:page",
+          "target": "app/modals-11/page.tsx"
+        }
+      ],
+      "meta": {
+        "iframeHeight": "550px",
+        "container": "w-full bg-surface",
+        "mobile": "component"
+      },
+      "categories": [
+        "modals"
+      ]
+    },
+    {
       "name": "use-mobile",
       "type": "registry:hook",
       "files": [
