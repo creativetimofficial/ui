@@ -8,17 +8,17 @@ import { Textarea } from "@/registry/creative-tim-ui/ui/textarea"
 
 export default function ContactSections02() {
   return (
-    <section className="grid grid-cols-1 md:grid-cols-2 items-center w-full min-h-screen">
+    <section className="grid min-h-screen w-full grid-cols-1 items-center md:grid-cols-2">
       <div className="p-6 sm:p-12 lg:p-16">
         <div className="mb-10">
-          <h2 className="text-3xl font-bold my-4">Contact us</h2>
-          <p className="text-lg text-muted-foreground max-w-lg">
+          <h2 className="my-4 text-3xl font-bold">Contact us</h2>
+          <p className="text-muted-foreground max-w-lg text-lg">
             Whether you have questions or you would just like to say hello,
             contact us.
           </p>
         </div>
         <form action="#" className="space-y-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-y-6 gap-x-4">
+          <div className="grid grid-cols-1 gap-x-4 gap-y-6 lg:grid-cols-2">
             <div className="space-y-2">
               <Label htmlFor="first-name">First Name</Label>
               <Input id="first-name" placeholder="John" />
@@ -53,7 +53,7 @@ export default function ContactSections02() {
             <Checkbox id="privacy-policy" />
             <Label
               htmlFor="privacy-policy"
-              className="text-sm font-normal cursor-pointer"
+              className="cursor-pointer text-sm font-normal"
             >
               You agree to your friendly{" "}
               <a href="#" className="text-primary hover:underline">
@@ -67,7 +67,7 @@ export default function ContactSections02() {
       <img
         src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&auto=format&fit=crop"
         alt="contact"
-        className="w-full h-full object-cover md:block hidden object-center"
+        className="hidden h-full w-full object-cover object-center md:block"
       />
     </section>
   )

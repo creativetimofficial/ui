@@ -16,22 +16,22 @@ export default function ContactSections05() {
   return (
     <section className="py-16">
       <div className="container mx-auto">
-        <div className="text-center mb-20">
+        <div className="mb-20 text-center">
           <Badge variant="secondary">Customer Care</Badge>
-          <h2 className="text-3xl font-bold mb-4 mt-8">
+          <h2 className="mt-8 mb-4 text-3xl font-bold">
             We&apos;re Here to Help
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-muted-foreground mx-auto max-w-2xl text-lg">
             Whether it&apos;s a question about our services, a request for
             technical assistance, or suggestions for improvement, our team is
             eager to hear from you.
           </p>
         </div>
-        <div className="grid gap-x-16 gap-y-10 lg:grid-cols-2 grid-cols-1">
-          <div className="w-full h-full min-h-[400px] bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl" />
+        <div className="grid grid-cols-1 gap-x-16 gap-y-10 lg:grid-cols-2">
+          <div className="h-full min-h-[400px] w-full rounded-2xl bg-gradient-to-br from-gray-900 to-gray-800" />
           <form
             action="#"
-            className="space-y-6 lg:py-2 max-w-lg mx-auto lg:mx-0"
+            className="mx-auto max-w-lg space-y-6 lg:mx-0 lg:py-2"
           >
             <div className="space-y-4">
               <Label>Select Options for Business Engagement</Label>
@@ -50,7 +50,7 @@ export default function ContactSections05() {
                 ))}
               </div>
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-6 gap-x-4">
+            <div className="grid grid-cols-1 gap-x-4 gap-y-6 sm:grid-cols-2">
               <div className="space-y-2">
                 <Label htmlFor="first-name">First Name</Label>
                 <Input id="first-name" placeholder="John" />

@@ -1,0 +1,29 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "contact-sections-05",
+  "type": "registry:block",
+  "description": "Contact form with map and option selection",
+  "registryDependencies": [
+    "badge",
+    "button",
+    "input",
+    "label",
+    "textarea"
+  ],
+  "files": [
+    {
+      "path": "registry/creative-tim-ui/blocks/contact-sections-05/page.tsx",
+      "content": "\"use client\"\n\nimport { useState } from \"react\"\n\nimport { Badge } from \"@/registry/creative-tim-ui/ui/badge\"\nimport { Button } from \"@/registry/creative-tim-ui/ui/button\"\nimport { Input } from \"@/registry/creative-tim-ui/ui/input\"\nimport { Label } from \"@/registry/creative-tim-ui/ui/label\"\nimport { Textarea } from \"@/registry/creative-tim-ui/ui/textarea\"\n\nconst OPTIONS = [\"General Inquiry\", \"Product Support\"]\n\nexport default function ContactSections05() {\n  const [selectedOption, setSelectedOption] = useState(\"\")\n\n  return (\n    <section className=\"py-16\">\n      <div className=\"container mx-auto\">\n        <div className=\"text-center mb-20\">\n          <Badge variant=\"secondary\">Customer Care</Badge>\n          <h2 className=\"text-3xl font-bold mb-4 mt-8\">\n            We&apos;re Here to Help\n          </h2>\n          <p className=\"text-lg text-muted-foreground max-w-2xl mx-auto\">\n            Whether it&apos;s a question about our services, a request for\n            technical assistance, or suggestions for improvement, our team is\n            eager to hear from you.\n          </p>\n        </div>\n        <div className=\"grid gap-x-16 gap-y-10 lg:grid-cols-2 grid-cols-1\">\n          <div className=\"w-full h-full min-h-[400px] bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl\" />\n          <form\n            action=\"#\"\n            className=\"space-y-6 lg:py-2 max-w-lg mx-auto lg:mx-0\"\n          >\n            <div className=\"space-y-4\">\n              <Label>Select Options for Business Engagement</Label>\n              <div className=\"flex flex-wrap gap-2\">\n                {OPTIONS.map((option) => (\n                  <Button\n                    key={option}\n                    type=\"button\"\n                    variant={selectedOption === option ? \"default\" : \"outline\"}\n                    onClick={() =>\n                      setSelectedOption((cur) => (cur === option ? \"\" : option))\n                    }\n                  >\n                    {option}\n                  </Button>\n                ))}\n              </div>\n            </div>\n            <div className=\"grid grid-cols-1 sm:grid-cols-2 gap-y-6 gap-x-4\">\n              <div className=\"space-y-2\">\n                <Label htmlFor=\"first-name\">First Name</Label>\n                <Input id=\"first-name\" placeholder=\"John\" />\n              </div>\n              <div className=\"space-y-2\">\n                <Label htmlFor=\"last-name\">Last Name</Label>\n                <Input id=\"last-name\" placeholder=\"Doe\" />\n              </div>\n            </div>\n            <div className=\"space-y-2\">\n              <Label htmlFor=\"email\">Email Address</Label>\n              <Input\n                id=\"email\"\n                type=\"email\"\n                placeholder=\"someone@example.com\"\n              />\n            </div>\n            <div className=\"space-y-2\">\n              <Label htmlFor=\"message\">Message</Label>\n              <Textarea\n                id=\"message\"\n                placeholder=\"Something about your request.\"\n              />\n            </div>\n            <Button className=\"w-full\">Send Message</Button>\n          </form>\n        </div>\n      </div>\n    </section>\n  )\n}\n",
+      "type": "registry:page",
+      "target": "app/contact-sections-05/page.tsx"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "1000px",
+    "container": "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
+    "mobile": "component"
+  },
+  "categories": [
+    "contact"
+  ]
+}

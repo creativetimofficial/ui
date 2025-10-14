@@ -3,7 +3,7 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/registry/creative-tim-ui/ui/accordion";
+} from "@/registry/creative-tim-ui/ui/accordion"
 
 const DATA = [
   {
@@ -31,17 +31,17 @@ const DATA = [
     title: "Where do I find the shipping details?",
     desc: "There's nothing I really wanted to do in life that I wasn't able to get good at. That's my skill. I'm not really specifically talented at anything except for the ability to learn. That's what I do. That's what I'm here for. Don't be afraid to be wrong because you can't learn anything from a compliment. I always felt like I could do anything. That's the main thing people are controlled by! Thoughts- their perception of themselves! They're slowed down by their perception of themselves. If you're taught you can't do anything, you won't do anything. I was taught I could do everything.",
   },
-];
+]
 
 export default function FaqsList01() {
   return (
-    <section className="py-16 px-6">
-      <div className="max-w-3xl mx-auto">
-        <div className="text-center mb-20">
-          <h2 className="text-3xl font-bold mb-4">
+    <section className="px-6 py-16">
+      <div className="mx-auto max-w-3xl">
+        <div className="mb-20 text-center">
+          <h2 className="mb-4 text-3xl font-bold">
             Frequently asked questions
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-muted-foreground mx-auto max-w-2xl text-lg">
             A lot of people don&apos;t appreciate the moment until it&apos;s
             passed. I&apos;m not trying my hardest, and I&apos;m not trying to
             do
@@ -61,5 +61,5 @@ export default function FaqsList01() {
         </Accordion>
       </div>
     </section>
-  );
+  )
 }

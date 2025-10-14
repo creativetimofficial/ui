@@ -1,6 +1,6 @@
 "use client"
 
-import { Mail, Phone, MapPin } from "lucide-react"
+import { Mail, MapPin, Phone } from "lucide-react"
 
 import { Button } from "@/registry/creative-tim-ui/ui/button"
 import { Card } from "@/registry/creative-tim-ui/ui/card"
@@ -27,12 +27,12 @@ export default function ContactSections10() {
   return (
     <section className="py-16">
       <div className="container mx-auto">
-        <h2 className="text-3xl font-bold text-center mb-16">Contact Us</h2>
-        <div className="grid gap-10 lg:grid-cols-2 grid-cols-1">
+        <h2 className="mb-16 text-center text-3xl font-bold">Contact Us</h2>
+        <div className="grid grid-cols-1 gap-10 lg:grid-cols-2">
           <Card className="p-8">
-            <h3 className="text-2xl font-semibold mb-6">Send us a message</h3>
+            <h3 className="mb-6 text-2xl font-semibold">Send us a message</h3>
             <form action="#" className="space-y-6">
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-6 gap-x-4">
+              <div className="grid grid-cols-1 gap-x-4 gap-y-6 sm:grid-cols-2">
                 <div className="space-y-2">
                   <Label htmlFor="first-name">First Name</Label>
                   <Input id="first-name" placeholder="John" />
@@ -66,7 +66,7 @@ export default function ContactSections10() {
           </Card>
           <div className="space-y-8">
             <div>
-              <h3 className="text-2xl font-semibold mb-4">Get in touch</h3>
+              <h3 className="mb-4 text-2xl font-semibold">Get in touch</h3>
               <p className="text-muted-foreground">
                 We&apos;re here to help and answer any question you might have.
                 We look forward to hearing from you.
@@ -75,8 +75,8 @@ export default function ContactSections10() {
             <div className="space-y-6">
               {OPTIONS.map(({ icon: Icon, info }, key) => (
                 <div key={key} className="flex items-start gap-4">
-                  <div className="shrink-0 w-10 h-10 rounded-lg bg-primary/10 grid place-items-center">
-                    <Icon className="w-5 h-5 text-primary" />
+                  <div className="bg-primary/10 grid h-10 w-10 shrink-0 place-items-center rounded-lg">
+                    <Icon className="text-primary h-5 w-5" />
                   </div>
                   <div className="pt-2">
                     <p className="font-medium">{info}</p>
