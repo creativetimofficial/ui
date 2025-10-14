@@ -5,23 +5,33 @@ import { Button } from "@/registry/elevenlabs-ui/ui/button";
 
 export function GoogleLoginButton() {
   const login = useGoogleLogin({
-    flow: "auth-code",                 // popup → returns `code`
-    scope: "openid email profile",
+    flow: "auth-code",
     onSuccess: async ({ code }) => {
-      // Send the code to Rails; your server exchanges it for tokens
-      const res = await fetch(`${process.env.NEXT_PUBLIC_RAILS_BASE_URL}/api/v1/auth/google`, {
-        method: "POST",
-        credentials: "include",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ code }),
-      });
-      if (!res.ok) throw new Error("Google login failed");
-      // …route to dashboard, etc.
+      try {
+        const res = await fetch(`${process.env.NEXT_PUBLIC_RAILS_BASE_URL}/api/v1/auth/google`, {
+          method: "POST",
+          credentials: "include",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ code }),
+        });
+
+        if (!res.ok) {
+          const errorText = await res.text();
+          throw new Error(`Google login failed: ${errorText}`);
+        }
+
+        // ✅ handle successful login, e.g. redirect
+      } catch (err) {
+        console.error("Google login error:", err); // stays in console
+        // ⬇️ show toast or error message to user
+        // setError(err instanceof Error ? err.message : "Google login failed");
+      }
     },
     onError: (err) => {
-      console.error(err);
+      console.error("Google popup error:", err);
     },
   });
+
 
   return (
     <Button
