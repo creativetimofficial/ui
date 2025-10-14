@@ -1,0 +1,168 @@
+ <!-- Trigger Button -->
+ <div id="openModalBtn" class="grid place-items-center w-full min-h-screen">
+   <button data-open="true" aria-expanded="true" aria-haspopup="dialog" aria-controls=":R0:" class="inline-flex items-center justify-center border align-middle select-none font-sans font-medium text-center transition-all duration-300 ease-in disabled:opacity-50 disabled:shadow-none disabled:cursor-not-allowed data-[shape=pill]:rounded-full data-[width=full]:w-full focus:shadow-none text-sm rounded-md py-2 px-4 shadow-sm hover:shadow-md bg-slate-800 border-slate-800 text-slate-50 hover:bg-slate-700 hover:border-slate-700 outline-none" data-shape="default" data-width="default">Open Modal</button>
+ </div>
+ <!-- Modal -->
+ <div id="modal" class="fixed inset-0 flex items-center justify-center bg-slate-950 bg-opacity-50 transition-opacity duration-300 ease-in-out">
+   <div id="modalContent" class="bg-white p-6 transform scale-95 transition-all duration-300 ease-in-out max-h-[calc(100vh-32px)] overflow-y-auto  bg-white rounded-xl shadow-2xl shadow-slate-950/5 w-10/12 lg:w-8/12 h-max p-6">
+     <div class="flex items-center justify-between gap-4">
+       <div>
+         <h2 class="font-sans antialiased text-base md:text-lg text-current mb-1 font-semibold">Edit Profile</h2>
+         <p class="font-sans antialiased text-base text-slate-600">Update your profile information below.</p>
+       </div>
+       <button id="closeModalBtn" data-open="true" class="inline-grid place-items-center border align-middle select-none font-sans font-medium text-center transition-all duration-300 ease-in disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none data-[shape=circular]:rounded-full text-sm min-w-[34px] min-h-[34px] rounded-md bg-transparent border-transparent text-slate-800 hover:bg-slate-200/10 hover:border-slate-600/10 shadow-none hover:shadow-none outline-none absolute right-2 top-2" data-shape="circular" data-tabindex="">
+         <svg width="1.5em" height="1.5em" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="currentColor" class="h-5 w-5">
+           <path d="M6.75827 17.2426L12.0009 12M17.2435 6.75736L12.0009 12M12.0009 12L6.75827 6.75736M12.0009 12L17.2435 17.2426" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+         </svg>
+       </button>
+     </div>
+     <form action="#" class="mt-6">
+       <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+         <div class="w-full space-y-2">
+           <label for=":rp:" class="font-sans antialiased text-sm text-current font-semibold">My Name</label>
+           <div class="relative w-full">
+             <input placeholder="Emma Roberts" autoComplete="off" id=":rp:" class="w-full aria-disabled:cursor-not-allowed outline-none focus:outline-none text-slate-800 dark:text-white placeholder:text-slate-600/60 bg-transparent ring-transparent border border-slate-200 transition-all duration-300 ease-in disabled:opacity-50 disabled:pointer-events-none data-[error=true]:border-error data-[success=true]:border-success select-none data-[shape=pill]:rounded-full text-sm rounded-md py-2 px-2.5 ring shadow-sm data-[icon-placement=start]:ps-9 data-[icon-placement=end]:pe-9 hover:border-slate-800 hover:ring-slate-800/10 focus:border-slate-800 focus:ring-slate-800/10 peer" data-error="false" data-success="false" data-shape="default" data-icon-placement="" type="text" data-tabindex="" />
+           </div>
+         </div>
+         <div class="w-full">
+           <label for="im" class="font-sans antialiased text-sm text-current font-semibold block mb-3">I&#x27;m</label>
+           <div class="relative">
+             <select class="pr-10 flex items-center gap-4 justify-between w-full outline-none focus:outline-none text-slate-600 bg-transparent ring-transparent border border-slate-200 transition-all duration-300 ease-in disabled:opacity-50 disabled:pointer-events-none select-none text-start text-sm rounded-md py-2 px-2.5 ring shadow-sm hover:border-slate-800 hover:ring-slate-800/10 focus:border-slate-800 focus:ring-slate-800/10 appearance-none cursor-pointer">
+               <option value="category" selected disabled>Select Profession</option>
+               <option value="Frontend">Frontend Developer</option>
+               <option value="Backend">Backend Developer</option>
+               <option value="Designer">UI/UX Designer</option>
+             </select>
+             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.2" stroke="currentColor" class="h-[1em] w-[1em] translate-x-0.5 stroke-[1.5] absolute top-2.5 right-2.5 text-slate-600 pointer-events-none">
+               <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 15 12 18.75 15.75 15m-7.5-6L12 5.25 15.75 9" />
+             </svg>
+           </div>
+         </div>
+       </div>
+       <div class="my-10 py-9 border-y border-slate-200">
+         <p class="font-sans antialiased text-base text-current font-semibold">Interested in the following technologies</p>
+         <p class="font-sans antialiased text-sm text-slate-600">Choose the frameworks you work on</p>
+         <div class="flex items-center gap-6 mt-6 flex-wrap">
+           <div class="flex  gap-4">
+             <!-- React Checkbox -->
+             <div class="inline-flex items-center">
+               <label class="flex items-center cursor-pointer relative" for="react-checkbox">
+                 <input type="checkbox" class="peer h-5 w-5 cursor-pointer transition-all appearance-none rounded shadow hover:shadow-md border border-slate-300 checked:bg-slate-800 checked:border-slate-800" id="react-checkbox" />
+                 <span class="absolute text-white opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                   <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 20 20" fill="currentColor" stroke="currentColor" stroke-width="1">
+                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                   </svg>
+                 </span>
+               </label>
+               <label class="cursor-pointer ml-2 text-slate-600 text-sm" for="react-checkbox"> React </label>
+             </div>
+             <!-- Material Tailwind Checkbox -->
+             <div class="inline-flex items-center">
+               <label class="flex items-center cursor-pointer relative" for="material-tailwind-checkbox">
+                 <input type="checkbox" class="peer h-5 w-5 cursor-pointer transition-all appearance-none rounded shadow hover:shadow-md border border-slate-300 checked:bg-slate-800 checked:border-slate-800" id="material-tailwind-checkbox" />
+                 <span class="absolute text-white opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                   <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 20 20" fill="currentColor" stroke="currentColor" stroke-width="1">
+                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                   </svg>
+                 </span>
+               </label>
+               <label class="cursor-pointer ml-2 text-slate-600 text-sm" for="material-tailwind-checkbox"> Material Tailwind </label>
+             </div>
+             <!-- TailwindCSS Checkbox -->
+             <div class="inline-flex items-center">
+               <label class="flex items-center cursor-pointer relative" for="tailwindcss-checkbox">
+                 <input type="checkbox" class="peer h-5 w-5 cursor-pointer transition-all appearance-none rounded shadow hover:shadow-md border border-slate-300 checked:bg-slate-800 checked:border-slate-800" id="tailwindcss-checkbox" />
+                 <span class="absolute text-white opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                   <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 20 20" fill="currentColor" stroke="currentColor" stroke-width="1">
+                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                   </svg>
+                 </span>
+               </label>
+               <label class="cursor-pointer ml-2 text-slate-600 text-sm" for="tailwindcss-checkbox"> TailwindCSS </label>
+             </div>
+             <!-- Next.js Checkbox -->
+             <div class="inline-flex items-center">
+               <label class="flex items-center cursor-pointer relative" for="nextjs-checkbox">
+                 <input type="checkbox" class="peer h-5 w-5 cursor-pointer transition-all appearance-none rounded shadow hover:shadow-md border border-slate-300 checked:bg-slate-800 checked:border-slate-800" id="nextjs-checkbox" />
+                 <span class="absolute text-white opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                   <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 20 20" fill="currentColor" stroke="currentColor" stroke-width="1">
+                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                   </svg>
+                 </span>
+               </label>
+               <label class="cursor-pointer ml-2 text-slate-600 text-sm" for="nextjs-checkbox"> Next.js </label>
+             </div>
+           </div>
+         </div>
+       </div>
+       <div class="mb-8">
+         <p class="font-sans antialiased text-base text-current font-semibold">Notification preferences</p>
+         <p class="font-sans antialiased text-sm text-slate-600">Select where you want to be notified</p>
+         <div class="flex items-center gap-6 mt-6">
+           <div class="flex gap-10">
+             <!-- Email Radio -->
+             <div class="inline-flex items-center">
+               <label class="relative flex items-center cursor-pointer" for="email">
+                 <input name="notification" type="radio" class="peer h-5 w-5 cursor-pointer appearance-none rounded-full border border-slate-300 hover:shadow-md checked:bg-slate-800 checked:border-slate-800 transition-all duration-200" id="email">
+                 <span class="absolute bg-slate-800 w-2.5 h-2.5 rounded-full opacity-0 peer-checked:opacity-100 peer-checked:bg-white transition-opacity duration-200 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></span>
+               </label>
+               <label class="ml-2 text-slate-600 cursor-pointer text-sm" for="email">Email</label>
+             </div>
+             <!-- SMS Radio -->
+             <div class="inline-flex items-center">
+               <label class="relative flex items-center cursor-pointer" for="sms">
+                 <input name="notification" type="radio" class="peer h-5 w-5 cursor-pointer appearance-none rounded-full border border-slate-300 hover:shadow-md checked:bg-slate-800 checked:border-slate-800 transition-all duration-200" id="sms">
+                 <span class="absolute bg-slate-800 w-2.5 h-2.5 rounded-full opacity-0 peer-checked:opacity-100 peer-checked:bg-white transition-opacity duration-200 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></span>
+               </label>
+               <label class="ml-2 text-slate-600 cursor-pointer text-sm" for="sms">SMS</label>
+             </div>
+             <!-- Push Notification Radio -->
+             <div class="inline-flex items-center">
+               <label class="relative flex items-center cursor-pointer" for="push">
+                 <input name="notification" type="radio" class="peer h-5 w-5 cursor-pointer appearance-none rounded-full border border-slate-300 hover:shadow-md checked:bg-slate-800 checked:border-slate-800 transition-all duration-200" id="push">
+                 <span class="absolute bg-slate-800 w-2.5 h-2.5 rounded-full opacity-0 peer-checked:opacity-100 peer-checked:bg-white transition-opacity duration-200 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></span>
+               </label>
+               <label class="ml-2 text-slate-600 cursor-pointer text-sm" for="push">Push Notification</label>
+             </div>
+           </div>
+         </div>
+       </div>
+       <div class="mb-1 flex items-center justify-end gap-2">
+         <button id="closeModalBtn2" type="button" data-open="true" class="inline-flex items-center justify-center border align-middle select-none font-sans font-medium text-center transition-all duration-300 ease-in disabled:opacity-50 disabled:shadow-none disabled:cursor-not-allowed data-[shape=pill]:rounded-full data-[width=full]:w-full focus:shadow-none text-sm rounded-md py-2 px-4 shadow-sm hover:shadow-md bg-transparent border-slate-200 text-slate-800 hover:bg-slate-200 outline-none" data-shape="default" data-width="default" data-tabindex="">Cancel</button>
+         <button type="submit" class="inline-flex items-center justify-center border align-middle select-none font-sans font-medium text-center transition-all duration-300 ease-in disabled:opacity-50 disabled:shadow-none disabled:cursor-not-allowed data-[shape=pill]:rounded-full data-[width=full]:w-full focus:shadow-none text-sm rounded-md py-2 px-4 shadow-sm hover:shadow-md bg-slate-800 border-slate-800 text-slate-50 hover:bg-slate-700 hover:border-slate-700" data-shape="default" data-width="default" data-tabindex="">Update Product</button>
+       </div>
+     </form>
+   </div>
+ </div>
+ <script>
+   // JavaScript for Modal Functionality
+   const openModalBtn = document.getElementById('openModalBtn');
+   const closeModalBtn = document.getElementById('closeModalBtn');
+   const closeModalBtn2 = document.getElementById('closeModalBtn2');
+   const modal = document.getElementById('modal');
+   const modalContent = document.getElementById('modalContent');
+   // Open Modal
+   openModalBtn.addEventListener('click', () => {
+     modal.classList.remove('hidden');
+     setTimeout(() => {
+       modal.classList.remove('opacity-0');
+       modalContent.classList.remove('scale-95', 'opacity-0');
+     }, 10); // Timeout to ensure the transition applies
+   });
+   // Close Modal
+   const closeModal = () => {
+     modal.classList.add('opacity-0');
+     modalContent.classList.add('scale-95', 'opacity-0');
+     setTimeout(() => {
+       modal.classList.add('hidden');
+     }, 300); // Matches the duration-300 in Tailwind
+   };
+   closeModalBtn.addEventListener('click', closeModal);
+   closeModalBtn2.addEventListener('click', closeModal);
+   // Close Modal on clicking outside the modal content
+   window.addEventListener('click', (e) => {
+     if (e.target === modal) {
+       closeModal();
+     }
+   });
+ </script>
