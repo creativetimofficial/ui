@@ -69,6 +69,18 @@ Preferred communication style: Simple, everyday language.
 - **CLI Location**: The CLI package is external to this repository and needs to be created/forked separately
 - **Installation Command**: Components now install via `npx @creative-tim/ui@latest components add <component-name>`
 
+### FAQs Blocks Addition (October 14, 2025)
+- **New Category**: Added "FAQs" category to the component registry (visible at /blocks/faqs)
+- **Component Conversion**: Migrated 6 FAQ blocks from Material Tailwind to shadcn UI design system
+  - simple-faq-01: Simple FAQ with dividers (no accordion)
+  - faqs-list-01: FAQ list with accordion component for expand/collapse
+  - faq-left-title-01: FAQ with left-aligned title and card grid layout
+  - faqs-grid-cta-01: FAQ grid with CTA section at the bottom
+  - faqs-cards-icons-01: FAQ cards with Lucide icons and CTA
+  - faqs-grid-01: Simple FAQ grid layout with ghost cards
+- **Registry Integration**: All FAQ blocks registered in registry-blocks.ts with proper metadata and CLI installation support
+- **Design Consistency**: Components use shadcn UI primitives (Accordion, Card, Button) and Lucide icons (ShoppingCart, CreditCard, Users) for consistency
+
 ## System Architecture
 
 ### Monorepo Structure
