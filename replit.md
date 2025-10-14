@@ -104,6 +104,17 @@ Preferred communication style: Simple, everyday language.
 
 ## Recent Changes
 
+### CRUD Blocks Addition (October 14, 2025)
+- **New Category**: Added "CRUDs" category to the component registry (visible at /blocks/cruds)
+- **Component Creation**: Built 3 CRUD form blocks from JSON specifications using shadcn UI components
+  - cruds-01: Edit Apparel Item form with product name, brand, price, category (select), and description (textarea)
+  - cruds-02: Update Retail Staff Profile form with username, email, and password fields
+  - cruds-03: Stylist Account Settings with profile photo upload, personal details, role selection, and permissions
+- **Registry Integration**: All CRUD blocks registered in registry-blocks.ts with proper metadata and CLI installation support
+- **Category Configuration**: Added "CRUDs" category to registry-categories.ts for blocks page navigation
+- **Design Pattern**: Form-based blocks using shadcn UI primitives (Button, Card, Input, Label, Select, Textarea) with responsive layouts
+- **Total Registry Items**: Registry now contains 108+ total items (93+ blocks plus UI components, examples, and hooks)
+
 ### Web3 Blocks Addition (October 14, 2025)
 - **New Category**: Added "Web3" category to the component registry (visible at /blocks/web3)
 - **Component Conversion**: Migrated 5 Web3/NFT/Crypto themed blocks from Material Tailwind to shadcn UI design system
@@ -115,4 +126,3 @@ Preferred communication style: Simple, everyday language.
 - **Registry Integration**: All web3 blocks registered in registry-blocks.ts with proper metadata and CLI installation support
 - **Category Configuration**: Added "Web3" category to registry-categories.ts for blocks page navigation
 - **Design Consistency**: Components use shadcn UI primitives (Avatar, Badge, Button, Card, Select) and Lucide icons for consistency
-- **Total Registry Items**: Registry now contains 105+ total items (90+ blocks plus UI components, examples, and hooks)
