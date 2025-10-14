@@ -29,27 +29,11 @@ waitForPort = 5000
 [workflows.workflow.metadata]
 outputType = "webview"
 
-[[ports]]
-localPort = 5000
-externalPort = 80
-
-[[ports]]
-localPort = 35261
-externalPort = 3000
-
-[[ports]]
-localPort = 36407
-externalPort = 3002
-
-[[ports]]
-localPort = 37891
-externalPort = 3001
-
-[[ports]]
-localPort = 46745
-externalPort = 3003
-
 [deployment]
 deploymentTarget = "autoscale"
 run = ["bash", "-c", "cd apps/www && npm run start"]
 build = ["bash", "-c", "cd apps/www && npm run build"]
+
+[[ports]]
+localPort = 5000
+externalPort = 80
