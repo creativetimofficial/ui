@@ -1,23 +1,28 @@
-"use client";
+"use client"
 
-import * as React from "react";
-import { X, AlertTriangle } from "lucide-react";
+import * as React from "react"
+import { AlertTriangle, X } from "lucide-react"
 
-import { Button } from "@/registry/creative-tim-ui/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/registry/creative-tim-ui/ui/card";
+import { Button } from "@/registry/creative-tim-ui/ui/button"
+import {
+  Card,
+  CardContent,
+  CardHeader,
+  CardTitle,
+} from "@/registry/creative-tim-ui/ui/card"
 import {
   Dialog,
   DialogContent,
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/registry/creative-tim-ui/ui/dialog";
+} from "@/registry/creative-tim-ui/ui/dialog"
 
 export default function ModalsBlock() {
-  const [isOpen, setIsOpen] = React.useState(false);
+  const [isOpen, setIsOpen] = React.useState(false)
 
   return (
-    <div className="grid place-items-center w-full min-h-screen">
+    <div className="grid min-h-screen w-full place-items-center">
       <Dialog open={isOpen} onOpenChange={setIsOpen}>
         <DialogTrigger asChild>
           <Button onClick={() => setIsOpen(true)}>Open Modal</Button>
@@ -25,39 +30,39 @@ export default function ModalsBlock() {
         <DialogContent className="sm:max-w-[550px]">
           <button
             onClick={() => setIsOpen(false)}
-            className="absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none"
+            className="ring-offset-background focus:ring-ring absolute top-4 right-4 rounded-sm opacity-70 transition-opacity hover:opacity-100 focus:ring-2 focus:ring-offset-2 focus:outline-none disabled:pointer-events-none"
           >
             <X className="h-4 w-4" />
             <span className="sr-only">Close</span>
           </button>
           <DialogHeader>
-            <DialogTitle className="text-xl mb-2">
+            <DialogTitle className="mb-2 text-xl">
               Disable Collection Lock Rules
             </DialogTitle>
           </DialogHeader>
-          <p className="text-sm text-muted-foreground mt-2">
+          <p className="text-muted-foreground mt-2 text-sm">
             Removing edit rules will allow unrestricted changes to your seasonal
             campaign folders and product groups.
           </p>
 
-          <Card className="my-6 border-destructive/50 bg-destructive/5">
+          <Card className="border-destructive/50 bg-destructive/5 my-6">
             <CardHeader className="pb-3">
-              <CardTitle className="text-base flex items-center gap-2">
-                <AlertTriangle className="h-4 w-4 text-destructive" />
+              <CardTitle className="flex items-center gap-2 text-base">
+                <AlertTriangle className="text-destructive h-4 w-4" />
                 Access Restrictions Will Be Removed
               </CardTitle>
             </CardHeader>
             <CardContent>
-              <p className="text-sm text-muted-foreground">
-                Disabling these rules unlocks direct edits to sensitive assets and
-                might affect internal syncs.
+              <p className="text-muted-foreground text-sm">
+                Disabling these rules unlocks direct edits to sensitive assets
+                and might affect internal syncs.
               </p>
             </CardContent>
           </Card>
 
-          <div className="space-y-3 mb-6">
+          <div className="mb-6 space-y-3">
             <p className="text-sm font-semibold">This will impact:</p>
-            <ul className="space-y-2 text-sm text-muted-foreground">
+            <ul className="text-muted-foreground space-y-2 text-sm">
               <li className="flex items-start gap-2">
                 <span className="text-destructive mt-1">•</span>
                 <span>Designer review checkpoints</span>
@@ -69,7 +74,7 @@ export default function ModalsBlock() {
             </ul>
           </div>
 
-          <p className="text-xs text-muted-foreground mb-6">
+          <p className="text-muted-foreground mb-6 text-xs">
             Note: 0 edit lock rules currently active
           </p>
 
@@ -86,5 +91,5 @@ export default function ModalsBlock() {
         </DialogContent>
       </Dialog>
     </div>
-  );
+  )
 }

@@ -1,22 +1,22 @@
-"use client";
+"use client"
 
-import * as React from "react";
-import { X } from "lucide-react";
+import * as React from "react"
+import { X } from "lucide-react"
 
-import { Button } from "@/registry/creative-tim-ui/ui/button";
+import { Button } from "@/registry/creative-tim-ui/ui/button"
 import {
   Dialog,
   DialogContent,
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/registry/creative-tim-ui/ui/dialog";
+} from "@/registry/creative-tim-ui/ui/dialog"
 
 export default function ModalsBlock() {
-  const [isOpen, setIsOpen] = React.useState(false);
+  const [isOpen, setIsOpen] = React.useState(false)
 
   return (
-    <div className="grid place-items-center w-full min-h-screen">
+    <div className="grid min-h-screen w-full place-items-center">
       <Dialog open={isOpen} onOpenChange={setIsOpen}>
         <DialogTrigger asChild>
           <Button onClick={() => setIsOpen(true)}>Open Modal</Button>
@@ -24,19 +24,19 @@ export default function ModalsBlock() {
         <DialogContent className="sm:max-w-[500px]">
           <button
             onClick={() => setIsOpen(false)}
-            className="absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none"
+            className="ring-offset-background focus:ring-ring absolute top-4 right-4 rounded-sm opacity-70 transition-opacity hover:opacity-100 focus:ring-2 focus:ring-offset-2 focus:outline-none disabled:pointer-events-none"
           >
             <X className="h-4 w-4" />
             <span className="sr-only">Close</span>
           </button>
           <DialogHeader>
-            <DialogTitle className="text-xl mb-2">
+            <DialogTitle className="mb-2 text-xl">
               Visibility Settings
             </DialogTitle>
           </DialogHeader>
-          <p className="text-sm text-muted-foreground mt-2">
-            This collection is currently restricted to internal collaborators. You
-            can modify who can view or access it from this setting.
+          <p className="text-muted-foreground mt-2 text-sm">
+            This collection is currently restricted to internal collaborators.
+            You can modify who can view or access it from this setting.
           </p>
 
           <div className="flex items-center justify-end gap-2 pt-6">
@@ -52,5 +52,5 @@ export default function ModalsBlock() {
         </DialogContent>
       </Dialog>
     </div>
-  );
+  )
 }

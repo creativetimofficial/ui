@@ -503,5 +503,35 @@
     "name": "modals-05",
     "description": "Upload files modal with drag and drop",
     "categories": ["modals"]
+  },
+  {
+    "name": "modals-06",
+    "description": "Publish capsule collection modal with metadata display",
+    "categories": ["modals"]
+  },
+  {
+    "name": "modals-07",
+    "description": "Change collection visibility settings modal",
+    "categories": ["modals"]
+  },
+  {
+    "name": "modals-08",
+    "description": "Disable collection lock rules modal with alert and impact list",
+    "categories": ["modals"]
+  },
+  {
+    "name": "modals-09",
+    "description": "Transfer showroom ownership modal with form fields and warning",
+    "categories": ["modals"]
+  },
+  {
+    "name": "modals-10",
+    "description": "Permanently remove archive modal with effects list",
+    "categories": ["modals"]
+  },
+  {
+    "name": "modals-11",
+    "description": "Confirm vault deletion modal with text input verification",
+    "categories": ["modals"]
   }
 ]
