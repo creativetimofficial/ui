@@ -1,4 +1,3 @@
-// app/login/page.tsx
 "use client";
 
 import * as React from "react";
@@ -7,6 +6,7 @@ import { AuthAPI } from "@/lib/auth";
 import { useAuth } from "@/components/auth/AuthProvider";
 import { setAccessToken, clearAccessToken } from "@/lib/session";
 import { normalizeAccessToken } from "@/lib/normalizers";
+// import { HeroTestimonial } from "@/components/HeroTestimonial";
 
 export default function LoginPage() {
   const router = useRouter();
@@ -17,25 +17,29 @@ export default function LoginPage() {
   const [error, setError] = React.useState<string | null>(null);
   const [loading, setLoading] = React.useState(false);
 
-  const handleGoogleLogin = React.useCallback(async (idToken: string) => {
-    try {
-      const res = await fetch(
-        `${process.env.NEXT_PUBLIC_RAILS_BASE_URL}/api/v1/auth/google`,
-        {
-          method: "POST",
-          credentials: "include",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ token: idToken }),
-        }
-      );
-      if (!res.ok) throw new Error("Google login failed");
-      router.push("/dashboard");
-    } catch (err) {
-      console.error(err);
-    }
-  }, [router]);
-
   const googleDivRef = React.useRef<HTMLDivElement>(null);
+
+  const handleGoogleLogin = React.useCallback(
+    async (idToken: string) => {
+      try {
+        const res = await fetch(
+          `${process.env.NEXT_PUBLIC_RAILS_BASE_URL}/api/v1/auth/google`,
+          {
+            method: "POST",
+            credentials: "include",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ token: idToken }),
+          }
+        );
+        if (!res.ok) throw new Error("Google login failed");
+        router.push("/dashboard");
+      } catch (err) {
+        console.error(err);
+        setError(err instanceof Error ? err.message : "Google login failed");
+      }
+    },
+    [router]
+  );
 
   React.useEffect(() => {
     if (!bootstrapDone || user) return;
@@ -59,10 +63,13 @@ export default function LoginPage() {
         type: "standard",
         theme: "outline",
         size: "large",
+        width: 320,
       });
     }
 
-    return () => { cancelled = true; };
+    return () => {
+      cancelled = true;
+    };
   }, [bootstrapDone, user, handleGoogleLogin]);
 
   async function handleLogin(e: React.FormEvent<HTMLFormElement>) {
@@ -74,7 +81,7 @@ export default function LoginPage() {
       const access = normalizeAccessToken(data);
       if (access) setAccessToken(access);
       if (data.user) setUser(data.user);
-      router.push("/login");
+      router.push("/dashboard");
     } catch (err: unknown) {
       const msg =
         err instanceof Error
@@ -98,100 +105,125 @@ export default function LoginPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50 flex items-center justify-center">
-      {!bootstrapDone ? (
-        <div className="text-gray-500 text-sm">Loading…</div>
-      ) : user ? (
-        <div className="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow-md p-6">
-          <h2 className="text-2xl font-bold mb-4 text-center">
-            You are already signed in
-          </h2>
-          <div className="text-center space-y-2">
-            <div>
-              <span className="font-medium">Name:</span> {user.name ?? "—"}
+    <div className="min-h-screen bg-white">
+      <div className="grid grid-cols-1 lg:grid-cols-2 md:items-center min-h-screen">
+        {/* Left column: card + form, centered with the same widths as your AuthForm wrapper */}
+        <div className="flex items-center justify-center w-10/12 sm:w-6/12 mx-auto">
+          {/* Content card */}
+          {!bootstrapDone ? (
+            <div className="text-slate-500 text-sm">Loading…</div>
+          ) : user ? (
+            <div className="w-full bg-white border border-slate-200 rounded-xl shadow-md p-6">
+              <h2 className="text-3xl font-bold leading-tight mb-2">Welcome back</h2>
+              <p className="mt-2 text-base text-slate-500 mb-6">
+                You are already signed in.
+              </p>
+              <div className="text-sm text-slate-700 space-y-2">
+                <div>
+                  <span className="font-medium">Name:</span> {user.name ?? "—"}
+                </div>
+                <div>
+                  <span className="font-medium">Email:</span> {user.email}
+                </div>
+              </div>
+              <div className="mt-6 space-y-3">
+                <button
+                  onClick={() => router.push("/dashboard")}
+                  className="w-full py-2.5 rounded-lg bg-black text-white font-medium hover:bg-black/90 focus:outline-none focus:ring-2 focus:ring-black"
+                >
+                  Go to dashboard
+                </button>
+                <button
+                  onClick={handleLogout}
+                  className="w-full py-2.5 rounded-lg border border-slate-300 font-medium hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-slate-300"
+                >
+                  Logout
+                </button>
+              </div>
             </div>
-            <div>
-              <span className="font-medium">Email:</span> {user.email}
+          ) : (
+            <div className="w-full">
+              {/* Header matches the AuthForm typography */}
+              <h2 className="text-3xl font-bold leading-tight sm:text-3xl mt-16">
+                Sign In
+              </h2>
+              <p className="mt-2 text-base text-slate-500 mb-8">
+                Enter your email and password to continue
+              </p>
+
+              {/* Google button (kept as your One Tap/rendered button) */}
+              <div className="mb-6">
+                <div className="w-full border border-slate-300 shadow-xs rounded-lg p-4 flex items-center justify-center">
+                  <div ref={googleDivRef} className="flex justify-center" />
+                </div>
+                <div className="relative my-6">
+                  <div className="absolute inset-0 flex items-center">
+                    <span className="w-full border-t" />
+                  </div>
+                  <div className="relative flex justify-center text-xs uppercase">
+                    <span className="bg-white px-2 text-slate-600">Or</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Email + password form styled to match */}
+              <form onSubmit={handleLogin} className="space-y-3">
+                {error && (
+                  <p className="text-red-500 text-sm my-4">{error}</p>
+                )}
+
+                <label className="text-sm font-semibold mb-2 block text-slate-900">
+                  Email Address
+                </label>
+                <input
+                  type="email"
+                  placeholder="Your email address"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  autoComplete="email"
+                  required
+                  className="w-full rounded-lg border border-slate-300 px-3 py-2.5 shadow-sm focus:outline-none focus:ring-2 focus:ring-black"
+                />
+
+                <label className="text-sm font-semibold mb-2 mt-4 block text-slate-900">
+                  Password
+                </label>
+                <input
+                  type="password"
+                  placeholder="Your password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  autoComplete="current-password"
+                  required
+                  className="w-full rounded-lg border border-slate-300 px-3 py-2.5 shadow-sm focus:outline-none focus:ring-2 focus:ring-black"
+                />
+
+                <button
+                  type="submit"
+                  disabled={loading}
+                  className="mt-5 w-full rounded-lg bg-black text-white font-medium py-2.5 disabled:opacity-50 hover:bg-black/90 focus:outline-none focus:ring-2 focus:ring-black"
+                >
+                  {loading ? "Signing in…" : "Sign In"}
+                </button>
+              </form>
+
+              {/* Footer link matching your AuthForm CTA */}
+              <div className="mt-8 text-center">
+                <button
+                  type="button"
+                  onClick={() => router.push("/signup")}
+                  className="text-slate-500 font-medium text-sm hover:underline"
+                >
+                  Don&apos;t have an account? <span className="underline">Create Account</span>
+                </button>
+              </div>
             </div>
-          </div>
-          <div className="mt-6 space-y-2">
-            <button
-              onClick={() => router.push("/dashboard")}
-              className="w-full py-2 bg-black text-white rounded-md hover:bg-black/90 focus:outline-none focus:ring-2 focus:ring-black"
-            >
-              Go to dashboard
-            </button>
-            <button
-              onClick={handleLogout}
-              className="w-full py-2 border border-gray-300 rounded-md hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-300"
-            >
-              Logout
-            </button>
-          </div>
+          )}
         </div>
-      ) : (
-        <div className="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow-md p-6">
-          <h1 className="text-2xl font-bold mb-2 text-center">
-            Sign in to your account
-          </h1>
-          <p className="text-sm text-gray-500 mb-6 text-center">
-            Enter your email and password below
-          </p>
 
-          <form onSubmit={handleLogin} className="space-y-4">
-            <div>
-              <label htmlFor="email" className="block text-sm font-medium mb-1">
-                Email
-              </label>
-              <input
-                id="email"
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                autoComplete="email"
-                required
-                className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-black"
-              />
-            </div>
-
-            <div>
-              <label htmlFor="password" className="block text-sm font-medium mb-1">
-                Password
-              </label>
-              <input
-                id="password"
-                type="password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                autoComplete="current-password"
-                required
-                className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-black"
-              />
-            </div>
-
-            {error && <p className="text-sm text-red-600">{error}</p>}
-
-            <button
-              type="submit"
-              disabled={loading}
-              className="w-full py-2 bg-black text-white rounded-md hover:bg-black/90 focus:outline-none focus:ring-2 focus:ring-black disabled:opacity-50"
-            >
-              {loading ? "Signing in…" : "Sign In"}
-            </button>
-
-            {/* Divider */}
-            <div className="flex items-center gap-3 my-4">
-              <div className="h-px bg-gray-200 flex-1" />
-              <span className="text-xs text-gray-400">or</span>
-              <div className="h-px bg-gray-200 flex-1" />
-            </div>
-
-            <div className="w-full max-w-sm bg-white border p-6 rounded-lg shadow">
-              <div ref={googleDivRef} className="w-full flex justify-center" />
-            </div>
-          </form>
-        </div>
-      )}
+        {/* Right column: reuses your existing HeroTestimonial component */}
+        {/* <HeroTestimonial /> */}
+      </div>
     </div>
   );
 }
