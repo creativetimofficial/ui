@@ -37,7 +37,3 @@ build = ["bash", "-c", "cd apps/www && npm run build"]
 [[ports]]
 localPort = 5000
 externalPort = 80
-
-[[ports]]
-localPort = 43409
-externalPort = 3000
