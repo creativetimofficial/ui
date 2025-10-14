@@ -104,6 +104,29 @@ Preferred communication style: Simple, everyday language.
 
 ## Recent Changes
 
+### Footer Blocks Addition (October 14, 2025)
+- **New Category**: Added "Footers" category to the component registry (visible at /blocks/footers)
+- **Component Conversion**: Migrated 15 footer blocks from Material Tailwind to shadcn UI design system
+  - footers-01: Simple footer with social links
+  - footers-02: Footer with navigation links and subscription
+  - footers-03: Website footer with CTA
+  - footers-04: Simple dark footer with newsletter signup
+  - footers-05: Complex dark footer with language/currency selectors
+  - footers-06: Advanced light footer with navigation columns
+  - footers-07: Simple footer with country selection
+  - footers-08: Simple footer with version number badge
+  - footers-09: Footer with notification and CTA
+  - footers-10: Footer with page links
+  - footers-11: Website footer with statement quote
+  - footers-12: Website footer with navigation links
+  - footers-13: Simple centered website footer with social icons
+  - footers-14: Website footer for apps with download buttons
+  - footers-15: Website footer with quote
+- **Registry Integration**: All footer blocks registered in registry-blocks.ts with proper metadata and CLI installation support
+- **Category Configuration**: Added "Footers" category to registry-categories.ts for blocks page navigation
+- **Design Pattern**: Footer blocks using shadcn UI primitives (Button, Badge, Card, Checkbox, Input, Label, Select) with responsive layouts
+- **Total Registry Items**: Registry now contains 123+ total items (108+ blocks plus UI components, examples, and hooks)
+
 ### CRUD Blocks Addition (October 14, 2025)
 - **New Category**: Added "CRUDs" category to the component registry (visible at /blocks/cruds)
 - **Component Creation**: Built 3 CRUD form blocks from JSON specifications using shadcn UI components
@@ -116,7 +139,6 @@ Preferred communication style: Simple, everyday language.
 - **Visual Enhancements**: Applied UX improvements to all CRUD blocks
   - Added descriptive text below card titles for better context (e.g., "Update product information, pricing, and categorization for your fashion inventory")
   - Ensured all Select dropdown components occupy full container width (`className="w-full"`) for consistent form layout
-- **Total Registry Items**: Registry now contains 108+ total items (93+ blocks plus UI components, examples, and hooks)
 
 ### Web3 Blocks Addition (October 14, 2025)
 - **New Category**: Added "Web3" category to the component registry (visible at /blocks/web3)
