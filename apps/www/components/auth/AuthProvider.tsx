@@ -2,9 +2,9 @@
 "use client";
 
 import * as React from "react";
-import { AuthAPI } from "@/lib/auth";
+import { AuthAPI } from "@/lib/auth/auth";
 import { setAccessToken, clearAccessToken } from "@/lib/session";
-import type { AuthUser, AuthTokens, MessageResponse } from "@/lib/auth.types";
+import type { AuthUser, AuthTokens, MessageResponse } from "@/lib/auth/auth.types";
 
 type Ctx = {
   user: AuthUser | null;
