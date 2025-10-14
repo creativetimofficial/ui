@@ -7,11 +7,10 @@ import { setAccessToken } from "@/lib/session";
 import { normalizeAccessToken } from "@/lib/auth/normalizers";
 import { useAuth } from "@/components/auth/AuthProvider";
 import { AuthLayout } from "@/components/auth/AuthLayout";
-import { GoogleLogin } from "@/components/auth/GoogleLogin";
-import { googleLogin } from "@/lib/auth/googleLogin";
 import { Input } from "@/registry/elevenlabs-ui/ui/input";
 import { Label } from "@/registry/elevenlabs-ui/ui/label";
 import { Button } from "@/registry/elevenlabs-ui/ui/button";
+import { GoogleLoginButton } from "@/components/auth/GoogleLoginButton";
 
 export default function RegisterPage() {
   const router = useRouter();
@@ -22,17 +21,6 @@ export default function RegisterPage() {
   const [confirm, setConfirm] = React.useState("");
   const [error, setError] = React.useState<string | null>(null);
   const [loading, setLoading] = React.useState(false);
-
-  // Handle Google sign-up (same flow as login — backend upserts user)
-  const handleGoogleSignup = React.useCallback(async (idToken: string) => {
-    try {
-      await googleLogin(idToken);
-      router.push("/dashboard");
-    } catch (err) {
-      console.error(err);
-      setError(err instanceof Error ? err.message : "Google sign up failed");
-    }
-  }, [router]);
 
   // Handle form submission
   const handleRegister = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -76,13 +64,7 @@ export default function RegisterPage() {
     >
       {/* Google sign-up */}
       <div className="mb-6">
-        <GoogleLogin
-          onCredential={handleGoogleSignup}
-          onError={(e) =>
-            setError(e instanceof Error ? e.message : String(e))
-          }
-          className="w-full"
-        />
+        <GoogleLoginButton />
         <div className="relative my-6">
           <div className="absolute inset-0 flex items-center">
             <span className="w-full border-t" />
