@@ -81,6 +81,21 @@ Preferred communication style: Simple, everyday language.
 - **Registry Integration**: All FAQ blocks registered in registry-blocks.ts with proper metadata and CLI installation support
 - **Design Consistency**: Components use shadcn UI primitives (Accordion, Card, Button) and Lucide icons (ShoppingCart, CreditCard, Users) for consistency
 
+### Complete Rebranding from ElevenLabs to Creative Tim (October 14, 2025)
+- **Homepage Branding**: Updated homepage title and heading from "ElevenLabs UI" to "Creative Tim UI"
+- **Registry Folder**: Renamed folder from `apps/www/registry/elevenlabs-ui` to `apps/www/registry/creative-tim-ui`
+- **Import Paths**: Updated all 141+ import paths from `@/registry/elevenlabs-ui` to `@/registry/creative-tim-ui` across TypeScript, TSX, and MDX files
+- **GitHub Repository**: Updated all references from `github.com/elevenlabs/ui` to `github.com/creativetimofficial/ui`
+- **Twitter/Social**: Changed Twitter creator handle from `@elevenlabsio` to `@creativetim`
+- **Documentation Updates**: 
+  - Updated all MDX documentation files (setup.mdx, troubleshooting.mdx, index.mdx, component docs)
+  - Changed component descriptions from "ElevenLabs agents" to "voice agents" for platform-agnostic language
+  - Updated docs sidebar CTA from "Deploy with ElevenLabs" to "Deploy with Creative Tim"
+- **CLI Commands**: Updated block-viewer to show correct shadcn CLI URL (`ui.creative-tim.com`)
+- **Site Configuration**: Updated footer, site config, and metadata throughout the application
+- **Preserved Dependencies**: Kept @elevenlabs/* npm packages intact as they are external audio processing dependencies
+- **Build System**: Successfully rebuilt registry and restarted server with all changes applied
+
 ## System Architecture
 
 ### Monorepo Structure
