@@ -2,9 +2,17 @@
 
 import { useState } from "react"
 
-import { Avatar, AvatarFallback, AvatarImage } from "@/registry/creative-tim-ui/ui/avatar"
+import {
+  Avatar,
+  AvatarFallback,
+  AvatarImage,
+} from "@/registry/creative-tim-ui/ui/avatar"
 import { Button } from "@/registry/creative-tim-ui/ui/button"
-import { Card, CardContent, CardHeader } from "@/registry/creative-tim-ui/ui/card"
+import {
+  Card,
+  CardContent,
+  CardHeader,
+} from "@/registry/creative-tim-ui/ui/card"
 
 const DATA = [
   {
@@ -48,14 +56,14 @@ export default function Web305() {
   return (
     <section className="container mx-auto py-16">
       <Card className="border shadow-sm">
-        <CardHeader className="p-6 flex flex-row items-start justify-between gap-6 flex-wrap">
+        <CardHeader className="flex flex-row flex-wrap items-start justify-between gap-6 p-6">
           <div>
-            <h1 className="text-2xl font-bold mb-1">Top Creators</h1>
-            <p className="text-lg text-muted-foreground max-w-2xl">
+            <h1 className="mb-1 text-2xl font-bold">Top Creators</h1>
+            <p className="text-muted-foreground max-w-2xl text-lg">
               The most sought-after collections across the entire ecosystem.
             </p>
           </div>
-          <div className="flex items-center flex-wrap gap-2">
+          <div className="flex flex-wrap items-center gap-2">
             <Button
               size="sm"
               variant={timeFrame === "hour" ? "default" : "outline"}
@@ -79,12 +87,12 @@ export default function Web305() {
             </Button>
           </div>
         </CardHeader>
-        <CardContent className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6 px-6 pb-6 pt-0">
+        <CardContent className="grid grid-cols-1 gap-6 px-6 pt-0 pb-6 md:grid-cols-2 lg:grid-cols-3">
           {DATA.map(({ tokenId, profileImg, name, desc, imgs }, key) => (
             <Card key={key} className="flex flex-col justify-between">
               <CardHeader className="p-4">
                 <p className="font-semibold">{tokenId}</p>
-                <div className="mt-4 flex flex-wrap gap-4 items-start justify-between">
+                <div className="mt-4 flex flex-wrap items-start justify-between gap-4">
                   <div className="flex items-start gap-3">
                     <Avatar>
                       <AvatarImage src={profileImg} alt={name} />
@@ -92,7 +100,7 @@ export default function Web305() {
                     </Avatar>
                     <div>
                       <p className="font-semibold">{name}</p>
-                      <p className="text-sm text-muted-foreground">{desc}</p>
+                      <p className="text-muted-foreground text-sm">{desc}</p>
                     </div>
                   </div>
                   <Button size="sm" variant="outline">
@@ -100,13 +108,13 @@ export default function Web305() {
                   </Button>
                 </div>
               </CardHeader>
-              <CardContent className="p-4 grid grid-cols-3 gap-4">
+              <CardContent className="grid grid-cols-3 gap-4 p-4">
                 {imgs.map((img, idx) => (
                   <img
                     key={idx}
                     src={img}
                     alt={`nft-${idx}`}
-                    className="h-full w-full min-h-24 object-center object-cover rounded-lg"
+                    className="h-full min-h-24 w-full rounded-lg object-cover object-center"
                   />
                 ))}
               </CardContent>
