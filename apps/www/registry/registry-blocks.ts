@@ -2125,4 +2125,118 @@ export const blocks: Registry["items"] = [
     },
     categories: ["modals"],
   },
+  {
+    name: "modals-06",
+    description: "Publish capsule collection modal with metadata display",
+    type: "registry:block",
+    registryDependencies: ["dialog", "button", "card"],
+    files: [
+      {
+        path: "blocks/modals-06/page.tsx",
+        type: "registry:page",
+        target: "app/modals-06/page.tsx",
+      },
+    ],
+    meta: {
+      iframeHeight: "650px",
+      container: "w-full bg-surface",
+      mobile: "component",
+    },
+    categories: ["modals"],
+  },
+  {
+    name: "modals-07",
+    description: "Change collection visibility settings modal",
+    type: "registry:block",
+    registryDependencies: ["dialog", "button"],
+    files: [
+      {
+        path: "blocks/modals-07/page.tsx",
+        type: "registry:page",
+        target: "app/modals-07/page.tsx",
+      },
+    ],
+    meta: {
+      iframeHeight: "500px",
+      container: "w-full bg-surface",
+      mobile: "component",
+    },
+    categories: ["modals"],
+  },
+  {
+    name: "modals-08",
+    description: "Disable collection lock rules modal with alert and impact list",
+    type: "registry:block",
+    registryDependencies: ["dialog", "button", "card"],
+    files: [
+      {
+        path: "blocks/modals-08/page.tsx",
+        type: "registry:page",
+        target: "app/modals-08/page.tsx",
+      },
+    ],
+    meta: {
+      iframeHeight: "750px",
+      container: "w-full bg-surface",
+      mobile: "component",
+    },
+    categories: ["modals"],
+  },
+  {
+    name: "modals-09",
+    description: "Transfer showroom ownership modal with form fields and warning",
+    type: "registry:block",
+    registryDependencies: ["dialog", "button", "input", "label", "select", "card"],
+    files: [
+      {
+        path: "blocks/modals-09/page.tsx",
+        type: "registry:page",
+        target: "app/modals-09/page.tsx",
+      },
+    ],
+    meta: {
+      iframeHeight: "750px",
+      container: "w-full bg-surface",
+      mobile: "component",
+    },
+    categories: ["modals"],
+  },
+  {
+    name: "modals-10",
+    description: "Permanently remove archive modal with effects list",
+    type: "registry:block",
+    registryDependencies: ["dialog", "button", "card"],
+    files: [
+      {
+        path: "blocks/modals-10/page.tsx",
+        type: "registry:page",
+        target: "app/modals-10/page.tsx",
+      },
+    ],
+    meta: {
+      iframeHeight: "750px",
+      container: "w-full bg-surface",
+      mobile: "component",
+    },
+    categories: ["modals"],
+  },
+  {
+    name: "modals-11",
+    description: "Confirm vault deletion modal with text input verification",
+    type: "registry:block",
+    registryDependencies: ["dialog", "button", "input", "label"],
+    files: [
+      {
+        path: "blocks/modals-11/page.tsx",
+        type: "registry:page",
+        target: "app/modals-11/page.tsx",
+      },
+    ],
+    meta: {
+      iframeHeight: "550px",
+      container: "w-full bg-surface",
+      mobile: "component",
+    },
+    categories: ["modals"],
+  },
 ]
