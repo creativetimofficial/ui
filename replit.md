@@ -104,6 +104,31 @@ Preferred communication style: Simple, everyday language.
 
 ## Recent Changes
 
+### Testimonial Blocks Addition (October 14, 2025)
+- **New Category**: Added "Testimonials" category to the component registry (visible at /blocks/testimonials)
+- **Component Conversion**: Migrated 17 testimonial blocks from Material Tailwind to shadcn UI design system
+  - testimonials-01: Simple centered testimonials with avatars
+  - testimonials-02: Testimonial cards with social proof badges
+  - testimonials-03: Testimonial with statistics and metrics
+  - testimonials-04: Three column testimonials with star ratings
+  - testimonials-05: Dark testimonials with avatar and star ratings
+  - testimonials-06: Company logo testimonial with large quote
+  - testimonials-07: Interactive testimonials with profile switcher
+  - testimonials-08: Light testimonials with star ratings
+  - testimonials-09: Customer story with large heading and avatar
+  - testimonials-10: Monochromatic testimonials with company logos
+  - testimonials-11: Testimonial cards with focus state
+  - testimonials-12: Grid layout testimonials with company logos
+  - testimonials-13: Dark card testimonial with rounded avatar
+  - testimonials-14: Light testimonials with card shadow
+  - testimonials-15: Testimonials with submit button
+  - testimonials-16: Dark carousel testimonials with navigation
+  - testimonials-17: Background image carousel testimonials
+- **Registry Integration**: All testimonial blocks registered in registry-blocks.ts with proper metadata and CLI installation support
+- **Category Configuration**: Added "Testimonials" category to registry-categories.ts for blocks page navigation
+- **Design Pattern**: Testimonial blocks using shadcn UI primitives (Avatar, Badge, Button, Card) with responsive layouts and interactive features
+- **Total Registry Items**: Registry now contains 140+ total items (125+ blocks plus UI components, examples, and hooks)
+
 ### Footer Blocks Addition (October 14, 2025)
 - **New Category**: Added "Footers" category to the component registry (visible at /blocks/footers)
 - **Component Conversion**: Migrated 15 footer blocks from Material Tailwind to shadcn UI design system
@@ -125,7 +150,6 @@ Preferred communication style: Simple, everyday language.
 - **Registry Integration**: All footer blocks registered in registry-blocks.ts with proper metadata and CLI installation support
 - **Category Configuration**: Added "Footers" category to registry-categories.ts for blocks page navigation
 - **Design Pattern**: Footer blocks using shadcn UI primitives (Button, Badge, Card, Checkbox, Input, Label, Select) with responsive layouts
-- **Total Registry Items**: Registry now contains 123+ total items (108+ blocks plus UI components, examples, and hooks)
 
 ### CRUD Blocks Addition (October 14, 2025)
 - **New Category**: Added "CRUDs" category to the component registry (visible at /blocks/cruds)
