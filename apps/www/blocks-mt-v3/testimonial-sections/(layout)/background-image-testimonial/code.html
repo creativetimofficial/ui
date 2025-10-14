@@ -1,0 +1,77 @@
+<section class="container mx-auto py-16 relative overflow-hidden">
+  <!-- Slider Container -->
+  <div class="relative w-full mx-auto overflow-hidden rounded-md">
+    <!-- Slider Wrapper -->
+    <div id="slider-wrapper" class="flex transition-transform duration-500 ease-in-out ">
+      <!-- Slide 1 -->
+      <div class="slide flex-shrink-0 w-full flex justify-center items-center text-center text-white bg-slate-800 p-10 bg-[url('https://v3.material-tailwind.com/earth-outer-space.jpg')] bg-cover bg-centered" >
+        <div class="px-4 sm:px-12 pt-4 sm:pt-16 md:pt-24 pb-24 items-center w-full grid grid-cols-1 gap-8 md:grid-cols-12">
+          <div class="col-span-full text-left md:col-span-8 pl-4 md:row-start-auto row-start-2">
+            <h6 class="font-sans antialiased text-base md:text-lg lg:text-xl text-white font-medium mb-8 [text-wrap:_balance]">"
+              <!-- -->Knowledge is either from direct experience or from verifiable, falsifiable science. There is knowledge that is transmitted but not verifiable / falsifiable. They're slowed down by their perception of themselves.
+              <!-- -->"
+            </h6>
+            <div class="flex items-center gap-2">
+              <p class="font-sans antialiased text-base text-white font-medium text-center">Louis Miriam</p>
+              <small class="font-sans antialiased text-sm block text-white/80 text-center">COO @ Netflix</small>
+            </div>
+          </div>
+          <div class="col-span-full md:col-span-4 grid justify-items-start md:justify-items-end">
+            <img src="https://v3.material-tailwind.com/logo/netflix.svg" alt="company logo" class="h-20 md:h-24 md:mx-auto md:mb-8">
+          </div>
+        </div>
+      </div>
+      <!-- Duplicate Slide 1 for other slides if needed or add new content -->
+      <div class="slide flex-shrink-0 w-full flex justify-center items-center text-center text-white bg-slate-800 bg-[url('https://v3.material-tailwind.com/earth-outer-space.jpg')] bg-cover bg-centered p-10">
+        <div class="px-4 sm:px-12 pt-4 sm:pt-16 md:pt-24 pb-24 items-center w-full grid grid-cols-1 gap-8 md:grid-cols-12">
+          <div class="col-span-full text-left md:col-span-8 pl-4 md:row-start-auto row-start-2">
+            <h6 class="font-sans antialiased text-base md:text-lg lg:text-xl text-white font-medium mb-8 [text-wrap:_balance]">"
+              <!-- -->Knowledge is either from direct experience or from verifiable, falsifiable science. There is knowledge that is transmitted but not verifiable / falsifiable. They're slowed down by their perception of themselves.
+              <!-- -->"
+            </h6>
+            <div class="flex items-center gap-2">
+              <p class="font-sans antialiased text-base text-white font-medium text-center">John Down</p>
+              <small class="font-sans antialiased text-sm block text-white/80 text-center">CEO @ Coinbase</small>
+            </div>
+          </div>
+          <div class="col-span-full md:col-span-4 grid justify-items-start md:justify-items-end">
+            <img src="https://v3.material-tailwind.com/logo/coinbase.svg" alt="company logo" class="h-20 md:h-24 md:mx-auto md:mb-8">
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Navigation Buttons -->
+    <button class="absolute left-0 inset-y-1/2 transform -translate-y-1/2 p-2 z-10" onclick="prevSlide()">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 text-white">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+      </svg>
+    </button>
+    <button class="absolute right-0 inset-y-1/2 transform -translate-y-1/2 p-2 z-10" onclick="nextSlide()">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 text-white">
+        <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+      </svg>
+    </button>
+  </div>
+</section>
+<script>
+  let currentSlide = 0;
+  const sliderWrapper = document.getElementById('slider-wrapper');
+  const slides = document.querySelectorAll('#slider-wrapper .slide');
+  const totalSlides = slides.length;
+
+  function updateSlidePosition() {
+    sliderWrapper.style.transform = `translateX(-${currentSlide * 100}%)`;
+  }
+
+  function nextSlide() {
+    currentSlide = (currentSlide + 1) % totalSlides;
+    updateSlidePosition();
+  }
+
+  function prevSlide() {
+    currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+    updateSlidePosition();
+  }
+  // Auto-slide every 2 seconds
+  setInterval(nextSlide, 2000);
+</script>
