@@ -2,11 +2,16 @@
 
 import * as React from "react";
 import { useRouter } from "next/navigation";
-import { AuthAPI } from "@/lib/auth";
+import { AuthAPI } from "@/lib/auth/auth";
 import { useAuth } from "@/components/auth/AuthProvider";
 import { setAccessToken, clearAccessToken } from "@/lib/session";
-import { normalizeAccessToken } from "@/lib/normalizers";
-// import { HeroTestimonial } from "@/components/HeroTestimonial";
+import { normalizeAccessToken } from "@/lib/auth/normalizers";
+import { HeroTestimonial } from "@/components/auth/HeroTestimonial";
+import { Input } from "@/registry/elevenlabs-ui/ui/input";
+import { Label } from "@/registry/elevenlabs-ui/ui/label";
+import { GoogleLogin } from "@/components/auth/GoogleLogin";
+import { Button } from "@/registry/elevenlabs-ui/ui/button";
+import { googleLogin } from "@/lib/auth/googleLogin";
 
 export default function LoginPage() {
   const router = useRouter();
@@ -17,60 +22,19 @@ export default function LoginPage() {
   const [error, setError] = React.useState<string | null>(null);
   const [loading, setLoading] = React.useState(false);
 
-  const googleDivRef = React.useRef<HTMLDivElement>(null);
-
   const handleGoogleLogin = React.useCallback(
-    async (idToken: string) => {
-      try {
-        const res = await fetch(
-          `${process.env.NEXT_PUBLIC_RAILS_BASE_URL}/api/v1/auth/google`,
-          {
-            method: "POST",
-            credentials: "include",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ token: idToken }),
-          }
-        );
-        if (!res.ok) throw new Error("Google login failed");
-        router.push("/dashboard");
-      } catch (err) {
-        console.error(err);
-        setError(err instanceof Error ? err.message : "Google login failed");
-      }
-    },
-    [router]
-  );
-
-  React.useEffect(() => {
-    if (!bootstrapDone || user) return;
-
-    const clientId = process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID;
-    if (!clientId) {
-      console.warn("Missing NEXT_PUBLIC_GOOGLE_CLIENT_ID");
-      return;
+  async (idToken: string) => {
+    try {
+      await googleLogin(idToken);
+      router.push("/dashboard");
+    } catch (err) {
+      console.error(err);
+      setError(err instanceof Error ? err.message : "Google login failed");
     }
+  },
+  [router]
+);
 
-    let cancelled = false;
-    if (!cancelled && window.google && googleDivRef.current) {
-      window.google.accounts.id.initialize({
-        client_id: clientId,
-        callback: ({ credential }) => handleGoogleLogin(credential),
-      });
-
-      // Important for React 18 StrictMode double-mount
-      googleDivRef.current.innerHTML = "";
-      window.google.accounts.id.renderButton(googleDivRef.current, {
-        type: "standard",
-        theme: "outline",
-        size: "large",
-        width: 320,
-      });
-    }
-
-    return () => {
-      cancelled = true;
-    };
-  }, [bootstrapDone, user, handleGoogleLogin]);
 
   async function handleLogin(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -127,41 +91,44 @@ export default function LoginPage() {
                 </div>
               </div>
               <div className="mt-6 space-y-3">
-                <button
+                <Button
                   onClick={() => router.push("/dashboard")}
-                  className="w-full py-2.5 rounded-lg bg-black text-white font-medium hover:bg-black/90 focus:outline-none focus:ring-2 focus:ring-black"
+                  className="w-full py-2.5"
                 >
                   Go to dashboard
-                </button>
-                <button
+                </Button>
+                <Button
+                  variant="outline"
                   onClick={handleLogout}
-                  className="w-full py-2.5 rounded-lg border border-slate-300 font-medium hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-slate-300"
+                  className="w-full py-2.5"
                 >
                   Logout
-                </button>
+                </Button>
               </div>
             </div>
           ) : (
             <div className="w-full">
-              {/* Header matches the AuthForm typography */}
-              <h2 className="text-3xl font-bold leading-tight sm:text-3xl mt-16">
+              {/* Header with ElevenLabs styling */}
+              <h2 className="mt-16 text-3xl font-bold leading-tight sm:text-3xl text-slate-900">
                 Sign In
               </h2>
-              <p className="mt-2 text-base text-slate-500 mb-8">
+              <p className="mt-2 text-base text-muted-foreground mb-8">
                 Enter your email and password to continue
               </p>
 
               {/* Google button (kept as your One Tap/rendered button) */}
               <div className="mb-6">
-                <div className="w-full border border-slate-300 shadow-xs rounded-lg p-4 flex items-center justify-center">
-                  <div ref={googleDivRef} className="flex justify-center" />
-                </div>
+                <GoogleLogin
+                  onCredential={handleGoogleLogin}
+                  onError={(e) => setError(e instanceof Error ? e.message : String(e))}
+                  className="w-full"
+                />
                 <div className="relative my-6">
                   <div className="absolute inset-0 flex items-center">
                     <span className="w-full border-t" />
                   </div>
                   <div className="relative flex justify-center text-xs uppercase">
-                    <span className="bg-white px-2 text-slate-600">Or</span>
+                    <span className="bg-white px-2 text-muted-foreground font-semibold">Or</span>
                   </div>
                 </div>
               </div>
@@ -172,57 +139,59 @@ export default function LoginPage() {
                   <p className="text-red-500 text-sm my-4">{error}</p>
                 )}
 
-                <label className="text-sm font-semibold mb-2 block text-slate-900">
+                <Label htmlFor="email" className="text-sm font-semibold mb-2 block text-slate-900">
                   Email Address
-                </label>
-                <input
+                </Label>
+                <Input
+                  id="email"
                   type="email"
                   placeholder="Your email address"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   autoComplete="email"
                   required
-                  className="w-full rounded-lg border border-slate-300 px-3 py-2.5 shadow-sm focus:outline-none focus:ring-2 focus:ring-black"
                 />
 
-                <label className="text-sm font-semibold mb-2 mt-4 block text-slate-900">
+                <Label htmlFor="password" className="text-sm font-semibold mb-2 mt-4 block text-slate-900">
                   Password
-                </label>
-                <input
+                </Label>
+                <Input
+                  id="password"
                   type="password"
                   placeholder="Your password"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   autoComplete="current-password"
                   required
-                  className="w-full rounded-lg border border-slate-300 px-3 py-2.5 shadow-sm focus:outline-none focus:ring-2 focus:ring-black"
                 />
 
-                <button
+                <Button
                   type="submit"
                   disabled={loading}
-                  className="mt-5 w-full rounded-lg bg-black text-white font-medium py-2.5 disabled:opacity-50 hover:bg-black/90 focus:outline-none focus:ring-2 focus:ring-black"
+                  className="mt-5 w-full cursor-pointer"
                 >
                   {loading ? "Signing in…" : "Sign In"}
-                </button>
+                </Button>
               </form>
 
               {/* Footer link matching your AuthForm CTA */}
-              <div className="mt-8 text-center">
-                <button
+              <div className="mt-8 text-center text-muted-foreground text-sm">
+                Don&apos;t have an account?{" "}
+                <Button
                   type="button"
+                  variant="link"
+                  className="underline underline-offset-4 transition-colors cursor-pointer p-0 h-auto text-muted-foreground"
                   onClick={() => router.push("/signup")}
-                  className="text-slate-500 font-medium text-sm hover:underline"
                 >
-                  Don&apos;t have an account? <span className="underline">Create Account</span>
-                </button>
+                  Create an account
+                </Button>
               </div>
             </div>
           )}
         </div>
 
         {/* Right column: reuses your existing HeroTestimonial component */}
-        {/* <HeroTestimonial /> */}
+        <HeroTestimonial />
       </div>
     </div>
   );
