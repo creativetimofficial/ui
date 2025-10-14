@@ -54,4 +54,9 @@ export const registryCategories = [
     slug: "testimonials",
     hidden: false,
   },
+  {
+    name: "Modals",
+    slug: "modals",
+    hidden: false,
+  },
 ]
