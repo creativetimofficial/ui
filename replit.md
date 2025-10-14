@@ -214,3 +214,18 @@ Preferred communication style: Simple, everyday language.
 - **Documentation**: Created comprehensive private-registry.md guide with usage examples, security best practices, and error handling
 - **Environment Setup**: Added .env.example with API_KEY configuration template
 - **Total Private Components**: 2 components (testimonials-03, testimonials-04) secured with authentication
+
+### PRO Component UI Restrictions (October 14, 2025)
+- **Authentication Library**: Created `/lib/auth.ts` with dummy authentication functions for PRO feature access control
+  - `isUserLoggedIn()`: Checks if user is authenticated (currently returns false - to be implemented)
+  - `hasProAccess()`: Verifies PRO subscription status (currently returns false - to be implemented)
+  - `isProComponent()`: Identifies if a component requires PRO access (testimonials-03, testimonials-04)
+  - `canAccessComponent()`: Determines if user can access a specific component
+- **UI Enhancements**: Updated BlockViewer component (`components/block-viewer.tsx`) with PRO restrictions
+  - **PRO Badge**: Golden gradient badge displayed next to component description for private components
+  - **Disabled npx Command**: Install command button is disabled and grayed out for PRO components without access
+  - **Disabled Code Tab**: Code tab is disabled for PRO components, preventing unauthorized source code access
+  - **Locked Code View**: Shows upgrade prompt with PRO badge and "Upgrade to PRO" button when accessing code without permission
+- **Visual Design**: PRO badge uses gradient background (amber-500 to orange-500) for premium feel
+- **User Experience**: Clear visual indicators and helpful messages guide users to upgrade for PRO features
+- **Implementation Status**: All UI restrictions active with dummy auth (always blocks access), ready for real authentication integration
