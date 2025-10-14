@@ -1378,6 +1378,60 @@ export const Index: Record<string, any> = {
     categories: ["web3"],
     meta: {"iframeHeight":"1000px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component"},
   },
+  "cruds-01": {
+    name: "cruds-01",
+    description: "Edit apparel item form with product details",
+    type: "registry:block",
+    registryDependencies: ["button","card","input","label","select","textarea"],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/cruds-01/page.tsx",
+      type: "registry:page",
+      target: "app/cruds-01/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/cruds-01/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["cruds"],
+    meta: {"iframeHeight":"1000px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component"},
+  },
+  "cruds-02": {
+    name: "cruds-02",
+    description: "Update retail staff profile form",
+    type: "registry:block",
+    registryDependencies: ["button","card","input","label"],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/cruds-02/page.tsx",
+      type: "registry:page",
+      target: "app/cruds-02/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/cruds-02/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["cruds"],
+    meta: {"iframeHeight":"800px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component"},
+  },
+  "cruds-03": {
+    name: "cruds-03",
+    description: "Stylist account settings with profile photo upload",
+    type: "registry:block",
+    registryDependencies: ["button","card","input","label","select"],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/cruds-03/page.tsx",
+      type: "registry:page",
+      target: "app/cruds-03/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/cruds-03/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["cruds"],
+    meta: {"iframeHeight":"1200px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component"},
+  },
   "use-mobile": {
     name: "use-mobile",
     description: "",

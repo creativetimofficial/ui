@@ -26,7 +26,7 @@ export default function Cruds03() {
             <Label htmlFor="avatar">Profile Photo</Label>
             <div className="flex items-center gap-4">
               <div className="flex h-24 w-24 items-center justify-center rounded-lg border-2 border-dashed">
-                <Upload className="h-8 w-8 text-muted-foreground" />
+                <Upload className="text-muted-foreground h-8 w-8" />
               </div>
               <div className="flex-1">
                 <p className="text-muted-foreground text-sm">

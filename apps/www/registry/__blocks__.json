@@ -303,5 +303,20 @@
     "name": "web3-05",
     "description": "Top NFT creators with time filter",
     "categories": ["web3"]
+  },
+  {
+    "name": "cruds-01",
+    "description": "Edit apparel item form with product details",
+    "categories": ["cruds"]
+  },
+  {
+    "name": "cruds-02",
+    "description": "Update retail staff profile form",
+    "categories": ["cruds"]
+  },
+  {
+    "name": "cruds-03",
+    "description": "Stylist account settings with profile photo upload",
+    "categories": ["cruds"]
   }
 ]
