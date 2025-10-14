@@ -49,4 +49,9 @@ export const registryCategories = [
     slug: "footers",
     hidden: false,
   },
+  {
+    name: "Testimonials",
+    slug: "testimonials",
+    hidden: false,
+  },
 ]
