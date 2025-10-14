@@ -6,9 +6,9 @@ const PRIVATE_COMPONENTS = ["testimonials-03", "testimonials-04"]
 
 export async function GET(
   request: NextRequest,
-  { params }: { params: { name: string } }
+  { params }: { params: Promise<{ name: string }> }
 ) {
-  const componentName = params.name
+  const { name: componentName } = await params
 
   if (!PRIVATE_COMPONENTS.includes(componentName)) {
     return NextResponse.json(
