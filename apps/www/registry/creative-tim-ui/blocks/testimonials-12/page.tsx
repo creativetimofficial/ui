@@ -1,32 +1,36 @@
-"use client";
+"use client"
 
-import { Card, CardContent, CardFooter } from "@/registry/creative-tim-ui/ui/card";
+import {
+  Card,
+  CardContent,
+  CardFooter,
+} from "@/registry/creative-tim-ui/ui/card"
 
 export default function TestimonialsBlock() {
   return (
     <section className="py-16">
       <div className="container mx-auto px-4">
         <div className="mb-16 max-w-lg">
-          <h2 className="text-3xl font-bold mb-4">
+          <h2 className="mb-4 text-3xl font-bold">
             The heartfelt testimonials of our community
           </h2>
-          <p className="text-lg text-muted-foreground">
+          <p className="text-muted-foreground text-lg">
             From life-enhancing gadgets to unparalleled customer support, and
             transformative learning opportunities.
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <Card className="grid bg-secondary/40">
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+          <Card className="bg-secondary/40 grid">
             <CardContent className="p-6">
-              <blockquote className="text-2xl font-medium md:text-start text-center">
+              <blockquote className="text-center text-2xl font-medium md:text-start">
                 &quot;The team went above and beyond to ensure my issue was
                 resolved quickly and efficiently. Truly outstanding!&quot;
               </blockquote>
             </CardContent>
-            <CardFooter className="flex flex-col md:flex-row text-center md:text-start px-6 pb-6 items-center justify-between gap-4">
+            <CardFooter className="flex flex-col items-center justify-between gap-4 px-6 pb-6 text-center md:flex-row md:text-start">
               <div>
                 <p className="font-semibold">Jessica Devis</p>
-                <p className="text-sm text-muted-foreground">
+                <p className="text-muted-foreground text-sm">
                   Full Stack Developer @Netflix
                 </p>
               </div>
@@ -37,51 +41,51 @@ export default function TestimonialsBlock() {
               />
             </CardFooter>
           </Card>
-          <Card className="grid bg-secondary/40">
+          <Card className="bg-secondary/40 grid">
             <CardContent className="p-6">
-              <blockquote className="text-2xl font-medium md:text-start text-center">
+              <blockquote className="text-center text-2xl font-medium md:text-start">
                 &quot;It have broadened my horizons and helped me advance my
                 career. The community is incredibly supportive.&quot;
               </blockquote>
             </CardContent>
-            <CardFooter className="flex flex-col md:flex-row mt-auto px-6 pb-6 text-center md:text-start items-center justify-between gap-4">
+            <CardFooter className="mt-auto flex flex-col items-center justify-between gap-4 px-6 pb-6 text-center md:flex-row md:text-start">
               <div>
                 <p className="font-semibold">Marcell Glock</p>
-                <p className="text-sm text-muted-foreground">
+                <p className="text-muted-foreground text-sm">
                   Graphic Designer, @Coinbase
                 </p>
               </div>
               <img
                 src="https://v3.material-tailwind.com/logo/coinbase.svg"
                 alt="logo"
-                className="h-14 grayscale brightness-75"
+                className="h-14 brightness-75 grayscale"
               />
             </CardFooter>
           </Card>
-          <Card className="grid bg-secondary/40 col-span-full">
+          <Card className="bg-secondary/40 col-span-full grid">
             <CardContent className="p-6">
-              <blockquote className="text-2xl font-medium text-center">
+              <blockquote className="text-center text-2xl font-medium">
                 &quot;Its intuitive design and powerful features make it
                 indispensable. I can&apos;t imagine going back to life before
                 it!&quot;
               </blockquote>
             </CardContent>
-            <CardFooter className="flex flex-col text-center mt-auto px-6 pb-6 items-center justify-center gap-4">
+            <CardFooter className="mt-auto flex flex-col items-center justify-center gap-4 px-6 pb-6 text-center">
               <div>
                 <p className="font-semibold">Emma Roberts</p>
-                <p className="text-sm text-muted-foreground">
+                <p className="text-muted-foreground text-sm">
                   Chief Executive @Spotify
                 </p>
               </div>
               <img
                 src="https://v3.material-tailwind.com/logo/spotify.svg"
                 alt="logo"
-                className="h-14 grayscale brightness-50"
+                className="h-14 brightness-50 grayscale"
               />
             </CardFooter>
           </Card>
         </div>
       </div>
     </section>
-  );
+  )
 }

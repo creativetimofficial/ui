@@ -1702,6 +1702,312 @@ export const Index: Record<string, any> = {
     categories: ["footers"],
     meta: {"iframeHeight":"400px","container":"w-full bg-surface","mobile":"component"},
   },
+  "testimonials-01": {
+    name: "testimonials-01",
+    description: "Simple centered testimonials with avatars",
+    type: "registry:block",
+    registryDependencies: ["avatar","card","badge"],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/testimonials-01/page.tsx",
+      type: "registry:page",
+      target: "app/testimonials-01/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/testimonials-01/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["testimonials"],
+    meta: {"iframeHeight":"700px","container":"w-full bg-surface","mobile":"component"},
+  },
+  "testimonials-02": {
+    name: "testimonials-02",
+    description: "Testimonial cards with social proof badges",
+    type: "registry:block",
+    registryDependencies: ["avatar","card"],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/testimonials-02/page.tsx",
+      type: "registry:page",
+      target: "app/testimonials-02/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/testimonials-02/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["testimonials"],
+    meta: {"iframeHeight":"900px","container":"w-full bg-surface","mobile":"component"},
+  },
+  "testimonials-03": {
+    name: "testimonials-03",
+    description: "Testimonial with statistics and metrics",
+    type: "registry:block",
+    registryDependencies: ["card"],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/testimonials-03/page.tsx",
+      type: "registry:page",
+      target: "app/testimonials-03/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/testimonials-03/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["testimonials"],
+    meta: {"iframeHeight":"500px","container":"w-full bg-surface","mobile":"component"},
+  },
+  "testimonials-04": {
+    name: "testimonials-04",
+    description: "Three column testimonials with star ratings",
+    type: "registry:block",
+    registryDependencies: ["card"],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/testimonials-04/page.tsx",
+      type: "registry:page",
+      target: "app/testimonials-04/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/testimonials-04/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["testimonials"],
+    meta: {"iframeHeight":"700px","container":"w-full bg-surface","mobile":"component"},
+  },
+  "testimonials-05": {
+    name: "testimonials-05",
+    description: "Dark testimonials with avatar and star ratings",
+    type: "registry:block",
+    registryDependencies: ["avatar","card"],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/testimonials-05/page.tsx",
+      type: "registry:page",
+      target: "app/testimonials-05/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/testimonials-05/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["testimonials"],
+    meta: {"iframeHeight":"700px","container":"w-full bg-surface","mobile":"component"},
+  },
+  "testimonials-06": {
+    name: "testimonials-06",
+    description: "Company logo testimonial with large quote",
+    type: "registry:block",
+    registryDependencies: ["avatar","card"],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/testimonials-06/page.tsx",
+      type: "registry:page",
+      target: "app/testimonials-06/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/testimonials-06/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["testimonials"],
+    meta: {"iframeHeight":"500px","container":"w-full bg-surface","mobile":"component"},
+  },
+  "testimonials-07": {
+    name: "testimonials-07",
+    description: "Interactive testimonials with profile switcher",
+    type: "registry:block",
+    registryDependencies: ["avatar"],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/testimonials-07/page.tsx",
+      type: "registry:page",
+      target: "app/testimonials-07/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/testimonials-07/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["testimonials"],
+    meta: {"iframeHeight":"600px","container":"w-full bg-surface","mobile":"component"},
+  },
+  "testimonials-08": {
+    name: "testimonials-08",
+    description: "Light testimonials with star ratings",
+    type: "registry:block",
+    registryDependencies: ["avatar","card"],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/testimonials-08/page.tsx",
+      type: "registry:page",
+      target: "app/testimonials-08/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/testimonials-08/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["testimonials"],
+    meta: {"iframeHeight":"700px","container":"w-full bg-surface","mobile":"component"},
+  },
+  "testimonials-09": {
+    name: "testimonials-09",
+    description: "Customer story with large heading and avatar",
+    type: "registry:block",
+    registryDependencies: ["avatar","card"],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/testimonials-09/page.tsx",
+      type: "registry:page",
+      target: "app/testimonials-09/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/testimonials-09/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["testimonials"],
+    meta: {"iframeHeight":"500px","container":"w-full bg-surface","mobile":"component"},
+  },
+  "testimonials-10": {
+    name: "testimonials-10",
+    description: "Monochromatic testimonials with company logos",
+    type: "registry:block",
+    registryDependencies: ["badge","card","button"],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/testimonials-10/page.tsx",
+      type: "registry:page",
+      target: "app/testimonials-10/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/testimonials-10/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["testimonials"],
+    meta: {"iframeHeight":"700px","container":"w-full bg-surface","mobile":"component"},
+  },
+  "testimonials-11": {
+    name: "testimonials-11",
+    description: "Testimonial cards with focus state",
+    type: "registry:block",
+    registryDependencies: ["avatar","card"],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/testimonials-11/page.tsx",
+      type: "registry:page",
+      target: "app/testimonials-11/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/testimonials-11/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["testimonials"],
+    meta: {"iframeHeight":"700px","container":"w-full bg-surface","mobile":"component"},
+  },
+  "testimonials-12": {
+    name: "testimonials-12",
+    description: "Grid layout testimonials with company logos",
+    type: "registry:block",
+    registryDependencies: ["card"],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/testimonials-12/page.tsx",
+      type: "registry:page",
+      target: "app/testimonials-12/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/testimonials-12/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["testimonials"],
+    meta: {"iframeHeight":"800px","container":"w-full bg-surface","mobile":"component"},
+  },
+  "testimonials-13": {
+    name: "testimonials-13",
+    description: "Dark card testimonial with rounded avatar",
+    type: "registry:block",
+    registryDependencies: ["avatar","card"],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/testimonials-13/page.tsx",
+      type: "registry:page",
+      target: "app/testimonials-13/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/testimonials-13/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["testimonials"],
+    meta: {"iframeHeight":"500px","container":"w-full bg-surface","mobile":"component"},
+  },
+  "testimonials-14": {
+    name: "testimonials-14",
+    description: "Light testimonials with card shadow",
+    type: "registry:block",
+    registryDependencies: ["avatar","card"],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/testimonials-14/page.tsx",
+      type: "registry:page",
+      target: "app/testimonials-14/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/testimonials-14/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["testimonials"],
+    meta: {"iframeHeight":"700px","container":"w-full bg-surface","mobile":"component"},
+  },
+  "testimonials-15": {
+    name: "testimonials-15",
+    description: "Testimonials with submit button",
+    type: "registry:block",
+    registryDependencies: ["card"],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/testimonials-15/page.tsx",
+      type: "registry:page",
+      target: "app/testimonials-15/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/testimonials-15/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["testimonials"],
+    meta: {"iframeHeight":"600px","container":"w-full bg-surface","mobile":"component"},
+  },
+  "testimonials-16": {
+    name: "testimonials-16",
+    description: "Dark carousel testimonials with navigation",
+    type: "registry:block",
+    registryDependencies: ["card","button"],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/testimonials-16/page.tsx",
+      type: "registry:page",
+      target: "app/testimonials-16/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/testimonials-16/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["testimonials"],
+    meta: {"iframeHeight":"600px","container":"w-full bg-surface","mobile":"component"},
+  },
+  "testimonials-17": {
+    name: "testimonials-17",
+    description: "Background image carousel testimonials",
+    type: "registry:block",
+    registryDependencies: ["card","button"],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/testimonials-17/page.tsx",
+      type: "registry:page",
+      target: "app/testimonials-17/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/testimonials-17/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["testimonials"],
+    meta: {"iframeHeight":"600px","container":"w-full bg-surface","mobile":"component"},
+  },
   "use-mobile": {
     name: "use-mobile",
     description: "",

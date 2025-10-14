@@ -1,9 +1,10 @@
-"use client";
+"use client"
 
-import * as React from "react";
-import { Card, CardContent } from "@/registry/creative-tim-ui/ui/card";
-import { Button } from "@/registry/creative-tim-ui/ui/button";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import * as React from "react"
+import { ChevronLeft, ChevronRight } from "lucide-react"
+
+import { Button } from "@/registry/creative-tim-ui/ui/button"
+import { Card, CardContent } from "@/registry/creative-tim-ui/ui/card"
 
 const SLIDES = [
   {
@@ -30,52 +31,52 @@ const SLIDES = [
     quote:
       "We're not always in the position that we want to be at. We're constantly growing. We're constantly making mistakes. We're constantly trying to express ourselves and actualize our dreams.",
   },
-];
+]
 
 export default function TestimonialsBlock() {
-  const [currentSlide, setCurrentSlide] = React.useState(0);
+  const [currentSlide, setCurrentSlide] = React.useState(0)
 
   const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % SLIDES.length);
-  };
+    setCurrentSlide((prev) => (prev + 1) % SLIDES.length)
+  }
 
   const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + SLIDES.length) % SLIDES.length);
-  };
+    setCurrentSlide((prev) => (prev - 1 + SLIDES.length) % SLIDES.length)
+  }
 
   return (
-    <section className="py-16 bg-black grid place-items-center min-h-screen">
-      <div className="container mx-auto px-4 relative">
+    <section className="grid min-h-screen place-items-center bg-black py-16">
+      <div className="relative container mx-auto px-4">
         <div className="pb-16">
           <img
             src={SLIDES[currentSlide].companyLogo}
             alt="company logo"
-            className="h-24 mx-auto mb-8"
+            className="mx-auto mb-8 h-24"
           />
-          <blockquote className="text-xl text-white font-medium mb-16 text-center max-w-2xl mx-auto">
+          <blockquote className="mx-auto mb-16 max-w-2xl text-center text-xl font-medium text-white">
             &quot;{SLIDES[currentSlide].quote}&quot;
           </blockquote>
-          <p className="text-white font-medium text-center">
+          <p className="text-center font-medium text-white">
             {SLIDES[currentSlide].name}
           </p>
-          <p className="text-sm text-white/80 text-center">
+          <p className="text-center text-sm text-white/80">
             {SLIDES[currentSlide].role}
           </p>
         </div>
-        
-        <div className="flex items-center justify-center gap-2 mt-8">
+
+        <div className="mt-8 flex items-center justify-center gap-2">
           {SLIDES.map((slide, index) => (
             <button
               key={index}
               onClick={() => setCurrentSlide(index)}
-              className={`w-8 h-8 rounded object-cover object-center transition-opacity ${
+              className={`h-8 w-8 rounded object-cover object-center transition-opacity ${
                 index === currentSlide ? "opacity-100" : "opacity-50"
               }`}
             >
               <img
                 src={slide.image}
                 alt={slide.name}
-                className="w-full h-full rounded object-cover"
+                className="h-full w-full rounded object-cover"
               />
             </button>
           ))}
@@ -85,7 +86,7 @@ export default function TestimonialsBlock() {
           size="icon"
           variant="ghost"
           onClick={prevSlide}
-          className="!absolute text-white left-2 top-1/2 z-10 -translate-y-1/2 hidden sm:inline-flex"
+          className="!absolute top-1/2 left-2 z-10 hidden -translate-y-1/2 text-white sm:inline-flex"
         >
           <ChevronLeft className="h-7 w-7" />
         </Button>
@@ -93,11 +94,11 @@ export default function TestimonialsBlock() {
           size="icon"
           variant="ghost"
           onClick={nextSlide}
-          className="!absolute text-white right-2 top-1/2 z-10 -translate-y-1/2 hidden sm:inline-flex"
+          className="!absolute top-1/2 right-2 z-10 hidden -translate-y-1/2 text-white sm:inline-flex"
         >
           <ChevronRight className="h-7 w-7" />
         </Button>
       </div>
     </section>
-  );
+  )
 }

@@ -1,0 +1,25 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "testimonials-12",
+  "type": "registry:block",
+  "description": "Grid layout testimonials with company logos",
+  "registryDependencies": [
+    "card"
+  ],
+  "files": [
+    {
+      "path": "registry/creative-tim-ui/blocks/testimonials-12/page.tsx",
+      "content": "\"use client\";\n\nimport { Card, CardContent, CardFooter } from \"@/registry/creative-tim-ui/ui/card\";\n\nexport default function TestimonialsBlock() {\n  return (\n    <section className=\"py-16\">\n      <div className=\"container mx-auto px-4\">\n        <div className=\"mb-16 max-w-lg\">\n          <h2 className=\"text-3xl font-bold mb-4\">\n            The heartfelt testimonials of our community\n          </h2>\n          <p className=\"text-lg text-muted-foreground\">\n            From life-enhancing gadgets to unparalleled customer support, and\n            transformative learning opportunities.\n          </p>\n        </div>\n        <div className=\"grid grid-cols-1 md:grid-cols-2 gap-6\">\n          <Card className=\"grid bg-secondary/40\">\n            <CardContent className=\"p-6\">\n              <blockquote className=\"text-2xl font-medium md:text-start text-center\">\n                &quot;The team went above and beyond to ensure my issue was\n                resolved quickly and efficiently. Truly outstanding!&quot;\n              </blockquote>\n            </CardContent>\n            <CardFooter className=\"flex flex-col md:flex-row text-center md:text-start px-6 pb-6 items-center justify-between gap-4\">\n              <div>\n                <p className=\"font-semibold\">Jessica Devis</p>\n                <p className=\"text-sm text-muted-foreground\">\n                  Full Stack Developer @Netflix\n                </p>\n              </div>\n              <img\n                src=\"https://v3.material-tailwind.com/logo/netflix.svg\"\n                alt=\"logo\"\n                className=\"h-14 grayscale\"\n              />\n            </CardFooter>\n          </Card>\n          <Card className=\"grid bg-secondary/40\">\n            <CardContent className=\"p-6\">\n              <blockquote className=\"text-2xl font-medium md:text-start text-center\">\n                &quot;It have broadened my horizons and helped me advance my\n                career. The community is incredibly supportive.&quot;\n              </blockquote>\n            </CardContent>\n            <CardFooter className=\"flex flex-col md:flex-row mt-auto px-6 pb-6 text-center md:text-start items-center justify-between gap-4\">\n              <div>\n                <p className=\"font-semibold\">Marcell Glock</p>\n                <p className=\"text-sm text-muted-foreground\">\n                  Graphic Designer, @Coinbase\n                </p>\n              </div>\n              <img\n                src=\"https://v3.material-tailwind.com/logo/coinbase.svg\"\n                alt=\"logo\"\n                className=\"h-14 grayscale brightness-75\"\n              />\n            </CardFooter>\n          </Card>\n          <Card className=\"grid bg-secondary/40 col-span-full\">\n            <CardContent className=\"p-6\">\n              <blockquote className=\"text-2xl font-medium text-center\">\n                &quot;Its intuitive design and powerful features make it\n                indispensable. I can&apos;t imagine going back to life before\n                it!&quot;\n              </blockquote>\n            </CardContent>\n            <CardFooter className=\"flex flex-col text-center mt-auto px-6 pb-6 items-center justify-center gap-4\">\n              <div>\n                <p className=\"font-semibold\">Emma Roberts</p>\n                <p className=\"text-sm text-muted-foreground\">\n                  Chief Executive @Spotify\n                </p>\n              </div>\n              <img\n                src=\"https://v3.material-tailwind.com/logo/spotify.svg\"\n                alt=\"logo\"\n                className=\"h-14 grayscale brightness-50\"\n              />\n            </CardFooter>\n          </Card>\n        </div>\n      </div>\n    </section>\n  );\n}\n",
+      "type": "registry:page",
+      "target": "app/testimonials-12/page.tsx"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "800px",
+    "container": "w-full bg-surface",
+    "mobile": "component"
+  },
+  "categories": [
+    "testimonials"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "testimonials-16",
+  "type": "registry:block",
+  "description": "Dark carousel testimonials with navigation",
+  "registryDependencies": [
+    "card",
+    "button"
+  ],
+  "files": [
+    {
+      "path": "registry/creative-tim-ui/blocks/testimonials-16/page.tsx",
+      "content": "\"use client\";\n\nimport * as React from \"react\";\nimport { Card, CardContent } from \"@/registry/creative-tim-ui/ui/card\";\nimport { Button } from \"@/registry/creative-tim-ui/ui/button\";\nimport { ChevronLeft, ChevronRight } from \"lucide-react\";\n\nconst SLIDES = [\n  {\n    image: \"https://v3.material-tailwind.com/woman-profile-2.jpg\",\n    companyLogo: \"https://v3.material-tailwind.com/logo/netflix.svg\",\n    name: \"Linde Michel\",\n    role: \"Social Media Executive, Netflix\",\n    quote:\n      \"We're not always in the position that we want to be at. We're constantly growing. We're constantly making mistakes. We're constantly trying to express ourselves and actualize our dreams.\",\n  },\n  {\n    image: \"https://v3.material-tailwind.com/man-profile-1.jpg\",\n    companyLogo: \"https://v3.material-tailwind.com/logo/coinbase.svg\",\n    name: \"John Down\",\n    role: \"Visionary, Coinbase\",\n    quote:\n      \"We're not always in the position that we want to be at. We're constantly growing. We're constantly making mistakes. We're constantly trying to express ourselves and actualize our dreams.\",\n  },\n  {\n    image: \"https://v3.material-tailwind.com/woman-profile-1.jpg\",\n    companyLogo: \"https://v3.material-tailwind.com/logo/spotify.svg\",\n    name: \"Marcell Glock\",\n    role: \"Chief Executive, Spotify\",\n    quote:\n      \"We're not always in the position that we want to be at. We're constantly growing. We're constantly making mistakes. We're constantly trying to express ourselves and actualize our dreams.\",\n  },\n];\n\nexport default function TestimonialsBlock() {\n  const [currentSlide, setCurrentSlide] = React.useState(0);\n\n  const nextSlide = () => {\n    setCurrentSlide((prev) => (prev + 1) % SLIDES.length);\n  };\n\n  const prevSlide = () => {\n    setCurrentSlide((prev) => (prev - 1 + SLIDES.length) % SLIDES.length);\n  };\n\n  return (\n    <section className=\"py-16 bg-black grid place-items-center min-h-screen\">\n      <div className=\"container mx-auto px-4 relative\">\n        <div className=\"pb-16\">\n          <img\n            src={SLIDES[currentSlide].companyLogo}\n            alt=\"company logo\"\n            className=\"h-24 mx-auto mb-8\"\n          />\n          <blockquote className=\"text-xl text-white font-medium mb-16 text-center max-w-2xl mx-auto\">\n            &quot;{SLIDES[currentSlide].quote}&quot;\n          </blockquote>\n          <p className=\"text-white font-medium text-center\">\n            {SLIDES[currentSlide].name}\n          </p>\n          <p className=\"text-sm text-white/80 text-center\">\n            {SLIDES[currentSlide].role}\n          </p>\n        </div>\n        \n        <div className=\"flex items-center justify-center gap-2 mt-8\">\n          {SLIDES.map((slide, index) => (\n            <button\n              key={index}\n              onClick={() => setCurrentSlide(index)}\n              className={`w-8 h-8 rounded object-cover object-center transition-opacity ${\n                index === currentSlide ? \"opacity-100\" : \"opacity-50\"\n              }`}\n            >\n              <img\n                src={slide.image}\n                alt={slide.name}\n                className=\"w-full h-full rounded object-cover\"\n              />\n            </button>\n          ))}\n        </div>\n\n        <Button\n          size=\"icon\"\n          variant=\"ghost\"\n          onClick={prevSlide}\n          className=\"!absolute text-white left-2 top-1/2 z-10 -translate-y-1/2 hidden sm:inline-flex\"\n        >\n          <ChevronLeft className=\"h-7 w-7\" />\n        </Button>\n        <Button\n          size=\"icon\"\n          variant=\"ghost\"\n          onClick={nextSlide}\n          className=\"!absolute text-white right-2 top-1/2 z-10 -translate-y-1/2 hidden sm:inline-flex\"\n        >\n          <ChevronRight className=\"h-7 w-7\" />\n        </Button>\n      </div>\n    </section>\n  );\n}\n",
+      "type": "registry:page",
+      "target": "app/testimonials-16/page.tsx"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "600px",
+    "container": "w-full bg-surface",
+    "mobile": "component"
+  },
+  "categories": [
+    "testimonials"
+  ]
+}

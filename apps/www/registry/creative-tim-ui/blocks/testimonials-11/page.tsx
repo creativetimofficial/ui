@@ -1,8 +1,13 @@
-"use client";
+"use client"
 
-import { Avatar, AvatarFallback, AvatarImage } from "@/registry/creative-tim-ui/ui/avatar";
-import { Card, CardContent } from "@/registry/creative-tim-ui/ui/card";
-import { Star } from "lucide-react";
+import { Star } from "lucide-react"
+
+import {
+  Avatar,
+  AvatarFallback,
+  AvatarImage,
+} from "@/registry/creative-tim-ui/ui/avatar"
+import { Card, CardContent } from "@/registry/creative-tim-ui/ui/card"
 
 const TESTIMONIALS = [
   {
@@ -32,17 +37,17 @@ const TESTIMONIALS = [
     rating: 5,
     isHighlighted: false,
   },
-];
+]
 
 export default function TestimonialsBlock() {
   return (
     <section className="py-16">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl font-bold text-center mb-4">
+        <div className="mb-16 text-center">
+          <h2 className="mb-4 text-center text-3xl font-bold">
             Think about us
           </h2>
-          <p className="text-lg text-center text-muted-foreground max-w-lg mx-auto">
+          <p className="text-muted-foreground mx-auto max-w-lg text-center text-lg">
             That&apos;s the main thing people are controlled by! Thoughts -
             their perception of themselves!
           </p>
@@ -59,27 +64,40 @@ export default function TestimonialsBlock() {
                 }
               >
                 <CardContent className="p-4">
-                  <Avatar className="mb-4 w-16 h-16 rounded-lg">
+                  <Avatar className="mb-4 h-16 w-16 rounded-lg">
                     <AvatarImage src={image} alt={`${name} image`} />
-                    <AvatarFallback>{name.split(' ').map(n => n[0]).join('')}</AvatarFallback>
+                    <AvatarFallback>
+                      {name
+                        .split(" ")
+                        .map((n) => n[0])
+                        .join("")}
+                    </AvatarFallback>
                   </Avatar>
-                  <p className={`text-lg font-semibold ${isHighlighted ? 'text-primary-foreground' : ''}`}>
+                  <p
+                    className={`text-lg font-semibold ${isHighlighted ? "text-primary-foreground" : ""}`}
+                  >
                     {name}
                   </p>
-                  <p className={`text-sm ${isHighlighted ? 'opacity-80' : 'text-muted-foreground'}`}>
+                  <p
+                    className={`text-sm ${isHighlighted ? "opacity-80" : "text-muted-foreground"}`}
+                  >
                     {date}
                   </p>
-                  <blockquote className={`max-w-lg my-4 ${isHighlighted ? 'opacity-80' : 'text-muted-foreground'}`}>
+                  <blockquote
+                    className={`my-4 max-w-lg ${isHighlighted ? "opacity-80" : "text-muted-foreground"}`}
+                  >
                     &quot;{quote}&quot;
                   </blockquote>
                   <div className="flex items-center gap-1">
                     {Array.from({ length: 5 }).map((_, i) => (
                       <Star
                         key={i}
-                        className={`w-5 h-5 ${
+                        className={`h-5 w-5 ${
                           i < rating
                             ? "fill-yellow-500 text-yellow-500"
-                            : isHighlighted ? "fill-white/30 text-white/30" : "fill-gray-300 text-gray-300"
+                            : isHighlighted
+                              ? "fill-white/30 text-white/30"
+                              : "fill-gray-300 text-gray-300"
                         }`}
                       />
                     ))}
@@ -91,5 +109,5 @@ export default function TestimonialsBlock() {
         </div>
       </div>
     </section>
-  );
+  )
 }

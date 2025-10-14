@@ -1,7 +1,11 @@
-"use client";
+"use client"
 
-import { Avatar, AvatarFallback, AvatarImage } from "@/registry/creative-tim-ui/ui/avatar";
-import { Card, CardContent } from "@/registry/creative-tim-ui/ui/card";
+import {
+  Avatar,
+  AvatarFallback,
+  AvatarImage,
+} from "@/registry/creative-tim-ui/ui/avatar"
+import { Card, CardContent } from "@/registry/creative-tim-ui/ui/card"
 
 const TESTIMONIALS = [
   {
@@ -25,17 +29,17 @@ const TESTIMONIALS = [
     quote:
       "The pessimist complains about the wind; the optimist expects it to change; the realist adjusts the sails.",
   },
-];
+]
 
 export default function TestimonialsBlock() {
   return (
     <section className="py-16">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl font-bold text-center mb-4">
+        <div className="mb-16 text-center">
+          <h2 className="mb-4 text-center text-3xl font-bold">
             Think about us
           </h2>
-          <p className="text-lg text-center text-muted-foreground max-w-lg mx-auto">
+          <p className="text-muted-foreground mx-auto max-w-lg text-center text-lg">
             That&apos;s the main thing people are controlled by! Thoughts -
             their perception of themselves!
           </p>
@@ -44,12 +48,17 @@ export default function TestimonialsBlock() {
           {TESTIMONIALS.map(({ name, image, role, quote }, key) => (
             <Card key={key}>
               <CardContent className="p-6 text-center">
-                <Avatar className="mx-auto mb-6 w-24 h-24">
+                <Avatar className="mx-auto mb-6 h-24 w-24">
                   <AvatarImage src={image} alt={`${name} image`} />
-                  <AvatarFallback>{name.split(' ').map(n => n[0]).join('')}</AvatarFallback>
+                  <AvatarFallback>
+                    {name
+                      .split(" ")
+                      .map((n) => n[0])
+                      .join("")}
+                  </AvatarFallback>
                 </Avatar>
-                <p className="text-lg font-semibold mb-1">{name}</p>
-                <p className="text-sm text-muted-foreground mb-4">{role}</p>
+                <p className="mb-1 text-lg font-semibold">{name}</p>
+                <p className="text-muted-foreground mb-4 text-sm">{role}</p>
                 <blockquote className="text-muted-foreground mx-auto max-w-lg">
                   &quot;{quote}&quot;
                 </blockquote>
@@ -59,5 +68,5 @@ export default function TestimonialsBlock() {
         </div>
       </div>
     </section>
-  );
+  )
 }

@@ -1818,6 +1818,329 @@
       "categories": ["footers"]
     },
     {
+      "name": "testimonials-01",
+      "type": "registry:block",
+      "description": "Simple centered testimonials with avatars",
+      "registryDependencies": ["avatar", "card", "badge"],
+      "files": [
+        {
+          "path": "registry/creative-tim-ui/blocks/testimonials-01/page.tsx",
+          "type": "registry:page",
+          "target": "app/testimonials-01/page.tsx"
+        }
+      ],
+      "meta": {
+        "iframeHeight": "700px",
+        "container": "w-full bg-surface",
+        "mobile": "component"
+      },
+      "categories": ["testimonials"]
+    },
+    {
+      "name": "testimonials-02",
+      "type": "registry:block",
+      "description": "Testimonial cards with social proof badges",
+      "registryDependencies": ["avatar", "card"],
+      "files": [
+        {
+          "path": "registry/creative-tim-ui/blocks/testimonials-02/page.tsx",
+          "type": "registry:page",
+          "target": "app/testimonials-02/page.tsx"
+        }
+      ],
+      "meta": {
+        "iframeHeight": "900px",
+        "container": "w-full bg-surface",
+        "mobile": "component"
+      },
+      "categories": ["testimonials"]
+    },
+    {
+      "name": "testimonials-03",
+      "type": "registry:block",
+      "description": "Testimonial with statistics and metrics",
+      "registryDependencies": ["card"],
+      "files": [
+        {
+          "path": "registry/creative-tim-ui/blocks/testimonials-03/page.tsx",
+          "type": "registry:page",
+          "target": "app/testimonials-03/page.tsx"
+        }
+      ],
+      "meta": {
+        "iframeHeight": "500px",
+        "container": "w-full bg-surface",
+        "mobile": "component"
+      },
+      "categories": ["testimonials"]
+    },
+    {
+      "name": "testimonials-04",
+      "type": "registry:block",
+      "description": "Three column testimonials with star ratings",
+      "registryDependencies": ["card"],
+      "files": [
+        {
+          "path": "registry/creative-tim-ui/blocks/testimonials-04/page.tsx",
+          "type": "registry:page",
+          "target": "app/testimonials-04/page.tsx"
+        }
+      ],
+      "meta": {
+        "iframeHeight": "700px",
+        "container": "w-full bg-surface",
+        "mobile": "component"
+      },
+      "categories": ["testimonials"]
+    },
+    {
+      "name": "testimonials-05",
+      "type": "registry:block",
+      "description": "Dark testimonials with avatar and star ratings",
+      "registryDependencies": ["avatar", "card"],
+      "files": [
+        {
+          "path": "registry/creative-tim-ui/blocks/testimonials-05/page.tsx",
+          "type": "registry:page",
+          "target": "app/testimonials-05/page.tsx"
+        }
+      ],
+      "meta": {
+        "iframeHeight": "700px",
+        "container": "w-full bg-surface",
+        "mobile": "component"
+      },
+      "categories": ["testimonials"]
+    },
+    {
+      "name": "testimonials-06",
+      "type": "registry:block",
+      "description": "Company logo testimonial with large quote",
+      "registryDependencies": ["avatar", "card"],
+      "files": [
+        {
+          "path": "registry/creative-tim-ui/blocks/testimonials-06/page.tsx",
+          "type": "registry:page",
+          "target": "app/testimonials-06/page.tsx"
+        }
+      ],
+      "meta": {
+        "iframeHeight": "500px",
+        "container": "w-full bg-surface",
+        "mobile": "component"
+      },
+      "categories": ["testimonials"]
+    },
+    {
+      "name": "testimonials-07",
+      "type": "registry:block",
+      "description": "Interactive testimonials with profile switcher",
+      "registryDependencies": ["avatar"],
+      "files": [
+        {
+          "path": "registry/creative-tim-ui/blocks/testimonials-07/page.tsx",
+          "type": "registry:page",
+          "target": "app/testimonials-07/page.tsx"
+        }
+      ],
+      "meta": {
+        "iframeHeight": "600px",
+        "container": "w-full bg-surface",
+        "mobile": "component"
+      },
+      "categories": ["testimonials"]
+    },
+    {
+      "name": "testimonials-08",
+      "type": "registry:block",
+      "description": "Light testimonials with star ratings",
+      "registryDependencies": ["avatar", "card"],
+      "files": [
+        {
+          "path": "registry/creative-tim-ui/blocks/testimonials-08/page.tsx",
+          "type": "registry:page",
+          "target": "app/testimonials-08/page.tsx"
+        }
+      ],
+      "meta": {
+        "iframeHeight": "700px",
+        "container": "w-full bg-surface",
+        "mobile": "component"
+      },
+      "categories": ["testimonials"]
+    },
+    {
+      "name": "testimonials-09",
+      "type": "registry:block",
+      "description": "Customer story with large heading and avatar",
+      "registryDependencies": ["avatar", "card"],
+      "files": [
+        {
+          "path": "registry/creative-tim-ui/blocks/testimonials-09/page.tsx",
+          "type": "registry:page",
+          "target": "app/testimonials-09/page.tsx"
+        }
+      ],
+      "meta": {
+        "iframeHeight": "500px",
+        "container": "w-full bg-surface",
+        "mobile": "component"
+      },
+      "categories": ["testimonials"]
+    },
+    {
+      "name": "testimonials-10",
+      "type": "registry:block",
+      "description": "Monochromatic testimonials with company logos",
+      "registryDependencies": ["badge", "card", "button"],
+      "files": [
+        {
+          "path": "registry/creative-tim-ui/blocks/testimonials-10/page.tsx",
+          "type": "registry:page",
+          "target": "app/testimonials-10/page.tsx"
+        }
+      ],
+      "meta": {
+        "iframeHeight": "700px",
+        "container": "w-full bg-surface",
+        "mobile": "component"
+      },
+      "categories": ["testimonials"]
+    },
+    {
+      "name": "testimonials-11",
+      "type": "registry:block",
+      "description": "Testimonial cards with focus state",
+      "registryDependencies": ["avatar", "card"],
+      "files": [
+        {
+          "path": "registry/creative-tim-ui/blocks/testimonials-11/page.tsx",
+          "type": "registry:page",
+          "target": "app/testimonials-11/page.tsx"
+        }
+      ],
+      "meta": {
+        "iframeHeight": "700px",
+        "container": "w-full bg-surface",
+        "mobile": "component"
+      },
+      "categories": ["testimonials"]
+    },
+    {
+      "name": "testimonials-12",
+      "type": "registry:block",
+      "description": "Grid layout testimonials with company logos",
+      "registryDependencies": ["card"],
+      "files": [
+        {
+          "path": "registry/creative-tim-ui/blocks/testimonials-12/page.tsx",
+          "type": "registry:page",
+          "target": "app/testimonials-12/page.tsx"
+        }
+      ],
+      "meta": {
+        "iframeHeight": "800px",
+        "container": "w-full bg-surface",
+        "mobile": "component"
+      },
+      "categories": ["testimonials"]
+    },
+    {
+      "name": "testimonials-13",
+      "type": "registry:block",
+      "description": "Dark card testimonial with rounded avatar",
+      "registryDependencies": ["avatar", "card"],
+      "files": [
+        {
+          "path": "registry/creative-tim-ui/blocks/testimonials-13/page.tsx",
+          "type": "registry:page",
+          "target": "app/testimonials-13/page.tsx"
+        }
+      ],
+      "meta": {
+        "iframeHeight": "500px",
+        "container": "w-full bg-surface",
+        "mobile": "component"
+      },
+      "categories": ["testimonials"]
+    },
+    {
+      "name": "testimonials-14",
+      "type": "registry:block",
+      "description": "Light testimonials with card shadow",
+      "registryDependencies": ["avatar", "card"],
+      "files": [
+        {
+          "path": "registry/creative-tim-ui/blocks/testimonials-14/page.tsx",
+          "type": "registry:page",
+          "target": "app/testimonials-14/page.tsx"
+        }
+      ],
+      "meta": {
+        "iframeHeight": "700px",
+        "container": "w-full bg-surface",
+        "mobile": "component"
+      },
+      "categories": ["testimonials"]
+    },
+    {
+      "name": "testimonials-15",
+      "type": "registry:block",
+      "description": "Testimonials with submit button",
+      "registryDependencies": ["card"],
+      "files": [
+        {
+          "path": "registry/creative-tim-ui/blocks/testimonials-15/page.tsx",
+          "type": "registry:page",
+          "target": "app/testimonials-15/page.tsx"
+        }
+      ],
+      "meta": {
+        "iframeHeight": "600px",
+        "container": "w-full bg-surface",
+        "mobile": "component"
+      },
+      "categories": ["testimonials"]
+    },
+    {
+      "name": "testimonials-16",
+      "type": "registry:block",
+      "description": "Dark carousel testimonials with navigation",
+      "registryDependencies": ["card", "button"],
+      "files": [
+        {
+          "path": "registry/creative-tim-ui/blocks/testimonials-16/page.tsx",
+          "type": "registry:page",
+          "target": "app/testimonials-16/page.tsx"
+        }
+      ],
+      "meta": {
+        "iframeHeight": "600px",
+        "container": "w-full bg-surface",
+        "mobile": "component"
+      },
+      "categories": ["testimonials"]
+    },
+    {
+      "name": "testimonials-17",
+      "type": "registry:block",
+      "description": "Background image carousel testimonials",
+      "registryDependencies": ["card", "button"],
+      "files": [
+        {
+          "path": "registry/creative-tim-ui/blocks/testimonials-17/page.tsx",
+          "type": "registry:page",
+          "target": "app/testimonials-17/page.tsx"
+        }
+      ],
+      "meta": {
+        "iframeHeight": "600px",
+        "container": "w-full bg-surface",
+        "mobile": "component"
+      },
+      "categories": ["testimonials"]
+    },
+    {
       "name": "use-mobile",
       "type": "registry:hook",
       "files": [
