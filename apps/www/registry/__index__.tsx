@@ -910,6 +910,114 @@ export const Index: Record<string, any> = {
     categories: ["ecommerce"],
     meta: {"iframeHeight":"1000px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component"},
   },
+  "simple-faq-01": {
+    name: "simple-faq-01",
+    description: "Simple FAQ with dividers",
+    type: "registry:block",
+    registryDependencies: [],
+    files: [{
+      path: "registry/elevenlabs-ui/blocks/simple-faq-01/page.tsx",
+      type: "registry:page",
+      target: "app/simple-faq/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/elevenlabs-ui/blocks/simple-faq-01/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["faqs"],
+    meta: {"iframeHeight":"800px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component"},
+  },
+  "faqs-list-01": {
+    name: "faqs-list-01",
+    description: "FAQ list with accordion",
+    type: "registry:block",
+    registryDependencies: ["accordion"],
+    files: [{
+      path: "registry/elevenlabs-ui/blocks/faqs-list-01/page.tsx",
+      type: "registry:page",
+      target: "app/faqs-list/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/elevenlabs-ui/blocks/faqs-list-01/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["faqs"],
+    meta: {"iframeHeight":"900px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component"},
+  },
+  "faq-left-title-01": {
+    name: "faq-left-title-01",
+    description: "FAQ with left-aligned title and card grid",
+    type: "registry:block",
+    registryDependencies: ["card"],
+    files: [{
+      path: "registry/elevenlabs-ui/blocks/faq-left-title-01/page.tsx",
+      type: "registry:page",
+      target: "app/faq-left-title/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/elevenlabs-ui/blocks/faq-left-title-01/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["faqs"],
+    meta: {"iframeHeight":"800px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component"},
+  },
+  "faqs-grid-cta-01": {
+    name: "faqs-grid-cta-01",
+    description: "FAQ grid with CTA section",
+    type: "registry:block",
+    registryDependencies: ["button","card"],
+    files: [{
+      path: "registry/elevenlabs-ui/blocks/faqs-grid-cta-01/page.tsx",
+      type: "registry:page",
+      target: "app/faqs-grid-cta/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/elevenlabs-ui/blocks/faqs-grid-cta-01/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["faqs"],
+    meta: {"iframeHeight":"1200px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component"},
+  },
+  "faqs-cards-icons-01": {
+    name: "faqs-cards-icons-01",
+    description: "FAQ cards with icons and CTA",
+    type: "registry:block",
+    registryDependencies: ["button","card"],
+    files: [{
+      path: "registry/elevenlabs-ui/blocks/faqs-cards-icons-01/page.tsx",
+      type: "registry:page",
+      target: "app/faqs-cards-icons/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/elevenlabs-ui/blocks/faqs-cards-icons-01/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["faqs"],
+    meta: {"iframeHeight":"1100px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component"},
+  },
+  "faqs-grid-01": {
+    name: "faqs-grid-01",
+    description: "Simple FAQ grid layout",
+    type: "registry:block",
+    registryDependencies: ["card"],
+    files: [{
+      path: "registry/elevenlabs-ui/blocks/faqs-grid-01/page.tsx",
+      type: "registry:page",
+      target: "app/faqs-grid/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/elevenlabs-ui/blocks/faqs-grid-01/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["faqs"],
+    meta: {"iframeHeight":"1000px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component"},
+  },
   "use-mobile": {
     name: "use-mobile",
     description: "",

@@ -243,5 +243,47 @@
     "categories": [
       "ecommerce"
     ]
+  },
+  {
+    "name": "simple-faq-01",
+    "description": "Simple FAQ with dividers",
+    "categories": [
+      "faqs"
+    ]
+  },
+  {
+    "name": "faqs-list-01",
+    "description": "FAQ list with accordion",
+    "categories": [
+      "faqs"
+    ]
+  },
+  {
+    "name": "faq-left-title-01",
+    "description": "FAQ with left-aligned title and card grid",
+    "categories": [
+      "faqs"
+    ]
+  },
+  {
+    "name": "faqs-grid-cta-01",
+    "description": "FAQ grid with CTA section",
+    "categories": [
+      "faqs"
+    ]
+  },
+  {
+    "name": "faqs-cards-icons-01",
+    "description": "FAQ cards with icons and CTA",
+    "categories": [
+      "faqs"
+    ]
+  },
+  {
+    "name": "faqs-grid-01",
+    "description": "Simple FAQ grid layout",
+    "categories": [
+      "faqs"
+    ]
   }
 ]
