@@ -19,50 +19,61 @@ export default function LoginPage() {
 
   const handleGoogleLogin = React.useCallback(async (idToken: string) => {
     try {
-      const res = await fetch(`${process.env.NEXT_PUBLIC_RAILS_BASE_URL}/api/v1/auth/google`, {
-        method: "POST",
-        credentials: "include",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ token: idToken }),
-      });
-
+      const res = await fetch(
+        `${process.env.NEXT_PUBLIC_RAILS_BASE_URL}/api/v1/auth/google`,
+        {
+          method: "POST",
+          credentials: "include",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ token: idToken }),
+        }
+      );
       if (!res.ok) throw new Error("Google login failed");
-      // Rails should set the refresh cookie here and return access_token+user like classic login
       router.push("/dashboard");
     } catch (err) {
       console.error(err);
     }
   }, [router]);
 
+  const googleDivRef = React.useRef<HTMLDivElement>(null);
+
   React.useEffect(() => {
-    if (typeof window === "undefined" || !window.google) return;
+    if (!bootstrapDone || user) return;
 
-    window.google.accounts.id.initialize({
-      client_id: process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID!,
-      callback: async (response: { credential: string }) => {
-        const idToken = response.credential;
-        await handleGoogleLogin(idToken);
-      },
-    });
+    const clientId = process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID;
+    if (!clientId) {
+      console.warn("Missing NEXT_PUBLIC_GOOGLE_CLIENT_ID");
+      return;
+    }
 
-    window.google.accounts.id.renderButton(
-      document.getElementById("googleSignInDiv")!,
-      { type: "standard", theme: "outline", size: "large" }
-    );
-  }, [handleGoogleLogin]);
+    let cancelled = false;
+    if (!cancelled && window.google && googleDivRef.current) {
+      window.google.accounts.id.initialize({
+        client_id: clientId,
+        callback: ({ credential }) => handleGoogleLogin(credential),
+      });
+
+      // Important for React 18 StrictMode double-mount
+      googleDivRef.current.innerHTML = "";
+      window.google.accounts.id.renderButton(googleDivRef.current, {
+        type: "standard",
+        theme: "outline",
+        size: "large",
+      });
+    }
+
+    return () => { cancelled = true; };
+  }, [bootstrapDone, user, handleGoogleLogin]);
 
   async function handleLogin(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setError(null);
     setLoading(true);
     try {
-      // Rails will set the refresh cookie here automatically
       const data = await AuthAPI.login({ email, password });
-
       const access = normalizeAccessToken(data);
       if (access) setAccessToken(access);
       if (data.user) setUser(data.user);
-
       router.push("/login");
     } catch (err: unknown) {
       const msg =
@@ -80,9 +91,7 @@ export default function LoginPage() {
   async function handleLogout() {
     try {
       await AuthAPI.logout();
-    } catch {
-      // ignore network errors on logout
-    }
+    } catch {}
     clearAccessToken();
     setUser(null);
     router.push("/login");
@@ -178,7 +187,7 @@ export default function LoginPage() {
             </div>
 
             <div className="w-full max-w-sm bg-white border p-6 rounded-lg shadow">
-              <div id="googleSignInDiv" className="w-full flex justify-center" />
+              <div ref={googleDivRef} className="w-full flex justify-center" />
             </div>
           </form>
         </div>
