@@ -786,4 +786,124 @@ export const blocks: Registry["items"] = [
     },
     categories: ["ecommerce"],
   },
+  {
+    name: "simple-faq-01",
+    description: "Simple FAQ with dividers",
+    type: "registry:block",
+    registryDependencies: [],
+    files: [
+      {
+        path: "blocks/simple-faq-01/page.tsx",
+        type: "registry:page",
+        target: "app/simple-faq/page.tsx",
+      },
+    ],
+    meta: {
+      iframeHeight: "800px",
+      container:
+        "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
+      mobile: "component",
+    },
+    categories: ["faqs"],
+  },
+  {
+    name: "faqs-list-01",
+    description: "FAQ list with accordion",
+    type: "registry:block",
+    registryDependencies: ["accordion"],
+    files: [
+      {
+        path: "blocks/faqs-list-01/page.tsx",
+        type: "registry:page",
+        target: "app/faqs-list/page.tsx",
+      },
+    ],
+    meta: {
+      iframeHeight: "900px",
+      container:
+        "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
+      mobile: "component",
+    },
+    categories: ["faqs"],
+  },
+  {
+    name: "faq-left-title-01",
+    description: "FAQ with left-aligned title and card grid",
+    type: "registry:block",
+    registryDependencies: ["card"],
+    files: [
+      {
+        path: "blocks/faq-left-title-01/page.tsx",
+        type: "registry:page",
+        target: "app/faq-left-title/page.tsx",
+      },
+    ],
+    meta: {
+      iframeHeight: "800px",
+      container:
+        "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
+      mobile: "component",
+    },
+    categories: ["faqs"],
+  },
+  {
+    name: "faqs-grid-cta-01",
+    description: "FAQ grid with CTA section",
+    type: "registry:block",
+    registryDependencies: ["button", "card"],
+    files: [
+      {
+        path: "blocks/faqs-grid-cta-01/page.tsx",
+        type: "registry:page",
+        target: "app/faqs-grid-cta/page.tsx",
+      },
+    ],
+    meta: {
+      iframeHeight: "1200px",
+      container:
+        "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
+      mobile: "component",
+    },
+    categories: ["faqs"],
+  },
+  {
+    name: "faqs-cards-icons-01",
+    description: "FAQ cards with icons and CTA",
+    type: "registry:block",
+    registryDependencies: ["button", "card"],
+    files: [
+      {
+        path: "blocks/faqs-cards-icons-01/page.tsx",
+        type: "registry:page",
+        target: "app/faqs-cards-icons/page.tsx",
+      },
+    ],
+    meta: {
+      iframeHeight: "1100px",
+      container:
+        "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
+      mobile: "component",
+    },
+    categories: ["faqs"],
+  },
+  {
+    name: "faqs-grid-01",
+    description: "Simple FAQ grid layout",
+    type: "registry:block",
+    registryDependencies: ["card"],
+    files: [
+      {
+        path: "blocks/faqs-grid-01/page.tsx",
+        type: "registry:page",
+        target: "app/faqs-grid/page.tsx",
+      },
+    ],
+    meta: {
+      iframeHeight: "1000px",
+      container:
+        "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
+      mobile: "component",
+    },
+    categories: ["faqs"],
+  },
 ]
