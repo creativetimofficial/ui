@@ -2,7 +2,7 @@ import { api } from "./api";
 import type { AuthLoginResponse, AuthMeResponse, AuthTokens, MessageResponse } from "./auth.types";
 
 export const AuthAPI = {
-  signup: (body: { email: string; password: string; name?: string }) =>
+  register: (body: { email: string; password: string; name?: string }) =>
     api<AuthLoginResponse>("/auth/register", { method: "POST", body: JSON.stringify(body) }),
 
   login: (body: { email: string; password: string }) =>
@@ -26,12 +26,12 @@ export const AuthAPI = {
     api<MessageResponse>("/auth/logout", { method: "POST" }),
 
   forgotPassword: (email: string) =>
-    api<MessageResponse>("/auth/forgot_password", {
+    api<MessageResponse>("/auth/forgot-password", {
       method: "POST", body: JSON.stringify({ email }),
     }),
 
   resetPassword: (token: string, password: string) =>
-    api<MessageResponse>("/auth/reset_password", {
+    api<MessageResponse>("/auth/reset-password", {
       method: "POST", body: JSON.stringify({ token, password }),
     }),
 };
