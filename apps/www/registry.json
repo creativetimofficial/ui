@@ -1374,6 +1374,101 @@
       "categories": ["contact"]
     },
     {
+      "name": "web3-01",
+      "type": "registry:block",
+      "description": "NFT collection preview with pixel art",
+      "registryDependencies": ["avatar", "card"],
+      "files": [
+        {
+          "path": "registry/creative-tim-ui/blocks/web3-01/page.tsx",
+          "type": "registry:page",
+          "target": "app/web3-01/page.tsx"
+        }
+      ],
+      "meta": {
+        "iframeHeight": "900px",
+        "container": "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
+        "mobile": "component"
+      },
+      "categories": ["web3"]
+    },
+    {
+      "name": "web3-02",
+      "type": "registry:block",
+      "description": "NFT creator profile with collection gallery",
+      "registryDependencies": ["avatar", "badge", "button", "card"],
+      "files": [
+        {
+          "path": "registry/creative-tim-ui/blocks/web3-02/page.tsx",
+          "type": "registry:page",
+          "target": "app/web3-02/page.tsx"
+        }
+      ],
+      "meta": {
+        "iframeHeight": "1100px",
+        "container": "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
+        "mobile": "component"
+      },
+      "categories": ["web3"]
+    },
+    {
+      "name": "web3-03",
+      "type": "registry:block",
+      "description": "Top crypto auctions with countdown timer",
+      "registryDependencies": ["avatar", "badge", "button", "card", "select"],
+      "files": [
+        {
+          "path": "registry/creative-tim-ui/blocks/web3-03/page.tsx",
+          "type": "registry:page",
+          "target": "app/web3-03/page.tsx"
+        }
+      ],
+      "meta": {
+        "iframeHeight": "1100px",
+        "container": "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
+        "mobile": "component"
+      },
+      "categories": ["web3"]
+    },
+    {
+      "name": "web3-04",
+      "type": "registry:block",
+      "description": "Trending NFT collections with gradient overlay",
+      "registryDependencies": ["avatar", "badge", "button", "card", "select"],
+      "files": [
+        {
+          "path": "registry/creative-tim-ui/blocks/web3-04/page.tsx",
+          "type": "registry:page",
+          "target": "app/web3-04/page.tsx"
+        }
+      ],
+      "meta": {
+        "iframeHeight": "1100px",
+        "container": "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
+        "mobile": "component"
+      },
+      "categories": ["web3"]
+    },
+    {
+      "name": "web3-05",
+      "type": "registry:block",
+      "description": "Top NFT creators with time filter",
+      "registryDependencies": ["avatar", "button", "card"],
+      "files": [
+        {
+          "path": "registry/creative-tim-ui/blocks/web3-05/page.tsx",
+          "type": "registry:page",
+          "target": "app/web3-05/page.tsx"
+        }
+      ],
+      "meta": {
+        "iframeHeight": "1000px",
+        "container": "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
+        "mobile": "component"
+      },
+      "categories": ["web3"]
+    },
+    {
       "name": "use-mobile",
       "type": "registry:hook",
       "files": [

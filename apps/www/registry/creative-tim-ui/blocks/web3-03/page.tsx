@@ -1,11 +1,19 @@
 "use client"
 
-import { Menu, Grid3x3 } from "lucide-react"
+import { Grid3x3, Menu } from "lucide-react"
 
-import { Avatar, AvatarFallback, AvatarImage } from "@/registry/creative-tim-ui/ui/avatar"
+import {
+  Avatar,
+  AvatarFallback,
+  AvatarImage,
+} from "@/registry/creative-tim-ui/ui/avatar"
 import { Badge } from "@/registry/creative-tim-ui/ui/badge"
 import { Button } from "@/registry/creative-tim-ui/ui/button"
-import { Card, CardContent, CardHeader } from "@/registry/creative-tim-ui/ui/card"
+import {
+  Card,
+  CardContent,
+  CardHeader,
+} from "@/registry/creative-tim-ui/ui/card"
 import {
   Select,
   SelectContent,
@@ -45,14 +53,14 @@ export default function Web303() {
   return (
     <section className="container mx-auto py-16">
       <Card className="border shadow-sm">
-        <CardHeader className="p-6 flex flex-row items-start justify-between gap-6 flex-wrap">
+        <CardHeader className="flex flex-row flex-wrap items-start justify-between gap-6 p-6">
           <div>
-            <h1 className="text-2xl font-bold mb-1">Top Auctions</h1>
-            <p className="text-lg text-muted-foreground max-w-2xl">
+            <h1 className="mb-1 text-2xl font-bold">Top Auctions</h1>
+            <p className="text-muted-foreground max-w-2xl text-lg">
               The most sought-after collections across the entire ecosystem.
             </p>
           </div>
-          <div className="flex items-center flex-wrap gap-2">
+          <div className="flex flex-wrap items-center gap-2">
             <Select defaultValue="Last 24H">
               <SelectTrigger className="w-max">
                 <SelectValue placeholder="Select Date" />
@@ -81,10 +89,10 @@ export default function Web303() {
             </Button>
           </div>
         </CardHeader>
-        <CardContent className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6 px-6 pb-6 pt-0">
+        <CardContent className="grid grid-cols-1 gap-6 px-6 pt-0 pb-6 md:grid-cols-2 lg:grid-cols-3">
           {DATA.map(({ img, name, desc, profileImg, price, time }, key) => (
             <Card key={key} className="overflow-hidden">
-              <CardHeader className="p-0 relative">
+              <CardHeader className="relative p-0">
                 <img
                   src={img}
                   alt={name}
@@ -92,26 +100,32 @@ export default function Web303() {
                 />
                 <Badge
                   variant="secondary"
-                  className="absolute bottom-4 left-4 bg-white/70 backdrop-blur border-white/50 flex items-center gap-2"
+                  className="absolute bottom-4 left-4 flex items-center gap-2 border-white/50 bg-white/70 backdrop-blur"
                 >
                   <Avatar className="h-7 w-7">
                     <AvatarImage src={profileImg} alt={name} />
                     <AvatarFallback>{name[1]}</AvatarFallback>
                   </Avatar>
                   <div className="flex flex-col">
-                    <span className="text-xs font-semibold text-black">{name}</span>
-                    <span className="text-xs text-muted-foreground">{desc}</span>
+                    <span className="text-xs font-semibold text-black">
+                      {name}
+                    </span>
+                    <span className="text-muted-foreground text-xs">
+                      {desc}
+                    </span>
                   </div>
                 </Badge>
               </CardHeader>
               <CardContent className="p-4">
                 <div className="flex items-center justify-between">
                   <div>
-                    <p className="text-sm text-muted-foreground">Current bid</p>
+                    <p className="text-muted-foreground text-sm">Current bid</p>
                     <p className="text-lg font-bold">{price}</p>
                   </div>
                   <div>
-                    <p className="text-sm text-muted-foreground">Auction ends in</p>
+                    <p className="text-muted-foreground text-sm">
+                      Auction ends in
+                    </p>
                     <p className="text-sm font-semibold">{time}</p>
                   </div>
                 </div>

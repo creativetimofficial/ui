@@ -1,11 +1,19 @@
 "use client"
 
-import { Heart, Menu, Grid3x3 } from "lucide-react"
+import { Grid3x3, Heart, Menu } from "lucide-react"
 
-import { Avatar, AvatarFallback, AvatarImage } from "@/registry/creative-tim-ui/ui/avatar"
+import {
+  Avatar,
+  AvatarFallback,
+  AvatarImage,
+} from "@/registry/creative-tim-ui/ui/avatar"
 import { Badge } from "@/registry/creative-tim-ui/ui/badge"
 import { Button } from "@/registry/creative-tim-ui/ui/button"
-import { Card, CardContent, CardHeader } from "@/registry/creative-tim-ui/ui/card"
+import {
+  Card,
+  CardContent,
+  CardHeader,
+} from "@/registry/creative-tim-ui/ui/card"
 
 const DATA = [
   {
@@ -32,7 +40,7 @@ export default function Web302() {
   return (
     <section className="container mx-auto py-16">
       <Card className="border shadow-sm">
-        <CardHeader className="p-6 flex flex-row items-start justify-between gap-6 flex-wrap">
+        <CardHeader className="flex flex-row flex-wrap items-start justify-between gap-6 p-6">
           <div>
             <Avatar className="h-10 w-10">
               <AvatarImage
@@ -41,13 +49,16 @@ export default function Web302() {
               />
               <AvatarFallback>EM</AvatarFallback>
             </Avatar>
-            <h1 className="text-2xl font-bold mt-4 mb-1 flex items-center gap-2">
+            <h1 className="mt-4 mb-1 flex items-center gap-2 text-2xl font-bold">
               Emma
-              <Badge variant="outline" className="border-blue-500 text-blue-500">
+              <Badge
+                variant="outline"
+                className="border-blue-500 text-blue-500"
+              >
                 ✓
               </Badge>
             </h1>
-            <p className="text-lg text-muted-foreground">130 Collections</p>
+            <p className="text-muted-foreground text-lg">130 Collections</p>
           </div>
           <div className="flex items-center gap-2">
             <Button variant="outline" size="icon">
@@ -59,47 +70,49 @@ export default function Web302() {
             <Button>Follow Me</Button>
           </div>
         </CardHeader>
-        <CardContent className="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-6 p-6">
+        <CardContent className="grid grid-cols-1 gap-6 p-6 sm:grid-cols-2 lg:grid-cols-3">
           {DATA.map(({ img, name, tokenId, price }, key) => (
             <Card key={key}>
-              <CardHeader className="p-4 relative">
+              <CardHeader className="relative p-4">
                 <img
                   src={img}
                   alt={name}
-                  className="h-72 w-full object-cover object-center rounded-md"
+                  className="h-72 w-full rounded-md object-cover object-center"
                 />
-                <div className="absolute flex gap-2 items-center right-6 top-6">
+                <div className="absolute top-6 right-6 flex items-center gap-2">
                   <Badge
                     variant="secondary"
-                    className="bg-white/70 backdrop-blur text-black border-white/50"
+                    className="border-white/50 bg-white/70 text-black backdrop-blur"
                   >
                     Auction ends in 23h:03m:33s
                   </Badge>
                   <Button
                     size="icon"
                     variant="secondary"
-                    className="h-7 w-7 bg-white hover:bg-white text-black"
+                    className="h-7 w-7 bg-white text-black hover:bg-white"
                   >
                     <Heart className="h-3.5 w-3.5" />
                   </Button>
                 </div>
               </CardHeader>
-              <CardContent className="px-4 pb-4 pt-0">
-                <div className="flex mb-2 items-center gap-4 justify-between">
-                  <p className="text-sm text-muted-foreground">Cosmic creatures</p>
-                  <div className="flex gap-1 items-center">
-                    <p className="text-sm text-muted-foreground">Current bid</p>
+              <CardContent className="px-4 pt-0 pb-4">
+                <div className="mb-2 flex items-center justify-between gap-4">
+                  <p className="text-muted-foreground text-sm">
+                    Cosmic creatures
+                  </p>
+                  <div className="flex items-center gap-1">
+                    <p className="text-muted-foreground text-sm">Current bid</p>
                     <div className="flex gap-1">
                       <img
                         src="https://v3.material-tailwind.com/icon/eth.svg"
                         alt="ethereum"
-                        className="w-4 h-4"
+                        className="h-4 w-4"
                       />
                       <p className="text-sm font-semibold">{price}</p>
                     </div>
                   </div>
                 </div>
-                <div className="flex items-center gap-4 justify-between">
+                <div className="flex items-center justify-between gap-4">
                   <h3 className="text-lg font-semibold">Picture #{tokenId}</h3>
                   <Button size="sm">Place a Bid</Button>
                 </div>

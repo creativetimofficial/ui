@@ -278,5 +278,30 @@
     "name": "contact-sections-15",
     "description": "Contact options with quick contact form",
     "categories": ["contact"]
+  },
+  {
+    "name": "web3-01",
+    "description": "NFT collection preview with pixel art",
+    "categories": ["web3"]
+  },
+  {
+    "name": "web3-02",
+    "description": "NFT creator profile with collection gallery",
+    "categories": ["web3"]
+  },
+  {
+    "name": "web3-03",
+    "description": "Top crypto auctions with countdown timer",
+    "categories": ["web3"]
+  },
+  {
+    "name": "web3-04",
+    "description": "Trending NFT collections with gradient overlay",
+    "categories": ["web3"]
+  },
+  {
+    "name": "web3-05",
+    "description": "Top NFT creators with time filter",
+    "categories": ["web3"]
   }
 ]
