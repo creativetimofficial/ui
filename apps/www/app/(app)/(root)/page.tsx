@@ -14,7 +14,7 @@ import { ThemeSelector } from "@/components/theme-selector"
 import Speaker01 from "@/registry/creative-tim-ui/blocks/speaker-01/page"
 import { Button } from "@/registry/creative-tim-ui/ui/button"
 
-const title = "ElevenLabs UI"
+const title = "Creative Tim UI"
 const description =
   "A collection of Open Source agent and audio components that you can customize and extend."
 
@@ -60,7 +60,7 @@ export default function IndexPage() {
           <PageHeaderHeading className="max-w-4xl">
             <span className="flex items-baseline gap-2 sm:gap-3">
               <span className="font-waldenburg-ht leading-[0.95] font-bold tracking-[-0.03em]">
-                ElevenLabs
+                Creative Tim
               </span>
               <span className="font-waldenburg font-normal tracking-[-0.02em] opacity-90">
                 UI
