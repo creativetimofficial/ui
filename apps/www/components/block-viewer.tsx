@@ -21,11 +21,13 @@ import { registryItemFileSchema, registryItemSchema } from "shadcn/schema"
 import { z } from "zod"
 
 import { trackEvent } from "@/lib/events"
+import { canAccessComponent, isProComponent } from "@/lib/auth"
 import { createFileTreeForRegistryItemFiles, FileTree } from "@/lib/registry"
 import { cn } from "@/lib/utils"
 import { useCopyToClipboard } from "@/hooks/use-copy-to-clipboard"
 import { getIconForLanguageExtension } from "@/components/icons"
 import { OpenInV0Button } from "@/components/open-in-v0-button"
+import { Badge } from "@/registry/creative-tim-ui/ui/badge"
 import { Button } from "@/registry/creative-tim-ui/ui/button"
 import {
   Collapsible,
@@ -132,6 +134,8 @@ function BlockViewerToolbar() {
   const { setView, view, item, resizablePanelRef, setIframeKey } =
     useBlockViewer()
   const { copyToClipboard, isCopied } = useCopyToClipboard()
+  const isPro = isProComponent(item.name)
+  const hasAccess = canAccessComponent(item.name)
 
   return (
     <div className="hidden w-full items-center gap-2 pl-2 md:pr-6 lg:flex">
@@ -141,16 +145,25 @@ function BlockViewerToolbar() {
       >
         <TabsList className="grid h-8 grid-cols-2 items-center rounded-md p-1 *:data-[slot=tabs-trigger]:h-6 *:data-[slot=tabs-trigger]:rounded-sm *:data-[slot=tabs-trigger]:px-2 *:data-[slot=tabs-trigger]:text-xs">
           <TabsTrigger value="preview">Preview</TabsTrigger>
-          <TabsTrigger value="code">Code</TabsTrigger>
+          <TabsTrigger value="code" disabled={isPro && !hasAccess}>
+            Code
+          </TabsTrigger>
         </TabsList>
       </Tabs>
       <Separator orientation="vertical" className="mx-2 !h-4" />
-      <a
-        href={`#${item.name}`}
-        className="flex-1 text-center text-sm font-medium underline-offset-2 hover:underline md:flex-auto md:text-left"
-      >
-        {item.description?.replace(/\.$/, "")}
-      </a>
+      <div className="flex flex-1 items-center gap-2 md:flex-auto">
+        <a
+          href={`#${item.name}`}
+          className="text-sm font-medium underline-offset-2 hover:underline"
+        >
+          {item.description?.replace(/\.$/, "")}
+        </a>
+        {isPro && (
+          <Badge variant="default" className="bg-gradient-to-r from-amber-500 to-orange-500 text-white border-0">
+            PRO
+          </Badge>
+        )}
+      </div>
       <div className="ml-auto flex items-center gap-2">
         <div className="h-8 items-center gap-1.5 rounded-md border p-1 shadow-none">
           <ToggleGroup
@@ -204,21 +217,36 @@ function BlockViewerToolbar() {
           </ToggleGroup>
         </div>
         <Separator orientation="vertical" className="mx-1 !h-4" />
-        <Button
-          variant="outline"
-          className="w-fit gap-1 px-2 shadow-none"
-          size="sm"
-          onClick={() => {
-            copyToClipboard(
-              `npx shadcn@latest add "https://ui.creative-tim.com/r/${item.name}.json"`
-            )
-          }}
-        >
-          {isCopied ? <Check /> : <Terminal />}
-          <span>
-            npx @creative-tim/ui@latest components add {item.name}
-          </span>
-        </Button>
+        {isPro && !hasAccess ? (
+          <Button
+            variant="outline"
+            className="w-fit gap-1 px-2 shadow-none opacity-50 cursor-not-allowed"
+            size="sm"
+            disabled
+            title="Upgrade to PRO to access this component"
+          >
+            <Terminal />
+            <span>
+              npx @creative-tim/ui@latest components add {item.name}
+            </span>
+          </Button>
+        ) : (
+          <Button
+            variant="outline"
+            className="w-fit gap-1 px-2 shadow-none"
+            size="sm"
+            onClick={() => {
+              copyToClipboard(
+                `npx shadcn@latest add "https://ui.creative-tim.com/r/${item.name}.json"`
+              )
+            }}
+          >
+            {isCopied ? <Check /> : <Terminal />}
+            <span>
+              npx @creative-tim/ui@latest components add {item.name}
+            </span>
+          </Button>
+        )}
         <Separator orientation="vertical" className="mx-1 !h-4" />
         <OpenInV0Button name={item.name} />
       </div>
@@ -310,7 +338,9 @@ function BlockViewerMobile({ children }: { children: React.ReactNode }) {
 }
 
 function BlockViewerCode() {
-  const { activeFile, highlightedFiles } = useBlockViewer()
+  const { activeFile, highlightedFiles, item } = useBlockViewer()
+  const isPro = isProComponent(item.name)
+  const hasAccess = canAccessComponent(item.name)
 
   const file = React.useMemo(() => {
     return highlightedFiles?.find((file) => file.target === activeFile)
@@ -321,6 +351,25 @@ function BlockViewerCode() {
   }
 
   const language = file.path.split(".").pop() ?? "tsx"
+
+  // Show locked state for PRO components without access
+  if (isPro && !hasAccess) {
+    return (
+      <div className="bg-code text-code-foreground mr-[14px] flex overflow-hidden rounded-xl border group-data-[view=preview]/block-view-wrapper:hidden md:h-(--height)">
+        <div className="flex flex-1 items-center justify-center flex-col gap-4 p-8">
+          <Badge variant="default" className="bg-gradient-to-r from-amber-500 to-orange-500 text-white border-0 text-lg px-4 py-2">
+            PRO
+          </Badge>
+          <p className="text-center text-muted-foreground max-w-md">
+            This is a PRO component. Upgrade your account to access the source code and install this component.
+          </p>
+          <Button variant="default" className="mt-2">
+            Upgrade to PRO
+          </Button>
+        </div>
+      </div>
+    )
+  }
 
   return (
     <div className="bg-code text-code-foreground mr-[14px] flex overflow-hidden rounded-xl border group-data-[view=preview]/block-view-wrapper:hidden md:h-(--height)">
