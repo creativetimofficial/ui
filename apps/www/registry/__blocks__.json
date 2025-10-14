@@ -318,5 +318,80 @@
     "name": "cruds-03",
     "description": "Stylist account settings with profile photo upload",
     "categories": ["cruds"]
+  },
+  {
+    "name": "footers-01",
+    "description": "Simple footer with social links",
+    "categories": ["footers"]
+  },
+  {
+    "name": "footers-02",
+    "description": "Footer with navigation links and subscription",
+    "categories": ["footers"]
+  },
+  {
+    "name": "footers-03",
+    "description": "Website footer with CTA",
+    "categories": ["footers"]
+  },
+  {
+    "name": "footers-04",
+    "description": "Simple dark footer",
+    "categories": ["footers"]
+  },
+  {
+    "name": "footers-05",
+    "description": "Complex dark footer",
+    "categories": ["footers"]
+  },
+  {
+    "name": "footers-06",
+    "description": "Advanced light footer",
+    "categories": ["footers"]
+  },
+  {
+    "name": "footers-07",
+    "description": "Simple footer with country selection",
+    "categories": ["footers"]
+  },
+  {
+    "name": "footers-08",
+    "description": "Simple footer with version number",
+    "categories": ["footers"]
+  },
+  {
+    "name": "footers-09",
+    "description": "Footer with notification and CTA",
+    "categories": ["footers"]
+  },
+  {
+    "name": "footers-10",
+    "description": "Footer with page links",
+    "categories": ["footers"]
+  },
+  {
+    "name": "footers-11",
+    "description": "Website footer with statement",
+    "categories": ["footers"]
+  },
+  {
+    "name": "footers-12",
+    "description": "Website footer with navigation",
+    "categories": ["footers"]
+  },
+  {
+    "name": "footers-13",
+    "description": "Simple centered website footer",
+    "categories": ["footers"]
+  },
+  {
+    "name": "footers-14",
+    "description": "Website footer for apps",
+    "categories": ["footers"]
+  },
+  {
+    "name": "footers-15",
+    "description": "Website footer with quote",
+    "categories": ["footers"]
   }
 ]

@@ -1,5 +1,7 @@
 "use client"
 
+import { Settings } from "lucide-react"
+
 import { Button } from "@/registry/creative-tim-ui/ui/button"
 import {
   Select,
@@ -8,7 +10,6 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/registry/creative-tim-ui/ui/select"
-import { Settings } from "lucide-react"
 
 const YEAR = new Date().getFullYear()
 
@@ -31,7 +32,7 @@ const COUNTRIES = [
 
 export default function Footers07() {
   return (
-    <footer className="pb-8 pt-16">
+    <footer className="pt-16 pb-8">
       <div className="container mx-auto">
         <div className="flex flex-row flex-wrap items-start justify-center gap-4 md:justify-between">
           <div className="grid gap-3">

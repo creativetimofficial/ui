@@ -28,7 +28,7 @@ const YEAR = new Date().getFullYear()
 
 export default function Footers11() {
   return (
-    <footer className="pb-8 pt-16">
+    <footer className="pt-16 pb-8">
       <div className="container mx-auto">
         <div className="mb-6 grid grid-cols-1 justify-between gap-4 sm:grid-cols-2">
           <h6 className="mb-4 text-xl font-semibold">Creative Tim</h6>

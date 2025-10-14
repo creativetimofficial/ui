@@ -1,7 +1,8 @@
 "use client"
 
-import { Button } from "@/registry/creative-tim-ui/ui/button"
 import { Github, Instagram, Twitter, Youtube } from "lucide-react"
+
+import { Button } from "@/registry/creative-tim-ui/ui/button"
 
 const YEAR = new Date().getFullYear()
 
@@ -15,7 +16,7 @@ const LINKS = [
 
 export default function Footers14() {
   return (
-    <footer className="bg-primary pb-8 pt-16">
+    <footer className="bg-primary pt-16 pb-8">
       <div className="container mx-auto">
         <div className="mb-16 flex flex-wrap items-center justify-between gap-8">
           <div>
@@ -28,7 +29,7 @@ export default function Footers14() {
                 <li key={key}>
                   <a
                     href={href}
-                    className="text-secondary hover:text-white font-semibold"
+                    className="text-secondary font-semibold hover:text-white"
                   >
                     {title}
                   </a>
@@ -37,7 +38,7 @@ export default function Footers14() {
             </ul>
           </div>
           <div>
-            <p className="text-secondary hover:text-white font-semibold">
+            <p className="text-secondary font-semibold hover:text-white">
               Get the App
             </p>
             <div className="mt-4 grid gap-4">

@@ -13,7 +13,7 @@ const LINKS = [
 
 export default function Footers10() {
   return (
-    <footer className="pb-8 pt-16">
+    <footer className="pt-16 pb-8">
       <div className="container mx-auto grid place-items-center">
         <ul className="mb-10 flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
           {LINKS.map(({ title, href }, key) => (
@@ -27,9 +27,7 @@ export default function Footers10() {
             </li>
           ))}
         </ul>
-        <p className="text-foreground">
-          Copyright &copy; {YEAR} Creative Tim
-        </p>
+        <p className="text-foreground">Copyright &copy; {YEAR} Creative Tim</p>
       </div>
     </footer>
   )

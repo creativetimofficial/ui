@@ -54,7 +54,7 @@ const YEAR = new Date().getFullYear()
 
 export default function Footers05() {
   return (
-    <footer className="bg-primary pb-8 pt-16">
+    <footer className="bg-primary pt-16 pb-8">
       <div className="container mx-auto">
         <div className="grid grid-cols-1 justify-between gap-10 sm:grid-cols-2">
           <div className="row-start-2 grid grid-cols-2 justify-between gap-6 sm:row-auto lg:grid-cols-4">
@@ -79,7 +79,7 @@ export default function Footers05() {
               Language & Currency
             </p>
             <Select>
-              <SelectTrigger className="placeholder:text-white/60 border-white/20 bg-white/10 text-white lg:w-72 mb-4">
+              <SelectTrigger className="mb-4 border-white/20 bg-white/10 text-white placeholder:text-white/60 lg:w-72">
                 <SelectValue placeholder="Select Language" />
               </SelectTrigger>
               <SelectContent>
@@ -89,7 +89,7 @@ export default function Footers05() {
               </SelectContent>
             </Select>
             <Select>
-              <SelectTrigger className="placeholder:text-white/60 border-white/20 bg-white/10 text-white lg:w-72">
+              <SelectTrigger className="border-white/20 bg-white/10 text-white placeholder:text-white/60 lg:w-72">
                 <SelectValue placeholder="Select Currency" />
               </SelectTrigger>
               <SelectContent>
@@ -100,14 +100,13 @@ export default function Footers05() {
             </Select>
           </div>
         </div>
-        <div className="border-surface/50 mt-10 flex flex-col justify-between gap-4 border-b border-t pb-8 pt-6 md:flex-row lg:items-end">
+        <div className="border-surface/50 mt-10 flex flex-col justify-between gap-4 border-t border-b pt-6 pb-8 md:flex-row lg:items-end">
           <div>
             <p className="text-secondary mb-2 font-semibold">
               Subscribe to our newsletters
             </p>
             <p className="text-secondary">
-              The latest news, articles and resources sent to your inbox
-              weekly.
+              The latest news, articles and resources sent to your inbox weekly.
             </p>
           </div>
           <div className="flex w-full items-end gap-2 md:max-w-sm">
@@ -122,7 +121,7 @@ export default function Footers05() {
                 type="email"
                 id="email"
                 placeholder="someone@example.com"
-                className="placeholder:text-white/60 border-white/20 bg-white/10 text-white"
+                className="border-white/20 bg-white/10 text-white placeholder:text-white/60"
               />
             </div>
             <Button variant="secondary" className="shrink-0">

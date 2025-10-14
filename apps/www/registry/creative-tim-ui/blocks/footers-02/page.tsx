@@ -39,7 +39,7 @@ const YEAR = new Date().getFullYear()
 
 export default function Footers02() {
   return (
-    <footer className="pb-8 pt-16">
+    <footer className="pt-16 pb-8">
       <div className="container mx-auto">
         <div className="grid grid-cols-1 justify-between gap-10 md:grid-cols-2">
           <div className="grid grid-cols-3 justify-between gap-x-6 gap-y-4">
@@ -62,12 +62,15 @@ export default function Footers02() {
           <div className="lg:ml-auto">
             <p className="mb-2 font-semibold">Subscribe</p>
             <p className="text-foreground max-w-sm [text-wrap:_balance]">
-              Get access to subscriber exclusive deals and be the first who
-              gets informed about fresh sales.
+              Get access to subscriber exclusive deals and be the first who gets
+              informed about fresh sales.
             </p>
             <div className="mt-4 flex w-full max-w-sm items-end gap-2">
               <div className="w-full">
-                <Label htmlFor="email" className="mb-2 inline-block text-sm font-semibold">
+                <Label
+                  htmlFor="email"
+                  className="mb-2 inline-block text-sm font-semibold"
+                >
                   Your Email
                 </Label>
                 <Input
@@ -82,7 +85,7 @@ export default function Footers02() {
               <Checkbox id="checkbox-link" />
               <Label
                 htmlFor="checkbox-link"
-                className="text-foreground flex select-none gap-1"
+                className="text-foreground flex gap-1 select-none"
               >
                 I agree with the
                 <a href="#" className="text-primary">

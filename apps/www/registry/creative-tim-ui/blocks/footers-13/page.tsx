@@ -1,7 +1,8 @@
 "use client"
 
-import { Button } from "@/registry/creative-tim-ui/ui/button"
 import { Github, Instagram, Twitter, Youtube } from "lucide-react"
+
+import { Button } from "@/registry/creative-tim-ui/ui/button"
 
 const YEAR = new Date().getFullYear()
 
@@ -16,7 +17,7 @@ const LINKS = [
 
 export default function Footers13() {
   return (
-    <footer className="pb-8 pt-16">
+    <footer className="pt-16 pb-8">
       <div className="container mx-auto grid place-items-center">
         <ul className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
           {LINKS.map(({ title, href }, key) => (
@@ -52,9 +53,7 @@ export default function Footers13() {
             </a>
           </Button>
         </div>
-        <p className="text-foreground">
-          Copyright &copy; {YEAR} Creative Tim
-        </p>
+        <p className="text-foreground">Copyright &copy; {YEAR} Creative Tim</p>
       </div>
     </footer>
   )

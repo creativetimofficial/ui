@@ -12,9 +12,9 @@ const LINKS = [
 
 export default function Footers09() {
   return (
-    <footer className="pb-8 pt-16">
+    <footer className="pt-16 pb-8">
       <div className="container mx-auto">
-        <div className="flex flex-row flex-wrap items-center gap-8 !justify-between">
+        <div className="flex flex-row flex-wrap items-center !justify-between gap-8">
           <div className="space-y-2">
             <p className="font-semibold">
               New Features available! Upgrade to v3.0.0
