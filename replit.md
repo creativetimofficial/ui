@@ -150,3 +150,18 @@ Preferred communication style: Simple, everyday language.
 - **Dependencies**: Badge, Button (shadcn UI components)
 - **Registry Integration**: Successfully added to registry-blocks.ts under ecommerce category
 - **Use Case**: Ideal for luxury fashion brands, high-end product showcases, and premium ecommerce stores requiring detailed product presentation
+
+#### complex-product-description-01: Enhanced with Size Selector (October 15, 2025)
+- **Description**: Premium product detail block with complete shopping experience
+- **Enhancements**:
+  - **Size Selector**: Interactive size options (XS, S, M, L, XL) with active state styling
+  - **Visual Design**: Inspired by ecommerce-sections-02 with neutral color palette
+  - **"New Arrival" Badge**: Clean badge component at top
+  - **Improved Star Ratings**: Using Star icons with proper fill states
+  - **Enhanced Color Selector**: 40x40px swatches with ring selection indicator
+  - **Feature Icons Grid**: 4-feature 2-column layout (Premium materials, Free shipping, Returns, Warranty)
+  - **Interactive Favorite Button**: Heart icon that fills when clicked
+  - **Better Accordion**: Cleaner styling with detailed content (Features, Care, Shipping, Warranty)
+  - **Vertical Thumbnail Gallery**: Left-side gallery for desktop with better spacing
+- **Dependencies**: Badge, Button, Accordion (shadcn UI components)
+- **Use Case**: Perfect for fashion ecommerce with size-specific products requiring detailed product information and multiple view angles
