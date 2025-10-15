@@ -3,8 +3,13 @@ export type Provider = 'email' | 'google';
 export type AuthUser = {
   id: number;
   email: string;
+  username?: string;
   name?: string | null;
-  provider?: Provider;
+  first_name?: string | null;
+  last_name?: string | null;
+  user_type?: number;
+  provider?: string | null;
+  photo_url?: string | null;
   google_sub?: string | null;
   created_at?: string;
   updated_at?: string;
