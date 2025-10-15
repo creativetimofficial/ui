@@ -218,8 +218,8 @@ export default function EcommerceSections02() {
                   <p className="mb-3">
                     <strong>Materials & Care:</strong> This bag is made from
                     100% full-grain vegetable-tanned leather that develops a
-                    beautiful patina over time. Clean with a soft, dry cloth
-                    and condition regularly with leather cream.
+                    beautiful patina over time. Clean with a soft, dry cloth and
+                    condition regularly with leather cream.
                   </p>
                   <p className="mb-3">
                     <strong>Dimensions:</strong> 9.5" W x 7" H x 3" D. Strap

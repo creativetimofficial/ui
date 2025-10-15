@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import { Heart, Star, Package, Truck, RefreshCw, Shield } from "lucide-react"
+import { Heart, Package, RefreshCw, Shield, Star, Truck } from "lucide-react"
 
 import {
   Accordion,
@@ -143,7 +143,9 @@ export default function ComplexProductDescription01() {
             <div className="mb-6">
               <p className="mb-3 text-sm font-medium text-neutral-900">
                 Color:{" "}
-                <span className="font-normal">{COLORS[selectedColor].name}</span>
+                <span className="font-normal">
+                  {COLORS[selectedColor].name}
+                </span>
               </p>
               <div className="flex gap-2">
                 {COLORS.map((color, index) => (
