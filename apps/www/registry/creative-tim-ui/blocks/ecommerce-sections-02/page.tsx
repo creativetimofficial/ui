@@ -16,6 +16,7 @@ import { Button } from "@/registry/creative-tim-ui/ui/button"
 export default function EcommerceSections02() {
   const [selectedImage, setSelectedImage] = useState(0)
   const [selectedColor, setSelectedColor] = useState(1)
+  const [isInfoOpen, setIsInfoOpen] = useState(false)
 
   const thumbnails = [
     "/placeholder.svg?height=80&width=80&text=Bag+1",
@@ -27,19 +28,19 @@ export default function EcommerceSections02() {
   ]
 
   const colors = [
-    { name: "Noir", hex: "#1a1a1a" },
-    { name: "Ivory Liégé", hex: "#f5f0e8" },
-    { name: "Sage Green", hex: "#7d9488" },
-    { name: "Stone Gray", hex: "#9ca3af" },
-    { name: "Midnight", hex: "#0f172a" },
-    { name: "Cognac", hex: "#a0522d" },
+    { name: "Black", hex: "#1a1a1a" },
+    { name: "Cream", hex: "#f5f0e8" },
+    { name: "Forest Green", hex: "#7d9488" },
+    { name: "Gray", hex: "#9ca3af" },
+    { name: "Navy Blue", hex: "#0f172a" },
+    { name: "Brown", hex: "#a0522d" },
   ]
 
   const features = [
-    { icon: ShoppingBag, text: "Shoulder bags" },
-    { icon: Package, text: "Full Grain Leather" },
+    { icon: ShoppingBag, text: "Crossbody style" },
+    { icon: Package, text: "Premium leather" },
     { icon: Ruler, text: "Adjustable strap" },
-    { icon: MapPin, text: "Handmade in Italy" },
+    { icon: MapPin, text: "Crafted in France" },
   ]
 
   return (
@@ -100,18 +101,18 @@ export default function EcommerceSections02() {
           <div className="flex flex-col">
             <Badge
               variant="outline"
-              className="mb-4 w-fit border-neutral-300 text-xs font-medium tracking-wider text-neutral-600"
+              className="mb-4 w-fit border-neutral-300 text-xs font-medium text-neutral-600"
             >
-              BEST SELLER
+              Trending Now
             </Badge>
 
             <h1 className="mb-2 text-3xl font-light tracking-tight text-neutral-900 sm:text-4xl">
-              LE GRAND NOVA IVORY LIÉGÉ
+              Artisan Leather Crossbody
             </h1>
 
             <div className="mb-6 flex items-center gap-4">
               <span className="text-2xl font-normal text-neutral-900">
-                $450.00
+                $385.00
               </span>
               <div className="flex items-center gap-1">
                 <div className="flex">
@@ -155,9 +156,10 @@ export default function EcommerceSections02() {
             </div>
 
             <p className="mb-4 text-sm leading-relaxed text-neutral-600">
-              Flap 'Box' bag in calfskin, with secure brass push clasp. Back
-              pocket. Interior lined in suede. Long and adjustable shoulder
-              strap included. Inside pocket with bellows.
+              Elegant crossbody bag crafted from premium vegetable-tanned
+              leather with a minimalist silhouette. Features a secure magnetic
+              clasp closure, interior zip compartment, and an adjustable
+              shoulder strap for versatile wear.
             </p>
 
             <p className="mb-6 text-sm text-neutral-600">
@@ -166,7 +168,7 @@ export default function EcommerceSections02() {
                 href="#"
                 className="font-medium text-neutral-900 underline underline-offset-2 hover:text-neutral-700"
               >
-                Leo & Violette
+                Maison Atelier
               </a>{" "}
               official store.
             </p>
@@ -177,13 +179,13 @@ export default function EcommerceSections02() {
                 size="lg"
                 className="flex-1 border-neutral-900 text-neutral-900 hover:bg-neutral-900 hover:text-white"
               >
-                ADD TO CART
+                Add to Cart
               </Button>
               <Button
                 size="lg"
                 className="flex-1 bg-neutral-900 text-white hover:bg-neutral-800"
               >
-                BUY IT NOW
+                Buy it Now
               </Button>
             </div>
 
@@ -199,10 +201,38 @@ export default function EcommerceSections02() {
               ))}
             </div>
 
-            <button className="flex w-full items-center justify-between border-t border-neutral-200 py-4 text-sm font-medium text-neutral-900 hover:text-neutral-600">
-              MORE INFORMATION
-              <ChevronDown className="h-4 w-4" />
-            </button>
+            <div className="border-t border-neutral-200">
+              <button
+                onClick={() => setIsInfoOpen(!isInfoOpen)}
+                className="flex w-full items-center justify-between py-4 text-sm font-medium text-neutral-900 hover:text-neutral-600"
+              >
+                More Information
+                <ChevronDown
+                  className={`h-4 w-4 transition-transform ${
+                    isInfoOpen ? "rotate-180" : ""
+                  }`}
+                />
+              </button>
+              {isInfoOpen && (
+                <div className="pb-4 text-sm leading-relaxed text-neutral-600">
+                  <p className="mb-3">
+                    <strong>Materials & Care:</strong> This bag is made from
+                    100% full-grain vegetable-tanned leather that develops a
+                    beautiful patina over time. Clean with a soft, dry cloth
+                    and condition regularly with leather cream.
+                  </p>
+                  <p className="mb-3">
+                    <strong>Dimensions:</strong> 9.5" W x 7" H x 3" D. Strap
+                    drop adjustable from 20" to 24". Weight: 1.2 lbs.
+                  </p>
+                  <p>
+                    <strong>Shipping & Returns:</strong> Free standard shipping
+                    on orders over $200. 30-day return policy with original
+                    receipt and tags attached.
+                  </p>
+                </div>
+              )}
+            </div>
           </div>
         </div>
       </div>

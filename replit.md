@@ -135,17 +135,18 @@ Preferred communication style: Simple, everyday language.
   - Large centered product image viewer
   - Horizontal thumbnail carousel for mobile/tablet (4 visible)
   - Product details section including:
-    - "BEST SELLER" badge
-    - Product title with elegant typography
-    - Price display with star rating (4.7)
-    - Color selector with 6 color swatches (Noir, Ivory Liégé, Sage Green, Stone Gray, Midnight, Cognac)
+    - "Trending Now" badge
+    - Product title: "Artisan Leather Crossbody" with elegant typography
+    - Price display ($385.00) with star rating (4.7)
+    - Color selector with 6 color swatches (Black, Cream, Forest Green, Gray, Navy Blue, Brown)
     - Product description with features
-    - Demo store disclaimer with link
-    - Dual CTA buttons: "ADD TO CART" (outline) and "BUY IT NOW" (filled)
-    - Feature icons grid: Shoulder bags, Full Grain Leather, Adjustable strap, Handmade in Italy
-    - Expandable "MORE INFORMATION" section
+    - Demo store disclaimer with "Maison Atelier" link
+    - Dual CTA buttons: "Add to Cart" (outline) and "Buy it Now" (filled)
+    - Feature icons grid: Crossbody style, Premium leather, Adjustable strap, Crafted in France
+    - Functional accordion "More Information" section with expandable content (Materials & Care, Dimensions, Shipping & Returns)
   - Responsive layout adapting to mobile, tablet, and desktop
   - Clean, minimal design with neutral color palette
+  - All text uses normal casing (not uppercase)
 - **Dependencies**: Badge, Button (shadcn UI components)
 - **Registry Integration**: Successfully added to registry-blocks.ts under ecommerce category
 - **Use Case**: Ideal for luxury fashion brands, high-end product showcases, and premium ecommerce stores requiring detailed product presentation
