@@ -59,10 +59,10 @@ export default function IndexPage() {
         <PageHeader className="relative z-10">
           <PageHeaderHeading className="max-w-4xl">
             <span className="flex items-baseline gap-2 sm:gap-3">
-              <span className="font-waldenburg-ht leading-[0.95] font-bold tracking-[-0.03em]">
+              <span className="font-geist-bold leading-[0.95] font-bold tracking-[-0.03em]">
                 Creative Tim
               </span>
-              <span className="font-waldenburg font-normal tracking-[-0.02em] opacity-90">
+              <span className="font-geist font-normal tracking-[-0.02em] opacity-90">
                 UI
               </span>
             </span>

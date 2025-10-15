@@ -3,7 +3,6 @@ import {
   Geist as FontSans,
   Inter,
 } from "next/font/google"
-import localFont from "next/font/local"
 
 import { cn } from "@/lib/utils"
 
@@ -23,35 +22,22 @@ const fontInter = Inter({
   variable: "--font-inter",
 })
 
-const fontWaldenburg = localFont({
-  src: [
-    {
-      path: "../public/fonts/waldenburg/Waldenburg-Regular.woff2",
-      weight: "400",
-    },
-    {
-      path: "../public/fonts/waldenburg/Waldenburg-Bold.woff2",
-      weight: "700",
-    },
-  ],
-  variable: "--font-waldenburg",
+// Using Geist as replacement for Waldenburg
+const fontGeist = FontSans({
+  subsets: ["latin"],
+  variable: "--font-geist",
 })
 
-const fontWaldenburgHF = localFont({
-  src: [
-    {
-      path: "../public/fonts/waldenburg-semi-condensed/Waldenburg-Bold-SemiCondensed.woff2",
-      weight: "700",
-    },
-  ],
-  variable: "--font-waldenburg-ht",
-  weight: "700",
+const fontGeistBold = FontSans({
+  subsets: ["latin"],
+  variable: "--font-geist-bold",
+  weight: ["700"],
 })
 
 export const fontVariables = cn(
   fontSans.variable,
   fontMono.variable,
   fontInter.variable,
-  fontWaldenburg.variable,
-  fontWaldenburgHF.variable
+  fontGeist.variable,
+  fontGeistBold.variable
 )
