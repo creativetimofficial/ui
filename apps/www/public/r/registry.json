@@ -1157,6 +1157,31 @@
       ]
     },
     {
+      "name": "ecommerce-sections-01",
+      "type": "registry:block",
+      "description": "Runway video spotlight with product cards",
+      "registryDependencies": [
+        "badge",
+        "button",
+        "card"
+      ],
+      "files": [
+        {
+          "path": "registry/creative-tim-ui/blocks/ecommerce-sections-01/page.tsx",
+          "type": "registry:page",
+          "target": "app/ecommerce-sections/page.tsx"
+        }
+      ],
+      "meta": {
+        "iframeHeight": "900px",
+        "container": "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
+        "mobile": "component"
+      },
+      "categories": [
+        "ecommerce"
+      ]
+    },
+    {
       "name": "simple-faq-01",
       "type": "registry:block",
       "description": "Simple FAQ with dividers",
