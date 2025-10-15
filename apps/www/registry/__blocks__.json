@@ -543,5 +543,40 @@
     "name": "modals-11",
     "description": "Confirm vault deletion modal with text input verification",
     "categories": ["modals"]
+  },
+  {
+    "name": "account-basic-info-01",
+    "description": "Personal information management form",
+    "categories": ["account"]
+  },
+  {
+    "name": "account-2fa-01",
+    "description": "Two-factor authentication setup",
+    "categories": ["account"]
+  },
+  {
+    "name": "account-change-password-01",
+    "description": "Change password form with validation",
+    "categories": ["account"]
+  },
+  {
+    "name": "account-notifications-01",
+    "description": "Notification preferences management",
+    "categories": ["account"]
+  },
+  {
+    "name": "account-sessions-01",
+    "description": "Active sessions and devices management",
+    "categories": ["account"]
+  },
+  {
+    "name": "account-avatar-upload-01",
+    "description": "Profile avatar upload and management",
+    "categories": ["account"]
+  },
+  {
+    "name": "account-integrations-01",
+    "description": "Third-party integrations management",
+    "categories": ["account"]
   }
 ]

@@ -20,8 +20,8 @@ import { ImperativePanelHandle } from "react-resizable-panels"
 import { registryItemFileSchema, registryItemSchema } from "shadcn/schema"
 import { z } from "zod"
 
-import { trackEvent } from "@/lib/events"
 import { canAccessComponent, isProComponent } from "@/lib/auth"
+import { trackEvent } from "@/lib/events"
 import { createFileTreeForRegistryItemFiles, FileTree } from "@/lib/registry"
 import { cn } from "@/lib/utils"
 import { useCopyToClipboard } from "@/hooks/use-copy-to-clipboard"
@@ -159,7 +159,10 @@ function BlockViewerToolbar() {
           {item.description?.replace(/\.$/, "")}
         </a>
         {isPro && (
-          <Badge variant="default" className="bg-gradient-to-r from-amber-500 to-orange-500 text-white border-0">
+          <Badge
+            variant="default"
+            className="border-0 bg-gradient-to-r from-amber-500 to-orange-500 text-white"
+          >
             PRO
           </Badge>
         )}
@@ -220,15 +223,13 @@ function BlockViewerToolbar() {
         {isPro && !hasAccess ? (
           <Button
             variant="outline"
-            className="w-fit gap-1 px-2 shadow-none opacity-50 cursor-not-allowed"
+            className="w-fit cursor-not-allowed gap-1 px-2 opacity-50 shadow-none"
             size="sm"
             disabled
             title="Upgrade to PRO to access this component"
           >
             <Terminal />
-            <span>
-              npx @creative-tim/ui@latest components add {item.name}
-            </span>
+            <span>npx @creative-tim/ui@latest components add {item.name}</span>
           </Button>
         ) : (
           <Button
@@ -242,9 +243,7 @@ function BlockViewerToolbar() {
             }}
           >
             {isCopied ? <Check /> : <Terminal />}
-            <span>
-              npx @creative-tim/ui@latest components add {item.name}
-            </span>
+            <span>npx @creative-tim/ui@latest components add {item.name}</span>
           </Button>
         )}
         <Separator orientation="vertical" className="mx-1 !h-4" />
@@ -356,12 +355,16 @@ function BlockViewerCode() {
   if (isPro && !hasAccess) {
     return (
       <div className="bg-code text-code-foreground mr-[14px] flex overflow-hidden rounded-xl border group-data-[view=preview]/block-view-wrapper:hidden md:h-(--height)">
-        <div className="flex flex-1 items-center justify-center flex-col gap-4 p-8">
-          <Badge variant="default" className="bg-gradient-to-r from-amber-500 to-orange-500 text-white border-0 text-lg px-4 py-2">
+        <div className="flex flex-1 flex-col items-center justify-center gap-4 p-8">
+          <Badge
+            variant="default"
+            className="border-0 bg-gradient-to-r from-amber-500 to-orange-500 px-4 py-2 text-lg text-white"
+          >
             PRO
           </Badge>
-          <p className="text-center text-muted-foreground max-w-md">
-            This is a PRO component. Upgrade your account to access the source code and install this component.
+          <p className="text-muted-foreground max-w-md text-center">
+            This is a PRO component. Upgrade your account to access the source
+            code and install this component.
           </p>
           <Button variant="default" className="mt-2">
             Upgrade to PRO

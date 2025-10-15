@@ -24,7 +24,7 @@ export async function middleware(request: NextRequest) {
     if (PRIVATE_COMPONENTS.includes(componentName)) {
       const url = request.nextUrl.clone()
       url.pathname = `/api/r/${componentName}`
-      
+
       return NextResponse.rewrite(url)
     }
   }

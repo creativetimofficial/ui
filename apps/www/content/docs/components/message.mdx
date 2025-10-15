@@ -71,7 +71,7 @@ The `MessageContent` component supports two variants:
 {
   /* Contained variant - default, has background and padding */
 }
-<Message from="user">
+;<Message from="user">
   <MessageAvatar src="/user-avatar.jpg" />
   <MessageContent variant="contained">
     This is a contained message with background
@@ -81,7 +81,7 @@ The `MessageContent` component supports two variants:
 {
   /* Flat variant - no background for assistant, minimal styling */
 }
-<Message from="assistant">
+;<Message from="assistant">
   <MessageAvatar src="/assistant-avatar.jpg" />
   <MessageContent variant="flat">
     This is a flat message with minimal styling
@@ -95,7 +95,7 @@ The `MessageContent` component supports two variants:
 import { Conversation, ConversationContent } from "@/components/ui/conversation"
 import { Message, MessageAvatar, MessageContent } from "@/components/ui/message"
 
-<Conversation>
+;<Conversation>
   <ConversationContent>
     {messages.map((message) => (
       <Message key={message.id} from={message.from}>

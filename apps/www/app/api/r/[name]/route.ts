@@ -1,6 +1,6 @@
-import { NextRequest, NextResponse } from "next/server"
 import { existsSync, readFileSync } from "fs"
 import path from "path"
+import { NextRequest, NextResponse } from "next/server"
 
 const PRIVATE_COMPONENTS = ["testimonials-03", "testimonials-04"]
 

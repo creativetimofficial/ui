@@ -2242,6 +2242,132 @@ export const Index: Record<string, any> = {
     categories: ["modals"],
     meta: {"iframeHeight":"550px","container":"w-full bg-surface","mobile":"component"},
   },
+  "account-basic-info-01": {
+    name: "account-basic-info-01",
+    description: "Personal information management form",
+    type: "registry:block",
+    registryDependencies: ["button","card","input","label","select","calendar","popover"],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/account-basic-info-01/page.tsx",
+      type: "registry:page",
+      target: "app/account-basic-info/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/account-basic-info-01/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["account"],
+    meta: {"iframeHeight":"1000px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component"},
+  },
+  "account-2fa-01": {
+    name: "account-2fa-01",
+    description: "Two-factor authentication setup",
+    type: "registry:block",
+    registryDependencies: ["button","card","input","label","switch"],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/account-2fa-01/page.tsx",
+      type: "registry:page",
+      target: "app/account-2fa/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/account-2fa-01/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["account"],
+    meta: {"iframeHeight":"800px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component"},
+  },
+  "account-change-password-01": {
+    name: "account-change-password-01",
+    description: "Change password form with validation",
+    type: "registry:block",
+    registryDependencies: ["button","card","input","label"],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/account-change-password-01/page.tsx",
+      type: "registry:page",
+      target: "app/account-change-password/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/account-change-password-01/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["account"],
+    meta: {"iframeHeight":"700px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component"},
+  },
+  "account-notifications-01": {
+    name: "account-notifications-01",
+    description: "Notification preferences management",
+    type: "registry:block",
+    registryDependencies: ["button","card","switch"],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/account-notifications-01/page.tsx",
+      type: "registry:page",
+      target: "app/account-notifications/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/account-notifications-01/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["account"],
+    meta: {"iframeHeight":"900px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component"},
+  },
+  "account-sessions-01": {
+    name: "account-sessions-01",
+    description: "Active sessions and devices management",
+    type: "registry:block",
+    registryDependencies: ["button","card"],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/account-sessions-01/page.tsx",
+      type: "registry:page",
+      target: "app/account-sessions/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/account-sessions-01/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["account"],
+    meta: {"iframeHeight":"800px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component"},
+  },
+  "account-avatar-upload-01": {
+    name: "account-avatar-upload-01",
+    description: "Profile avatar upload and management",
+    type: "registry:block",
+    registryDependencies: ["button","card"],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/account-avatar-upload-01/page.tsx",
+      type: "registry:page",
+      target: "app/account-avatar-upload/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/account-avatar-upload-01/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["account"],
+    meta: {"iframeHeight":"600px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component"},
+  },
+  "account-integrations-01": {
+    name: "account-integrations-01",
+    description: "Third-party integrations management",
+    type: "registry:block",
+    registryDependencies: ["button","card","switch"],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/account-integrations-01/page.tsx",
+      type: "registry:page",
+      target: "app/account-integrations/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/account-integrations-01/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["account"],
+    meta: {"iframeHeight":"900px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component"},
+  },
   "use-mobile": {
     name: "use-mobile",
     description: "",

@@ -82,27 +82,27 @@ const [state, setState] = useState<"idle" | "recording" | "processing">("idle")
 {
   /* Idle state */
 }
-<VoiceButton state="idle" />
+;<VoiceButton state="idle" />
 
 {
   /* Recording with waveform */
 }
-<VoiceButton state="recording" />
+;<VoiceButton state="recording" />
 
 {
   /* Processing */
 }
-<VoiceButton state="processing" />
+;<VoiceButton state="processing" />
 
 {
   /* Success feedback */
 }
-<VoiceButton state="success" />
+;<VoiceButton state="success" />
 
 {
   /* Error feedback */
 }
-<VoiceButton state="error" />
+;<VoiceButton state="error" />
 ```
 
 ### Icon Button
@@ -110,7 +110,7 @@ const [state, setState] = useState<"idle" | "recording" | "processing">("idle")
 ```tsx showLineNumbers
 import { MicIcon } from "lucide-react"
 
-<VoiceButton state="idle" size="icon" icon={<MicIcon />} />
+;<VoiceButton state="idle" size="icon" icon={<MicIcon />} />
 ```
 
 ### Custom Styling
@@ -143,7 +143,7 @@ const handlePress = () => {
   }
 }
 
-<VoiceButton state={state} onPress={handlePress} />
+;<VoiceButton state={state} onPress={handlePress} />
 ```
 
 ## API Reference

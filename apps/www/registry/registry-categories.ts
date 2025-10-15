@@ -1,5 +1,10 @@
 export const registryCategories = [
   {
+    name: "Account",
+    slug: "account",
+    hidden: false,
+  },
+  {
     name: "Agents",
     slug: "agents",
     hidden: false,

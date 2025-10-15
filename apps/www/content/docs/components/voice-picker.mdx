@@ -84,7 +84,7 @@ const [selectedVoice, setSelectedVoice] = useState("")
 {
   /* Controlled */
 }
-<VoicePicker
+;<VoicePicker
   voices={voices}
   value={selectedVoice}
   onValueChange={setSelectedVoice}
@@ -93,7 +93,7 @@ const [selectedVoice, setSelectedVoice] = useState("")
 {
   /* Uncontrolled */
 }
-<VoicePicker
+;<VoicePicker
   voices={voices}
   onValueChange={(voiceId) => console.log("Selected:", voiceId)}
 />

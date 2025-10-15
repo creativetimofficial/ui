@@ -93,15 +93,15 @@ A complete voice conversation interface with WebRTC support, microphone controls
 
 #### Props
 
-| Prop              | Type                                                             | Description                                     |
-| ----------------- | ---------------------------------------------------------------- | ----------------------------------------------- |
-| agentId           | `string`                                                         | **Required.** Agent ID to connect to |
-| className         | `string`                                                         | Optional CSS classes for the container          |
-| waveformClassName | `string`                                                         | Optional CSS classes for the waveform           |
-| onConnect         | `() => void`                                                     | Callback when conversation connects             |
-| onDisconnect      | `() => void`                                                     | Callback when conversation disconnects          |
-| onError           | `(error: Error) => void`                                         | Callback when an error occurs                   |
-| onMessage         | `(message: { source: "user" \| "ai"; message: string }) => void` | Callback when a message is received             |
+| Prop              | Type                                                             | Description                            |
+| ----------------- | ---------------------------------------------------------------- | -------------------------------------- |
+| agentId           | `string`                                                         | **Required.** Agent ID to connect to   |
+| className         | `string`                                                         | Optional CSS classes for the container |
+| waveformClassName | `string`                                                         | Optional CSS classes for the waveform  |
+| onConnect         | `() => void`                                                     | Callback when conversation connects    |
+| onDisconnect      | `() => void`                                                     | Callback when conversation disconnects |
+| onError           | `(error: Error) => void`                                         | Callback when an error occurs          |
+| onMessage         | `(message: { source: "user" \| "ai"; message: string }) => void` | Callback when a message is received    |
 
 ## Features
 
