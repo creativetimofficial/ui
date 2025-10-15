@@ -43,14 +43,8 @@ export default function RegisterPage() {
       if (access) setAccessToken(access);
       if (data.user) setUser(data.user);
       router.push("/dashboard");
-    } catch (err: unknown) {
-      const msg =
-        err instanceof Error
-          ? err.message
-          : typeof err === "string"
-          ? err
-          : "Something went wrong. Please try again.";
-      setError(msg);
+    } catch {
+      setError("Something went wrong. Please try again.");
     } finally {
       setLoading(false);
     }
