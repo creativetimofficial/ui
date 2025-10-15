@@ -276,7 +276,7 @@ export const Index: Record<string, any> = {
       return { default: mod.default || mod[exportName] }
     }),
     categories: ["forms"],
-    meta: {"iframeHeight":"900px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component"},
+    meta: {"iframeHeight":"900px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component","details":"A comprehensive software purchase approval interface featuring company information, pricing tiers, and detailed cost breakdown with tax calculations."},
   },
   "billing-information-01": {
     name: "billing-information-01",
@@ -294,7 +294,7 @@ export const Index: Record<string, any> = {
       return { default: mod.default || mod[exportName] }
     }),
     categories: ["billing"],
-    meta: {"iframeHeight":"700px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component"},
+    meta: {"iframeHeight":"700px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component","details":"Manage billing addresses and company information with editable fields for shipping and billing addresses, company details, and contact information."},
   },
   "card-display-01": {
     name: "card-display-01",
@@ -2094,7 +2094,7 @@ export const Index: Record<string, any> = {
       return { default: mod.default || mod[exportName] }
     }),
     categories: ["account"],
-    meta: {"iframeHeight":"800px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component"},
+    meta: {"iframeHeight":"800px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component","details":"Secure your account with two-factor authentication. Enable authenticator apps, configure backup codes, and manage security verification methods for enhanced account protection."},
   },
   "account-change-password-01": {
     name: "account-change-password-01",

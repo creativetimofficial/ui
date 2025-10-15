@@ -18,6 +18,8 @@ export const blocks: Registry["items"] = [
       container:
         "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
       mobile: "component",
+      details:
+        "A comprehensive software purchase approval interface featuring company information, pricing tiers, and detailed cost breakdown with tax calculations.",
     },
     categories: ["forms"],
   },
@@ -38,6 +40,8 @@ export const blocks: Registry["items"] = [
       container:
         "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
       mobile: "component",
+      details:
+        "Manage billing addresses and company information with editable fields for shipping and billing addresses, company details, and contact information.",
     },
     categories: ["billing"],
   },
@@ -2072,6 +2076,8 @@ export const blocks: Registry["items"] = [
       container:
         "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
       mobile: "component",
+      details:
+        "Secure your account with two-factor authentication. Enable authenticator apps, configure backup codes, and manage security verification methods for enhanced account protection.",
     },
     categories: ["account"],
   },
