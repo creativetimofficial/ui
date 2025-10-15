@@ -84,11 +84,15 @@ const nextConfig = {
       },
     ]
   },
-  rewrites() {
+  async rewrites() {
     return [
       {
         source: "/docs/:path*.md",
         destination: "/llm/:path*",
+      },
+       {
+        source: '/api/:path*',
+        destination: 'http://localhost:3000/api/:path*', // Proxy to Rails API
       },
     ]
   },
