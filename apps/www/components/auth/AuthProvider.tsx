@@ -2,9 +2,10 @@
 "use client";
 
 import * as React from "react";
-import { AuthAPI } from "@/lib/auth";
+import { AuthAPI } from "@/lib/auth/auth";
 import { setAccessToken, clearAccessToken } from "@/lib/session";
-import type { AuthUser, AuthTokens, MessageResponse } from "@/lib/auth.types";
+import type { AuthUser, AuthTokens, MessageResponse } from "@/lib/auth/auth.types";
+import { GoogleOAuthProvider } from "@react-oauth/google";
 
 type Ctx = {
   user: AuthUser | null;
@@ -17,6 +18,11 @@ const AuthContext = React.createContext<Ctx | undefined>(undefined);
 
 function isMessageResponse(x: unknown): x is MessageResponse {
   return !!x && typeof x === "object" && "message" in (x as Record<string, unknown>);
+}
+
+export function GoogleAuthClientProvider({ children }: { children: React.ReactNode }) {
+  const clientId = process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID!;
+  return <GoogleOAuthProvider clientId={clientId}>{children}</GoogleOAuthProvider>;
 }
 
 export function AuthProvider({ children }: { children: React.ReactNode }) {
@@ -80,7 +86,9 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
 
   return (
     <AuthContext.Provider value={{ user, setUser, logout, bootstrapDone }}>
-      {children}
+      <GoogleAuthClientProvider>
+        {children}
+      </GoogleAuthClientProvider>
     </AuthContext.Provider>
   );
 }
