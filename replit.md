@@ -109,8 +109,10 @@ Preferred communication style: Simple, everyday language.
 
 ## Recent Changes
 
-### Ecommerce Sections Block (October 15, 2025)
-- **New Component**: Added `ecommerce-sections-01` block with YouTube video background and product showcase
+### Ecommerce Sections Blocks (October 15, 2025)
+
+#### ecommerce-sections-01: Video Spotlight with Product Cards
+- **Description**: YouTube video background with horizontal product cards overlay
 - **Features**:
   - YouTube IFrame Player API integration with autoplay, muted, loop support
   - Play/pause controls positioned in top-left corner (circular button)
@@ -123,6 +125,27 @@ Preferred communication style: Simple, everyday language.
   - Gradient overlay for better text readability
   - Clean white cards with rounded corners
 - **Video Source**: YouTube video (YCIuEU2y8XI) embedded via YouTube IFrame Player API
-- **Registry Integration**: Successfully added to registry-blocks.ts under ecommerce category
 - **Dependencies**: Button (shadcn UI component), YouTube IFrame Player API
-- **Use Case**: Perfect for showcasing capsule collections, seasonal lookbooks, or featured product campaigns with immersive YouTube video backgrounds
+- **Use Case**: Perfect for showcasing capsule collections, seasonal lookbooks, or featured product campaigns with immersive video backgrounds
+
+#### ecommerce-sections-02: Luxury Product Detail Page
+- **Description**: Premium product detail page with image gallery and comprehensive product information
+- **Features**:
+  - Vertical thumbnail gallery (6 images) on the left side for desktop
+  - Large centered product image viewer
+  - Horizontal thumbnail carousel for mobile/tablet (4 visible)
+  - Product details section including:
+    - "BEST SELLER" badge
+    - Product title with elegant typography
+    - Price display with star rating (4.7)
+    - Color selector with 6 color swatches (Noir, Ivory Liégé, Sage Green, Stone Gray, Midnight, Cognac)
+    - Product description with features
+    - Demo store disclaimer with link
+    - Dual CTA buttons: "ADD TO CART" (outline) and "BUY IT NOW" (filled)
+    - Feature icons grid: Shoulder bags, Full Grain Leather, Adjustable strap, Handmade in Italy
+    - Expandable "MORE INFORMATION" section
+  - Responsive layout adapting to mobile, tablet, and desktop
+  - Clean, minimal design with neutral color palette
+- **Dependencies**: Badge, Button (shadcn UI components)
+- **Registry Integration**: Successfully added to registry-blocks.ts under ecommerce category
+- **Use Case**: Ideal for luxury fashion brands, high-end product showcases, and premium ecommerce stores requiring detailed product presentation
