@@ -21,14 +21,14 @@ export const metadata: Metadata = {
   },
   metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL!),
   description: siteConfig.description,
-  keywords: ["ElevenLabs", "UI", "shadcn", "Components", "audio", "agents"],
+  keywords: ["Creative Tim", "UI", "shadcn", "Components", "audio", "agents"],
   authors: [
     {
-      name: "ElevenLabs",
-      url: "https://elevenlabs.io",
+      name: "Creative Tim",
+      url: "https://creative-tim.com",
     },
   ],
-  creator: "elevenlabs",
+  creator: "creative-tim",
   openGraph: {
     type: "website",
     locale: "en_US",
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     title: siteConfig.name,
     description: siteConfig.description,
     images: [`${process.env.NEXT_PUBLIC_APP_URL}/opengraph-image.png`],
-    creator: "@elevenlabsio",
+    creator: "@creativetim",
   },
   icons: {
     icon: "/favicon.ico",

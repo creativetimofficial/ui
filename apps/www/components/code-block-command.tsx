@@ -5,18 +5,18 @@ import { CheckIcon, ClipboardIcon, TerminalIcon } from "lucide-react"
 
 import { useConfig } from "@/hooks/use-config"
 import { copyToClipboardWithMeta } from "@/components/copy-button"
-import { Button } from "@/registry/elevenlabs-ui/ui/button"
+import { Button } from "@/registry/creative-tim-ui/ui/button"
 import {
   Tabs,
   TabsContent,
   TabsList,
   TabsTrigger,
-} from "@/registry/elevenlabs-ui/ui/tabs"
+} from "@/registry/creative-tim-ui/ui/tabs"
 import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
-} from "@/registry/elevenlabs-ui/ui/tooltip"
+} from "@/registry/creative-tim-ui/ui/tooltip"
 
 export function CodeBlockCommand({
   __npm__,

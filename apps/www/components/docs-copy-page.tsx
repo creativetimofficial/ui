@@ -3,20 +3,20 @@
 import { IconCheck, IconChevronDown, IconCopy } from "@tabler/icons-react"
 
 import { useCopyToClipboard } from "@/hooks/use-copy-to-clipboard"
-import { Button } from "@/registry/elevenlabs-ui/ui/button"
+import { Button } from "@/registry/creative-tim-ui/ui/button"
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@/registry/elevenlabs-ui/ui/dropdown-menu"
+} from "@/registry/creative-tim-ui/ui/dropdown-menu"
 import {
   Popover,
   PopoverAnchor,
   PopoverContent,
   PopoverTrigger,
-} from "@/registry/elevenlabs-ui/ui/popover"
-import { Separator } from "@/registry/elevenlabs-ui/ui/separator"
+} from "@/registry/creative-tim-ui/ui/popover"
+import { Separator } from "@/registry/creative-tim-ui/ui/separator"
 
 function getPromptUrl(baseURL: string, url: string) {
   return `${baseURL}?q=${encodeURIComponent(

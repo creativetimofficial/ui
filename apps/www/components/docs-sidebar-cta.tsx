@@ -2,7 +2,7 @@ import Link from "next/link"
 
 import { siteConfig } from "@/lib/config"
 import { cn } from "@/lib/utils"
-import { Button } from "@/registry/elevenlabs-ui/ui/button"
+import { Button } from "@/registry/creative-tim-ui/ui/button"
 
 export function DocsSidebarCta({ className }: React.ComponentProps<"div">) {
   return (
@@ -15,10 +15,10 @@ export function DocsSidebarCta({ className }: React.ComponentProps<"div">) {
       <div className="bg-surface/80 absolute inset-0" />
 
       <div className="relative z-10 text-base leading-tight font-semibold text-balance group-hover:underline">
-        Deploy and Scale Agents with ElevenLabs
+        Deploy and Scale Agents with Creative Tim
       </div>
       <div className="text-muted-foreground relative z-10">
-        ElevenLabs delivers the infrastructure and developer experience you need
+        Creative Tim delivers the infrastructure and developer experience you need
         to ship reliable audio & agent applications at scale.
       </div>
       <Button size="sm" className="relative z-10 mt-2 w-fit">

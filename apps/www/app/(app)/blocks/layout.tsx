@@ -9,7 +9,7 @@ import {
   PageHeaderHeading,
 } from "@/components/page-header"
 import { PageNav } from "@/components/page-nav"
-import { Button } from "@/registry/elevenlabs-ui/ui/button"
+import { Button } from "@/registry/creative-tim-ui/ui/button"
 
 const title = "Examples"
 const description =
@@ -54,7 +54,7 @@ export default function BlocksLayout({
             <a href="#blocks">Browse Examples</a>
           </Button>
           <Button asChild variant="ghost" size="sm">
-            <Link href="https://github.com/elevenlabs/ui">Add a block</Link>
+            <Link href="https://github.com/creativetimofficial/ui">Add a block</Link>
           </Button>
         </PageActions>
       </PageHeader>

@@ -13,7 +13,7 @@ import {
   Avatar,
   AvatarFallback,
   AvatarImage,
-} from "@/registry/elevenlabs-ui/ui/avatar"
+} from "@/registry/creative-tim-ui/ui/avatar"
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -22,13 +22,13 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/registry/elevenlabs-ui/ui/dropdown-menu"
+} from "@/registry/creative-tim-ui/ui/dropdown-menu"
 import {
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
   useSidebar,
-} from "@/registry/elevenlabs-ui/ui/sidebar"
+} from "@/registry/creative-tim-ui/ui/sidebar"
 
 export function NavUser({
   user,
