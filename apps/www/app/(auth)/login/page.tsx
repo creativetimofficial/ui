@@ -30,14 +30,8 @@ export default function LoginPage() {
       if (access) setAccessToken(access);
       if (data.user) setUser(data.user);
       router.push("/dashboard");
-    } catch (err: unknown) {
-      setError(
-        err instanceof Error
-          ? err.message
-          : typeof err === "string"
-          ? err
-          : "Something went wrong. Please try again."
-      );
+    } catch {
+      setError("Something went wrong. Please try again.");
     } finally {
       setLoading(false);
     }
