@@ -18,8 +18,8 @@ export function DocsSidebarCta({ className }: React.ComponentProps<"div">) {
         Deploy and Scale Agents with Creative Tim
       </div>
       <div className="text-muted-foreground relative z-10">
-        Creative Tim delivers the infrastructure and developer experience you need
-        to ship reliable audio & agent applications at scale.
+        Creative Tim delivers the infrastructure and developer experience you
+        need to ship reliable audio & agent applications at scale.
       </div>
       <Button size="sm" className="relative z-10 mt-2 w-fit">
         Deploy Now

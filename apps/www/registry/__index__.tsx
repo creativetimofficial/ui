@@ -260,188 +260,6 @@ export const Index: Record<string, any> = {
     categories: undefined,
     meta: undefined,
   },
-  "speaker-01": {
-    name: "speaker-01",
-    description: "EL-01 Speaker",
-    type: "registry:block",
-    registryDependencies: ["https://ui.elevenlabs.io/r/audio-player.json","https://ui.elevenlabs.io/r/orb.json","https://ui.elevenlabs.io/r/waveform.json","button","card"],
-    files: [{
-      path: "registry/creative-tim-ui/blocks/speaker-01/page.tsx",
-      type: "registry:page",
-      target: "app/speaker/page.tsx"
-    },{
-      path: "registry/creative-tim-ui/blocks/speaker-01/components/speaker.tsx",
-      type: "registry:component",
-      target: "components/speaker.tsx"
-    }],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/creative-tim-ui/blocks/speaker-01/page.tsx")
-      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
-      return { default: mod.default || mod[exportName] }
-    }),
-    categories: ["audio"],
-    meta: {"iframeHeight":"900px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component"},
-  },
-  "transcriber-01": {
-    name: "transcriber-01",
-    description: "Transcriber",
-    type: "registry:block",
-    registryDependencies: ["https://ui.elevenlabs.io/r/live-waveform.json","button","card","scroll-area","separator"],
-    files: [{
-      path: "registry/creative-tim-ui/blocks/transcriber-01/page.tsx",
-      type: "registry:page",
-      target: "app/transcriber-01/page.tsx"
-    },{
-      path: "registry/creative-tim-ui/blocks/transcriber-01/actions/transcribe.ts",
-      type: "registry:file",
-      target: "app/transcriber-01/actions/transcribe.ts"
-    }],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/creative-tim-ui/blocks/transcriber-01/page.tsx")
-      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
-      return { default: mod.default || mod[exportName] }
-    }),
-    categories: ["audio"],
-    meta: {"iframeHeight":"600px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component"},
-  },
-  "voice-chat-01": {
-    name: "voice-chat-01",
-    description: "Voice chat 1",
-    type: "registry:block",
-    registryDependencies: ["https://ui.elevenlabs.io/r/orb.json","https://ui.elevenlabs.io/r/shimmering-text.json","button","card","https://ui.elevenlabs.io/r/message.json","https://ui.elevenlabs.io/r/response.json","https://ui.elevenlabs.io/r/conversation.json","scroll-area"],
-    files: [{
-      path: "registry/creative-tim-ui/blocks/voice-chat-01/page.tsx",
-      type: "registry:page",
-      target: "app/voice-chat/page.tsx"
-    }],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/creative-tim-ui/blocks/voice-chat-01/page.tsx")
-      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
-      return { default: mod.default || mod[exportName] }
-    }),
-    categories: ["agents"],
-    meta: {"iframeHeight":"800px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component"},
-  },
-  "voice-chat-02": {
-    name: "voice-chat-02",
-    description: "Voice chat 2",
-    type: "registry:block",
-    registryDependencies: ["https://ui.elevenlabs.io/r/orb.json","https://ui.elevenlabs.io/r/shimmering-text.json","button","card"],
-    files: [{
-      path: "registry/creative-tim-ui/blocks/voice-chat-02/page.tsx",
-      type: "registry:page",
-      target: "app/voice-chat/page.tsx"
-    }],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/creative-tim-ui/blocks/voice-chat-02/page.tsx")
-      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
-      return { default: mod.default || mod[exportName] }
-    }),
-    categories: ["agents"],
-    meta: {"iframeHeight":"600px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component"},
-  },
-  "voice-chat-03": {
-    name: "voice-chat-03",
-    description: "Voice chat 3",
-    type: "registry:block",
-    registryDependencies: ["https://ui.elevenlabs.io/r/conversation-bar.json","https://ui.elevenlabs.io/r/conversation.json","https://ui.elevenlabs.io/r/message.json","https://ui.elevenlabs.io/r/orb.json","https://ui.elevenlabs.io/r/response.json","tooltip","card","button"],
-    files: [{
-      path: "registry/creative-tim-ui/blocks/voice-chat-03/page.tsx",
-      type: "registry:page",
-      target: "app/voice-chat/page.tsx"
-    }],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/creative-tim-ui/blocks/voice-chat-03/page.tsx")
-      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
-      return { default: mod.default || mod[exportName] }
-    }),
-    categories: ["agents"],
-    meta: {"iframeHeight":"800px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component"},
-  },
-  "music-player-01": {
-    name: "music-player-01",
-    description: "Music player with playlist",
-    type: "registry:block",
-    registryDependencies: ["https://ui.elevenlabs.io/r/audio-player.json","button","scroll-area"],
-    files: [{
-      path: "registry/creative-tim-ui/blocks/music-player-01/page.tsx",
-      type: "registry:page",
-      target: "app/music-player/page.tsx"
-    }],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/creative-tim-ui/blocks/music-player-01/page.tsx")
-      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
-      return { default: mod.default || mod[exportName] }
-    }),
-    categories: ["audio"],
-    meta: {"iframeHeight":"600px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component"},
-  },
-  "music-player-02": {
-    name: "music-player-02",
-    description: "Simple music player",
-    type: "registry:block",
-    registryDependencies: ["https://ui.elevenlabs.io/r/audio-player.json","card"],
-    files: [{
-      path: "registry/creative-tim-ui/blocks/music-player-02/page.tsx",
-      type: "registry:page",
-      target: "app/music-player/page.tsx"
-    }],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/creative-tim-ui/blocks/music-player-02/page.tsx")
-      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
-      return { default: mod.default || mod[exportName] }
-    }),
-    categories: ["audio"],
-    meta: {"iframeHeight":"400px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component"},
-  },
-  "voice-form-01": {
-    name: "voice-form-01",
-    description: "Voice-fill form",
-    type: "registry:block",
-    registryDependencies: ["https://ui.elevenlabs.io/r/voice-button.json","https://ui.elevenlabs.io/r/live-waveform.json","button","card","form","input"],
-    files: [{
-      path: "registry/creative-tim-ui/blocks/voice-form-01/page.tsx",
-      type: "registry:page",
-      target: "app/voice-form/page.tsx"
-    },{
-      path: "registry/creative-tim-ui/blocks/voice-form-01/schema.ts",
-      type: "registry:file",
-      target: "app/voice-form/schema.ts"
-    },{
-      path: "registry/creative-tim-ui/blocks/voice-form-01/actions/voice-to-form.ts",
-      type: "registry:file",
-      target: "app/voice-form/actions/voice-to-form.ts"
-    }],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/creative-tim-ui/blocks/voice-form-01/page.tsx")
-      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
-      return { default: mod.default || mod[exportName] }
-    }),
-    categories: ["audio"],
-    meta: {"iframeHeight":"700px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component"},
-  },
-  "voice-nav-01": {
-    name: "voice-nav-01",
-    description: "Voice-nav site navigation",
-    type: "registry:block",
-    registryDependencies: ["https://ui.elevenlabs.io/r/voice-button.json","button","card"],
-    files: [{
-      path: "registry/creative-tim-ui/blocks/voice-nav-01/page.tsx",
-      type: "registry:page",
-      target: "app/voice-nav/page.tsx"
-    },{
-      path: "registry/creative-tim-ui/blocks/voice-nav-01/actions/voice-to-site.ts",
-      type: "registry:file",
-      target: "app/voice-nav/actions/voice-to-site.ts"
-    }],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/creative-tim-ui/blocks/voice-nav-01/page.tsx")
-      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
-      return { default: mod.default || mod[exportName] }
-    }),
-    categories: ["audio"],
-    meta: {"iframeHeight":"900px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component"},
-  },
   "software-purchase-01": {
     name: "software-purchase-01",
     description: "Software purchase approval card",
@@ -2241,6 +2059,132 @@ export const Index: Record<string, any> = {
     }),
     categories: ["modals"],
     meta: {"iframeHeight":"550px","container":"w-full bg-surface","mobile":"component"},
+  },
+  "account-basic-info-01": {
+    name: "account-basic-info-01",
+    description: "Personal information management form",
+    type: "registry:block",
+    registryDependencies: ["button","card","input","label","select","calendar","popover"],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/account-basic-info-01/page.tsx",
+      type: "registry:page",
+      target: "app/account-basic-info/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/account-basic-info-01/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["account"],
+    meta: {"iframeHeight":"1000px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component"},
+  },
+  "account-2fa-01": {
+    name: "account-2fa-01",
+    description: "Two-factor authentication setup",
+    type: "registry:block",
+    registryDependencies: ["button","card","input","label","switch"],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/account-2fa-01/page.tsx",
+      type: "registry:page",
+      target: "app/account-2fa/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/account-2fa-01/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["account"],
+    meta: {"iframeHeight":"800px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component"},
+  },
+  "account-change-password-01": {
+    name: "account-change-password-01",
+    description: "Change password form with validation",
+    type: "registry:block",
+    registryDependencies: ["button","card","input","label"],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/account-change-password-01/page.tsx",
+      type: "registry:page",
+      target: "app/account-change-password/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/account-change-password-01/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["account"],
+    meta: {"iframeHeight":"700px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component"},
+  },
+  "account-notifications-01": {
+    name: "account-notifications-01",
+    description: "Notification preferences management",
+    type: "registry:block",
+    registryDependencies: ["button","card","switch"],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/account-notifications-01/page.tsx",
+      type: "registry:page",
+      target: "app/account-notifications/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/account-notifications-01/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["account"],
+    meta: {"iframeHeight":"900px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component"},
+  },
+  "account-sessions-01": {
+    name: "account-sessions-01",
+    description: "Active sessions and devices management",
+    type: "registry:block",
+    registryDependencies: ["button","card"],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/account-sessions-01/page.tsx",
+      type: "registry:page",
+      target: "app/account-sessions/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/account-sessions-01/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["account"],
+    meta: {"iframeHeight":"800px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component"},
+  },
+  "account-avatar-upload-01": {
+    name: "account-avatar-upload-01",
+    description: "Profile avatar upload and management",
+    type: "registry:block",
+    registryDependencies: ["button","card"],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/account-avatar-upload-01/page.tsx",
+      type: "registry:page",
+      target: "app/account-avatar-upload/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/account-avatar-upload-01/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["account"],
+    meta: {"iframeHeight":"600px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component"},
+  },
+  "account-integrations-01": {
+    name: "account-integrations-01",
+    description: "Third-party integrations management",
+    type: "registry:block",
+    registryDependencies: ["button","card","switch"],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/account-integrations-01/page.tsx",
+      type: "registry:page",
+      target: "app/account-integrations/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/account-integrations-01/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["account"],
+    meta: {"iframeHeight":"900px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component"},
   },
   "use-mobile": {
     name: "use-mobile",

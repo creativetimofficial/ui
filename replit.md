@@ -18,7 +18,7 @@ Preferred communication style: Simple, everyday language.
 - **Styling**: Tailwind CSS v3.4 with custom themes and CSS variables.
 - **Component Philosophy**: Radix UI primitives styled using shadcn/ui patterns.
 - **TypeScript**: Strict mode enabled.
-- **Font System**: Custom fonts (Geist, Waldenburg) with variable font support.
+- **Font System**: Geist font family with variable font support.
 
 ### Component Registry System
 - **Schema Validation**: Zod schemas for type-safe definitions.
