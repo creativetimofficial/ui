@@ -106,3 +106,19 @@ Preferred communication style: Simple, everyday language.
 - **clsx + tailwind-merge**: Conditional className composition.
 - **date-fns**: Date manipulation.
 - **class-variance-authority**: Variant-based component APIs.
+
+## Recent Changes
+
+### Ecommerce Sections Block (October 15, 2025)
+- **New Component**: Added `ecommerce-sections-01` block with video background and product showcase
+- **Features**:
+  - Video background with autoplay, muted, loop support and poster fallback
+  - Play/pause controls positioned in top-left corner
+  - Three product cards overlay with product images, badges, prices, and action buttons
+  - Footer CTA section with "Browse Full Collection" button
+  - Responsive grid layout (1 column mobile, 2 columns tablet, 3 columns desktop)
+  - Gradient overlay for better text readability
+  - Card components use semi-transparent backgrounds with backdrop blur
+- **Registry Integration**: Successfully added to registry-blocks.ts under ecommerce category
+- **Dependencies**: Badge, Button, Card (shadcn UI components)
+- **Use Case**: Perfect for showcasing capsule collections, seasonal lookbooks, or featured product campaigns with immersive video backgrounds
