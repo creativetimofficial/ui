@@ -25,7 +25,7 @@ export const blocks: Registry["items"] = [
   },
   {
     name: "billing-information-01",
-    description: "Billing information management",
+    description: "Manage billing contacts and company information",
     type: "registry:block",
     registryDependencies: ["button", "card"],
     files: [
@@ -41,13 +41,13 @@ export const blocks: Registry["items"] = [
         "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
       mobile: "component",
       details:
-        "Manage billing addresses and company information with editable fields for shipping and billing addresses, company details, and contact information.",
+        "Easily manage billing contacts and information associated with different companies within one platform. Built with shadcn/ui Card and Button components for a clean, accessible interface. Perfect for multi-company billing management, enterprise dashboards, and SaaS platforms requiring organized billing contact management.",
     },
     categories: ["billing"],
   },
   {
     name: "card-display-01",
-    description: "Credit card display",
+    description: "Credit card display with dark and light themes",
     type: "registry:block",
     registryDependencies: ["card"],
     files: [
@@ -62,12 +62,14 @@ export const blocks: Registry["items"] = [
       container:
         "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
       mobile: "component",
+      details:
+        "Showcases dark and light versions of a card with bank brand logos. Built with shadcn/ui Card component for consistent styling across themes. Ideal for payment forms, checkout processes, wallet sections, financial dashboards, and any interface requiring elegant credit card visualization with theme support.",
     },
     categories: ["billing"],
   },
   {
     name: "payment-method-01",
-    description: "Payment methods management",
+    description: "Payment method management with edit and delete",
     type: "registry:block",
     registryDependencies: ["button", "card", "tooltip"],
     files: [
@@ -82,12 +84,14 @@ export const blocks: Registry["items"] = [
       container:
         "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
       mobile: "component",
+      details:
+        "Manage payment methods with a straightforward UI layout featuring shadcn/ui Card, Button, and Tooltip components. Card brands are clearly identified, sensitive information is partially hidden for security, and editing/deleting functions are easily accessible. Includes a call-to-action button for adding new payment methods. Perfect for account settings, billing pages, and checkout flows.",
     },
     categories: ["billing"],
   },
   {
     name: "transaction-history-01",
-    description: "Transaction history with date picker",
+    description: "Financial transaction history with trend indicators",
     type: "registry:block",
     registryDependencies: ["button", "calendar", "card", "popover"],
     dependencies: ["date-fns"],
@@ -103,12 +107,14 @@ export const blocks: Registry["items"] = [
       container:
         "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
       mobile: "component",
+      details:
+        "Provides a detailed record of financial transactions with various service providers, featuring trend arrows indicating whether values are up or down. Built with shadcn/ui Button, Calendar, Card, and Popover components for an interactive filtering experience. Includes date range selection for easy transaction filtering. Ideal for billing dashboards, financial reports, and transaction monitoring interfaces.",
     },
     categories: ["billing"],
   },
   {
     name: "invoices-01",
-    description: "Invoices list with status badges",
+    description: "Invoice overview with status badges and download",
     type: "registry:block",
     registryDependencies: ["badge", "button", "separator"],
     files: [
@@ -123,6 +129,8 @@ export const blocks: Registry["items"] = [
       container:
         "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
       mobile: "component",
+      details:
+        "Provides an overview of invoices with shadcn/ui Badge components indicating payment status (paid, pending, overdue) and Button components for downloading invoice PDFs. Clean, organized layout with visual separators for easy scanning. Perfect for billing portals, accounting dashboards, and financial management systems requiring clear invoice tracking and download capabilities.",
     },
     categories: ["billing"],
   },

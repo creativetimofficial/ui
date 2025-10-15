@@ -2,7 +2,7 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "invoices-01",
   "type": "registry:block",
-  "description": "Invoices list with status badges",
+  "description": "Invoice overview with status badges and download",
   "registryDependencies": [
     "badge",
     "button",
@@ -19,7 +19,8 @@
   "meta": {
     "iframeHeight": "700px",
     "container": "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
-    "mobile": "component"
+    "mobile": "component",
+    "details": "Provides an overview of invoices with shadcn/ui Badge components indicating payment status (paid, pending, overdue) and Button components for downloading invoice PDFs. Clean, organized layout with visual separators for easy scanning. Perfect for billing portals, accounting dashboards, and financial management systems requiring clear invoice tracking and download capabilities."
   },
   "categories": [
     "billing"

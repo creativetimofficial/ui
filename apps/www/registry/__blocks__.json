@@ -6,27 +6,27 @@
   },
   {
     "name": "billing-information-01",
-    "description": "Billing information management",
+    "description": "Manage billing contacts and company information",
     "categories": ["billing"]
   },
   {
     "name": "card-display-01",
-    "description": "Credit card display",
+    "description": "Credit card display with dark and light themes",
     "categories": ["billing"]
   },
   {
     "name": "payment-method-01",
-    "description": "Payment methods management",
+    "description": "Payment method management with edit and delete",
     "categories": ["billing"]
   },
   {
     "name": "transaction-history-01",
-    "description": "Transaction history with date picker",
+    "description": "Financial transaction history with trend indicators",
     "categories": ["billing"]
   },
   {
     "name": "invoices-01",
-    "description": "Invoices list with status badges",
+    "description": "Invoice overview with status badges and download",
     "categories": ["billing"]
   },
   {
