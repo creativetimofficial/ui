@@ -180,6 +180,11 @@
     "categories": ["ecommerce"]
   },
   {
+    "name": "ecommerce-sections-02",
+    "description": "Luxury product detail page with image gallery",
+    "categories": ["ecommerce"]
+  },
+  {
     "name": "simple-faq-01",
     "description": "Simple FAQ with dividers",
     "categories": ["faqs"]
