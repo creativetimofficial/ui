@@ -110,15 +110,19 @@ Preferred communication style: Simple, everyday language.
 ## Recent Changes
 
 ### Ecommerce Sections Block (October 15, 2025)
-- **New Component**: Added `ecommerce-sections-01` block with video background and product showcase
+- **New Component**: Added `ecommerce-sections-01` block with YouTube video background and product showcase
 - **Features**:
-  - Video background with autoplay, muted, loop support and poster fallback
-  - Play/pause controls positioned in top-left corner
-  - Three product cards overlay with product images, badges, prices, and action buttons
-  - Footer CTA section with "Browse Full Collection" button
+  - YouTube IFrame Player API integration with autoplay, muted, loop support
+  - Play/pause controls positioned in top-left corner (circular button)
+  - Three horizontal product cards with compact layout:
+    - 64x64px product thumbnails on the left
+    - Brand name, title, and price in the center
+    - Shopping bag and shuffle icons on the right
+  - Footer CTA button: "VIEW ALL PRODUCTS" with outline style
   - Responsive grid layout (1 column mobile, 2 columns tablet, 3 columns desktop)
   - Gradient overlay for better text readability
-  - Card components use semi-transparent backgrounds with backdrop blur
+  - Clean white cards with rounded corners
+- **Video Source**: YouTube video (YCIuEU2y8XI) embedded via YouTube IFrame Player API
 - **Registry Integration**: Successfully added to registry-blocks.ts under ecommerce category
-- **Dependencies**: Badge, Button, Card (shadcn UI components)
-- **Use Case**: Perfect for showcasing capsule collections, seasonal lookbooks, or featured product campaigns with immersive video backgrounds
+- **Dependencies**: Button (shadcn UI component), YouTube IFrame Player API
+- **Use Case**: Perfect for showcasing capsule collections, seasonal lookbooks, or featured product campaigns with immersive YouTube video backgrounds
