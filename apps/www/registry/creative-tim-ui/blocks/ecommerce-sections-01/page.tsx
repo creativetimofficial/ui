@@ -1,18 +1,9 @@
 "use client"
 
 import { useRef, useState } from "react"
-import { Pause, Play } from "lucide-react"
+import { Pause, Play, ShoppingBag, Shuffle } from "lucide-react"
 
-import { Badge } from "@/registry/creative-tim-ui/ui/badge"
 import { Button } from "@/registry/creative-tim-ui/ui/button"
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/registry/creative-tim-ui/ui/card"
 
 const PRODUCTS = [
   {
@@ -25,11 +16,6 @@ const PRODUCTS = [
     title: "Satin Wrap Dress",
     description: "Fluid silhouette with tie waist and soft sheen.",
     price: "$215.00",
-    badges: [{ label: "New", variant: "default" as const }],
-    actions: [
-      { label: "Add to Bag", variant: "default" as const },
-      { label: "Details", variant: "ghost" as const },
-    ],
   },
   {
     id: "card-2",
@@ -41,11 +27,6 @@ const PRODUCTS = [
     title: "Structured Blazer",
     description: "Sharp shoulders, single-breasted, polished finish.",
     price: "$329.00",
-    badges: [{ label: "Editor's Pick", variant: "secondary" as const }],
-    actions: [
-      { label: "Add to Bag", variant: "default" as const },
-      { label: "Details", variant: "ghost" as const },
-    ],
   },
   {
     id: "card-3",
@@ -57,11 +38,6 @@ const PRODUCTS = [
     title: "Chunky Chelsea Boots",
     description: "Elevated lug sole with elastic side panels.",
     price: "From $180.00",
-    badges: [{ label: "Bestseller", variant: "outline" as const }],
-    actions: [
-      { label: "Add to Bag", variant: "default" as const },
-      { label: "Details", variant: "ghost" as const },
-    ],
   },
 ]
 
@@ -99,12 +75,12 @@ export default function EcommerceSectionsBlock() {
           Your browser does not support the video tag.
         </video>
 
-        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
 
         <Button
           variant="outline"
           size="icon"
-          className="absolute top-4 left-4 bg-black/40 text-white backdrop-blur-sm hover:bg-black/60 hover:text-white lg:top-6 lg:left-6"
+          className="absolute top-4 left-4 rounded-full bg-black/50 text-white backdrop-blur-sm hover:bg-black/70 hover:text-white lg:top-6 lg:left-6"
           onClick={togglePlay}
         >
           {isPlaying ? (
@@ -114,66 +90,59 @@ export default function EcommerceSectionsBlock() {
           )}
         </Button>
 
-        <div className="absolute inset-x-0 bottom-0 p-4 lg:p-8">
-          <div className="mx-auto grid max-w-7xl gap-4 md:grid-cols-2 lg:grid-cols-3 lg:gap-6">
+        <div className="absolute inset-x-0 bottom-0 space-y-6 p-4 lg:p-8">
+          <div className="mx-auto grid max-w-6xl gap-4 md:grid-cols-2 lg:grid-cols-3">
             {PRODUCTS.map((product) => (
-              <Card
+              <div
                 key={product.id}
-                className="bg-white/95 backdrop-blur-sm dark:bg-black/80"
+                className="flex items-center gap-4 rounded-2xl bg-white p-4 shadow-lg dark:bg-white/95"
               >
-                <CardHeader className="border-b pb-4">
-                  <div className="mb-4 overflow-hidden rounded-lg">
-                    <img
-                      src={product.media.src}
-                      alt={product.media.alt}
-                      className="aspect-square w-full object-cover"
-                    />
-                  </div>
-                  <div className="flex items-start justify-between gap-2">
-                    <div className="flex-1">
-                      <p className="text-muted-foreground mb-1 text-xs font-medium tracking-wide uppercase">
-                        {product.eyebrow}
-                      </p>
-                      <CardTitle className="text-lg">{product.title}</CardTitle>
-                    </div>
-                    {product.badges.map((badge, index) => (
-                      <Badge key={index} variant={badge.variant}>
-                        {badge.label}
-                      </Badge>
-                    ))}
-                  </div>
-                  <CardDescription className="line-clamp-2">
-                    {product.description}
-                  </CardDescription>
-                </CardHeader>
-                <CardContent className="pt-4">
-                  <p className="text-xl font-semibold">{product.price}</p>
-                </CardContent>
-                <CardFooter className="flex gap-2 pt-0">
-                  {product.actions.map((action, index) => (
-                    <Button
-                      key={index}
-                      variant={action.variant}
-                      size="sm"
-                      className="flex-1"
-                    >
-                      {action.label}
-                    </Button>
-                  ))}
-                </CardFooter>
-              </Card>
+                <div className="h-16 w-16 flex-shrink-0 overflow-hidden rounded-lg">
+                  <img
+                    src={product.media.src}
+                    alt={product.media.alt}
+                    className="h-full w-full object-cover"
+                  />
+                </div>
+
+                <div className="min-w-0 flex-1">
+                  <p className="text-xs font-medium tracking-wide text-gray-500 uppercase">
+                    {product.eyebrow}
+                  </p>
+                  <h3 className="truncate font-semibold text-gray-900">
+                    {product.title}
+                  </h3>
+                  <p className="font-semibold text-gray-900">{product.price}</p>
+                </div>
+
+                <div className="flex flex-shrink-0 items-center gap-2">
+                  <Button
+                    variant="ghost"
+                    size="icon"
+                    className="h-8 w-8 text-gray-600 hover:text-gray-900"
+                  >
+                    <ShoppingBag className="h-4 w-4" />
+                  </Button>
+                  <Button
+                    variant="ghost"
+                    size="icon"
+                    className="h-8 w-8 text-gray-600 hover:text-gray-900"
+                  >
+                    <Shuffle className="h-4 w-4" />
+                  </Button>
+                </div>
+              </div>
             ))}
           </div>
 
-          <div className="mt-6 text-center lg:mt-8">
-            <div className="mx-auto max-w-md">
-              <Button variant="secondary" size="lg" className="w-full">
-                Browse Full Collection
-              </Button>
-              <p className="text-muted-foreground mt-2 text-sm">
-                See every look, colorway, and size currently in stock.
-              </p>
-            </div>
+          <div className="flex justify-center">
+            <Button
+              variant="outline"
+              size="lg"
+              className="rounded-full border-white/80 bg-white/10 px-8 text-white backdrop-blur-sm hover:bg-white/20 hover:text-white"
+            >
+              VIEW ALL PRODUCTS
+            </Button>
           </div>
         </div>
       </div>
