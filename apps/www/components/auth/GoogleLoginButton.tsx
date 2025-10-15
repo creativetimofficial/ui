@@ -1,7 +1,7 @@
 "use client";
 
 import { useGoogleLogin } from "@react-oauth/google";
-import { Button } from "@/registry/elevenlabs-ui/ui/button";
+import { Button } from "@/registry/creative-tim-ui/ui/button";
 import { useRouter } from "next/navigation";
 
 export function GoogleLoginButton() {
