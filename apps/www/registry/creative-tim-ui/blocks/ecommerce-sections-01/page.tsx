@@ -92,7 +92,7 @@ export default function EcommerceSectionsBlock() {
 
   return (
     <section className="relative w-full overflow-hidden rounded-xl">
-      <div className="relative aspect-[16/9] w-full lg:aspect-[21/9]">
+      <div className="relative aspect-[16/9] w-full lg:aspect-[16/9]">
         <div
           id="youtube-player"
           className="absolute inset-0 h-full w-full rounded-xl"
