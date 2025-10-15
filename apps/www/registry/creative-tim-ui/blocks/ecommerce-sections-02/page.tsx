@@ -10,8 +10,8 @@ import {
   Star,
 } from "lucide-react"
 
-import { Badge } from "@/components/ui/badge"
-import { Button } from "@/components/ui/button"
+import { Badge } from "@/registry/creative-tim-ui/ui/badge"
+import { Button } from "@/registry/creative-tim-ui/ui/button"
 
 export default function EcommerceSections02() {
   const [selectedImage, setSelectedImage] = useState(0)
