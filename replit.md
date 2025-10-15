@@ -166,19 +166,21 @@ Preferred communication style: Simple, everyday language.
 - **Dependencies**: Badge, Button, Accordion (shadcn UI components)
 - **Use Case**: Perfect for fashion ecommerce with size-specific products requiring detailed product information and multiple view angles
 
-#### product-description-01: Visual & UX Improvements (October 15, 2025)
-- **Description**: Enhanced ecommerce product page with professional design and comprehensive information
-- **Improvements**:
+#### product-description-01: Dropdown Selectors & 3-Column Features (October 15, 2025)
+- **Description**: Enhanced ecommerce product page with dropdown selectors and organized feature display
+- **Latest Updates**:
+  - **Size Selector Dropdown**: Numbers (32, 34, 36, 38, 40, 42, 44) instead of buttons
+  - **Color Selector Dropdown**: Shows color dot with name in dropdown options (Black, White, Gray, Navy, Brown)
+  - **3-Column Feature Layout**: Icons centered at top with text below in white cards
+  - **Features Displayed**: Free shipping over $150, Easy 30-day returns, 1-year warranty
+- **Core Features**:
   - **Breadcrumb Navigation**: Clean breadcrumb trail with chevron separators (Home > Women > Outerwear > Product)
   - **"Limited Edition" Badge**: Professional badge component for product status
   - **Enhanced Layout**: Better spacing, larger product image (500px), cleaner thumbnail gallery
   - **Star Ratings**: Using Star icons with proper fill states and review count
-  - **Color Selector**: 40x40px swatches with ring selection indicator
-  - **Size Selector**: Interactive size buttons (XS-XL) with active state styling
   - **Interactive Favorite**: Heart button that fills when clicked
-  - **Feature Icons Grid**: 4 key features (Free shipping, Returns, Warranty, Premium quality)
   - **Detailed Content**: Product description and key features list with bullet points
   - **Professional Copy**: Water-resistant fabric, premium insulation, adjustable features
   - **Neutral Color Palette**: Consistent neutral-50/900 design
-- **Dependencies**: Badge, Button (shadcn UI components)
-- **Use Case**: Ideal for luxury fashion ecommerce requiring detailed product presentation with breadcrumb navigation and feature highlights
+- **Dependencies**: Badge, Button, Select (shadcn UI components)
+- **Use Case**: Ideal for luxury fashion ecommerce requiring streamlined product selection with dropdown controls and clear feature presentation

@@ -2,17 +2,23 @@
 
 import { useState } from "react"
 import {
-  Heart,
-  Star,
   ChevronRight,
-  Truck,
+  Heart,
   RotateCcw,
   Shield,
-  Sparkles,
+  Star,
+  Truck,
 } from "lucide-react"
 
 import { Badge } from "@/registry/creative-tim-ui/ui/badge"
 import { Button } from "@/registry/creative-tim-ui/ui/button"
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/registry/creative-tim-ui/ui/select"
 
 const IMAGES = [
   { imgelink: "https://v3.material-tailwind.com/coat-1.png" },
@@ -21,27 +27,28 @@ const IMAGES = [
   { imgelink: "https://v3.material-tailwind.com/coat-4.png" },
 ]
 
-const SIZES = ["XS", "S", "M", "L", "XL"]
+const SIZES = ["32", "34", "36", "38", "40", "42", "44"]
 
 const COLORS = [
   { name: "Black", hex: "#1a1a1a" },
   { name: "White", hex: "#ffffff" },
   { name: "Gray", hex: "#e5e7eb" },
+  { name: "Navy", hex: "#1e3a8a" },
+  { name: "Brown", hex: "#92400e" },
 ]
 
 const FEATURES = [
   { icon: Truck, text: "Free shipping over $150" },
   { icon: RotateCcw, text: "Easy 30-day returns" },
   { icon: Shield, text: "1-year warranty" },
-  { icon: Sparkles, text: "Premium quality" },
 ]
 
 export default function ProductDescription01() {
   const [active, setActive] = useState(
     "https://v3.material-tailwind.com/coat-1.png"
   )
-  const [selectedSize, setSelectedSize] = useState("M")
-  const [selectedColor, setSelectedColor] = useState(0)
+  const [selectedSize, setSelectedSize] = useState("36")
+  const [selectedColor, setSelectedColor] = useState("Black")
   const [isFavorite, setIsFavorite] = useState(false)
 
   return (
@@ -125,13 +132,13 @@ export default function ProductDescription01() {
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="mt-1 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-neutral-900" />
-                    <span>
-                      Adjustable cuffs and hem for personalized fit
-                    </span>
+                    <span>Adjustable cuffs and hem for personalized fit</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="mt-1 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-neutral-900" />
-                    <span>Multiple interior and exterior pockets for storage</span>
+                    <span>
+                      Multiple interior and exterior pockets for storage
+                    </span>
                   </li>
                 </ul>
               </div>
@@ -178,49 +185,58 @@ export default function ProductDescription01() {
             </p>
 
             <div className="mb-6">
-              <p className="mb-3 text-sm font-medium text-neutral-900">
-                Color:{" "}
-                <span className="font-normal">{COLORS[selectedColor].name}</span>
-              </p>
-              <div className="flex gap-2">
-                {COLORS.map((color, index) => (
-                  <button
-                    key={index}
-                    onClick={() => setSelectedColor(index)}
-                    className={`h-10 w-10 rounded-md border-2 transition-all ${
-                      selectedColor === index
-                        ? "border-neutral-900 ring-2 ring-neutral-900 ring-offset-2"
-                        : "border-neutral-200 hover:border-neutral-400"
-                    }`}
-                    style={{ backgroundColor: color.hex }}
-                    title={color.name}
-                  />
-                ))}
-              </div>
+              <p className="mb-3 text-sm font-medium text-neutral-900">Color</p>
+              <Select value={selectedColor} onValueChange={setSelectedColor}>
+                <SelectTrigger className="w-full border-neutral-200">
+                  <SelectValue />
+                </SelectTrigger>
+                <SelectContent>
+                  {COLORS.map((color) => (
+                    <SelectItem key={color.name} value={color.name}>
+                      <div className="flex items-center gap-2">
+                        <div
+                          className="h-4 w-4 rounded-full border border-neutral-200"
+                          style={{ backgroundColor: color.hex }}
+                        />
+                        <span>{color.name}</span>
+                      </div>
+                    </SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
             </div>
 
             <div className="mb-6">
-              <p className="mb-3 text-sm font-medium text-neutral-900">
-                Size: <span className="font-normal">{selectedSize}</span>
-              </p>
-              <div className="flex gap-2">
-                {SIZES.map((size) => (
-                  <button
-                    key={size}
-                    onClick={() => setSelectedSize(size)}
-                    className={`flex h-10 w-12 items-center justify-center rounded-md border-2 text-sm font-medium transition-all ${
-                      selectedSize === size
-                        ? "border-neutral-900 bg-neutral-900 text-white"
-                        : "border-neutral-200 bg-white text-neutral-900 hover:border-neutral-400"
-                    }`}
-                  >
-                    {size}
-                  </button>
-                ))}
-              </div>
+              <p className="mb-3 text-sm font-medium text-neutral-900">Size</p>
+              <Select value={selectedSize} onValueChange={setSelectedSize}>
+                <SelectTrigger className="w-full border-neutral-200">
+                  <SelectValue />
+                </SelectTrigger>
+                <SelectContent>
+                  {SIZES.map((size) => (
+                    <SelectItem key={size} value={size}>
+                      {size}
+                    </SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
             </div>
 
-            <div className="mb-6 flex flex-col gap-3 sm:flex-row">
+            <div className="mb-6 grid grid-cols-1 gap-4 sm:grid-cols-3">
+              {FEATURES.map((feature, index) => (
+                <div
+                  key={index}
+                  className="flex flex-col items-center gap-2 rounded-lg border border-neutral-200 bg-white p-4 text-center"
+                >
+                  <feature.icon className="h-5 w-5 flex-shrink-0 text-neutral-900" />
+                  <span className="text-xs text-neutral-600">
+                    {feature.text}
+                  </span>
+                </div>
+              ))}
+            </div>
+
+            <div className="flex flex-col gap-3 sm:flex-row">
               <Button
                 size="lg"
                 className="flex-1 bg-neutral-900 text-white hover:bg-neutral-800"
@@ -241,18 +257,6 @@ export default function ProductDescription01() {
                   className={`h-5 w-5 ${isFavorite ? "fill-current" : ""}`}
                 />
               </Button>
-            </div>
-
-            <div className="grid grid-cols-1 gap-3 border-t border-neutral-200 pt-6 sm:grid-cols-2">
-              {FEATURES.map((feature, index) => (
-                <div
-                  key={index}
-                  className="flex items-center gap-2 text-sm text-neutral-600"
-                >
-                  <feature.icon className="h-4 w-4 flex-shrink-0" />
-                  <span>{feature.text}</span>
-                </div>
-              ))}
             </div>
           </div>
         </div>
