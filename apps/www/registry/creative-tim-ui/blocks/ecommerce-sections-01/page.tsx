@@ -1,6 +1,6 @@
 "use client"
 
-import { useRef, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import { Pause, Play, ShoppingBag, Shuffle } from "lucide-react"
 
 import { Button } from "@/registry/creative-tim-ui/ui/button"
@@ -43,14 +43,48 @@ const PRODUCTS = [
 
 export default function EcommerceSectionsBlock() {
   const [isPlaying, setIsPlaying] = useState(true)
-  const videoRef = useRef<HTMLVideoElement>(null)
+  const playerRef = useRef<any>(null)
+  const [playerReady, setPlayerReady] = useState(false)
+
+  useEffect(() => {
+    const tag = document.createElement("script")
+    tag.src = "https://www.youtube.com/iframe_api"
+    const firstScriptTag = document.getElementsByTagName("script")[0]
+    firstScriptTag.parentNode?.insertBefore(tag, firstScriptTag)
+    ;(window as any).onYouTubeIframeAPIReady = () => {
+      playerRef.current = new (window as any).YT.Player("youtube-player", {
+        videoId: "YCIuEU2y8XI",
+        playerVars: {
+          autoplay: 1,
+          mute: 1,
+          loop: 1,
+          playlist: "YCIuEU2y8XI",
+          controls: 0,
+          showinfo: 0,
+          modestbranding: 1,
+          playsinline: 1,
+        },
+        events: {
+          onReady: () => {
+            setPlayerReady(true)
+          },
+        },
+      })
+    }
+
+    return () => {
+      if (playerRef.current) {
+        playerRef.current.destroy()
+      }
+    }
+  }, [])
 
   const togglePlay = () => {
-    if (videoRef.current) {
+    if (playerRef.current && playerReady) {
       if (isPlaying) {
-        videoRef.current.pause()
+        playerRef.current.pauseVideo()
       } else {
-        videoRef.current.play()
+        playerRef.current.playVideo()
       }
       setIsPlaying(!isPlaying)
     }
@@ -59,21 +93,13 @@ export default function EcommerceSectionsBlock() {
   return (
     <section className="relative w-full overflow-hidden rounded-xl">
       <div className="relative aspect-[16/9] w-full lg:aspect-[21/9]">
-        <video
-          ref={videoRef}
-          className="absolute inset-0 h-full w-full rounded-xl object-cover"
-          autoPlay
-          muted
-          loop
-          playsInline
-          poster="https://images.unsplash.com/photo-1558769132-cb1aea3c9412?q=80&w=1920&auto=format&fit=crop"
-        >
-          <source
-            src="https://videos.pexels.com/video-files/3129671/3129671-uhd_2560_1440_30fps.mp4"
-            type="video/mp4"
-          />
-          Your browser does not support the video tag.
-        </video>
+        <div
+          id="youtube-player"
+          className="absolute inset-0 h-full w-full rounded-xl"
+          style={{
+            pointerEvents: "none",
+          }}
+        />
 
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
 
