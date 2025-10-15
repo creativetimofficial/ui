@@ -184,42 +184,48 @@ export default function ProductDescription01() {
               professional settings and casual outings.
             </p>
 
-            <div className="mb-6">
-              <p className="mb-3 text-sm font-medium text-neutral-900">Color</p>
-              <Select value={selectedColor} onValueChange={setSelectedColor}>
-                <SelectTrigger className="w-full border-neutral-200">
-                  <SelectValue />
-                </SelectTrigger>
-                <SelectContent>
-                  {COLORS.map((color) => (
-                    <SelectItem key={color.name} value={color.name}>
-                      <div className="flex items-center gap-2">
-                        <div
-                          className="h-4 w-4 rounded-full border border-neutral-200"
-                          style={{ backgroundColor: color.hex }}
-                        />
-                        <span>{color.name}</span>
-                      </div>
-                    </SelectItem>
-                  ))}
-                </SelectContent>
-              </Select>
-            </div>
+            <div className="mb-6 grid grid-cols-1 gap-4 sm:grid-cols-2">
+              <div>
+                <p className="mb-3 text-sm font-medium text-neutral-900">
+                  Color
+                </p>
+                <Select value={selectedColor} onValueChange={setSelectedColor}>
+                  <SelectTrigger className="w-full border-neutral-200">
+                    <SelectValue />
+                  </SelectTrigger>
+                  <SelectContent>
+                    {COLORS.map((color) => (
+                      <SelectItem key={color.name} value={color.name}>
+                        <div className="flex items-center gap-2">
+                          <div
+                            className="h-4 w-4 rounded-full border border-neutral-200"
+                            style={{ backgroundColor: color.hex }}
+                          />
+                          <span>{color.name}</span>
+                        </div>
+                      </SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
+              </div>
 
-            <div className="mb-6">
-              <p className="mb-3 text-sm font-medium text-neutral-900">Size</p>
-              <Select value={selectedSize} onValueChange={setSelectedSize}>
-                <SelectTrigger className="w-full border-neutral-200">
-                  <SelectValue />
-                </SelectTrigger>
-                <SelectContent>
-                  {SIZES.map((size) => (
-                    <SelectItem key={size} value={size}>
-                      {size}
-                    </SelectItem>
-                  ))}
-                </SelectContent>
-              </Select>
+              <div>
+                <p className="mb-3 text-sm font-medium text-neutral-900">
+                  Size
+                </p>
+                <Select value={selectedSize} onValueChange={setSelectedSize}>
+                  <SelectTrigger className="w-full border-neutral-200">
+                    <SelectValue />
+                  </SelectTrigger>
+                  <SelectContent>
+                    {SIZES.map((size) => (
+                      <SelectItem key={size} value={size}>
+                        {size}
+                      </SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
+              </div>
             </div>
 
             <div className="mb-6 grid grid-cols-1 gap-4 sm:grid-cols-3">
