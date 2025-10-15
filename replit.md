@@ -131,27 +131,22 @@ Preferred communication style: Simple, everyday language.
 #### ecommerce-sections-02: Luxury Product Detail Page
 - **Description**: Premium product detail page with image gallery and comprehensive product information
 - **Features**:
-  - Vertical thumbnail gallery (6 images) on the left side for desktop with hover effects
-  - Large centered product image viewer with zoom-on-hover and shadow effects
+  - Vertical thumbnail gallery (6 images) on the left side for desktop
+  - Large centered product image viewer
   - Horizontal thumbnail carousel for mobile/tablet (4 visible)
-  - Wishlist/favorite button with heart icon on product image
-  - Stock availability indicator ("In Stock" badge in green)
   - Product details section including:
     - "Trending Now" badge
     - Product title: "Artisan Leather Crossbody" with elegant typography
     - Price display ($385.00) with star rating (4.7)
-    - Color selector with 6 color swatches (Black, Cream, Forest Green, Gray, Navy Blue, Brown) with scale-on-hover effects
-    - Size selector with S, M, L options (shows disabled state for out-of-stock sizes)
-    - Quantity selector with increment/decrement buttons
+    - Color selector with 6 color swatches (Black, Cream, Forest Green, Gray, Navy Blue, Brown)
     - Product description with features
     - Demo store disclaimer with "Maison Atelier" link
-    - Dual CTA buttons: "Add to Cart" (outline) and "Buy it Now" (filled) with hover effects
-    - Feature icons grid: Crossbody style, Premium leather, Adjustable strap, Crafted in France (in styled background)
-    - Functional accordion "More Information" section with smooth expand/collapse animation (Materials & Care, Dimensions, Shipping & Returns)
-  - Enhanced UX with smooth transitions, hover states, and interactive elements
+    - Dual CTA buttons: "Add to Cart" (outline) and "Buy it Now" (filled)
+    - Feature icons grid: Crossbody style, Premium leather, Adjustable strap, Crafted in France
+    - Functional accordion "More Information" section with expandable content (Materials & Care, Dimensions, Shipping & Returns)
   - Responsive layout adapting to mobile, tablet, and desktop
-  - Clean, minimal design with neutral color palette and subtle shadows
+  - Clean, minimal design with neutral color palette
   - All text uses normal casing (not uppercase)
 - **Dependencies**: Badge, Button (shadcn UI components)
 - **Registry Integration**: Successfully added to registry-blocks.ts under ecommerce category
-- **Use Case**: Ideal for luxury fashion brands, high-end product showcases, and premium ecommerce stores requiring detailed product presentation with enhanced user experience
+- **Use Case**: Ideal for luxury fashion brands, high-end product showcases, and premium ecommerce stores requiring detailed product presentation
