@@ -2,7 +2,7 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "transaction-history-01",
   "type": "registry:block",
-  "description": "Transaction history with date picker",
+  "description": "Financial transaction history with trend indicators",
   "dependencies": [
     "date-fns"
   ],
@@ -23,7 +23,8 @@
   "meta": {
     "iframeHeight": "800px",
     "container": "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
-    "mobile": "component"
+    "mobile": "component",
+    "details": "Provides a detailed record of financial transactions with various service providers, featuring trend arrows indicating whether values are up or down. Built with shadcn/ui Button, Calendar, Card, and Popover components for an interactive filtering experience. Includes date range selection for easy transaction filtering. Ideal for billing dashboards, financial reports, and transaction monitoring interfaces."
   },
   "categories": [
     "billing"

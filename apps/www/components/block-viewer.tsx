@@ -138,116 +138,134 @@ function BlockViewerToolbar() {
   const hasAccess = canAccessComponent(item.name)
 
   return (
-    <div className="hidden w-full items-center gap-2 pl-2 md:pr-6 lg:flex">
-      <Tabs
-        value={view}
-        onValueChange={(value) => setView(value as "preview" | "code")}
-      >
-        <TabsList className="grid h-8 grid-cols-2 items-center rounded-md p-1 *:data-[slot=tabs-trigger]:h-6 *:data-[slot=tabs-trigger]:rounded-sm *:data-[slot=tabs-trigger]:px-2 *:data-[slot=tabs-trigger]:text-xs">
-          <TabsTrigger value="preview">Preview</TabsTrigger>
-          <TabsTrigger value="code" disabled={isPro && !hasAccess}>
-            Code
-          </TabsTrigger>
-        </TabsList>
-      </Tabs>
-      <Separator orientation="vertical" className="mx-2 !h-4" />
-      <div className="flex flex-1 items-center gap-2 md:flex-auto">
-        <a
-          href={`#${item.name}`}
-          className="text-sm font-medium underline-offset-2 hover:underline"
-        >
-          {item.description?.replace(/\.$/, "")}
-        </a>
-        {isPro && (
-          <Badge
-            variant="default"
-            className="border-0 bg-gradient-to-r from-amber-500 to-orange-500 text-white"
-          >
-            PRO
-          </Badge>
+    <div className="hidden w-full flex-col gap-4 pl-2 md:pr-6 lg:flex">
+      {/* Title and Description Section */}
+      <div className="flex flex-col gap-2">
+        <div className="flex items-center gap-2">
+          <h2 className="text-2xl font-semibold tracking-tight">
+            <a
+              href={`#${item.name}`}
+              className="underline-offset-2 hover:underline"
+            >
+              {item.description?.replace(/\.$/, "")}
+            </a>
+          </h2>
+          {isPro && (
+            <Badge
+              variant="default"
+              className="border-0 bg-gradient-to-r from-amber-500 to-orange-500 text-white"
+            >
+              PRO
+            </Badge>
+          )}
+        </div>
+        {item.meta?.details && (
+          <p className="text-muted-foreground text-sm leading-relaxed">
+            {item.meta.details}
+          </p>
         )}
       </div>
-      <div className="ml-auto flex items-center gap-2">
-        <div className="h-8 items-center gap-1.5 rounded-md border p-1 shadow-none">
-          <ToggleGroup
-            type="single"
-            defaultValue="100"
-            onValueChange={(value) => {
-              setView("preview")
-              if (resizablePanelRef?.current) {
-                resizablePanelRef.current.resize(parseInt(value))
-              }
-            }}
-            className="gap-1 *:data-[slot=toggle-group-item]:!size-6 *:data-[slot=toggle-group-item]:!rounded-sm"
-          >
-            <ToggleGroupItem value="100" title="Desktop">
-              <Monitor />
-            </ToggleGroupItem>
-            <ToggleGroupItem value="60" title="Tablet">
-              <Tablet />
-            </ToggleGroupItem>
-            <ToggleGroupItem value="30" title="Mobile">
-              <Smartphone />
-            </ToggleGroupItem>
-            <Separator orientation="vertical" className="!h-4" />
-            <Button
-              size="icon"
-              variant="ghost"
-              className="size-6 rounded-sm p-0"
-              asChild
-              title="Open in New Tab"
-            >
-              <Link href={`/view/${item.name}`} target="_blank">
-                <span className="sr-only">Open in New Tab</span>
-                <Fullscreen />
-              </Link>
-            </Button>
-            <Separator orientation="vertical" className="!h-4" />
-            <Button
-              size="icon"
-              variant="ghost"
-              className="size-6 rounded-sm p-0"
-              title="Refresh Preview"
-              onClick={() => {
-                if (setIframeKey) {
-                  setIframeKey((k) => k + 1)
+
+      {/* Controllers Section */}
+      <div className="flex w-full items-center gap-2">
+        <Tabs
+          value={view}
+          onValueChange={(value) => setView(value as "preview" | "code")}
+        >
+          <TabsList className="grid h-8 grid-cols-2 items-center rounded-md p-1 *:data-[slot=tabs-trigger]:h-6 *:data-[slot=tabs-trigger]:rounded-sm *:data-[slot=tabs-trigger]:px-2 *:data-[slot=tabs-trigger]:text-xs">
+            <TabsTrigger value="preview">Preview</TabsTrigger>
+            <TabsTrigger value="code" disabled={isPro && !hasAccess}>
+              Code
+            </TabsTrigger>
+          </TabsList>
+        </Tabs>
+        <Separator orientation="vertical" className="mx-2 !h-4" />
+        <div className="ml-auto flex items-center gap-2">
+          <div className="h-8 items-center gap-1.5 rounded-md border p-1 shadow-none">
+            <ToggleGroup
+              type="single"
+              defaultValue="100"
+              onValueChange={(value) => {
+                setView("preview")
+                if (resizablePanelRef?.current) {
+                  resizablePanelRef.current.resize(parseInt(value))
                 }
               }}
+              className="gap-1 *:data-[slot=toggle-group-item]:!size-6 *:data-[slot=toggle-group-item]:!rounded-sm"
             >
-              <RotateCw />
-              <span className="sr-only">Refresh Preview</span>
+              <ToggleGroupItem value="100" title="Desktop">
+                <Monitor />
+              </ToggleGroupItem>
+              <ToggleGroupItem value="60" title="Tablet">
+                <Tablet />
+              </ToggleGroupItem>
+              <ToggleGroupItem value="30" title="Mobile">
+                <Smartphone />
+              </ToggleGroupItem>
+              <Separator orientation="vertical" className="!h-4" />
+              <Button
+                size="icon"
+                variant="ghost"
+                className="size-6 rounded-sm p-0"
+                asChild
+                title="Open in New Tab"
+              >
+                <Link href={`/view/${item.name}`} target="_blank">
+                  <span className="sr-only">Open in New Tab</span>
+                  <Fullscreen />
+                </Link>
+              </Button>
+              <Separator orientation="vertical" className="!h-4" />
+              <Button
+                size="icon"
+                variant="ghost"
+                className="size-6 rounded-sm p-0"
+                title="Refresh Preview"
+                onClick={() => {
+                  if (setIframeKey) {
+                    setIframeKey((k) => k + 1)
+                  }
+                }}
+              >
+                <RotateCw />
+                <span className="sr-only">Refresh Preview</span>
+              </Button>
+            </ToggleGroup>
+          </div>
+          <Separator orientation="vertical" className="mx-1 !h-4" />
+          {isPro && !hasAccess ? (
+            <Button
+              variant="outline"
+              className="w-fit cursor-not-allowed gap-1 px-2 opacity-50 shadow-none"
+              size="sm"
+              disabled
+              title="Upgrade to PRO to access this component"
+            >
+              <Terminal />
+              <span>
+                npx @creative-tim/ui@latest components add {item.name}
+              </span>
             </Button>
-          </ToggleGroup>
+          ) : (
+            <Button
+              variant="outline"
+              className="w-fit gap-1 px-2 shadow-none"
+              size="sm"
+              onClick={() => {
+                copyToClipboard(
+                  `npx shadcn@latest add "https://ui.creative-tim.com/r/${item.name}.json"`
+                )
+              }}
+            >
+              {isCopied ? <Check /> : <Terminal />}
+              <span>
+                npx @creative-tim/ui@latest components add {item.name}
+              </span>
+            </Button>
+          )}
+          <Separator orientation="vertical" className="mx-1 !h-4" />
+          <OpenInV0Button name={item.name} />
         </div>
-        <Separator orientation="vertical" className="mx-1 !h-4" />
-        {isPro && !hasAccess ? (
-          <Button
-            variant="outline"
-            className="w-fit cursor-not-allowed gap-1 px-2 opacity-50 shadow-none"
-            size="sm"
-            disabled
-            title="Upgrade to PRO to access this component"
-          >
-            <Terminal />
-            <span>npx @creative-tim/ui@latest components add {item.name}</span>
-          </Button>
-        ) : (
-          <Button
-            variant="outline"
-            className="w-fit gap-1 px-2 shadow-none"
-            size="sm"
-            onClick={() => {
-              copyToClipboard(
-                `npx shadcn@latest add "https://ui.creative-tim.com/r/${item.name}.json"`
-              )
-            }}
-          >
-            {isCopied ? <Check /> : <Terminal />}
-            <span>npx @creative-tim/ui@latest components add {item.name}</span>
-          </Button>
-        )}
-        <Separator orientation="vertical" className="mx-1 !h-4" />
-        <OpenInV0Button name={item.name} />
       </div>
     </div>
   )

@@ -2,7 +2,7 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "billing-information-01",
   "type": "registry:block",
-  "description": "Billing information management",
+  "description": "Manage billing contacts and company information",
   "registryDependencies": [
     "button",
     "card"
@@ -18,7 +18,8 @@
   "meta": {
     "iframeHeight": "700px",
     "container": "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
-    "mobile": "component"
+    "mobile": "component",
+    "details": "Easily manage billing contacts and information associated with different companies within one platform. Built with shadcn/ui Card and Button components for a clean, accessible interface. Perfect for multi-company billing management, enterprise dashboards, and SaaS platforms requiring organized billing contact management."
   },
   "categories": [
     "billing"

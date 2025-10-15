@@ -26,222 +26,6 @@ export const Index: Record<string, any> = {
     categories: undefined,
     meta: undefined,
   },
-  "orb": {
-    name: "orb",
-    description: "",
-    type: "registry:ui",
-    registryDependencies: undefined,
-    files: [{
-      path: "registry/creative-tim-ui/ui/orb.tsx",
-      type: "registry:ui",
-      target: ""
-    }],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/creative-tim-ui/ui/orb.tsx")
-      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
-      return { default: mod.default || mod[exportName] }
-    }),
-    categories: undefined,
-    meta: undefined,
-  },
-  "waveform": {
-    name: "waveform",
-    description: "",
-    type: "registry:ui",
-    registryDependencies: undefined,
-    files: [{
-      path: "registry/creative-tim-ui/ui/waveform.tsx",
-      type: "registry:ui",
-      target: ""
-    }],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/creative-tim-ui/ui/waveform.tsx")
-      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
-      return { default: mod.default || mod[exportName] }
-    }),
-    categories: undefined,
-    meta: undefined,
-  },
-  "live-waveform": {
-    name: "live-waveform",
-    description: "",
-    type: "registry:ui",
-    registryDependencies: undefined,
-    files: [{
-      path: "registry/creative-tim-ui/ui/live-waveform.tsx",
-      type: "registry:ui",
-      target: ""
-    }],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/creative-tim-ui/ui/live-waveform.tsx")
-      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
-      return { default: mod.default || mod[exportName] }
-    }),
-    categories: undefined,
-    meta: undefined,
-  },
-  "shimmering-text": {
-    name: "shimmering-text",
-    description: "",
-    type: "registry:ui",
-    registryDependencies: undefined,
-    files: [{
-      path: "registry/creative-tim-ui/ui/shimmering-text.tsx",
-      type: "registry:ui",
-      target: ""
-    }],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/creative-tim-ui/ui/shimmering-text.tsx")
-      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
-      return { default: mod.default || mod[exportName] }
-    }),
-    categories: undefined,
-    meta: undefined,
-  },
-  "audio-player": {
-    name: "audio-player",
-    description: "",
-    type: "registry:ui",
-    registryDependencies: ["button","dropdown-menu"],
-    files: [{
-      path: "registry/creative-tim-ui/ui/audio-player.tsx",
-      type: "registry:ui",
-      target: ""
-    }],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/creative-tim-ui/ui/audio-player.tsx")
-      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
-      return { default: mod.default || mod[exportName] }
-    }),
-    categories: undefined,
-    meta: undefined,
-  },
-  "message": {
-    name: "message",
-    description: "",
-    type: "registry:ui",
-    registryDependencies: ["avatar"],
-    files: [{
-      path: "registry/creative-tim-ui/ui/message.tsx",
-      type: "registry:ui",
-      target: ""
-    }],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/creative-tim-ui/ui/message.tsx")
-      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
-      return { default: mod.default || mod[exportName] }
-    }),
-    categories: undefined,
-    meta: undefined,
-  },
-  "conversation": {
-    name: "conversation",
-    description: "",
-    type: "registry:ui",
-    registryDependencies: ["button"],
-    files: [{
-      path: "registry/creative-tim-ui/ui/conversation.tsx",
-      type: "registry:ui",
-      target: ""
-    }],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/creative-tim-ui/ui/conversation.tsx")
-      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
-      return { default: mod.default || mod[exportName] }
-    }),
-    categories: undefined,
-    meta: undefined,
-  },
-  "response": {
-    name: "response",
-    description: "",
-    type: "registry:ui",
-    registryDependencies: undefined,
-    files: [{
-      path: "registry/creative-tim-ui/ui/response.tsx",
-      type: "registry:ui",
-      target: ""
-    }],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/creative-tim-ui/ui/response.tsx")
-      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
-      return { default: mod.default || mod[exportName] }
-    }),
-    categories: undefined,
-    meta: undefined,
-  },
-  "bar-visualizer": {
-    name: "bar-visualizer",
-    description: "",
-    type: "registry:ui",
-    registryDependencies: undefined,
-    files: [{
-      path: "registry/creative-tim-ui/ui/bar-visualizer.tsx",
-      type: "registry:ui",
-      target: ""
-    }],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/creative-tim-ui/ui/bar-visualizer.tsx")
-      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
-      return { default: mod.default || mod[exportName] }
-    }),
-    categories: undefined,
-    meta: undefined,
-  },
-  "voice-picker": {
-    name: "voice-picker",
-    description: "",
-    type: "registry:ui",
-    registryDependencies: ["button","badge","command","popover","https://ui.elevenlabs.io/r/orb.json","https://ui.elevenlabs.io/r/audio-player.json"],
-    files: [{
-      path: "registry/creative-tim-ui/ui/voice-picker.tsx",
-      type: "registry:ui",
-      target: ""
-    }],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/creative-tim-ui/ui/voice-picker.tsx")
-      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
-      return { default: mod.default || mod[exportName] }
-    }),
-    categories: undefined,
-    meta: undefined,
-  },
-  "voice-button": {
-    name: "voice-button",
-    description: "",
-    type: "registry:ui",
-    registryDependencies: ["button","https://ui.elevenlabs.io/r/live-waveform.json"],
-    files: [{
-      path: "registry/creative-tim-ui/ui/voice-button.tsx",
-      type: "registry:ui",
-      target: ""
-    }],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/creative-tim-ui/ui/voice-button.tsx")
-      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
-      return { default: mod.default || mod[exportName] }
-    }),
-    categories: undefined,
-    meta: undefined,
-  },
-  "conversation-bar": {
-    name: "conversation-bar",
-    description: "",
-    type: "registry:ui",
-    registryDependencies: ["button","https://ui.elevenlabs.io/r/live-waveform.json","card","separator","textarea"],
-    files: [{
-      path: "registry/creative-tim-ui/ui/conversation-bar.tsx",
-      type: "registry:ui",
-      target: ""
-    }],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/creative-tim-ui/ui/conversation-bar.tsx")
-      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
-      return { default: mod.default || mod[exportName] }
-    }),
-    categories: undefined,
-    meta: undefined,
-  },
   "software-purchase-card": {
     name: "software-purchase-card",
     description: "",
@@ -276,11 +60,11 @@ export const Index: Record<string, any> = {
       return { default: mod.default || mod[exportName] }
     }),
     categories: ["forms"],
-    meta: {"iframeHeight":"900px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component"},
+    meta: {"iframeHeight":"900px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component","details":"A comprehensive software purchase approval interface featuring company information, pricing tiers, and detailed cost breakdown with tax calculations."},
   },
   "billing-information-01": {
     name: "billing-information-01",
-    description: "Billing information management",
+    description: "Manage billing contacts and company information",
     type: "registry:block",
     registryDependencies: ["button","card"],
     files: [{
@@ -294,11 +78,11 @@ export const Index: Record<string, any> = {
       return { default: mod.default || mod[exportName] }
     }),
     categories: ["billing"],
-    meta: {"iframeHeight":"700px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component"},
+    meta: {"iframeHeight":"700px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component","details":"Easily manage billing contacts and information associated with different companies within one platform. Built with shadcn/ui Card and Button components for a clean, accessible interface. Perfect for multi-company billing management, enterprise dashboards, and SaaS platforms requiring organized billing contact management."},
   },
   "card-display-01": {
     name: "card-display-01",
-    description: "Credit card display",
+    description: "Credit card display with dark and light themes",
     type: "registry:block",
     registryDependencies: ["card"],
     files: [{
@@ -312,11 +96,11 @@ export const Index: Record<string, any> = {
       return { default: mod.default || mod[exportName] }
     }),
     categories: ["billing"],
-    meta: {"iframeHeight":"400px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component"},
+    meta: {"iframeHeight":"400px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component","details":"Showcases dark and light versions of a card with bank brand logos. Built with shadcn/ui Card component for consistent styling across themes. Ideal for payment forms, checkout processes, wallet sections, financial dashboards, and any interface requiring elegant credit card visualization with theme support."},
   },
   "payment-method-01": {
     name: "payment-method-01",
-    description: "Payment methods management",
+    description: "Payment method management with edit and delete",
     type: "registry:block",
     registryDependencies: ["button","card","tooltip"],
     files: [{
@@ -330,11 +114,11 @@ export const Index: Record<string, any> = {
       return { default: mod.default || mod[exportName] }
     }),
     categories: ["billing"],
-    meta: {"iframeHeight":"500px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component"},
+    meta: {"iframeHeight":"500px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component","details":"Manage payment methods with a straightforward UI layout featuring shadcn/ui Card, Button, and Tooltip components. Card brands are clearly identified, sensitive information is partially hidden for security, and editing/deleting functions are easily accessible. Includes a call-to-action button for adding new payment methods. Perfect for account settings, billing pages, and checkout flows."},
   },
   "transaction-history-01": {
     name: "transaction-history-01",
-    description: "Transaction history with date picker",
+    description: "Financial transaction history with trend indicators",
     type: "registry:block",
     registryDependencies: ["button","calendar","card","popover"],
     files: [{
@@ -348,11 +132,11 @@ export const Index: Record<string, any> = {
       return { default: mod.default || mod[exportName] }
     }),
     categories: ["billing"],
-    meta: {"iframeHeight":"800px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component"},
+    meta: {"iframeHeight":"800px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component","details":"Provides a detailed record of financial transactions with various service providers, featuring trend arrows indicating whether values are up or down. Built with shadcn/ui Button, Calendar, Card, and Popover components for an interactive filtering experience. Includes date range selection for easy transaction filtering. Ideal for billing dashboards, financial reports, and transaction monitoring interfaces."},
   },
   "invoices-01": {
     name: "invoices-01",
-    description: "Invoices list with status badges",
+    description: "Invoice overview with status badges and download",
     type: "registry:block",
     registryDependencies: ["badge","button","separator"],
     files: [{
@@ -366,7 +150,7 @@ export const Index: Record<string, any> = {
       return { default: mod.default || mod[exportName] }
     }),
     categories: ["billing"],
-    meta: {"iframeHeight":"700px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component"},
+    meta: {"iframeHeight":"700px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component","details":"Provides an overview of invoices with shadcn/ui Badge components indicating payment status (paid, pending, overdue) and Button components for downloading invoice PDFs. Clean, organized layout with visual separators for easy scanning. Perfect for billing portals, accounting dashboards, and financial management systems requiring clear invoice tracking and download capabilities."},
   },
   "simple-blog-content-01": {
     name: "simple-blog-content-01",
@@ -2094,7 +1878,7 @@ export const Index: Record<string, any> = {
       return { default: mod.default || mod[exportName] }
     }),
     categories: ["account"],
-    meta: {"iframeHeight":"800px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component"},
+    meta: {"iframeHeight":"800px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component","details":"Secure your account with two-factor authentication. Enable authenticator apps, configure backup codes, and manage security verification methods for enhanced account protection."},
   },
   "account-change-password-01": {
     name: "account-change-password-01",
@@ -2198,222 +1982,6 @@ export const Index: Record<string, any> = {
     }],
     component: React.lazy(async () => {
       const mod = await import("@/registry/creative-tim-ui/hooks/use-mobile.ts")
-      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
-      return { default: mod.default || mod[exportName] }
-    }),
-    categories: undefined,
-    meta: undefined,
-  },
-  "audio-player-demo": {
-    name: "audio-player-demo",
-    description: "",
-    type: "registry:example",
-    registryDependencies: ["https://ui.elevenlabs.io/r/audio-player.json","button","card","scroll-area"],
-    files: [{
-      path: "registry/creative-tim-ui/examples/audio-player-demo.tsx",
-      type: "registry:example",
-      target: ""
-    }],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/creative-tim-ui/examples/audio-player-demo.tsx")
-      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
-      return { default: mod.default || mod[exportName] }
-    }),
-    categories: undefined,
-    meta: undefined,
-  },
-  "orb-demo": {
-    name: "orb-demo",
-    description: "",
-    type: "registry:example",
-    registryDependencies: ["https://ui.elevenlabs.io/r/orb.json","button"],
-    files: [{
-      path: "registry/creative-tim-ui/examples/orb-demo.tsx",
-      type: "registry:example",
-      target: ""
-    }],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/creative-tim-ui/examples/orb-demo.tsx")
-      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
-      return { default: mod.default || mod[exportName] }
-    }),
-    categories: undefined,
-    meta: undefined,
-  },
-  "waveform-demo": {
-    name: "waveform-demo",
-    description: "",
-    type: "registry:example",
-    registryDependencies: ["https://ui.elevenlabs.io/r/waveform.json"],
-    files: [{
-      path: "registry/creative-tim-ui/examples/waveform-demo.tsx",
-      type: "registry:example",
-      target: ""
-    }],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/creative-tim-ui/examples/waveform-demo.tsx")
-      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
-      return { default: mod.default || mod[exportName] }
-    }),
-    categories: undefined,
-    meta: undefined,
-  },
-  "live-waveform-demo": {
-    name: "live-waveform-demo",
-    description: "",
-    type: "registry:example",
-    registryDependencies: ["https://ui.elevenlabs.io/r/live-waveform.json","button"],
-    files: [{
-      path: "registry/creative-tim-ui/examples/live-waveform-demo.tsx",
-      type: "registry:example",
-      target: ""
-    }],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/creative-tim-ui/examples/live-waveform-demo.tsx")
-      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
-      return { default: mod.default || mod[exportName] }
-    }),
-    categories: undefined,
-    meta: undefined,
-  },
-  "bar-visualizer-demo": {
-    name: "bar-visualizer-demo",
-    description: "",
-    type: "registry:example",
-    registryDependencies: ["https://ui.elevenlabs.io/r/bar-visualizer.json","button"],
-    files: [{
-      path: "registry/creative-tim-ui/examples/bar-visualizer-demo.tsx",
-      type: "registry:example",
-      target: ""
-    }],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/creative-tim-ui/examples/bar-visualizer-demo.tsx")
-      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
-      return { default: mod.default || mod[exportName] }
-    }),
-    categories: undefined,
-    meta: undefined,
-  },
-  "message-demo": {
-    name: "message-demo",
-    description: "",
-    type: "registry:example",
-    registryDependencies: ["https://ui.elevenlabs.io/r/message.json","https://ui.elevenlabs.io/r/response.json"],
-    files: [{
-      path: "registry/creative-tim-ui/examples/message-demo.tsx",
-      type: "registry:example",
-      target: ""
-    }],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/creative-tim-ui/examples/message-demo.tsx")
-      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
-      return { default: mod.default || mod[exportName] }
-    }),
-    categories: undefined,
-    meta: undefined,
-  },
-  "response-demo": {
-    name: "response-demo",
-    description: "",
-    type: "registry:example",
-    registryDependencies: ["https://ui.elevenlabs.io/r/response.json"],
-    files: [{
-      path: "registry/creative-tim-ui/examples/response-demo.tsx",
-      type: "registry:example",
-      target: ""
-    }],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/creative-tim-ui/examples/response-demo.tsx")
-      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
-      return { default: mod.default || mod[exportName] }
-    }),
-    categories: undefined,
-    meta: undefined,
-  },
-  "shimmering-text-demo": {
-    name: "shimmering-text-demo",
-    description: "",
-    type: "registry:example",
-    registryDependencies: ["https://ui.elevenlabs.io/r/shimmering-text.json"],
-    files: [{
-      path: "registry/creative-tim-ui/examples/shimmering-text-demo.tsx",
-      type: "registry:example",
-      target: ""
-    }],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/creative-tim-ui/examples/shimmering-text-demo.tsx")
-      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
-      return { default: mod.default || mod[exportName] }
-    }),
-    categories: undefined,
-    meta: undefined,
-  },
-  "voice-picker-demo": {
-    name: "voice-picker-demo",
-    description: "",
-    type: "registry:example",
-    registryDependencies: ["https://ui.elevenlabs.io/r/voice-picker.json","https://ui.elevenlabs.io/r/audio-player.json"],
-    files: [{
-      path: "registry/creative-tim-ui/examples/voice-picker-demo.tsx",
-      type: "registry:example",
-      target: ""
-    }],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/creative-tim-ui/examples/voice-picker-demo.tsx")
-      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
-      return { default: mod.default || mod[exportName] }
-    }),
-    categories: undefined,
-    meta: undefined,
-  },
-  "voice-button-demo": {
-    name: "voice-button-demo",
-    description: "",
-    type: "registry:example",
-    registryDependencies: ["https://ui.elevenlabs.io/r/voice-button.json"],
-    files: [{
-      path: "registry/creative-tim-ui/examples/voice-button-demo.tsx",
-      type: "registry:example",
-      target: ""
-    }],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/creative-tim-ui/examples/voice-button-demo.tsx")
-      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
-      return { default: mod.default || mod[exportName] }
-    }),
-    categories: undefined,
-    meta: undefined,
-  },
-  "conversation-bar-demo": {
-    name: "conversation-bar-demo",
-    description: "",
-    type: "registry:example",
-    registryDependencies: ["https://ui.elevenlabs.io/r/conversation-bar.json"],
-    files: [{
-      path: "registry/creative-tim-ui/examples/conversation-bar-demo.tsx",
-      type: "registry:example",
-      target: ""
-    }],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/creative-tim-ui/examples/conversation-bar-demo.tsx")
-      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
-      return { default: mod.default || mod[exportName] }
-    }),
-    categories: undefined,
-    meta: undefined,
-  },
-  "conversation-demo": {
-    name: "conversation-demo",
-    description: "",
-    type: "registry:example",
-    registryDependencies: ["https://ui.elevenlabs.io/r/message.json","https://ui.elevenlabs.io/r/response.json","https://ui.elevenlabs.io/r/conversation.json"],
-    files: [{
-      path: "registry/creative-tim-ui/examples/conversation-demo.tsx",
-      type: "registry:example",
-      target: ""
-    }],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/creative-tim-ui/examples/conversation-demo.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
