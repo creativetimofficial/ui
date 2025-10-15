@@ -807,6 +807,26 @@ export const blocks: Registry["items"] = [
     categories: ["ecommerce"],
   },
   {
+    name: "ecommerce-sections-02",
+    description: "Luxury product detail page with image gallery",
+    type: "registry:block",
+    registryDependencies: ["badge", "button"],
+    files: [
+      {
+        path: "blocks/ecommerce-sections-02/page.tsx",
+        type: "registry:page",
+        target: "app/ecommerce-sections/page.tsx",
+      },
+    ],
+    meta: {
+      iframeHeight: "900px",
+      container:
+        "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
+      mobile: "component",
+    },
+    categories: ["ecommerce"],
+  },
+  {
     name: "simple-faq-01",
     description: "Simple FAQ with dividers",
     type: "registry:block",
