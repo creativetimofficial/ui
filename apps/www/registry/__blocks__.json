@@ -175,6 +175,11 @@
     "categories": ["ecommerce"]
   },
   {
+    "name": "ecommerce-sections-01",
+    "description": "Runway video spotlight with product cards",
+    "categories": ["ecommerce"]
+  },
+  {
     "name": "simple-faq-01",
     "description": "Simple FAQ with dividers",
     "categories": ["faqs"]

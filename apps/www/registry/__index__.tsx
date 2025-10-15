@@ -910,6 +910,24 @@ export const Index: Record<string, any> = {
     categories: ["ecommerce"],
     meta: {"iframeHeight":"1000px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component"},
   },
+  "ecommerce-sections-01": {
+    name: "ecommerce-sections-01",
+    description: "Runway video spotlight with product cards",
+    type: "registry:block",
+    registryDependencies: ["badge","button","card"],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/ecommerce-sections-01/page.tsx",
+      type: "registry:page",
+      target: "app/ecommerce-sections/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/ecommerce-sections-01/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["ecommerce"],
+    meta: {"iframeHeight":"900px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component"},
+  },
   "simple-faq-01": {
     name: "simple-faq-01",
     description: "Simple FAQ with dividers",

@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useRef } from "react"
+import { useRef, useState } from "react"
 import { Pause, Play } from "lucide-react"
 
 import { Badge } from "@/registry/creative-tim-ui/ui/badge"
@@ -104,7 +104,7 @@ export default function EcommerceSectionsBlock() {
         <Button
           variant="outline"
           size="icon"
-          className="absolute left-4 top-4 bg-black/40 text-white backdrop-blur-sm hover:bg-black/60 hover:text-white lg:left-6 lg:top-6"
+          className="absolute top-4 left-4 bg-black/40 text-white backdrop-blur-sm hover:bg-black/60 hover:text-white lg:top-6 lg:left-6"
           onClick={togglePlay}
         >
           {isPlaying ? (
@@ -131,7 +131,7 @@ export default function EcommerceSectionsBlock() {
                   </div>
                   <div className="flex items-start justify-between gap-2">
                     <div className="flex-1">
-                      <p className="text-muted-foreground mb-1 text-xs font-medium uppercase tracking-wide">
+                      <p className="text-muted-foreground mb-1 text-xs font-medium tracking-wide uppercase">
                         {product.eyebrow}
                       </p>
                       <CardTitle className="text-lg">{product.title}</CardTitle>
