@@ -1,0 +1,27 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "testimonials-10",
+  "type": "registry:block",
+  "description": "Monochromatic testimonials with company logos",
+  "registryDependencies": [
+    "badge",
+    "card",
+    "button"
+  ],
+  "files": [
+    {
+      "path": "registry/creative-tim-ui/blocks/testimonials-10/page.tsx",
+      "content": "\"use client\"\n\nimport { Sparkles } from \"lucide-react\"\n\nimport { Badge } from \"@/registry/creative-tim-ui/ui/badge\"\nimport { Button } from \"@/registry/creative-tim-ui/ui/button\"\nimport { Card, CardContent } from \"@/registry/creative-tim-ui/ui/card\"\n\nconst TESTIMONIALS = [\n  {\n    image: \"https://v3.material-tailwind.com/logo/spotify.svg\",\n    name: \"Jessica Devis\",\n    quote:\n      \"Don't walk behind me; I may not lead. Don't walk in front of me; I may not follow. Just walk beside me and be my friend.\",\n  },\n  {\n    image: \"https://v3.material-tailwind.com/logo/netflix.svg\",\n    name: \"Mary Joshiash\",\n    quote:\n      \"The pessimist complains about the wind; the optimist expects it to change; the realist adjusts the sails.\",\n  },\n  {\n    image: \"https://v3.material-tailwind.com/logo/coinbase.svg\",\n    name: \"Marcell Glock\",\n    role: \"CFO @ Apple INC\",\n    quote:\n      \"Do not go where the path may lead, go instead where there is no path and leave a trail.\",\n  },\n]\n\nexport default function TestimonialsBlock() {\n  return (\n    <section className=\"py-16\">\n      <div className=\"container mx-auto px-4\">\n        <div className=\"mb-20 text-center\">\n          <Badge variant=\"outline\" className=\"mx-auto mb-8 w-max\">\n            <Sparkles className=\"mr-2 h-4 w-4\" />\n            Testimonials\n          </Badge>\n          <h2 className=\"mb-4 text-center text-3xl font-bold\">\n            What Clients Say\n          </h2>\n          <p className=\"text-muted-foreground mx-auto max-w-lg text-center text-lg\">\n            We&apos;re constantly trying to express ourselves and actualize our\n            dreams. If you have the opportunity to play.\n          </p>\n        </div>\n        <div className=\"grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3\">\n          {TESTIMONIALS.map(({ name, image, quote }, key) => (\n            <Card key={key} className=\"border-0 bg-transparent shadow-none\">\n              <CardContent className=\"p-0 text-center\">\n                <img\n                  src={image}\n                  alt=\"company logo\"\n                  className=\"mx-auto mb-4 h-20\"\n                />\n                <blockquote className=\"text-muted-foreground mx-auto max-w-lg\">\n                  &quot;{quote}&quot;\n                </blockquote>\n                <p className=\"my-6 font-semibold\">{name}</p>\n                <Button variant=\"outline\">Read More</Button>\n              </CardContent>\n            </Card>\n          ))}\n        </div>\n      </div>\n    </section>\n  )\n}\n",
+      "type": "registry:page",
+      "target": "app/testimonials-10/page.tsx"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "700px",
+    "container": "w-full bg-surface",
+    "mobile": "component"
+  },
+  "categories": [
+    "testimonials"
+  ]
+}

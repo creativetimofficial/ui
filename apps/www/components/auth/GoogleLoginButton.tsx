@@ -1,30 +1,47 @@
 "use client";
 
 import { useGoogleLogin } from "@react-oauth/google";
-import { Button } from "@/registry/elevenlabs-ui/ui/button";
+import { Button } from "@/registry/creative-tim-ui/ui/button";
+import { useRouter } from "next/navigation";
 
 export function GoogleLoginButton() {
+  const router = useRouter();
+  
   const login = useGoogleLogin({
-    flow: "auth-code",
+    flow: "auth-code",                   // popup → returns { code }
+    scope: "openid email profile",
     onSuccess: async ({ code }) => {
       try {
-        const res = await fetch(`${process.env.NEXT_PUBLIC_RAILS_BASE_URL}/api/v1/auth/google`, {
+        // 1) Exchange code for id_token on our server
+        const ex = await fetch("/api/google/exchange", {
           method: "POST",
-          credentials: "include",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ code }),
         });
+        if (!ex.ok) throw new Error(await ex.text());
+        const { id_token } = (await ex.json()) as { id_token: string };
+
+        // 2) Send id_token to Rails
+        const res = await fetch(
+          `${process.env.NEXT_PUBLIC_RAILS_BASE_URL}/api/v1/auth/google`,
+          {
+            method: "POST",
+            credentials: "include", // ⬅️ important for cookies
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ token: id_token }),
+          }
+        );
 
         if (!res.ok) {
-          const errorText = await res.text();
-          throw new Error(`Google login failed: ${errorText}`);
+          const txt = await res.text();
+          throw new Error(`Rails google failed: ${txt}`);
         }
 
-        // ✅ handle successful login, e.g. redirect
+        // 3) Redirect
+        router.push("/dashboard");
       } catch (err) {
-        console.error("Google login error:", err); // stays in console
-        // ⬇️ show toast or error message to user
-        // setError(err instanceof Error ? err.message : "Google login failed");
+        console.error("Google login error:", err);
+        // Show toast / setError here if you want
       }
     },
     onError: (err) => {

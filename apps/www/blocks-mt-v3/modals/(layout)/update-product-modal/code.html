@@ -1,0 +1,142 @@
+ <!-- Trigger Button -->
+<div id="openModalBtn" class="grid place-items-center w-full min-h-screen">
+  <button data-open="true" aria-expanded="true" aria-haspopup="dialog" aria-controls=":R0:" class="inline-flex items-center justify-center border align-middle select-none font-sans font-medium text-center transition-all duration-300 ease-in disabled:opacity-50 disabled:shadow-none disabled:cursor-not-allowed data-[shape=pill]:rounded-full data-[width=full]:w-full focus:shadow-none text-sm rounded-md py-2 px-4 shadow-sm hover:shadow-md bg-slate-800 border-slate-800 text-slate-50 hover:bg-slate-700 hover:border-slate-700 outline-none" data-shape="default" data-width="default">Open Modal</button>
+</div>
+
+ <!-- Modal -->
+<div id="modal" class="fixed inset-0 flex items-center justify-center bg-slate-950 bg-opacity-50 transition-opacity duration-300 ease-in-out">
+  <div id="modalContent" class="bg-white p-6 transform scale-95 transition-all duration-300 ease-in-out max-h-[calc(100vh-32px)] overflow-y-auto  bg-white rounded-xl shadow-2xl shadow-slate-950/5 w-10/12 lg:w-8/12 h-max p-6">
+    <div class="flex items-center justify-between gap-4">
+      <div>
+        <h2 class="font-sans antialiased text-base md:text-lg text-current mb-1 font-semibold">Update Product Modal</h2>
+        <p class="font-sans antialiased text-base text-slate-600">Edit product features and save it.</p>
+      </div>
+      <button id="closeModalBtn" data-open="true" class="inline-grid place-items-center border align-middle select-none font-sans font-medium text-center transition-all duration-300 ease-in disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none data-[shape=circular]:rounded-full text-sm min-w-[34px] min-h-[34px] rounded-md bg-transparent border-transparent text-slate-800 hover:bg-slate-200/10 hover:border-slate-600/10 shadow-none hover:shadow-none outline-none absolute right-2 top-2" data-shape="circular" data-tabindex="">
+        <svg width="1.5em" height="1.5em" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="currentColor" class="h-5 w-5">
+          <path d="M6.75827 17.2426L12.0009 12M17.2435 6.75736L12.0009 12M12.0009 12L6.75827 6.75736M12.0009 12L17.2435 17.2426" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+        </svg>
+      </button>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 my-6">
+      <div class="relative w-full h-44 rounded-md overflow-hidden">
+        <img src="https://v3.material-tailwind.com/dark-bg-pattern.jpg" alt="img-1" class="w-full h-full object-cover object-center" />
+        <button class="inline-grid place-items-center border align-middle select-none font-sans font-medium text-center transition-all duration-300 ease-in disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none data-[shape=circular]:rounded-full text-sm min-w-[34px] min-h-[34px] rounded-md bg-transparent border-transparent hover:bg-slate-200/10 hover:border-slate-600/10 shadow-none hover:shadow-none !absolute bottom-2 right-2 text-slate-200" data-shape="default" data-tabindex="">
+          <svg width="1.5em" height="1.5em" viewBox="0 0 24 24" stroke-width="1.5" fill="none" xmlns="http://www.w3.org/2000/svg" color="currentColor" class="w-4 h-4">
+            <path d="M20 9L18.005 20.3463C17.8369 21.3026 17.0062 22 16.0353 22H7.96474C6.99379 22 6.1631 21.3026 5.99496 20.3463L4 9" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M21 6L15.375 6M3 6L8.625 6M8.625 6V4C8.625 2.89543 9.52043 2 10.625 2H13.375C14.4796 2 15.375 2.89543 15.375 4V6M8.625 6L15.375 6" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg>
+        </button>
+      </div>
+      <div class="relative w-full h-44 rounded-md overflow-hidden">
+        <img src="https://v3.material-tailwind.com/dark-bg-pattern.jpg" alt="img-2" class="w-full h-full object-cover object-center" />
+        <button class="inline-grid place-items-center border align-middle select-none font-sans font-medium text-center transition-all duration-300 ease-in disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none data-[shape=circular]:rounded-full text-sm min-w-[34px] min-h-[34px] rounded-md bg-transparent border-transparent hover:bg-slate-200/10 hover:border-slate-600/10 shadow-none hover:shadow-none !absolute bottom-2 right-2 text-slate-200" data-shape="default" data-tabindex="">
+          <svg width="1.5em" height="1.5em" viewBox="0 0 24 24" stroke-width="1.5" fill="none" xmlns="http://www.w3.org/2000/svg" color="currentColor" class="w-4 h-4">
+            <path d="M20 9L18.005 20.3463C17.8369 21.3026 17.0062 22 16.0353 22H7.96474C6.99379 22 6.1631 21.3026 5.99496 20.3463L4 9" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M21 6L15.375 6M3 6L8.625 6M8.625 6V4C8.625 2.89543 9.52043 2 10.625 2H13.375C14.4796 2 15.375 2.89543 15.375 4V6M8.625 6L15.375 6" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg>
+        </button>
+      </div>
+      <div class="relative w-full h-44 rounded-md overflow-hidden">
+        <img src="https://v3.material-tailwind.com/dark-bg-pattern.jpg" alt="img-3" class="w-full h-full object-cover object-center" />
+        <button class="inline-grid place-items-center border align-middle select-none font-sans font-medium text-center transition-all duration-300 ease-in disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none data-[shape=circular]:rounded-full text-sm min-w-[34px] min-h-[34px] rounded-md bg-transparent border-transparent hover:bg-slate-200/10 hover:border-slate-600/10 shadow-none hover:shadow-none !absolute bottom-2 right-2 text-slate-200" data-shape="default" data-tabindex="">
+          <svg width="1.5em" height="1.5em" viewBox="0 0 24 24" stroke-width="1.5" fill="none" xmlns="http://www.w3.org/2000/svg" color="currentColor" class="w-4 h-4">
+            <path d="M20 9L18.005 20.3463C17.8369 21.3026 17.0062 22 16.0353 22H7.96474C6.99379 22 6.1631 21.3026 5.99496 20.3463L4 9" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M21 6L15.375 6M3 6L8.625 6M8.625 6V4C8.625 2.89543 9.52043 2 10.625 2H13.375C14.4796 2 15.375 2.89543 15.375 4V6M8.625 6L15.375 6" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <form action="#">
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+        <div class="w-full space-y-2">
+          <label for=":rs:" class="font-sans antialiased text-sm text-current font-semibold">Product Name</label>
+          <div class="relative w-full">
+            <input placeholder="Laptop" autoComplete="off" id=":rs:" class="w-full aria-disabled:cursor-not-allowed outline-none focus:outline-none text-slate-800 dark:text-white placeholder:text-slate-600/60 bg-transparent ring-transparent border border-slate-200 transition-all duration-300 ease-in disabled:opacity-50 disabled:pointer-events-none data-[error=true]:border-error data-[success=true]:border-success select-none data-[shape=pill]:rounded-full text-sm rounded-md py-2 px-2.5 ring shadow-sm data-[icon-placement=start]:ps-9 data-[icon-placement=end]:pe-9 hover:border-slate-800 hover:ring-slate-800/10 focus:border-slate-800 focus:ring-slate-800/10 peer" data-error="false" data-success="false" data-shape="default" data-icon-placement="" type="text" data-tabindex="" />
+          </div>
+        </div>
+        <div class="w-full space-y-2">
+          <label for="category" class="font-sans antialiased text-sm text-current font-semibold block mb-3">Category</label>
+          <div class="relative">
+            <select class="pr-10 flex items-center gap-4 justify-between w-full outline-none focus:outline-none text-slate-600 bg-transparent ring-transparent border border-slate-200 transition-all duration-300 ease-in disabled:opacity-50 disabled:pointer-events-none select-none text-start text-sm rounded-md py-2 px-2.5 ring shadow-sm hover:border-slate-800 hover:ring-slate-800/10 focus:border-slate-800 focus:ring-slate-800/10 appearance-none cursor-pointer">
+              <option value="category" selected disabled>Select Category</option>
+              <option value="Electronics">Electronics</option>
+              <option value="Clothing">Clothing</option>
+              <option value="Accesories">Accesories</option>
+            </select>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.2" stroke="currentColor" class="h-[1em] w-[1em] translate-x-0.5 stroke-[1.5] absolute top-2.5 right-2.5 text-slate-600 pointer-events-none">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 15 12 18.75 15.75 15m-7.5-6L12 5.25 15.75 9" />
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+        <div class="w-full space-y-2">
+          <label for=":rv:" class="font-sans antialiased text-sm text-current font-semibold">Price</label>
+          <div class="relative w-full">
+            <input placeholder="1000" autoComplete="off" id=":rv:" class="w-full aria-disabled:cursor-not-allowed outline-none focus:outline-none text-slate-800 dark:text-white placeholder:text-slate-600/60 bg-transparent ring-transparent border border-slate-200 transition-all duration-300 ease-in disabled:opacity-50 disabled:pointer-events-none data-[error=true]:border-error data-[success=true]:border-success select-none data-[shape=pill]:rounded-full text-sm rounded-md py-2 px-2.5 ring shadow-sm data-[icon-placement=start]:ps-9 data-[icon-placement=end]:pe-9 hover:border-slate-800 hover:ring-slate-800/10 focus:border-slate-800 focus:ring-slate-800/10 peer" data-error="false" data-success="false" data-shape="default" data-icon-placement="" type="text" data-tabindex="" />
+          </div>
+        </div>
+        <div class="w-full space-y-2">
+          <label for="category" class="font-sans antialiased text-sm text-current font-semibold">Brand</label>
+          <div class="relative">
+            <select class="pr-10 flex items-center gap-4 justify-between w-full outline-none focus:outline-none text-slate-600 bg-transparent ring-transparent border border-slate-200 transition-all duration-300 ease-in disabled:opacity-50 disabled:pointer-events-none select-none text-start text-sm rounded-md py-2 px-2.5 ring shadow-sm hover:border-slate-800 hover:ring-slate-800/10 focus:border-slate-800 focus:ring-slate-800/10 appearance-none cursor-pointer">
+              <option value="category" selected disabled>Select Brand</option>
+              <option value="Apple">Apple</option>
+              <option value="Samsung">Samsung</option>
+              <option value="Microsoft">Microsoft</option>
+            </select>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.2" stroke="currentColor" class="h-[1em] w-[1em] translate-x-0.5 stroke-[1.5] absolute top-2.5 right-2.5 text-slate-600 pointer-events-none">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 15 12 18.75 15.75 15m-7.5-6L12 5.25 15.75 9" />
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div class="w-full space-y-2 mb-6">
+        <label for="description" class="font-sans antialiased text-sm text-current font-semibold">Description</label>
+        <textarea rows="8" id="description" autoComplete="off" placeholder="Write something about your product." class="peer block w-full resize-none outline-none focus:outline-none text-slate-800 dark:text-white placeholder:text-slate-600/60 bg-transparent ring-transparent border border-slate-200 transition-all duration-300 ease-in disabled:opacity-50 disabled:pointer-events-none data-[error=true]:border-error data-[success=true]:border-success data-[resize=true]:resize-y hover:border-slate-800 hover:ring-slate-800/10 focus:border-slate-800 focus:ring-slate-800/10 text-sm shadow-sm p-2.5 rounded-md ring" data-error="false" data-success="false" data-tabindex=""></textarea>
+      </div>
+      <div class="w-full space-y-2">
+        <label for=":r12:" class="font-sans antialiased text-sm text-current font-semibold">Tags</label>
+        <div class="relative w-full">
+          <input placeholder="Add up to 10 tags, separated by commas (,)" autoComplete="off" id=":r12:" class="w-full aria-disabled:cursor-not-allowed outline-none focus:outline-none text-slate-800 dark:text-white placeholder:text-slate-600/60 bg-transparent ring-transparent border border-slate-200 transition-all duration-300 ease-in disabled:opacity-50 disabled:pointer-events-none data-[error=true]:border-error data-[success=true]:border-success select-none data-[shape=pill]:rounded-full text-sm rounded-md py-2 px-2.5 ring shadow-sm data-[icon-placement=start]:ps-9 data-[icon-placement=end]:pe-9 hover:border-slate-800 hover:ring-slate-800/10 focus:border-slate-800 focus:ring-slate-800/10 peer" data-error="false" data-success="false" data-shape="default" data-icon-placement="" type="text" data-tabindex="" />
+        </div>
+      </div>
+      <div class="mb-1 mt-6 flex items-center justify-end gap-2">
+        <button id="closeModalBtn" type="button" data-open="true" class="inline-flex items-center justify-center border align-middle select-none font-sans font-medium text-center transition-all duration-300 ease-in disabled:opacity-50 disabled:shadow-none disabled:cursor-not-allowed data-[shape=pill]:rounded-full data-[width=full]:w-full focus:shadow-none text-sm rounded-md py-2 px-4 shadow-sm hover:shadow-md bg-transparent border-slate-200 text-slate-800 hover:bg-slate-200 outline-none" data-shape="default" data-width="default" data-tabindex="">Cancel</button>
+        <button type="submit" class="inline-flex items-center justify-center border align-middle select-none font-sans font-medium text-center transition-all duration-300 ease-in disabled:opacity-50 disabled:shadow-none disabled:cursor-not-allowed data-[shape=pill]:rounded-full data-[width=full]:w-full focus:shadow-none text-sm rounded-md py-2 px-4 shadow-sm hover:shadow-md bg-slate-800 border-slate-800 text-slate-50 hover:bg-slate-700 hover:border-slate-700" data-shape="default" data-width="default" data-tabindex="">Update Product</button>
+      </div>
+    </form> 
+  </div>
+</div>
+<script>
+  // JavaScript for Modal Functionality
+  const openModalBtn = document.getElementById('openModalBtn');
+  const closeModalBtn = document.getElementById('closeModalBtn');
+  const closeModalBtn2 = document.getElementById('closeModalBtn2');
+  const modal = document.getElementById('modal');
+  const modalContent = document.getElementById('modalContent');
+  // Open Modal
+  openModalBtn.addEventListener('click', () => {
+    modal.classList.remove('hidden');
+    setTimeout(() => {
+      modal.classList.remove('opacity-0');
+      modalContent.classList.remove('scale-95', 'opacity-0');
+    }, 10); // Timeout to ensure the transition applies
+  });
+  // Close Modal
+  const closeModal = () => {
+    modal.classList.add('opacity-0');
+    modalContent.classList.add('scale-95', 'opacity-0');
+    setTimeout(() => {
+      modal.classList.add('hidden');
+    }, 300); // Matches the duration-300 in Tailwind
+  };
+  closeModalBtn.addEventListener('click', closeModal);
+  closeModalBtn2.addEventListener('click', closeModal);
+  // Close Modal on clicking outside the modal content
+  window.addEventListener('click', (e) => {
+    if (e.target === modal) {
+      closeModal();
+    }
+  });
+</script>

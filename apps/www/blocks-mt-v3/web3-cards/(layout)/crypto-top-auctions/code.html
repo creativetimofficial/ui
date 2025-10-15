@@ -1,0 +1,131 @@
+<section class="container mx-auto py-16">
+  <div class="w-full rounded-lg border overflow-hidden bg-transparent border-slate-200 shadow-slate-950/5 shadow-none">
+    <div class="h-max rounded p-6 w-full flex items-start justify-between gap-6 flex-wrap m-0">
+      <div>
+        <h1 class="font-sans antialiased font-bold text-lg md:text-xl lg:text-2xl text-slate-800 dark:text-white mb-1">Top Auctions</h1>
+        <p class="font-sans antialiased text-base md:text-lg text-slate-600 max-w-2xl [text-wrap:balance]">The most sought-after collections across the entire ecosystem.</p>
+      </div>
+      <div class="flex items-center flex-wrap gap-2">
+        <!-- Date Selection Dropdown -->
+        <select class="flex items-center cursor-pointer h-max outline-none focus:outline-none text-slate-600 bg-transparent ring-transparent border border-slate-200 transition-all duration-300 ease-in text-sm rounded-md py-2 px-2.5 ring shadow-sm hover:border-slate-800 hover:ring-slate-800/10 focus:border-slate-800 focus:ring-slate-800/10 w-max shrink-0" aria-expanded="false" aria-haspopup="listbox">
+          <option value="Last 6H">Last 6H</option>
+          <option value="Last 12H">Last 12H</option>
+          <option value="Last 24H" selected>Last 24H</option>
+        </select>
+        <!-- Category Selection Dropdown -->
+        <select class="flex items-center cursor-pointer h-max outline-none focus:outline-none text-slate-600 bg-transparent ring-transparent border border-slate-200 transition-all duration-300 ease-in text-sm rounded-md py-2 px-2.5 ring shadow-sm hover:border-slate-800 hover:ring-slate-800/10 focus:border-slate-800 focus:ring-slate-800/10 w-max shrink-0" aria-expanded="false" aria-haspopup="listbox">
+          <option value="Category 1">Category 1</option>
+          <option value="Category 2">Category 2</option>
+          <option value="Category 3">Category 3</option>
+        </select>
+        <button class="inline-grid place-items-center border align-middle select-none font-sans font-medium text-center transition-all duration-300 ease-in disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none data-[shape=circular]:rounded-full text-sm min-w-[38px] min-h-[38px] rounded-md shadow-sm hover:shadow-md bg-transparent border-slate-200 text-slate-800 hover:bg-slate-200" data-shape="default">
+          <svg width="1.5em" height="1.5em" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="currentColor" class="w-4 h-4">
+            <path d="M3 5H21" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M3 12H21" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M3 19H21" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg>
+        </button>
+        <button class="inline-grid place-items-center border align-middle select-none font-sans font-medium text-center transition-all duration-300 ease-in disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none data-[shape=circular]:rounded-full text-sm min-w-[38px] min-h-[38px] rounded-md shadow-sm hover:shadow-md bg-transparent border-slate-200 text-slate-800 hover:bg-slate-200" data-shape="default">
+          <svg width="1.5em" height="1.5em" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="currentColor" class="w-4 h-4">
+            <path d="M14 20.4V14.6C14 14.2686 14.2686 14 14.6 14H20.4C20.7314 14 21 14.2686 21 14.6V20.4C21 20.7314 20.7314 21 20.4 21H14.6C14.2686 21 14 20.7314 14 20.4Z" stroke="currentColor"></path>
+            <path d="M3 20.4V14.6C3 14.2686 3.26863 14 3.6 14H9.4C9.73137 14 10 14.2686 10 14.6V20.4C10 20.7314 9.73137 21 9.4 21H3.6C3.26863 21 3 20.7314 3 20.4Z" stroke="currentColor"></path>
+            <path d="M14 9.4V3.6C14 3.26863 14.2686 3 14.6 3H20.4C20.7314 3 21 3.26863 21 3.6V9.4C21 9.73137 20.7314 10 20.4 10H14.6C14.2686 10 14 9.73137 14 9.4Z" stroke="currentColor"></path>
+            <path d="M3 9.4V3.6C3 3.26863 3.26863 3 3.6 3H9.4C9.73137 3 10 3.26863 10 3.6V9.4C10 9.73137 9.73137 10 9.4 10H3.6C3.26863 10 3 9.73137 3 9.4Z" stroke="currentColor"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div class="w-full h-max rounded py-2.5 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6 px-6 pb-6 pt-0">
+      <div class="w-full rounded-lg border shadow-sm bg-white border-slate-200 shadow-slate-950/5 overflow-hidden">
+        <div class="h-max m-0 w-full relative rounded-none">
+          <img src="https://v3.material-tailwind.com/nft-1.svg" alt="@thedreamytrees" class="h-80 w-full relative object-cover object-center" />
+          <div data-open="true" data-shape="pill" class="w-max border select-none font-sans font-medium rounded-md data-[shape=pill]:rounded-full text-sm p-1 text-slate-50 shadow-none bottom-4 flex items-center gap-2 bg-white/70 border-white/50 backdrop-blur backdrop-saturate-200 absolute left-4 py-1.5 px-2.5">
+            <span class="grid place-items-center shrink-0 rounded-full translate-x-0 w-7 h-7">
+              <img src="https://v3.material-tailwind.com/woman-profile-1.jpg" alt="@thedreamytrees" class="inline-block object-cover object-center data-[shape=square]:rounded-none data-[shape=circular]:rounded-full data-[shape=rounded]:rounded-[current] rounded-md w-full h-full min-w-full min-h-full" data-shape="circular" />
+            </span>
+            <span class="font-sans leading-none mx-3 text-slate-800 my-0 ml-0 mr-3">
+              <small class="font-sans antialiased text-current block text-xs font-semibold">@thedreamytrees</small>
+              <small class="font-sans antialiased block text-xs text-slate-600">Owner</small>
+            </span>
+          </div>
+        </div>
+        <div class="w-full h-max rounded p-6">
+          <div class="flex items-center gap-4 mb-4 justify-between">
+            <small class="font-sans antialiased text-sm text-slate-600 block">Current bid</small>
+            <small class="font-sans antialiased text-sm text-slate-800 dark:text-white block font-semibold">
+              <span class="text-slate-600 font-normal">Ends In</span> 23h:03m:33s </small>
+          </div>
+          <div class="flex items-end gap-4 justify-between">
+            <div class="flex shrink-0 items-center gap-1.5">
+              <img src="https://v3.material-tailwind.com/icon/eth.svg" alt="ethereum" class="w-5 h-5" />
+              <h6 class="font-sans antialiased font-bold text-base md:text-lg lg:text-xl text-slate-800 dark:text-white">1,3 BTC</h6>
+            </div>
+            <button class="inline-flex items-center justify-center border align-middle select-none font-sans font-medium text-center transition-all duration-300 ease-in disabled:opacity-50 disabled:shadow-none disabled:cursor-not-allowed data-[shape=pill]:rounded-full data-[width=full]:w-full focus:shadow-none text-sm rounded-md py-1.5 px-3 shadow-sm hover:shadow bg-transparent border-slate-200 text-slate-800 hover:bg-slate-200" data-shape="default" data-width="default">Place Bid</button>
+          </div>
+        </div>
+      </div>
+      <div class="w-full rounded-lg border shadow-sm bg-white border-slate-200 shadow-slate-950/5 overflow-hidden">
+        <div class="h-max m-0 w-full relative rounded-none">
+          <img src="https://v3.material-tailwind.com/nft-2.svg" alt="@lindemichael" class="h-80 w-full relative object-cover object-center" />
+          <div data-open="true" data-shape="pill" class="w-max border select-none font-sans font-medium rounded-md data-[shape=pill]:rounded-full text-sm p-1 text-slate-50 shadow-none bottom-4 flex items-center gap-2 bg-white/70 border-white/50 backdrop-blur backdrop-saturate-200 absolute left-4 py-1.5 px-2.5">
+            <span class="grid place-items-center shrink-0 rounded-full translate-x-0 w-7 h-7">
+              <img src="https://v3.material-tailwind.com/man-profile-1.jpg" alt="@lindemichael" class="inline-block object-cover object-center data-[shape=square]:rounded-none data-[shape=circular]:rounded-full data-[shape=rounded]:rounded-[current] rounded-md w-full h-full min-w-full min-h-full" data-shape="circular" />
+            </span>
+            <span class="font-sans leading-none mx-3 text-slate-800 my-0 ml-0 mr-3">
+              <small class="font-sans antialiased text-current block text-xs font-semibold">@lindemichael</small>
+              <small class="font-sans antialiased block text-xs text-slate-600">Creator</small>
+            </span>
+          </div>
+        </div>
+        <div class="w-full h-max rounded p-6">
+          <div class="flex items-center gap-4 mb-4 justify-between">
+            <small class="font-sans antialiased text-sm text-slate-600 block">Current bid</small>
+            <small class="font-sans antialiased text-sm text-slate-800 dark:text-white block font-semibold">
+              <span class="text-slate-600 font-normal">Ends In</span> 23h:03m:33s </small>
+          </div>
+          <div class="flex items-end gap-4 justify-between">
+            <div class="flex shrink-0 items-center gap-1.5">
+              <img src="https://v3.material-tailwind.com/icon/eth.svg" alt="ethereum" class="w-5 h-5" />
+              <h6 class="font-sans antialiased font-bold text-base md:text-lg lg:text-xl text-slate-800 dark:text-white">0,4 BTC</h6>
+            </div>
+            <button class="inline-flex items-center justify-center border align-middle select-none font-sans font-medium text-center transition-all duration-300 ease-in disabled:opacity-50 disabled:shadow-none disabled:cursor-not-allowed data-[shape=pill]:rounded-full data-[width=full]:w-full focus:shadow-none text-sm rounded-md py-1.5 px-3 shadow-sm hover:shadow bg-transparent border-slate-200 text-slate-800 hover:bg-slate-200" data-shape="default" data-width="default">Place Bid</button>
+          </div>
+        </div>
+      </div>
+      <div class="w-full rounded-lg border shadow-sm bg-white border-slate-200 shadow-slate-950/5 overflow-hidden">
+        <div class="h-max m-0 w-full relative rounded-none">
+          <img src="https://v3.material-tailwind.com/nft-3.svg" alt="@mishastam" class="h-80 w-full relative object-cover object-center" />
+          <div data-open="true" data-shape="pill" class="w-max border select-none font-sans font-medium rounded-md data-[shape=pill]:rounded-full text-sm p-1 text-slate-50 shadow-none bottom-4 flex items-center gap-2 bg-white/70 border-white/50 backdrop-blur backdrop-saturate-200 absolute left-4 py-1.5 px-2.5">
+            <span class="grid place-items-center shrink-0 rounded-full translate-x-0 w-7 h-7">
+              <img src="https://v3.material-tailwind.com/man-profile-2.jpg" alt="@mishastam" class="inline-block object-cover object-center data-[shape=square]:rounded-none data-[shape=circular]:rounded-full data-[shape=rounded]:rounded-[current] rounded-md w-full h-full min-w-full min-h-full" data-shape="circular" />
+            </span>
+            <span class="font-sans leading-none mx-3 text-slate-800 my-0 ml-0 mr-3">
+              <small class="font-sans antialiased text-current block text-xs font-semibold">@mishastam</small>
+              <small class="font-sans antialiased block text-xs text-slate-600">Owner</small>
+            </span>
+          </div>
+        </div>
+        <div class="w-full h-max rounded p-6">
+          <div class="flex items-center gap-4 mb-4 justify-between">
+            <small class="font-sans antialiased text-sm text-slate-600 block">Current bid</small>
+            <small class="font-sans antialiased text-sm text-slate-800 dark:text-white block font-semibold">
+              <span class="text-slate-600 font-normal">Ends In</span> 23h:03m:33s </small>
+          </div>
+          <div class="flex items-end gap-4 justify-between">
+            <div class="flex shrink-0 items-center gap-1.5">
+              <img src="https://v3.material-tailwind.com/icon/eth.svg" alt="ethereum" class="w-5 h-5" />
+              <h6 class="font-sans antialiased font-bold text-base md:text-lg lg:text-xl text-slate-800 dark:text-white">0,3 BTC</h6>
+            </div>
+            <button class="inline-flex items-center justify-center border align-middle select-none font-sans font-medium text-center transition-all duration-300 ease-in disabled:opacity-50 disabled:shadow-none disabled:cursor-not-allowed data-[shape=pill]:rounded-full data-[width=full]:w-full focus:shadow-none text-sm rounded-md py-1.5 px-3 shadow-sm hover:shadow bg-transparent border-slate-200 text-slate-800 hover:bg-slate-200" data-shape="default" data-width="default">Place Bid</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+   
+
+        

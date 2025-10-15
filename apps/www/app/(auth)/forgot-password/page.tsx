@@ -4,9 +4,9 @@
 import * as React from "react";
 import { AuthAPI } from "@/lib/auth/auth";
 import { AuthLayout } from "@/components/auth/AuthLayout";
-import { Input } from "@/registry/elevenlabs-ui/ui/input";
-import { Label } from "@/registry/elevenlabs-ui/ui/label";
-import { Button } from "@/registry/elevenlabs-ui/ui/button";
+import { Input } from "@/registry/creative-tim-ui/ui/input";
+import { Label } from "@/registry/creative-tim-ui/ui/label";
+import { Button } from "@/registry/creative-tim-ui/ui/button";
 
 export default function ForgotPasswordPage() {
   const [email, setEmail] = React.useState("");

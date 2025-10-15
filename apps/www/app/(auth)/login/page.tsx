@@ -7,9 +7,9 @@ import { setAccessToken } from "@/lib/session";
 import { normalizeAccessToken } from "@/lib/auth/normalizers";
 import { useAuth } from "@/components/auth/AuthProvider";
 import { AuthLayout } from "@/components/auth/AuthLayout";
-import { Input } from "@/registry/elevenlabs-ui/ui/input";
-import { Label } from "@/registry/elevenlabs-ui/ui/label";
-import { Button } from "@/registry/elevenlabs-ui/ui/button";
+import { Input } from "@/registry/creative-tim-ui/ui/input";
+import { Label } from "@/registry/creative-tim-ui/ui/label";
+import { Button } from "@/registry/creative-tim-ui/ui/button";
 import { GoogleLoginButton } from "@/components/auth/GoogleLoginButton";
 
 export default function LoginPage() {
@@ -30,14 +30,8 @@ export default function LoginPage() {
       if (access) setAccessToken(access);
       if (data.user) setUser(data.user);
       router.push("/dashboard");
-    } catch (err: unknown) {
-      setError(
-        err instanceof Error
-          ? err.message
-          : typeof err === "string"
-          ? err
-          : "Something went wrong. Please try again."
-      );
+    } catch {
+      setError("Something went wrong. Please try again.");
     } finally {
       setLoading(false);
     }

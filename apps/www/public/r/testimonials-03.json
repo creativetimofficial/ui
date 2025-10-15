@@ -1,0 +1,26 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "testimonials-03",
+  "type": "registry:block",
+  "description": "Testimonial with statistics and metrics",
+  "registryDependencies": [
+    "card"
+  ],
+  "files": [
+    {
+      "path": "registry/creative-tim-ui/blocks/testimonials-03/page.tsx",
+      "content": "\"use client\"\n\nimport { ArrowRight } from \"lucide-react\"\n\nimport { Card, CardContent } from \"@/registry/creative-tim-ui/ui/card\"\n\nexport default function TestimonialsBlock() {\n  return (\n    <section className=\"py-16\">\n      <div className=\"container mx-auto px-4\">\n        <Card className=\"rounded-xl bg-black text-white\">\n          <CardContent className=\"grid w-full grid-cols-1 gap-4 p-4 md:grid-cols-12\">\n            <div className=\"col-span-full md:col-span-4\">\n              <img\n                src=\"https://v3.material-tailwind.com/woman-profile-2.jpg\"\n                alt=\"user profile\"\n                className=\"h-full max-h-96 w-full rounded-lg object-cover object-center\"\n              />\n            </div>\n            <div className=\"col-span-full p-2 md:col-span-5 md:p-6\">\n              <blockquote className=\"mb-6 md:mb-12\">\n                &quot;Decisions: If you can&apos;t decide, the answer is no. If\n                two equally difficult paths, choose the one more painful in the\n                short term (pain avoidance is creating an illusion of equality).\n                Choose the path that leaves you more equanimous in the long\n                term.&quot;\n              </blockquote>\n              <p className=\"font-semibold\">Michael - Writer</p>\n            </div>\n            <div className=\"col-span-full p-2 md:col-span-3 md:p-6\">\n              <h3 className=\"mb-2 text-4xl font-bold\">1,679,700+</h3>\n              <p className=\"mb-4 md:mb-8\">\n                Developers and Companies around the world using our products.\n              </p>\n              <a\n                href=\"#\"\n                className=\"flex items-center gap-1.5 font-semibold hover:underline\"\n              >\n                See all products <ArrowRight className=\"h-5 w-5\" />\n              </a>\n            </div>\n          </CardContent>\n        </Card>\n      </div>\n    </section>\n  )\n}\n",
+      "type": "registry:page",
+      "target": "app/testimonials-03/page.tsx"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "500px",
+    "container": "w-full bg-surface",
+    "mobile": "component",
+    "private": true
+  },
+  "categories": [
+    "testimonials"
+  ]
+}

@@ -6,9 +6,9 @@ import { AnimatePresence, motion } from "motion/react"
 import {
   BarVisualizer,
   type AgentState,
-} from "@/registry/elevenlabs-ui/ui/bar-visualizer"
-import { Card, CardContent } from "@/registry/elevenlabs-ui/ui/card"
-import { ShimmeringText } from "@/registry/elevenlabs-ui/ui/shimmering-text"
+} from "@/registry/creative-tim-ui/ui/bar-visualizer"
+import { Card, CardContent } from "@/registry/creative-tim-ui/ui/card"
+import { ShimmeringText } from "@/registry/creative-tim-ui/ui/shimmering-text"
 
 const states: AgentState[] = [
   "connecting",
