@@ -1,9 +1,17 @@
 "use client"
 
 import { useState } from "react"
-import { Star, ShoppingBag, Package, Ruler, MapPin, ChevronDown } from "lucide-react"
-import { Button } from "@/components/ui/button"
+import {
+  ChevronDown,
+  MapPin,
+  Package,
+  Ruler,
+  ShoppingBag,
+  Star,
+} from "lucide-react"
+
 import { Badge } from "@/components/ui/badge"
+import { Button } from "@/components/ui/button"
 
 export default function EcommerceSections02() {
   const [selectedImage, setSelectedImage] = useState(0)
@@ -124,7 +132,10 @@ export default function EcommerceSections02() {
 
             <div className="mb-6">
               <p className="mb-3 text-sm font-medium text-neutral-900">
-                Color: <span className="font-normal">{colors[selectedColor].name}</span>
+                Color:{" "}
+                <span className="font-normal">
+                  {colors[selectedColor].name}
+                </span>
               </p>
               <div className="flex gap-2">
                 {colors.map((color, index) => (
@@ -145,8 +156,8 @@ export default function EcommerceSections02() {
 
             <p className="mb-4 text-sm leading-relaxed text-neutral-600">
               Flap 'Box' bag in calfskin, with secure brass push clasp. Back
-              pocket. Interior lined in suede. Long and adjustable shoulder strap
-              included. Inside pocket with bellows.
+              pocket. Interior lined in suede. Long and adjustable shoulder
+              strap included. Inside pocket with bellows.
             </p>
 
             <p className="mb-6 text-sm text-neutral-600">
