@@ -11,7 +11,6 @@ import {
 } from "@/components/page-header"
 import { PageNav } from "@/components/page-nav"
 import { ThemeSelector } from "@/components/theme-selector"
-import Speaker01 from "@/registry/creative-tim-ui/blocks/speaker-01/page"
 import { Button } from "@/registry/creative-tim-ui/ui/button"
 
 const title = "Creative Tim UI"
@@ -84,10 +83,7 @@ export default function IndexPage() {
       </PageNav>
       <div className="container-wrapper section-soft flex-1 pb-6">
         <div className="container overflow-hidden">
-          <section className="pt-8 md:hidden">
-            <Speaker01 />
-          </section>
-          <section className="theme-container hidden md:block">
+          <section className="theme-container">
             <CardsDemo />
           </section>
         </div>
