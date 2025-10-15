@@ -90,9 +90,21 @@ const nextConfig = {
         source: "/docs/:path*.md",
         destination: "/llm/:path*",
       },
-       {
+      {
         source: '/api/:path*',
         destination: 'http://localhost:3000/api/:path*', // Proxy to Rails API
+      },
+      {
+        source: '/dashboard/:path*',
+        destination: 'http://localhost:3000/downloads/:path*', // Proxy to Rails Dashboard
+      },
+      {
+        source: '/downloads',
+        destination: 'http://localhost:3000/downloads', // Proxy to Rails Dashboard
+      },
+      {
+        source: '/logout',
+        destination: 'http://localhost:3000/logout', // Proxy to Rails Dashboard
       },
     ]
   },
