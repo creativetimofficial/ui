@@ -390,7 +390,7 @@ export const Index: Record<string, any> = {
     name: "dark-product-overview-01",
     description: "Dark themed product overview",
     type: "registry:block",
-    registryDependencies: ["button","tabs"],
+    registryDependencies: ["button","tabs","badge"],
     files: [{
       path: "registry/creative-tim-ui/blocks/dark-product-overview-01/page.tsx",
       type: "registry:page",
@@ -402,7 +402,7 @@ export const Index: Record<string, any> = {
       return { default: mod.default || mod[exportName] }
     }),
     categories: ["ecommerce"],
-    meta: {"iframeHeight":"1000px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component"},
+    meta: {"iframeHeight":"1100px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component"},
   },
   "shopping-cart-01": {
     name: "shopping-cart-01",
