@@ -1,7 +1,7 @@
 "use client"
 
 import * as React from "react"
-import { ChevronLeft, ChevronRight } from "lucide-react"
+import { ChevronLeft, ChevronRight, Quote } from "lucide-react"
 
 import { Button } from "@/registry/creative-tim-ui/ui/button"
 import { Card, CardContent } from "@/registry/creative-tim-ui/ui/card"
@@ -35,42 +35,49 @@ export default function TestimonialsBlock() {
   }
 
   return (
-    <section className="py-16">
+    <section className="py-20">
       <div className="container mx-auto px-4">
-        <Card className="relative rounded-xl bg-[url('/earth-outer-space.jpg')] bg-cover bg-center p-4">
-          <span className="absolute inset-0 h-full w-full rounded-xl bg-black/75" />
-          <CardContent className="relative grid w-full grid-cols-1 items-center gap-8 px-4 pt-4 pb-24 sm:px-12 sm:pt-16 md:grid-cols-12 md:pt-24">
-            <div className="col-span-full row-start-2 pl-4 text-left md:col-span-8 md:row-start-auto">
-              <blockquote className="mb-8 text-xl font-medium text-white">
+        <Card className="relative overflow-hidden rounded-2xl bg-[url('https://images.unsplash.com/photo-1638438134099-a91e5373aaf0?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2070')] bg-cover bg-center p-6">
+          <span className="absolute inset-0 h-full w-full bg-gradient-to-br from-black/80 to-black/60 backdrop-blur-sm" />
+
+          <CardContent className="relative grid w-full grid-cols-1 items-center gap-8 px-6 py-12 md:grid-cols-12 md:px-12 md:py-16">
+            <div className="col-span-full md:col-span-8">
+              <Quote className="mb-6 h-12 w-12 text-white/30" />
+              <blockquote className="mb-8 text-xl leading-relaxed font-medium text-white md:text-2xl">
                 &quot;{SLIDES[currentSlide].quote}&quot;
               </blockquote>
-              <div className="flex items-center gap-2">
-                <p className="font-medium text-white">
+              <div className="flex flex-col gap-2 md:flex-row md:items-center md:gap-3">
+                <p className="text-lg font-semibold text-white">
                   {SLIDES[currentSlide].name}
                 </p>
-                <p className="text-sm text-white/80">
+                <span className="hidden text-white/50 md:inline">•</span>
+                <p className="text-sm text-white/70">
                   {SLIDES[currentSlide].role}
                 </p>
               </div>
             </div>
-            <div className="col-span-full grid justify-items-start md:col-span-4 md:justify-items-end">
-              <img
-                src={SLIDES[currentSlide].image}
-                alt="company logo"
-                className="h-20 md:mx-auto md:mb-8 md:h-24"
-              />
+
+            <div className="col-span-full flex items-center justify-center md:col-span-4">
+              <div className="rounded-xl bg-white/10 p-8 backdrop-blur-sm">
+                <img
+                  src={SLIDES[currentSlide].image}
+                  alt="company logo"
+                  className="h-16 md:h-20"
+                />
+              </div>
             </div>
           </CardContent>
 
-          <div className="absolute bottom-8 left-1/2 flex -translate-x-1/2 items-center gap-2">
+          <div className="absolute bottom-8 left-1/2 flex -translate-x-1/2 items-center gap-3">
             {SLIDES.map((_, index) => (
               <button
                 key={index}
                 onClick={() => setCurrentSlide(index)}
-                className={`h-4 w-4 rounded-full transition-opacity ${
+                aria-label={`Go to slide ${index + 1}`}
+                className={`h-2 rounded-full transition-all ${
                   index === currentSlide
-                    ? "bg-white opacity-100"
-                    : "bg-white opacity-50"
+                    ? "w-8 bg-white"
+                    : "w-2 bg-white/50 hover:bg-white/75"
                 }`}
               />
             ))}
@@ -80,17 +87,19 @@ export default function TestimonialsBlock() {
             size="icon"
             variant="ghost"
             onClick={prevSlide}
-            className="!absolute top-1/2 left-2 z-10 hidden -translate-y-1/2 text-white sm:inline-flex"
+            aria-label="Previous testimonial"
+            className="!absolute top-1/2 left-4 z-10 -translate-y-1/2 text-white transition-all hover:bg-white/20 hover:text-white"
           >
-            <ChevronLeft className="h-7 w-7" />
+            <ChevronLeft className="h-8 w-8" />
           </Button>
           <Button
             size="icon"
             variant="ghost"
             onClick={nextSlide}
-            className="!absolute top-1/2 right-2 z-10 hidden -translate-y-1/2 text-white sm:inline-flex"
+            aria-label="Next testimonial"
+            className="!absolute top-1/2 right-4 z-10 -translate-y-1/2 text-white transition-all hover:bg-white/20 hover:text-white"
           >
-            <ChevronRight className="h-7 w-7" />
+            <ChevronRight className="h-8 w-8" />
           </Button>
         </Card>
       </div>
