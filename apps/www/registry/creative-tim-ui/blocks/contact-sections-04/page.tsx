@@ -30,26 +30,29 @@ const OPTIONS = [
 export default function ContactSections04() {
   return (
     <section>
-      <div className="grid h-full min-h-[70vh] w-full place-items-center bg-gradient-to-br from-gray-900 to-gray-800 bg-cover bg-center text-center">
+      <div className="grid h-full min-h-[70vh] w-full place-items-center bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 bg-cover bg-center text-center">
         <div className="-mt-8">
-          <h2 className="mb-4 text-3xl font-bold text-white">
+          <h2 className="mb-6 text-5xl font-bold text-white">
             Got a Question?
           </h2>
-          <p className="text-lg text-white/80">
-            We&apos;d like to talk more about what you need
+          <p className="mx-auto max-w-xl text-xl text-white/80">
+            We'd like to talk more about what you need
           </p>
         </div>
       </div>
-      <div className="container mx-auto -mt-20 pb-4">
-        <Card className="py-8">
-          <div className="grid grid-cols-1 justify-items-center gap-x-8 gap-y-16 sm:grid-cols-2 md:grid-cols-4">
+      <div className="container mx-auto -mt-24 px-4 pb-16">
+        <Card className="overflow-hidden rounded-2xl py-12 shadow-2xl">
+          <div className="grid grid-cols-1 justify-items-center gap-x-8 gap-y-12 px-4 sm:grid-cols-2 lg:grid-cols-4">
             {OPTIONS.map(({ icon: Icon, title, description }, key) => (
-              <div key={key} className="text-center">
-                <div className="bg-primary mx-auto grid h-12 w-12 place-items-center rounded-lg">
-                  <Icon className="text-primary-foreground h-6 w-6" />
+              <div
+                key={key}
+                className="group text-center transition-transform hover:scale-105"
+              >
+                <div className="bg-primary mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-xl shadow-lg transition-all group-hover:shadow-xl">
+                  <Icon className="text-primary-foreground h-8 w-8" />
                 </div>
-                <p className="mt-4 mb-1 text-lg font-semibold">{title}</p>
-                <p className="text-muted-foreground">{description}</p>
+                <p className="mb-2 text-xl font-bold">{title}</p>
+                <p className="text-muted-foreground text-base">{description}</p>
               </div>
             ))}
           </div>
