@@ -41,25 +41,23 @@ export default function ContactSections15() {
               We're always happy to help with any questions you might have. Get
               in touch with us and we'll respond as soon as possible.
             </p>
-            <div className="space-y-4">
+            <div className="space-y-6">
               {CONTACT_OPTIONS.map(
                 ({ icon: Icon, title, description, action }, key) => (
-                  <Card key={key} className="p-6">
-                    <div className="flex items-start gap-4">
-                      <div className="bg-primary/10 grid h-12 w-12 shrink-0 place-items-center rounded-lg">
-                        <Icon className="text-primary h-6 w-6" />
-                      </div>
-                      <div className="flex-1">
-                        <h3 className="mb-1 font-semibold">{title}</h3>
-                        <p className="text-muted-foreground mb-3 text-sm">
-                          {description}
-                        </p>
-                        <Button variant="link" className="h-auto p-0">
-                          {action} →
-                        </Button>
-                      </div>
+                  <div key={key} className="flex items-start gap-4">
+                    <div className="bg-primary/10 grid h-12 w-12 shrink-0 place-items-center rounded-lg">
+                      <Icon className="text-primary h-6 w-6" />
                     </div>
-                  </Card>
+                    <div className="flex-1">
+                      <h3 className="mb-1 font-semibold">{title}</h3>
+                      <p className="text-muted-foreground mb-3 text-sm">
+                        {description}
+                      </p>
+                      <Button variant="link" className="h-auto p-0">
+                        {action} →
+                      </Button>
+                    </div>
+                  </div>
                 )
               )}
             </div>
