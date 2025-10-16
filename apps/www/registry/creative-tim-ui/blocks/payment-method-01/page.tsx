@@ -25,7 +25,7 @@ function PaymentMethod({ type, number, isDefault }: PaymentMethodProps) {
       : "https://v3.material-tailwind.com/mastercard.webp"
 
   return (
-    <Card className="group hover:border-primary/50 relative flex items-center gap-4 border p-6 transition-all hover:shadow-md">
+    <Card className="group hover:border-primary/50 relative flex flex-col gap-4 border p-6 transition-all hover:shadow-md">
       {isDefault && (
         <div className="bg-primary absolute -top-px -right-px rounded-tr-lg rounded-bl-lg px-3 py-1">
           <div className="flex items-center gap-1.5 text-xs font-semibold text-white">
@@ -35,19 +35,23 @@ function PaymentMethod({ type, number, isDefault }: PaymentMethodProps) {
         </div>
       )}
 
-      <div className="flex h-12 w-16 items-center justify-center rounded-lg bg-gray-50 p-2">
-        <img
-          src={cardImg}
-          alt={type}
-          className="h-full w-auto object-contain"
-        />
-      </div>
+      <div className="flex items-center gap-3">
+        <div className="flex h-12 w-16 items-center justify-center rounded-lg bg-gray-50 p-2">
+          <img
+            src={cardImg}
+            alt={type}
+            className="h-full w-auto object-contain"
+          />
+        </div>
 
-      <div className="flex flex-1 items-center gap-3">
-        <p className="text-base font-bold tracking-wider">
-          **** **** **** {number}
-        </p>
-        <p className="text-muted-foreground text-sm capitalize">{type} Card</p>
+        <div className="flex flex-1 flex-col gap-1">
+          <p className="text-base font-bold tracking-wider">
+            **** **** **** {number}
+          </p>
+          <p className="text-muted-foreground text-sm capitalize">
+            {type} Card
+          </p>
+        </div>
       </div>
 
       <div className="flex items-center gap-1">
@@ -100,7 +104,7 @@ export default function PaymentMethod01() {
         </Button>
       </div>
 
-      <div className="mt-8 grid grid-cols-1 gap-4">
+      <div className="mt-8 grid grid-cols-1 gap-4 md:grid-cols-2">
         <PaymentMethod type="mastercard" number="7852" isDefault />
         <PaymentMethod type="visa" number="9831" />
         <PaymentMethod type="visa" number="8362" />

@@ -216,8 +216,9 @@ Preferred communication style: Simple, everyday language.
   - "Default" label for easy identification
   - Positioned absolutely for clean look
 - **Enhanced Card Layout**:
-  - Single column layout for better mobile experience
-  - Content on same row: card number and card type side by side
+  - 2-column grid layout (md:grid-cols-2) for better space utilization
+  - 2 rows with 2 cards each for organized display
+  - Vertical card design with logo and info stacked
   - Larger cards (p-6) with better spacing
   - Card logos in gray-50 rounded containers (h-12 w-16)
   - Visible card brand logos (Visa/Mastercard)
