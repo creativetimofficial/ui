@@ -1,6 +1,6 @@
 "use client"
 
-import { Sparkles } from "lucide-react"
+import { ArrowRight, Sparkles } from "lucide-react"
 
 import { Badge } from "@/registry/creative-tim-ui/ui/badge"
 import { Button } from "@/registry/creative-tim-ui/ui/button"
@@ -9,56 +9,64 @@ import { Card, CardContent } from "@/registry/creative-tim-ui/ui/card"
 const TESTIMONIALS = [
   {
     image: "https://v3.material-tailwind.com/logo/spotify.svg",
-    name: "Jessica Devis",
+    name: "Alexandra Martinez",
+    role: "Head of Design",
     quote:
-      "Don't walk behind me; I may not lead. Don't walk in front of me; I may not follow. Just walk beside me and be my friend.",
+      "This component library has revolutionized our design system. The quality and consistency have dramatically improved our product development workflow.",
   },
   {
     image: "https://v3.material-tailwind.com/logo/netflix.svg",
-    name: "Mary Joshiash",
+    name: "David Kim",
+    role: "Engineering Lead",
     quote:
-      "The pessimist complains about the wind; the optimist expects it to change; the realist adjusts the sails.",
+      "Outstanding components with excellent TypeScript support. The documentation is thorough and implementation is seamless across our platforms.",
   },
   {
     image: "https://v3.material-tailwind.com/logo/coinbase.svg",
-    name: "Marcell Glock",
-    role: "CFO @ Apple INC",
+    name: "Marcus Johnson",
+    role: "Product Director",
     quote:
-      "Do not go where the path may lead, go instead where there is no path and leave a trail.",
+      "A game-changer for our development team. These production-ready components have reduced our time-to-market by 50% while maintaining exceptional quality.",
   },
 ]
 
 export default function TestimonialsBlock() {
   return (
-    <section className="py-16">
+    <section className="py-20">
       <div className="container mx-auto px-4">
-        <div className="mb-20 text-center">
+        <div className="mb-16 text-center">
           <Badge variant="outline" className="mx-auto mb-8 w-max">
             <Sparkles className="mr-2 h-4 w-4" />
             Testimonials
           </Badge>
-          <h2 className="mb-4 text-center text-3xl font-bold">
-            What Clients Say
+          <h2 className="mb-4 text-3xl font-bold md:text-4xl">
+            Trusted by Industry Leaders
           </h2>
-          <p className="text-muted-foreground mx-auto max-w-lg text-center text-lg">
-            We&apos;re constantly trying to express ourselves and actualize our
-            dreams. If you have the opportunity to play.
+          <p className="text-muted-foreground mx-auto max-w-2xl text-lg">
+            See how leading companies are building exceptional products with our
+            component library
           </p>
         </div>
-        <div className="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3">
-          {TESTIMONIALS.map(({ name, image, quote }, key) => (
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+          {TESTIMONIALS.map(({ name, image, quote, role }, key) => (
             <Card key={key} className="border-0 bg-transparent shadow-none">
               <CardContent className="p-0 text-center">
                 <img
                   src={image}
                   alt="company logo"
-                  className="mx-auto mb-4 h-20"
+                  className="mx-auto mb-6 h-20"
                 />
-                <blockquote className="text-muted-foreground mx-auto max-w-lg">
+                <blockquote className="text-muted-foreground mx-auto mb-6 max-w-sm text-sm leading-relaxed">
                   &quot;{quote}&quot;
                 </blockquote>
-                <p className="my-6 font-semibold">{name}</p>
-                <Button variant="outline">Read More</Button>
+                <div className="mb-6">
+                  <p className="font-semibold">{name}</p>
+                  <p className="text-muted-foreground text-sm">{role}</p>
+                </div>
+                <Button variant="link" className="group">
+                  Read More
+                  <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                </Button>
               </CardContent>
             </Card>
           ))}
