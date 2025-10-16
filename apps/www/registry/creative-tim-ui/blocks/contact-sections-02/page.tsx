@@ -65,7 +65,7 @@ export default function ContactSections02() {
         </form>
       </div>
       <img
-        src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&auto=format&fit=crop"
+        src="https://images.unsplash.com/photo-1658246944389-9e9ac0a85dda?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1064"
         alt="contact"
         className="hidden h-full w-full object-cover object-center md:block"
       />
