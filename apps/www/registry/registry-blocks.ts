@@ -505,7 +505,7 @@ export const blocks: Registry["items"] = [
     name: "order-details-01",
     description: "Order details with timeline",
     type: "registry:block",
-    registryDependencies: ["button", "card"],
+    registryDependencies: ["button", "card", "badge", "separator"],
     files: [
       {
         path: "blocks/order-details-01/page.tsx",
@@ -514,7 +514,7 @@ export const blocks: Registry["items"] = [
       },
     ],
     meta: {
-      iframeHeight: "1000px",
+      iframeHeight: "1100px",
       container:
         "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
       mobile: "component",

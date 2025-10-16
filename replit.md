@@ -111,6 +111,27 @@ Preferred communication style: Simple, everyday language.
 - **class-variance-authority**: Variant-based component APIs.
 ## Recent Changes
 
+### Order Details Block Enhancement (October 16, 2025)
+- **Enhanced order-details-01 Block**: Complete UI/UX redesign with modern visual hierarchy
+- **Design Improvements**:
+  - **Enhanced Header**: Large order number (3xl) with "In Transit" status badge
+  - **Info Icons**: Clock icon for date, Package icon for item count
+  - **Product Image Container**: Rounded container with muted background for better presentation
+  - **Size & Quantity Badges**: Outlined badges showing product specifications
+  - **Icon Sections**: Circular icon badges for Delivery Address (MapPin) and Shipping Updates (Mail)
+  - **Contact Details**: Email and phone icons inline with contact information
+  - **Order Timeline Section**: Clear heading and improved visual hierarchy
+  - **Timeline Icons**: Larger icons (h-10 w-10) with shadow effects for better visibility
+  - **Status Badges**: Color-coded badges (Complete - green, In Progress - blue, Pending - gray)
+  - **Enhanced Timeline Connectors**: Thicker lines (w-0.5) with primary color for active steps
+  - **Order Summary Card**: Highlighted card with muted background and better spacing
+  - **Large Total**: 2xl font size for total amount prominence
+  - **Track Order Banner**: Primary-themed info box with Truck icon and delivery estimate
+  - **Better Separators**: Visual dividers between sections
+- **New Dependencies**: Added Badge and Separator components to registry
+- **Improved Typography**: Better font hierarchy with larger headings and clearer labels
+- **Responsive Design**: Optimized grid layout for all screen sizes
+
 ### Interactive Product Preview Enhancement (October 16, 2025)
 - **Enhanced interactive-product-preview-01 Block**: Modern UI/UX redesign with interactive features
 - **Design Improvements**:
