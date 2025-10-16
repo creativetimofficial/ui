@@ -110,3 +110,44 @@ Preferred communication style: Simple, everyday language.
 - **clsx + tailwind-merge**: Conditional className composition.
 - **date-fns**: Date manipulation.
 - **class-variance-authority**: Variant-based component APIs.
+
+## Recent Changes
+
+### Shopping Cart Enhancement (October 16, 2025)
+- **Enhanced shopping-cart-01 Block**: Complete redesign with white card wrapper and consolidated cart items
+- **Design Improvements**:
+  - **White Card Container**: Entire shopping cart wrapped in rounded-2xl card with shadow-lg
+  - **Larger Header**: Shopping bag icon increased to h-14 w-14 in primary/10 circular badge, 4xl title
+  - **Free Shipping Badge**: Enhanced green pill badge with larger Truck icon and semibold text
+  - **Consolidated Cart Items Card**: Single border-2 card containing all products with header and separators
+  - **Card Structure**: Package icon with "Cart Items (2)" in bold xl font, separated from content
+  - **Product Layout**: Larger images (h-36 w-36) in rounded-xl containers with muted/50 background
+  - **Enhanced Info**: xl font for product names, gap-6 spacing, 2xl price display aligned right
+  - **Status Badges**: Redesigned with better padding (px-3 py-1), Size badge with semibold value
+  - **Quantity Controls**: h-10 selector (w-28) with medium font weight label
+  - **Product Separators**: Visual dividers between products within the cart card
+  - **Order Summary**: Border-2 card with sticky positioning, xl heading, 3xl total price
+  - **Enhanced Sections**: Tag icon for promo code, Lock icon (h-5 w-5) in checkout button
+  - **Free Shipping Info**: h-10 w-10 icon badge, semibold title, improved text sizing
+- **Layout Structure**: Two-column layout - Cart Items (col-span-2) on left, Order Summary (col-span-1) on right
+- **New Dependencies**: Badge and Separator components
+- **Professional Typography**: Larger headings (xl to 4xl) and improved font hierarchy
+- **Responsive Design**: Optimized for mobile with proper card stacking
+
+### Dark Product Overview Enhancement (October 16, 2025)
+- **Enhanced dark-product-overview-01 Block**: Modern UI/UX redesign with dark theme improvements
+- **Product Image**: Updated with Unsplash portrait image for premium aesthetic
+- **Design Improvements**:
+  - **Shop Previewer Badge**: Outlined badge with white border and improved styling
+  - **Larger Typography**: 4xl main heading for better visual impact
+  - **Product Info**: Title with "New Arrival" green badge inline
+  - **Star Rating**: 5-star display with review count (127 reviews)
+  - **Enhanced Pricing**: 4xl price ($449.90) with strikethrough original ($599.90) and 25% OFF badge
+  - **Free Shipping Banner**: Info box with Truck icon in white/10 background
+  - **Interactive Wishlist**: Heart icon with toggle state and fill animation
+  - **Enhanced CTAs**: Shopping Cart icon added to primary button
+  - **Tabbed Content**: Icons added to tabs (Package, Shield, Truck) with relevant descriptions
+  - **Image Container**: Glass-morphism effect with white/5 background, white/20 border, backdrop blur
+  - **Hover Effects**: Image scales 105% with gradient overlay transition
+- **New Dependencies**: Badge component
+- **Improved Spacing**: Better padding (py-20) and gaps, max-width increased to 6xl
