@@ -12,7 +12,7 @@ export default function TestimonialsBlock() {
           <CardContent className="grid w-full grid-cols-1 gap-6 p-6 md:grid-cols-12 md:gap-8 md:p-8">
             <div className="col-span-full md:col-span-4">
               <img
-                src="https://v3.material-tailwind.com/woman-profile-2.jpg"
+                src="https://images.unsplash.com/photo-1712068944613-1ff36db16612?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=987"
                 alt="Michael - Writer"
                 className="h-full max-h-[400px] w-full rounded-xl object-cover object-center"
               />
