@@ -14,7 +14,7 @@ export default function ContactSections05() {
   const [selectedOption, setSelectedOption] = useState("")
 
   return (
-    <section className="py-16">
+    <section className="bg-white py-16">
       <div className="container mx-auto">
         <div className="mb-20 text-center">
           <Badge variant="secondary">Customer Care</Badge>
@@ -28,7 +28,11 @@ export default function ContactSections05() {
           </p>
         </div>
         <div className="grid grid-cols-1 gap-x-16 gap-y-10 lg:grid-cols-2">
-          <div className="h-full min-h-[400px] w-full rounded-2xl bg-gradient-to-br from-gray-900 to-gray-800" />
+          <img
+            src="https://images.unsplash.com/photo-1638438134099-a91e5373aaf0?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2070"
+            alt="Contact"
+            className="h-full min-h-[400px] w-full rounded-2xl object-cover"
+          />
           <form
             action="#"
             className="mx-auto max-w-lg space-y-6 lg:mx-0 lg:py-2"
