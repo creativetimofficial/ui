@@ -631,7 +631,8 @@
       "type": "registry:block",
       "description": "Interactive room product preview",
       "registryDependencies": [
-        "button"
+        "button",
+        "badge"
       ],
       "files": [
         {

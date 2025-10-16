@@ -111,6 +111,28 @@ Preferred communication style: Simple, everyday language.
 - **class-variance-authority**: Variant-based component APIs.
 ## Recent Changes
 
+### Interactive Product Preview Enhancement (October 16, 2025)
+- **Enhanced interactive-product-preview-01 Block**: Modern UI/UX redesign with interactive features
+- **Design Improvements**:
+  - **Room Previewer Badge**: Replaced text with styled badge component
+  - **Larger Typography**: Increased title size to 4xl for better visual impact
+  - **Enhanced Product Card**: Improved glass-morphism effect with bg-white/90 and stronger backdrop blur
+  - **New Arrival Badge**: Added green badge for product status
+  - **Interactive Wishlist**: Heart icon with toggle state and fill animation
+  - **Product Image Container**: Added muted background container for better product visibility
+  - **Star Rating System**: 5-star rating display with review count (127 reviews)
+  - **Price Display**: Large 3xl price with strikethrough original price showing discount
+  - **Free Shipping Banner**: Highlighted banner with Truck icon and message
+  - **Quantity Selector**: Plus/Minus buttons with quantity counter
+  - **Enhanced Buttons**: Added ShoppingCart and Eye icons to CTAs
+  - **Interactive Hotspots**: Improved markers with white borders, pulse animation, and hover tooltips
+  - **Hotspot Labels**: Named labels (Ceramic Vase, Wall Art, Table Lamp, Side Chair) appear on hover
+  - **Better Gradient**: Enhanced room overlay with gradient from black/30 to transparent
+  - **Shadow Effects**: Added shadow-2xl to card and image for depth
+- **New Dependencies**: Added Badge component to registry
+- **Interactive Features**: Stateful favorite toggle and quantity management with React hooks
+- **Improved Accessibility**: Better contrast, larger touch targets, and clear interactive states
+
 ### Checkout Block Enhancement (October 16, 2025)
 - **Enhanced checkout-01 Block**: Complete redesign with white card wrapper and modern UI/UX
 - **Design Improvements**:

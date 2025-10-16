@@ -487,7 +487,7 @@
       "name": "interactive-product-preview-01",
       "type": "registry:block",
       "description": "Interactive room product preview",
-      "registryDependencies": ["button"],
+      "registryDependencies": ["button", "badge"],
       "files": [
         {
           "path": "registry/creative-tim-ui/blocks/interactive-product-preview-01/page.tsx",
