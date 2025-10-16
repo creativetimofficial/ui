@@ -46,7 +46,7 @@ export default function ContactSections04() {
           </p>
         </div>
       </div>
-      <div className="container mx-auto -mt-24 px-4 pb-16">
+      <div className="container mx-auto -mt-32 px-4 pb-16">
         <Card className="overflow-hidden rounded-2xl py-12 shadow-2xl">
           <div className="grid grid-cols-1 justify-items-center gap-x-8 gap-y-12 px-4 sm:grid-cols-2 lg:grid-cols-4">
             {OPTIONS.map(({ icon: Icon, title, description }, key) => (

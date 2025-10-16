@@ -161,7 +161,7 @@ Preferred communication style: Simple, everyday language.
   - **Hover Effects**: Scale-105 transform on hover with group transitions
   - **Icon Shadow Enhancement**: Icons get shadow-xl on hover
   - **Better Spacing**: Increased vertical spacing (gap-y-12, mb-6, py-12)
-  - **Improved Card Elevation**: Deeper card offset (-mt-24) for better depth
+  - **Improved Card Elevation**: Enhanced card overlap (-mt-32) for better depth
 - **Typography Updates**: Bold xl titles, base-sized descriptions for better hierarchy
 - **Responsive Design**: Optimized grid with lg:grid-cols-4 breakpoint
 - **Interactive States**: Group hover effects with smooth transitions
