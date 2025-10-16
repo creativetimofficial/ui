@@ -1,57 +1,125 @@
 "use client"
 
-import { ArrowRight, Quote } from "lucide-react"
+import { Quote, Star } from "lucide-react"
 
+import {
+  Avatar,
+  AvatarFallback,
+  AvatarImage,
+} from "@/registry/creative-tim-ui/ui/avatar"
 import { Card, CardContent } from "@/registry/creative-tim-ui/ui/card"
+
+const testimonials = [
+  {
+    name: "Sarah Johnson",
+    role: "Product Designer",
+    image:
+      "https://images.unsplash.com/photo-1716662318479-a9c0f1cd1a0e?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=987",
+    quote:
+      "The attention to detail and user experience is exceptional. This has transformed how we approach design decisions in our team.",
+    rating: 5,
+  },
+  {
+    name: "Michael Chen",
+    role: "Tech Lead",
+    image:
+      "https://images.unsplash.com/photo-1623853434105-8e7a72898180?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1062",
+    quote:
+      "Outstanding component library that saves us countless hours. The quality and customization options are exactly what we needed.",
+    rating: 5,
+  },
+  {
+    name: "Emma Rodriguez",
+    role: "Frontend Developer",
+    image:
+      "https://images.unsplash.com/photo-1641906840000-4b88f1d44de6?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=987",
+    quote:
+      "A game-changer for rapid prototyping and production builds. The documentation is clear and the components are production-ready.",
+    rating: 5,
+  },
+]
 
 export default function TestimonialsBlock() {
   return (
     <section className="py-20">
       <div className="container mx-auto px-4">
-        <Card className="overflow-hidden rounded-2xl bg-black text-white">
-          <CardContent className="grid w-full grid-cols-1 gap-6 p-6 md:grid-cols-12 md:gap-8 md:p-8">
-            <div className="col-span-full md:col-span-4">
-              <img
-                src="https://images.unsplash.com/photo-1712068944613-1ff36db16612?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=987"
-                alt="Michael - Writer"
-                className="h-full max-h-[400px] w-full rounded-xl object-cover object-center"
-              />
-            </div>
-            <div className="col-span-full flex flex-col justify-center space-y-6 md:col-span-5 md:space-y-8">
-              <div className="relative">
-                <Quote className="mb-4 h-10 w-10 text-white/20" />
-                <blockquote className="text-lg leading-relaxed text-white/90">
-                  &quot;Decisions: If you can&apos;t decide, the answer is no.
-                  If two equally difficult paths, choose the one more painful in
-                  the short term (pain avoidance is creating an illusion of
-                  equality). Choose the path that leaves you more equanimous in
-                  the long term.&quot;
+        <div className="mb-12 text-center">
+          <h2 className="mb-4 text-3xl font-bold md:text-4xl">
+            Loved by Developers & Designers
+          </h2>
+          <p className="text-muted-foreground mx-auto max-w-2xl text-lg">
+            Join thousands of professionals who trust our components for their
+            projects
+          </p>
+        </div>
+
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          {testimonials.map((testimonial, index) => (
+            <Card
+              key={index}
+              className="border-border/50 hover:border-border transition-all hover:shadow-lg"
+            >
+              <CardContent className="p-6">
+                <div className="mb-4 flex items-center gap-1">
+                  {Array.from({ length: testimonial.rating }).map((_, i) => (
+                    <Star
+                      key={i}
+                      className="h-4 w-4 fill-yellow-400 text-yellow-400"
+                    />
+                  ))}
+                </div>
+
+                <Quote className="text-muted-foreground/30 mb-3 h-8 w-8" />
+
+                <blockquote className="text-foreground/90 mb-6 text-sm leading-relaxed">
+                  {testimonial.quote}
                 </blockquote>
-              </div>
-              <div>
-                <p className="text-lg font-semibold">Michael</p>
-                <p className="text-sm text-white/60">Writer</p>
-              </div>
+
+                <div className="flex items-center gap-3">
+                  <Avatar className="border-border h-12 w-12 border-2">
+                    <AvatarImage
+                      src={testimonial.image}
+                      alt={testimonial.name}
+                    />
+                    <AvatarFallback>
+                      {testimonial.name
+                        .split(" ")
+                        .map((n) => n[0])
+                        .join("")}
+                    </AvatarFallback>
+                  </Avatar>
+                  <div>
+                    <p className="text-foreground font-semibold">
+                      {testimonial.name}
+                    </p>
+                    <p className="text-muted-foreground text-sm">
+                      {testimonial.role}
+                    </p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+
+        <div className="mt-12 text-center">
+          <div className="border-border/50 bg-card inline-flex items-center gap-8 rounded-2xl border px-8 py-4">
+            <div>
+              <p className="text-3xl font-bold">1,679,700+</p>
+              <p className="text-muted-foreground text-sm">Active Users</p>
             </div>
-            <div className="col-span-full flex flex-col justify-center space-y-6 md:col-span-3">
-              <div>
-                <h3 className="mb-3 text-5xl leading-none font-bold">
-                  1,679,700+
-                </h3>
-                <p className="text-sm leading-relaxed text-white/70">
-                  Developers and Companies around the world using our products.
-                </p>
-              </div>
-              <a
-                href="#"
-                className="group inline-flex items-center gap-2 font-medium text-white transition-colors hover:text-white/80"
-              >
-                See all products
-                <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-              </a>
+            <div className="bg-border h-12 w-px"></div>
+            <div>
+              <p className="text-3xl font-bold">4.9/5</p>
+              <p className="text-muted-foreground text-sm">Average Rating</p>
             </div>
-          </CardContent>
-        </Card>
+            <div className="bg-border h-12 w-px"></div>
+            <div>
+              <p className="text-3xl font-bold">50K+</p>
+              <p className="text-muted-foreground text-sm">Companies</p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   )
