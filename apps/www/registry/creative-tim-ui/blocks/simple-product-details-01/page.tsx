@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import { ChevronRight, Heart } from "lucide-react"
+import { Heart } from "lucide-react"
 
 import {
   Accordion,
@@ -20,14 +20,14 @@ const SIMILAR_ITEMS = [
     name: "Black Bustier Top",
     price: "€49.95",
     image:
-      "https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?w=400&h=500&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1661327930345-9c6714b603b3?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=987",
     sizes: "Available in 5 size",
   },
   {
     name: "Black High-Waist Jeans",
     price: "€49.95",
     image:
-      "https://images.unsplash.com/photo-1541099649105-f69ad21f3246?w=400&h=500&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1578508637199-240a8f25eff6?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=987",
     sizes: "Available in 8 taille",
   },
 ]
@@ -44,7 +44,7 @@ export default function SimpleProductDetails01() {
           <div className="bg-muted/30 h-full max-h-[32rem] w-full overflow-hidden rounded-xl border">
             <img
               alt="Pink Blouse"
-              src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=800&h=1000&fit=crop&q=80"
+              src="https://images.unsplash.com/photo-1574015974293-817f0ebebb74?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=973"
               className="h-full w-full object-cover"
             />
           </div>
@@ -52,13 +52,9 @@ export default function SimpleProductDetails01() {
             <h3 className="text-3xl font-bold">Pink Blouse</h3>
             <p className="text-primary my-4 text-3xl font-bold">$1,490</p>
             <p className="text-muted-foreground leading-relaxed [text-wrap:_balance]">
-              As we live, our hearts turn colder. Cause pain is what we go
-              through as we become older. We get insulted by others, lose trust
-              for those others. We get back stabbed by friends. It becomes
-              harder for us to give others a hand. We get our heart broken by
-              people we love, even that we give them all we have. Then we lose
-              family over time. What else could rust the heart more over time?
-              Blackgold.
+              Whether you're closing deals or attending formal events, its
+              breathable lining and natural stretch keep you comfortable and
+              sharp from day to night.
             </p>
 
             <div className="my-6 flex items-center gap-2">
@@ -179,10 +175,7 @@ export default function SimpleProductDetails01() {
 
               <AccordionItem value="contact" className="border-b-0">
                 <AccordionTrigger className="text-base font-semibold">
-                  <div className="flex w-full items-center justify-between">
-                    <span>Contact Us</span>
-                    <ChevronRight className="h-4 w-4 shrink-0 transition-transform duration-200" />
-                  </div>
+                  Contact Us
                 </AccordionTrigger>
                 <AccordionContent className="text-muted-foreground leading-relaxed">
                   <p className="mb-3">

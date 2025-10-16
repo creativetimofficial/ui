@@ -154,16 +154,17 @@ Preferred communication style: Simple, everyday language.
 
 ### Simple Product Details Enhancement (October 16, 2025)
 - **Enhanced simple-product-details-01 Block**: Complete redesign with size selector and structured information sections
-- **Product Image**: Updated with Unsplash fashion image with rounded-xl border and muted background
+- **Product Image**: Updated with Unsplash portrait image with rounded-xl border and muted background
+- **Product Description**: Professional copy - "Whether you're closing deals or attending formal events, its breathable lining and natural stretch keep you comfortable and sharp from day to night."
 - **Design Improvements**:
   - **Size Selector**: Interactive button group with 6 sizes (XS, S, M, L, XL, XXL) with active state
-  - **Enhanced Color Selector**: Larger circular swatches (h-8 w-8) with border, hover scale effect
+  - **Enhanced Color Selector**: Larger circular swatches (h-8 w-8) with border, hover scale effect (110%)
   - **Better Typography**: Larger 3xl heading and 3xl price display for prominence
   - **Interactive Wishlist**: Heart icon with toggle state and fill animation
   - **More Info Section**: Accordion with Description, Delivery & Returns, and Contact Us
   - **Description Content**: Detailed product information about features and benefits
   - **Delivery Information**: Shipping options, timelines, and return policy details
-  - **Contact Details**: Email, phone, and business hours information
+  - **Contact Details**: Email, phone, and business hours information (single accordion icon)
   - **Similar Items Section**: Grid layout with product cards
   - **Similar Product Cards**: Hover effects with image scale (105%), product name, price, and size availability
   - **Product Images**: Unsplash fashion images (Black Bustier Top, Black High-Waist Jeans)
