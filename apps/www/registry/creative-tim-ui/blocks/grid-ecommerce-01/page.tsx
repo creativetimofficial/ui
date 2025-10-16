@@ -32,34 +32,32 @@ export default function GridEcommerce01() {
           {CARDS.map(({ image, title, subtitle }, index) => (
             <Card
               key={index}
-              className="group relative overflow-hidden border-0 shadow-lg transition-all hover:shadow-xl"
+              className="group relative h-96 overflow-hidden border-0 p-0 shadow-lg transition-all hover:shadow-xl"
             >
-              <div className="relative h-96">
-                <img
-                  src={image}
-                  alt={title}
-                  className="h-full w-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
-                <div className="absolute inset-x-0 bottom-0 p-6 text-white">
-                  <p className="mb-2 text-sm font-semibold tracking-wider text-white/90 uppercase">
-                    {title}
-                  </p>
-                  <h3 className="mb-4 text-2xl font-bold">{subtitle}</h3>
-                  <Button
-                    variant="outline"
-                    className="border-white bg-white/10 text-white backdrop-blur-sm hover:bg-white hover:text-black"
-                  >
-                    Read More
-                  </Button>
-                </div>
+              <img
+                src={image}
+                alt={title}
+                className="h-full w-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
+              <div className="absolute inset-x-0 bottom-0 p-6 text-white">
+                <p className="mb-2 text-sm font-semibold tracking-wider text-white/90 uppercase">
+                  {title}
+                </p>
+                <h3 className="mb-4 text-2xl font-bold">{subtitle}</h3>
+                <Button
+                  variant="outline"
+                  className="border-white bg-white/10 text-white backdrop-blur-sm hover:bg-white hover:text-black"
+                >
+                  Read More
+                </Button>
               </div>
             </Card>
           ))}
         </div>
-        <Card className="group relative mt-6 overflow-hidden border-0 shadow-lg transition-all hover:shadow-xl">
-          <div className="relative flex flex-col md:flex-row">
-            <div className="relative h-96 w-full md:w-1/2">
+        <Card className="group relative mt-6 h-96 overflow-hidden border-0 p-0 shadow-lg transition-all hover:shadow-xl">
+          <div className="relative flex h-full flex-col md:flex-row">
+            <div className="relative h-full w-full md:w-1/2">
               <img
                 src="https://v3.material-tailwind.com/3d-obj-4.jpg"
                 alt="Formal Elegance"
