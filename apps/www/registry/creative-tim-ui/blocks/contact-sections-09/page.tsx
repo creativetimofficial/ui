@@ -28,19 +28,19 @@ export default function ContactSections09() {
       <div className="grid items-center gap-6 rounded-xl bg-black p-4 lg:grid-cols-2 lg:p-8">
         <div className="p-8 lg:mx-auto lg:max-w-lg lg:p-0">
           <h2 className="mb-4 text-3xl font-bold text-white">Get in Touch</h2>
-          <p className="text-lg text-gray-400 lg:max-w-xl">
+          <p className="text-lg text-white lg:max-w-xl">
             You need more information? Check what other persons are saying about
             our product. They are very happy with their purchase.
           </p>
           {DATA.map(({ icon: Icon, title, options }, key) => (
             <div key={key} className="mt-12">
               <div className="mb-6 flex items-center gap-3">
-                <Icon className="h-7 w-7 text-gray-400" />
-                <h4 className="text-lg font-semibold text-gray-400">{title}</h4>
+                <Icon className="h-7 w-7 text-white" />
+                <h4 className="text-lg font-semibold text-white">{title}</h4>
               </div>
               <div className="ml-10 space-y-2">
                 {options.map((option, idx) => (
-                  <p key={idx} className="text-gray-400">
+                  <p key={idx} className="text-white">
                     {option}
                   </p>
                 ))}
