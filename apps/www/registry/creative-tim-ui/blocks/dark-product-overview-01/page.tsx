@@ -135,7 +135,7 @@ export default function DarkProductOverview01() {
                     <TabsTrigger
                       key={title}
                       value={title}
-                      className="gap-2 rounded-none px-4 py-3 text-white data-[state=active]:border-b-2 data-[state=active]:border-white data-[state=active]:bg-transparent data-[state=active]:shadow-none"
+                      className="gap-2 rounded-none border-b-2 border-transparent bg-transparent px-4 py-3 text-white/70 shadow-none hover:text-white data-[state=active]:border-white data-[state=active]:text-white"
                     >
                       <Icon className="h-4 w-4" />
                       {title}
