@@ -482,7 +482,8 @@
       "registryDependencies": [
         "button",
         "label",
-        "radio-group"
+        "radio-group",
+        "badge"
       ],
       "files": [
         {

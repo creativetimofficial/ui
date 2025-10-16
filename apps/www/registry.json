@@ -366,7 +366,7 @@
       "name": "digital-product-overview-01",
       "type": "registry:block",
       "description": "Digital product with plan options",
-      "registryDependencies": ["button", "label", "radio-group"],
+      "registryDependencies": ["button", "label", "radio-group", "badge"],
       "files": [
         {
           "path": "registry/creative-tim-ui/blocks/digital-product-overview-01/page.tsx",

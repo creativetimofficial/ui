@@ -109,3 +109,31 @@ Preferred communication style: Simple, everyday language.
 - **clsx + tailwind-merge**: Conditional className composition.
 - **date-fns**: Date manipulation.
 - **class-variance-authority**: Variant-based component APIs.
+## Recent Changes
+
+### Digital Product Overview Enhancement (October 16, 2025)
+- **Enhanced digital-product-overview-01 Block**: Modern UI/UX redesign with improved visual hierarchy
+- **Image Integration**: Added Creative Tim header thumbnail image with hover effects
+- **Design Improvements**:
+  - **Enhanced Product Image**: Rounded-2xl container with shadow, hover scale effect (105%), gradient overlay on hover
+  - **Better Title Section**: Larger heading (3xl) with "Best Seller" badge, improved description text
+  - **Stats Bar**: Consolidated ratings (4.9/5 stars) and sales (1,234) in a single highlighted bar with separator
+  - **Plan Cards Redesign**: Card-style version selectors with borders, hover effects, and "Popular" badge
+  - **Improved Typography**: Better font hierarchy, clearer descriptions for each version
+  - **Pricing Display**: Larger price (2xl) with "one-time" label for clarity
+  - **Enhanced Buttons**: Icons added (ShoppingCart, Eye) for better visual cues
+  - **Modern Spacing**: Improved gaps and padding throughout
+- **New Components**: Badge component added for "Best Seller" and "Popular" labels
+- **Visual Effects**: Smooth transitions, hover states, and modern rounded corners throughout
+
+### Grid Ecommerce Block Enhancement (October 16, 2025)
+- **Enhanced grid-ecommerce-01 Block**: Redesigned with full-size images and overlaid content
+- **Design Improvements**:
+  - **Full-size Images**: Images now fill entire card area (h-96) with no padding
+  - **Overlay Design**: Text and CTAs positioned over images with gradient overlay
+  - **Gradient Effects**: Dark gradient from bottom to top for better text readability
+  - **White Text Styling**: All text converted to white for contrast against images
+  - **Enhanced Buttons**: Glass-morphism effect buttons with backdrop blur
+  - **Hover Animations**: Image scale effect (105%) and shadow transitions on hover
+  - **Featured Card**: Large horizontal card with split layout (image + content overlay)
+- **Modern Effects**: Smooth transitions, hover states, and backdrop blur effects
