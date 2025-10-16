@@ -15,6 +15,28 @@ interface ExampleCategory {
 
 const categories: ExampleCategory[] = [
   {
+    id: "agents",
+    title: "Agents",
+    description: "Developing for blockchain, crypto, or NFT platforms? These blocks are designed with the unique needs of Web3 applications in mind, from wallet integrations and token charts to secure login flows.",
+    examples: [
+      {
+        name: "Audio",
+        blockCount: 5,
+        category: "agents"
+      },
+      {
+        name: "Images",
+        blockCount: 5,
+        category: "agents"
+      },
+      {
+        name: "Texts",
+        blockCount: 5,
+        category: "agents"
+      }
+    ]
+  },
+  {
     id: "web3",
     title: "Web 3.0",
     description: "Developing for blockchain, crypto, or NFT platforms? These blocks are designed with the unique needs of Web3 applications in mind, from wallet integrations and token charts to secure login flows.",
@@ -145,24 +167,21 @@ export function ExamplesPreview() {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {category.examples.map((example) => (
               <Link 
                 key={example.name} 
                 href={`/blocks/${example.category}`}
                 className="group"
               >
-                <Card className="overflow-hidden transition-all hover:shadow-lg">
-                  <div className="relative aspect-[4/3] overflow-hidden bg-gradient-to-br from-muted to-muted/50 flex items-center justify-center">
-                    <div className="text-center p-6">
-                      <div className="text-4xl font-bold text-muted-foreground/30 mb-2">{example.name.charAt(0)}</div>
-                      <div className="text-sm text-muted-foreground/50">{example.blockCount} Blocks</div>
-                    </div>
+                <Card className="overflow-hidden border bg-card transition-all hover:shadow-md">
+                  <div className="relative aspect-[16/10] overflow-hidden bg-muted/30">
+                    <div className="absolute inset-0 bg-gradient-to-br from-muted/80 to-muted/40" />
                   </div>
                   <div className="p-4">
                     <div className="flex items-center justify-between">
-                      <h4 className="font-semibold">{example.name}</h4>
-                      <span className="text-sm text-muted-foreground">
+                      <h4 className="text-sm font-medium">{example.name}</h4>
+                      <span className="text-xs text-muted-foreground">
                         {example.blockCount} Blocks
                       </span>
                     </div>
