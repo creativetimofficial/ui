@@ -23,6 +23,10 @@ const nextConfig = {
         protocol: "https",
         hostname: "storage.googleapis.com",
       },
+      {
+        protocol: "https",
+        hostname: "raw.githubusercontent.com",
+      },
     ],
   },
   redirects() {

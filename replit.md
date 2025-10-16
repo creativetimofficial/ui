@@ -128,6 +128,23 @@ Preferred communication style: Simple, everyday language.
   - All icons styled for dark navbar compatibility
 - **Components Updated**: site-header.tsx, main-nav.tsx, github-link.tsx, mode-switcher.tsx, command-menu.tsx
 
+### Examples Preview Section (October 16, 2025)
+- **Dynamic Examples Preview**: Added below "Remarkable Achievements" section
+- **Categories Showcased**:
+  - **Web 3.0**: Blockchain, crypto, NFT blocks with wallet integrations and token charts
+  - **Application & Admin UI**: SaaS platforms, dashboards, CRMs with widgets, charts, tables, modals
+  - **Marketing & Presentation**: Testimonials, blog cards, contact forms for landing pages
+  - **Content UI**: Blog layouts, FAQs, footers for content-heavy sites
+  - **Ecommerce UI**: Product pages, shopping carts, checkout flows
+- **Features**:
+  - Category title and description
+  - 3-column responsive grid (1 col mobile, 2 col tablet, 3 col desktop)
+  - Placeholder gradient cards with block counts
+  - Clickable cards linking to category pages
+  - Hover effects with shadow transitions
+- **Components**: Card (shadcn/ui), gradient placeholders (ready for thumbnail images)
+- **Design**: Matches structure from reference image with clean typography and spacing
+
 ### Achievements Section on Home Page (October 16, 2025)
 - **Added "Remarkable Achievements" Section**: New stats section below the header on the home page
 - **Features**:
