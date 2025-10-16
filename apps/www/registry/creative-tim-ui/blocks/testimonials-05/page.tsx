@@ -1,6 +1,6 @@
 "use client"
 
-import { Star } from "lucide-react"
+import { Quote, Star } from "lucide-react"
 
 import {
   Avatar,
@@ -11,74 +11,89 @@ import { Card, CardContent } from "@/registry/creative-tim-ui/ui/card"
 
 const TESTIMONIALS = [
   {
-    image: "https://v3.material-tailwind.com/woman-profile-2.jpg",
-    name: "Jessica Devis",
-    role: "CEO @ Marketing Digital LTD",
+    image:
+      "https://images.unsplash.com/photo-1716662318479-a9c0f1cd1a0e?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=987",
+    name: "Sarah Johnson",
+    role: "Product Designer",
     quote:
-      "The connections you make at Web Summit are unparalleled, we met users all over the world.",
+      "The component library has transformed our design process. The quality and attention to detail in every component is exceptional.",
     rating: 5,
   },
   {
-    image: "https://v3.material-tailwind.com/man-profile-1.jpg",
-    name: "Mary Joshiash",
-    role: "Marketing @ Apple INC",
+    image:
+      "https://images.unsplash.com/photo-1623853434105-8e7a72898180?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1062",
+    name: "Michael Chen",
+    role: "Tech Lead at Stripe",
     quote:
-      "Web Summit will increase your appetite, your inspiration, your skills, your motivation and your network.",
+      "Outstanding documentation and TypeScript support. These components integrate seamlessly into our enterprise applications.",
     rating: 5,
   },
   {
-    image: "https://v3.material-tailwind.com/woman-profile-2.jpg",
-    name: "Marcell Glock",
-    role: "CFO @ Apple INC",
+    image:
+      "https://images.unsplash.com/photo-1641906840000-4b88f1d44de6?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=987",
+    name: "Emma Rodriguez",
+    role: "Frontend Developer",
     quote:
-      "The pessimist complains about the wind; the optimist expects it to change; the realist adjusts the sails.",
+      "Production-ready components with excellent customization. The design system is cohesive and well-thought-out.",
     rating: 5,
   },
 ]
 
 export default function TestimonialsBlock() {
   return (
-    <section className="bg-black py-16">
+    <section className="bg-black py-20">
       <div className="container mx-auto px-4">
-        <div className="mb-20 text-center">
-          <h2 className="mb-4 text-center text-3xl font-bold text-white">
-            Think about us
+        <div className="mb-16 text-center">
+          <h2 className="mb-4 text-3xl font-bold text-white md:text-4xl">
+            Trusted by Professionals
           </h2>
-          <p className="mx-auto max-w-lg text-center text-lg text-white/80">
-            That&apos;s the main thing people are controlled by! Thoughts -
-            their perception of themselves!
+          <p className="mx-auto max-w-2xl text-lg text-white/70">
+            Hear what developers and designers say about our component library
           </p>
         </div>
-        <div className="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
           {TESTIMONIALS.map(({ name, image, role, quote, rating }, key) => (
-            <Card key={key}>
-              <CardContent className="p-6 text-center">
-                <Avatar className="mx-auto mb-6 h-24 w-24">
-                  <AvatarImage src={image} alt={`${name} image`} />
-                  <AvatarFallback>
-                    {name
-                      .split(" ")
-                      .map((n) => n[0])
-                      .join("")}
-                  </AvatarFallback>
-                </Avatar>
-                <p className="mb-1 text-lg font-semibold">{name}</p>
-                <p className="text-muted-foreground mb-4 text-sm">{role}</p>
-                <blockquote className="text-muted-foreground mx-auto mb-4 max-w-lg">
-                  &quot;{quote}&quot;
-                </blockquote>
-                <div className="flex items-center justify-center gap-1">
+            <Card
+              key={key}
+              className="border-white/10 bg-white/5 backdrop-blur-sm transition-all hover:border-white/20 hover:bg-white/10"
+            >
+              <CardContent className="p-8 text-center">
+                <div className="relative mx-auto mb-6 inline-block">
+                  <Avatar className="h-20 w-20 border-4 border-white/20">
+                    <AvatarImage src={image} alt={`${name} profile`} />
+                    <AvatarFallback className="bg-white/10 text-white">
+                      {name
+                        .split(" ")
+                        .map((n) => n[0])
+                        .join("")}
+                    </AvatarFallback>
+                  </Avatar>
+                  <div className="bg-primary absolute -right-1 -bottom-1 rounded-full p-1.5 shadow-lg">
+                    <Quote className="text-primary-foreground h-3 w-3" />
+                  </div>
+                </div>
+
+                <h3 className="mb-1 text-lg font-semibold text-white">
+                  {name}
+                </h3>
+                <p className="mb-6 text-sm text-white/60">{role}</p>
+
+                <div className="mb-6 flex items-center justify-center gap-1">
                   {Array.from({ length: 5 }).map((_, i) => (
                     <Star
                       key={i}
-                      className={`h-5 w-5 ${
+                      className={`h-4 w-4 ${
                         i < rating
-                          ? "fill-yellow-500 text-yellow-500"
-                          : "fill-gray-300 text-gray-300"
+                          ? "fill-yellow-400 text-yellow-400"
+                          : "fill-white/20 text-white/20"
                       }`}
                     />
                   ))}
                 </div>
+
+                <blockquote className="text-sm leading-relaxed text-white/80">
+                  &quot;{quote}&quot;
+                </blockquote>
               </CardContent>
             </Card>
           ))}
