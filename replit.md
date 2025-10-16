@@ -251,6 +251,11 @@ Preferred communication style: Simple, everyday language.
   - ChevronUp (increasing) - Green (text-green-600)
   - ChevronDown (decreasing) - Red (text-red-600)
   - Clock (pending) - Black (text-black with dark:text-white for dark mode)
-- **Subtle Improvements**:
+- **White Card Container**:
+  - Wrapped all content in white card container (bg-white with dark:bg-card)
+  - Added rounded-xl, border, and shadow-sm for clean card appearance
+  - Better visual separation from background
+- **Visual Improvements**:
   - Maintained overall design as requested
   - Visual clarity improved with color-coded status icons
+  - Professional card-based layout
