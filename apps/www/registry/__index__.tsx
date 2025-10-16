@@ -462,7 +462,7 @@ export const Index: Record<string, any> = {
     name: "interactive-product-preview-01",
     description: "Interactive room product preview",
     type: "registry:block",
-    registryDependencies: ["button"],
+    registryDependencies: ["button","badge"],
     files: [{
       path: "registry/creative-tim-ui/blocks/interactive-product-preview-01/page.tsx",
       type: "registry:page",

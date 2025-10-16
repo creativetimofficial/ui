@@ -485,7 +485,7 @@ export const blocks: Registry["items"] = [
     name: "interactive-product-preview-01",
     description: "Interactive room product preview",
     type: "registry:block",
-    registryDependencies: ["button"],
+    registryDependencies: ["button", "badge"],
     files: [
       {
         path: "blocks/interactive-product-preview-01/page.tsx",
