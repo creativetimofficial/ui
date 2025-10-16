@@ -38,19 +38,17 @@ export default function Footers14() {
             </ul>
           </div>
           <div className="lg:ml-auto">
-            <p className="text-secondary mb-6 text-lg font-semibold">
-              Get the App
-            </p>
+            <p className="mb-6 text-lg font-semibold text-white">Get the App</p>
             <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2">
               <Button
-                variant="secondary"
-                className="bg-secondary-light border-secondary-light h-auto gap-4 py-3 text-start"
+                variant="outline"
+                className="h-auto gap-4 border-2 border-white/20 bg-white/5 py-4 text-start text-white transition-all hover:border-white/40 hover:bg-white/10"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   xmlSpace="preserve"
                   viewBox="0 0 16 16"
-                  className="h-10 w-10 shrink-0"
+                  className="h-12 w-12 shrink-0"
                 >
                   <path
                     fill="#2196F3"
@@ -70,25 +68,25 @@ export default function Footers14() {
                   />
                 </svg>
                 <div className="flex flex-col justify-start">
-                  <span className="text-sm">Download on</span>
-                  <span className="font-semibold">Google Play</span>
+                  <span className="text-sm text-white/70">Download on</span>
+                  <span className="text-lg font-semibold">Google Play</span>
                 </div>
               </Button>
               <Button
-                variant="secondary"
-                className="bg-secondary-light border-secondary-light h-auto gap-4 py-3 text-start"
+                variant="outline"
+                className="h-auto gap-4 border-2 border-white/20 bg-white/5 py-4 text-start text-white transition-all hover:border-white/40 hover:bg-white/10"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   enableBackground="new 0 0 22.185 27"
                   viewBox="0 0 22.185 27"
-                  className="h-10 w-10 shrink-0"
+                  className="h-12 w-12 shrink-0 fill-white"
                 >
                   <path d="M18.436 14.271c0-2.225 1.216-4.166 3.02-5.194-.942-1.156-2.359-2.192-3.921-2.496-2.13-.415-3.345.276-4.131.553-.786.277-1.83.526-1.83.526s-1.043-.249-1.83-.526C8.959 6.857 7.744 6.165 5.614 6.58s-3.99 2.192-4.746 3.776c-1.458 3.057-.858 6.903.172 9.669 1.029 2.767 3.75 6.633 5.86 6.944 1.501.221 2.43-.816 4.674-1.079 2.244.263 3.173 1.3 4.674 1.079 2.11-.311 4.831-4.177 5.86-6.944.025-.068.051-.138.076-.208C19.987 18.935 18.436 16.784 18.436 14.271zM11.041 6.075c0 0 2.087.277 3.982-1.875s1.356-4.188 1.356-4.188-2.087-.277-3.982 1.875S11.041 6.075 11.041 6.075z" />
                 </svg>
                 <div className="flex flex-col justify-start">
-                  <span className="text-sm">Download on</span>
-                  <span className="font-semibold">App Store</span>
+                  <span className="text-sm text-white/70">Download on</span>
+                  <span className="text-lg font-semibold">App Store</span>
                 </div>
               </Button>
             </div>
