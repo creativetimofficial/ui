@@ -158,7 +158,8 @@ Preferred communication style: Simple, everyday language.
   - **Card 1**: Black & white portrait with wind-blown hair
   - **Card 2**: Fashion portrait with long hair
   - **Card 3**: Artistic black & white portrait
-  - **Large Card**: Fashion product photography
+  - **Large Card**: Fashion product photography with full background coverage
+- **Large Card Layout**: Image spans full card as background with centered text overlay
 - **Button Updates**: All CTA buttons changed to variant="link" for cleaner, minimal aesthetic
 - **Link Styling**: White text links with no background, cleaner visual hierarchy
 - **Responsive Grid**: 3-column layout on desktop, 2-column on tablet, single column on mobile
