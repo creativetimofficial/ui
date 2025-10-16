@@ -53,6 +53,23 @@ export default function TestimonialsBlock() {
           </p>
         </div>
 
+        <div className="mb-12 flex flex-wrap items-center justify-center gap-8 text-center md:gap-12">
+          <div>
+            <p className="text-3xl font-bold">1,679,700+</p>
+            <p className="text-muted-foreground text-sm">Active Users</p>
+          </div>
+          <div className="bg-border hidden h-12 w-px md:block"></div>
+          <div>
+            <p className="text-3xl font-bold">4.9/5</p>
+            <p className="text-muted-foreground text-sm">Average Rating</p>
+          </div>
+          <div className="bg-border hidden h-12 w-px md:block"></div>
+          <div>
+            <p className="text-3xl font-bold">50K+</p>
+            <p className="text-muted-foreground text-sm">Companies</p>
+          </div>
+        </div>
+
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {testimonials.map((testimonial, index) => (
             <Card
@@ -100,25 +117,6 @@ export default function TestimonialsBlock() {
               </CardContent>
             </Card>
           ))}
-        </div>
-
-        <div className="mt-12 text-center">
-          <div className="border-border/50 bg-card inline-flex items-center gap-8 rounded-2xl border px-8 py-4">
-            <div>
-              <p className="text-3xl font-bold">1,679,700+</p>
-              <p className="text-muted-foreground text-sm">Active Users</p>
-            </div>
-            <div className="bg-border h-12 w-px"></div>
-            <div>
-              <p className="text-3xl font-bold">4.9/5</p>
-              <p className="text-muted-foreground text-sm">Average Rating</p>
-            </div>
-            <div className="bg-border h-12 w-px"></div>
-            <div>
-              <p className="text-3xl font-bold">50K+</p>
-              <p className="text-muted-foreground text-sm">Companies</p>
-            </div>
-          </div>
         </div>
       </div>
     </section>
