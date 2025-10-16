@@ -111,7 +111,7 @@ export default function InteractiveProductPreview01() {
                 </span>
               </div>
 
-              <div className="mb-4 flex items-center justify-center gap-3">
+              <div className="mb-6 flex items-center justify-center gap-3">
                 <span className="text-sm font-medium">Quantity:</span>
                 <div className="flex items-center gap-2">
                   <Button
@@ -135,16 +135,16 @@ export default function InteractiveProductPreview01() {
                   </Button>
                 </div>
               </div>
-            </div>
 
-            <div className="flex items-center gap-2">
-              <Button className="flex-1 gap-2" size="lg">
-                <ShoppingCart className="h-4 w-4" />
-                Add to Cart
-              </Button>
-              <Button variant="outline" size="lg" className="shrink-0 gap-2">
-                <Eye className="h-4 w-4" />
-              </Button>
+              <div className="flex items-center gap-2">
+                <Button className="flex-1 gap-2" size="lg">
+                  <ShoppingCart className="h-4 w-4" />
+                  Add to Cart
+                </Button>
+                <Button variant="outline" size="lg" className="shrink-0 gap-2">
+                  <Eye className="h-4 w-4" />
+                </Button>
+              </div>
             </div>
           </div>
 
@@ -165,12 +165,6 @@ export default function InteractiveProductPreview01() {
               <div className="bg-primary h-4 w-4 animate-pulse rounded-full"></div>
               <div className="absolute -top-12 left-1/2 hidden -translate-x-1/2 rounded-lg bg-white px-3 py-1.5 text-sm font-medium whitespace-nowrap shadow-lg group-hover:block dark:bg-gray-900">
                 Table Lamp
-              </div>
-            </div>
-            <div className="group relative grid h-12 w-12 translate-x-[32rem] -translate-y-[16rem] cursor-pointer place-content-center rounded-full border-2 border-white bg-white shadow-xl transition-all hover:scale-110">
-              <div className="bg-primary h-4 w-4 animate-pulse rounded-full"></div>
-              <div className="absolute -top-12 left-1/2 hidden -translate-x-1/2 rounded-lg bg-white px-3 py-1.5 text-sm font-medium whitespace-nowrap shadow-lg group-hover:block dark:bg-gray-900">
-                Side Chair
               </div>
             </div>
           </div>
