@@ -47,18 +47,18 @@ export default function ContactSections04() {
         </div>
       </div>
       <div className="container mx-auto -mt-32 px-4 pb-16">
-        <Card className="overflow-hidden rounded-2xl py-12 shadow-2xl">
+        <Card className="overflow-hidden rounded-2xl bg-gradient-to-br from-gray-900 to-black py-12 shadow-2xl">
           <div className="grid grid-cols-1 justify-items-center gap-x-8 gap-y-12 px-4 sm:grid-cols-2 lg:grid-cols-4">
             {OPTIONS.map(({ icon: Icon, title, description }, key) => (
               <div
                 key={key}
                 className="group text-center transition-transform hover:scale-105"
               >
-                <div className="bg-primary mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-xl shadow-lg transition-all group-hover:shadow-xl">
-                  <Icon className="text-primary-foreground h-8 w-8" />
+                <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-xl bg-white/10 shadow-lg transition-all group-hover:bg-white/20 group-hover:shadow-xl">
+                  <Icon className="h-8 w-8 text-white" />
                 </div>
-                <p className="mb-2 text-xl font-bold">{title}</p>
-                <p className="text-muted-foreground text-base">{description}</p>
+                <p className="mb-2 text-xl font-bold text-white">{title}</p>
+                <p className="text-base text-gray-300">{description}</p>
               </div>
             ))}
           </div>
