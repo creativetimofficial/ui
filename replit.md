@@ -114,3 +114,9 @@ Preferred communication style: Simple, everyday language.
 - **Regular Font Weight**: Changed Home, About Us, Blog, and Service links from font-semibold to regular (default) weight
 - **Visual Impact**: Lighter, cleaner appearance for footer navigation
 - **Maintained**: Copyright text and Sign in button remain unchanged
+
+### Footers 04 Font Weight Update
+- **Regular Font Weight**: Changed About Us, Careers, Press, Blog, Pricing links from font-medium to regular (default) weight
+- **Copyright Text**: Changed "All rights reserved. Copyright..." from font-medium to regular weight
+- **Visual Impact**: Lighter, cleaner appearance for footer navigation and copyright text
+- **Maintained**: "Creative Tim" branding and social media icons remain unchanged
