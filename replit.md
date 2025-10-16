@@ -186,3 +186,8 @@ Preferred communication style: Simple, everyday language.
 - **Image URL**: Abstract black 3D shapes/spheres design for modern aesthetic
 - **Maintained Layout**: Kept same size (h-full min-h-[400px]) and rounded-2xl styling
 - **Object Fit**: Added object-cover for proper image scaling
+
+### Contact Sections 07 Subtitle Addition
+- **Added Subtitle**: Paragraph "We'd love to hear from you." below "Contact us" title
+- **Styling**: text-muted-foreground for subtle appearance
+- **Spacing**: Changed title margin from mb-6 to mb-2, added mb-6 to paragraph for proper spacing
