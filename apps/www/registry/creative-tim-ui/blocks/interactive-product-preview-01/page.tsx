@@ -100,18 +100,17 @@ export default function InteractiveProductPreview01() {
 
               <p className="text-muted-foreground mx-auto mb-6 max-w-xs text-center text-sm leading-relaxed">
                 Add a touch of sophistication to your home with our handcrafted
-                ceramic vase. Each piece is uniquely made, blending seamlessly
-                into both modern and classic decors.
+                ceramic vase.
               </p>
 
-              <div className="bg-muted/50 mb-4 flex items-center justify-center gap-2 rounded-lg py-3">
+              <div className="bg-muted/50 mb-2 flex items-center justify-center gap-2 rounded-lg py-3">
                 <Truck className="h-4 w-4 text-green-600 dark:text-green-400" />
                 <span className="text-sm font-medium">
                   Free shipping on orders over $100
                 </span>
               </div>
 
-              <div className="mb-6 flex items-center justify-center gap-3">
+              <div className="mb-4 flex items-center justify-center gap-3">
                 <span className="text-sm font-medium">Quantity:</span>
                 <div className="flex items-center gap-2">
                   <Button
