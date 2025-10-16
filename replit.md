@@ -239,3 +239,12 @@ Preferred communication style: Simple, everyday language.
   - Group hover effects for smooth interactions
   - Transition-all for fluid animations
   - Better visual hierarchy with spacing
+
+### Transaction History 01 UI Improvements
+- **Icon Centering**: 
+  - Changed from `place-items-center` to `flex items-center justify-center` for perfect icon alignment
+  - Added `shrink-0` to icon card to prevent unwanted shrinking
+  - Icons now properly centered both horizontally and vertically in their rectangles
+- **Subtle Improvements**:
+  - Maintained overall design as requested
+  - No major visual changes, just refined alignment
