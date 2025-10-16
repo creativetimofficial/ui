@@ -9,14 +9,14 @@ export default function ContactSections12() {
   return (
     <section className="relative flex min-h-screen items-center py-20">
       <div
-        className="absolute inset-0 bg-cover bg-center opacity-10"
+        className="absolute inset-0 bg-cover bg-center opacity-20"
         style={{
           backgroundImage:
             "url('https://images.unsplash.com/photo-1497366216548-37526070297c?w=1200&auto=format&fit=crop')",
         }}
       />
       <div className="relative z-10 container mx-auto">
-        <div className="mx-auto max-w-3xl">
+        <div className="mx-auto max-w-2xl">
           <div className="mb-12 text-center">
             <h2 className="mb-4 text-4xl font-bold">Let's Talk</h2>
             <p className="text-muted-foreground text-lg">

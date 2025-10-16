@@ -211,3 +211,10 @@ Preferred communication style: Simple, everyday language.
   - Description text
   - Input placeholder text
   - Contact info (phone and email) text
+
+### Contact Sections 12 Background Visibility Enhancement
+- **Increased Background Opacity**: Changed from opacity-10 to opacity-20 for better visibility
+- **Narrower Card Container**: Reduced max-width from max-w-3xl to max-w-2xl
+- **Visual Impact**: Background image now more visible on left and right sides
+- **Centered Layout**: Card remains centered with form inputs as before
+- **Better Balance**: More breathing room around the card showcases the background image
