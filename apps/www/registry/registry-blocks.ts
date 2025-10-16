@@ -258,7 +258,7 @@ export const blocks: Registry["items"] = [
     name: "simple-product-details-01",
     description: "Simple product details grid",
     type: "registry:block",
-    registryDependencies: ["button", "card"],
+    registryDependencies: ["button", "card", "accordion", "badge"],
     files: [
       {
         path: "blocks/simple-product-details-01/page.tsx",
@@ -267,7 +267,7 @@ export const blocks: Registry["items"] = [
       },
     ],
     meta: {
-      iframeHeight: "1000px",
+      iframeHeight: "1800px",
       container:
         "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
       mobile: "component",
