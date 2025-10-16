@@ -152,6 +152,19 @@ Preferred communication style: Simple, everyday language.
 - **New Dependencies**: Badge component
 - **Improved Spacing**: Better padding (py-20) and gaps, max-width increased to 6xl
 
+### Grid Ecommerce Enhancement (October 16, 2025)
+- **Enhanced grid-ecommerce-01 Block**: Updated with fashion photography and link-style CTAs
+- **Image Updates**: Replaced all product images with Unsplash fashion/portrait photography
+  - **Card 1**: Black & white portrait with wind-blown hair
+  - **Card 2**: Fashion portrait with long hair
+  - **Card 3**: Artistic black & white portrait
+  - **Large Card**: Fashion product photography
+- **Button Updates**: All CTA buttons changed to variant="link" for cleaner, minimal aesthetic
+- **Link Styling**: White text links with no background, cleaner visual hierarchy
+- **Responsive Grid**: 3-column layout on desktop, 2-column on tablet, single column on mobile
+- **Hover Effects**: Image scale (105%) with gradient overlay on hover
+- **Typography**: Uppercase labels, bold headings, clean link buttons
+
 ### Promotional Cards Enhancement (October 16, 2025)
 - **Enhanced promotional-cards-01 Block**: Complete redesign with beauty/skincare product showcase layout
 - **Design Pattern**: Two-column split layout (product showcase left, hero image right)
