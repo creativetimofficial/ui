@@ -1,0 +1,167 @@
+"use client"
+
+import { useState } from "react"
+import { Heart } from "lucide-react"
+
+import { Badge } from "@/registry/creative-tim-ui/ui/badge"
+import { Button } from "@/registry/creative-tim-ui/ui/button"
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/registry/creative-tim-ui/ui/select"
+
+const FILTERS = [
+  {
+    label: "Categories",
+    options: ["All", "Shirts", "Pants", "Sweaters", "Jackets"],
+  },
+  { label: "Size", options: ["XS", "S", "M", "L", "XL"] },
+  { label: "Material", options: ["Cotton", "Cashmere", "Wool", "Silk"] },
+  { label: "Color", options: ["Black", "Blue", "Gray", "Brown"] },
+  { label: "Pattern", options: ["Solid", "Striped", "Cable-knit"] },
+]
+
+const PRODUCTS = [
+  {
+    id: 1,
+    image:
+      "https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?w=400&h=400&fit=crop",
+    brand: "Zegna",
+    name: "Cable-knit cashmere cardigan",
+    price: "€3,450",
+    badge: "Exclusive",
+  },
+  {
+    id: 2,
+    image:
+      "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=400&h=400&fit=crop",
+    brand: "Zegna",
+    name: "Cotton and cashmere shirt",
+    price: "€675",
+    badge: null,
+  },
+  {
+    id: 3,
+    image:
+      "https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?w=400&h=400&fit=crop",
+    brand: "Zegna",
+    name: "Wool straight pants",
+    price: "€1,450",
+    badge: "Exclusive",
+  },
+  {
+    id: 4,
+    image:
+      "https://images.unsplash.com/photo-1620799140188-3b2a02fd9a77?w=400&h=400&fit=crop",
+    brand: "Zegna",
+    name: "Cashmere sweater",
+    price: "€1,950",
+    badge: "New Arrival",
+  },
+]
+
+export default function ProductListingFilters01() {
+  const [favorites, setFavorites] = useState<number[]>([])
+  const [activeFilter, setActiveFilter] = useState<string | null>(null)
+
+  const toggleFavorite = (productId: number) => {
+    setFavorites((prev) =>
+      prev.includes(productId)
+        ? prev.filter((id) => id !== productId)
+        : [...prev, productId]
+    )
+  }
+
+  return (
+    <section className="py-16">
+      <div className="container mx-auto">
+        <div className="mb-8 flex flex-wrap items-center justify-between gap-4">
+          <div className="flex flex-wrap gap-2">
+            {FILTERS.map((filter) => (
+              <Button
+                key={filter.label}
+                variant={activeFilter === filter.label ? "default" : "outline"}
+                className="gap-1.5"
+                onClick={() =>
+                  setActiveFilter(
+                    activeFilter === filter.label ? null : filter.label
+                  )
+                }
+              >
+                {filter.label}
+                <span className="text-xs">▼</span>
+              </Button>
+            ))}
+          </div>
+          <div className="flex items-center gap-4">
+            <span className="text-muted-foreground text-sm">462 Products</span>
+            <Select defaultValue="featured">
+              <SelectTrigger className="w-[140px]">
+                <SelectValue placeholder="Sort by" />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="featured">Featured</SelectItem>
+                <SelectItem value="price-low">Price: Low to High</SelectItem>
+                <SelectItem value="price-high">Price: High to Low</SelectItem>
+                <SelectItem value="newest">Newest</SelectItem>
+              </SelectContent>
+            </Select>
+          </div>
+        </div>
+
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          {PRODUCTS.map((product) => (
+            <div
+              key={product.id}
+              className="group bg-card relative overflow-hidden rounded-lg border transition-all hover:shadow-lg"
+            >
+              {product.badge && (
+                <Badge
+                  variant="secondary"
+                  className="absolute top-3 left-3 z-10 bg-white dark:bg-gray-900"
+                >
+                  {product.badge}
+                </Badge>
+              )}
+              <button
+                onClick={() => toggleFavorite(product.id)}
+                className="absolute top-3 right-3 z-10 flex h-8 w-8 items-center justify-center rounded-full bg-white/90 backdrop-blur-sm transition-colors hover:bg-white dark:bg-gray-900/90 dark:hover:bg-gray-900"
+              >
+                <Heart
+                  className={`h-4 w-4 transition-colors ${
+                    favorites.includes(product.id)
+                      ? "fill-red-500 text-red-500"
+                      : "text-gray-600 dark:text-gray-400"
+                  }`}
+                />
+              </button>
+
+              <div className="bg-muted/30 aspect-square overflow-hidden">
+                <img
+                  src={product.image}
+                  alt={product.name}
+                  className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                />
+              </div>
+
+              <div className="border-t p-4">
+                <div className="mb-2 flex items-start justify-between gap-2">
+                  <div className="flex-1">
+                    <p className="text-sm font-semibold">{product.brand}</p>
+                    <p className="text-muted-foreground mt-1 text-sm leading-tight">
+                      {product.name}
+                    </p>
+                  </div>
+                </div>
+                <p className="mt-2 font-semibold">{product.price}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}
