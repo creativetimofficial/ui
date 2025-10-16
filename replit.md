@@ -127,3 +127,8 @@ Preferred communication style: Simple, everyday language.
 - **Card Structure**: Icon badge at top, regular weight question title, relaxed leading for descriptions
 - **Grid Layout**: 3-column on desktop, 2-column on tablet, single column on mobile
 - **New Dependencies**: Multiple lucide-react icons (ShoppingCart, CreditCard, Truck, Store, Package, RefreshCw)
+
+### FAQ Left Title Enhancement
+- **Enhanced faq-left-title-01 Block**: Increased padding on question cards for better spacing
+- **Padding Update**: Changed from p-2 to p-6 on both CardHeader and CardContent elements
+- **Visual Impact**: More spacious, cleaner card layout with better content breathing room
