@@ -241,10 +241,16 @@ Preferred communication style: Simple, everyday language.
   - Better visual hierarchy with spacing
 
 ### Transaction History 01 UI Improvements
-- **Icon Centering**: 
+- **Icon Display Fix**: 
+  - Replaced Card component with regular div to avoid flex-col conflict
   - Changed from `place-items-center` to `flex items-center justify-center` for perfect icon alignment
-  - Added `shrink-0` to icon card to prevent unwanted shrinking
-  - Icons now properly centered both horizontally and vertically in their rectangles
+  - Added `shrink-0` to icon container to prevent unwanted shrinking
+  - Icons (ChevronUp, ChevronDown, Clock) now properly centered and visible
+  - Maintained Card visual styling (bg-card, text-card-foreground, rounded-xl, border, shadow-sm)
+- **Icon Color Coding**:
+  - ChevronUp (increasing) - Green (text-green-600)
+  - ChevronDown (decreasing) - Red (text-red-600)
+  - Clock (pending) - Black (text-black with dark:text-white for dark mode)
 - **Subtle Improvements**:
   - Maintained overall design as requested
-  - No major visual changes, just refined alignment
+  - Visual clarity improved with color-coded status icons

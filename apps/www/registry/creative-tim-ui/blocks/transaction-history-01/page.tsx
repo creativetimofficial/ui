@@ -69,6 +69,12 @@ const COLORS = {
   pending: "text-muted-foreground",
 }
 
+const ICON_COLORS = {
+  increasing: "text-green-600",
+  decreasing: "text-red-600",
+  pending: "text-black dark:text-white",
+}
+
 const PREFIX = {
   increasing: "+",
   decreasing: "-",
@@ -126,9 +132,9 @@ export default function TransactionHistory01() {
                       key={name}
                       className="flex items-center gap-4 rounded-lg border p-4"
                     >
-                      <Card className="hidden h-12 w-12 shrink-0 items-center justify-center border sm:flex">
-                        <Icon className="h-5 w-5" />
-                      </Card>
+                      <div className="bg-card text-card-foreground hidden h-12 w-12 shrink-0 items-center justify-center rounded-xl border shadow-sm sm:flex">
+                        <Icon className={cn("h-5 w-5", ICON_COLORS[status])} />
+                      </div>
                       <div className="mx-0 space-y-0.5 sm:mx-2">
                         <p className="font-semibold">{name}</p>
                         <p className="text-muted-foreground text-sm">{date}</p>
