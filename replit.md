@@ -217,6 +217,7 @@ Preferred communication style: Simple, everyday language.
   - Positioned absolutely for clean look
 - **Enhanced Card Layout**:
   - Single column layout for better mobile experience
+  - Content on same row: card number and card type side by side
   - Larger cards (p-6) with better spacing
   - Card logos in gray-50 rounded containers (h-12 w-16)
   - Visible card brand logos (Visa/Mastercard)
@@ -226,7 +227,7 @@ Preferred communication style: Simple, everyday language.
   - Card type labels with capitalize and muted color
 - **Interactive Elements**:
   - Hover border color change (border-primary/50)
-  - Action buttons appear on hover (opacity-0 to opacity-100)
+  - Action buttons visible by default (edit and delete)
   - Edit and delete buttons with tooltips
   - Shadow lift on hover (hover:shadow-md)
 - **Better Button Styling**:
