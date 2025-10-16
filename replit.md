@@ -110,3 +110,7 @@ Preferred communication style: Simple, everyday language.
 - **clsx + tailwind-merge**: Conditional className composition.
 - **date-fns**: Date manipulation.
 - **class-variance-authority**: Variant-based component APIs.
+### Footers 03 Font Weight Update
+- **Regular Font Weight**: Changed Home, About Us, Blog, and Service links from font-semibold to regular (default) weight
+- **Visual Impact**: Lighter, cleaner appearance for footer navigation
+- **Maintained**: Copyright text and Sign in button remain unchanged
