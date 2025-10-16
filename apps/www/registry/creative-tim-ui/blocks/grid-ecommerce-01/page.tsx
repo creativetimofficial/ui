@@ -5,17 +5,20 @@ import { Card } from "@/registry/creative-tim-ui/ui/card"
 
 const CARDS = [
   {
-    image: "https://v3.material-tailwind.com/3d-obj-1.jpg",
+    image:
+      "https://images.unsplash.com/photo-1574015974293-817f0ebebb74?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=973",
     title: "New",
     subtitle: "Urban Chick Collection",
   },
   {
-    image: "https://v3.material-tailwind.com/3d-obj-2.jpg",
+    image:
+      "https://images.unsplash.com/photo-1661327930345-9c6714b603b3?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=987",
     title: "Shop Sales",
     subtitle: "Urban Chick Collection",
   },
   {
-    image: "https://v3.material-tailwind.com/3d-obj-3.jpg",
+    image:
+      "https://images.unsplash.com/photo-1535220459927-c8428851fd45?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=987",
     title: "50% off",
     subtitle: "Urban Chick Collection",
   },
@@ -45,10 +48,7 @@ export default function GridEcommerce01() {
                   {title}
                 </p>
                 <h3 className="mb-4 text-2xl font-bold">{subtitle}</h3>
-                <Button
-                  variant="outline"
-                  className="border-white bg-white/10 text-white backdrop-blur-sm hover:bg-white hover:text-black"
-                >
+                <Button variant="link" className="p-0 text-white">
                   Read More
                 </Button>
               </div>
@@ -59,7 +59,7 @@ export default function GridEcommerce01() {
           <div className="relative flex h-full flex-col md:flex-row">
             <div className="relative h-full w-full md:w-1/2">
               <img
-                src="https://v3.material-tailwind.com/3d-obj-4.jpg"
+                src="https://images.unsplash.com/photo-1559745482-57bfa9ca5a8a?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1481"
                 alt="Formal Elegance"
                 className="h-full w-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
               />
@@ -73,10 +73,7 @@ export default function GridEcommerce01() {
                 <h3 className="mb-6 text-3xl font-bold md:text-4xl">
                   Formal Elegance Series
                 </h3>
-                <Button
-                  size="lg"
-                  className="bg-white text-black hover:bg-white/90"
-                >
+                <Button variant="link" size="lg" className="p-0 text-white">
                   Discover
                 </Button>
               </div>
