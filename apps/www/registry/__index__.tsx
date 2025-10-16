@@ -426,7 +426,7 @@ export const Index: Record<string, any> = {
     name: "checkout-01",
     description: "Checkout form with order summary",
     type: "registry:block",
-    registryDependencies: ["button","checkbox","input","label"],
+    registryDependencies: ["button","checkbox","input","label","badge","separator"],
     files: [{
       path: "registry/creative-tim-ui/blocks/checkout-01/page.tsx",
       type: "registry:page",
@@ -438,7 +438,7 @@ export const Index: Record<string, any> = {
       return { default: mod.default || mod[exportName] }
     }),
     categories: ["ecommerce"],
-    meta: {"iframeHeight":"900px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component"},
+    meta: {"iframeHeight":"1200px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component"},
   },
   "complex-product-description-01": {
     name: "complex-product-description-01",
