@@ -28,19 +28,24 @@ const YEAR = new Date().getFullYear()
 
 export default function Footers11() {
   return (
-    <footer className="pt-16 pb-8">
+    <footer className="pt-20 pb-8">
       <div className="container mx-auto">
-        <div className="mb-6 grid grid-cols-1 justify-between gap-4 sm:grid-cols-2">
-          <h6 className="mb-4 text-xl font-semibold">Creative Tim</h6>
-          <div className="grid grid-cols-3 justify-between gap-x-6 gap-y-4">
+        <div className="mb-12 grid grid-cols-1 items-start justify-between gap-8 md:grid-cols-2 lg:gap-12">
+          <div>
+            <h6 className="text-2xl font-semibold">Creative Tim</h6>
+            <p className="text-muted-foreground mt-3 max-w-md">
+              The reward for getting on the stage is fame.
+            </p>
+          </div>
+          <div className="grid grid-cols-3 gap-x-8 gap-y-6 md:ml-auto">
             {LINKS.map(({ title, items }) => (
-              <ul key={title}>
-                <p className="mb-2 font-semibold">{title}</p>
+              <ul key={title} className="space-y-3">
+                <p className="mb-3 font-semibold">{title}</p>
                 {items.map(({ title, href }) => (
-                  <li key={title} className="mb-1">
+                  <li key={title}>
                     <a
                       href={href}
-                      className="text-foreground hover:text-primary"
+                      className="text-muted-foreground hover:text-foreground transition-colors"
                     >
                       {title}
                     </a>
@@ -50,16 +55,11 @@ export default function Footers11() {
             ))}
           </div>
         </div>
-        <div className="border-surface flex flex-row flex-wrap items-end justify-between gap-x-12 gap-y-3 border-t pt-6">
-          <div className="text-left">
-            <p className="mb-2 text-lg font-semibold">
-              The reward for getting on the stage is fame.
-            </p>
-            <p className="text-foreground">
-              The price of fame is you can&apos;t get off the stage.
-            </p>
-          </div>
-          <p className="text-foreground">
+        <div className="border-border flex flex-col items-start justify-between gap-6 border-t pt-8 md:flex-row md:items-center">
+          <p className="text-muted-foreground max-w-2xl text-sm">
+            The price of fame is you can&apos;t get off the stage.
+          </p>
+          <p className="text-muted-foreground text-sm whitespace-nowrap">
             &copy; {YEAR} Creative Tim. All Rights Reserved.
           </p>
         </div>
