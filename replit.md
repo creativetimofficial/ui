@@ -151,3 +151,25 @@ Preferred communication style: Simple, everyday language.
   - **Hover Effects**: Image scales 105% with gradient overlay transition
 - **New Dependencies**: Badge component
 - **Improved Spacing**: Better padding (py-20) and gaps, max-width increased to 6xl
+
+### Simple Product Details Enhancement (October 16, 2025)
+- **Enhanced simple-product-details-01 Block**: Complete redesign with size selector and structured information sections
+- **Product Image**: Updated with Unsplash fashion image with rounded-xl border and muted background
+- **Design Improvements**:
+  - **Size Selector**: Interactive button group with 6 sizes (XS, S, M, L, XL, XXL) with active state
+  - **Enhanced Color Selector**: Larger circular swatches (h-8 w-8) with border, hover scale effect
+  - **Better Typography**: Larger 3xl heading and 3xl price display for prominence
+  - **Interactive Wishlist**: Heart icon with toggle state and fill animation
+  - **More Info Section**: Accordion with Description, Delivery & Returns, and Contact Us
+  - **Description Content**: Detailed product information about features and benefits
+  - **Delivery Information**: Shipping options, timelines, and return policy details
+  - **Contact Details**: Email, phone, and business hours information
+  - **Similar Items Section**: Grid layout with product cards
+  - **Similar Product Cards**: Hover effects with image scale (105%), product name, price, and size availability
+  - **Product Images**: Unsplash fashion images (Black Bustier Top, Black High-Waist Jeans)
+  - **Size Availability**: Text showing available sizes for each similar product
+- **Layout Structure**: Main product section at top, two-column layout below (More Info left, Similar Items right)
+- **New Dependencies**: Accordion, Badge, and Card components
+- **Improved Spacing**: Better padding and gaps throughout, leading-relaxed text
+- **Enhanced Interactivity**: Stateful size selection, favorite toggle, accordion expand/collapse
+- **Responsive Design**: Optimized grid layout with sm:grid-cols-2 for similar items

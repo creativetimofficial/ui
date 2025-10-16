@@ -264,7 +264,7 @@ export const Index: Record<string, any> = {
     name: "simple-product-details-01",
     description: "Simple product details grid",
     type: "registry:block",
-    registryDependencies: ["button","card"],
+    registryDependencies: ["button","card","accordion","badge"],
     files: [{
       path: "registry/creative-tim-ui/blocks/simple-product-details-01/page.tsx",
       type: "registry:page",
@@ -276,7 +276,7 @@ export const Index: Record<string, any> = {
       return { default: mod.default || mod[exportName] }
     }),
     categories: ["ecommerce"],
-    meta: {"iframeHeight":"1000px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component"},
+    meta: {"iframeHeight":"1800px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component"},
   },
   "grid-ecommerce-01": {
     name: "grid-ecommerce-01",
