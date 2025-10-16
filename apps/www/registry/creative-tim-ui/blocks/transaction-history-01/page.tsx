@@ -126,7 +126,7 @@ export default function TransactionHistory01() {
                       key={name}
                       className="flex items-center gap-4 rounded-lg border p-4"
                     >
-                      <Card className="hidden h-12 w-12 place-items-center border sm:grid">
+                      <Card className="hidden h-12 w-12 shrink-0 items-center justify-center border sm:flex">
                         <Icon className="h-5 w-5" />
                       </Card>
                       <div className="mx-0 space-y-0.5 sm:mx-2">
