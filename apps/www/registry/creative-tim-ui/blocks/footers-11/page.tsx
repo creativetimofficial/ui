@@ -40,7 +40,7 @@ export default function Footers11() {
                   <li key={title} className="mb-1">
                     <a
                       href={href}
-                      className="text-foreground hover:text-primary font-medium"
+                      className="text-foreground hover:text-primary"
                     >
                       {title}
                     </a>
