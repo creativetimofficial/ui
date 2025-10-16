@@ -418,7 +418,14 @@ export const blocks: Registry["items"] = [
     name: "shopping-cart-01",
     description: "Shopping cart with summary",
     type: "registry:block",
-    registryDependencies: ["button", "card", "input", "select"],
+    registryDependencies: [
+      "button",
+      "card",
+      "input",
+      "select",
+      "badge",
+      "separator",
+    ],
     files: [
       {
         path: "blocks/shopping-cart-01/page.tsx",
@@ -427,7 +434,7 @@ export const blocks: Registry["items"] = [
       },
     ],
     meta: {
-      iframeHeight: "1100px",
+      iframeHeight: "1200px",
       container:
         "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
       mobile: "component",

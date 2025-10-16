@@ -408,7 +408,7 @@ export const Index: Record<string, any> = {
     name: "shopping-cart-01",
     description: "Shopping cart with summary",
     type: "registry:block",
-    registryDependencies: ["button","card","input","select"],
+    registryDependencies: ["button","card","input","select","badge","separator"],
     files: [{
       path: "registry/creative-tim-ui/blocks/shopping-cart-01/page.tsx",
       type: "registry:page",
@@ -420,7 +420,7 @@ export const Index: Record<string, any> = {
       return { default: mod.default || mod[exportName] }
     }),
     categories: ["ecommerce"],
-    meta: {"iframeHeight":"1100px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component"},
+    meta: {"iframeHeight":"1200px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component"},
   },
   "checkout-01": {
     name: "checkout-01",

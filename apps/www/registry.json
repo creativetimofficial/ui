@@ -423,7 +423,14 @@
       "name": "shopping-cart-01",
       "type": "registry:block",
       "description": "Shopping cart with summary",
-      "registryDependencies": ["button", "card", "input", "select"],
+      "registryDependencies": [
+        "button",
+        "card",
+        "input",
+        "select",
+        "badge",
+        "separator"
+      ],
       "files": [
         {
           "path": "registry/creative-tim-ui/blocks/shopping-cart-01/page.tsx",
@@ -432,7 +439,7 @@
         }
       ],
       "meta": {
-        "iframeHeight": "1100px",
+        "iframeHeight": "1200px",
         "container": "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
         "mobile": "component"
       },
