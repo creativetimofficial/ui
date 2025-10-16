@@ -124,9 +124,9 @@ Preferred communication style: Simple, everyday language.
   - **Price Display**: Large 3xl price with strikethrough original price showing discount
   - **Free Shipping Banner**: Highlighted banner with Truck icon and message
   - **Quantity Selector**: Plus/Minus buttons with quantity counter
-  - **Enhanced Buttons**: Added ShoppingCart and Eye icons to CTAs
+  - **CTAs Inside Card**: Moved Add to Cart and Eye buttons inside product card for better UX
   - **Interactive Hotspots**: Improved markers with white borders, pulse animation, and hover tooltips
-  - **Hotspot Labels**: Named labels (Ceramic Vase, Wall Art, Table Lamp, Side Chair) appear on hover
+  - **Hotspot Labels**: Named labels (Ceramic Vase, Wall Art, Table Lamp) appear on hover
   - **Better Gradient**: Enhanced room overlay with gradient from black/30 to transparent
   - **Shadow Effects**: Added shadow-2xl to card and image for depth
 - **New Dependencies**: Added Badge component to registry
