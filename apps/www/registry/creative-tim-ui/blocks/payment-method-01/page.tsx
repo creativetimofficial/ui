@@ -43,22 +43,18 @@ function PaymentMethod({ type, number, isDefault }: PaymentMethodProps) {
         />
       </div>
 
-      <div className="flex flex-1 flex-col gap-1">
+      <div className="flex flex-1 items-center gap-3">
         <p className="text-base font-bold tracking-wider">
           **** **** **** {number}
         </p>
-        <p className="text-muted-foreground text-xs capitalize">{type} Card</p>
+        <p className="text-muted-foreground text-sm capitalize">{type} Card</p>
       </div>
 
       <div className="flex items-center gap-1">
         <TooltipProvider>
           <Tooltip>
             <TooltipTrigger asChild>
-              <Button
-                size="icon"
-                variant="ghost"
-                className="h-9 w-9 opacity-0 transition-opacity group-hover:opacity-100"
-              >
+              <Button size="icon" variant="ghost" className="h-9 w-9">
                 <Pencil className="h-4 w-4" />
               </Button>
             </TooltipTrigger>
@@ -74,7 +70,7 @@ function PaymentMethod({ type, number, isDefault }: PaymentMethodProps) {
               <Button
                 size="icon"
                 variant="ghost"
-                className="text-destructive hover:bg-destructive/10 hover:text-destructive h-9 w-9 opacity-0 transition-opacity group-hover:opacity-100"
+                className="text-destructive hover:bg-destructive/10 hover:text-destructive h-9 w-9"
               >
                 <Trash2 className="h-4 w-4" />
               </Button>
