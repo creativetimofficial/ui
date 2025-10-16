@@ -127,3 +127,10 @@ Preferred communication style: Simple, everyday language.
 - **Already Regular**: "The latest news..." text and "All rights reserved..." text were already regular weight
 - **Visual Impact**: Lighter, cleaner appearance for footer navigation links
 - **Maintained**: Section headings remain font-semibold for hierarchy
+
+### Footers 06 Font Weight Update
+- **Regular Font Weight**: Changed all link texts from font-medium to regular (default) weight
+- **Updated Sections**: Company, Pages, Legal, and Resources link items
+- **Already Regular**: Copyright text "© 2025 Creative Tim. All Rights Reserved." was already regular weight
+- **Visual Impact**: Lighter, cleaner appearance for footer navigation links
+- **Maintained**: Section headings remain font-semibold, brand name "Creative Tim" remains font-semibold
