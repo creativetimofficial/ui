@@ -30,8 +30,14 @@ const OPTIONS = [
 export default function ContactSections04() {
   return (
     <section>
-      <div className="grid h-full min-h-[70vh] w-full place-items-center bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 bg-cover bg-center text-center">
-        <div className="-mt-8">
+      <div className="relative grid h-full min-h-[70vh] w-full place-items-center bg-cover bg-center text-center">
+        <img
+          src="https://images.unsplash.com/photo-1635700193352-80564c35434c?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2532"
+          alt="Background"
+          className="absolute inset-0 h-full w-full object-cover"
+        />
+        <div className="absolute inset-0 bg-black/50" />
+        <div className="relative -mt-8">
           <h2 className="mb-6 text-5xl font-bold text-white">
             Got a Question?
           </h2>
