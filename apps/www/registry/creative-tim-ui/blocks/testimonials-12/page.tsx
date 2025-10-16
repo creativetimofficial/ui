@@ -20,7 +20,7 @@ export default function TestimonialsBlock() {
           </p>
         </div>
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
-          <Card className="bg-secondary/40 grid">
+          <Card className="grid bg-white">
             <CardContent className="p-6">
               <blockquote className="text-center text-2xl font-medium md:text-start">
                 &quot;The team went above and beyond to ensure my issue was
@@ -41,7 +41,7 @@ export default function TestimonialsBlock() {
               />
             </CardFooter>
           </Card>
-          <Card className="bg-secondary/40 grid">
+          <Card className="grid bg-white">
             <CardContent className="p-6">
               <blockquote className="text-center text-2xl font-medium md:text-start">
                 &quot;It have broadened my horizons and helped me advance my
@@ -62,7 +62,7 @@ export default function TestimonialsBlock() {
               />
             </CardFooter>
           </Card>
-          <Card className="bg-secondary/40 col-span-full grid">
+          <Card className="col-span-full grid bg-white">
             <CardContent className="p-6">
               <blockquote className="text-center text-2xl font-medium">
                 &quot;Its intuitive design and powerful features make it
