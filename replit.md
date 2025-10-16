@@ -218,3 +218,9 @@ Preferred communication style: Simple, everyday language.
 - **Visual Impact**: Background image now more visible on left and right sides
 - **Centered Layout**: Card remains centered with form inputs as before
 - **Better Balance**: More breathing room around the card showcases the background image
+
+### Contact Sections 13 Same Row Layout
+- **Four-Column Layout**: Changed grid from lg:grid-cols-3 to lg:grid-cols-4
+- **Same Row Display**: All contact info items (Visit us, Call us, Email us, Working hours) now display in one row on desktop
+- **Responsive Design**: Added sm:grid-cols-2 for better tablet/mobile layout
+- **Balanced Appearance**: Equal width cards create a clean, professional look

@@ -42,7 +42,7 @@ export default function ContactSections13() {
             Reach out to us and we'll respond as soon as we can.
           </p>
         </div>
-        <div className="mb-16 grid gap-8 lg:grid-cols-3">
+        <div className="mb-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {CONTACT_INFO.map(({ icon: Icon, title, info }, key) => (
             <Card key={key} className="p-6 text-center">
               <div className="bg-primary/10 mx-auto mb-4 grid h-12 w-12 place-items-center rounded-full">
