@@ -1,5 +1,6 @@
 // lib/api.ts
 import { getAccessToken, setAccessToken, clearAccessToken } from "@/lib/session";
+import { hasRefreshMarker } from "./cookies";
 
 const API_BASE = process.env.NEXT_PUBLIC_API_URL || "";
 const joinUrl = (p: string) => `${API_BASE.replace(/\/+$/, "")}/${p.replace(/^\/+/, "")}`;
@@ -46,6 +47,7 @@ function isTokenFresh(token: string, leewaySec = 60): boolean {
 let refreshInFlight: Promise<string | null> | null = null;
 
 async function tryRefresh(): Promise<string | null> {
+  if (!hasRefreshMarker()) return null;
   if (!refreshInFlight) {
     refreshInFlight = (async () => {
       const res = await fetch(joinUrl("/auth/refresh"), {
@@ -101,7 +103,8 @@ export async function api<T>(url: string, init: ApiInit = {}): Promise<T> {
     !init.skipRefresh &&
     !isAuthRoute(absUrl) &&
     at &&
-    !isTokenFresh(at)
+    !isTokenFresh(at) &&
+    hasRefreshMarker()   
   ) {
     const newAT = await tryRefresh();
     if (newAT) {

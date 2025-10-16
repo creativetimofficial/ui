@@ -10,6 +10,7 @@ import {
 } from "@/lib/session";
 import type { AuthUser } from "@/lib/auth/auth.types";
 import { GoogleOAuthProvider } from "@react-oauth/google";
+import { hasRefreshMarker } from "@/lib/auth/cookies";
 
 /** Context shape */
 type Ctx = {
@@ -82,7 +83,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       try {
         const at = getAccessToken();
 
-        // 1) Fast path: if we have a *fresh* token, try /me without refreshing
+        // 1) Fast path: if we have a fresh token, try /me without refreshing
         if (at && isTokenFresh(at)) {
           try {
             const me = await AuthAPI.me(at); // should NOT auto-refresh
@@ -93,13 +94,15 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
           }
         }
 
-        // 2) Fallback: one cookie-based refresh (no body)
-        const newAT = await refreshOnce();
-        if (newAT) {
-          setAccessToken(newAT);
-          const me = await AuthAPI.me(newAT);
-          setUser(me.user);
-          return;
+        // 2) Only attempt refresh if the readable marker says a session likely exists
+        if (hasRefreshMarker()) {
+          const newAT = await refreshOnce();
+          if (newAT) {
+            setAccessToken(newAT);
+            const me = await AuthAPI.me(newAT);
+            setUser(me.user);
+            return;
+          }
         }
 
         // 3) No session
