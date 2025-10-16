@@ -56,27 +56,23 @@ export default function GridEcommerce01() {
           ))}
         </div>
         <Card className="group relative mt-6 h-96 overflow-hidden border-0 p-0 shadow-lg transition-all hover:shadow-xl">
-          <div className="relative flex h-full flex-col md:flex-row">
-            <div className="relative h-full w-full md:w-1/2">
-              <img
-                src="https://images.unsplash.com/photo-1559745482-57bfa9ca5a8a?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1481"
-                alt="Formal Elegance"
-                className="h-full w-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
-              />
-            </div>
-            <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent md:from-black/80 md:via-black/60" />
-            <div className="relative flex w-full items-center justify-center p-8 text-white md:w-1/2 md:p-12">
-              <div className="text-center md:text-left">
-                <p className="mb-3 text-lg font-bold tracking-wider uppercase">
-                  UP TO 70%
-                </p>
-                <h3 className="mb-6 text-3xl font-bold md:text-4xl">
-                  Formal Elegance Series
-                </h3>
-                <Button variant="link" size="lg" className="p-0 text-white">
-                  Discover
-                </Button>
-              </div>
+          <img
+            src="https://images.unsplash.com/photo-1559745482-57bfa9ca5a8a?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1481"
+            alt="Formal Elegance"
+            className="h-full w-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
+          <div className="absolute inset-0 flex items-center justify-center p-8 text-white">
+            <div className="text-center">
+              <p className="mb-3 text-lg font-bold tracking-wider uppercase">
+                UP TO 70%
+              </p>
+              <h3 className="mb-6 text-3xl font-bold md:text-4xl">
+                Formal Elegance Series
+              </h3>
+              <Button variant="link" size="lg" className="p-0 text-white">
+                Discover
+              </Button>
             </div>
           </div>
         </Card>
