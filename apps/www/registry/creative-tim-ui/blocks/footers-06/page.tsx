@@ -86,7 +86,7 @@ export default function Footers06() {
                   <li key={title}>
                     <a
                       href={href}
-                      className="text-foreground hover:text-primary font-medium"
+                      className="text-foreground hover:text-primary"
                     >
                       {title}
                     </a>
