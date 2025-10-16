@@ -112,3 +112,18 @@ Preferred communication style: Simple, everyday language.
 - **clsx + tailwind-merge**: Conditional className composition.
 - **date-fns**: Date manipulation.
 - **class-variance-authority**: Variant-based component APIs.
+## Recent Enhancements (October 16, 2025)
+
+### FAQs Grid Enhancement
+- **Enhanced faqs-grid-01 Block**: Complete UI redesign with contextual icons and improved visual hierarchy
+- **Design Improvements**:
+  - **Contextual Icons**: Each FAQ has a unique icon (ShoppingCart, CreditCard, Truck, Store, Package, RefreshCw)
+  - **Icon Integration**: Icons in circular primary/10 background badges (h-12 w-12)
+  - **Enhanced Cards**: Proper borders with hover effects (shadow-lg and border-primary/50)
+  - **Better Typography**: Larger 4xl heading, xl question titles with regular weight (not bold)
+  - **Improved Content**: Professional, concise answers replacing placeholder text
+  - **Visual Hierarchy**: Icon badge at top, question title, then description
+  - **Hover Effects**: Smooth transition with shadow and border color change
+- **Card Structure**: Icon badge at top, regular weight question title, relaxed leading for descriptions
+- **Grid Layout**: 3-column on desktop, 2-column on tablet, single column on mobile
+- **New Dependencies**: Multiple lucide-react icons (ShoppingCart, CreditCard, Truck, Store, Package, RefreshCw)
