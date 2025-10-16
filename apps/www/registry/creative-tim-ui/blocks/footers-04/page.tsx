@@ -45,10 +45,7 @@ export default function Footers04() {
           <ul className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
             {LINKS.map(({ title, href }, key) => (
               <li key={key}>
-                <a
-                  href={href}
-                  className="text-foreground hover:text-primary font-medium"
-                >
+                <a href={href} className="text-foreground hover:text-primary">
                   {title}
                 </a>
               </li>
@@ -77,7 +74,7 @@ export default function Footers04() {
             </Button>
           </div>
         </div>
-        <p className="text-foreground text-sm font-medium">
+        <p className="text-foreground text-sm">
           All rights reserved. Copyright &copy; {YEAR} Creative Tim
         </p>
       </div>
