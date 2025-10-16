@@ -65,7 +65,7 @@ export default function Footers05() {
                   <li key={title}>
                     <a
                       href={href}
-                      className="text-secondary hover:text-secondary font-medium"
+                      className="text-secondary hover:text-secondary"
                     >
                       {title}
                     </a>
