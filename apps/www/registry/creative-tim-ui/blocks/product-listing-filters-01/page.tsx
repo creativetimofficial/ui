@@ -15,13 +15,30 @@ import {
 
 const FILTERS = [
   {
+    id: "categories",
     label: "Categories",
     options: ["All", "Shirts", "Pants", "Sweaters", "Jackets"],
   },
-  { label: "Size", options: ["XS", "S", "M", "L", "XL"] },
-  { label: "Material", options: ["Cotton", "Cashmere", "Wool", "Silk"] },
-  { label: "Color", options: ["Black", "Blue", "Gray", "Brown"] },
-  { label: "Pattern", options: ["Solid", "Striped", "Cable-knit"] },
+  {
+    id: "size",
+    label: "Size",
+    options: ["All Sizes", "XS", "S", "M", "L", "XL", "XXL"],
+  },
+  {
+    id: "material",
+    label: "Material",
+    options: ["All Materials", "Cotton", "Cashmere", "Wool", "Silk", "Linen"],
+  },
+  {
+    id: "color",
+    label: "Color",
+    options: ["All Colors", "Black", "Blue", "Gray", "Brown", "White", "Navy"],
+  },
+  {
+    id: "pattern",
+    label: "Pattern",
+    options: ["All Patterns", "Solid", "Striped", "Cable-knit", "Printed"],
+  },
 ]
 
 const PRODUCTS = [
@@ -65,7 +82,9 @@ const PRODUCTS = [
 
 export default function ProductListingFilters01() {
   const [favorites, setFavorites] = useState<number[]>([])
-  const [activeFilter, setActiveFilter] = useState<string | null>(null)
+  const [selectedFilters, setSelectedFilters] = useState<
+    Record<string, string>
+  >({})
 
   const toggleFavorite = (productId: number) => {
     setFavorites((prev) =>
@@ -81,25 +100,33 @@ export default function ProductListingFilters01() {
         <div className="mb-8 flex flex-wrap items-center justify-between gap-4">
           <div className="flex flex-wrap gap-2">
             {FILTERS.map((filter) => (
-              <Button
-                key={filter.label}
-                variant={activeFilter === filter.label ? "default" : "outline"}
-                className="gap-1.5"
-                onClick={() =>
-                  setActiveFilter(
-                    activeFilter === filter.label ? null : filter.label
-                  )
+              <Select
+                key={filter.id}
+                value={selectedFilters[filter.id] || filter.options[0]}
+                onValueChange={(value) =>
+                  setSelectedFilters((prev) => ({
+                    ...prev,
+                    [filter.id]: value,
+                  }))
                 }
               >
-                {filter.label}
-                <span className="text-xs">▼</span>
-              </Button>
+                <SelectTrigger className="w-[140px]">
+                  <SelectValue placeholder={filter.label} />
+                </SelectTrigger>
+                <SelectContent>
+                  {filter.options.map((option) => (
+                    <SelectItem key={option} value={option}>
+                      {option}
+                    </SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
             ))}
           </div>
           <div className="flex items-center gap-4">
             <span className="text-muted-foreground text-sm">462 Products</span>
             <Select defaultValue="featured">
-              <SelectTrigger className="w-[140px]">
+              <SelectTrigger className="w-[180px]">
                 <SelectValue placeholder="Sort by" />
               </SelectTrigger>
               <SelectContent>

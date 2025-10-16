@@ -114,7 +114,7 @@ Preferred communication style: Simple, everyday language.
 ### Product Listing Filters Block (October 16, 2025)
 - **New product-listing-filters-01 Block**: Product listing page with advanced filtering
 - **Features**:
-  - **Filter Buttons**: Categories, Size, Material, Color, Pattern filter options
+  - **Filter Dropdowns**: Categories (All, Shirts, Pants, Sweaters, Jackets), Size (All Sizes, XS-XXL), Material (All Materials, Cotton, Cashmere, Wool, Silk, Linen), Color (All Colors, Black, Blue, Gray, Brown, White, Navy), Pattern (All Patterns, Solid, Striped, Cable-knit, Printed)
   - **Product Count**: Display showing "462 Products"
   - **Sort Dropdown**: Featured, Price (Low to High, High to Low), Newest
   - **Product Grid**: Responsive 4-column grid layout
@@ -122,7 +122,7 @@ Preferred communication style: Simple, everyday language.
   - **Badges**: "Exclusive" and "New Arrival" labels
   - **Wishlist Hearts**: Interactive favorite toggle with fill animation
   - **Hover Effects**: Image scale on hover, shadow transitions
-- **Components Used**: Button, Badge, Select from shadcn/ui
+- **Components Used**: Badge, Select from shadcn/ui
 - **Category**: Ecommerce
 - **Registry**: Added to blocks registry with 148 total blocks
 
