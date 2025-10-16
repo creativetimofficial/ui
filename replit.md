@@ -163,8 +163,8 @@ Preferred communication style: Simple, everyday language.
   - **Pagination Dots**: Interactive carousel indicators with active state (elongated pill shape)
   - **Dot Animation**: Active dot expands to w-8, inactive dots are circular w-2.5
 - **Right Column - Hero Image**:
-  - **Full-Cover Image**: Unsplash beauty/spa lifestyle image
-  - **Text Overlay**: Large serif font headline "Revitalizes the Skin!"
+  - **Full-Cover Image**: Unsplash beauty portrait with bokeh lights background
+  - **Text Overlay**: Large serif font headline "Glow up with nature"
   - **Typography**: 5xl/6xl font size with light weight, white color with drop-shadow
   - **Two-Line Layout**: Text broken for visual impact
 - **Interactive Features**:
