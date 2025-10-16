@@ -16,20 +16,20 @@ const LINKS = [
 
 export default function Footers14() {
   return (
-    <footer className="bg-primary pt-16 pb-8">
+    <footer className="bg-primary pt-20 pb-8">
       <div className="container mx-auto">
-        <div className="mb-16 flex flex-wrap items-center justify-between gap-8">
+        <div className="mb-16 grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-8">
           <div>
-            <p className="text-lg font-semibold text-white">Creative Tim</p>
-            <p className="text-secondary mt-2">
+            <h6 className="text-2xl font-semibold text-white">Creative Tim</h6>
+            <p className="text-secondary mt-3 max-w-md">
               The reward for getting on the stage is fame.
             </p>
-            <ul className="mt-10 flex flex-wrap items-center gap-x-6 gap-y-2 md:mt-24">
+            <ul className="mt-12 flex flex-wrap items-center gap-x-8 gap-y-3">
               {LINKS.map(({ title, href }, key) => (
                 <li key={key}>
                   <a
                     href={href}
-                    className="text-secondary font-semibold hover:text-white"
+                    className="text-secondary transition-colors hover:text-white"
                   >
                     {title}
                   </a>
@@ -37,20 +37,20 @@ export default function Footers14() {
               ))}
             </ul>
           </div>
-          <div>
-            <p className="text-secondary font-semibold hover:text-white">
+          <div className="lg:ml-auto">
+            <p className="text-secondary mb-6 text-lg font-semibold">
               Get the App
             </p>
-            <div className="mt-4 grid gap-4">
+            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2">
               <Button
                 variant="secondary"
-                className="bg-secondary-light border-secondary-light w-full gap-4 text-start sm:w-auto"
+                className="bg-secondary-light border-secondary-light h-auto gap-4 py-3 text-start"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   xmlSpace="preserve"
                   viewBox="0 0 16 16"
-                  className="h-9 w-9"
+                  className="h-10 w-10 shrink-0"
                 >
                   <path
                     fill="#2196F3"
@@ -76,13 +76,13 @@ export default function Footers14() {
               </Button>
               <Button
                 variant="secondary"
-                className="bg-secondary-light border-secondary-light w-full gap-4 text-start sm:w-auto"
+                className="bg-secondary-light border-secondary-light h-auto gap-4 py-3 text-start"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   enableBackground="new 0 0 22.185 27"
                   viewBox="0 0 22.185 27"
-                  className="h-9 w-9"
+                  className="h-10 w-10 shrink-0"
                 >
                   <path d="M18.436 14.271c0-2.225 1.216-4.166 3.02-5.194-.942-1.156-2.359-2.192-3.921-2.496-2.13-.415-3.345.276-4.131.553-.786.277-1.83.526-1.83.526s-1.043-.249-1.83-.526C8.959 6.857 7.744 6.165 5.614 6.58s-3.99 2.192-4.746 3.776c-1.458 3.057-.858 6.903.172 9.669 1.029 2.767 3.75 6.633 5.86 6.944 1.501.221 2.43-.816 4.674-1.079 2.244.263 3.173 1.3 4.674 1.079 2.11-.311 4.831-4.177 5.86-6.944.025-.068.051-.138.076-.208C19.987 18.935 18.436 16.784 18.436 14.271zM11.041 6.075c0 0 2.087.277 3.982-1.875s1.356-4.188 1.356-4.188-2.087-.277-3.982 1.875S11.041 6.075 11.041 6.075z" />
                 </svg>
@@ -94,11 +94,11 @@ export default function Footers14() {
             </div>
           </div>
         </div>
-        <div className="border-surface/50 flex flex-row flex-wrap-reverse items-center !justify-center gap-x-12 gap-y-3 border-t pt-8 text-center md:justify-between">
-          <p className="text-secondary">
+        <div className="border-surface/50 flex flex-col items-center justify-between gap-6 border-t pt-8 md:flex-row">
+          <p className="text-secondary order-2 md:order-1">
             &copy; {YEAR} Creative Tim. All Rights Reserved.
           </p>
-          <div className="flex gap-1 sm:justify-center">
+          <div className="order-1 flex gap-1 md:order-2">
             <Button
               asChild
               variant="ghost"
