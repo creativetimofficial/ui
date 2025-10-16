@@ -398,7 +398,7 @@ export const blocks: Registry["items"] = [
     name: "dark-product-overview-01",
     description: "Dark themed product overview",
     type: "registry:block",
-    registryDependencies: ["button", "tabs"],
+    registryDependencies: ["button", "tabs", "badge"],
     files: [
       {
         path: "blocks/dark-product-overview-01/page.tsx",
@@ -407,7 +407,7 @@ export const blocks: Registry["items"] = [
       },
     ],
     meta: {
-      iframeHeight: "1000px",
+      iframeHeight: "1100px",
       container:
         "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
       mobile: "component",
