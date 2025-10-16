@@ -136,14 +136,14 @@ Preferred communication style: Simple, everyday language.
   - **Marketing & Presentation**: Testimonials, blog cards, contact forms for landing pages
   - **Content UI**: Blog layouts, FAQs, footers for content-heavy sites
   - **Ecommerce UI**: Product pages, shopping carts, checkout flows
-- **Features**:
-  - Category title and description
-  - 3-column responsive grid (1 col mobile, 2 col tablet, 3 col desktop)
-  - Placeholder gradient cards with block counts
-  - Clickable cards linking to category pages
-  - Hover effects with shadow transitions
+- **Card Design** (Updated to match reference):
+  - **4-column responsive grid**: 1 col mobile → 2 col tablet → 4 col desktop
+  - **Compact card layout**: Smaller padding and tighter spacing
+  - **16:10 aspect ratio**: Preview area with subtle gradient background
+  - **Clean typography**: Small font sizes for title and block count
+  - **Subtle hover effects**: Shadow on hover for interactive feedback
 - **Components**: Card (shadcn/ui), gradient placeholders (ready for thumbnail images)
-- **Design**: Matches structure from reference image with clean typography and spacing
+- **Design Philosophy**: Matches Creative Tim reference screenshot with 4 cards per row, clean borders, and professional spacing
 
 ### Achievements Section on Home Page (October 16, 2025)
 - **Added "Remarkable Achievements" Section**: New stats section below the header on the home page
