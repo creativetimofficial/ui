@@ -152,6 +152,29 @@ Preferred communication style: Simple, everyday language.
 - **New Dependencies**: Badge component
 - **Improved Spacing**: Better padding (py-20) and gaps, max-width increased to 6xl
 
+### Promotional Cards Enhancement (October 16, 2025)
+- **Enhanced promotional-cards-01 Block**: Complete redesign with beauty/skincare product showcase layout
+- **Design Pattern**: Two-column split layout (product showcase left, hero image right)
+- **Left Column - Product Showcase**:
+  - **Beige Background**: Elegant #e8e3dc cream color for luxury aesthetic
+  - **Product Carousel**: 3 beauty products with smooth transitions (Active toning essence, Hydrating serum, Vitamin C moisturizer)
+  - **Large Product Image**: 320px x 320px centered display with drop-shadow
+  - **Product Info**: Title and price display below image
+  - **Pagination Dots**: Interactive carousel indicators with active state (elongated pill shape)
+  - **Dot Animation**: Active dot expands to w-8, inactive dots are circular w-2.5
+- **Right Column - Hero Image**:
+  - **Full-Cover Image**: Unsplash beauty/spa lifestyle image
+  - **Text Overlay**: Large serif font headline "Revitalizes the Skin!"
+  - **Typography**: 5xl/6xl font size with light weight, white color with drop-shadow
+  - **Two-Line Layout**: Text broken for visual impact
+- **Interactive Features**:
+  - **Carousel Controls**: Click dots to switch between products
+  - **Smooth Transitions**: 500ms duration for product image changes
+  - **Hover Effects**: Pagination dots change color on hover
+- **Layout Structure**: Grid layout with rounded-2xl container and shadow-xl
+- **Responsive Design**: Stacks vertically on mobile (lg:grid-cols-2)
+- **Unsplash Images**: High-quality beauty/skincare product and lifestyle photos
+
 ### Simple Product Details Enhancement (October 16, 2025)
 - **Enhanced simple-product-details-01 Block**: Complete redesign with size selector and structured information sections
 - **Product Image**: Updated with Unsplash portrait image with rounded-xl border and muted background

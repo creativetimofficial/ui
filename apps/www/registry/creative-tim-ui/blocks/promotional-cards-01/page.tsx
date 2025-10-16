@@ -1,62 +1,81 @@
 "use client"
 
-import { Button } from "@/registry/creative-tim-ui/ui/button"
-import {
-  Card,
-  CardContent,
-  CardHeader,
-} from "@/registry/creative-tim-ui/ui/card"
+import { useState } from "react"
+
+const PRODUCTS = [
+  {
+    name: "Active toning essence",
+    price: "$59.00",
+    image:
+      "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?ixlib=rb-4.1.0&auto=format&fit=crop&q=80&w=800",
+  },
+  {
+    name: "Hydrating face serum",
+    price: "$49.00",
+    image:
+      "https://images.unsplash.com/photo-1571781926291-c477ebfd024b?ixlib=rb-4.1.0&auto=format&fit=crop&q=80&w=800",
+  },
+  {
+    name: "Vitamin C moisturizer",
+    price: "$65.00",
+    image:
+      "https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?ixlib=rb-4.1.0&auto=format&fit=crop&q=80&w=800",
+  },
+]
 
 export default function PromotionalCards01() {
+  const [currentProduct, setCurrentProduct] = useState(0)
+
   return (
     <section className="py-16">
       <div className="container mx-auto">
-        <div className="mb-16 text-center">
-          <p className="text-primary font-semibold">Tailored Product Search</p>
-          <h2 className="my-4 text-3xl font-bold">Find What You Need</h2>
-          <p className="text-muted-foreground mx-auto max-w-3xl text-lg [text-wrap:_balance]">
-            Whether you&apos;re looking for specific features, price ranges, or
-            brands, our filters help you quickly narrow down options, so you can
-            find exactly what you need with ease.
-          </p>
-        </div>
-        <div className="space-y-6">
-          <Card className="bg-secondary/10 flex flex-col items-center justify-center p-6 sm:flex-row">
-            <CardHeader className="w-full p-0">
+        <div className="grid grid-cols-1 overflow-hidden rounded-2xl shadow-xl lg:grid-cols-2">
+          {/* Left: Product Showcase */}
+          <div className="flex flex-col items-center justify-center bg-[#e8e3dc] p-16">
+            <div className="mb-8 flex h-80 w-80 items-center justify-center">
               <img
-                src="https://v3.material-tailwind.com/double-mobile-mockup.png"
-                alt="Product mockup"
-                className="max-h-[30rem]"
+                src={PRODUCTS[currentProduct].image}
+                alt={PRODUCTS[currentProduct].name}
+                className="h-full w-full object-contain drop-shadow-2xl transition-all duration-500"
               />
-            </CardHeader>
-            <CardContent className="py-0 pr-0 pl-0 md:pr-16">
-              <p className="text-primary text-lg font-semibold">Up to 70%</p>
-              <h2 className="my-4 text-4xl font-bold">
-                Formal and Elegance Series
+            </div>
+            <h3 className="mb-2 text-center text-lg font-medium text-gray-800">
+              {PRODUCTS[currentProduct].name}
+            </h3>
+            <p className="mb-6 text-center text-xl font-semibold text-gray-900">
+              {PRODUCTS[currentProduct].price}
+            </p>
+            <div className="flex gap-2">
+              {PRODUCTS.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentProduct(index)}
+                  className={`h-2.5 w-2.5 rounded-full transition-all ${
+                    currentProduct === index
+                      ? "w-8 bg-gray-800"
+                      : "bg-gray-400 hover:bg-gray-600"
+                  }`}
+                  aria-label={`View product ${index + 1}`}
+                />
+              ))}
+            </div>
+          </div>
+
+          {/* Right: Hero Image with Text */}
+          <div className="relative flex min-h-[500px] items-center justify-center lg:min-h-[600px]">
+            <img
+              src="https://images.unsplash.com/photo-1526758097130-bab247274f58?ixlib=rb-4.1.0&auto=format&fit=crop&q=80&w=1200"
+              alt="Beauty model"
+              className="absolute inset-0 h-full w-full object-cover"
+            />
+            <div className="relative z-10 px-8 text-center lg:px-16">
+              <h2 className="font-serif text-5xl leading-tight font-light text-white drop-shadow-lg lg:text-6xl">
+                Revitalizes the
+                <br />
+                Skin!
               </h2>
-              <p className="text-muted-foreground mb-6 text-lg font-medium [text-wrap:_balance]">
-                From sleek denim to cozy jackets, find your perfect city look
-              </p>
-              <Button size="lg">Shop Now</Button>
-            </CardContent>
-          </Card>
-          <Card className="flex flex-col items-center p-6 sm:flex-row">
-            <CardContent className="order-2 py-0 pr-0 pl-0 sm:order-1 md:pl-16">
-              <p className="text-primary text-lg font-semibold">Up to 50%</p>
-              <h2 className="my-4 text-4xl font-bold">Urban New Collection</h2>
-              <p className="text-muted-foreground mb-6 text-lg font-medium [text-wrap:_balance]">
-                Functional, fashionable, and now at up to 50% off!
-              </p>
-              <Button size="lg">Shop Now</Button>
-            </CardContent>
-            <CardHeader className="order-1 w-full p-0 sm:order-2">
-              <img
-                src="https://v3.material-tailwind.com/double-mobile-mockup.png"
-                alt="Product mockup"
-                className="max-h-[30rem]"
-              />
-            </CardHeader>
-          </Card>
+            </div>
+          </div>
         </div>
       </div>
     </section>
