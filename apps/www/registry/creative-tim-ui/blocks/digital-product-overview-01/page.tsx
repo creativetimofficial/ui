@@ -53,15 +53,13 @@ export default function DigitalProductOverview01() {
       </nav>
 
       <div className="mt-8 grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16">
-        <div className="group bg-muted/30 relative overflow-hidden rounded-2xl border shadow-xl transition-all hover:shadow-2xl">
-          <div className="relative aspect-[4/3] overflow-hidden">
-            <img
-              src="https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/headers-thumbnail.jpg"
-              alt="Digital product preview"
-              className="h-full w-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 transition-opacity group-hover:opacity-100" />
-          </div>
+        <div className="group bg-muted/30 relative overflow-hidden rounded-2xl border p-4 shadow-xl transition-all hover:shadow-2xl">
+          <img
+            src="https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/headers-thumbnail.jpg"
+            alt="Digital product preview"
+            className="h-full w-full object-contain transition-transform duration-500 group-hover:scale-105"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 transition-opacity group-hover:opacity-100" />
         </div>
 
         <div className="flex flex-col">
@@ -106,15 +104,8 @@ export default function DigitalProductOverview01() {
               {data.map(({ name, desc, price, popular }) => (
                 <div
                   key={name}
-                  className="group/item bg-card hover:border-primary relative overflow-hidden rounded-lg border transition-all hover:shadow-md"
+                  className="group/item bg-card hover:border-primary rounded-lg border transition-all hover:shadow-md"
                 >
-                  {popular && (
-                    <div className="absolute top-3 right-3">
-                      <Badge className="bg-primary text-primary-foreground">
-                        Popular
-                      </Badge>
-                    </div>
-                  )}
                   <Label
                     htmlFor={name}
                     className="flex cursor-pointer items-start gap-4 p-4"
@@ -122,7 +113,14 @@ export default function DigitalProductOverview01() {
                     <RadioGroupItem value={name} id={name} className="mt-1" />
                     <div className="flex flex-1 items-center justify-between gap-4">
                       <div className="flex-1">
-                        <p className="mb-1 font-semibold">{name}</p>
+                        <div className="mb-1 flex items-center gap-2">
+                          <p className="font-semibold">{name}</p>
+                          {popular && (
+                            <Badge className="bg-primary text-primary-foreground">
+                              Popular
+                            </Badge>
+                          )}
+                        </div>
                         <p className="text-muted-foreground text-sm">{desc}</p>
                       </div>
                       <div className="text-right">
