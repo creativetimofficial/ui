@@ -147,6 +147,14 @@ Preferred communication style: Simple, everyday language.
 - **Regular Font Weight**: Changed navigation links from font-semibold to regular with hover transitions
 - **Improved Layout**: Changed from flex to grid layout (lg:grid-cols-2) for better responsiveness
 - **Enhanced Spacing**: Increased top padding from pt-16 to pt-20, adjusted gaps (gap-12 lg:gap-8)
-- **Better App Buttons**: Improved button layout with responsive grid (sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2), increased icon size (h-10 w-10), added shrink-0 to icons
+- **Prominent App Buttons**: 
+  - Changed to outline variant with white/20 borders and white/5 background for better visibility
+  - Increased icon size from h-10 w-10 to h-12 w-12 for better prominence
+  - Larger text (text-lg font-semibold for store names)
+  - White text with white/70 opacity for "Download on" label
+  - Enhanced hover states (border-white/40, bg-white/10)
+  - Improved padding (py-4) for better button height
+  - Apple icon now has fill-white for visibility
+  - Responsive grid layout (sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2)
 - **Bottom Section**: Improved footer bottom layout with flex-col on mobile, flex-row on desktop, better order management (order-1/order-2)
-- **Visual Refinement**: Added transition-colors to links, increased Get the App text to text-lg, improved gap spacing between links (gap-x-8)
+- **Visual Refinement**: Added transition-colors to links, "Get the App" title now text-white, improved gap spacing between links (gap-x-8)
