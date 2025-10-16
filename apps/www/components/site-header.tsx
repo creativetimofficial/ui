@@ -1,4 +1,5 @@
 import Link from "next/link"
+import { ArrowRight } from "lucide-react"
 
 import { siteConfig } from "@/lib/config"
 import { source } from "@/lib/source"
@@ -10,47 +11,55 @@ import { MobileNav } from "@/components/mobile-nav"
 import { ModeSwitcher } from "@/components/mode-switcher"
 import blocks from "@/registry/__blocks__.json"
 import { Button } from "@/registry/creative-tim-ui/ui/button"
-import { Separator } from "@/registry/creative-tim-ui/ui/separator"
 
 export function SiteHeader() {
   const pageTree = source.pageTree
 
   return (
-    <header className="bg-background sticky top-0 z-50 w-full">
-      <div className="container-wrapper 3xl:fixed:px-0 px-6">
-        <div className="3xl:fixed:container flex h-(--header-height) items-center gap-2 **:data-[slot=separator]:!h-4">
-          <MobileNav
-            tree={pageTree}
-            items={siteConfig.navItems}
-            className="flex lg:hidden"
-          />
-          <Button
-            asChild
-            variant="ghost"
-            size="icon"
-            className="hidden size-8 lg:flex"
-          >
-            <Link href="/">
-              <Icons.logo className="size-10" />
-              <span className="sr-only">{siteConfig.name}</span>
-            </Link>
-          </Button>
-          <MainNav items={siteConfig.navItems} className="hidden lg:flex" />
-          <div className="ml-auto flex items-center gap-2 md:flex-1 md:justify-end">
-            <div className="hidden w-full flex-1 md:flex md:w-auto md:flex-none">
-              <CommandMenu
+    <header className="sticky top-0 z-50 w-full pt-4">
+      <div className="container-wrapper px-6">
+        <div className="bg-black/95 backdrop-blur-sm border border-white/10 rounded-full mx-auto max-w-7xl">
+          <div className="flex h-14 items-center justify-between px-6">
+            {/* Left: Logo + Brand */}
+            <div className="flex items-center gap-3">
+              <MobileNav
                 tree={pageTree}
-                navItems={siteConfig.navItems}
-                blocks={blocks}
+                items={siteConfig.navItems}
+                className="flex lg:hidden"
               />
+              <Link href="/" className="flex items-center gap-2">
+                <Icons.logo className="size-8 text-white" />
+                <span className="hidden sm:inline-block text-white font-semibold text-lg">
+                  {siteConfig.name}
+                </span>
+              </Link>
             </div>
-            <Separator
-              orientation="vertical"
-              className="ml-2 hidden lg:block"
-            />
-            <GitHubLink />
 
-            <ModeSwitcher />
+            {/* Center: Navigation Links */}
+            <MainNav items={siteConfig.navItems} className="hidden lg:flex" />
+
+            {/* Right: Actions */}
+            <div className="flex items-center gap-3">
+              <div className="hidden md:flex">
+                <CommandMenu
+                  tree={pageTree}
+                  navItems={siteConfig.navItems}
+                  blocks={blocks}
+                />
+              </div>
+              <GitHubLink />
+              <ModeSwitcher />
+              <Button
+                asChild
+                size="sm"
+                className="hidden sm:inline-flex bg-white text-black hover:bg-white/90 rounded-full"
+              >
+                <Link href="/docs" className="flex items-center gap-1">
+                  Get Started
+                  <ArrowRight className="h-4 w-4" />
+                </Link>
+              </Button>
+            </div>
           </div>
         </div>
       </div>

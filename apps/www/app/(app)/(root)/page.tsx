@@ -17,7 +17,7 @@ import { Card } from "@/registry/creative-tim-ui/ui/card"
 
 const title = "Creative Tim UI"
 const description =
-  "A collection of Open Source agent and audio components that you can customize and extend."
+  "Engineered with open-source components, blocks, AI agents, and a flexible registry powered by MCP and open code for seamless, scalable development."
 
 export const dynamic = "force-static"
 export const revalidate = false
