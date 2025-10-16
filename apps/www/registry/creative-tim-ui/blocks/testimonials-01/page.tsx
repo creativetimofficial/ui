@@ -12,25 +12,28 @@ import { Card, CardContent } from "@/registry/creative-tim-ui/ui/card"
 
 const TESTIMONIALS = [
   {
-    image: "https://v3.material-tailwind.com/woman-profile-2.jpg",
-    name: "Jessica Devis",
-    role: "CEO @ Marketing Digital LTD",
+    image:
+      "https://images.unsplash.com/photo-1716662318479-a9c0f1cd1a0e?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=987",
+    name: "Sarah Johnson",
+    role: "Product Designer",
     quote:
-      "Don't walk behind me; I may not lead. Don't walk in front of me; I may not follow. Just walk beside me and be my friend.",
+      "The attention to detail and component quality is outstanding. These UI blocks have significantly accelerated our design workflow and improved consistency across our products.",
   },
   {
-    image: "https://v3.material-tailwind.com/man-profile-1.jpg",
-    name: "Mary Joshiash",
-    role: "Marketing @ Apple INC",
+    image:
+      "https://images.unsplash.com/photo-1623853434105-8e7a72898180?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1062",
+    name: "Michael Chen",
+    role: "Tech Lead at Stripe",
     quote:
-      "The pessimist complains about the wind; the optimist expects it to change; the realist adjusts the sails.",
+      "Exceptional component library with excellent documentation. The customization options and TypeScript support make it perfect for enterprise applications. Highly recommend!",
   },
   {
-    image: "https://v3.material-tailwind.com/woman-profile-2.jpg",
-    name: "Marcell Glock",
-    role: "CFO @ Apple INC",
+    image:
+      "https://images.unsplash.com/photo-1641906840000-4b88f1d44de6?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=987",
+    name: "Emma Rodriguez",
+    role: "Frontend Developer",
     quote:
-      "Do not go where the path may lead, go instead where there is no path and leave a trail.",
+      "A game-changer for rapid prototyping and production. The components are production-ready, well-tested, and the design system is incredibly cohesive. Love it!",
   },
 ]
 
