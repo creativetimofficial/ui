@@ -6,7 +6,7 @@ import { Button } from "@/registry/creative-tim-ui/ui/button"
 
 export function GitHubLink() {
   return (
-    <Button asChild size="sm" variant="ghost" className="h-8 shadow-none">
+    <Button asChild size="sm" variant="ghost" className="h-8 shadow-none text-white/70 hover:text-white hover:bg-white/10">
       <Link href={siteConfig.links.github} target="_blank" rel="noreferrer">
         <Icons.gitHub />
         {/* <React.Suspense fallback={<Skeleton className="h-4 w-8" />}>
