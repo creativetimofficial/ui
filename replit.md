@@ -148,13 +148,14 @@ Preferred communication style: Simple, everyday language.
 - **Improved Layout**: Changed from flex to grid layout (lg:grid-cols-2) for better responsiveness
 - **Enhanced Spacing**: Increased top padding from pt-16 to pt-20, adjusted gaps (gap-12 lg:gap-8)
 - **Official-Style App Buttons**: 
-  - Black backgrounds (bg-black) with white borders (border-2 border-white) matching official store buttons
-  - More rounded corners (rounded-xl) for authentic look
+  - Black backgrounds (bg-black) with no borders (border-0) for sleek appearance
+  - More rounded corners (rounded-xl) for modern look
   - "GET IT ON" uppercase text for Google Play, "Download on the" uppercase for App Store
   - Larger store names (text-xl font-semibold) with tight leading
   - Small uppercase labels (text-[10px] font-normal uppercase tracking-wide)
   - Enhanced hover states (hover:bg-white/10)
-  - Icons sized at h-10 w-10 with proper alignment
+  - Large prominent icons (h-14 w-14) for better visibility
+  - Increased padding (py-4, gap-4) for better button proportions
   - Responsive grid layout (sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2)
 - **Bottom Section**: Improved footer bottom layout with flex-col on mobile, flex-row on desktop, better order management (order-1/order-2)
 - **Visual Refinement**: Added transition-colors to links, "Get the App" title now text-white, improved gap spacing between links (gap-x-8)
