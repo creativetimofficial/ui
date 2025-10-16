@@ -240,6 +240,19 @@ Preferred communication style: Simple, everyday language.
   - Transition-all for fluid animations
   - Better visual hierarchy with spacing
 
+### Invoices 01 UI Improvements
+- **White Card Container**:
+  - Wrapped all content in white card container (bg-white with dark:bg-card)
+  - Added rounded-xl, border, and shadow-sm for clean card appearance
+  - Better visual separation from background
+- **Overdue Tags Color**:
+  - Overdue badges now display in red (destructive variant)
+  - Non-overdue badges remain green (bg-green-100 text-green-800)
+  - Conditional className based on isOverdue status
+- **Professional Layout**:
+  - Clean card-based design
+  - Improved visual hierarchy
+
 ### Transaction History 01 UI Improvements
 - **Icon Display Fix**: 
   - Replaced Card component with regular div to avoid flex-col conflict
