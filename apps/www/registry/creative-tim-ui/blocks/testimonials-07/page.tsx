@@ -10,25 +10,28 @@ import {
 
 const TESTIMONIALS = [
   {
-    image: "https://v3.material-tailwind.com/woman-profile-2.jpg",
-    name: "Jessica Devis",
-    role: "CEO @ Marketing Digital LTD",
+    image:
+      "https://images.unsplash.com/photo-1716662318479-a9c0f1cd1a0e?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=987",
+    name: "Sarah Johnson",
+    role: "Product Designer",
     quote:
-      "We're not always in the position that we want to be at. We're constantly growing. We're constantly making mistakes. We're constantly trying to express ourselves and actualize our dreams.",
+      "The attention to detail and component quality is outstanding. These UI blocks have significantly accelerated our design workflow and improved consistency across our products.",
   },
   {
-    image: "https://v3.material-tailwind.com/man-profile-1.jpg",
-    name: "Mary Joshiash",
-    role: "Marketing @ Apple INC",
+    image:
+      "https://images.unsplash.com/photo-1623853434105-8e7a72898180?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1062",
+    name: "Michael Chen",
+    role: "Tech Lead at Stripe",
     quote:
-      "We're not always in the position that we want to be at. We're constantly growing. We're constantly making mistakes. We're constantly trying to express ourselves and actualize our dreams.",
+      "Exceptional component library with excellent documentation. The customization options and TypeScript support make it perfect for enterprise applications. Highly recommend!",
   },
   {
-    image: "https://v3.material-tailwind.com/woman-profile-1.jpg",
-    name: "Marcell Glock",
-    role: "CFO @ Apple INC",
+    image:
+      "https://images.unsplash.com/photo-1641906840000-4b88f1d44de6?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=987",
+    name: "Emma Rodriguez",
+    role: "Frontend Developer",
     quote:
-      "If you can't decide, the answer is no. If two equally difficult paths, choose the one more painful in the short term (pain avoidance is creating an illusion of equality). Choose the path that leaves you more equanimous in the long term.",
+      "A game-changer for rapid prototyping and production. The components are production-ready, well-tested, and the design system is incredibly cohesive. Love it!",
   },
 ]
 
@@ -39,7 +42,7 @@ export default function TestimonialsBlock() {
     <section className="py-16">
       <div className="container mx-auto grid grid-cols-12 items-center gap-y-8 px-4">
         <div className="col-span-full row-start-2 md:col-span-8 md:row-start-auto">
-          <h2 className="text-3xl font-bold">Work with us</h2>
+          <h2 className="text-3xl font-bold">What Developers Say</h2>
           <p className="text-muted-foreground my-4 max-w-lg">
             {TESTIMONIALS[selectedTestimonial].quote}
           </p>
