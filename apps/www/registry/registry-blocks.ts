@@ -542,6 +542,26 @@ export const blocks: Registry["items"] = [
     categories: ["ecommerce"],
   },
   {
+    name: "product-listing-filters-01",
+    description: "Product listing with filters and sort",
+    type: "registry:block",
+    registryDependencies: ["button", "badge", "select"],
+    files: [
+      {
+        path: "blocks/product-listing-filters-01/page.tsx",
+        type: "registry:page",
+        target: "app/product-listing-filters/page.tsx",
+      },
+    ],
+    meta: {
+      iframeHeight: "900px",
+      container:
+        "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
+      mobile: "component",
+    },
+    categories: ["ecommerce"],
+  },
+  {
     name: "ecommerce-sections-01",
     description: "Runway video spotlight with product cards",
     type: "registry:block",

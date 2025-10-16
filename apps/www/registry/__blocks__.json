@@ -130,6 +130,11 @@
     "categories": ["ecommerce"]
   },
   {
+    "name": "product-listing-filters-01",
+    "description": "Product listing with filters and sort",
+    "categories": ["ecommerce"]
+  },
+  {
     "name": "ecommerce-sections-01",
     "description": "Runway video spotlight with product cards",
     "categories": ["ecommerce"]

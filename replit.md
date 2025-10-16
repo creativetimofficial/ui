@@ -111,6 +111,21 @@ Preferred communication style: Simple, everyday language.
 - **class-variance-authority**: Variant-based component APIs.
 ## Recent Changes
 
+### Product Listing Filters Block (October 16, 2025)
+- **New product-listing-filters-01 Block**: Product listing page with advanced filtering
+- **Features**:
+  - **Filter Buttons**: Categories, Size, Material, Color, Pattern filter options
+  - **Product Count**: Display showing "462 Products"
+  - **Sort Dropdown**: Featured, Price (Low to High, High to Low), Newest
+  - **Product Grid**: Responsive 4-column grid layout
+  - **Product Cards**: Image, brand, name, price display
+  - **Badges**: "Exclusive" and "New Arrival" labels
+  - **Wishlist Hearts**: Interactive favorite toggle with fill animation
+  - **Hover Effects**: Image scale on hover, shadow transitions
+- **Components Used**: Button, Badge, Select from shadcn/ui
+- **Category**: Ecommerce
+- **Registry**: Added to blocks registry with 148 total blocks
+
 ### Order Details Block Enhancement (October 16, 2025)
 - **Enhanced order-details-01 Block**: Complete UI/UX redesign with modern visual hierarchy
 - **Design Improvements**:
