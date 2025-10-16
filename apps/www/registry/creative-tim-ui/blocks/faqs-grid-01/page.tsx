@@ -1,3 +1,5 @@
+import { CircleHelp } from "lucide-react"
+
 import {
   Card,
   CardContent,
@@ -7,27 +9,27 @@ import {
 const DATA = [
   {
     title: "How do I order?",
-    desc: "We're not always in the position that we want to be at. We're constantly growing. We're constantly making mistakes. We're constantly trying to express ourselves and actualize our dreams. If you have the opportunity to play this game of life you need to appreciate every moment. A lot of people don't appreciate the moment until it's passed.",
+    desc: "Browse our collection, add items to your cart, and proceed to checkout. We accept multiple payment methods including credit cards, PayPal, and digital wallets for your convenience.",
   },
   {
-    title: "How can i make the payment?",
-    desc: "It really matters and then like it really doesn't matter. What matters is the people who are sparked by it. And the people who are like offended by it, it doesn't matter. Because it's about motivating the doers. Because I'm here to follow my dreams and inspire other people to follow their dreams, too. We're not always in the position that we want to be at.",
+    title: "How can I make the payment?",
+    desc: "We accept all major credit cards, debit cards, PayPal, Apple Pay, and Google Pay. All transactions are secured with industry-standard encryption to protect your information.",
   },
   {
     title: "How much time does it take to receive the order?",
-    desc: "The time is now for it to be okay to be great. People in this world shun people for being great. For being a bright color. For standing out. But the time is now to be okay to be the greatest you. Would you believe in what you believe in, if you were the only one who believed it?",
+    desc: "Standard shipping takes 3-5 business days. Express shipping is available for 1-2 day delivery. International orders typically arrive within 7-14 business days depending on your location.",
   },
   {
     title: "Can I resell the products?",
-    desc: "I always felt like I could do anything. That's the main thing people are controlled by! Thoughts- their perception of themselves! They're slowed down by their perception of themselves. If you're taught you can't do anything, you won't do anything. I was taught I could do everything.",
+    desc: "Products purchased for personal use cannot be resold without authorization. For wholesale or reseller inquiries, please contact our business development team at business@example.com.",
   },
   {
     title: "Where do I find the shipping details?",
-    desc: "There's nothing I really wanted to do in life that I wasn't able to get good at. That's my skill. I'm not really specifically talented at anything except for the ability to learn. That's what I do. That's what I'm here for. Don't be afraid to be wrong because you can't learn anything from a compliment.",
+    desc: "Shipping information is available in your account under 'Order History'. You'll receive tracking details via email once your order ships, allowing you to monitor delivery progress.",
   },
   {
-    title: "How do I order?",
-    desc: "We're not always in the position that we want to be at. We're constantly growing. We're constantly making mistakes. We're constantly trying to express ourselves and actualize our dreams. If you have the opportunity to play this game of life you need to appreciate every moment. A lot of people don't appreciate the moment until it's passed.",
+    title: "What is your return policy?",
+    desc: "We offer a 30-day return policy on most items. Products must be in original condition with tags attached. Refunds are processed within 5-7 business days after we receive your return.",
   },
 ]
 
@@ -35,24 +37,30 @@ export default function FaqsGrid01() {
   return (
     <section className="px-6 py-16">
       <div className="container mx-auto">
-        <div className="mb-20 text-center">
-          <h2 className="mb-4 text-3xl font-bold">
-            Frequently asked questions
+        <div className="mb-16 text-center">
+          <h2 className="mb-4 text-4xl font-bold">
+            Frequently Asked Questions
           </h2>
           <p className="text-muted-foreground mx-auto max-w-2xl text-lg">
-            A lot of people don&apos;t appreciate the moment until it&apos;s
-            passed. I&apos;m not trying my hardest, and I&apos;m not trying to
-            do
+            Find answers to common questions about our products, shipping, and
+            policies. Can't find what you're looking for? Contact our support
+            team.
           </p>
         </div>
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {DATA.map(({ title, desc }, key) => (
-            <Card key={key} className="border-none shadow-none">
-              <CardHeader className="p-2">
-                <h3 className="text-base">{title}</h3>
+            <Card
+              key={key}
+              className="group hover:border-primary/50 transition-all hover:shadow-lg"
+            >
+              <CardHeader className="pb-4">
+                <div className="bg-primary/10 mb-3 flex h-12 w-12 items-center justify-center rounded-full">
+                  <CircleHelp className="text-primary h-6 w-6" />
+                </div>
+                <h3 className="text-xl leading-tight font-bold">{title}</h3>
               </CardHeader>
-              <CardContent className="p-2">
-                <p className="text-muted-foreground">{desc}</p>
+              <CardContent>
+                <p className="text-muted-foreground leading-relaxed">{desc}</p>
               </CardContent>
             </Card>
           ))}
