@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import { useAuth } from "@/components/auth/AuthProvider";
 import { HeroTestimonial } from "@/components/auth/HeroTestimonial";
 import { Button } from "@/registry/creative-tim-ui/ui/button";
+import { ClientRedirect } from "./ClientRedirect";
 
 type AuthLayoutProps = {
   /** Main title */
@@ -30,24 +31,19 @@ export function AuthLayout({
   showForgotPasswordLink = false,
 }: AuthLayoutProps) {
   const router = useRouter();
-  const { user, bootstrapDone } = useAuth();
+  const { user } = useAuth();
 
-  React.useEffect(() => {
-    if (bootstrapDone && user) {
-      router.push(dashboardHref);
-    }
-  }, [bootstrapDone, user, dashboardHref, router]);
+  // Loader only when unauthenticated AND bootstrap still running
+  // if (!user && !bootstrapDone) {
+  //   return (
+  //     <div className="min-h-screen flex items-center justify-center">
+  //       <div className="text-muted-foreground text-sm">Loading…</div>
+  //     </div>
+  //   );
+  // }
 
-  if (!bootstrapDone) {
-    return (
-      <div className="min-h-screen flex items-center justify-center">
-        <div className="text-slate-500 text-sm">Loading…</div>
-      </div>
-    );
-  }
-
-  // Prevent flicker: If user, don't show anything (redirect is in effect)
-  if (user) return null;
+  // If authenticated, render a redirect component (never return null)
+  if (user) return <ClientRedirect href={dashboardHref} />;
 
   return (
     <div className="min-h-screen">
