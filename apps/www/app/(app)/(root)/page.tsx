@@ -4,6 +4,7 @@ import { Download, Package, Star, Users } from "lucide-react"
 
 import { CardsDemo } from "@/components/cards"
 import { ExamplesNav } from "@/components/examples-nav"
+import { ExamplesPreview } from "@/components/examples-preview"
 import {
   PageActions,
   PageHeader,
@@ -129,6 +130,9 @@ export default function IndexPage() {
           </div>
         </div>
       </section>
+
+      {/* Examples Preview Section */}
+      <ExamplesPreview />
 
       <PageNav className="hidden md:flex">
         <ExamplesNav className="[&>a:first-child]:text-primary flex-1 overflow-hidden" />
