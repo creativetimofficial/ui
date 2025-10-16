@@ -1,7 +1,7 @@
 # Creative Tim UI Component Library
 
 ## Overview
-Creative Tim UI is a comprehensive React component library built on top of shadcn/ui. It's designed for building audio and agentic applications, functioning as a monorepo that provides pre-built, customizable components such as orbs, waveforms, voice agents, audio players, and conversation interfaces. The project serves as both a documentation website and a component registry, allowing developers to install components via CLI. The library prioritizes developer experience through streamlined installation, extensive documentation, and ready-to-use examples, with components designed for easy integration and full customization via Tailwind CSS and TypeScript.
+Creative Tim UI is a comprehensive React component library built on shadcn/ui, designed for audio and agentic applications. It functions as a monorepo providing customizable components like orbs, waveforms, voice agents, audio players, and conversation interfaces. The project serves as a documentation website and component registry, allowing CLI-based component installation. It emphasizes developer experience through streamlined installation, extensive documentation, and examples, with components designed for easy integration and full customization via Tailwind CSS and TypeScript.
 
 ## User Preferences
 Preferred communication style: Simple, everyday language.
@@ -30,22 +30,18 @@ Preferred communication style: Simple, everyday language.
 - **Content Management**: Fumadocs MDX with frontmatter schema.
 - **Code Highlighting**: Shiki with custom transformers.
 - **Syntax Support**: Automatic package manager translation.
-- **Navigation**: Auto-generated table of contents.
 
 ### Theme System
 - **Multi-theme Support**: CSS variable-based theming.
 - **Dark Mode**: next-themes integration.
 - **Theme Persistence**: LocalStorage-based.
-- **Responsive Metadata**: Dynamic meta theme-color updates.
 
 ### State Management
 - **Client State**: Jotai for atomic state management.
 - **URL State**: Next.js router for navigation and search parameters.
-- **Theme State**: Context API for active theme provider.
 
 ### Build & Registry System
-- **Registry Builder**: Custom TypeScript scripts to scan components, generate registry JSON, extract metadata, and rewrite import paths.
-- **Code Transformation**: ts-morph for AST manipulation.
+- **Registry Builder**: Custom TypeScript scripts to scan components, generate registry JSON, extract metadata, and rewrite import paths using ts-morph.
 
 ### Analytics & Tracking
 - **Analytics Provider**: Vercel Analytics.
@@ -55,7 +51,13 @@ Preferred communication style: Simple, everyday language.
 ### Private Registry & PRO Features
 - **Authentication System**: API key validation for private component access via `/api/r/[name]/route.ts`.
 - **Authentication Methods**: Supports Bearer token, X-API-Key header, query parameter, and environment variable (`API_KEY`).
-- **PRO Component Restrictions**: UI elements (install command, code tab) are disabled for PRO components without appropriate access, displaying upgrade prompts.
+- **PRO Component Restrictions**: UI elements (install command, code tab) are disabled for PRO components without appropriate access.
+
+### UI/UX Decisions and Features
+- **Ecommerce Blocks**: Includes enhanced grid layouts with full-size images, overlay designs, glass-morphism effects, and hover animations. Features like video spotlights with product cards and luxury product detail pages with comprehensive information and size/color selectors.
+- **Navbar Design**: Sleek, dark, rounded pill-shaped navigation bar with search, GitHub link, and theme switcher.
+- **Examples Preview Section**: Dynamic preview of component examples categorized by Web 3.0, Application & Admin UI, Marketing & Presentation, Content UI, and Ecommerce UI, displayed in a responsive grid.
+- **Achievements Section**: A stats section with community members, cumulative downloads, GitHub stars, and monthly NPM downloads, using Lucide icons and shadcn/ui Card components.
 
 ## External Dependencies
 
@@ -73,7 +75,7 @@ Preferred communication style: Simple, everyday language.
 - **ESLint**: Code quality.
 - **Prettier**: Code formatting.
 - **Commitlint**: Conventional commits.
-- **Changesets**: Version management and changelog generation.
+- **Changesets**: Version management.
 - **Puppeteer**: Headless browser for component screenshot capture.
 
 ### Build Pipeline
@@ -91,6 +93,7 @@ Preferred communication style: Simple, everyday language.
 - **Vercel**: Analytics and deployment.
 - **GitHub**: Version control.
 - **Upstash Redis**: Caching layer.
+- **YouTube IFrame Player API**: For video embedding.
 
 ### Media & Assets
 - **next/image**: Optimized image delivery.
@@ -106,132 +109,3 @@ Preferred communication style: Simple, everyday language.
 - **clsx + tailwind-merge**: Conditional className composition.
 - **date-fns**: Date manipulation.
 - **class-variance-authority**: Variant-based component APIs.
-
-## Recent Changes
-
-### Modern Dark Navbar Design (October 16, 2025)
-- **Complete Navbar Redesign**: Sleek, dark, rounded pill-shaped navigation bar
-- **Design Features**:
-  - Black background (95% opacity) with backdrop blur effect
-  - Fully rounded corners (pill shape) with subtle white border
-  - Sticky positioning with top padding
-  - Max-width container for better desktop display
-- **Layout Structure**:
-  - **Left**: Logo + brand name "Creative Tim UI"
-  - **Center**: Navigation links (Docs, Components, Examples)
-  - **Right**: Search bar, GitHub icon, theme switcher, "Get Started" button with arrow
-- **Styling Details**:
-  - White text with 70% opacity (inactive) and 100% opacity (active/hover)
-  - Smooth hover effects with `hover:bg-white/10`
-  - Search bar with dark styling and Ctrl/⌘+K keyboard shortcuts
-  - "Get Started" button with white background and ArrowRight icon
-  - All icons styled for dark navbar compatibility
-- **Components Updated**: site-header.tsx, main-nav.tsx, github-link.tsx, mode-switcher.tsx, command-menu.tsx
-
-### Examples Preview Section (October 16, 2025)
-- **Dynamic Examples Preview**: Added below "Remarkable Achievements" section
-- **Categories Showcased**:
-  - **Web 3.0**: Blockchain, crypto, NFT blocks with wallet integrations and token charts
-  - **Application & Admin UI**: SaaS platforms, dashboards, CRMs with widgets, charts, tables, modals
-  - **Marketing & Presentation**: Testimonials, blog cards, contact forms for landing pages
-  - **Content UI**: Blog layouts, FAQs, footers for content-heavy sites
-  - **Ecommerce UI**: Product pages, shopping carts, checkout flows
-- **Card Design** (Updated to match reference):
-  - **4-column responsive grid**: 1 col mobile → 2 col tablet → 4 col desktop
-  - **Compact card layout**: Smaller padding and tighter spacing
-  - **16:10 aspect ratio**: Preview area with subtle gradient background
-  - **Clean typography**: Small font sizes for title and block count
-  - **Subtle hover effects**: Shadow on hover for interactive feedback
-- **Components**: Card (shadcn/ui), gradient placeholders (ready for thumbnail images)
-- **Design Philosophy**: Matches Creative Tim reference screenshot with 4 cards per row, clean borders, and professional spacing
-
-### Achievements Section on Home Page (October 16, 2025)
-- **Added "Remarkable Achievements" Section**: New stats section below the header on the home page
-- **Features**:
-  - Centered heading and description
-  - 4 achievement cards in responsive grid (1 col mobile, 2 col tablet, 4 col desktop)
-  - Each card displays: Lucide icon, large stat number, label, and description
-  - Stats showcased:
-    - 2.6M+ Community Members (Users icon)
-    - 8.6M+ Cumulative Downloads (Download icon)
-    - 48,000+ Github Cumulative Stars (Star icon)
-    - 280,000+ Monthly NPM Downloads (Package icon)
-- **Components Used**: shadcn/ui Card component, Lucide React icons
-- **Styling**: Text-left alignment in cards, muted-foreground for icons and descriptions
-
-### Ecommerce Sections Blocks (October 15, 2025)
-
-#### ecommerce-sections-01: Video Spotlight with Product Cards
-- **Description**: YouTube video background with horizontal product cards overlay
-- **Features**:
-  - YouTube IFrame Player API integration with autoplay, muted, loop support
-  - Play/pause controls positioned in top-left corner (circular button)
-  - Three horizontal product cards with compact layout:
-    - 64x64px product thumbnails on the left
-    - Brand name, title, and price in the center
-    - Shopping bag and shuffle icons on the right
-  - Footer CTA button: "VIEW ALL PRODUCTS" with outline style
-  - Responsive grid layout (1 column mobile, 2 columns tablet, 3 columns desktop)
-  - Gradient overlay for better text readability
-  - Clean white cards with rounded corners
-- **Video Source**: YouTube video (YCIuEU2y8XI) embedded via YouTube IFrame Player API
-- **Dependencies**: Button (shadcn UI component), YouTube IFrame Player API
-- **Use Case**: Perfect for showcasing capsule collections, seasonal lookbooks, or featured product campaigns with immersive video backgrounds
-
-#### ecommerce-sections-02: Luxury Product Detail Page
-- **Description**: Premium product detail page with image gallery and comprehensive product information
-- **Features**:
-  - Vertical thumbnail gallery (6 images) on the left side for desktop
-  - Large centered product image viewer
-  - Horizontal thumbnail carousel for mobile/tablet (4 visible)
-  - Product details section including:
-    - "Trending Now" badge
-    - Product title: "Artisan Leather Crossbody" with elegant typography
-    - Price display ($385.00) with star rating (4.7)
-    - Color selector with 6 color swatches (Black, Cream, Forest Green, Gray, Navy Blue, Brown)
-    - Product description with features
-    - Demo store disclaimer with "Maison Atelier" link
-    - Dual CTA buttons: "Add to Cart" (outline) and "Buy it Now" (filled)
-    - Feature icons grid: Crossbody style, Premium leather, Adjustable strap, Crafted in France
-    - Functional accordion "More Information" section with expandable content (Materials & Care, Dimensions, Shipping & Returns)
-  - Responsive layout adapting to mobile, tablet, and desktop
-  - Clean, minimal design with neutral color palette
-  - All text uses normal casing (not uppercase)
-- **Dependencies**: Badge, Button (shadcn UI components)
-- **Registry Integration**: Successfully added to registry-blocks.ts under ecommerce category
-- **Use Case**: Ideal for luxury fashion brands, high-end product showcases, and premium ecommerce stores requiring detailed product presentation
-
-#### complex-product-description-01: Enhanced with Size Selector (October 15, 2025)
-- **Description**: Premium product detail block with complete shopping experience
-- **Enhancements**:
-  - **Size Selector**: Interactive size options (XS, S, M, L, XL) with active state styling
-  - **Visual Design**: Inspired by ecommerce-sections-02 with neutral color palette
-  - **"New Arrival" Badge**: Clean badge component at top
-  - **Improved Star Ratings**: Using Star icons with proper fill states
-  - **Enhanced Color Selector**: 40x40px swatches with ring selection indicator
-  - **Feature Icons Grid**: 4-feature 2-column layout (Premium materials, Free shipping, Returns, Warranty)
-  - **Interactive Favorite Button**: Heart icon that fills when clicked
-  - **Better Accordion**: Cleaner styling with detailed content (Features, Care, Shipping, Warranty)
-  - **Vertical Thumbnail Gallery**: Left-side gallery for desktop with better spacing
-- **Dependencies**: Badge, Button, Accordion (shadcn UI components)
-- **Use Case**: Perfect for fashion ecommerce with size-specific products requiring detailed product information and multiple view angles
-
-#### product-description-01: Dropdown Selectors & 3-Column Features (October 15, 2025)
-- **Description**: Enhanced ecommerce product page with dropdown selectors and organized feature display
-- **Latest Updates**:
-  - **Side-by-Side Dropdowns**: Color and Size dropdowns aligned horizontally on the same line
-  - **Size Selector Dropdown**: Numbers (32, 34, 36, 38, 40, 42, 44) instead of buttons
-  - **Color Selector Dropdown**: Shows color dot with name in dropdown options (Black, White, Gray, Navy, Brown)
-  - **3-Column Feature Layout**: Icons centered at top with text below in white cards
-  - **Features Displayed**: Free shipping over $150, Easy 30-day returns, 1-year warranty
-- **Core Features**:
-  - **Breadcrumb Navigation**: Clean breadcrumb trail with chevron separators (Home > Women > Outerwear > Product)
-  - **"Limited Edition" Badge**: Professional badge component for product status
-  - **Enhanced Layout**: Better spacing, larger product image (500px), cleaner thumbnail gallery
-  - **Star Ratings**: Using Star icons with proper fill states and review count
-  - **Interactive Favorite**: Heart button that fills when clicked
-  - **Detailed Content**: Product description and key features list with bullet points
-  - **Professional Copy**: Water-resistant fabric, premium insulation, adjustable features
-  - **Neutral Color Palette**: Consistent neutral-50/900 design
-- **Dependencies**: Badge, Button, Select (shadcn UI components)
-- **Use Case**: Ideal for luxury fashion ecommerce requiring streamlined product selection with dropdown controls and clear feature presentation
