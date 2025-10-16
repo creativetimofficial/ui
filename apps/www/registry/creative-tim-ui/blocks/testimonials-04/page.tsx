@@ -1,68 +1,93 @@
 "use client"
 
-import { Star } from "lucide-react"
+import { Quote, Star } from "lucide-react"
 
 import { Card, CardContent } from "@/registry/creative-tim-ui/ui/card"
 
 const TESTIMONIALS = [
   {
-    image: "https://v3.material-tailwind.com/woman-profile-2.jpg",
-    name: "Lucian Eurel",
-    role: "CEO Discord",
+    image:
+      "https://images.unsplash.com/photo-1716662318479-a9c0f1cd1a0e?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=987",
+    name: "Sarah Johnson",
+    role: "Product Designer",
     quote:
-      "Your products, all the kits that I have downloaded from your site and worked with are sooo cool! I love the color mixtures, cards... everything. Keep up the great work!",
+      "The attention to detail and component quality is outstanding. These UI blocks have significantly accelerated our design workflow and improved consistency across our products.",
     rating: 5,
   },
   {
-    image: "https://v3.material-tailwind.com/man-profile-1.jpg",
-    name: "Linde Michel",
-    role: "CFO Slack",
+    image:
+      "https://images.unsplash.com/photo-1623853434105-8e7a72898180?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1062",
+    name: "Michael Chen",
+    role: "Tech Lead at Stripe",
     quote:
-      "Don't be scared of the truth because we need to restart the human foundation in truth. That's why I love you like Kanye loves Kanye I love Rick Owens• bed design but the back is not so attractive.",
-    rating: 4,
+      "Exceptional component library with excellent documentation. The customization options and TypeScript support make it perfect for enterprise applications. Highly recommend!",
+    rating: 5,
   },
   {
-    image: "https://v3.material-tailwind.com/man-profile-2.jpg",
-    name: "Misha Stam",
-    role: "COO Dribbble",
+    image:
+      "https://images.unsplash.com/photo-1641906840000-4b88f1d44de6?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=987",
+    name: "Emma Rodriguez",
+    role: "Frontend Developer",
     quote:
-      "Your products, all the kits that I have downloaded from your site and worked with are sooo cool! I love the color mixtures, cards... everything. Keep up the great work!",
+      "A game-changer for rapid prototyping and production. The components are production-ready, well-tested, and the design system is incredibly cohesive. Love it!",
     rating: 5,
   },
 ]
 
 export default function TestimonialsBlock() {
   return (
-    <section className="py-16">
-      <div className="container mx-auto grid grid-cols-1 gap-12 px-4 md:grid-cols-2 lg:grid-cols-3">
-        {TESTIMONIALS.map(({ name, image, role, quote, rating }, key) => (
-          <Card key={key} className="border-0 bg-transparent shadow-none">
-            <CardContent className="p-0 text-center">
-              <img
-                src={image}
-                alt={`${name} image`}
-                className="mx-auto mb-4 h-full max-h-40 w-full max-w-40 rounded-xl object-cover object-center"
-              />
-              <p className="mb-1 text-lg font-semibold">{name}</p>
-              <p className="text-muted-foreground mb-4 text-sm">{role}</p>
-              <blockquote className="mx-auto mb-6 max-w-lg text-lg">
-                &quot;{quote}&quot;
-              </blockquote>
-              <div className="flex items-center justify-center gap-1">
-                {Array.from({ length: 5 }).map((_, i) => (
-                  <Star
-                    key={i}
-                    className={`h-5 w-5 ${
-                      i < rating
-                        ? "fill-yellow-500 text-yellow-500"
-                        : "fill-gray-300 text-gray-300"
-                    }`}
+    <section className="py-20">
+      <div className="container mx-auto px-4">
+        <div className="mb-16 text-center">
+          <h2 className="mb-4 text-3xl font-bold md:text-4xl">
+            What Our Users Say
+          </h2>
+          <p className="text-muted-foreground mx-auto max-w-2xl text-lg">
+            Trusted by thousands of developers and designers worldwide
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+          {TESTIMONIALS.map(({ name, image, role, quote, rating }, key) => (
+            <Card
+              key={key}
+              className="group border-border/50 hover:border-border transition-all hover:shadow-lg"
+            >
+              <CardContent className="p-8 text-center">
+                <div className="relative mx-auto mb-6 inline-block">
+                  <img
+                    src={image}
+                    alt={`${name} profile`}
+                    className="border-border mx-auto h-24 w-24 rounded-full border-4 object-cover transition-transform group-hover:scale-105"
                   />
-                ))}
-              </div>
-            </CardContent>
-          </Card>
-        ))}
+                  <div className="bg-background absolute -right-2 -bottom-2 rounded-full p-2 shadow-md">
+                    <Quote className="text-primary h-4 w-4" />
+                  </div>
+                </div>
+
+                <h3 className="mb-1 text-xl font-semibold">{name}</h3>
+                <p className="text-muted-foreground mb-6 text-sm">{role}</p>
+
+                <div className="mb-6 flex items-center justify-center gap-1">
+                  {Array.from({ length: 5 }).map((_, i) => (
+                    <Star
+                      key={i}
+                      className={`h-4 w-4 ${
+                        i < rating
+                          ? "fill-yellow-400 text-yellow-400"
+                          : "fill-muted text-muted"
+                      }`}
+                    />
+                  ))}
+                </div>
+
+                <blockquote className="text-foreground/80 text-sm leading-relaxed">
+                  &quot;{quote}&quot;
+                </blockquote>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
       </div>
     </section>
   )
