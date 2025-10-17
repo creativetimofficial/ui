@@ -49,6 +49,9 @@ export const metadata: Metadata = {
 }
 
 export default function IndexPage() {
+
+  const viewPath = process.env.NEXT_PUBLIC_VIEW_PATH || "/view"
+
   return (
     <div className="bg-stone-50 dark:bg-stone-950 flex flex-1 flex-col">
       <div className="relative overflow-hidden">
@@ -89,7 +92,7 @@ export default function IndexPage() {
               {/* OpenAI */}
               <div className="opacity-50 grayscale transition-all hover:opacity-100 hover:grayscale-0 dark:invert dark:opacity-60 dark:hover:invert-0">
                 <img
-                  src="/logo-open-ai_1760714845234.png"
+                  src={`${viewPath}/logo-open-ai.png`}
                   alt="OpenAI"
                   className="h-8 w-auto"
                 />
@@ -98,7 +101,7 @@ export default function IndexPage() {
               {/* Claude */}
               <div className="opacity-50 grayscale transition-all hover:opacity-100 hover:grayscale-0 dark:invert dark:opacity-60 dark:hover:invert-0">
                 <img
-                  src="/logo-claude_1760714845233.png"
+                  src={`${viewPath}/logo-claude.png`}
                   alt="Claude"
                   className="h-8 w-auto"
                 />
@@ -107,7 +110,7 @@ export default function IndexPage() {
               {/* v0 */}
               <div className="opacity-50 grayscale transition-all hover:opacity-100 hover:grayscale-0 dark:invert dark:opacity-60 dark:hover:invert-0">
                 <img
-                  src="/logo-v0_1760714845235.png"
+                  src={`${viewPath}/logo-v0.png`}
                   alt="v0"
                   className="h-8 w-auto"
                 />
@@ -116,7 +119,7 @@ export default function IndexPage() {
               {/* Replit */}
               <div className="opacity-50 grayscale transition-all hover:opacity-100 hover:grayscale-0 dark:invert dark:opacity-60 dark:hover:invert-0">
                 <img
-                  src="/logo-replit_1760714845234.png"
+                  src={`${viewPath}/logo-replit.png`}
                   alt="Replit"
                   className="h-8 w-auto"
                 />
@@ -125,7 +128,7 @@ export default function IndexPage() {
               {/* Bolt */}
               <div className="opacity-50 grayscale transition-all hover:opacity-100 hover:grayscale-0 dark:invert dark:opacity-60 dark:hover:invert-0">
                 <img
-                  src="/logo-bolt_1760714845232.png"
+                  src={`${viewPath}/logo-bolt.png`}
                   alt="Bolt"
                   className="h-8 w-auto"
                 />
@@ -134,7 +137,7 @@ export default function IndexPage() {
               {/* Lovable */}
               <div className="opacity-50 grayscale transition-all hover:opacity-100 hover:grayscale-0 dark:invert dark:opacity-60 dark:hover:invert-0">
                 <img
-                  src="/logo-lovable_1760714845234.png"
+                  src={`${viewPath}/logo-lovable.png`}
                   alt="Lovable"
                   className="h-8 w-auto"
                 />
