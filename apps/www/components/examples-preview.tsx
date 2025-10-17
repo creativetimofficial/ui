@@ -1,3 +1,4 @@
+import Image from "next/image"
 import Link from "next/link"
 
 import { Card } from "@/registry/creative-tim-ui/ui/card"
@@ -10,6 +11,7 @@ interface ExampleCategory {
     name: string
     blockCount: number
     category: string
+    thumbnail?: string
   }[]
 }
 
@@ -44,62 +46,74 @@ const categories: ExampleCategory[] = [
       {
         name: "Widgets",
         blockCount: 7,
-        category: "cruds"
+        category: "cruds",
+        thumbnail: "https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/widgets-thumbnail.jpg"
       },
       {
         name: "Charts",
         blockCount: 6,
-        category: "cruds"
+        category: "cruds",
+        thumbnail: "https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/charts-thumbnail.jpg"
       },
       {
         name: "Tables",
         blockCount: 10,
-        category: "cruds"
+        category: "cruds",
+        thumbnail: "https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/tables-thumbnail.jpg"
       },
       {
         name: "Modals",
         blockCount: 5,
-        category: "modals"
+        category: "modals",
+        thumbnail: "https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/modals-thumbnail.jpg"
       },
       {
         name: "Account",
         blockCount: 7,
-        category: "account"
+        category: "account",
+        thumbnail: "https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/account-thumbnail.jpg"
       },
       {
         name: "Billing",
         blockCount: 5,
-        category: "billing"
+        category: "billing",
+        thumbnail: "https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/billing-thumbnail.jpg"
       },
       {
         name: "Tables Headers",
         blockCount: 6,
-        category: "cruds"
+        category: "cruds",
+        thumbnail: "https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/table-headers-thumbnail.jpg"
       },
       {
         name: "Tables Footers",
         blockCount: 6,
-        category: "cruds"
+        category: "cruds",
+        thumbnail: "https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/table-footers-thumbnail.jpg"
       },
       {
         name: "KPI Cards",
         blockCount: 7,
-        category: "cruds"
+        category: "cruds",
+        thumbnail: "https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/kpi-cards-thumbnail.jpg"
       },
       {
         name: "Sidebars",
         blockCount: 9,
-        category: "sidebars"
+        category: "sidebars",
+        thumbnail: "https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/sidebar-thumbnail.jpg"
       },
       {
         name: "Dropdowns",
         blockCount: 6,
-        category: "dropdowns"
+        category: "dropdowns",
+        thumbnail: "https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/dropdown-filter-thumbnail.jpg"
       },
       {
         name: "User Profile",
         blockCount: 5,
-        category: "user-profile"
+        category: "user-profile",
+        thumbnail: "https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/user-profile-thumbnail.jpg"
       }
     ]
   },
@@ -289,7 +303,17 @@ export function ExamplesPreview() {
               >
                 <Card className="overflow-hidden border bg-card transition-all hover:shadow-md">
                   <div className="relative aspect-[16/10] overflow-hidden bg-muted/30">
-                    <div className="absolute inset-0 bg-gradient-to-br from-muted/80 to-muted/40" />
+                    {example.thumbnail ? (
+                      <Image
+                        src={example.thumbnail}
+                        alt={example.name}
+                        fill
+                        className="object-cover"
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                      />
+                    ) : (
+                      <div className="absolute inset-0 bg-gradient-to-br from-muted/80 to-muted/40" />
+                    )}
                   </div>
                   <div className="p-4">
                     <div className="flex items-center justify-between">
