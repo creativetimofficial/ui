@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "card-blog",
+  "type": "registry:ui",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "card",
+    "button"
+  ],
+  "files": [
+    {
+      "path": "components/examples/card-blog.tsx",
+      "content": "\"use client\"\n\nimport { Calendar } from \"lucide-react\"\n\nimport { Button } from \"@/components/ui/button\"\nimport {\n  Card,\n  CardDescription,\n  CardFooter,\n  CardHeader,\n  CardTitle,\n} from \"@/components/ui/card\"\n\nexport default function CardBlog() {\n  return (\n    <Card className=\"w-full max-w-md overflow-hidden\">\n      <div className=\"aspect-video w-full bg-gradient-to-br from-blue-500 to-purple-600\" />\n      <CardHeader>\n        <div className=\"text-muted-foreground flex items-center gap-2 text-sm\">\n          <Calendar className=\"h-4 w-4\" />\n          <span>March 15, 2025</span>\n          <span>•</span>\n          <span>5 min read</span>\n        </div>\n        <CardTitle>Getting Started with Next.js</CardTitle>\n        <CardDescription>\n          Learn how to build modern web applications with Next.js, React, and\n          TypeScript.\n        </CardDescription>\n      </CardHeader>\n      <CardFooter>\n        <Button variant=\"ghost\">Read More</Button>\n      </CardFooter>\n    </Card>\n  )\n}\n",
+      "type": "registry:ui"
+    }
+  ]
+}

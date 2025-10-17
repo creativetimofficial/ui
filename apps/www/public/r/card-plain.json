@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "card-plain",
+  "type": "registry:ui",
+  "registryDependencies": [
+    "card"
+  ],
+  "files": [
+    {
+      "path": "components/examples/card-plain.tsx",
+      "content": "\"use client\"\n\nimport { Card, CardContent } from \"@/components/ui/card\"\n\nexport default function CardPlain() {\n  return (\n    <Card className=\"w-full max-w-md\">\n      <CardContent className=\"pt-6\">\n        <p className=\"text-muted-foreground text-sm\">\n          This is a plain card with simple content. Perfect for displaying basic\n          information.\n        </p>\n      </CardContent>\n    </Card>\n  )\n}\n",
+      "type": "registry:ui"
+    }
+  ]
+}

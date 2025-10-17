@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "card-ecommerce",
+  "type": "registry:ui",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "card",
+    "button",
+    "badge"
+  ],
+  "files": [
+    {
+      "path": "components/examples/card-ecommerce.tsx",
+      "content": "\"use client\"\n\nimport { Heart, ShoppingCart, Star } from \"lucide-react\"\n\nimport { Badge } from \"@/components/ui/badge\"\nimport { Button } from \"@/components/ui/button\"\nimport {\n  Card,\n  CardContent,\n  CardDescription,\n  CardFooter,\n  CardHeader,\n  CardTitle,\n} from \"@/components/ui/card\"\n\nexport default function CardEcommerce() {\n  return (\n    <Card className=\"w-full max-w-md overflow-hidden\">\n      <div className=\"relative\">\n        <div className=\"aspect-square w-full bg-gradient-to-br from-amber-400 to-orange-500\" />\n        <Badge className=\"absolute top-2 right-2\">New</Badge>\n      </div>\n      <CardHeader>\n        <CardTitle>Premium Wireless Headphones</CardTitle>\n        <CardDescription>\n          High-quality audio with active noise cancellation\n        </CardDescription>\n      </CardHeader>\n      <CardContent>\n        <div className=\"flex items-center justify-between\">\n          <div className=\"flex items-center gap-1\">\n            {[...Array(4)].map((_, i) => (\n              <Star\n                key={i}\n                className=\"h-4 w-4 fill-yellow-400 text-yellow-400\"\n              />\n            ))}\n            <Star className=\"h-4 w-4\" />\n            <span className=\"text-muted-foreground text-sm\">(128)</span>\n          </div>\n          <div className=\"text-2xl font-bold\">$299</div>\n        </div>\n      </CardContent>\n      <CardFooter className=\"gap-2\">\n        <Button className=\"flex-1\">\n          <ShoppingCart className=\"mr-2 h-4 w-4\" />\n          Add to Cart\n        </Button>\n        <Button variant=\"outline\" size=\"icon\">\n          <Heart className=\"h-4 w-4\" />\n        </Button>\n      </CardFooter>\n    </Card>\n  )\n}\n",
+      "type": "registry:ui"
+    }
+  ]
+}

@@ -4,7 +4,7 @@ Thanks for your interest in contributing to ui.creative-tim.com.
 
 Please take a moment to review this document before submitting your first pull request. We also strongly recommend that you check for open issues and pull requests to see if someone else is working on something similar.
 
-If you need any help, feel free to reach out to [@louisjoejordan](https://twitter.com/louisjoejordan).
+If you need any help, feel free to reach out to [Creative Tim](https://creative-tim.com/contact).
 
 ## About this repository
 
@@ -72,7 +72,7 @@ You can use the `pnpm --filter=[WORKSPACE]` command to start the development pro
 
 #### Examples
 
-1. To run the `ui.elevenlabs.io` website:
+1. To run the `creative-tim.com/ui` website:
 
 ```bash
 pnpm dev
@@ -95,8 +95,8 @@ We use a registry system for developing components. You can find the source code
 apps
 └── www
     └── registry
-        └── creative-tim-ui
-            ├── example
+        └── creative-tim
+            ├── blocks
             └── ui
 ```
 

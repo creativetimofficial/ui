@@ -1,5 +1,5 @@
 ## Overview
-Creative Tim UI is a comprehensive React component library built on shadcn/ui, designed for audio and agentic applications. It functions as a monorepo providing customizable components like orbs, waveforms, voice agents, audio players, and conversation interfaces. The project serves as a documentation website and component registry, allowing CLI-based component installation. It emphasizes developer experience through streamlined installation, extensive documentation, and examples, with components designed for easy integration and full customization via Tailwind CSS and TypeScript. The project aims to provide a rich set of UI/UX for ecommerce, marketing, and application interfaces, with a strong focus on modern design trends and user interaction.
+Creative Tim UI is a comprehensive React component library built on shadcn/ui, designed for modern web applications. It functions as a monorepo providing customizable components for ecommerce, marketing, and application interfaces. The project serves as a documentation website and component registry, allowing CLI-based component installation. It emphasizes developer experience through streamlined installation, extensive documentation, and examples, with components designed for easy integration and full customization via Tailwind CSS and TypeScript. The project aims to provide a rich set of UI/UX with a strong focus on modern design trends and user interaction.
 
 ## User Preferences
 Preferred communication style: Simple, everyday language.
@@ -58,6 +58,10 @@ Preferred communication style: Simple, everyday language.
 - **Modern Styling**: Incorporates professional typography, improved visual hierarchy, glass-morphism effects, and hover animations across various components.
 - **Responsive Design**: All UI components are optimized for mobile, tablet, and desktop viewing.
 - **Testimonial Layouts**: Redesigned multi-testimonial grid layout with 5-star ratings, professional avatars, and integrated stats.
+- **Card Display Enhancements**: Dark/light card designs with gradient hover effects, improved chip card visuals, optimized typography, and interactive animations.
+- **Payment Method UI**: Default card indicators, 2-column grid layout for cards, improved typography, interactive hover effects, and primary "Add New Card" button.
+- **Invoices UI**: Content wrapped in white card container, overdue badges in red (destructive), and professional layout.
+- **Transaction History UI**: Icon display fix with proper alignment and color-coding (green for increasing, red for decreasing, black/white for pending), wrapped in white card container for visual separation.
 
 ## External Dependencies
 
@@ -65,11 +69,6 @@ Preferred communication style: Simple, everyday language.
 - **Radix UI**: Headless UI primitives.
 - **shadcn/ui**: Base component patterns.
 - **Motion**: Animation library.
-- **Three.js + React Three Fiber**: 3D rendering for orb components.
-
-### ElevenLabs Integration
-- **@elevenlabs/elevenlabs-js**: Official JavaScript SDK.
-- **@elevenlabs/react**: React components and hooks for voice/audio features.
 
 ### Development Tools
 - **ESLint**: Code quality.
@@ -109,166 +108,55 @@ Preferred communication style: Simple, everyday language.
 - **clsx + tailwind-merge**: Conditional className composition.
 - **date-fns**: Date manipulation.
 - **class-variance-authority**: Variant-based component APIs.
-### Testimonials 17 UI Improvements with Background Image
-- **New Background Image**:
-  - Added Unsplash background: cosmic/space-themed image
-  - URL: https://images.unsplash.com/photo-1638438134099-a91e5373aaf0
-  - Gradient overlay with from-black/80 to-black/60 for better text readability
-  - Added backdrop-blur-sm for subtle blur effect
-- **Enhanced Typography**:
-  - Added decorative Quote icon (h-12 w-12) with white/30 opacity
-  - Larger quote text (text-xl md:text-2xl) with relaxed leading
-  - Improved name/role layout with bullet separator on desktop
-  - Better text hierarchy with font-semibold name and muted role
-- **Logo Card Enhancement**:
-  - Logo wrapped in glassmorphism container (bg-white/10 with backdrop-blur)
-  - Rounded corners (rounded-xl) with padding (p-8)
-  - Centered display for better visual balance
-  - Larger logo size (h-16 md:h-20)
-- **Improved Navigation Dots**:
-  - Active dot expands horizontally (w-8) for better visibility
-  - Inactive dots are circular (w-2 h-2) with hover states
-  - Better spacing (gap-3) and transitions
-  - Added aria-labels for accessibility
-- **Enhanced Arrow Buttons**:
-  - Larger icons (h-8 w-8) for better clickability
-  - Improved hover states (hover:bg-white/20)
-  - Better positioning (left-4, right-4)
-  - Added aria-labels for accessibility
-- **Card Improvements**:
-  - Increased border radius to rounded-2xl for modern look
-  - Better padding (p-6, px-6 py-12 md:px-12 md:py-16)
-  - Overflow hidden for clean background display
-- **Section Spacing**: Increased py-16 to py-20 for more breathing room
-- **Images Preserved**: Netflix and Coinbase logos kept as requested
+### Application & Admin UI Thumbnails
+- **Thumbnail Integration**: All Application & Admin UI category cards now display actual preview images from Creative Tim's public assets repository on GitHub
+- **Images Source**: https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/
+- **Optimized Display**: Using Next.js Image component with responsive sizing for optimal loading performance
+- **Configured Examples**: Widgets, Charts, Tables, Modals, Account, Billing, Tables Headers, Tables Footers, KPI Cards, Sidebars, Dropdowns, and User Profile all have dedicated thumbnail images
 
-### Testimonials 07 Content Updates
-- **Updated Avatars**: Replaced with professional Unsplash images from testimonials-04
-  - Sarah Johnson (Product Designer)
-  - Michael Chen (Tech Lead at Stripe)
-  - Emma Rodriguez (Frontend Developer)
-- **Improved Testimonial Text**: Updated quotes to focus on component library benefits
-  - Component quality and design workflow acceleration
-  - Documentation, TypeScript support, and enterprise features
-  - Production-ready components and cohesive design system
-- **Enhanced Title**: Changed from "Work with us" to "What Developers Say"
-- **Consistent Design Pattern**: Aligns with other testimonial blocks using professional avatars and relevant content
+### Marketing & Presentation Thumbnails
+- **Thumbnail Integration**: All Marketing & Presentation category cards now display actual preview images from Creative Tim's public assets repository
+- **Configured Examples**: Hero Sections, Testimonial Sections, Popup Sections, Authentication, Onboarding Sections, Navbars, Contact Sections, Team Sections, Newsletter, Footers, and Coming Soon Sections all have dedicated thumbnail images
 
-### Testimonials 09 Content Updates
-- **Updated Left Image**: Replaced with professional Unsplash image from Sarah Johnson
-  - URL: https://images.unsplash.com/photo-1716662318479-a9c0f1cd1a0e (professional woman in business attire)
-- **Improved Headline**: Changed from "Awesome services! Fast and secure." to "Revolutionary component library for modern design"
-- **Enhanced Testimonial Text**: Updated quote to focus on component library benefits
-  - Design team transformation and workflow acceleration
-  - Attention to detail and seamless integration
-  - Production-ready components with exceptional quality
-- **Updated Attribution**: Changed to "Sarah Johnson, Design Director, Spotify"
-- **Spotify Logo Preserved**: Kept the original Spotify logo as requested
-- **Consistent Design Pattern**: Aligns with component library focus across all testimonial blocks
+### Content UI Thumbnails
+- **Thumbnail Integration**: All Content UI category cards now display actual preview images from Creative Tim's public assets repository
+- **Configured Examples**: FAQs, Feature Sections, Stats Sections, Content Sections, Cards, Error Sections, Maintenance Sections, Blog Sections, Logo Sections, and Calendar Sections all have dedicated thumbnail images
 
-### Testimonials 01 Content Updates
-- **Updated Avatars**: Replaced with professional Unsplash images from testimonials-04
-  - Sarah Johnson (Product Designer)
-  - Michael Chen (Tech Lead at Stripe)
-  - Emma Rodriguez (Frontend Developer)
-- **Improved Testimonial Text**: Updated quotes to focus on component library benefits
-  - Component quality and design workflow acceleration
-  - Documentation, TypeScript support, and enterprise features
-  - Production-ready components and cohesive design system
-- **Consistent Design Pattern**: Aligns with other testimonial blocks using professional avatars and relevant content
+### Ecommerce UI Thumbnails
+- **Thumbnail Integration**: All Ecommerce UI category cards now display actual preview images from Creative Tim's public assets repository
+- **Configured Examples**: Banner Sections, Ecommerce Sections, Product List Sections, Customer Overview Sections, Pricing Sections, Categories, and Order Sections all have dedicated thumbnail images
 
-### Card Display 01 UI Improvements
-- **Enhanced Visual Design**:
-  - Dark card: Solid black background for clean, modern look
-  - Light card: Clean white with improved shadow for elevation
-  - Added subtle gradient overlay that appears on hover
-- **Chip Card Element**: 
-  - Golden gradient chip card visual (yellow-400 to yellow-600)
-  - Realistic appearance with gradient overlay effect
-  - Smaller size (h-10 w-14) for balanced proportions
-- **Improved Wifi Icon**:
-  - Wrapped in rounded container with subtle background
-  - Dark card: white/10 background
-  - Light card: gray-100 background
-- **Better Typography**:
-  - Compact card numbers (text-lg) with tracking (0.2em) - fits on single row
-  - Bold font weight for card numbers and user info
-  - Uppercase labels with better tracking for professional look
-  - Color-coded labels (gray-400 for dark, gray-500 for light)
-  - Smaller user info text (text-sm) for balanced layout
-- **Optimized Spacing**:
-  - Compact padding (p-6) for sleeker appearance
-  - Better gap spacing between elements (gap-6)
-  - Improved layout structure with justify-between
-- **Interactive Effects**:
-  - Hover scale animation (scale-[1.02])
-  - Enhanced shadow on hover (hover:shadow-2xl)
-  - Mastercard logo scales up on hover (hover:scale-110)
-  - Smooth transitions on all interactive elements
-- **Professional Polish**:
-  - Larger mastercard logo (h-10)
-  - Better visual hierarchy with font sizes and weights
-  - Improved container max-width (max-w-5xl)
+### Web 3.0 Thumbnails
+- **Thumbnail Integration**: All Web 3.0 category cards now display actual preview images from Creative Tim's public assets repository
+- **Configured Examples**: Web 3.0 Login, Web 3.0 Charts, and Web 3.0 Cards all have dedicated thumbnail images
+- **Complete Coverage**: ALL home page example cards (43 total) now feature real preview thumbnails from the Creative Tim public assets repository
 
-### Payment Method 01 UI Improvements
-- **Default Card Indicator**:
-  - Primary-colored badge in top-right corner with checkmark icon
-  - "Default" label for easy identification
-  - Positioned absolutely for clean look
-- **Enhanced Card Layout**:
-  - 2-column grid layout (md:grid-cols-2) for better space utilization
-  - 2 rows with 2 cards each for organized display
-  - Vertical card design with logo and info stacked
-  - Larger cards (p-6) with better spacing
-  - Card logos in gray-50 rounded containers (h-12 w-16)
-  - Visible card brand logos (Visa/Mastercard)
-- **Improved Typography**:
-  - Larger title (text-2xl font-bold) for "Payment Methods"
-  - Bold card numbers (font-bold) with wider tracking
-  - Card type labels with capitalize and muted color
-- **Interactive Elements**:
-  - Hover border color change (border-primary/50)
-  - Action buttons visible by default (edit and delete)
-  - Edit and delete buttons with tooltips
-  - Shadow lift on hover (hover:shadow-md)
-- **Better Button Styling**:
-  - Primary "Add New Card" button instead of outline
-  - Destructive red color for delete with hover background
-  - Larger icon buttons (h-9 w-9)
-- **Professional Polish**:
-  - Group hover effects for smooth interactions
-  - Transition-all for fluid animations
-  - Better visual hierarchy with spacing
+### Showcase Masonry Section
+- **Location**: Home page, positioned below CTAs and above Achievements section
+- **Layout**: Responsive masonry grid (1 column mobile, 2 tablet, 3 desktop)
+- **Featured Components**:
+  - Order Summary card with product items and pricing breakdown
+  - Transaction History with calendar dropdown and 2 transaction examples
+  - Third-Party Integrations card with GitHub accordion item
+  - Order Timeline showing order progress steps
+  - Product card (Zegna cardigan) with favorite heart button
+  - Personal Information form with name, email, phone, and profession inputs
+  - Testimonial card with 5-star rating
+- **Purpose**: Visual showcase of real component examples in an attractive masonry layout
 
-### Invoices 01 UI Improvements
-- **White Card Container**:
-  - Wrapped all content in white card container (bg-white with dark:bg-card)
-  - Added rounded-xl, border, and shadow-sm for clean card appearance
-  - Better visual separation from background
-- **Overdue Tags Color**:
-  - Overdue badges now display in red (destructive variant)
-  - Non-overdue badges remain green (bg-green-100 text-green-800)
-  - Conditional className based on isOverdue status
-- **Professional Layout**:
-  - Clean card-based design
-  - Improved visual hierarchy
-
-### Transaction History 01 UI Improvements
-- **Icon Display Fix**: 
-  - Replaced Card component with regular div to avoid flex-col conflict
-  - Changed from `place-items-center` to `flex items-center justify-center` for perfect icon alignment
-  - Added `shrink-0` to icon container to prevent unwanted shrinking
-  - Icons (ChevronUp, ChevronDown, Clock) now properly centered and visible
-  - Maintained Card visual styling (bg-card, text-card-foreground, rounded-xl, border, shadow-sm)
-- **Icon Color Coding**:
-  - ChevronUp (increasing) - Green (text-green-600)
-  - ChevronDown (decreasing) - Red (text-red-600)
-  - Clock (pending) - Black (text-black with dark:text-white for dark mode)
-- **White Card Container**:
-  - Wrapped all content in white card container (bg-white with dark:bg-card)
-  - Added rounded-xl, border, and shadow-sm for clean card appearance
-  - Better visual separation from background
-- **Visual Improvements**:
-  - Maintained overall design as requested
-  - Visual clarity improved with color-coded status icons
-  - Professional card-based layout
+### Coming Soon Cards Feature
+- **Badge UI Component**: Added Badge component import from the registry
+- **Coming Soon Flag**: Added `comingSoon` boolean field to example interface
+- **Available Cards** (10 cards clickable and active):
+  - Web 3.0: Web 3.0 Cards
+  - Application & Admin UI: Account, Billing, Modals
+  - Marketing & Presentation: Contact Sections, Footers, Testimonial Sections
+  - Content UI: FAQs, Blog Sections
+  - Ecommerce UI: Ecommerce Sections
+- **Disabled Cards**: All other cards (33 cards) marked as "Coming Soon" with overlay and badge
+- **Visual Treatment**: Cards with `comingSoon: true` display:
+  - Clear thumbnail image (no blur)
+  - Black overlay (40% opacity)
+  - "Soon" badge centered on overlay
+  - Cursor set to not-allowed
+  - Click disabled (no Link wrapper)

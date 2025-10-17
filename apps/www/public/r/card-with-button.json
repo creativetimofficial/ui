@@ -1,0 +1,16 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "card-with-button",
+  "type": "registry:ui",
+  "registryDependencies": [
+    "card",
+    "button"
+  ],
+  "files": [
+    {
+      "path": "components/examples/card-with-button.tsx",
+      "content": "\"use client\"\n\nimport { Button } from \"@/components/ui/button\"\nimport {\n  Card,\n  CardContent,\n  CardDescription,\n  CardFooter,\n  CardHeader,\n  CardTitle,\n} from \"@/components/ui/card\"\n\nexport default function CardWithButton() {\n  return (\n    <Card className=\"w-full max-w-md\">\n      <CardHeader>\n        <CardTitle>Card Title</CardTitle>\n        <CardDescription>\n          This is a brief description of the card content.\n        </CardDescription>\n      </CardHeader>\n      <CardContent>\n        <p className=\"text-muted-foreground text-sm\">\n          More detailed information goes here in the card content area.\n        </p>\n      </CardContent>\n      <CardFooter>\n        <Button>Learn More</Button>\n      </CardFooter>\n    </Card>\n  )\n}\n",
+      "type": "registry:ui"
+    }
+  ]
+}
