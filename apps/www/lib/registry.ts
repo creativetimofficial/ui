@@ -69,7 +69,7 @@ function buildPathMappings(
   files.forEach((file) => {
     if (file.path && file.target) {
       // Extract the source path relative to registry/creative-tim-ui/
-      const match = file.path.match(/registry\/elevenlabs-ui\/(.+)$/)
+      const match = file.path.match(/registry\/creative-tim-ui\/(.+)$/)
       if (match) {
         mappings.set(match[1], file.target)
       }
@@ -187,7 +187,7 @@ export function fixImport(content: string, pathMappings: Map<string, string>) {
       // Create regex to match this specific import path
       const escapedPath = sourcePathNoExt.replace(/\//g, "\\/")
       const importRegex = new RegExp(
-        `@\\/registry\\/elevenlabs-ui\\/${escapedPath}`,
+        `@\\/registry\\/creative-tim-ui\\/${escapedPath}`,
         "g"
       )
 
