@@ -239,11 +239,21 @@ function rewriteImports(content: string, pathMappings: Map<string, string>): str
   return content
 }
 
-async function buildAllJson() {
-  console.log("🎨 Building all.json for UI components...")
+async function buildPackageJson(
+  packageType: "ui" | "blocks" | "agents",
+  fileName: string,
+  description: string
+) {
+  console.log(`🎨 Building ${fileName} for ${packageType}...`)
 
-  // Filter only UI components
-  const uiComponents = registry.items.filter(item => item.type === "registry:ui")
+  // Filter components by type
+  const typeMap = {
+    ui: "registry:ui",
+    blocks: "registry:block",
+    agents: "registry:agent"
+  }
+  
+  const components = registry.items.filter(item => item.type === typeMap[packageType])
 
   // Aggregate all dependencies and registryDependencies
   const allDependencies = new Set<string>()
@@ -253,7 +263,7 @@ async function buildAllJson() {
   // Build path mappings for import rewriting
   const pathMappings = new Map<string, string>()
 
-  for (const component of uiComponents) {
+  for (const component of components) {
     // Collect dependencies
     if (component.dependencies) {
       component.dependencies.forEach(dep => allDependencies.add(dep))
@@ -276,10 +286,14 @@ async function buildAllJson() {
           content = await fs.readFile(absolutePath, 'utf-8')
         }
 
-        // Clean path - remove registry/creative-tim-ui/ prefix
+        // Clean path - remove registry/creative-tim-ui/ prefix for UI components
         let cleanPath = file.path
-        if (cleanPath.startsWith('ui/')) {
-          cleanPath = 'components/' + cleanPath
+        if (packageType === "ui") {
+          if (cleanPath.startsWith('ui/')) {
+            cleanPath = 'components/' + cleanPath
+          } else if (cleanPath.startsWith('examples/')) {
+            cleanPath = 'components/' + cleanPath
+          }
         }
 
         // Build path mapping
@@ -304,12 +318,85 @@ async function buildAllJson() {
     }
   })
 
-  // Create the all.json structure
+  // Create the JSON structure
+  const packageJson = {
+    "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+    name: fileName.replace('.json', ''),
+    type: typeMap[packageType],
+    description: description,
+    dependencies: Array.from(allDependencies).sort(),
+    registryDependencies: Array.from(allRegistryDependencies).sort(),
+    files: allFiles
+  }
+
+  // Write the JSON file
+  const outputPath = path.join(process.cwd(), "public", "r", fileName)
+  await fs.writeFile(outputPath, JSON.stringify(packageJson, null, 2))
+  
+  console.log(`✨ Generated ${fileName} with ${components.length} ${packageType} components`)
+}
+
+async function buildAllJson() {
+  console.log("📦 Building all.json...")
+
+  // Combine all components
+  const allDependencies = new Set<string>()
+  const allRegistryDependencies = new Set<string>()
+  const allFiles: any[] = []
+  const pathMappings = new Map<string, string>()
+
+  for (const component of registry.items) {
+    if (component.dependencies) {
+      component.dependencies.forEach(dep => allDependencies.add(dep))
+    }
+    if (component.registryDependencies) {
+      component.registryDependencies.forEach(dep => allRegistryDependencies.add(dep))
+    }
+
+    if (component.files) {
+      for (const file of component.files) {
+        const filePath = `registry/creative-tim-ui/${file.path}`
+        const absolutePath = path.join(process.cwd(), filePath)
+
+        let content = ""
+        if (existsSync(absolutePath)) {
+          content = await fs.readFile(absolutePath, 'utf-8')
+        }
+
+        let cleanPath = file.path
+        if (component.type === "registry:ui") {
+          if (cleanPath.startsWith('ui/')) {
+            cleanPath = 'components/' + cleanPath
+          } else if (cleanPath.startsWith('examples/')) {
+            cleanPath = 'components/' + cleanPath
+          }
+        }
+
+        if (file.target) {
+          pathMappings.set(file.path, file.target)
+        }
+
+        allFiles.push({
+          path: cleanPath,
+          type: file.type,
+          target: file.target ?? "",
+          content: content
+        })
+      }
+    }
+  }
+
+  allFiles.forEach(file => {
+    if (file.content) {
+      file.content = rewriteImports(file.content, pathMappings)
+    }
+  })
+
   const allJson = {
     "$schema": "https://ui.shadcn.com/schema/registry-item.json",
     name: "all",
-    type: "registry:ui",
-    description: "All UI components from Creative Tim UI",
+    type: "registry:all",
+    description: "All components from Creative Tim UI (UI components, blocks, and agents)",
     dependencies: Array.from(allDependencies).sort(),
     registryDependencies: Array.from(allRegistryDependencies).sort(),
     files: allFiles
@@ -319,7 +406,32 @@ async function buildAllJson() {
   const outputPath = path.join(process.cwd(), "public/r/all.json")
   await fs.writeFile(outputPath, JSON.stringify(allJson, null, 2))
 
-  console.log(`✨ Generated all.json with ${uiComponents.length} UI components`)
+  console.log(`✨ Generated all.json with ${registry.items.length} total components`)
+}
+
+async function buildPackageRegistries() {
+  console.log("📦 Building package-specific registries...")
+  
+  // Build UI components registry
+  await buildPackageJson(
+    "ui",
+    "ui.json",
+    "All UI components from @creative-tim/ui"
+  )
+  
+  // Build blocks registry
+  await buildPackageJson(
+    "blocks",
+    "blocks.json",
+    "All blocks from @creative-tim/blocks"
+  )
+  
+  // Future: Build agents registry
+  // await buildPackageJson(
+  //   "agents",
+  //   "agents.json",
+  //   "All agent components from @creative-tim/agents"
+  // )
 }
 
 async function buildBlocksIndex() {
@@ -361,6 +473,9 @@ try {
   console.log("🏗️ Building registry...")
   await buildRegistry()
 
+  console.log("📦 Building package registries...")
+  await buildPackageRegistries()
+  
   console.log("📦 Building all.json...")
   await buildAllJson()
 } catch (error) {
