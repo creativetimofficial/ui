@@ -85,13 +85,13 @@ export default function IndexPage() {
             <p className="text-muted-foreground font-semibold">
               Ready to be imported in
             </p>
-            <div className="flex flex-wrap items-center justify-center gap-8 md:gap-12">
+            <div className="flex flex-wrap items-center justify-center gap-8 md:gap-10">
               {/* OpenAI */}
               <div className="opacity-50 grayscale transition-all hover:opacity-100 hover:grayscale-0">
                 <img
                   src="/logo-open-ai_1760714845234.png"
                   alt="OpenAI"
-                  className="h-10 w-auto"
+                  className="h-8 w-auto"
                 />
               </div>
 
@@ -100,7 +100,7 @@ export default function IndexPage() {
                 <img
                   src="/logo-claude_1760714845233.png"
                   alt="Claude"
-                  className="h-10 w-auto"
+                  className="h-8 w-auto"
                 />
               </div>
 
@@ -109,7 +109,7 @@ export default function IndexPage() {
                 <img
                   src="/logo-v0_1760714845235.png"
                   alt="v0"
-                  className="h-10 w-auto"
+                  className="h-8 w-auto"
                 />
               </div>
 
@@ -118,7 +118,7 @@ export default function IndexPage() {
                 <img
                   src="/logo-replit_1760714845234.png"
                   alt="Replit"
-                  className="h-10 w-auto"
+                  className="h-8 w-auto"
                 />
               </div>
 
@@ -127,7 +127,7 @@ export default function IndexPage() {
                 <img
                   src="/logo-bolt_1760714845232.png"
                   alt="Bolt"
-                  className="h-10 w-auto"
+                  className="h-8 w-auto"
                 />
               </div>
 
@@ -136,7 +136,7 @@ export default function IndexPage() {
                 <img
                   src="/logo-lovable_1760714845234.png"
                   alt="Lovable"
-                  className="h-10 w-auto"
+                  className="h-8 w-auto"
                 />
               </div>
             </div>

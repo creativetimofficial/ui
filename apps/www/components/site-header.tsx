@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Image from "next/image"
 import { ArrowRight } from "lucide-react"
 
 import { siteConfig } from "@/lib/config"
@@ -28,8 +29,14 @@ export function SiteHeader() {
                 className="flex lg:hidden"
               />
               <Link href="/" className="flex items-center gap-2">
-                <Icons.logo className="size-8 text-white" />
-                <span className="hidden sm:inline-block text-white font-semibold text-lg">
+                <Image 
+                  src="/favicon-32x32.png" 
+                  alt="Creative Tim UI" 
+                  width={32} 
+                  height={32} 
+                  className="rounded-full"
+                />
+                <span className="hidden sm:inline-block text-white font-semibold text-base">
                   {siteConfig.name}
                 </span>
               </Link>
