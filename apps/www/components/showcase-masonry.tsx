@@ -269,29 +269,29 @@ export function ShowcaseMasonry() {
                 value="github"
                 className="border-border rounded-lg border"
               >
-                <div className="flex items-center justify-between px-4 py-4">
-                  <div className="flex flex-1 items-center gap-4">
-                    <div className="bg-muted/50 flex h-12 w-12 items-center justify-center rounded-lg">
+                <div className="flex flex-col gap-4 px-4 py-4 sm:flex-row sm:items-center sm:justify-between">
+                  <div className="flex flex-1 items-center gap-3 sm:gap-4">
+                    <div className="bg-muted/50 flex h-10 w-10 shrink-0 items-center justify-center rounded-lg sm:h-12 sm:w-12">
                       <Github
-                        className={`h-6 w-6 ${isGithubActive ? "text-primary" : "text-muted-foreground"}`}
+                        className={`h-5 w-5 sm:h-6 sm:w-6 ${isGithubActive ? "text-primary" : "text-muted-foreground"}`}
                       />
                     </div>
-                    <div className="flex-1 space-y-1 text-left">
-                      <div className="flex items-center gap-2">
+                    <div className="min-w-0 flex-1 space-y-1 text-left">
+                      <div className="flex flex-wrap items-center gap-2">
                         <h3 className="font-semibold">GitHub</h3>
                         <Badge
                           variant="outline"
-                          className="text-muted-foreground"
+                          className="text-muted-foreground text-xs"
                         >
                           Development
                         </Badge>
                       </div>
-                      <p className="text-muted-foreground line-clamp-1 text-sm">
+                      <p className="text-muted-foreground line-clamp-1 text-xs sm:text-sm">
                         Connect your GitHub account to sync repositories
                       </p>
                     </div>
                   </div>
-                  <div className="flex items-center gap-3">
+                  <div className="flex items-center justify-between gap-3 sm:justify-end">
                     <div className="flex items-center gap-2">
                       <Switch
                         id="github-toggle"
@@ -300,18 +300,18 @@ export function ShowcaseMasonry() {
                       />
                       <Label
                         htmlFor="github-toggle"
-                        className="cursor-pointer text-sm"
+                        className="cursor-pointer text-xs sm:text-sm"
                       >
                         {isGithubActive ? "Enabled" : "Enable"}
                       </Label>
                     </div>
-                    <AccordionTrigger className="hover:bg-muted/50 rounded px-3 py-2">
-                      <span className="text-sm font-medium">View More</span>
+                    <AccordionTrigger className="hover:bg-muted/50 rounded px-2 py-2 sm:px-3">
+                      <span className="text-xs font-medium sm:text-sm">View More</span>
                     </AccordionTrigger>
                   </div>
                 </div>
                 <AccordionContent className="px-4 pb-6">
-                  <p className="text-muted-foreground text-sm">
+                  <p className="text-muted-foreground text-xs sm:text-sm">
                     You haven&apos;t added your GitHub account or you
                     aren&apos;t authorized. Click &quot;Connect&quot; to
                     initiate the integration process.
