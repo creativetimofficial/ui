@@ -79,6 +79,140 @@ export default function IndexPage() {
               <Link href="/docs/components">View Components</Link>
             </Button>
           </PageActions>
+
+          {/* Logo Section */}
+          <div className="mt-12 flex flex-col items-center gap-6">
+            <p className="text-muted-foreground text-sm uppercase tracking-wider">
+              Ready to be imported in
+            </p>
+            <div className="flex flex-wrap items-center justify-center gap-8 md:gap-12">
+              {/* OpenAI */}
+              <div className="opacity-50 grayscale transition-all hover:opacity-100 hover:grayscale-0">
+                <svg
+                  width="120"
+                  height="30"
+                  viewBox="0 0 120 30"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-6 w-auto"
+                >
+                  <text
+                    x="0"
+                    y="20"
+                    className="fill-current font-semibold"
+                    fontSize="18"
+                  >
+                    OpenAI
+                  </text>
+                </svg>
+              </div>
+
+              {/* Claude */}
+              <div className="opacity-50 grayscale transition-all hover:opacity-100 hover:grayscale-0">
+                <svg
+                  width="100"
+                  height="30"
+                  viewBox="0 0 100 30"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-6 w-auto"
+                >
+                  <text
+                    x="0"
+                    y="20"
+                    className="fill-current font-semibold"
+                    fontSize="18"
+                  >
+                    Claude
+                  </text>
+                </svg>
+              </div>
+
+              {/* v0 */}
+              <div className="opacity-50 grayscale transition-all hover:opacity-100 hover:grayscale-0">
+                <svg
+                  width="60"
+                  height="30"
+                  viewBox="0 0 60 30"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-6 w-auto"
+                >
+                  <text
+                    x="0"
+                    y="20"
+                    className="fill-current font-semibold"
+                    fontSize="18"
+                  >
+                    v0
+                  </text>
+                </svg>
+              </div>
+
+              {/* Replit */}
+              <div className="opacity-50 grayscale transition-all hover:opacity-100 hover:grayscale-0">
+                <svg
+                  width="100"
+                  height="30"
+                  viewBox="0 0 100 30"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-6 w-auto"
+                >
+                  <text
+                    x="0"
+                    y="20"
+                    className="fill-current font-semibold"
+                    fontSize="18"
+                  >
+                    Replit
+                  </text>
+                </svg>
+              </div>
+
+              {/* Bolt */}
+              <div className="opacity-50 grayscale transition-all hover:opacity-100 hover:grayscale-0">
+                <svg
+                  width="70"
+                  height="30"
+                  viewBox="0 0 70 30"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-6 w-auto"
+                >
+                  <text
+                    x="0"
+                    y="20"
+                    className="fill-current font-semibold"
+                    fontSize="18"
+                  >
+                    Bolt
+                  </text>
+                </svg>
+              </div>
+
+              {/* Lovable */}
+              <div className="opacity-50 grayscale transition-all hover:opacity-100 hover:grayscale-0">
+                <svg
+                  width="110"
+                  height="30"
+                  viewBox="0 0 110 30"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-6 w-auto"
+                >
+                  <text
+                    x="0"
+                    y="20"
+                    className="fill-current font-semibold"
+                    fontSize="18"
+                  >
+                    Lovable
+                  </text>
+                </svg>
+              </div>
+            </div>
+          </div>
         </PageHeader>
       </div>
 
