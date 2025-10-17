@@ -133,10 +133,10 @@ export function ShowcaseMasonry() {
         {/* Transaction History Card */}
         <div className="break-inside-avoid">
           <div className="dark:bg-card rounded-xl border bg-white p-6 shadow-sm">
-            <div className="flex flex-wrap items-start justify-between gap-4">
-              <div>
+            <div className="mb-6 flex items-start justify-between gap-3">
+              <div className="min-w-0 flex-1">
                 <h2 className="font-semibold">History Transactions</h2>
-                <p className="text-muted-foreground text-sm">
+                <p className="text-muted-foreground mt-1 text-xs sm:text-sm">
                   Track and monitor your financial activity.
                 </p>
               </div>
@@ -144,16 +144,22 @@ export function ShowcaseMasonry() {
                 <PopoverTrigger asChild>
                   <Button
                     variant="outline"
+                    size="sm"
                     className={cn(
-                      "w-full justify-start text-left font-normal sm:w-48",
+                      "shrink-0 text-xs sm:text-sm",
                       !date && "text-muted-foreground"
                     )}
                   >
-                    <CalendarIcon className="mr-2 h-4 w-4" />
-                    {date ? format(date, "PPP") : <span>Pick a date</span>}
+                    <CalendarIcon className="mr-1.5 h-3.5 w-3.5 sm:h-4 sm:w-4" />
+                    <span className="hidden sm:inline">
+                      {date ? format(date, "MMM d, yyyy") : "Select"}
+                    </span>
+                    <span className="sm:hidden">
+                      {date ? format(date, "M/d") : "Date"}
+                    </span>
                   </Button>
                 </PopoverTrigger>
-                <PopoverContent className="w-auto p-0" align="start">
+                <PopoverContent className="w-auto p-0" align="end">
                   <Calendar
                     mode="single"
                     selected={date}
@@ -163,36 +169,36 @@ export function ShowcaseMasonry() {
                 </PopoverContent>
               </Popover>
             </div>
-            <div className="mt-6">
-              <p className="text-muted-foreground mb-2 ml-2.5 font-semibold">
+            <div>
+              <p className="text-muted-foreground mb-3 text-xs font-semibold sm:text-sm">
                 March 2023
               </p>
               <div className="space-y-2">
-                <div className="flex items-center gap-4 rounded-lg border p-4">
-                  <div className="bg-card text-card-foreground hidden h-12 w-12 shrink-0 items-center justify-center rounded-xl border shadow-sm sm:flex">
-                    <ChevronDown className="h-5 w-5 text-red-600" />
+                <div className="flex items-center gap-2 rounded-lg border p-3 sm:gap-4 sm:p-4">
+                  <div className="bg-card text-card-foreground hidden h-10 w-10 shrink-0 items-center justify-center rounded-xl border shadow-sm sm:flex sm:h-12 sm:w-12">
+                    <ChevronDown className="h-4 w-4 text-red-600 sm:h-5 sm:w-5" />
                   </div>
-                  <div className="mx-0 space-y-0.5 sm:mx-2">
-                    <p className="font-semibold">Netflix</p>
-                    <p className="text-muted-foreground text-sm">
+                  <div className="min-w-0 flex-1 space-y-0.5">
+                    <p className="text-sm font-semibold sm:text-base">Netflix</p>
+                    <p className="text-muted-foreground truncate text-xs sm:text-sm">
                       27 March 2026, at 12:30 PM
                     </p>
                   </div>
-                  <p className="mx-2 ml-auto text-sm font-semibold text-red-600">
+                  <p className="shrink-0 text-xs font-semibold text-red-600 sm:text-sm">
                     - $2,500.00
                   </p>
                 </div>
-                <div className="flex items-center gap-4 rounded-lg border p-4">
-                  <div className="bg-card text-card-foreground hidden h-12 w-12 shrink-0 items-center justify-center rounded-xl border shadow-sm sm:flex">
-                    <ChevronUp className="h-5 w-5 text-green-600" />
+                <div className="flex items-center gap-2 rounded-lg border p-3 sm:gap-4 sm:p-4">
+                  <div className="bg-card text-card-foreground hidden h-10 w-10 shrink-0 items-center justify-center rounded-xl border shadow-sm sm:flex sm:h-12 sm:w-12">
+                    <ChevronUp className="h-4 w-4 text-green-600 sm:h-5 sm:w-5" />
                   </div>
-                  <div className="mx-0 space-y-0.5 sm:mx-2">
-                    <p className="font-semibold">Apple</p>
-                    <p className="text-muted-foreground text-sm">
+                  <div className="min-w-0 flex-1 space-y-0.5">
+                    <p className="text-sm font-semibold sm:text-base">Apple</p>
+                    <p className="text-muted-foreground truncate text-xs sm:text-sm">
                       27 March 2026, at 04:30 AM
                     </p>
                   </div>
-                  <p className="mx-2 ml-auto text-sm font-semibold text-green-600">
+                  <p className="shrink-0 text-xs font-semibold text-green-600 sm:text-sm">
                     + $2,000.00
                   </p>
                 </div>
