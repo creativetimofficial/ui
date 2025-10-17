@@ -14,7 +14,7 @@ export function SiteFooter() {
               rel="noreferrer"
               className="font-medium underline underline-offset-4"
             >
-              ElevenLabs
+              Creative Tim
             </Link>
             . The source code is available on{" "}
             <a

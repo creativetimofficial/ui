@@ -3,7 +3,10 @@
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 
-import { ScrollArea, ScrollBar } from "@/registry/elevenlabs-ui/ui/scroll-area"
+import {
+  ScrollArea,
+  ScrollBar,
+} from "@/registry/creative-tim-ui/ui/scroll-area"
 import { registryCategories } from "@/registry/registry-categories"
 
 export function BlocksNav() {

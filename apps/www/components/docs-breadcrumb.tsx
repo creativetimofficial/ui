@@ -13,7 +13,7 @@ import {
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
-} from "@/registry/elevenlabs-ui/ui/breadcrumb"
+} from "@/registry/creative-tim-ui/ui/breadcrumb"
 
 export function DocsBreadcrumb({
   tree,

@@ -12,7 +12,7 @@ import { useConfig } from "@/hooks/use-config"
 import { useIsMac } from "@/hooks/use-is-mac"
 import { useMutationObserver } from "@/hooks/use-mutation-observer"
 import { copyToClipboardWithMeta } from "@/components/copy-button"
-import { Button } from "@/registry/elevenlabs-ui/ui/button"
+import { Button } from "@/registry/creative-tim-ui/ui/button"
 import {
   Command,
   CommandEmpty,
@@ -20,7 +20,7 @@ import {
   CommandInput,
   CommandItem,
   CommandList,
-} from "@/registry/elevenlabs-ui/ui/command"
+} from "@/registry/creative-tim-ui/ui/command"
 import {
   Dialog,
   DialogContent,
@@ -28,8 +28,8 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/registry/elevenlabs-ui/ui/dialog"
-import { Separator } from "@/registry/elevenlabs-ui/ui/separator"
+} from "@/registry/creative-tim-ui/ui/dialog"
+import { Separator } from "@/registry/creative-tim-ui/ui/separator"
 
 export function CommandMenu({
   tree,
@@ -57,7 +57,7 @@ export function CommandMenu({
         const componentName = item.url.split("/").pop()
         setSelectedType("component")
         setCopyPayload(
-          `${packageManager} dlx @elevenlabs/agents-cli@latest add ${componentName}`
+          `${packageManager} dlx @creative-tim/ui@latest add ${componentName}`
         )
       } else {
         setSelectedType("page")
@@ -71,7 +71,7 @@ export function CommandMenu({
     (block: { name: string; description: string; categories: string[] }) => {
       setSelectedType("block")
       setCopyPayload(
-        `${packageManager} dlx @elevenlabs/agents-cli@latest add ${block.name}`
+        `${packageManager} dlx @creative-tim/ui@latest add ${block.name}`
       )
     },
     [setSelectedType, setCopyPayload, packageManager]
@@ -125,9 +125,9 @@ export function CommandMenu({
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger asChild>
         <Button
-          variant="secondary"
+          variant="ghost"
           className={cn(
-            "bg-surface text-surface-foreground/60 dark:bg-card relative h-8 w-full justify-start pl-2.5 font-normal shadow-none sm:pr-12 md:w-40 lg:w-56 xl:w-64"
+            "relative h-8 w-full justify-start pl-2.5 font-normal shadow-none sm:pr-12 md:w-40 lg:w-56 xl:w-64 text-white/70 hover:text-white hover:bg-white/10 border border-white/20"
           )}
           onClick={() => setOpen(true)}
           {...props}
@@ -332,7 +332,7 @@ function CommandMenuKbd({ className, ...props }: React.ComponentProps<"kbd">) {
   return (
     <kbd
       className={cn(
-        "bg-background text-muted-foreground pointer-events-none flex h-5 items-center justify-center gap-1 rounded border px-1 font-sans text-[0.7rem] font-medium select-none [&_svg:not([class*='size-'])]:size-3",
+        "bg-white/10 text-white/70 pointer-events-none flex h-5 items-center justify-center gap-1 rounded border border-white/20 px-1 font-sans text-[0.7rem] font-medium select-none [&_svg:not([class*='size-'])]:size-3",
         className
       )}
       {...props}

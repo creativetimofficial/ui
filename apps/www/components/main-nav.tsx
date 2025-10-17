@@ -4,7 +4,6 @@ import Link from "next/link"
 import { usePathname } from "next/navigation"
 
 import { cn } from "@/lib/utils"
-import { Button } from "@/registry/elevenlabs-ui/ui/button"
 
 export function MainNav({
   items,
@@ -16,16 +15,20 @@ export function MainNav({
   const pathname = usePathname()
 
   return (
-    <nav className={cn("items-center gap-0.5", className)} {...props}>
+    <nav className={cn("flex items-center gap-6", className)} {...props}>
       {items.map((item) => (
-        <Button key={item.href} variant="ghost" asChild size="sm">
-          <Link
-            href={item.href}
-            className={cn(pathname === item.href && "text-primary")}
-          >
-            {item.label}
-          </Link>
-        </Button>
+        <Link
+          key={item.href}
+          href={item.href}
+          className={cn(
+            "text-sm font-medium transition-colors hover:text-white",
+            pathname === item.href
+              ? "text-white"
+              : "text-white/70"
+          )}
+        >
+          {item.label}
+        </Link>
       ))}
     </nav>
   )

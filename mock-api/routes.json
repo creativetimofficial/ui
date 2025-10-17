@@ -1,0 +1,11 @@
+{
+  "/api/v1/auth/*": "/$1",      
+  "/api/v1/auth/me": "/me",
+  "/api/v1/auth/register": "/register",
+  "/api/v1/auth/login": "/login",
+  "/api/v1/auth/google": "/google",
+  "/api/v1/auth/logout": "/logout",
+  "/api/v1/auth/refresh": "/refresh",
+  "/api/v1/auth/forgot-password": "/forgot-password",
+  "/api/v1/auth/reset-password": "/reset-password"
+}

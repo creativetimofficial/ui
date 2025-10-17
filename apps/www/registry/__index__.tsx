@@ -26,421 +26,23 @@ export const Index: Record<string, any> = {
     categories: undefined,
     meta: undefined,
   },
-  "orb": {
-    name: "orb",
-    description: "",
-    type: "registry:ui",
-    registryDependencies: undefined,
-    files: [{
-      path: "registry/elevenlabs-ui/ui/orb.tsx",
-      type: "registry:ui",
-      target: ""
-    }],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/elevenlabs-ui/ui/orb.tsx")
-      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
-      return { default: mod.default || mod[exportName] }
-    }),
-    categories: undefined,
-    meta: undefined,
-  },
-  "waveform": {
-    name: "waveform",
-    description: "",
-    type: "registry:ui",
-    registryDependencies: undefined,
-    files: [{
-      path: "registry/elevenlabs-ui/ui/waveform.tsx",
-      type: "registry:ui",
-      target: ""
-    }],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/elevenlabs-ui/ui/waveform.tsx")
-      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
-      return { default: mod.default || mod[exportName] }
-    }),
-    categories: undefined,
-    meta: undefined,
-  },
-  "live-waveform": {
-    name: "live-waveform",
-    description: "",
-    type: "registry:ui",
-    registryDependencies: undefined,
-    files: [{
-      path: "registry/elevenlabs-ui/ui/live-waveform.tsx",
-      type: "registry:ui",
-      target: ""
-    }],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/elevenlabs-ui/ui/live-waveform.tsx")
-      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
-      return { default: mod.default || mod[exportName] }
-    }),
-    categories: undefined,
-    meta: undefined,
-  },
-  "shimmering-text": {
-    name: "shimmering-text",
-    description: "",
-    type: "registry:ui",
-    registryDependencies: undefined,
-    files: [{
-      path: "registry/elevenlabs-ui/ui/shimmering-text.tsx",
-      type: "registry:ui",
-      target: ""
-    }],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/elevenlabs-ui/ui/shimmering-text.tsx")
-      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
-      return { default: mod.default || mod[exportName] }
-    }),
-    categories: undefined,
-    meta: undefined,
-  },
-  "audio-player": {
-    name: "audio-player",
-    description: "",
-    type: "registry:ui",
-    registryDependencies: ["button","dropdown-menu"],
-    files: [{
-      path: "registry/elevenlabs-ui/ui/audio-player.tsx",
-      type: "registry:ui",
-      target: ""
-    }],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/elevenlabs-ui/ui/audio-player.tsx")
-      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
-      return { default: mod.default || mod[exportName] }
-    }),
-    categories: undefined,
-    meta: undefined,
-  },
-  "message": {
-    name: "message",
-    description: "",
-    type: "registry:ui",
-    registryDependencies: ["avatar"],
-    files: [{
-      path: "registry/elevenlabs-ui/ui/message.tsx",
-      type: "registry:ui",
-      target: ""
-    }],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/elevenlabs-ui/ui/message.tsx")
-      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
-      return { default: mod.default || mod[exportName] }
-    }),
-    categories: undefined,
-    meta: undefined,
-  },
-  "conversation": {
-    name: "conversation",
-    description: "",
-    type: "registry:ui",
-    registryDependencies: ["button"],
-    files: [{
-      path: "registry/elevenlabs-ui/ui/conversation.tsx",
-      type: "registry:ui",
-      target: ""
-    }],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/elevenlabs-ui/ui/conversation.tsx")
-      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
-      return { default: mod.default || mod[exportName] }
-    }),
-    categories: undefined,
-    meta: undefined,
-  },
-  "response": {
-    name: "response",
-    description: "",
-    type: "registry:ui",
-    registryDependencies: undefined,
-    files: [{
-      path: "registry/elevenlabs-ui/ui/response.tsx",
-      type: "registry:ui",
-      target: ""
-    }],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/elevenlabs-ui/ui/response.tsx")
-      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
-      return { default: mod.default || mod[exportName] }
-    }),
-    categories: undefined,
-    meta: undefined,
-  },
-  "bar-visualizer": {
-    name: "bar-visualizer",
-    description: "",
-    type: "registry:ui",
-    registryDependencies: undefined,
-    files: [{
-      path: "registry/elevenlabs-ui/ui/bar-visualizer.tsx",
-      type: "registry:ui",
-      target: ""
-    }],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/elevenlabs-ui/ui/bar-visualizer.tsx")
-      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
-      return { default: mod.default || mod[exportName] }
-    }),
-    categories: undefined,
-    meta: undefined,
-  },
-  "voice-picker": {
-    name: "voice-picker",
-    description: "",
-    type: "registry:ui",
-    registryDependencies: ["button","badge","command","popover","https://ui.elevenlabs.io/r/orb.json","https://ui.elevenlabs.io/r/audio-player.json"],
-    files: [{
-      path: "registry/elevenlabs-ui/ui/voice-picker.tsx",
-      type: "registry:ui",
-      target: ""
-    }],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/elevenlabs-ui/ui/voice-picker.tsx")
-      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
-      return { default: mod.default || mod[exportName] }
-    }),
-    categories: undefined,
-    meta: undefined,
-  },
-  "voice-button": {
-    name: "voice-button",
-    description: "",
-    type: "registry:ui",
-    registryDependencies: ["button","https://ui.elevenlabs.io/r/live-waveform.json"],
-    files: [{
-      path: "registry/elevenlabs-ui/ui/voice-button.tsx",
-      type: "registry:ui",
-      target: ""
-    }],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/elevenlabs-ui/ui/voice-button.tsx")
-      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
-      return { default: mod.default || mod[exportName] }
-    }),
-    categories: undefined,
-    meta: undefined,
-  },
-  "conversation-bar": {
-    name: "conversation-bar",
-    description: "",
-    type: "registry:ui",
-    registryDependencies: ["button","https://ui.elevenlabs.io/r/live-waveform.json","card","separator","textarea"],
-    files: [{
-      path: "registry/elevenlabs-ui/ui/conversation-bar.tsx",
-      type: "registry:ui",
-      target: ""
-    }],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/elevenlabs-ui/ui/conversation-bar.tsx")
-      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
-      return { default: mod.default || mod[exportName] }
-    }),
-    categories: undefined,
-    meta: undefined,
-  },
   "software-purchase-card": {
     name: "software-purchase-card",
     description: "",
     type: "registry:ui",
     registryDependencies: ["button","card","badge"],
     files: [{
-      path: "registry/elevenlabs-ui/ui/software-purchase-card.tsx",
+      path: "registry/creative-tim-ui/ui/software-purchase-card.tsx",
       type: "registry:ui",
       target: ""
     }],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/elevenlabs-ui/ui/software-purchase-card.tsx")
+      const mod = await import("@/registry/creative-tim-ui/ui/software-purchase-card.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
     categories: undefined,
     meta: undefined,
-  },
-  "speaker-01": {
-    name: "speaker-01",
-    description: "EL-01 Speaker",
-    type: "registry:block",
-    registryDependencies: ["https://ui.elevenlabs.io/r/audio-player.json","https://ui.elevenlabs.io/r/orb.json","https://ui.elevenlabs.io/r/waveform.json","button","card"],
-    files: [{
-      path: "registry/elevenlabs-ui/blocks/speaker-01/page.tsx",
-      type: "registry:page",
-      target: "app/speaker/page.tsx"
-    },{
-      path: "registry/elevenlabs-ui/blocks/speaker-01/components/speaker.tsx",
-      type: "registry:component",
-      target: "components/speaker.tsx"
-    }],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/elevenlabs-ui/blocks/speaker-01/page.tsx")
-      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
-      return { default: mod.default || mod[exportName] }
-    }),
-    categories: ["audio"],
-    meta: {"iframeHeight":"900px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component"},
-  },
-  "transcriber-01": {
-    name: "transcriber-01",
-    description: "Transcriber",
-    type: "registry:block",
-    registryDependencies: ["https://ui.elevenlabs.io/r/live-waveform.json","button","card","scroll-area","separator"],
-    files: [{
-      path: "registry/elevenlabs-ui/blocks/transcriber-01/page.tsx",
-      type: "registry:page",
-      target: "app/transcriber-01/page.tsx"
-    },{
-      path: "registry/elevenlabs-ui/blocks/transcriber-01/actions/transcribe.ts",
-      type: "registry:file",
-      target: "app/transcriber-01/actions/transcribe.ts"
-    }],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/elevenlabs-ui/blocks/transcriber-01/page.tsx")
-      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
-      return { default: mod.default || mod[exportName] }
-    }),
-    categories: ["audio"],
-    meta: {"iframeHeight":"600px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component"},
-  },
-  "voice-chat-01": {
-    name: "voice-chat-01",
-    description: "Voice chat 1",
-    type: "registry:block",
-    registryDependencies: ["https://ui.elevenlabs.io/r/orb.json","https://ui.elevenlabs.io/r/shimmering-text.json","button","card","https://ui.elevenlabs.io/r/message.json","https://ui.elevenlabs.io/r/response.json","https://ui.elevenlabs.io/r/conversation.json","scroll-area"],
-    files: [{
-      path: "registry/elevenlabs-ui/blocks/voice-chat-01/page.tsx",
-      type: "registry:page",
-      target: "app/voice-chat/page.tsx"
-    }],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/elevenlabs-ui/blocks/voice-chat-01/page.tsx")
-      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
-      return { default: mod.default || mod[exportName] }
-    }),
-    categories: ["agents"],
-    meta: {"iframeHeight":"800px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component"},
-  },
-  "voice-chat-02": {
-    name: "voice-chat-02",
-    description: "Voice chat 2",
-    type: "registry:block",
-    registryDependencies: ["https://ui.elevenlabs.io/r/orb.json","https://ui.elevenlabs.io/r/shimmering-text.json","button","card"],
-    files: [{
-      path: "registry/elevenlabs-ui/blocks/voice-chat-02/page.tsx",
-      type: "registry:page",
-      target: "app/voice-chat/page.tsx"
-    }],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/elevenlabs-ui/blocks/voice-chat-02/page.tsx")
-      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
-      return { default: mod.default || mod[exportName] }
-    }),
-    categories: ["agents"],
-    meta: {"iframeHeight":"600px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component"},
-  },
-  "voice-chat-03": {
-    name: "voice-chat-03",
-    description: "Voice chat 3",
-    type: "registry:block",
-    registryDependencies: ["https://ui.elevenlabs.io/r/conversation-bar.json","https://ui.elevenlabs.io/r/conversation.json","https://ui.elevenlabs.io/r/message.json","https://ui.elevenlabs.io/r/orb.json","https://ui.elevenlabs.io/r/response.json","tooltip","card","button"],
-    files: [{
-      path: "registry/elevenlabs-ui/blocks/voice-chat-03/page.tsx",
-      type: "registry:page",
-      target: "app/voice-chat/page.tsx"
-    }],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/elevenlabs-ui/blocks/voice-chat-03/page.tsx")
-      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
-      return { default: mod.default || mod[exportName] }
-    }),
-    categories: ["agents"],
-    meta: {"iframeHeight":"800px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component"},
-  },
-  "music-player-01": {
-    name: "music-player-01",
-    description: "Music player with playlist",
-    type: "registry:block",
-    registryDependencies: ["https://ui.elevenlabs.io/r/audio-player.json","button","scroll-area"],
-    files: [{
-      path: "registry/elevenlabs-ui/blocks/music-player-01/page.tsx",
-      type: "registry:page",
-      target: "app/music-player/page.tsx"
-    }],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/elevenlabs-ui/blocks/music-player-01/page.tsx")
-      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
-      return { default: mod.default || mod[exportName] }
-    }),
-    categories: ["audio"],
-    meta: {"iframeHeight":"600px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component"},
-  },
-  "music-player-02": {
-    name: "music-player-02",
-    description: "Simple music player",
-    type: "registry:block",
-    registryDependencies: ["https://ui.elevenlabs.io/r/audio-player.json","card"],
-    files: [{
-      path: "registry/elevenlabs-ui/blocks/music-player-02/page.tsx",
-      type: "registry:page",
-      target: "app/music-player/page.tsx"
-    }],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/elevenlabs-ui/blocks/music-player-02/page.tsx")
-      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
-      return { default: mod.default || mod[exportName] }
-    }),
-    categories: ["audio"],
-    meta: {"iframeHeight":"400px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component"},
-  },
-  "voice-form-01": {
-    name: "voice-form-01",
-    description: "Voice-fill form",
-    type: "registry:block",
-    registryDependencies: ["https://ui.elevenlabs.io/r/voice-button.json","https://ui.elevenlabs.io/r/live-waveform.json","button","card","form","input"],
-    files: [{
-      path: "registry/elevenlabs-ui/blocks/voice-form-01/page.tsx",
-      type: "registry:page",
-      target: "app/voice-form/page.tsx"
-    },{
-      path: "registry/elevenlabs-ui/blocks/voice-form-01/schema.ts",
-      type: "registry:file",
-      target: "app/voice-form/schema.ts"
-    },{
-      path: "registry/elevenlabs-ui/blocks/voice-form-01/actions/voice-to-form.ts",
-      type: "registry:file",
-      target: "app/voice-form/actions/voice-to-form.ts"
-    }],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/elevenlabs-ui/blocks/voice-form-01/page.tsx")
-      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
-      return { default: mod.default || mod[exportName] }
-    }),
-    categories: ["audio"],
-    meta: {"iframeHeight":"700px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component"},
-  },
-  "voice-nav-01": {
-    name: "voice-nav-01",
-    description: "Voice-nav site navigation",
-    type: "registry:block",
-    registryDependencies: ["https://ui.elevenlabs.io/r/voice-button.json","button","card"],
-    files: [{
-      path: "registry/elevenlabs-ui/blocks/voice-nav-01/page.tsx",
-      type: "registry:page",
-      target: "app/voice-nav/page.tsx"
-    },{
-      path: "registry/elevenlabs-ui/blocks/voice-nav-01/actions/voice-to-site.ts",
-      type: "registry:file",
-      target: "app/voice-nav/actions/voice-to-site.ts"
-    }],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/elevenlabs-ui/blocks/voice-nav-01/page.tsx")
-      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
-      return { default: mod.default || mod[exportName] }
-    }),
-    categories: ["audio"],
-    meta: {"iframeHeight":"900px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component"},
   },
   "software-purchase-01": {
     name: "software-purchase-01",
@@ -448,16 +50,1942 @@ export const Index: Record<string, any> = {
     type: "registry:block",
     registryDependencies: ["software-purchase-card","separator"],
     files: [{
-      path: "registry/elevenlabs-ui/blocks/software-purchase-01/page.tsx",
+      path: "registry/creative-tim-ui/blocks/software-purchase-01/page.tsx",
       type: "registry:page",
       target: "app/software-purchase/page.tsx"
     }],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/elevenlabs-ui/blocks/software-purchase-01/page.tsx")
+      const mod = await import("@/registry/creative-tim-ui/blocks/software-purchase-01/page.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
     categories: ["forms"],
+    meta: {"iframeHeight":"900px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component","details":"A comprehensive software purchase approval interface featuring company information, pricing tiers, and detailed cost breakdown with tax calculations."},
+  },
+  "billing-information-01": {
+    name: "billing-information-01",
+    description: "Manage billing contacts and company information",
+    type: "registry:block",
+    registryDependencies: ["button","card"],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/billing-information-01/page.tsx",
+      type: "registry:page",
+      target: "app/billing-information/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/billing-information-01/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["billing"],
+    meta: {"iframeHeight":"700px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component","details":"Easily manage billing contacts and information associated with different companies within one platform. Built with shadcn/ui Card and Button components for a clean, accessible interface. Perfect for multi-company billing management, enterprise dashboards, and SaaS platforms requiring organized billing contact management."},
+  },
+  "card-display-01": {
+    name: "card-display-01",
+    description: "Credit card display with dark and light themes",
+    type: "registry:block",
+    registryDependencies: ["card"],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/card-display-01/page.tsx",
+      type: "registry:page",
+      target: "app/card-display/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/card-display-01/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["billing"],
+    meta: {"iframeHeight":"400px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component","details":"Showcases dark and light versions of a card with bank brand logos. Built with shadcn/ui Card component for consistent styling across themes. Ideal for payment forms, checkout processes, wallet sections, financial dashboards, and any interface requiring elegant credit card visualization with theme support."},
+  },
+  "payment-method-01": {
+    name: "payment-method-01",
+    description: "Payment method management with edit and delete",
+    type: "registry:block",
+    registryDependencies: ["button","card","tooltip"],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/payment-method-01/page.tsx",
+      type: "registry:page",
+      target: "app/payment-method/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/payment-method-01/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["billing"],
+    meta: {"iframeHeight":"500px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component","details":"Manage payment methods with a straightforward UI layout featuring shadcn/ui Card, Button, and Tooltip components. Card brands are clearly identified, sensitive information is partially hidden for security, and editing/deleting functions are easily accessible. Includes a call-to-action button for adding new payment methods. Perfect for account settings, billing pages, and checkout flows."},
+  },
+  "transaction-history-01": {
+    name: "transaction-history-01",
+    description: "Financial transaction history with trend indicators",
+    type: "registry:block",
+    registryDependencies: ["button","calendar","card","popover"],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/transaction-history-01/page.tsx",
+      type: "registry:page",
+      target: "app/transaction-history/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/transaction-history-01/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["billing"],
+    meta: {"iframeHeight":"800px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component","details":"Provides a detailed record of financial transactions with various service providers, featuring trend arrows indicating whether values are up or down. Built with shadcn/ui Button, Calendar, Card, and Popover components for an interactive filtering experience. Includes date range selection for easy transaction filtering. Ideal for billing dashboards, financial reports, and transaction monitoring interfaces."},
+  },
+  "invoices-01": {
+    name: "invoices-01",
+    description: "Invoice overview with status badges and download",
+    type: "registry:block",
+    registryDependencies: ["badge","button","separator"],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/invoices-01/page.tsx",
+      type: "registry:page",
+      target: "app/invoices/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/invoices-01/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["billing"],
+    meta: {"iframeHeight":"700px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component","details":"Provides an overview of invoices with shadcn/ui Badge components indicating payment status (paid, pending, overdue) and Button components for downloading invoice PDFs. Clean, organized layout with visual separators for easy scanning. Perfect for billing portals, accounting dashboards, and financial management systems requiring clear invoice tracking and download capabilities."},
+  },
+  "simple-blog-content-01": {
+    name: "simple-blog-content-01",
+    description: "Simple blog content cards",
+    type: "registry:block",
+    registryDependencies: ["avatar","badge","card"],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/simple-blog-content-01/page.tsx",
+      type: "registry:page",
+      target: "app/simple-blog-content/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/simple-blog-content-01/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["blog-sections"],
+    meta: {"iframeHeight":"800px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component"},
+  },
+  "blog-cards-layout-01": {
+    name: "blog-cards-layout-01",
+    description: "Blog cards with view more button",
+    type: "registry:block",
+    registryDependencies: ["avatar","badge","button","card"],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/blog-cards-layout-01/page.tsx",
+      type: "registry:page",
+      target: "app/blog-cards-layout/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/blog-cards-layout-01/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["blog-sections"],
+    meta: {"iframeHeight":"1200px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component"},
+  },
+  "blog-post-preview-tags-01": {
+    name: "blog-post-preview-tags-01",
+    description: "Blog posts with tags",
+    type: "registry:block",
+    registryDependencies: ["badge","button"],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/blog-post-preview-tags-01/page.tsx",
+      type: "registry:page",
+      target: "app/blog-post-preview-tags/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/blog-post-preview-tags-01/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["blog-sections"],
+    meta: {"iframeHeight":"1100px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component"},
+  },
+  "highlighted-blog-posts-01": {
+    name: "highlighted-blog-posts-01",
+    description: "Highlighted blog posts with icons",
+    type: "registry:block",
+    registryDependencies: ["button","card"],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/highlighted-blog-posts-01/page.tsx",
+      type: "registry:page",
+      target: "app/highlighted-blog-posts/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/highlighted-blog-posts-01/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["blog-sections"],
+    meta: {"iframeHeight":"800px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component"},
+  },
+  "blog-rectangular-images-01": {
+    name: "blog-rectangular-images-01",
+    description: "Blog posts with rectangular images",
+    type: "registry:block",
+    registryDependencies: ["avatar","badge"],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/blog-rectangular-images-01/page.tsx",
+      type: "registry:page",
+      target: "app/blog-rectangular-images/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/blog-rectangular-images-01/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["blog-sections"],
+    meta: {"iframeHeight":"1000px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component"},
+  },
+  "large-blog-preview-01": {
+    name: "large-blog-preview-01",
+    description: "Large blog post preview",
+    type: "registry:block",
+    registryDependencies: ["avatar"],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/large-blog-preview-01/page.tsx",
+      type: "registry:page",
+      target: "app/large-blog-preview/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/large-blog-preview-01/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["blog-sections"],
+    meta: {"iframeHeight":"700px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component"},
+  },
+  "simple-product-details-01": {
+    name: "simple-product-details-01",
+    description: "Simple product details grid",
+    type: "registry:block",
+    registryDependencies: ["button","card","accordion","badge"],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/simple-product-details-01/page.tsx",
+      type: "registry:page",
+      target: "app/simple-product-details/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/simple-product-details-01/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["ecommerce"],
+    meta: {"iframeHeight":"1800px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component"},
+  },
+  "grid-ecommerce-01": {
+    name: "grid-ecommerce-01",
+    description: "Product grid with filters",
+    type: "registry:block",
+    registryDependencies: ["button","card","select"],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/grid-ecommerce-01/page.tsx",
+      type: "registry:page",
+      target: "app/grid-ecommerce/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/grid-ecommerce-01/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["ecommerce"],
+    meta: {"iframeHeight":"1200px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component"},
+  },
+  "promotional-cards-01": {
+    name: "promotional-cards-01",
+    description: "Promotional product cards",
+    type: "registry:block",
+    registryDependencies: ["button","card"],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/promotional-cards-01/page.tsx",
+      type: "registry:page",
+      target: "app/promotional-cards/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/promotional-cards-01/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["ecommerce"],
+    meta: {"iframeHeight":"800px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component"},
+  },
+  "order-history-01": {
+    name: "order-history-01",
+    description: "Order history table",
+    type: "registry:block",
+    registryDependencies: ["badge","button","card"],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/order-history-01/page.tsx",
+      type: "registry:page",
+      target: "app/order-history/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/order-history-01/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["ecommerce"],
+    meta: {"iframeHeight":"1000px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component"},
+  },
+  "empty-shopping-cart-01": {
+    name: "empty-shopping-cart-01",
+    description: "Empty shopping cart state",
+    type: "registry:block",
+    registryDependencies: ["button"],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/empty-shopping-cart-01/page.tsx",
+      type: "registry:page",
+      target: "app/empty-shopping-cart/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/empty-shopping-cart-01/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["ecommerce"],
+    meta: {"iframeHeight":"800px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component"},
+  },
+  "digital-product-overview-01": {
+    name: "digital-product-overview-01",
+    description: "Digital product with plan options",
+    type: "registry:block",
+    registryDependencies: ["button","label","radio-group","badge"],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/digital-product-overview-01/page.tsx",
+      type: "registry:page",
+      target: "app/digital-product-overview/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/digital-product-overview-01/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["ecommerce"],
+    meta: {"iframeHeight":"1000px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component"},
+  },
+  "product-description-01": {
+    name: "product-description-01",
+    description: "Product description with gallery",
+    type: "registry:block",
+    registryDependencies: ["button"],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/product-description-01/page.tsx",
+      type: "registry:page",
+      target: "app/product-description/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/product-description-01/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["ecommerce"],
+    meta: {"iframeHeight":"1200px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component"},
+  },
+  "dark-product-overview-01": {
+    name: "dark-product-overview-01",
+    description: "Dark themed product overview",
+    type: "registry:block",
+    registryDependencies: ["button","tabs","badge"],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/dark-product-overview-01/page.tsx",
+      type: "registry:page",
+      target: "app/dark-product-overview/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/dark-product-overview-01/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["ecommerce"],
+    meta: {"iframeHeight":"1100px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component"},
+  },
+  "shopping-cart-01": {
+    name: "shopping-cart-01",
+    description: "Shopping cart with summary",
+    type: "registry:block",
+    registryDependencies: ["button","card","input","select","badge","separator"],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/shopping-cart-01/page.tsx",
+      type: "registry:page",
+      target: "app/shopping-cart/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/shopping-cart-01/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["ecommerce"],
+    meta: {"iframeHeight":"1200px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component"},
+  },
+  "checkout-01": {
+    name: "checkout-01",
+    description: "Checkout form with order summary",
+    type: "registry:block",
+    registryDependencies: ["button","checkbox","input","label","badge","separator"],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/checkout-01/page.tsx",
+      type: "registry:page",
+      target: "app/checkout/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/checkout-01/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["ecommerce"],
+    meta: {"iframeHeight":"1200px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component"},
+  },
+  "complex-product-description-01": {
+    name: "complex-product-description-01",
+    description: "Product description with accordion",
+    type: "registry:block",
+    registryDependencies: ["accordion","button"],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/complex-product-description-01/page.tsx",
+      type: "registry:page",
+      target: "app/complex-product-description/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/complex-product-description-01/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["ecommerce"],
+    meta: {"iframeHeight":"1200px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component"},
+  },
+  "interactive-product-preview-01": {
+    name: "interactive-product-preview-01",
+    description: "Interactive room product preview",
+    type: "registry:block",
+    registryDependencies: ["button","badge"],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/interactive-product-preview-01/page.tsx",
+      type: "registry:page",
+      target: "app/interactive-product-preview/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/interactive-product-preview-01/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["ecommerce"],
+    meta: {"iframeHeight":"1100px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component"},
+  },
+  "order-details-01": {
+    name: "order-details-01",
+    description: "Order details with timeline",
+    type: "registry:block",
+    registryDependencies: ["button","card","badge","separator"],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/order-details-01/page.tsx",
+      type: "registry:page",
+      target: "app/order-details/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/order-details-01/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["ecommerce"],
+    meta: {"iframeHeight":"1100px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component"},
+  },
+  "product-details-01": {
+    name: "product-details-01",
+    description: "Product details with image carousel",
+    type: "registry:block",
+    registryDependencies: ["button","card"],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/product-details-01/page.tsx",
+      type: "registry:page",
+      target: "app/product-details/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/product-details-01/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["ecommerce"],
+    meta: {"iframeHeight":"1000px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component"},
+  },
+  "product-listing-filters-01": {
+    name: "product-listing-filters-01",
+    description: "Product listing with filters and sort",
+    type: "registry:block",
+    registryDependencies: ["button","badge","select"],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/product-listing-filters-01/page.tsx",
+      type: "registry:page",
+      target: "app/product-listing-filters/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/product-listing-filters-01/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["ecommerce"],
+    meta: {"iframeHeight":"900px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component"},
+  },
+  "ecommerce-sections-01": {
+    name: "ecommerce-sections-01",
+    description: "Runway video spotlight with product cards",
+    type: "registry:block",
+    registryDependencies: ["badge","button","card"],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/ecommerce-sections-01/page.tsx",
+      type: "registry:page",
+      target: "app/ecommerce-sections/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/ecommerce-sections-01/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["ecommerce"],
+    meta: {"iframeHeight":"900px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component"},
+  },
+  "ecommerce-sections-02": {
+    name: "ecommerce-sections-02",
+    description: "Luxury product detail page with image gallery",
+    type: "registry:block",
+    registryDependencies: ["badge","button"],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/ecommerce-sections-02/page.tsx",
+      type: "registry:page",
+      target: "app/ecommerce-sections/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/ecommerce-sections-02/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["ecommerce"],
+    meta: {"iframeHeight":"900px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component"},
+  },
+  "simple-faq-01": {
+    name: "simple-faq-01",
+    description: "Simple FAQ with dividers",
+    type: "registry:block",
+    registryDependencies: [],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/simple-faq-01/page.tsx",
+      type: "registry:page",
+      target: "app/simple-faq/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/simple-faq-01/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["faqs"],
+    meta: {"iframeHeight":"800px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component"},
+  },
+  "faqs-list-01": {
+    name: "faqs-list-01",
+    description: "FAQ list with accordion",
+    type: "registry:block",
+    registryDependencies: ["accordion"],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/faqs-list-01/page.tsx",
+      type: "registry:page",
+      target: "app/faqs-list/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/faqs-list-01/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["faqs"],
+    meta: {"iframeHeight":"900px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component"},
+  },
+  "faq-left-title-01": {
+    name: "faq-left-title-01",
+    description: "FAQ with left-aligned title and card grid",
+    type: "registry:block",
+    registryDependencies: ["card"],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/faq-left-title-01/page.tsx",
+      type: "registry:page",
+      target: "app/faq-left-title/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/faq-left-title-01/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["faqs"],
+    meta: {"iframeHeight":"800px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component"},
+  },
+  "faqs-grid-cta-01": {
+    name: "faqs-grid-cta-01",
+    description: "FAQ grid with CTA section",
+    type: "registry:block",
+    registryDependencies: ["button","card"],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/faqs-grid-cta-01/page.tsx",
+      type: "registry:page",
+      target: "app/faqs-grid-cta/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/faqs-grid-cta-01/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["faqs"],
+    meta: {"iframeHeight":"1200px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component"},
+  },
+  "faqs-cards-icons-01": {
+    name: "faqs-cards-icons-01",
+    description: "FAQ cards with icons and CTA",
+    type: "registry:block",
+    registryDependencies: ["button","card"],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/faqs-cards-icons-01/page.tsx",
+      type: "registry:page",
+      target: "app/faqs-cards-icons/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/faqs-cards-icons-01/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["faqs"],
+    meta: {"iframeHeight":"1100px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component"},
+  },
+  "faqs-grid-01": {
+    name: "faqs-grid-01",
+    description: "Simple FAQ grid layout",
+    type: "registry:block",
+    registryDependencies: ["card"],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/faqs-grid-01/page.tsx",
+      type: "registry:page",
+      target: "app/faqs-grid/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/faqs-grid-01/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["faqs"],
+    meta: {"iframeHeight":"1000px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component"},
+  },
+  "contact-sections-01": {
+    name: "contact-sections-01",
+    description: "Simple contact form with contact info",
+    type: "registry:block",
+    registryDependencies: ["button","card","checkbox","input","label","textarea"],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/contact-sections-01/page.tsx",
+      type: "registry:page",
+      target: "app/contact-sections-01/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/contact-sections-01/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["contact"],
+    meta: {"iframeHeight":"900px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component"},
+  },
+  "contact-sections-02": {
+    name: "contact-sections-02",
+    description: "Contact form with image background",
+    type: "registry:block",
+    registryDependencies: ["button","checkbox","input","label","textarea"],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/contact-sections-02/page.tsx",
+      type: "registry:page",
+      target: "app/contact-sections-02/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/contact-sections-02/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["contact"],
+    meta: {"iframeHeight":"900px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component"},
+  },
+  "contact-sections-03": {
+    name: "contact-sections-03",
+    description: "Contact form with dark info panel",
+    type: "registry:block",
+    registryDependencies: ["button","card","input","label","textarea"],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/contact-sections-03/page.tsx",
+      type: "registry:page",
+      target: "app/contact-sections-03/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/contact-sections-03/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["contact"],
+    meta: {"iframeHeight":"900px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component"},
+  },
+  "contact-sections-04": {
+    name: "contact-sections-04",
+    description: "Minimalist contact with icon cards",
+    type: "registry:block",
+    registryDependencies: ["card"],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/contact-sections-04/page.tsx",
+      type: "registry:page",
+      target: "app/contact-sections-04/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/contact-sections-04/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["contact"],
+    meta: {"iframeHeight":"800px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component"},
+  },
+  "contact-sections-05": {
+    name: "contact-sections-05",
+    description: "Contact form with map and option selection",
+    type: "registry:block",
+    registryDependencies: ["badge","button","input","label","textarea"],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/contact-sections-05/page.tsx",
+      type: "registry:page",
+      target: "app/contact-sections-05/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/contact-sections-05/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["contact"],
+    meta: {"iframeHeight":"1000px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component"},
+  },
+  "contact-sections-06": {
+    name: "contact-sections-06",
+    description: "Centered contact with circular icon badges",
+    type: "registry:block",
+    registryDependencies: [],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/contact-sections-06/page.tsx",
+      type: "registry:page",
+      target: "app/contact-sections-06/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/contact-sections-06/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["contact"],
+    meta: {"iframeHeight":"800px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component"},
+  },
+  "contact-sections-07": {
+    name: "contact-sections-07",
+    description: "Contact form with office location details",
+    type: "registry:block",
+    registryDependencies: ["button","card","checkbox","input","label","textarea"],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/contact-sections-07/page.tsx",
+      type: "registry:page",
+      target: "app/contact-sections-07/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/contact-sections-07/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["contact"],
+    meta: {"iframeHeight":"900px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component"},
+  },
+  "contact-sections-08": {
+    name: "contact-sections-08",
+    description: "Contact form with area of interest selection",
+    type: "registry:block",
+    registryDependencies: ["button","card","input","label","radio-group","textarea"],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/contact-sections-08/page.tsx",
+      type: "registry:page",
+      target: "app/contact-sections-08/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/contact-sections-08/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["contact"],
+    meta: {"iframeHeight":"1000px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component"},
+  },
+  "contact-sections-09": {
+    name: "contact-sections-09",
+    description: "Dark background contact with detailed info",
+    type: "registry:block",
+    registryDependencies: ["button","card","checkbox","input","label","textarea"],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/contact-sections-09/page.tsx",
+      type: "registry:page",
+      target: "app/contact-sections-09/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/contact-sections-09/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["contact"],
+    meta: {"iframeHeight":"900px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component"},
+  },
+  "contact-sections-10": {
+    name: "contact-sections-10",
+    description: "Contact form with info cards",
+    type: "registry:block",
+    registryDependencies: ["button","card","input","label","textarea"],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/contact-sections-10/page.tsx",
+      type: "registry:page",
+      target: "app/contact-sections-10/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/contact-sections-10/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["contact"],
+    meta: {"iframeHeight":"1000px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component"},
+  },
+  "contact-sections-11": {
+    name: "contact-sections-11",
+    description: "Dark gradient contact form with backdrop blur",
+    type: "registry:block",
+    registryDependencies: ["button","input","label","textarea"],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/contact-sections-11/page.tsx",
+      type: "registry:page",
+      target: "app/contact-sections-11/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/contact-sections-11/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["contact"],
+    meta: {"iframeHeight":"1000px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component"},
+  },
+  "contact-sections-12": {
+    name: "contact-sections-12",
+    description: "Contact form with background image overlay",
+    type: "registry:block",
+    registryDependencies: ["button","input","label","textarea"],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/contact-sections-12/page.tsx",
+      type: "registry:page",
+      target: "app/contact-sections-12/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/contact-sections-12/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["contact"],
+    meta: {"iframeHeight":"1000px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component"},
+  },
+  "contact-sections-13": {
+    name: "contact-sections-13",
+    description: "Contact information cards with form",
+    type: "registry:block",
+    registryDependencies: ["button","card","input","label","textarea"],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/contact-sections-13/page.tsx",
+      type: "registry:page",
+      target: "app/contact-sections-13/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/contact-sections-13/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["contact"],
+    meta: {"iframeHeight":"1200px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component"},
+  },
+  "contact-sections-14": {
+    name: "contact-sections-14",
+    description: "Gradient background contact form with asterisk fields",
+    type: "registry:block",
+    registryDependencies: ["button","input","label","textarea"],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/contact-sections-14/page.tsx",
+      type: "registry:page",
+      target: "app/contact-sections-14/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/contact-sections-14/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["contact"],
+    meta: {"iframeHeight":"1100px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component"},
+  },
+  "contact-sections-15": {
+    name: "contact-sections-15",
+    description: "Contact options with quick contact form",
+    type: "registry:block",
+    registryDependencies: ["button","card","input","label"],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/contact-sections-15/page.tsx",
+      type: "registry:page",
+      target: "app/contact-sections-15/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/contact-sections-15/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["contact"],
+    meta: {"iframeHeight":"1000px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component"},
+  },
+  "web3-01": {
+    name: "web3-01",
+    description: "NFT collection preview with pixel art",
+    type: "registry:block",
+    registryDependencies: ["avatar","card"],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/web3-01/page.tsx",
+      type: "registry:page",
+      target: "app/web3-01/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/web3-01/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["web3"],
+    meta: {"iframeHeight":"900px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component"},
+  },
+  "web3-02": {
+    name: "web3-02",
+    description: "NFT creator profile with collection gallery",
+    type: "registry:block",
+    registryDependencies: ["avatar","badge","button","card"],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/web3-02/page.tsx",
+      type: "registry:page",
+      target: "app/web3-02/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/web3-02/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["web3"],
+    meta: {"iframeHeight":"1100px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component"},
+  },
+  "web3-03": {
+    name: "web3-03",
+    description: "Top crypto auctions with countdown timer",
+    type: "registry:block",
+    registryDependencies: ["avatar","badge","button","card","select"],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/web3-03/page.tsx",
+      type: "registry:page",
+      target: "app/web3-03/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/web3-03/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["web3"],
+    meta: {"iframeHeight":"1100px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component"},
+  },
+  "web3-04": {
+    name: "web3-04",
+    description: "Trending NFT collections with gradient overlay",
+    type: "registry:block",
+    registryDependencies: ["avatar","badge","button","card","select"],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/web3-04/page.tsx",
+      type: "registry:page",
+      target: "app/web3-04/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/web3-04/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["web3"],
+    meta: {"iframeHeight":"1100px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component"},
+  },
+  "web3-05": {
+    name: "web3-05",
+    description: "Top NFT creators with time filter",
+    type: "registry:block",
+    registryDependencies: ["avatar","button","card"],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/web3-05/page.tsx",
+      type: "registry:page",
+      target: "app/web3-05/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/web3-05/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["web3"],
+    meta: {"iframeHeight":"1000px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component"},
+  },
+  "cruds-01": {
+    name: "cruds-01",
+    description: "Edit apparel item form with product details",
+    type: "registry:block",
+    registryDependencies: ["button","card","input","label","select","textarea"],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/cruds-01/page.tsx",
+      type: "registry:page",
+      target: "app/cruds-01/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/cruds-01/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["cruds"],
+    meta: {"iframeHeight":"1000px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component"},
+  },
+  "cruds-02": {
+    name: "cruds-02",
+    description: "Update retail staff profile form",
+    type: "registry:block",
+    registryDependencies: ["button","card","input","label"],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/cruds-02/page.tsx",
+      type: "registry:page",
+      target: "app/cruds-02/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/cruds-02/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["cruds"],
+    meta: {"iframeHeight":"800px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component"},
+  },
+  "cruds-03": {
+    name: "cruds-03",
+    description: "Stylist account settings with profile photo upload",
+    type: "registry:block",
+    registryDependencies: ["button","card","input","label","select"],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/cruds-03/page.tsx",
+      type: "registry:page",
+      target: "app/cruds-03/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/cruds-03/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["cruds"],
+    meta: {"iframeHeight":"1200px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component"},
+  },
+  "footers-01": {
+    name: "footers-01",
+    description: "Simple footer with social links",
+    type: "registry:block",
+    registryDependencies: ["button"],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/footers-01/page.tsx",
+      type: "registry:page",
+      target: "app/footers-01/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/footers-01/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["footers"],
+    meta: {"iframeHeight":"300px","container":"w-full bg-surface","mobile":"component"},
+  },
+  "footers-02": {
+    name: "footers-02",
+    description: "Footer with navigation links and subscription",
+    type: "registry:block",
+    registryDependencies: ["button","checkbox","input","label"],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/footers-02/page.tsx",
+      type: "registry:page",
+      target: "app/footers-02/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/footers-02/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["footers"],
+    meta: {"iframeHeight":"500px","container":"w-full bg-surface","mobile":"component"},
+  },
+  "footers-03": {
+    name: "footers-03",
+    description: "Website footer with CTA",
+    type: "registry:block",
+    registryDependencies: ["button"],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/footers-03/page.tsx",
+      type: "registry:page",
+      target: "app/footers-03/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/footers-03/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["footers"],
+    meta: {"iframeHeight":"300px","container":"w-full bg-surface","mobile":"component"},
+  },
+  "footers-04": {
+    name: "footers-04",
+    description: "Simple dark footer",
+    type: "registry:block",
+    registryDependencies: ["button","card","input"],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/footers-04/page.tsx",
+      type: "registry:page",
+      target: "app/footers-04/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/footers-04/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["footers"],
+    meta: {"iframeHeight":"600px","container":"w-full bg-surface","mobile":"component"},
+  },
+  "footers-05": {
+    name: "footers-05",
+    description: "Complex dark footer",
+    type: "registry:block",
+    registryDependencies: ["button","input","label","select"],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/footers-05/page.tsx",
+      type: "registry:page",
+      target: "app/footers-05/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/footers-05/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["footers"],
+    meta: {"iframeHeight":"700px","container":"w-full bg-surface","mobile":"component"},
+  },
+  "footers-06": {
+    name: "footers-06",
+    description: "Advanced light footer",
+    type: "registry:block",
+    registryDependencies: ["button"],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/footers-06/page.tsx",
+      type: "registry:page",
+      target: "app/footers-06/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/footers-06/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["footers"],
+    meta: {"iframeHeight":"500px","container":"w-full bg-surface","mobile":"component"},
+  },
+  "footers-07": {
+    name: "footers-07",
+    description: "Simple footer with country selection",
+    type: "registry:block",
+    registryDependencies: ["button","select"],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/footers-07/page.tsx",
+      type: "registry:page",
+      target: "app/footers-07/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/footers-07/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["footers"],
+    meta: {"iframeHeight":"300px","container":"w-full bg-surface","mobile":"component"},
+  },
+  "footers-08": {
+    name: "footers-08",
+    description: "Simple footer with version number",
+    type: "registry:block",
+    registryDependencies: ["badge","button"],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/footers-08/page.tsx",
+      type: "registry:page",
+      target: "app/footers-08/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/footers-08/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["footers"],
+    meta: {"iframeHeight":"300px","container":"w-full bg-surface","mobile":"component"},
+  },
+  "footers-09": {
+    name: "footers-09",
+    description: "Footer with notification and CTA",
+    type: "registry:block",
+    registryDependencies: ["button"],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/footers-09/page.tsx",
+      type: "registry:page",
+      target: "app/footers-09/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/footers-09/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["footers"],
+    meta: {"iframeHeight":"350px","container":"w-full bg-surface","mobile":"component"},
+  },
+  "footers-10": {
+    name: "footers-10",
+    description: "Footer with page links",
+    type: "registry:block",
+    registryDependencies: [],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/footers-10/page.tsx",
+      type: "registry:page",
+      target: "app/footers-10/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/footers-10/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["footers"],
+    meta: {"iframeHeight":"350px","container":"w-full bg-surface","mobile":"component"},
+  },
+  "footers-11": {
+    name: "footers-11",
+    description: "Website footer with statement",
+    type: "registry:block",
+    registryDependencies: [],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/footers-11/page.tsx",
+      type: "registry:page",
+      target: "app/footers-11/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/footers-11/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["footers"],
+    meta: {"iframeHeight":"450px","container":"w-full bg-surface","mobile":"component"},
+  },
+  "footers-12": {
+    name: "footers-12",
+    description: "Website footer with navigation",
+    type: "registry:block",
+    registryDependencies: [],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/footers-12/page.tsx",
+      type: "registry:page",
+      target: "app/footers-12/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/footers-12/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["footers"],
+    meta: {"iframeHeight":"300px","container":"w-full bg-surface","mobile":"component"},
+  },
+  "footers-13": {
+    name: "footers-13",
+    description: "Simple centered website footer",
+    type: "registry:block",
+    registryDependencies: ["button"],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/footers-13/page.tsx",
+      type: "registry:page",
+      target: "app/footers-13/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/footers-13/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["footers"],
+    meta: {"iframeHeight":"450px","container":"w-full bg-surface","mobile":"component"},
+  },
+  "footers-14": {
+    name: "footers-14",
+    description: "Website footer for apps",
+    type: "registry:block",
+    registryDependencies: ["button"],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/footers-14/page.tsx",
+      type: "registry:page",
+      target: "app/footers-14/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/footers-14/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["footers"],
+    meta: {"iframeHeight":"700px","container":"w-full bg-surface","mobile":"component"},
+  },
+  "footers-15": {
+    name: "footers-15",
+    description: "Website footer with quote",
+    type: "registry:block",
+    registryDependencies: ["button"],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/footers-15/page.tsx",
+      type: "registry:page",
+      target: "app/footers-15/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/footers-15/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["footers"],
+    meta: {"iframeHeight":"400px","container":"w-full bg-surface","mobile":"component"},
+  },
+  "testimonials-01": {
+    name: "testimonials-01",
+    description: "Simple centered testimonials with avatars",
+    type: "registry:block",
+    registryDependencies: ["avatar","card","badge"],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/testimonials-01/page.tsx",
+      type: "registry:page",
+      target: "app/testimonials-01/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/testimonials-01/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["testimonials"],
+    meta: {"iframeHeight":"700px","container":"w-full bg-surface","mobile":"component"},
+  },
+  "testimonials-02": {
+    name: "testimonials-02",
+    description: "Testimonial cards with social proof badges",
+    type: "registry:block",
+    registryDependencies: ["avatar","card"],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/testimonials-02/page.tsx",
+      type: "registry:page",
+      target: "app/testimonials-02/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/testimonials-02/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["testimonials"],
+    meta: {"iframeHeight":"900px","container":"w-full bg-surface","mobile":"component"},
+  },
+  "testimonials-03": {
+    name: "testimonials-03",
+    description: "Testimonial with statistics and metrics",
+    type: "registry:block",
+    registryDependencies: ["card"],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/testimonials-03/page.tsx",
+      type: "registry:page",
+      target: "app/testimonials-03/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/testimonials-03/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["testimonials"],
+    meta: {"iframeHeight":"500px","container":"w-full bg-surface","mobile":"component","private":true},
+  },
+  "testimonials-04": {
+    name: "testimonials-04",
+    description: "Three column testimonials with star ratings",
+    type: "registry:block",
+    registryDependencies: ["card"],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/testimonials-04/page.tsx",
+      type: "registry:page",
+      target: "app/testimonials-04/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/testimonials-04/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["testimonials"],
+    meta: {"iframeHeight":"700px","container":"w-full bg-surface","mobile":"component","private":true},
+  },
+  "testimonials-05": {
+    name: "testimonials-05",
+    description: "Dark testimonials with avatar and star ratings",
+    type: "registry:block",
+    registryDependencies: ["avatar","card"],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/testimonials-05/page.tsx",
+      type: "registry:page",
+      target: "app/testimonials-05/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/testimonials-05/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["testimonials"],
+    meta: {"iframeHeight":"700px","container":"w-full bg-surface","mobile":"component"},
+  },
+  "testimonials-06": {
+    name: "testimonials-06",
+    description: "Company logo testimonial with large quote",
+    type: "registry:block",
+    registryDependencies: ["avatar","card"],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/testimonials-06/page.tsx",
+      type: "registry:page",
+      target: "app/testimonials-06/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/testimonials-06/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["testimonials"],
+    meta: {"iframeHeight":"500px","container":"w-full bg-surface","mobile":"component"},
+  },
+  "testimonials-07": {
+    name: "testimonials-07",
+    description: "Interactive testimonials with profile switcher",
+    type: "registry:block",
+    registryDependencies: ["avatar"],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/testimonials-07/page.tsx",
+      type: "registry:page",
+      target: "app/testimonials-07/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/testimonials-07/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["testimonials"],
+    meta: {"iframeHeight":"600px","container":"w-full bg-surface","mobile":"component"},
+  },
+  "testimonials-08": {
+    name: "testimonials-08",
+    description: "Light testimonials with star ratings",
+    type: "registry:block",
+    registryDependencies: ["avatar","card"],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/testimonials-08/page.tsx",
+      type: "registry:page",
+      target: "app/testimonials-08/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/testimonials-08/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["testimonials"],
+    meta: {"iframeHeight":"700px","container":"w-full bg-surface","mobile":"component"},
+  },
+  "testimonials-09": {
+    name: "testimonials-09",
+    description: "Customer story with large heading and avatar",
+    type: "registry:block",
+    registryDependencies: ["avatar","card"],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/testimonials-09/page.tsx",
+      type: "registry:page",
+      target: "app/testimonials-09/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/testimonials-09/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["testimonials"],
+    meta: {"iframeHeight":"500px","container":"w-full bg-surface","mobile":"component"},
+  },
+  "testimonials-10": {
+    name: "testimonials-10",
+    description: "Monochromatic testimonials with company logos",
+    type: "registry:block",
+    registryDependencies: ["badge","card","button"],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/testimonials-10/page.tsx",
+      type: "registry:page",
+      target: "app/testimonials-10/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/testimonials-10/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["testimonials"],
+    meta: {"iframeHeight":"700px","container":"w-full bg-surface","mobile":"component"},
+  },
+  "testimonials-11": {
+    name: "testimonials-11",
+    description: "Testimonial cards with focus state",
+    type: "registry:block",
+    registryDependencies: ["avatar","card"],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/testimonials-11/page.tsx",
+      type: "registry:page",
+      target: "app/testimonials-11/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/testimonials-11/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["testimonials"],
+    meta: {"iframeHeight":"700px","container":"w-full bg-surface","mobile":"component"},
+  },
+  "testimonials-12": {
+    name: "testimonials-12",
+    description: "Grid layout testimonials with company logos",
+    type: "registry:block",
+    registryDependencies: ["card"],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/testimonials-12/page.tsx",
+      type: "registry:page",
+      target: "app/testimonials-12/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/testimonials-12/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["testimonials"],
+    meta: {"iframeHeight":"800px","container":"w-full bg-surface","mobile":"component"},
+  },
+  "testimonials-13": {
+    name: "testimonials-13",
+    description: "Dark card testimonial with rounded avatar",
+    type: "registry:block",
+    registryDependencies: ["avatar","card"],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/testimonials-13/page.tsx",
+      type: "registry:page",
+      target: "app/testimonials-13/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/testimonials-13/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["testimonials"],
+    meta: {"iframeHeight":"500px","container":"w-full bg-surface","mobile":"component"},
+  },
+  "testimonials-14": {
+    name: "testimonials-14",
+    description: "Light testimonials with card shadow",
+    type: "registry:block",
+    registryDependencies: ["avatar","card"],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/testimonials-14/page.tsx",
+      type: "registry:page",
+      target: "app/testimonials-14/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/testimonials-14/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["testimonials"],
+    meta: {"iframeHeight":"700px","container":"w-full bg-surface","mobile":"component"},
+  },
+  "testimonials-15": {
+    name: "testimonials-15",
+    description: "Testimonials with submit button",
+    type: "registry:block",
+    registryDependencies: ["card"],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/testimonials-15/page.tsx",
+      type: "registry:page",
+      target: "app/testimonials-15/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/testimonials-15/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["testimonials"],
+    meta: {"iframeHeight":"600px","container":"w-full bg-surface","mobile":"component"},
+  },
+  "testimonials-16": {
+    name: "testimonials-16",
+    description: "Dark carousel testimonials with navigation",
+    type: "registry:block",
+    registryDependencies: ["card","button"],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/testimonials-16/page.tsx",
+      type: "registry:page",
+      target: "app/testimonials-16/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/testimonials-16/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["testimonials"],
+    meta: {"iframeHeight":"600px","container":"w-full bg-surface","mobile":"component"},
+  },
+  "testimonials-17": {
+    name: "testimonials-17",
+    description: "Background image carousel testimonials",
+    type: "registry:block",
+    registryDependencies: ["card","button"],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/testimonials-17/page.tsx",
+      type: "registry:page",
+      target: "app/testimonials-17/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/testimonials-17/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["testimonials"],
+    meta: {"iframeHeight":"600px","container":"w-full bg-surface","mobile":"component"},
+  },
+  "modals-01": {
+    name: "modals-01",
+    description: "Alert modal with confirmation input for reset settings",
+    type: "registry:block",
+    registryDependencies: ["dialog","button","input","label"],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/modals-01/page.tsx",
+      type: "registry:page",
+      target: "app/modals-01/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/modals-01/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["modals"],
+    meta: {"iframeHeight":"600px","container":"w-full bg-surface","mobile":"component"},
+  },
+  "modals-02": {
+    name: "modals-02",
+    description: "Edit profile modal with form inputs and preferences",
+    type: "registry:block",
+    registryDependencies: ["dialog","button","input","label","select","checkbox","radio-group"],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/modals-02/page.tsx",
+      type: "registry:page",
+      target: "app/modals-02/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/modals-02/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["modals"],
+    meta: {"iframeHeight":"700px","container":"w-full bg-surface","mobile":"component"},
+  },
+  "modals-03": {
+    name: "modals-03",
+    description: "Invite members modal with team management",
+    type: "registry:block",
+    registryDependencies: ["dialog","button","input","avatar","dropdown-menu"],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/modals-03/page.tsx",
+      type: "registry:page",
+      target: "app/modals-03/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/modals-03/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["modals"],
+    meta: {"iframeHeight":"700px","container":"w-full bg-surface","mobile":"component"},
+  },
+  "modals-04": {
+    name: "modals-04",
+    description: "Update product modal with image gallery and form",
+    type: "registry:block",
+    registryDependencies: ["dialog","button","input","label","select","textarea"],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/modals-04/page.tsx",
+      type: "registry:page",
+      target: "app/modals-04/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/modals-04/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["modals"],
+    meta: {"iframeHeight":"800px","container":"w-full bg-surface","mobile":"component"},
+  },
+  "modals-05": {
+    name: "modals-05",
+    description: "Upload files modal with drag and drop",
+    type: "registry:block",
+    registryDependencies: ["dialog","button","card"],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/modals-05/page.tsx",
+      type: "registry:page",
+      target: "app/modals-05/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/modals-05/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["modals"],
+    meta: {"iframeHeight":"700px","container":"w-full bg-surface","mobile":"component"},
+  },
+  "modals-06": {
+    name: "modals-06",
+    description: "Publish capsule collection modal with metadata display",
+    type: "registry:block",
+    registryDependencies: ["dialog","button","card"],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/modals-06/page.tsx",
+      type: "registry:page",
+      target: "app/modals-06/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/modals-06/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["modals"],
+    meta: {"iframeHeight":"650px","container":"w-full bg-surface","mobile":"component"},
+  },
+  "modals-07": {
+    name: "modals-07",
+    description: "Change collection visibility settings modal",
+    type: "registry:block",
+    registryDependencies: ["dialog","button"],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/modals-07/page.tsx",
+      type: "registry:page",
+      target: "app/modals-07/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/modals-07/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["modals"],
+    meta: {"iframeHeight":"500px","container":"w-full bg-surface","mobile":"component"},
+  },
+  "modals-08": {
+    name: "modals-08",
+    description: "Disable collection lock rules modal with alert and impact list",
+    type: "registry:block",
+    registryDependencies: ["dialog","button","card"],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/modals-08/page.tsx",
+      type: "registry:page",
+      target: "app/modals-08/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/modals-08/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["modals"],
+    meta: {"iframeHeight":"750px","container":"w-full bg-surface","mobile":"component"},
+  },
+  "modals-09": {
+    name: "modals-09",
+    description: "Transfer showroom ownership modal with form fields and warning",
+    type: "registry:block",
+    registryDependencies: ["dialog","button","input","label","select","card"],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/modals-09/page.tsx",
+      type: "registry:page",
+      target: "app/modals-09/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/modals-09/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["modals"],
+    meta: {"iframeHeight":"750px","container":"w-full bg-surface","mobile":"component"},
+  },
+  "modals-10": {
+    name: "modals-10",
+    description: "Permanently remove archive modal with effects list",
+    type: "registry:block",
+    registryDependencies: ["dialog","button","card"],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/modals-10/page.tsx",
+      type: "registry:page",
+      target: "app/modals-10/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/modals-10/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["modals"],
+    meta: {"iframeHeight":"750px","container":"w-full bg-surface","mobile":"component"},
+  },
+  "modals-11": {
+    name: "modals-11",
+    description: "Confirm vault deletion modal with text input verification",
+    type: "registry:block",
+    registryDependencies: ["dialog","button","input","label"],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/modals-11/page.tsx",
+      type: "registry:page",
+      target: "app/modals-11/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/modals-11/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["modals"],
+    meta: {"iframeHeight":"550px","container":"w-full bg-surface","mobile":"component"},
+  },
+  "account-basic-info-01": {
+    name: "account-basic-info-01",
+    description: "Personal information management form",
+    type: "registry:block",
+    registryDependencies: ["button","card","input","label","select","calendar","popover"],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/account-basic-info-01/page.tsx",
+      type: "registry:page",
+      target: "app/account-basic-info/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/account-basic-info-01/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["account"],
+    meta: {"iframeHeight":"1000px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component"},
+  },
+  "account-2fa-01": {
+    name: "account-2fa-01",
+    description: "Two-factor authentication setup",
+    type: "registry:block",
+    registryDependencies: ["button","card","input","label","switch"],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/account-2fa-01/page.tsx",
+      type: "registry:page",
+      target: "app/account-2fa/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/account-2fa-01/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["account"],
+    meta: {"iframeHeight":"800px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component","details":"Secure your account with two-factor authentication. Enable authenticator apps, configure backup codes, and manage security verification methods for enhanced account protection."},
+  },
+  "account-change-password-01": {
+    name: "account-change-password-01",
+    description: "Change password form with validation",
+    type: "registry:block",
+    registryDependencies: ["button","card","input","label"],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/account-change-password-01/page.tsx",
+      type: "registry:page",
+      target: "app/account-change-password/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/account-change-password-01/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["account"],
+    meta: {"iframeHeight":"700px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component"},
+  },
+  "account-notifications-01": {
+    name: "account-notifications-01",
+    description: "Notification preferences management",
+    type: "registry:block",
+    registryDependencies: ["button","card","switch"],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/account-notifications-01/page.tsx",
+      type: "registry:page",
+      target: "app/account-notifications/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/account-notifications-01/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["account"],
+    meta: {"iframeHeight":"900px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component"},
+  },
+  "account-sessions-01": {
+    name: "account-sessions-01",
+    description: "Active sessions and devices management",
+    type: "registry:block",
+    registryDependencies: ["button","card"],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/account-sessions-01/page.tsx",
+      type: "registry:page",
+      target: "app/account-sessions/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/account-sessions-01/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["account"],
+    meta: {"iframeHeight":"800px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component"},
+  },
+  "account-avatar-upload-01": {
+    name: "account-avatar-upload-01",
+    description: "Profile avatar upload and management",
+    type: "registry:block",
+    registryDependencies: ["button","card"],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/account-avatar-upload-01/page.tsx",
+      type: "registry:page",
+      target: "app/account-avatar-upload/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/account-avatar-upload-01/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["account"],
+    meta: {"iframeHeight":"600px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component"},
+  },
+  "account-integrations-01": {
+    name: "account-integrations-01",
+    description: "Third-party integrations management",
+    type: "registry:block",
+    registryDependencies: ["button","card","switch"],
+    files: [{
+      path: "registry/creative-tim-ui/blocks/account-integrations-01/page.tsx",
+      type: "registry:page",
+      target: "app/account-integrations/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/blocks/account-integrations-01/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["account"],
     meta: {"iframeHeight":"900px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component"},
   },
   "use-mobile": {
@@ -466,228 +1994,12 @@ export const Index: Record<string, any> = {
     type: "registry:hook",
     registryDependencies: undefined,
     files: [{
-      path: "registry/elevenlabs-ui/hooks/use-mobile.ts",
+      path: "registry/creative-tim-ui/hooks/use-mobile.ts",
       type: "registry:hook",
       target: ""
     }],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/elevenlabs-ui/hooks/use-mobile.ts")
-      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
-      return { default: mod.default || mod[exportName] }
-    }),
-    categories: undefined,
-    meta: undefined,
-  },
-  "audio-player-demo": {
-    name: "audio-player-demo",
-    description: "",
-    type: "registry:example",
-    registryDependencies: ["https://ui.elevenlabs.io/r/audio-player.json","button","card","scroll-area"],
-    files: [{
-      path: "registry/elevenlabs-ui/examples/audio-player-demo.tsx",
-      type: "registry:example",
-      target: ""
-    }],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/elevenlabs-ui/examples/audio-player-demo.tsx")
-      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
-      return { default: mod.default || mod[exportName] }
-    }),
-    categories: undefined,
-    meta: undefined,
-  },
-  "orb-demo": {
-    name: "orb-demo",
-    description: "",
-    type: "registry:example",
-    registryDependencies: ["https://ui.elevenlabs.io/r/orb.json","button"],
-    files: [{
-      path: "registry/elevenlabs-ui/examples/orb-demo.tsx",
-      type: "registry:example",
-      target: ""
-    }],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/elevenlabs-ui/examples/orb-demo.tsx")
-      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
-      return { default: mod.default || mod[exportName] }
-    }),
-    categories: undefined,
-    meta: undefined,
-  },
-  "waveform-demo": {
-    name: "waveform-demo",
-    description: "",
-    type: "registry:example",
-    registryDependencies: ["https://ui.elevenlabs.io/r/waveform.json"],
-    files: [{
-      path: "registry/elevenlabs-ui/examples/waveform-demo.tsx",
-      type: "registry:example",
-      target: ""
-    }],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/elevenlabs-ui/examples/waveform-demo.tsx")
-      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
-      return { default: mod.default || mod[exportName] }
-    }),
-    categories: undefined,
-    meta: undefined,
-  },
-  "live-waveform-demo": {
-    name: "live-waveform-demo",
-    description: "",
-    type: "registry:example",
-    registryDependencies: ["https://ui.elevenlabs.io/r/live-waveform.json","button"],
-    files: [{
-      path: "registry/elevenlabs-ui/examples/live-waveform-demo.tsx",
-      type: "registry:example",
-      target: ""
-    }],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/elevenlabs-ui/examples/live-waveform-demo.tsx")
-      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
-      return { default: mod.default || mod[exportName] }
-    }),
-    categories: undefined,
-    meta: undefined,
-  },
-  "bar-visualizer-demo": {
-    name: "bar-visualizer-demo",
-    description: "",
-    type: "registry:example",
-    registryDependencies: ["https://ui.elevenlabs.io/r/bar-visualizer.json","button"],
-    files: [{
-      path: "registry/elevenlabs-ui/examples/bar-visualizer-demo.tsx",
-      type: "registry:example",
-      target: ""
-    }],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/elevenlabs-ui/examples/bar-visualizer-demo.tsx")
-      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
-      return { default: mod.default || mod[exportName] }
-    }),
-    categories: undefined,
-    meta: undefined,
-  },
-  "message-demo": {
-    name: "message-demo",
-    description: "",
-    type: "registry:example",
-    registryDependencies: ["https://ui.elevenlabs.io/r/message.json","https://ui.elevenlabs.io/r/response.json"],
-    files: [{
-      path: "registry/elevenlabs-ui/examples/message-demo.tsx",
-      type: "registry:example",
-      target: ""
-    }],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/elevenlabs-ui/examples/message-demo.tsx")
-      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
-      return { default: mod.default || mod[exportName] }
-    }),
-    categories: undefined,
-    meta: undefined,
-  },
-  "response-demo": {
-    name: "response-demo",
-    description: "",
-    type: "registry:example",
-    registryDependencies: ["https://ui.elevenlabs.io/r/response.json"],
-    files: [{
-      path: "registry/elevenlabs-ui/examples/response-demo.tsx",
-      type: "registry:example",
-      target: ""
-    }],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/elevenlabs-ui/examples/response-demo.tsx")
-      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
-      return { default: mod.default || mod[exportName] }
-    }),
-    categories: undefined,
-    meta: undefined,
-  },
-  "shimmering-text-demo": {
-    name: "shimmering-text-demo",
-    description: "",
-    type: "registry:example",
-    registryDependencies: ["https://ui.elevenlabs.io/r/shimmering-text.json"],
-    files: [{
-      path: "registry/elevenlabs-ui/examples/shimmering-text-demo.tsx",
-      type: "registry:example",
-      target: ""
-    }],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/elevenlabs-ui/examples/shimmering-text-demo.tsx")
-      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
-      return { default: mod.default || mod[exportName] }
-    }),
-    categories: undefined,
-    meta: undefined,
-  },
-  "voice-picker-demo": {
-    name: "voice-picker-demo",
-    description: "",
-    type: "registry:example",
-    registryDependencies: ["https://ui.elevenlabs.io/r/voice-picker.json","https://ui.elevenlabs.io/r/audio-player.json"],
-    files: [{
-      path: "registry/elevenlabs-ui/examples/voice-picker-demo.tsx",
-      type: "registry:example",
-      target: ""
-    }],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/elevenlabs-ui/examples/voice-picker-demo.tsx")
-      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
-      return { default: mod.default || mod[exportName] }
-    }),
-    categories: undefined,
-    meta: undefined,
-  },
-  "voice-button-demo": {
-    name: "voice-button-demo",
-    description: "",
-    type: "registry:example",
-    registryDependencies: ["https://ui.elevenlabs.io/r/voice-button.json"],
-    files: [{
-      path: "registry/elevenlabs-ui/examples/voice-button-demo.tsx",
-      type: "registry:example",
-      target: ""
-    }],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/elevenlabs-ui/examples/voice-button-demo.tsx")
-      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
-      return { default: mod.default || mod[exportName] }
-    }),
-    categories: undefined,
-    meta: undefined,
-  },
-  "conversation-bar-demo": {
-    name: "conversation-bar-demo",
-    description: "",
-    type: "registry:example",
-    registryDependencies: ["https://ui.elevenlabs.io/r/conversation-bar.json"],
-    files: [{
-      path: "registry/elevenlabs-ui/examples/conversation-bar-demo.tsx",
-      type: "registry:example",
-      target: ""
-    }],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/elevenlabs-ui/examples/conversation-bar-demo.tsx")
-      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
-      return { default: mod.default || mod[exportName] }
-    }),
-    categories: undefined,
-    meta: undefined,
-  },
-  "conversation-demo": {
-    name: "conversation-demo",
-    description: "",
-    type: "registry:example",
-    registryDependencies: ["https://ui.elevenlabs.io/r/message.json","https://ui.elevenlabs.io/r/response.json","https://ui.elevenlabs.io/r/conversation.json"],
-    files: [{
-      path: "registry/elevenlabs-ui/examples/conversation-demo.tsx",
-      type: "registry:example",
-      target: ""
-    }],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/elevenlabs-ui/examples/conversation-demo.tsx")
+      const mod = await import("@/registry/creative-tim-ui/hooks/use-mobile.ts")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
@@ -700,12 +2012,12 @@ export const Index: Record<string, any> = {
     type: "registry:example",
     registryDependencies: ["software-purchase-card"],
     files: [{
-      path: "registry/elevenlabs-ui/examples/software-purchase-card-demo.tsx",
+      path: "registry/creative-tim-ui/examples/software-purchase-card-demo.tsx",
       type: "registry:example",
       target: ""
     }],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/elevenlabs-ui/examples/software-purchase-card-demo.tsx")
+      const mod = await import("@/registry/creative-tim-ui/examples/software-purchase-card-demo.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
