@@ -270,21 +270,21 @@ export function ShowcaseMasonry() {
               </div>
             </div>
 
-            <Accordion type="single" collapsible>
+            <Accordion type="single" collapsible defaultValue="github">
               <AccordionItem
                 value="github"
                 className="border-border rounded-lg border"
               >
-                <div className="flex flex-col gap-4 px-4 py-4 sm:flex-row sm:items-center sm:justify-between">
-                  <div className="flex flex-1 items-center gap-3 sm:gap-4">
-                    <div className="bg-muted/50 flex h-10 w-10 shrink-0 items-center justify-center rounded-lg sm:h-12 sm:w-12">
+                <div className="flex flex-col gap-3 px-4 py-3 sm:flex-row sm:items-center sm:justify-between">
+                  <div className="flex flex-1 items-center gap-3">
+                    <div className="bg-muted/50 flex h-10 w-10 shrink-0 items-center justify-center rounded-lg">
                       <Github
-                        className={`h-5 w-5 sm:h-6 sm:w-6 ${isGithubActive ? "text-primary" : "text-muted-foreground"}`}
+                        className={`h-5 w-5 ${isGithubActive ? "text-primary" : "text-muted-foreground"}`}
                       />
                     </div>
-                    <div className="min-w-0 flex-1 space-y-1 text-left">
-                      <div className="flex flex-wrap items-center gap-2">
-                        <h3 className="font-semibold">GitHub</h3>
+                    <div className="min-w-0 flex-1 text-left">
+                      <div className="mb-1 flex flex-wrap items-center gap-2">
+                        <h3 className="text-sm font-semibold">GitHub</h3>
                         <Badge
                           variant="outline"
                           className="text-muted-foreground text-xs"
@@ -292,12 +292,12 @@ export function ShowcaseMasonry() {
                           Development
                         </Badge>
                       </div>
-                      <p className="text-muted-foreground line-clamp-1 text-xs sm:text-sm">
+                      <p className="text-muted-foreground line-clamp-1 text-xs">
                         Connect your GitHub account to sync repositories
                       </p>
                     </div>
                   </div>
-                  <div className="flex items-center justify-between gap-3 sm:justify-end">
+                  <div className="flex items-center gap-3">
                     <div className="flex items-center gap-2">
                       <Switch
                         id="github-toggle"
@@ -306,22 +306,28 @@ export function ShowcaseMasonry() {
                       />
                       <Label
                         htmlFor="github-toggle"
-                        className="cursor-pointer text-xs sm:text-sm"
+                        className="cursor-pointer text-xs"
                       >
                         {isGithubActive ? "Enabled" : "Enable"}
                       </Label>
                     </div>
-                    <AccordionTrigger className="hover:bg-muted/50 rounded px-2 py-2 sm:px-3">
-                      <span className="text-xs font-medium sm:text-sm">View More</span>
+                    <AccordionTrigger className="hover:bg-muted/50 rounded p-2">
+                      <span className="sr-only">Toggle details</span>
                     </AccordionTrigger>
                   </div>
                 </div>
-                <AccordionContent className="px-4 pb-6">
-                  <p className="text-muted-foreground text-xs sm:text-sm">
-                    You haven&apos;t added your GitHub account or you
-                    aren&apos;t authorized. Click &quot;Connect&quot; to
-                    initiate the integration process.
-                  </p>
+                <AccordionContent className="border-t px-4 pb-4 pt-4">
+                  <div className="space-y-3">
+                    <p className="text-muted-foreground text-xs leading-relaxed">
+                      You haven&apos;t added your GitHub account or you
+                      aren&apos;t authorized. Connect your account to enable
+                      repository syncing and collaboration features.
+                    </p>
+                    <Button size="sm" variant="outline" className="w-full">
+                      <Github className="mr-2 h-4 w-4" />
+                      Connect GitHub Account
+                    </Button>
+                  </div>
                 </AccordionContent>
               </AccordionItem>
             </Accordion>
