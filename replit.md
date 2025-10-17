@@ -135,3 +135,19 @@ Preferred communication style: Simple, everyday language.
 - **Thumbnail Integration**: All Web 3.0 category cards now display actual preview images from Creative Tim's public assets repository
 - **Configured Examples**: Web 3.0 Login, Web 3.0 Charts, and Web 3.0 Cards all have dedicated thumbnail images
 - **Complete Coverage**: ALL home page example cards (43 total) now feature real preview thumbnails from the Creative Tim public assets repository
+
+### Coming Soon Cards Feature
+- **Badge UI Component**: Added Badge component import from the registry
+- **Coming Soon Flag**: Added `comingSoon` boolean field to example interface
+- **Disabled Cards**: 10 cards marked as "Coming Soon" with blur filter and badge:
+  - Web 3.0: Web 3.0 Cards
+  - Application & Admin UI: Account, Billing, Modals
+  - Marketing & Presentation: Contact Sections, Footers, Testimonial Sections
+  - Content UI: FAQs, Blog Sections
+  - Ecommerce UI: Ecommerce Sections
+- **Visual Treatment**: Cards with `comingSoon: true` display:
+  - Blurred thumbnail image
+  - White/black backdrop blur overlay (60% opacity)
+  - "Soon" badge centered on overlay
+  - Cursor set to not-allowed
+  - Click disabled (no Link wrapper)
