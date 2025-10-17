@@ -370,14 +370,14 @@ export function ExamplesPreview() {
                         src={example.thumbnail}
                         alt={example.name}
                         fill
-                        className={`object-cover ${example.comingSoon ? 'blur-sm' : ''}`}
+                        className="object-cover"
                         sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                       />
                     ) : (
                       <div className="absolute inset-0 bg-gradient-to-br from-muted/80 to-muted/40" />
                     )}
                     {example.comingSoon && (
-                      <div className="absolute inset-0 bg-white/60 dark:bg-black/60 backdrop-blur-sm flex items-center justify-center">
+                      <div className="absolute inset-0 bg-white/40 dark:bg-black/40 flex items-center justify-center">
                         <Badge variant="secondary" className="bg-white dark:bg-black text-foreground font-medium px-4 py-1.5">
                           Soon
                         </Badge>
