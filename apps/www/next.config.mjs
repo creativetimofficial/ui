@@ -101,19 +101,19 @@ const nextConfig = {
       },
       {
         source: '/api/:path*',
-        destination: 'http://localhost:3000/api/:path*', // Proxy to Rails API
+        destination: process.env.NEXT_PUBLIC_APP_URL + '/api/:path*', // Proxy to Rails API
       },
       {
         source: '/dashboard/:path*',
-        destination: 'http://localhost:3000/downloads/:path*', // Proxy to Rails Dashboard
+        destination: process.env.NEXT_PUBLIC_APP_URL + '/dashboard/:path*', // Proxy to Rails Dashboard
       },
       {
         source: '/downloads',
-        destination: 'http://localhost:3000/downloads', // Proxy to Rails Dashboard
+        destination: process.env.NEXT_PUBLIC_APP_URL + '/downloads', // Proxy to Rails Dashboard
       },
       {
         source: '/logout',
-        destination: 'http://localhost:3000/logout', // Proxy to Rails Dashboard
+        destination: process.env.NEXT_PUBLIC_APP_URL + '/logout', // Proxy to Rails Dashboard
       },
     ]
   },
