@@ -6,12 +6,13 @@ import { cn } from "@/lib/utils"
 import { LayoutProvider } from "@/hooks/use-layout"
 import { ActiveThemeProvider } from "@/components/active-theme"
 import { Analytics } from "@/components/analytics"
+import { AuthProvider } from "@/components/auth/AuthProvider"
 import { TailwindIndicator } from "@/components/tailwind-indicator"
 import { ThemeProvider } from "@/components/theme-provider"
 import { Toaster } from "@/registry/creative-tim-ui/ui/sonner"
-import { AuthProvider } from "@/components/auth/AuthProvider";
 
 import "@/styles/globals.css"
+
 import Script from "next/script"
 
 export const metadata: Metadata = {

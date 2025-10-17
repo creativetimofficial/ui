@@ -20,7 +20,7 @@ export default function CardWithButton() {
         </CardDescription>
       </CardHeader>
       <CardContent>
-        <p className="text-sm text-muted-foreground">
+        <p className="text-muted-foreground text-sm">
           More detailed information goes here in the card content area.
         </p>
       </CardContent>
@@ -30,4 +30,3 @@ export default function CardWithButton() {
     </Card>
   )
 }
-

@@ -1,6 +1,7 @@
 "use client"
 
 import { Heart, ShoppingCart, Star } from "lucide-react"
+
 import { Badge } from "@/registry/creative-tim-ui/ui/badge"
 import { Button } from "@/registry/creative-tim-ui/ui/button"
 import {
@@ -35,7 +36,7 @@ export default function CardEcommerce() {
               />
             ))}
             <Star className="h-4 w-4" />
-            <span className="text-sm text-muted-foreground">(128)</span>
+            <span className="text-muted-foreground text-sm">(128)</span>
           </div>
           <div className="text-2xl font-bold">$299</div>
         </div>
@@ -52,4 +53,3 @@ export default function CardEcommerce() {
     </Card>
   )
 }
-

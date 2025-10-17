@@ -1,13 +1,13 @@
-"use client";
+"use client"
 
-import { usePaddle } from "@/hooks/usePaddle";
+import { usePaddle } from "@/hooks/usePaddle"
 
 export default function PricingSection() {
-  const { handleBuy, isProcessing } = usePaddle();
+  const { handleBuy, isProcessing } = usePaddle()
 
   return (
     <div className="p-8">
-      <h1 className="text-2xl mb-4">Buy Pro Plan</h1>
+      <h1 className="mb-4 text-2xl">Buy Pro Plan</h1>
       <button
         onClick={() =>
           handleBuy(
@@ -19,10 +19,10 @@ export default function PricingSection() {
           )
         }
         disabled={isProcessing}
-        className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 disabled:opacity-50"
+        className="rounded bg-blue-600 px-4 py-2 text-white hover:bg-blue-700 disabled:opacity-50"
       >
         {isProcessing ? "Processing..." : "Buy Now"}
       </button>
     </div>
-  );
+  )
 }

@@ -38,10 +38,7 @@ npm install lucide-react
 
 <Step>Copy and paste the following code into your project.</Step>
 
-<ComponentSource
-  name="card"
-  title="components/ui/card.tsx"
-/>
+<ComponentSource name="card" title="components/ui/card.tsx" />
 
 <Step>Update the import paths to match your project setup.</Step>
 
@@ -54,7 +51,14 @@ npm install lucide-react
 ## Usage
 
 ```tsx showLineNumbers
-import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from "@/components/ui/card"
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card"
 ```
 
 ## Examples
@@ -71,7 +75,10 @@ A simple card with just content.
 ```tsx showLineNumbers {3-9}
 <Card>
   <CardContent className="pt-6">
-    <p>This is a plain card with simple content. Perfect for displaying basic information.</p>
+    <p>
+      This is a plain card with simple content. Perfect for displaying basic
+      information.
+    </p>
   </CardContent>
 </Card>
 ```
@@ -89,7 +96,9 @@ A card with header elements and a call-to-action button.
 <Card>
   <CardHeader>
     <CardTitle>Card Title</CardTitle>
-    <CardDescription>This is a brief description of the card content.</CardDescription>
+    <CardDescription>
+      This is a brief description of the card content.
+    </CardDescription>
   </CardHeader>
   <CardContent>
     <p>More detailed information goes here in the card content area.</p>
@@ -111,13 +120,13 @@ A card designed for blog post previews with image, title, excerpt, and metadata.
 
 ```tsx showLineNumbers {3-24}
 <Card className="overflow-hidden">
-  <img 
-    src="/blog-image.jpg" 
-    alt="Blog post" 
+  <img
+    src="/blog-image.jpg"
+    alt="Blog post"
     className="h-48 w-full object-cover"
   />
   <CardHeader>
-    <div className="flex items-center gap-2 text-sm text-muted-foreground">
+    <div className="text-muted-foreground flex items-center gap-2 text-sm">
       <Calendar className="h-4 w-4" />
       <span>March 15, 2025</span>
       <span>•</span>
@@ -125,7 +134,8 @@ A card designed for blog post previews with image, title, excerpt, and metadata.
     </div>
     <CardTitle>Getting Started with Next.js</CardTitle>
     <CardDescription>
-      Learn how to build modern web applications with Next.js, React, and TypeScript.
+      Learn how to build modern web applications with Next.js, React, and
+      TypeScript.
     </CardDescription>
   </CardHeader>
   <CardFooter>
@@ -146,16 +156,18 @@ A card designed for product listings with image, pricing, and add to cart functi
 ```tsx showLineNumbers {3-39}
 <Card className="overflow-hidden">
   <div className="relative">
-    <img 
-      src="/product-image.jpg" 
-      alt="Product" 
+    <img
+      src="/product-image.jpg"
+      alt="Product"
       className="h-64 w-full object-cover"
     />
     <Badge className="absolute top-2 right-2">New</Badge>
   </div>
   <CardHeader>
     <CardTitle>Premium Wireless Headphones</CardTitle>
-    <CardDescription>High-quality audio with active noise cancellation</CardDescription>
+    <CardDescription>
+      High-quality audio with active noise cancellation
+    </CardDescription>
   </CardHeader>
   <CardContent>
     <div className="flex items-center justify-between">
@@ -165,7 +177,7 @@ A card designed for product listings with image, pricing, and add to cart functi
         <Star className="h-4 w-4 fill-yellow-400 text-yellow-400" />
         <Star className="h-4 w-4 fill-yellow-400 text-yellow-400" />
         <Star className="h-4 w-4" />
-        <span className="text-sm text-muted-foreground">(128)</span>
+        <span className="text-muted-foreground text-sm">(128)</span>
       </div>
       <div className="text-2xl font-bold">$299</div>
     </div>
@@ -190,10 +202,10 @@ The root card container component.
 
 #### Props
 
-| Prop      | Type        | Default     | Description                    |
-| --------- | ----------- | ----------- | ------------------------------ |
-| className | `string`    | `undefined` | Additional CSS classes         |
-| children  | `ReactNode` | `undefined` | Card content                   |
+| Prop      | Type        | Default     | Description            |
+| --------- | ----------- | ----------- | ---------------------- |
+| className | `string`    | `undefined` | Additional CSS classes |
+| children  | `ReactNode` | `undefined` | Card content           |
 
 ### CardHeader
 
@@ -201,10 +213,10 @@ Container for card header content (title, description).
 
 #### Props
 
-| Prop      | Type        | Default     | Description                    |
-| --------- | ----------- | ----------- | ------------------------------ |
-| className | `string`    | `undefined` | Additional CSS classes         |
-| children  | `ReactNode` | `undefined` | Header content                 |
+| Prop      | Type        | Default     | Description            |
+| --------- | ----------- | ----------- | ---------------------- |
+| className | `string`    | `undefined` | Additional CSS classes |
+| children  | `ReactNode` | `undefined` | Header content         |
 
 ### CardTitle
 
@@ -212,10 +224,10 @@ The card title component.
 
 #### Props
 
-| Prop      | Type        | Default     | Description                    |
-| --------- | ----------- | ----------- | ------------------------------ |
-| className | `string`    | `undefined` | Additional CSS classes         |
-| children  | `ReactNode` | `undefined` | Title text                     |
+| Prop      | Type        | Default     | Description            |
+| --------- | ----------- | ----------- | ---------------------- |
+| className | `string`    | `undefined` | Additional CSS classes |
+| children  | `ReactNode` | `undefined` | Title text             |
 
 ### CardDescription
 
@@ -223,10 +235,10 @@ The card description component.
 
 #### Props
 
-| Prop      | Type        | Default     | Description                    |
-| --------- | ----------- | ----------- | ------------------------------ |
-| className | `string`    | `undefined` | Additional CSS classes         |
-| children  | `ReactNode` | `undefined` | Description text               |
+| Prop      | Type        | Default     | Description            |
+| --------- | ----------- | ----------- | ---------------------- |
+| className | `string`    | `undefined` | Additional CSS classes |
+| children  | `ReactNode` | `undefined` | Description text       |
 
 ### CardContent
 
@@ -234,10 +246,10 @@ Container for the main card content.
 
 #### Props
 
-| Prop      | Type        | Default     | Description                    |
-| --------- | ----------- | ----------- | ------------------------------ |
-| className | `string`    | `undefined` | Additional CSS classes         |
-| children  | `ReactNode` | `undefined` | Card body content              |
+| Prop      | Type        | Default     | Description            |
+| --------- | ----------- | ----------- | ---------------------- |
+| className | `string`    | `undefined` | Additional CSS classes |
+| children  | `ReactNode` | `undefined` | Card body content      |
 
 ### CardFooter
 
@@ -245,10 +257,10 @@ Container for card footer content (buttons, actions).
 
 #### Props
 
-| Prop      | Type        | Default     | Description                    |
-| --------- | ----------- | ----------- | ------------------------------ |
-| className | `string`    | `undefined` | Additional CSS classes         |
-| children  | `ReactNode` | `undefined` | Footer content                 |
+| Prop      | Type        | Default     | Description            |
+| --------- | ----------- | ----------- | ---------------------- |
+| className | `string`    | `undefined` | Additional CSS classes |
+| children  | `ReactNode` | `undefined` | Footer content         |
 
 ## Notes
 
@@ -256,4 +268,3 @@ Container for card footer content (buttons, actions).
 - Use `overflow-hidden` class on Card to clip images at rounded corners
 - Combine with other components like Button, Badge, and icons for rich layouts
 - Based on shadcn/ui Card component with Material Tailwind design enhancements
-

@@ -1,6 +1,7 @@
 "use client"
 
 import { Calendar, Heart, ShoppingCart, Star } from "lucide-react"
+
 import { Badge } from "@/registry/creative-tim-ui/ui/badge"
 import { Button } from "@/registry/creative-tim-ui/ui/button"
 import {
@@ -18,8 +19,9 @@ export default function CardDemo() {
       {/* Plain Card */}
       <Card>
         <CardContent className="pt-6">
-          <p className="text-sm text-muted-foreground">
-            This is a plain card with simple content. Perfect for displaying basic information.
+          <p className="text-muted-foreground text-sm">
+            This is a plain card with simple content. Perfect for displaying
+            basic information.
           </p>
         </CardContent>
       </Card>
@@ -33,7 +35,7 @@ export default function CardDemo() {
           </CardDescription>
         </CardHeader>
         <CardContent>
-          <p className="text-sm text-muted-foreground">
+          <p className="text-muted-foreground text-sm">
             More detailed information goes here in the card content area.
           </p>
         </CardContent>
@@ -46,15 +48,18 @@ export default function CardDemo() {
       <Card className="overflow-hidden">
         <div className="aspect-video w-full bg-gradient-to-br from-blue-500 to-purple-600" />
         <CardHeader>
-          <div className="flex items-center gap-2 text-xs text-muted-foreground">
+          <div className="text-muted-foreground flex items-center gap-2 text-xs">
             <Calendar className="h-3 w-3" />
             <span>Mar 15, 2025</span>
             <span>•</span>
             <span>5 min read</span>
           </div>
-          <CardTitle className="text-lg">Getting Started with Next.js</CardTitle>
+          <CardTitle className="text-lg">
+            Getting Started with Next.js
+          </CardTitle>
           <CardDescription className="line-clamp-2">
-            Learn how to build modern web applications with Next.js, React, and TypeScript.
+            Learn how to build modern web applications with Next.js, React, and
+            TypeScript.
           </CardDescription>
         </CardHeader>
         <CardFooter>
@@ -85,8 +90,8 @@ export default function CardDemo() {
                   className="h-3 w-3 fill-yellow-400 text-yellow-400"
                 />
               ))}
-              <Star className="h-3 w-3 text-muted-foreground" />
-              <span className="ml-1 text-xs text-muted-foreground">(128)</span>
+              <Star className="text-muted-foreground h-3 w-3" />
+              <span className="text-muted-foreground ml-1 text-xs">(128)</span>
             </div>
             <div className="text-xl font-bold">$299</div>
           </div>
@@ -104,4 +109,3 @@ export default function CardDemo() {
     </div>
   )
 }
-

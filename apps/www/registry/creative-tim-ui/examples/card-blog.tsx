@@ -1,6 +1,7 @@
 "use client"
 
 import { Calendar } from "lucide-react"
+
 import { Button } from "@/registry/creative-tim-ui/ui/button"
 import {
   Card,
@@ -15,7 +16,7 @@ export default function CardBlog() {
     <Card className="w-full max-w-md overflow-hidden">
       <div className="aspect-video w-full bg-gradient-to-br from-blue-500 to-purple-600" />
       <CardHeader>
-        <div className="flex items-center gap-2 text-sm text-muted-foreground">
+        <div className="text-muted-foreground flex items-center gap-2 text-sm">
           <Calendar className="h-4 w-4" />
           <span>March 15, 2025</span>
           <span>•</span>
@@ -23,7 +24,8 @@ export default function CardBlog() {
         </div>
         <CardTitle>Getting Started with Next.js</CardTitle>
         <CardDescription>
-          Learn how to build modern web applications with Next.js, React, and TypeScript.
+          Learn how to build modern web applications with Next.js, React, and
+          TypeScript.
         </CardDescription>
       </CardHeader>
       <CardFooter>
@@ -32,4 +34,3 @@ export default function CardBlog() {
     </Card>
   )
 }
-
