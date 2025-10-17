@@ -332,7 +332,7 @@ function CommandMenuKbd({ className, ...props }: React.ComponentProps<"kbd">) {
   return (
     <kbd
       className={cn(
-        "bg-white/10 text-white/70 pointer-events-none flex h-5 items-center justify-center gap-1 rounded border border-white/20 px-1 font-sans text-[0.7rem] font-medium select-none [&_svg:not([class*='size-'])]:size-3",
+        "bg-white/10 text-white/70 pointer-events-none flex h-5 items-center justify-center gap-1 rounded-full border border-white/20 px-1 font-sans text-[0.7rem] font-medium select-none [&_svg:not([class*='size-'])]:size-3",
         className
       )}
       {...props}
