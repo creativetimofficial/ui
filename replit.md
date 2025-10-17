@@ -160,3 +160,16 @@ Preferred communication style: Simple, everyday language.
   - "Soon" badge centered on overlay
   - Cursor set to not-allowed
   - Click disabled (no Link wrapper)
+
+### Testimonials Section
+- **Location**: Home page, positioned after blocks section with thumbnails, before page navigation
+- **Layout**: Responsive grid (1 column mobile, 2 tablet, 3 desktop)
+- **Featured Testimonials**: 6 professional testimonials from developers and designers at leading tech companies (Stripe, Vercel, Figma, Linear, Shopify, GitHub)
+- **Design Features**:
+  - Professional avatar images with quote badge overlay
+  - 5-star rating display in top-right corner
+  - Name, role, and company information
+  - Hover effects with shadow and border transitions
+  - Card styling consistent with site design system
+- **Section Heading**: "Loved by Developers & Designers"
+- **Purpose**: Social proof showcasing trust from professionals building with Creative Tim UI
