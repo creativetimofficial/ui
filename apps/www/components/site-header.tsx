@@ -19,7 +19,7 @@ export function SiteHeader() {
     <header className="sticky top-0 z-50 w-full pt-4">
       <div className="container-wrapper px-6">
         <div className="bg-black/95 backdrop-blur-sm border border-white/10 rounded-full mx-auto max-w-7xl">
-          <div className="flex h-12 items-center justify-between px-4">
+          <div className="flex h-12 items-center justify-between px-2">
             {/* Left: Logo + Brand */}
             <div className="flex items-center gap-3">
               <MobileNav
