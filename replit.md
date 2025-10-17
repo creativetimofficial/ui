@@ -1,5 +1,5 @@
 ## Overview
-Creative Tim UI is a comprehensive React component library built on shadcn/ui, designed for audio and agentic applications. It functions as a monorepo providing customizable components like orbs, waveforms, voice agents, audio players, and conversation interfaces. The project serves as a documentation website and component registry, allowing CLI-based component installation. It emphasizes developer experience through streamlined installation, extensive documentation, and examples, with components designed for easy integration and full customization via Tailwind CSS and TypeScript. The project aims to provide a rich set of UI/UX for ecommerce, marketing, and application interfaces, with a strong focus on modern design trends and user interaction.
+Creative Tim UI is a comprehensive React component library built on shadcn/ui, designed for modern web applications. It functions as a monorepo providing customizable components for ecommerce, marketing, and application interfaces. The project serves as a documentation website and component registry, allowing CLI-based component installation. It emphasizes developer experience through streamlined installation, extensive documentation, and examples, with components designed for easy integration and full customization via Tailwind CSS and TypeScript. The project aims to provide a rich set of UI/UX with a strong focus on modern design trends and user interaction.
 
 ## User Preferences
 Preferred communication style: Simple, everyday language.
@@ -65,11 +65,6 @@ Preferred communication style: Simple, everyday language.
 - **Radix UI**: Headless UI primitives.
 - **shadcn/ui**: Base component patterns.
 - **Motion**: Animation library.
-- **Three.js + React Three Fiber**: 3D rendering for orb components.
-
-### ElevenLabs Integration
-- **@elevenlabs/elevenlabs-js**: Official JavaScript SDK.
-- **@elevenlabs/react**: React components and hooks for voice/audio features.
 
 ### Development Tools
 - **ESLint**: Code quality.
