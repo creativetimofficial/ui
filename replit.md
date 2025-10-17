@@ -50,7 +50,7 @@ Preferred communication style: Simple, everyday language.
 - **PRO Component Restrictions**: UI elements (install command, code tab) are disabled for PRO components without appropriate access.
 
 ### UI/UX Decisions and Features
-- **Home Page Background**: Entire home page uses bg-stone-50 for a warm, elegant stone/beige background.
+- **Home Page Background**: Entire home page uses bg-stone-50 (light mode) and bg-stone-950 (dark mode) for a warm, elegant background that adapts to theme.
 - **Ecommerce Blocks**: Enhanced grid layouts, video spotlights, luxury product detail pages, redesigned shopping cart, dark product overviews, and grid ecommerce with modern photography.
 - **Navbar Design**: Sleek, dark, rounded pill-shaped navigation with custom favicon logo (favicon-32x32.png, rounded-full) and brand text (text-base) on left, vertical separator, nav links (Docs, Examples), with search, GitHub link, theme switcher, and Get Started button on right.
 - **AI Platform Logo Section**: Header section below CTAs displaying "Ready to be imported in" (font-semibold, normal case) with 6 authentic AI platform logo images (OpenAI, Claude, v0, Replit, Bolt, Lovable) starting at 50% opacity with grayscale, transitioning to full color on hover.

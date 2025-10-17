@@ -50,7 +50,7 @@ export const metadata: Metadata = {
 
 export default function IndexPage() {
   return (
-    <div className="bg-stone-50 flex flex-1 flex-col">
+    <div className="bg-stone-50 dark:bg-stone-950 flex flex-1 flex-col">
       <div className="relative overflow-hidden">
         <div
           className="pointer-events-none absolute inset-0"
