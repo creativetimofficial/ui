@@ -50,8 +50,10 @@ Preferred communication style: Simple, everyday language.
 - **PRO Component Restrictions**: UI elements (install command, code tab) are disabled for PRO components without appropriate access.
 
 ### UI/UX Decisions and Features
+- **Home Page Background**: Entire home page uses bg-stone-50 (light mode) and bg-stone-950 (dark mode) for a warm, elegant background that adapts to theme.
 - **Ecommerce Blocks**: Enhanced grid layouts, video spotlights, luxury product detail pages, redesigned shopping cart, dark product overviews, and grid ecommerce with modern photography.
-- **Navbar Design**: Sleek, dark, rounded pill-shaped navigation with search, GitHub link, and theme switcher.
+- **Navbar Design**: Sleek, dark, rounded pill-shaped navigation with custom favicon logo (favicon-32x32.png, rounded-full) and brand text (text-base) on left, vertical separator, nav links (Docs, Examples), with search, GitHub link, theme switcher, and Get Started button on right.
+- **AI Platform Logo Section**: Header section below CTAs displaying "Ready to be imported in" (font-semibold, normal case) with 6 authentic AI platform logo images (OpenAI, Claude, v0, Replit, Bolt, Lovable) starting at 50% opacity with grayscale (inverted in dark mode), transitioning to full color on hover.
 - **Examples Preview Section**: Dynamic preview of component examples categorized by Web 3.0, Application & Admin UI, Marketing & Presentation, Content UI, and Ecommerce UI.
 - **Achievements Section**: Stats section with community members, downloads, GitHub stars, and NPM downloads.
 - **Enhanced Interactive Elements**: Interactive size and color selectors, wishlist toggles, accordion sections, and carousel pagination with smooth transitions.
@@ -160,3 +162,30 @@ Preferred communication style: Simple, everyday language.
   - "Soon" badge centered on overlay
   - Cursor set to not-allowed
   - Click disabled (no Link wrapper)
+
+### Testimonials Section
+- **Location**: Home page, positioned after blocks section with thumbnails, before page navigation
+- **Design**: Modern carousel with animations focused on quotes
+- **Featured Testimonials**: 4 professional testimonials from Creative Tim partners and CEOs:
+  - Eugen Tudorache - CTO @Updivision
+  - Robert Tatoi - Founder @PlayVertical
+  - Fredy Andrei - CEO @Simmmple
+  - Rares Toma - CEO @Loopple
+- **Carousel Features**:
+  - Auto-rotating carousel (5-second intervals)
+  - Previous/Next navigation buttons
+  - Dot indicators for all testimonials
+  - Click on dots to jump to specific testimonial
+- **Animation Details**:
+  - Smooth fade-in/fade-out transitions between testimonials
+  - Staggered animations: quote icon → quote text → author info
+  - Spring animation for quote icon appearance
+  - Motion-powered using framer-motion library
+- **Visual Design**:
+  - Large, prominent quote display (2xl to 4xl responsive text)
+  - Glassmorphism card with gradient background
+  - Rounded card with backdrop blur effect
+  - Centered layout with quote icon in circular badge
+  - Author avatar with name, role, and company below quote
+- **Section Heading**: "Loved by Developers & Designers"
+- **Purpose**: Social proof showcasing trust from professionals building with Creative Tim UI

@@ -5,6 +5,7 @@ import { Download, Package, Star, Users } from "lucide-react"
 import { ExamplesNav } from "@/components/examples-nav"
 import { ExamplesPreview } from "@/components/examples-preview"
 import { ShowcaseMasonry } from "@/components/showcase-masonry"
+import { TestimonialsSection } from "@/components/testimonials-section"
 import {
   PageActions,
   PageHeader,
@@ -49,7 +50,7 @@ export const metadata: Metadata = {
 
 export default function IndexPage() {
   return (
-    <div className="flex flex-1 flex-col">
+    <div className="bg-stone-50 dark:bg-stone-950 flex flex-1 flex-col">
       <div className="relative overflow-hidden">
         <div
           className="pointer-events-none absolute inset-0"
@@ -74,10 +75,72 @@ export default function IndexPage() {
             <Button asChild size="sm">
               <Link href="/docs">Get Started</Link>
             </Button>
-            <Button asChild size="sm" variant="ghost">
+            <Button asChild size="sm" variant="outline">
               <Link href="/docs/components">View Components</Link>
             </Button>
           </PageActions>
+
+          {/* Logo Section */}
+          <div className="mt-12 flex flex-col items-center gap-6">
+            <p className="text-muted-foreground font-semibold">
+              Ready to be imported in
+            </p>
+            <div className="flex flex-wrap items-center justify-center gap-8 md:gap-10">
+              {/* OpenAI */}
+              <div className="opacity-50 grayscale transition-all hover:opacity-100 hover:grayscale-0 dark:invert dark:opacity-60 dark:hover:invert-0">
+                <img
+                  src="/logo-open-ai_1760714845234.png"
+                  alt="OpenAI"
+                  className="h-8 w-auto"
+                />
+              </div>
+
+              {/* Claude */}
+              <div className="opacity-50 grayscale transition-all hover:opacity-100 hover:grayscale-0 dark:invert dark:opacity-60 dark:hover:invert-0">
+                <img
+                  src="/logo-claude_1760714845233.png"
+                  alt="Claude"
+                  className="h-8 w-auto"
+                />
+              </div>
+
+              {/* v0 */}
+              <div className="opacity-50 grayscale transition-all hover:opacity-100 hover:grayscale-0 dark:invert dark:opacity-60 dark:hover:invert-0">
+                <img
+                  src="/logo-v0_1760714845235.png"
+                  alt="v0"
+                  className="h-8 w-auto"
+                />
+              </div>
+
+              {/* Replit */}
+              <div className="opacity-50 grayscale transition-all hover:opacity-100 hover:grayscale-0 dark:invert dark:opacity-60 dark:hover:invert-0">
+                <img
+                  src="/logo-replit_1760714845234.png"
+                  alt="Replit"
+                  className="h-8 w-auto"
+                />
+              </div>
+
+              {/* Bolt */}
+              <div className="opacity-50 grayscale transition-all hover:opacity-100 hover:grayscale-0 dark:invert dark:opacity-60 dark:hover:invert-0">
+                <img
+                  src="/logo-bolt_1760714845232.png"
+                  alt="Bolt"
+                  className="h-8 w-auto"
+                />
+              </div>
+
+              {/* Lovable */}
+              <div className="opacity-50 grayscale transition-all hover:opacity-100 hover:grayscale-0 dark:invert dark:opacity-60 dark:hover:invert-0">
+                <img
+                  src="/logo-lovable_1760714845234.png"
+                  alt="Lovable"
+                  className="h-8 w-auto"
+                />
+              </div>
+            </div>
+          </div>
         </PageHeader>
       </div>
 
@@ -144,6 +207,9 @@ export default function IndexPage() {
 
       {/* Examples Preview Section */}
       <ExamplesPreview />
+
+      {/* Testimonials Section */}
+      <TestimonialsSection />
 
       <PageNav className="hidden md:flex">
         <ExamplesNav className="[&>a:first-child]:text-primary flex-1 overflow-hidden" />

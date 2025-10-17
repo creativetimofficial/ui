@@ -133,10 +133,10 @@ export function ShowcaseMasonry() {
         {/* Transaction History Card */}
         <div className="break-inside-avoid">
           <div className="dark:bg-card rounded-xl border bg-white p-6 shadow-sm">
-            <div className="flex flex-wrap items-start justify-between gap-4">
-              <div>
+            <div className="mb-6 flex items-start justify-between gap-3">
+              <div className="min-w-0 flex-1">
                 <h2 className="font-semibold">History Transactions</h2>
-                <p className="text-muted-foreground text-sm">
+                <p className="text-muted-foreground mt-1 text-xs sm:text-sm">
                   Track and monitor your financial activity.
                 </p>
               </div>
@@ -144,16 +144,22 @@ export function ShowcaseMasonry() {
                 <PopoverTrigger asChild>
                   <Button
                     variant="outline"
+                    size="sm"
                     className={cn(
-                      "w-full justify-start text-left font-normal sm:w-48",
+                      "shrink-0 text-xs sm:text-sm",
                       !date && "text-muted-foreground"
                     )}
                   >
-                    <CalendarIcon className="mr-2 h-4 w-4" />
-                    {date ? format(date, "PPP") : <span>Pick a date</span>}
+                    <CalendarIcon className="mr-1.5 h-3.5 w-3.5 sm:h-4 sm:w-4" />
+                    <span className="hidden sm:inline">
+                      {date ? format(date, "MMM d, yyyy") : "Select"}
+                    </span>
+                    <span className="sm:hidden">
+                      {date ? format(date, "M/d") : "Date"}
+                    </span>
                   </Button>
                 </PopoverTrigger>
-                <PopoverContent className="w-auto p-0" align="start">
+                <PopoverContent className="w-auto p-0" align="end">
                   <Calendar
                     mode="single"
                     selected={date}
@@ -163,40 +169,84 @@ export function ShowcaseMasonry() {
                 </PopoverContent>
               </Popover>
             </div>
-            <div className="mt-6">
-              <p className="text-muted-foreground mb-2 ml-2.5 font-semibold">
+            <div>
+              <p className="text-muted-foreground mb-3 text-xs font-semibold sm:text-sm">
                 March 2023
               </p>
               <div className="space-y-2">
-                <div className="flex items-center gap-4 rounded-lg border p-4">
-                  <div className="bg-card text-card-foreground hidden h-12 w-12 shrink-0 items-center justify-center rounded-xl border shadow-sm sm:flex">
-                    <ChevronDown className="h-5 w-5 text-red-600" />
+                <div className="flex items-center gap-2 rounded-lg border p-3 sm:gap-4 sm:p-4">
+                  <div className="bg-card text-card-foreground hidden h-10 w-10 shrink-0 items-center justify-center rounded-xl border shadow-sm sm:flex sm:h-12 sm:w-12">
+                    <ChevronDown className="h-4 w-4 text-red-600 sm:h-5 sm:w-5" />
                   </div>
-                  <div className="mx-0 space-y-0.5 sm:mx-2">
-                    <p className="font-semibold">Netflix</p>
-                    <p className="text-muted-foreground text-sm">
+                  <div className="min-w-0 flex-1 space-y-0.5">
+                    <p className="text-sm font-semibold sm:text-base">Netflix</p>
+                    <p className="text-muted-foreground truncate text-xs sm:text-sm">
                       27 March 2026, at 12:30 PM
                     </p>
                   </div>
-                  <p className="mx-2 ml-auto text-sm font-semibold text-red-600">
+                  <p className="shrink-0 text-xs font-semibold text-red-600 sm:text-sm">
                     - $2,500.00
                   </p>
                 </div>
-                <div className="flex items-center gap-4 rounded-lg border p-4">
-                  <div className="bg-card text-card-foreground hidden h-12 w-12 shrink-0 items-center justify-center rounded-xl border shadow-sm sm:flex">
-                    <ChevronUp className="h-5 w-5 text-green-600" />
+                <div className="flex items-center gap-2 rounded-lg border p-3 sm:gap-4 sm:p-4">
+                  <div className="bg-card text-card-foreground hidden h-10 w-10 shrink-0 items-center justify-center rounded-xl border shadow-sm sm:flex sm:h-12 sm:w-12">
+                    <ChevronUp className="h-4 w-4 text-green-600 sm:h-5 sm:w-5" />
                   </div>
-                  <div className="mx-0 space-y-0.5 sm:mx-2">
-                    <p className="font-semibold">Apple</p>
-                    <p className="text-muted-foreground text-sm">
+                  <div className="min-w-0 flex-1 space-y-0.5">
+                    <p className="text-sm font-semibold sm:text-base">Apple</p>
+                    <p className="text-muted-foreground truncate text-xs sm:text-sm">
                       27 March 2026, at 04:30 AM
                     </p>
                   </div>
-                  <p className="mx-2 ml-auto text-sm font-semibold text-green-600">
+                  <p className="shrink-0 text-xs font-semibold text-green-600 sm:text-sm">
                     + $2,000.00
                   </p>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Product Card */}
+        <div className="break-inside-avoid">
+          <div className="group bg-card relative overflow-hidden rounded-lg border transition-all hover:shadow-lg">
+            <Badge
+              variant="secondary"
+              className="absolute top-3 left-3 z-10 bg-white dark:bg-gray-900"
+            >
+              Exclusive
+            </Badge>
+            <button
+              onClick={() => setIsFavorite(!isFavorite)}
+              className="absolute top-3 right-3 z-10 flex h-8 w-8 items-center justify-center rounded-full bg-white/90 backdrop-blur-sm transition-colors hover:bg-white dark:bg-gray-900/90 dark:hover:bg-gray-900"
+            >
+              <Heart
+                className={`h-4 w-4 transition-colors ${
+                  isFavorite
+                    ? "fill-red-500 text-red-500"
+                    : "text-gray-600 dark:text-gray-400"
+                }`}
+              />
+            </button>
+
+            <div className="bg-muted/30 aspect-square overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1574015974293-817f0ebebb74?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=973"
+                alt="Cable-knit cashmere cardigan"
+                className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </div>
+
+            <div className="border-t p-4">
+              <div className="mb-2 flex items-start justify-between gap-2">
+                <div className="flex-1">
+                  <p className="text-sm font-semibold">Zegna</p>
+                  <p className="text-muted-foreground mt-1 text-sm leading-tight">
+                    Cable-knit cashmere cardigan
+                  </p>
+                </div>
+              </div>
+              <p className="mt-2 font-semibold">€3,450</p>
             </div>
           </div>
         </div>
@@ -220,29 +270,29 @@ export function ShowcaseMasonry() {
               </div>
             </div>
 
-            <Accordion type="single" collapsible>
+            <Accordion type="single" collapsible defaultValue="github">
               <AccordionItem
                 value="github"
                 className="border-border rounded-lg border"
               >
-                <div className="flex items-center justify-between px-4 py-4">
-                  <div className="flex flex-1 items-center gap-4">
-                    <div className="bg-muted/50 flex h-12 w-12 items-center justify-center rounded-lg">
+                <div className="flex flex-col gap-3 px-4 py-3 sm:flex-row sm:items-center sm:justify-between">
+                  <div className="flex flex-1 items-center gap-3">
+                    <div className="bg-muted/50 flex h-10 w-10 shrink-0 items-center justify-center rounded-lg">
                       <Github
-                        className={`h-6 w-6 ${isGithubActive ? "text-primary" : "text-muted-foreground"}`}
+                        className={`h-5 w-5 ${isGithubActive ? "text-primary" : "text-muted-foreground"}`}
                       />
                     </div>
-                    <div className="flex-1 space-y-1 text-left">
-                      <div className="flex items-center gap-2">
-                        <h3 className="font-semibold">GitHub</h3>
+                    <div className="min-w-0 flex-1 text-left">
+                      <div className="mb-1 flex flex-wrap items-center gap-2">
+                        <h3 className="text-sm font-semibold">GitHub</h3>
                         <Badge
                           variant="outline"
-                          className="text-muted-foreground"
+                          className="text-muted-foreground text-xs"
                         >
                           Development
                         </Badge>
                       </div>
-                      <p className="text-muted-foreground line-clamp-1 text-sm">
+                      <p className="text-muted-foreground line-clamp-1 text-xs">
                         Connect your GitHub account to sync repositories
                       </p>
                     </div>
@@ -256,22 +306,28 @@ export function ShowcaseMasonry() {
                       />
                       <Label
                         htmlFor="github-toggle"
-                        className="cursor-pointer text-sm"
+                        className="cursor-pointer text-xs"
                       >
                         {isGithubActive ? "Enabled" : "Enable"}
                       </Label>
                     </div>
-                    <AccordionTrigger className="hover:bg-muted/50 rounded px-3 py-2">
-                      <span className="text-sm font-medium">View More</span>
+                    <AccordionTrigger className="hover:bg-muted/50 rounded p-2">
+                      <span className="sr-only">Toggle details</span>
                     </AccordionTrigger>
                   </div>
                 </div>
-                <AccordionContent className="px-4 pb-6">
-                  <p className="text-muted-foreground text-sm">
-                    You haven&apos;t added your GitHub account or you
-                    aren&apos;t authorized. Click &quot;Connect&quot; to
-                    initiate the integration process.
-                  </p>
+                <AccordionContent className="border-t px-4 pb-4 pt-4">
+                  <div className="space-y-3">
+                    <p className="text-muted-foreground text-xs leading-relaxed">
+                      You haven&apos;t added your GitHub account or you
+                      aren&apos;t authorized. Connect your account to enable
+                      repository syncing and collaboration features.
+                    </p>
+                    <Button size="sm" variant="outline" className="w-full">
+                      <Github className="mr-2 h-4 w-4" />
+                      Connect GitHub Account
+                    </Button>
+                  </div>
                 </AccordionContent>
               </AccordionItem>
             </Accordion>
@@ -354,50 +410,6 @@ export function ShowcaseMasonry() {
           </div>
         </div>
 
-        {/* Product Card */}
-        <div className="break-inside-avoid">
-          <div className="group bg-card relative overflow-hidden rounded-lg border transition-all hover:shadow-lg">
-            <Badge
-              variant="secondary"
-              className="absolute top-3 left-3 z-10 bg-white dark:bg-gray-900"
-            >
-              Exclusive
-            </Badge>
-            <button
-              onClick={() => setIsFavorite(!isFavorite)}
-              className="absolute top-3 right-3 z-10 flex h-8 w-8 items-center justify-center rounded-full bg-white/90 backdrop-blur-sm transition-colors hover:bg-white dark:bg-gray-900/90 dark:hover:bg-gray-900"
-            >
-              <Heart
-                className={`h-4 w-4 transition-colors ${
-                  isFavorite
-                    ? "fill-red-500 text-red-500"
-                    : "text-gray-600 dark:text-gray-400"
-                }`}
-              />
-            </button>
-
-            <div className="bg-muted/30 aspect-square overflow-hidden">
-              <img
-                src="https://images.unsplash.com/photo-1574015974293-817f0ebebb74?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=973"
-                alt="Cable-knit cashmere cardigan"
-                className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-            </div>
-
-            <div className="border-t p-4">
-              <div className="mb-2 flex items-start justify-between gap-2">
-                <div className="flex-1">
-                  <p className="text-sm font-semibold">Zegna</p>
-                  <p className="text-muted-foreground mt-1 text-sm leading-tight">
-                    Cable-knit cashmere cardigan
-                  </p>
-                </div>
-              </div>
-              <p className="mt-2 font-semibold">€3,450</p>
-            </div>
-          </div>
-        </div>
-
         {/* Personal Information Card */}
         <div className="break-inside-avoid">
           <Card className="bg-card border p-6">
@@ -446,35 +458,37 @@ export function ShowcaseMasonry() {
                   defaultValue="emma@mail.com"
                 />
               </div>
-              <div className="space-y-2">
-                <Label htmlFor="phone" className="flex items-center gap-2">
-                  <Phone className="text-muted-foreground h-4 w-4" />
-                  Phone Number
-                </Label>
-                <Input
-                  id="phone"
-                  placeholder="+1 (555) 123-4567"
-                  defaultValue="+1 (555) 123-4567"
-                />
-              </div>
-              <div className="space-y-2">
-                <Label htmlFor="profession" className="flex items-center gap-2">
-                  <Briefcase className="text-muted-foreground h-4 w-4" />
-                  Profession
-                </Label>
-                <Select defaultValue="ui-ux">
-                  <SelectTrigger id="profession">
-                    <SelectValue placeholder="Select Profession" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="ui-ux">UI/UX Designer</SelectItem>
-                    <SelectItem value="frontend">Frontend Developer</SelectItem>
-                    <SelectItem value="backend">Backend Developer</SelectItem>
-                    <SelectItem value="fullstack">
-                      Fullstack Developer
-                    </SelectItem>
-                  </SelectContent>
-                </Select>
+              <div className="grid grid-cols-2 gap-4">
+                <div className="space-y-2">
+                  <Label htmlFor="phone" className="flex items-center gap-2">
+                    <Phone className="text-muted-foreground h-4 w-4" />
+                    Phone Number
+                  </Label>
+                  <Input
+                    id="phone"
+                    placeholder="+1 (555) 123-4567"
+                    defaultValue="+1 (555) 123-4567"
+                  />
+                </div>
+                <div className="space-y-2">
+                  <Label htmlFor="profession" className="flex items-center gap-2">
+                    <Briefcase className="text-muted-foreground h-4 w-4" />
+                    Profession
+                  </Label>
+                  <Select defaultValue="ui-ux">
+                    <SelectTrigger id="profession">
+                      <SelectValue placeholder="Select Profession" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="ui-ux">UI/UX Designer</SelectItem>
+                      <SelectItem value="frontend">Frontend Developer</SelectItem>
+                      <SelectItem value="backend">Backend Developer</SelectItem>
+                      <SelectItem value="fullstack">
+                        Fullstack Developer
+                      </SelectItem>
+                    </SelectContent>
+                  </Select>
+                </div>
               </div>
             </div>
           </Card>
@@ -483,33 +497,35 @@ export function ShowcaseMasonry() {
         {/* Testimonial Card */}
         <div className="break-inside-avoid">
           <Card className="group border-border/50 hover:border-border transition-all hover:shadow-lg">
-            <CardContent className="p-8 text-center">
-              <div className="relative mx-auto mb-6 inline-block">
-                <img
-                  src="https://images.unsplash.com/photo-1716662318479-a9c0f1cd1a0e?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=987"
-                  alt="Sarah Johnson profile"
-                  className="border-border mx-auto h-24 w-24 rounded-full border-4 object-cover transition-transform group-hover:scale-105"
-                />
-                <div className="bg-background absolute -right-2 -bottom-2 rounded-full p-2 shadow-md">
-                  <Quote className="text-primary h-4 w-4" />
+            <CardContent className="p-6">
+              <div className="mb-4 flex items-center gap-4">
+                <div className="relative shrink-0">
+                  <img
+                    src="https://images.unsplash.com/photo-1716662318479-a9c0f1cd1a0e?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=987"
+                    alt="Sarah Johnson profile"
+                    className="border-border h-14 w-14 rounded-full border-2 object-cover transition-transform group-hover:scale-105"
+                  />
+                  <div className="bg-background absolute -right-1 -bottom-1 rounded-full p-1 shadow-md">
+                    <Quote className="text-primary h-3 w-3" />
+                  </div>
+                </div>
+                <div className="min-w-0 flex-1 text-left">
+                  <h3 className="font-semibold">Sarah Johnson</h3>
+                  <p className="text-muted-foreground text-sm">
+                    Product Designer
+                  </p>
+                </div>
+                <div className="flex shrink-0 gap-0.5">
+                  {Array.from({ length: 5 }).map((_, i) => (
+                    <Star
+                      key={i}
+                      className="h-3.5 w-3.5 fill-yellow-400 text-yellow-400"
+                    />
+                  ))}
                 </div>
               </div>
 
-              <h3 className="mb-1 text-xl font-semibold">Sarah Johnson</h3>
-              <p className="text-muted-foreground mb-6 text-sm">
-                Product Designer
-              </p>
-
-              <div className="mb-6 flex items-center justify-center gap-1">
-                {Array.from({ length: 5 }).map((_, i) => (
-                  <Star
-                    key={i}
-                    className="h-4 w-4 fill-yellow-400 text-yellow-400"
-                  />
-                ))}
-              </div>
-
-              <blockquote className="text-foreground/80 text-sm leading-relaxed">
+              <blockquote className="text-muted-foreground text-left text-sm leading-relaxed">
                 &quot;The attention to detail and component quality is
                 outstanding. These UI blocks have significantly accelerated our
                 design workflow.&quot;

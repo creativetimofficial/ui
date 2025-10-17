@@ -14,10 +14,6 @@ export const siteConfig = {
       label: "Docs",
     },
     {
-      href: "/docs/components",
-      label: "Components",
-    },
-    {
       href: "/blocks",
       label: "Examples",
     },
