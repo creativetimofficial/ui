@@ -19,12 +19,12 @@ export default function EcommerceSections02() {
   const [isInfoOpen, setIsInfoOpen] = useState(false)
 
   const thumbnails = [
-    "/placeholder.svg?height=80&width=80&text=Bag+1",
-    "/placeholder.svg?height=80&width=80&text=Bag+2",
-    "/placeholder.svg?height=80&width=80&text=Detail",
-    "/placeholder.svg?height=80&width=80&text=Inside",
-    "/placeholder.svg?height=80&width=80&text=Model",
-    "/placeholder.svg?height=80&width=80&text=Lifestyle",
+    `${process.env.NEXT_PUBLIC_ASSET_PREFIX}/placeholder.svg?height=80&width=80&text=Bag+1`,
+    `${process.env.NEXT_PUBLIC_ASSET_PREFIX}/placeholder.svg?height=80&width=80&text=Bag+2`,
+    `${process.env.NEXT_PUBLIC_ASSET_PREFIX}/placeholder.svg?height=80&width=80&text=Detail`,
+    `${process.env.NEXT_PUBLIC_ASSET_PREFIX}/placeholder.svg?height=80&width=80&text=Inside`,
+    `${process.env.NEXT_PUBLIC_ASSET_PREFIX}/placeholder.svg?height=80&width=80&text=Model`,
+    `${process.env.NEXT_PUBLIC_ASSET_PREFIX}/placeholder.svg?height=80&width=80&text=Lifestyle`,
   ]
 
   const colors = [
