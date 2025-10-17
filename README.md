@@ -1,12 +1,12 @@
-![elevenlabs-ui](https://github.com/user-attachments/assets/a5b73bfc-b0a3-4b4e-8915-f90a086c5723)
+![creative-tim-ui](https://github.com/user-attachments/assets/a5b73bfc-b0a3-4b4e-8915-f90a086c5723)
 
-# II Creative Tim UI
+# Creative Tim UI
 
-[Creative Tim UI](https://ui.creative-tim.com) is a component library built on top of [shadcn/ui](https://ui.shadcn.com/) to help you build audio & agentic applications faster.
+[Creative Tim UI](https://creative-tim.com/ui) is a comprehensive component library built on top of [shadcn/ui](https://ui.shadcn.com/) to help you build modern web applications faster.
 
 ## Overview
 
-Creative Tim UI provides pre-built, customizable React components specifically designed for agent & audio applications, including orbs, waveforms, voice agents, audio players, and more. 
+Creative Tim UI provides pre-built, customizable React components and blocks designed for building beautiful, production-ready web applications. 
 The CLI makes it easy to add these components to your Next.js project.
 
 ## Installation
@@ -15,8 +15,8 @@ You can use the Creative Tim UI CLI directly with npx, or install it globally:
 # Use directly (recommended)
 npx @creative-tim/ui@latest components add <component-name>
 
-# Or using shadcn cli
-npx shadcn@latest add https://ui.elevenlabs.io/r/all.json
+# Or using shadcn cli
+npx shadcn@latest add https://creative-tim.com/ui/r/all.json
 ```
 
 ## Prerequisites
@@ -48,17 +48,17 @@ Examples:
 npx @creative-tim/ui@latest components add orb
 ```
 
-### Alternative: Use with shadcn CLI
+### Alternative: Use with shadcn CLI
 You can also install components using the standard shadcn/ui CLI:
 ```bash
 # Install all components
-npx shadcn@latest add https://ui.elevenlabs.io/r/all.json
+npx shadcn@latest add https://ui.creative-tim.com/r/all.json
 
 # Install a specific component
-npx shadcn@latest add https://ui.elevenlabs.io/r/orb.json
+npx shadcn@latest add https://ui.creative-tim.com/r/button.json
 ```
 
-All available components can be found [here](https://ui.elevenlabs.io/docs/components) or explore a list of example components [here](https://ui.elevenlabs.io/blocks).
+All available components can be found [here](https://ui.creative-tim.com/docs/components) or explore a list of example blocks [here](https://ui.creative-tim.com/blocks).
 
 ## Contributing
 
@@ -71,8 +71,18 @@ If you'd like to contribute to Creative Tim UI, please follow these steps:
 
 Please read the [contributing guide](/CONTRIBUTING.md).
 
+## Credits
+
+Creative Tim UI is built upon the incredible work of the open source community. We would like to acknowledge and thank the following projects:
+
+- **[shadcn/ui](https://ui.shadcn.com/)** - The documentation structure, registry system, and base components are based on shadcn/ui's open source work
+- **[Material Tailwind](https://material-tailwind.com)** by Creative Tim - The blocks and component designs are inspired by and based on Material Tailwind Framework
+- **[Eleven Labs UI](https://github.com/elevenlabs/elevenlabs-ui)** - General inspiration for the documentation structure and approach
+
+We are grateful to these projects for making their work available under open source licenses.
+
 ## License
 
 Licensed under the [MIT license](https://github.com/creative-tim/ui/blob/main/LICENSE.md).
 
-Engineered by [Creative Tim](https://creative-tim.com).
+Made with love by [Creative Tim](https://creative-tim.com).
