@@ -87,7 +87,7 @@ export default function IndexPage() {
             </p>
             <div className="flex flex-wrap items-center justify-center gap-8 md:gap-10">
               {/* OpenAI */}
-              <div className="opacity-50 grayscale transition-all hover:opacity-100 hover:grayscale-0">
+              <div className="opacity-50 grayscale transition-all hover:opacity-100 hover:grayscale-0 dark:invert dark:opacity-60 dark:hover:invert-0">
                 <img
                   src="/logo-open-ai_1760714845234.png"
                   alt="OpenAI"
@@ -96,7 +96,7 @@ export default function IndexPage() {
               </div>
 
               {/* Claude */}
-              <div className="opacity-50 grayscale transition-all hover:opacity-100 hover:grayscale-0">
+              <div className="opacity-50 grayscale transition-all hover:opacity-100 hover:grayscale-0 dark:invert dark:opacity-60 dark:hover:invert-0">
                 <img
                   src="/logo-claude_1760714845233.png"
                   alt="Claude"
@@ -105,7 +105,7 @@ export default function IndexPage() {
               </div>
 
               {/* v0 */}
-              <div className="opacity-50 grayscale transition-all hover:opacity-100 hover:grayscale-0">
+              <div className="opacity-50 grayscale transition-all hover:opacity-100 hover:grayscale-0 dark:invert dark:opacity-60 dark:hover:invert-0">
                 <img
                   src="/logo-v0_1760714845235.png"
                   alt="v0"
@@ -114,7 +114,7 @@ export default function IndexPage() {
               </div>
 
               {/* Replit */}
-              <div className="opacity-50 grayscale transition-all hover:opacity-100 hover:grayscale-0">
+              <div className="opacity-50 grayscale transition-all hover:opacity-100 hover:grayscale-0 dark:invert dark:opacity-60 dark:hover:invert-0">
                 <img
                   src="/logo-replit_1760714845234.png"
                   alt="Replit"
@@ -123,7 +123,7 @@ export default function IndexPage() {
               </div>
 
               {/* Bolt */}
-              <div className="opacity-50 grayscale transition-all hover:opacity-100 hover:grayscale-0">
+              <div className="opacity-50 grayscale transition-all hover:opacity-100 hover:grayscale-0 dark:invert dark:opacity-60 dark:hover:invert-0">
                 <img
                   src="/logo-bolt_1760714845232.png"
                   alt="Bolt"
@@ -132,7 +132,7 @@ export default function IndexPage() {
               </div>
 
               {/* Lovable */}
-              <div className="opacity-50 grayscale transition-all hover:opacity-100 hover:grayscale-0">
+              <div className="opacity-50 grayscale transition-all hover:opacity-100 hover:grayscale-0 dark:invert dark:opacity-60 dark:hover:invert-0">
                 <img
                   src="/logo-lovable_1760714845234.png"
                   alt="Lovable"

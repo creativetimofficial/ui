@@ -53,7 +53,7 @@ Preferred communication style: Simple, everyday language.
 - **Home Page Background**: Entire home page uses bg-stone-50 (light mode) and bg-stone-950 (dark mode) for a warm, elegant background that adapts to theme.
 - **Ecommerce Blocks**: Enhanced grid layouts, video spotlights, luxury product detail pages, redesigned shopping cart, dark product overviews, and grid ecommerce with modern photography.
 - **Navbar Design**: Sleek, dark, rounded pill-shaped navigation with custom favicon logo (favicon-32x32.png, rounded-full) and brand text (text-base) on left, vertical separator, nav links (Docs, Examples), with search, GitHub link, theme switcher, and Get Started button on right.
-- **AI Platform Logo Section**: Header section below CTAs displaying "Ready to be imported in" (font-semibold, normal case) with 6 authentic AI platform logo images (OpenAI, Claude, v0, Replit, Bolt, Lovable) starting at 50% opacity with grayscale, transitioning to full color on hover.
+- **AI Platform Logo Section**: Header section below CTAs displaying "Ready to be imported in" (font-semibold, normal case) with 6 authentic AI platform logo images (OpenAI, Claude, v0, Replit, Bolt, Lovable) starting at 50% opacity with grayscale (inverted in dark mode), transitioning to full color on hover.
 - **Examples Preview Section**: Dynamic preview of component examples categorized by Web 3.0, Application & Admin UI, Marketing & Presentation, Content UI, and Ecommerce UI.
 - **Achievements Section**: Stats section with community members, downloads, GitHub stars, and NPM downloads.
 - **Enhanced Interactive Elements**: Interactive size and color selectors, wishlist toggles, accordion sections, and carousel pagination with smooth transitions.
