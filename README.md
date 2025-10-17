@@ -1,4 +1,4 @@
-![creative-tim-ui](https://github.com/user-attachments/assets/a5b73bfc-b0a3-4b4e-8915-f90a086c5723)
+![Creative Tim UI](https://github.com/user-attachments/assets/a5b73bfc-b0a3-4b4e-8915-f90a086c5723)
 
 # Creative Tim UI
 
