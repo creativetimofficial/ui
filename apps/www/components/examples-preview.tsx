@@ -27,20 +27,21 @@ const categories: ExampleCategory[] = [
         name: "Web 3.0 Login",
         blockCount: 5,
         category: "web3",
-        thumbnail: "https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/login-thumbnail.jpg"
+        thumbnail: "https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/login-thumbnail.jpg",
+        comingSoon: true
       },
       {
         name: "Web 3.0 Charts",
         blockCount: 5,
         category: "web3",
-        thumbnail: "https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/web3-charts-thumbnail.jpg"
+        thumbnail: "https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/web3-charts-thumbnail.jpg",
+        comingSoon: true
       },
       {
         name: "Web 3.0 Cards",
         blockCount: 5,
         category: "web3",
-        thumbnail: "https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/collections-thumbnail.jpg",
-        comingSoon: true
+        thumbnail: "https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/collections-thumbnail.jpg"
       }
     ]
   },
@@ -53,76 +54,82 @@ const categories: ExampleCategory[] = [
         name: "Widgets",
         blockCount: 7,
         category: "cruds",
-        thumbnail: "https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/widgets-thumbnail.jpg"
+        thumbnail: "https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/widgets-thumbnail.jpg",
+        comingSoon: true
       },
       {
         name: "Charts",
         blockCount: 6,
         category: "cruds",
-        thumbnail: "https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/charts-thumbnail.jpg"
+        thumbnail: "https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/charts-thumbnail.jpg",
+        comingSoon: true
       },
       {
         name: "Tables",
         blockCount: 10,
         category: "cruds",
-        thumbnail: "https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/tables-thumbnail.jpg"
+        thumbnail: "https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/tables-thumbnail.jpg",
+        comingSoon: true
       },
       {
         name: "Modals",
         blockCount: 5,
         category: "modals",
-        thumbnail: "https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/modals-thumbnail.jpg",
-        comingSoon: true
+        thumbnail: "https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/modals-thumbnail.jpg"
       },
       {
         name: "Account",
         blockCount: 7,
         category: "account",
-        thumbnail: "https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/account-thumbnail.jpg",
-        comingSoon: true
+        thumbnail: "https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/account-thumbnail.jpg"
       },
       {
         name: "Billing",
         blockCount: 5,
         category: "billing",
-        thumbnail: "https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/billing-thumbnail.jpg",
-        comingSoon: true
+        thumbnail: "https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/billing-thumbnail.jpg"
       },
       {
         name: "Tables Headers",
         blockCount: 6,
         category: "cruds",
-        thumbnail: "https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/table-headers-thumbnail.jpg"
+        thumbnail: "https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/table-headers-thumbnail.jpg",
+        comingSoon: true
       },
       {
         name: "Tables Footers",
         blockCount: 6,
         category: "cruds",
-        thumbnail: "https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/table-footers-thumbnail.jpg"
+        thumbnail: "https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/table-footers-thumbnail.jpg",
+        comingSoon: true
       },
       {
         name: "KPI Cards",
         blockCount: 7,
         category: "cruds",
-        thumbnail: "https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/kpi-cards-thumbnail.jpg"
+        thumbnail: "https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/kpi-cards-thumbnail.jpg",
+        comingSoon: true
       },
       {
         name: "Sidebars",
         blockCount: 9,
         category: "sidebars",
-        thumbnail: "https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/sidebar-thumbnail.jpg"
+        thumbnail: "https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/sidebar-thumbnail.jpg",
+        comingSoon: true
       },
       {
         name: "Dropdowns",
         blockCount: 6,
         category: "dropdowns",
-        thumbnail: "https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/dropdown-filter-thumbnail.jpg"
+        thumbnail: "https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/dropdown-filter-thumbnail.jpg",
+        comingSoon: true
       },
       {
         name: "User Profile",
         blockCount: 5,
         category: "user-profile",
-        thumbnail: "https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/user-profile-thumbnail.jpg"
+        thumbnail: "https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/user-profile-thumbnail.jpg",
+        comingSoon: true
       }
     ]
   },
@@ -135,70 +142,75 @@ const categories: ExampleCategory[] = [
         name: "Hero Sections",
         blockCount: 18,
         category: "hero-sections",
-        thumbnail: "https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/headers-thumbnail.jpg"
+        thumbnail: "https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/headers-thumbnail.jpg",
+        comingSoon: true
       },
       {
         name: "Testimonial Sections",
         blockCount: 17,
         category: "testimonials",
-        thumbnail: "https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/testimonial-thumbnail.jpg",
-        comingSoon: true
+        thumbnail: "https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/testimonial-thumbnail.jpg"
       },
       {
         name: "Popup Sections",
         blockCount: 7,
         category: "popups",
-        thumbnail: "https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/popup-thumbnail.jpg"
+        thumbnail: "https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/popup-thumbnail.jpg",
+        comingSoon: true
       },
       {
         name: "Authentication",
         blockCount: 6,
         category: "authentication",
-        thumbnail: "https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/authentication-thumbnail.jpg"
+        thumbnail: "https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/authentication-thumbnail.jpg",
+        comingSoon: true
       },
       {
         name: "Onboarding Sections",
         blockCount: 5,
         category: "onboarding",
-        thumbnail: "https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/onboarding-thumbnail.jpg"
+        thumbnail: "https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/onboarding-thumbnail.jpg",
+        comingSoon: true
       },
       {
         name: "Navbars",
         blockCount: 10,
         category: "navbars",
-        thumbnail: "https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/navbars-thumbnail.jpg"
+        thumbnail: "https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/navbars-thumbnail.jpg",
+        comingSoon: true
       },
       {
         name: "Contact Sections",
         blockCount: 15,
         category: "contact",
-        thumbnail: "https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/contact-us-thumbnail.jpg",
-        comingSoon: true
+        thumbnail: "https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/contact-us-thumbnail.jpg"
       },
       {
         name: "Team Sections",
         blockCount: 17,
         category: "team-sections",
-        thumbnail: "https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/team-thumbnail.jpg"
+        thumbnail: "https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/team-thumbnail.jpg",
+        comingSoon: true
       },
       {
         name: "Newsletter",
         blockCount: 17,
         category: "newsletter",
-        thumbnail: "https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/newsletter-thumbnail.jpg"
+        thumbnail: "https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/newsletter-thumbnail.jpg",
+        comingSoon: true
       },
       {
         name: "Footers",
         blockCount: 16,
         category: "footers",
-        thumbnail: "https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/footer-thumbnail.jpg",
-        comingSoon: true
+        thumbnail: "https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/footer-thumbnail.jpg"
       },
       {
         name: "Coming Soon Sections",
         blockCount: 4,
         category: "coming-soon",
-        thumbnail: "https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/coming-soon-thumbnail.jpg"
+        thumbnail: "https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/coming-soon-thumbnail.jpg",
+        comingSoon: true
       }
     ]
   },
@@ -211,63 +223,69 @@ const categories: ExampleCategory[] = [
         name: "FAQs",
         blockCount: 6,
         category: "faqs",
-        thumbnail: "https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/faq-thumbnail.jpg",
-        comingSoon: true
+        thumbnail: "https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/faq-thumbnail.jpg"
       },
       {
         name: "Feature Sections",
         blockCount: 18,
         category: "feature-sections",
-        thumbnail: "https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/features-thumbnail.jpg"
+        thumbnail: "https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/features-thumbnail.jpg",
+        comingSoon: true
       },
       {
         name: "Stats Sections",
         blockCount: 10,
         category: "stats-sections",
-        thumbnail: "https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/stats-thumbnail.jpg"
+        thumbnail: "https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/stats-thumbnail.jpg",
+        comingSoon: true
       },
       {
         name: "Content Sections",
         blockCount: 16,
         category: "content-sections",
-        thumbnail: "https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/content-section-thumbnail.jpg"
+        thumbnail: "https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/content-section-thumbnail.jpg",
+        comingSoon: true
       },
       {
         name: "Cards",
         blockCount: 5,
         category: "cards",
-        thumbnail: "https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/cards-thumbnail.jpg"
+        thumbnail: "https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/cards-thumbnail.jpg",
+        comingSoon: true
       },
       {
         name: "Error Sections",
         blockCount: 7,
         category: "error-sections",
-        thumbnail: "https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/Error404-thumbnail.jpg"
+        thumbnail: "https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/Error404-thumbnail.jpg",
+        comingSoon: true
       },
       {
         name: "Maintenance Sections",
         blockCount: 4,
         category: "maintenance-sections",
-        thumbnail: "https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/Error500-thumbnail.jpg"
+        thumbnail: "https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/Error500-thumbnail.jpg",
+        comingSoon: true
       },
       {
         name: "Blog Sections",
         blockCount: 15,
         category: "blog-sections",
-        thumbnail: "https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/blog-posts-thumbnail.jpg",
-        comingSoon: true
+        thumbnail: "https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/blog-posts-thumbnail.jpg"
       },
       {
         name: "Logo Sections",
         blockCount: 7,
         category: "logo-sections",
-        thumbnail: "https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/logo-areas-thumbnail.jpg"
+        thumbnail: "https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/logo-areas-thumbnail.jpg",
+        comingSoon: true
       },
       {
         name: "Calendar Sections",
         blockCount: 3,
         category: "calendar-sections",
-        thumbnail: "https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/calendar-thumbnail.jpg"
+        thumbnail: "https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/calendar-thumbnail.jpg",
+        comingSoon: true
       }
     ]
   },
@@ -280,44 +298,49 @@ const categories: ExampleCategory[] = [
         name: "Banner Sections",
         blockCount: 7,
         category: "banner-sections",
-        thumbnail: "https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/banner-thumbnail.jpg"
+        thumbnail: "https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/banner-thumbnail.jpg",
+        comingSoon: true
       },
       {
         name: "Ecommerce Sections",
         blockCount: 14,
         category: "ecommerce",
-        thumbnail: "https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/ecommerce-thumbnail.jpg",
-        comingSoon: true
+        thumbnail: "https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/ecommerce-thumbnail.jpg"
       },
       {
         name: "Product List Sections",
         blockCount: 5,
         category: "product-list",
-        thumbnail: "https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/product-list-thumbnail.jpg"
+        thumbnail: "https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/product-list-thumbnail.jpg",
+        comingSoon: true
       },
       {
         name: "Customer Overview Sections",
         blockCount: 3,
         category: "customer-overview",
-        thumbnail: "https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/customer-overview-thumbnail.jpg"
+        thumbnail: "https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/customer-overview-thumbnail.jpg",
+        comingSoon: true
       },
       {
         name: "Pricing Sections",
         blockCount: 12,
         category: "pricing",
-        thumbnail: "https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/pricing-thumbnail.jpg"
+        thumbnail: "https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/pricing-thumbnail.jpg",
+        comingSoon: true
       },
       {
         name: "Categories",
         blockCount: 5,
         category: "categories",
-        thumbnail: "https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/categories-thumbnail.jpg"
+        thumbnail: "https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/categories-thumbnail.jpg",
+        comingSoon: true
       },
       {
         name: "Order Sections",
         blockCount: 7,
         category: "order-sections",
-        thumbnail: "https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/order-tracking-thumbnail.jpg"
+        thumbnail: "https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/order-tracking-thumbnail.jpg",
+        comingSoon: true
       }
     ]
   }

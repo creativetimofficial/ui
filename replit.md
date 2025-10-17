@@ -139,12 +139,13 @@ Preferred communication style: Simple, everyday language.
 ### Coming Soon Cards Feature
 - **Badge UI Component**: Added Badge component import from the registry
 - **Coming Soon Flag**: Added `comingSoon` boolean field to example interface
-- **Disabled Cards**: 10 cards marked as "Coming Soon" with blur filter and badge:
+- **Available Cards** (10 cards clickable and active):
   - Web 3.0: Web 3.0 Cards
   - Application & Admin UI: Account, Billing, Modals
   - Marketing & Presentation: Contact Sections, Footers, Testimonial Sections
   - Content UI: FAQs, Blog Sections
   - Ecommerce UI: Ecommerce Sections
+- **Disabled Cards**: All other cards (33 cards) marked as "Coming Soon" with blur filter and badge
 - **Visual Treatment**: Cards with `comingSoon: true` display:
   - Blurred thumbnail image
   - White/black backdrop blur overlay (60% opacity)
