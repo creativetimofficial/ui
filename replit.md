@@ -118,3 +118,7 @@ Preferred communication style: Simple, everyday language.
 - **Images Source**: https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/
 - **Optimized Display**: Using Next.js Image component with responsive sizing for optimal loading performance
 - **Configured Examples**: Widgets, Charts, Tables, Modals, Account, Billing, Tables Headers, Tables Footers, KPI Cards, Sidebars, Dropdowns, and User Profile all have dedicated thumbnail images
+
+### Marketing & Presentation Thumbnails
+- **Thumbnail Integration**: All Marketing & Presentation category cards now display actual preview images from Creative Tim's public assets repository
+- **Configured Examples**: Hero Sections, Testimonial Sections, Popup Sections, Authentication, Onboarding Sections, Navbars, Contact Sections, Team Sections, Newsletter, Footers, and Coming Soon Sections all have dedicated thumbnail images

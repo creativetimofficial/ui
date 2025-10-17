@@ -125,57 +125,68 @@ const categories: ExampleCategory[] = [
       {
         name: "Hero Sections",
         blockCount: 18,
-        category: "hero-sections"
+        category: "hero-sections",
+        thumbnail: "https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/headers-thumbnail.jpg"
       },
       {
         name: "Testimonial Sections",
         blockCount: 17,
-        category: "testimonials"
+        category: "testimonials",
+        thumbnail: "https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/testimonial-thumbnail.jpg"
       },
       {
         name: "Popup Sections",
         blockCount: 7,
-        category: "popups"
+        category: "popups",
+        thumbnail: "https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/popup-thumbnail.jpg"
       },
       {
         name: "Authentication",
         blockCount: 6,
-        category: "authentication"
+        category: "authentication",
+        thumbnail: "https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/authentication-thumbnail.jpg"
       },
       {
         name: "Onboarding Sections",
         blockCount: 5,
-        category: "onboarding"
+        category: "onboarding",
+        thumbnail: "https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/onboarding-thumbnail.jpg"
       },
       {
         name: "Navbars",
         blockCount: 10,
-        category: "navbars"
+        category: "navbars",
+        thumbnail: "https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/navbars-thumbnail.jpg"
       },
       {
         name: "Contact Sections",
         blockCount: 15,
-        category: "contact"
+        category: "contact",
+        thumbnail: "https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/contact-us-thumbnail.jpg"
       },
       {
         name: "Team Sections",
         blockCount: 17,
-        category: "team-sections"
+        category: "team-sections",
+        thumbnail: "https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/team-thumbnail.jpg"
       },
       {
         name: "Newsletter",
         blockCount: 17,
-        category: "newsletter"
+        category: "newsletter",
+        thumbnail: "https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/newsletter-thumbnail.jpg"
       },
       {
         name: "Footers",
         blockCount: 16,
-        category: "footers"
+        category: "footers",
+        thumbnail: "https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/footer-thumbnail.jpg"
       },
       {
         name: "Coming Soon Sections",
         blockCount: 4,
-        category: "coming-soon"
+        category: "coming-soon",
+        thumbnail: "https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/coming-soon-thumbnail.jpg"
       }
     ]
   },
