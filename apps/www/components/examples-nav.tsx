@@ -1,7 +1,10 @@
 "use client"
 
 import { cn } from "@/lib/utils"
-import { ScrollArea, ScrollBar } from "@/registry/creative-tim-ui/ui/scroll-area"
+import {
+  ScrollArea,
+  ScrollBar,
+} from "@/registry/creative-tim-ui/ui/scroll-area"
 
 export function ExamplesNav({
   className,

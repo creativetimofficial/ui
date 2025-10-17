@@ -2,270 +2,6 @@ import { type Registry } from "shadcn/schema"
 
 export const blocks: Registry["items"] = [
   {
-    name: "speaker-01",
-    description: "EL-01 Speaker",
-    type: "registry:block",
-    registryDependencies: [
-      "https://ui.elevenlabs.io/r/audio-player.json",
-      "https://ui.elevenlabs.io/r/orb.json",
-      "https://ui.elevenlabs.io/r/waveform.json",
-      "button",
-      "card",
-    ],
-    files: [
-      {
-        path: "blocks/speaker-01/page.tsx",
-        type: "registry:page",
-        target: "app/speaker/page.tsx",
-      },
-      {
-        path: "blocks/speaker-01/components/speaker.tsx",
-        type: "registry:component",
-        target: "components/speaker.tsx",
-      },
-    ],
-    meta: {
-      iframeHeight: "900px",
-      container:
-        "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
-      mobile: "component",
-    },
-    categories: ["audio"],
-  },
-  {
-    name: "transcriber-01",
-    description: "Transcriber",
-    type: "registry:block",
-    registryDependencies: [
-      "https://ui.elevenlabs.io/r/live-waveform.json",
-      "button",
-      "card",
-      "scroll-area",
-      "separator",
-    ],
-    dependencies: ["@elevenlabs/elevenlabs-js", "streamdown"],
-    files: [
-      {
-        path: "blocks/transcriber-01/page.tsx",
-        type: "registry:page",
-        target: "app/transcriber-01/page.tsx",
-      },
-      {
-        path: "blocks/transcriber-01/actions/transcribe.ts",
-        type: "registry:file",
-        target: "app/transcriber-01/actions/transcribe.ts",
-      },
-    ],
-    meta: {
-      iframeHeight: "600px",
-      container:
-        "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
-      mobile: "component",
-    },
-    categories: ["audio"],
-  },
-  {
-    name: "voice-chat-01",
-    description: "Voice chat 1",
-    type: "registry:block",
-    registryDependencies: [
-      "https://ui.elevenlabs.io/r/orb.json",
-      "https://ui.elevenlabs.io/r/shimmering-text.json",
-      "button",
-      "card",
-      "https://ui.elevenlabs.io/r/message.json",
-      "https://ui.elevenlabs.io/r/response.json",
-      "https://ui.elevenlabs.io/r/conversation.json",
-      "scroll-area",
-    ],
-    dependencies: ["@elevenlabs/react"],
-    files: [
-      {
-        path: "blocks/voice-chat-01/page.tsx",
-        type: "registry:page",
-        target: "app/voice-chat/page.tsx",
-      },
-    ],
-    meta: {
-      iframeHeight: "800px",
-      container:
-        "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
-      mobile: "component",
-    },
-    categories: ["agents"],
-  },
-  {
-    name: "voice-chat-02",
-    description: "Voice chat 2",
-    type: "registry:block",
-    registryDependencies: [
-      "https://ui.elevenlabs.io/r/orb.json",
-      "https://ui.elevenlabs.io/r/shimmering-text.json",
-      "button",
-      "card",
-    ],
-    dependencies: ["@elevenlabs/react", "framer-motion"],
-    files: [
-      {
-        path: "blocks/voice-chat-02/page.tsx",
-        type: "registry:page",
-        target: "app/voice-chat/page.tsx",
-      },
-    ],
-    meta: {
-      iframeHeight: "600px",
-      container:
-        "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
-      mobile: "component",
-    },
-    categories: ["agents"],
-  },
-  {
-    name: "voice-chat-03",
-    description: "Voice chat 3",
-    type: "registry:block",
-    registryDependencies: [
-      "https://ui.elevenlabs.io/r/conversation-bar.json",
-      "https://ui.elevenlabs.io/r/conversation.json",
-      "https://ui.elevenlabs.io/r/message.json",
-      "https://ui.elevenlabs.io/r/orb.json",
-      "https://ui.elevenlabs.io/r/response.json",
-      "tooltip",
-      "card",
-      "button",
-    ],
-    dependencies: ["@elevenlabs/react"],
-    files: [
-      {
-        path: "blocks/voice-chat-03/page.tsx",
-        type: "registry:page",
-        target: "app/voice-chat/page.tsx",
-      },
-    ],
-    meta: {
-      iframeHeight: "800px",
-      container:
-        "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
-      mobile: "component",
-    },
-    categories: ["agents"],
-  },
-  {
-    name: "music-player-01",
-    description: "Music player with playlist",
-    type: "registry:block",
-    registryDependencies: [
-      "https://ui.elevenlabs.io/r/audio-player.json",
-      "button",
-      "scroll-area",
-    ],
-    files: [
-      {
-        path: "blocks/music-player-01/page.tsx",
-        type: "registry:page",
-        target: "app/music-player/page.tsx",
-      },
-    ],
-    meta: {
-      iframeHeight: "600px",
-      container:
-        "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
-      mobile: "component",
-    },
-    categories: ["audio"],
-  },
-  {
-    name: "music-player-02",
-    description: "Simple music player",
-    type: "registry:block",
-    registryDependencies: [
-      "https://ui.elevenlabs.io/r/audio-player.json",
-      "card",
-    ],
-    files: [
-      {
-        path: "blocks/music-player-02/page.tsx",
-        type: "registry:page",
-        target: "app/music-player/page.tsx",
-      },
-    ],
-    meta: {
-      iframeHeight: "400px",
-      container:
-        "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
-      mobile: "component",
-    },
-    categories: ["audio"],
-  },
-  {
-    name: "voice-form-01",
-    description: "Voice-fill form",
-    type: "registry:block",
-    registryDependencies: [
-      "https://ui.elevenlabs.io/r/voice-button.json",
-      "https://ui.elevenlabs.io/r/live-waveform.json",
-      "button",
-      "card",
-      "form",
-      "input",
-    ],
-    dependencies: ["@elevenlabs/elevenlabs-js", "ai", "zod"],
-    files: [
-      {
-        path: "blocks/voice-form-01/page.tsx",
-        type: "registry:page",
-        target: "app/voice-form/page.tsx",
-      },
-      {
-        path: "blocks/voice-form-01/schema.ts",
-        type: "registry:file",
-        target: "app/voice-form/schema.ts",
-      },
-      {
-        path: "blocks/voice-form-01/actions/voice-to-form.ts",
-        type: "registry:file",
-        target: "app/voice-form/actions/voice-to-form.ts",
-      },
-    ],
-    meta: {
-      iframeHeight: "700px",
-      container:
-        "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
-      mobile: "component",
-    },
-    categories: ["audio"],
-  },
-  {
-    name: "voice-nav-01",
-    description: "Voice-nav site navigation",
-    type: "registry:block",
-    registryDependencies: [
-      "https://ui.elevenlabs.io/r/voice-button.json",
-      "button",
-      "card",
-    ],
-    dependencies: ["@elevenlabs/elevenlabs-js", "ai", "zod"],
-    files: [
-      {
-        path: "blocks/voice-nav-01/page.tsx",
-        type: "registry:page",
-        target: "app/voice-nav/page.tsx",
-      },
-      {
-        path: "blocks/voice-nav-01/actions/voice-to-site.ts",
-        type: "registry:file",
-        target: "app/voice-nav/actions/voice-to-site.ts",
-      },
-    ],
-    meta: {
-      iframeHeight: "900px",
-      container:
-        "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
-      mobile: "component",
-    },
-    categories: ["audio"],
-  },
-  {
     name: "software-purchase-01",
     description: "Software purchase approval card",
     type: "registry:block",
@@ -282,12 +18,14 @@ export const blocks: Registry["items"] = [
       container:
         "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
       mobile: "component",
+      details:
+        "A comprehensive software purchase approval interface featuring company information, pricing tiers, and detailed cost breakdown with tax calculations.",
     },
     categories: ["forms"],
   },
   {
     name: "billing-information-01",
-    description: "Billing information management",
+    description: "Manage billing contacts and company information",
     type: "registry:block",
     registryDependencies: ["button", "card"],
     files: [
@@ -302,12 +40,14 @@ export const blocks: Registry["items"] = [
       container:
         "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
       mobile: "component",
+      details:
+        "Easily manage billing contacts and information associated with different companies within one platform. Built with shadcn/ui Card and Button components for a clean, accessible interface. Perfect for multi-company billing management, enterprise dashboards, and SaaS platforms requiring organized billing contact management.",
     },
     categories: ["billing"],
   },
   {
     name: "card-display-01",
-    description: "Credit card display",
+    description: "Credit card display with dark and light themes",
     type: "registry:block",
     registryDependencies: ["card"],
     files: [
@@ -322,12 +62,14 @@ export const blocks: Registry["items"] = [
       container:
         "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
       mobile: "component",
+      details:
+        "Showcases dark and light versions of a card with bank brand logos. Built with shadcn/ui Card component for consistent styling across themes. Ideal for payment forms, checkout processes, wallet sections, financial dashboards, and any interface requiring elegant credit card visualization with theme support.",
     },
     categories: ["billing"],
   },
   {
     name: "payment-method-01",
-    description: "Payment methods management",
+    description: "Payment method management with edit and delete",
     type: "registry:block",
     registryDependencies: ["button", "card", "tooltip"],
     files: [
@@ -342,12 +84,14 @@ export const blocks: Registry["items"] = [
       container:
         "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
       mobile: "component",
+      details:
+        "Manage payment methods with a straightforward UI layout featuring shadcn/ui Card, Button, and Tooltip components. Card brands are clearly identified, sensitive information is partially hidden for security, and editing/deleting functions are easily accessible. Includes a call-to-action button for adding new payment methods. Perfect for account settings, billing pages, and checkout flows.",
     },
     categories: ["billing"],
   },
   {
     name: "transaction-history-01",
-    description: "Transaction history with date picker",
+    description: "Financial transaction history with trend indicators",
     type: "registry:block",
     registryDependencies: ["button", "calendar", "card", "popover"],
     dependencies: ["date-fns"],
@@ -363,12 +107,14 @@ export const blocks: Registry["items"] = [
       container:
         "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
       mobile: "component",
+      details:
+        "Provides a detailed record of financial transactions with various service providers, featuring trend arrows indicating whether values are up or down. Built with shadcn/ui Button, Calendar, Card, and Popover components for an interactive filtering experience. Includes date range selection for easy transaction filtering. Ideal for billing dashboards, financial reports, and transaction monitoring interfaces.",
     },
     categories: ["billing"],
   },
   {
     name: "invoices-01",
-    description: "Invoices list with status badges",
+    description: "Invoice overview with status badges and download",
     type: "registry:block",
     registryDependencies: ["badge", "button", "separator"],
     files: [
@@ -383,6 +129,8 @@ export const blocks: Registry["items"] = [
       container:
         "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
       mobile: "component",
+      details:
+        "Provides an overview of invoices with shadcn/ui Badge components indicating payment status (paid, pending, overdue) and Button components for downloading invoice PDFs. Clean, organized layout with visual separators for easy scanning. Perfect for billing portals, accounting dashboards, and financial management systems requiring clear invoice tracking and download capabilities.",
     },
     categories: ["billing"],
   },
@@ -780,6 +528,46 @@ export const blocks: Registry["items"] = [
     ],
     meta: {
       iframeHeight: "1000px",
+      container:
+        "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
+      mobile: "component",
+    },
+    categories: ["ecommerce"],
+  },
+  {
+    name: "ecommerce-sections-01",
+    description: "Runway video spotlight with product cards",
+    type: "registry:block",
+    registryDependencies: ["badge", "button", "card"],
+    files: [
+      {
+        path: "blocks/ecommerce-sections-01/page.tsx",
+        type: "registry:page",
+        target: "app/ecommerce-sections/page.tsx",
+      },
+    ],
+    meta: {
+      iframeHeight: "900px",
+      container:
+        "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
+      mobile: "component",
+    },
+    categories: ["ecommerce"],
+  },
+  {
+    name: "ecommerce-sections-02",
+    description: "Luxury product detail page with image gallery",
+    type: "registry:block",
+    registryDependencies: ["badge", "button"],
+    files: [
+      {
+        path: "blocks/ecommerce-sections-02/page.tsx",
+        type: "registry:page",
+        target: "app/ecommerce-sections/page.tsx",
+      },
+    ],
+    meta: {
+      iframeHeight: "900px",
       container:
         "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
       mobile: "component",
@@ -2249,5 +2037,156 @@ export const blocks: Registry["items"] = [
       mobile: "component",
     },
     categories: ["modals"],
+  },
+  {
+    name: "account-basic-info-01",
+    description: "Personal information management form",
+    type: "registry:block",
+    registryDependencies: [
+      "button",
+      "card",
+      "input",
+      "label",
+      "select",
+      "calendar",
+      "popover",
+    ],
+    dependencies: ["date-fns"],
+    files: [
+      {
+        path: "blocks/account-basic-info-01/page.tsx",
+        type: "registry:page",
+        target: "app/account-basic-info/page.tsx",
+      },
+    ],
+    meta: {
+      iframeHeight: "1000px",
+      container:
+        "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
+      mobile: "component",
+    },
+    categories: ["account"],
+  },
+  {
+    name: "account-2fa-01",
+    description: "Two-factor authentication setup",
+    type: "registry:block",
+    registryDependencies: ["button", "card", "input", "label", "switch"],
+    files: [
+      {
+        path: "blocks/account-2fa-01/page.tsx",
+        type: "registry:page",
+        target: "app/account-2fa/page.tsx",
+      },
+    ],
+    meta: {
+      iframeHeight: "800px",
+      container:
+        "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
+      mobile: "component",
+      details:
+        "Secure your account with two-factor authentication. Enable authenticator apps, configure backup codes, and manage security verification methods for enhanced account protection.",
+    },
+    categories: ["account"],
+  },
+  {
+    name: "account-change-password-01",
+    description: "Change password form with validation",
+    type: "registry:block",
+    registryDependencies: ["button", "card", "input", "label"],
+    files: [
+      {
+        path: "blocks/account-change-password-01/page.tsx",
+        type: "registry:page",
+        target: "app/account-change-password/page.tsx",
+      },
+    ],
+    meta: {
+      iframeHeight: "700px",
+      container:
+        "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
+      mobile: "component",
+    },
+    categories: ["account"],
+  },
+  {
+    name: "account-notifications-01",
+    description: "Notification preferences management",
+    type: "registry:block",
+    registryDependencies: ["button", "card", "switch"],
+    files: [
+      {
+        path: "blocks/account-notifications-01/page.tsx",
+        type: "registry:page",
+        target: "app/account-notifications/page.tsx",
+      },
+    ],
+    meta: {
+      iframeHeight: "900px",
+      container:
+        "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
+      mobile: "component",
+    },
+    categories: ["account"],
+  },
+  {
+    name: "account-sessions-01",
+    description: "Active sessions and devices management",
+    type: "registry:block",
+    registryDependencies: ["button", "card"],
+    files: [
+      {
+        path: "blocks/account-sessions-01/page.tsx",
+        type: "registry:page",
+        target: "app/account-sessions/page.tsx",
+      },
+    ],
+    meta: {
+      iframeHeight: "800px",
+      container:
+        "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
+      mobile: "component",
+    },
+    categories: ["account"],
+  },
+  {
+    name: "account-avatar-upload-01",
+    description: "Profile avatar upload and management",
+    type: "registry:block",
+    registryDependencies: ["button", "card"],
+    files: [
+      {
+        path: "blocks/account-avatar-upload-01/page.tsx",
+        type: "registry:page",
+        target: "app/account-avatar-upload/page.tsx",
+      },
+    ],
+    meta: {
+      iframeHeight: "600px",
+      container:
+        "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
+      mobile: "component",
+    },
+    categories: ["account"],
+  },
+  {
+    name: "account-integrations-01",
+    description: "Third-party integrations management",
+    type: "registry:block",
+    registryDependencies: ["button", "card", "switch"],
+    files: [
+      {
+        path: "blocks/account-integrations-01/page.tsx",
+        type: "registry:page",
+        target: "app/account-integrations/page.tsx",
+      },
+    ],
+    meta: {
+      iframeHeight: "900px",
+      container:
+        "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
+      mobile: "component",
+    },
+    categories: ["account"],
   },
 ]

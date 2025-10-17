@@ -43,7 +43,7 @@ export function canAccessComponent(componentName: string): boolean {
   if (!isProComponent(componentName)) {
     return true
   }
-  
+
   // For PRO components, check authentication and subscription
   return isUserLoggedIn() && hasProAccess()
 }

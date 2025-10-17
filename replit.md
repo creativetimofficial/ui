@@ -18,7 +18,7 @@ Preferred communication style: Simple, everyday language.
 - **Styling**: Tailwind CSS v3.4 with custom themes and CSS variables.
 - **Component Philosophy**: Radix UI primitives styled using shadcn/ui patterns.
 - **TypeScript**: Strict mode enabled.
-- **Font System**: Custom fonts (Geist, Waldenburg) with variable font support.
+- **Font System**: Geist font family with variable font support.
 
 ### Component Registry System
 - **Schema Validation**: Zod schemas for type-safe definitions.
@@ -106,3 +106,82 @@ Preferred communication style: Simple, everyday language.
 - **clsx + tailwind-merge**: Conditional className composition.
 - **date-fns**: Date manipulation.
 - **class-variance-authority**: Variant-based component APIs.
+
+## Recent Changes
+
+### Ecommerce Sections Blocks (October 15, 2025)
+
+#### ecommerce-sections-01: Video Spotlight with Product Cards
+- **Description**: YouTube video background with horizontal product cards overlay
+- **Features**:
+  - YouTube IFrame Player API integration with autoplay, muted, loop support
+  - Play/pause controls positioned in top-left corner (circular button)
+  - Three horizontal product cards with compact layout:
+    - 64x64px product thumbnails on the left
+    - Brand name, title, and price in the center
+    - Shopping bag and shuffle icons on the right
+  - Footer CTA button: "VIEW ALL PRODUCTS" with outline style
+  - Responsive grid layout (1 column mobile, 2 columns tablet, 3 columns desktop)
+  - Gradient overlay for better text readability
+  - Clean white cards with rounded corners
+- **Video Source**: YouTube video (YCIuEU2y8XI) embedded via YouTube IFrame Player API
+- **Dependencies**: Button (shadcn UI component), YouTube IFrame Player API
+- **Use Case**: Perfect for showcasing capsule collections, seasonal lookbooks, or featured product campaigns with immersive video backgrounds
+
+#### ecommerce-sections-02: Luxury Product Detail Page
+- **Description**: Premium product detail page with image gallery and comprehensive product information
+- **Features**:
+  - Vertical thumbnail gallery (6 images) on the left side for desktop
+  - Large centered product image viewer
+  - Horizontal thumbnail carousel for mobile/tablet (4 visible)
+  - Product details section including:
+    - "Trending Now" badge
+    - Product title: "Artisan Leather Crossbody" with elegant typography
+    - Price display ($385.00) with star rating (4.7)
+    - Color selector with 6 color swatches (Black, Cream, Forest Green, Gray, Navy Blue, Brown)
+    - Product description with features
+    - Demo store disclaimer with "Maison Atelier" link
+    - Dual CTA buttons: "Add to Cart" (outline) and "Buy it Now" (filled)
+    - Feature icons grid: Crossbody style, Premium leather, Adjustable strap, Crafted in France
+    - Functional accordion "More Information" section with expandable content (Materials & Care, Dimensions, Shipping & Returns)
+  - Responsive layout adapting to mobile, tablet, and desktop
+  - Clean, minimal design with neutral color palette
+  - All text uses normal casing (not uppercase)
+- **Dependencies**: Badge, Button (shadcn UI components)
+- **Registry Integration**: Successfully added to registry-blocks.ts under ecommerce category
+- **Use Case**: Ideal for luxury fashion brands, high-end product showcases, and premium ecommerce stores requiring detailed product presentation
+
+#### complex-product-description-01: Enhanced with Size Selector (October 15, 2025)
+- **Description**: Premium product detail block with complete shopping experience
+- **Enhancements**:
+  - **Size Selector**: Interactive size options (XS, S, M, L, XL) with active state styling
+  - **Visual Design**: Inspired by ecommerce-sections-02 with neutral color palette
+  - **"New Arrival" Badge**: Clean badge component at top
+  - **Improved Star Ratings**: Using Star icons with proper fill states
+  - **Enhanced Color Selector**: 40x40px swatches with ring selection indicator
+  - **Feature Icons Grid**: 4-feature 2-column layout (Premium materials, Free shipping, Returns, Warranty)
+  - **Interactive Favorite Button**: Heart icon that fills when clicked
+  - **Better Accordion**: Cleaner styling with detailed content (Features, Care, Shipping, Warranty)
+  - **Vertical Thumbnail Gallery**: Left-side gallery for desktop with better spacing
+- **Dependencies**: Badge, Button, Accordion (shadcn UI components)
+- **Use Case**: Perfect for fashion ecommerce with size-specific products requiring detailed product information and multiple view angles
+
+#### product-description-01: Dropdown Selectors & 3-Column Features (October 15, 2025)
+- **Description**: Enhanced ecommerce product page with dropdown selectors and organized feature display
+- **Latest Updates**:
+  - **Side-by-Side Dropdowns**: Color and Size dropdowns aligned horizontally on the same line
+  - **Size Selector Dropdown**: Numbers (32, 34, 36, 38, 40, 42, 44) instead of buttons
+  - **Color Selector Dropdown**: Shows color dot with name in dropdown options (Black, White, Gray, Navy, Brown)
+  - **3-Column Feature Layout**: Icons centered at top with text below in white cards
+  - **Features Displayed**: Free shipping over $150, Easy 30-day returns, 1-year warranty
+- **Core Features**:
+  - **Breadcrumb Navigation**: Clean breadcrumb trail with chevron separators (Home > Women > Outerwear > Product)
+  - **"Limited Edition" Badge**: Professional badge component for product status
+  - **Enhanced Layout**: Better spacing, larger product image (500px), cleaner thumbnail gallery
+  - **Star Ratings**: Using Star icons with proper fill states and review count
+  - **Interactive Favorite**: Heart button that fills when clicked
+  - **Detailed Content**: Product description and key features list with bullet points
+  - **Professional Copy**: Water-resistant fabric, premium insulation, adjustable features
+  - **Neutral Color Palette**: Consistent neutral-50/900 design
+- **Dependencies**: Badge, Button, Select (shadcn UI components)
+- **Use Case**: Ideal for luxury fashion ecommerce requiring streamlined product selection with dropdown controls and clear feature presentation

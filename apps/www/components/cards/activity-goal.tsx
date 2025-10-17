@@ -13,7 +13,10 @@ import {
   CardHeader,
   CardTitle,
 } from "@/registry/creative-tim-ui/ui/card"
-import { ChartConfig, ChartContainer } from "@/registry/creative-tim-ui/ui/chart"
+import {
+  ChartConfig,
+  ChartContainer,
+} from "@/registry/creative-tim-ui/ui/chart"
 
 const data = [
   {

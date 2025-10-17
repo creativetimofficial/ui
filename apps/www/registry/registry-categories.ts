@@ -1,12 +1,7 @@
 export const registryCategories = [
   {
-    name: "Agents",
-    slug: "agents",
-    hidden: false,
-  },
-  {
-    name: "Audio",
-    slug: "audio",
+    name: "Account",
+    slug: "account",
     hidden: false,
   },
   {

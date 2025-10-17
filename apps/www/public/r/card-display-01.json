@@ -2,7 +2,7 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "card-display-01",
   "type": "registry:block",
-  "description": "Credit card display",
+  "description": "Credit card display with dark and light themes",
   "registryDependencies": [
     "card"
   ],
@@ -17,7 +17,8 @@
   "meta": {
     "iframeHeight": "400px",
     "container": "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
-    "mobile": "component"
+    "mobile": "component",
+    "details": "Showcases dark and light versions of a card with bank brand logos. Built with shadcn/ui Card component for consistent styling across themes. Ideal for payment forms, checkout processes, wallet sections, financial dashboards, and any interface requiring elegant credit card visualization with theme support."
   },
   "categories": [
     "billing"

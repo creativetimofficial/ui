@@ -2,7 +2,7 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "payment-method-01",
   "type": "registry:block",
-  "description": "Payment methods management",
+  "description": "Payment method management with edit and delete",
   "registryDependencies": [
     "button",
     "card",
@@ -19,7 +19,8 @@
   "meta": {
     "iframeHeight": "500px",
     "container": "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
-    "mobile": "component"
+    "mobile": "component",
+    "details": "Manage payment methods with a straightforward UI layout featuring shadcn/ui Card, Button, and Tooltip components. Card brands are clearly identified, sensitive information is partially hidden for security, and editing/deleting functions are easily accessible. Includes a call-to-action button for adding new payment methods. Perfect for account settings, billing pages, and checkout flows."
   },
   "categories": [
     "billing"
