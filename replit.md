@@ -163,13 +163,23 @@ Preferred communication style: Simple, everyday language.
 
 ### Testimonials Section
 - **Location**: Home page, positioned after blocks section with thumbnails, before page navigation
-- **Layout**: Responsive grid (1 column mobile, 2 tablet, 3 desktop)
+- **Design**: Modern carousel with animations focused on quotes
 - **Featured Testimonials**: 6 professional testimonials from developers and designers at leading tech companies (Stripe, Vercel, Figma, Linear, Shopify, GitHub)
-- **Design Features**:
-  - Professional avatar images with quote badge overlay
-  - 5-star rating display in top-right corner
-  - Name, role, and company information
-  - Hover effects with shadow and border transitions
-  - Card styling consistent with site design system
+- **Carousel Features**:
+  - Auto-rotating carousel (5-second intervals)
+  - Previous/Next navigation buttons
+  - Dot indicators for all testimonials
+  - Click on dots to jump to specific testimonial
+- **Animation Details**:
+  - Smooth fade-in/fade-out transitions between testimonials
+  - Staggered animations: quote icon → quote text → author info
+  - Spring animation for quote icon appearance
+  - Motion-powered using framer-motion library
+- **Visual Design**:
+  - Large, prominent quote display (2xl to 4xl responsive text)
+  - Glassmorphism card with gradient background
+  - Rounded card with backdrop blur effect
+  - Centered layout with quote icon in circular badge
+  - Author avatar with name, role, and company below quote
 - **Section Heading**: "Loved by Developers & Designers"
 - **Purpose**: Social proof showcasing trust from professionals building with Creative Tim UI
