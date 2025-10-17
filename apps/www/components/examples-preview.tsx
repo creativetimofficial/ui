@@ -265,37 +265,44 @@ const categories: ExampleCategory[] = [
       {
         name: "Banner Sections",
         blockCount: 7,
-        category: "banner-sections"
+        category: "banner-sections",
+        thumbnail: "https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/banner-thumbnail.jpg"
       },
       {
         name: "Ecommerce Sections",
         blockCount: 14,
-        category: "ecommerce"
+        category: "ecommerce",
+        thumbnail: "https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/ecommerce-thumbnail.jpg"
       },
       {
         name: "Product List Sections",
         blockCount: 5,
-        category: "product-list"
+        category: "product-list",
+        thumbnail: "https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/product-list-thumbnail.jpg"
       },
       {
         name: "Customer Overview Sections",
         blockCount: 3,
-        category: "customer-overview"
+        category: "customer-overview",
+        thumbnail: "https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/customer-overview-thumbnail.jpg"
       },
       {
         name: "Pricing Sections",
         blockCount: 12,
-        category: "pricing"
+        category: "pricing",
+        thumbnail: "https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/pricing-thumbnail.jpg"
       },
       {
         name: "Categories",
         blockCount: 5,
-        category: "categories"
+        category: "categories",
+        thumbnail: "https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/categories-thumbnail.jpg"
       },
       {
         name: "Order Sections",
         blockCount: 7,
-        category: "order-sections"
+        category: "order-sections",
+        thumbnail: "https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/order-tracking-thumbnail.jpg"
       }
     ]
   }
