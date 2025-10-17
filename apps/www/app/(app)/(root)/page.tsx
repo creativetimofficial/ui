@@ -19,7 +19,7 @@ import { Card } from "@/registry/creative-tim-ui/ui/card"
 
 const title = "Creative Tim UI"
 const description =
-  "Engineered with open-source components, blocks, AI agents, and a flexible registry powered by MCP and open code for seamless, scalable development."
+  "Open-source components, blocks, and AI agents designed to speed up your workflow. Import them seamlessly into your favorite tools through Registry and MCPs."
 
 export const dynamic = "force-static"
 export const revalidate = false
@@ -84,10 +84,7 @@ export default function IndexPage() {
           </PageActions>
 
           {/* Logo Section */}
-          <div className="mt-12 flex flex-col items-center gap-6">
-            <p className="text-muted-foreground font-semibold">
-              Ready to be imported in
-            </p>
+          <div className="mt-16 flex flex-col items-center gap-6">
             <div className="flex flex-wrap items-center justify-center gap-8 md:gap-10">
               {/* OpenAI */}
               <div className="opacity-50 grayscale transition-all hover:opacity-100 hover:grayscale-0 dark:invert dark:opacity-60 dark:hover:invert-0">
