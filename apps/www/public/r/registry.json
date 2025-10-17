@@ -53,6 +53,86 @@
       ]
     },
     {
+      "name": "card-demo",
+      "type": "registry:ui",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "card",
+        "button",
+        "badge"
+      ],
+      "files": [
+        {
+          "path": "registry/creative-tim-ui/examples/card-demo.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "card-plain",
+      "type": "registry:ui",
+      "registryDependencies": [
+        "card"
+      ],
+      "files": [
+        {
+          "path": "registry/creative-tim-ui/examples/card-plain.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "card-with-button",
+      "type": "registry:ui",
+      "registryDependencies": [
+        "card",
+        "button"
+      ],
+      "files": [
+        {
+          "path": "registry/creative-tim-ui/examples/card-with-button.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "card-blog",
+      "type": "registry:ui",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "card",
+        "button"
+      ],
+      "files": [
+        {
+          "path": "registry/creative-tim-ui/examples/card-blog.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "card-ecommerce",
+      "type": "registry:ui",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "card",
+        "button",
+        "badge"
+      ],
+      "files": [
+        {
+          "path": "registry/creative-tim-ui/examples/card-ecommerce.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "software-purchase-01",
       "type": "registry:block",
       "description": "Software purchase approval card",

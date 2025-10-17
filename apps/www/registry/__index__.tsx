@@ -44,6 +44,96 @@ export const Index: Record<string, any> = {
     categories: undefined,
     meta: undefined,
   },
+  "card-demo": {
+    name: "card-demo",
+    description: "",
+    type: "registry:ui",
+    registryDependencies: ["card","button","badge"],
+    files: [{
+      path: "registry/creative-tim-ui/examples/card-demo.tsx",
+      type: "registry:ui",
+      target: ""
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/examples/card-demo.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
+  "card-plain": {
+    name: "card-plain",
+    description: "",
+    type: "registry:ui",
+    registryDependencies: ["card"],
+    files: [{
+      path: "registry/creative-tim-ui/examples/card-plain.tsx",
+      type: "registry:ui",
+      target: ""
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/examples/card-plain.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
+  "card-with-button": {
+    name: "card-with-button",
+    description: "",
+    type: "registry:ui",
+    registryDependencies: ["card","button"],
+    files: [{
+      path: "registry/creative-tim-ui/examples/card-with-button.tsx",
+      type: "registry:ui",
+      target: ""
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/examples/card-with-button.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
+  "card-blog": {
+    name: "card-blog",
+    description: "",
+    type: "registry:ui",
+    registryDependencies: ["card","button"],
+    files: [{
+      path: "registry/creative-tim-ui/examples/card-blog.tsx",
+      type: "registry:ui",
+      target: ""
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/examples/card-blog.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
+  "card-ecommerce": {
+    name: "card-ecommerce",
+    description: "",
+    type: "registry:ui",
+    registryDependencies: ["card","button","badge"],
+    files: [{
+      path: "registry/creative-tim-ui/examples/card-ecommerce.tsx",
+      type: "registry:ui",
+      target: ""
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim-ui/examples/card-ecommerce.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
   "software-purchase-01": {
     name: "software-purchase-01",
     description: "Software purchase approval card",

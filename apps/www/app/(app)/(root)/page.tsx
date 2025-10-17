@@ -81,52 +81,60 @@ export default function IndexPage() {
         </PageHeader>
       </div>
 
-      {/* Showcase Masonry Section */}
       <ShowcaseMasonry />
       
+
       {/* Achievements Section */}
       <section className="container py-12 md:py-20">
         <div className="mx-auto max-w-6xl text-center">
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">
+          <h2 className="mb-4 text-3xl font-bold tracking-tight sm:text-4xl">
             Remarkable Achievements
           </h2>
-          <p className="text-muted-foreground text-base sm:text-lg max-w-3xl mx-auto mb-12">
-            Discover how our UI Tools have transformed web development. These achievements showcase our dedication to innovation and our community&apos;s growth.
+          <p className="text-muted-foreground mx-auto mb-12 max-w-3xl text-base sm:text-lg">
+            Discover how our UI Tools have transformed web development. These
+            achievements showcase our dedication to innovation and our
+            community&apos;s growth.
           </p>
-          
+
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
             <Card className="p-6 text-left">
-              <Users className="h-8 w-8 mb-4 text-muted-foreground" />
-              <div className="text-3xl font-bold mb-1">2.6M+</div>
-              <div className="text-sm font-medium mb-3">Community Members</div>
-              <p className="text-sm text-muted-foreground">
+              <Users className="text-muted-foreground mb-4 h-8 w-8" />
+              <div className="mb-1 text-3xl font-bold">2.6M+</div>
+              <div className="mb-3 text-sm font-medium">Community Members</div>
+              <p className="text-muted-foreground text-sm">
                 Join our community of developers and designers
               </p>
             </Card>
-            
+
             <Card className="p-6 text-left">
-              <Download className="h-8 w-8 mb-4 text-muted-foreground" />
-              <div className="text-3xl font-bold mb-1">8.6M+</div>
-              <div className="text-sm font-medium mb-3">Cumulative Downloads</div>
-              <p className="text-sm text-muted-foreground">
+              <Download className="text-muted-foreground mb-4 h-8 w-8" />
+              <div className="mb-1 text-3xl font-bold">8.6M+</div>
+              <div className="mb-3 text-sm font-medium">
+                Cumulative Downloads
+              </div>
+              <p className="text-muted-foreground text-sm">
                 Based on Material Tailwind and Creative Tim Products
               </p>
             </Card>
-            
+
             <Card className="p-6 text-left">
-              <Star className="h-8 w-8 mb-4 text-muted-foreground" />
-              <div className="text-3xl font-bold mb-1">48,000+</div>
-              <div className="text-sm font-medium mb-3">Github Cumulative Stars</div>
-              <p className="text-sm text-muted-foreground">
+              <Star className="text-muted-foreground mb-4 h-8 w-8" />
+              <div className="mb-1 text-3xl font-bold">48,000+</div>
+              <div className="mb-3 text-sm font-medium">
+                Github Cumulative Stars
+              </div>
+              <p className="text-muted-foreground text-sm">
                 On 100+ Open Source Repositories and Projects
               </p>
             </Card>
-            
+
             <Card className="p-6 text-left">
-              <Package className="h-8 w-8 mb-4 text-muted-foreground" />
-              <div className="text-3xl font-bold mb-1">280,000+</div>
-              <div className="text-sm font-medium mb-3">Monthly NPM Downloads</div>
-              <p className="text-sm text-muted-foreground">
+              <Package className="text-muted-foreground mb-4 h-8 w-8" />
+              <div className="mb-1 text-3xl font-bold">280,000+</div>
+              <div className="mb-3 text-sm font-medium">
+                Monthly NPM Downloads
+              </div>
+              <p className="text-muted-foreground text-sm">
                 Including React, HTML, Tailwind CSS and more.
               </p>
             </Card>

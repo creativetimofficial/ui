@@ -1,0 +1,270 @@
+---
+title: Card
+description: Versatile card components for displaying content in a structured, visually appealing format.
+featured: true
+component: true
+---
+
+<ComponentPreview
+  name="card-demo"
+  description="A collection of card variations."
+/>
+
+## Installation
+
+<CodeTabs>
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx @creative-tim/ui@latest components add card
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>Install the following dependencies:</Step>
+
+```bash
+npm install lucide-react
+```
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="card" title="components/ui/card.tsx" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</CodeTabs>
+
+## Usage
+
+```tsx showLineNumbers
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card"
+```
+
+## Examples
+
+### Plain Card
+
+A simple card with just content.
+
+<ComponentPreview
+  name="card-plain"
+  description="A plain card with basic content."
+/>
+
+```tsx showLineNumbers {3-9}
+<Card>
+  <CardContent className="pt-6">
+    <p>
+      This is a plain card with simple content. Perfect for displaying basic
+      information.
+    </p>
+  </CardContent>
+</Card>
+```
+
+### Card with Title, Description, and Button
+
+A card with header elements and a call-to-action button.
+
+<ComponentPreview
+  name="card-with-button"
+  description="A card with title, description, and action button."
+/>
+
+```tsx showLineNumbers {3-16}
+<Card>
+  <CardHeader>
+    <CardTitle>Card Title</CardTitle>
+    <CardDescription>
+      This is a brief description of the card content.
+    </CardDescription>
+  </CardHeader>
+  <CardContent>
+    <p>More detailed information goes here in the card content area.</p>
+  </CardContent>
+  <CardFooter>
+    <Button>Learn More</Button>
+  </CardFooter>
+</Card>
+```
+
+### Blog Card
+
+A card designed for blog post previews with image, title, excerpt, and metadata.
+
+<ComponentPreview
+  name="card-blog"
+  description="A blog post card with image and metadata."
+/>
+
+```tsx showLineNumbers {3-24}
+<Card className="overflow-hidden">
+  <img
+    src="/blog-image.jpg"
+    alt="Blog post"
+    className="h-48 w-full object-cover"
+  />
+  <CardHeader>
+    <div className="text-muted-foreground flex items-center gap-2 text-sm">
+      <Calendar className="h-4 w-4" />
+      <span>March 15, 2025</span>
+      <span>•</span>
+      <span>5 min read</span>
+    </div>
+    <CardTitle>Getting Started with Next.js</CardTitle>
+    <CardDescription>
+      Learn how to build modern web applications with Next.js, React, and
+      TypeScript.
+    </CardDescription>
+  </CardHeader>
+  <CardFooter>
+    <Button variant="ghost">Read More</Button>
+  </CardFooter>
+</Card>
+```
+
+### E-commerce Product Card
+
+A card designed for product listings with image, pricing, and add to cart functionality.
+
+<ComponentPreview
+  name="card-ecommerce"
+  description="An e-commerce product card with pricing and actions."
+/>
+
+```tsx showLineNumbers {3-39}
+<Card className="overflow-hidden">
+  <div className="relative">
+    <img
+      src="/product-image.jpg"
+      alt="Product"
+      className="h-64 w-full object-cover"
+    />
+    <Badge className="absolute top-2 right-2">New</Badge>
+  </div>
+  <CardHeader>
+    <CardTitle>Premium Wireless Headphones</CardTitle>
+    <CardDescription>
+      High-quality audio with active noise cancellation
+    </CardDescription>
+  </CardHeader>
+  <CardContent>
+    <div className="flex items-center justify-between">
+      <div className="flex items-center gap-1">
+        <Star className="h-4 w-4 fill-yellow-400 text-yellow-400" />
+        <Star className="h-4 w-4 fill-yellow-400 text-yellow-400" />
+        <Star className="h-4 w-4 fill-yellow-400 text-yellow-400" />
+        <Star className="h-4 w-4 fill-yellow-400 text-yellow-400" />
+        <Star className="h-4 w-4" />
+        <span className="text-muted-foreground text-sm">(128)</span>
+      </div>
+      <div className="text-2xl font-bold">$299</div>
+    </div>
+  </CardContent>
+  <CardFooter className="gap-2">
+    <Button className="flex-1">
+      <ShoppingCart className="mr-2 h-4 w-4" />
+      Add to Cart
+    </Button>
+    <Button variant="outline" size="icon">
+      <Heart className="h-4 w-4" />
+    </Button>
+  </CardFooter>
+</Card>
+```
+
+## API Reference
+
+### Card
+
+The root card container component.
+
+#### Props
+
+| Prop      | Type        | Default     | Description            |
+| --------- | ----------- | ----------- | ---------------------- |
+| className | `string`    | `undefined` | Additional CSS classes |
+| children  | `ReactNode` | `undefined` | Card content           |
+
+### CardHeader
+
+Container for card header content (title, description).
+
+#### Props
+
+| Prop      | Type        | Default     | Description            |
+| --------- | ----------- | ----------- | ---------------------- |
+| className | `string`    | `undefined` | Additional CSS classes |
+| children  | `ReactNode` | `undefined` | Header content         |
+
+### CardTitle
+
+The card title component.
+
+#### Props
+
+| Prop      | Type        | Default     | Description            |
+| --------- | ----------- | ----------- | ---------------------- |
+| className | `string`    | `undefined` | Additional CSS classes |
+| children  | `ReactNode` | `undefined` | Title text             |
+
+### CardDescription
+
+The card description component.
+
+#### Props
+
+| Prop      | Type        | Default     | Description            |
+| --------- | ----------- | ----------- | ---------------------- |
+| className | `string`    | `undefined` | Additional CSS classes |
+| children  | `ReactNode` | `undefined` | Description text       |
+
+### CardContent
+
+Container for the main card content.
+
+#### Props
+
+| Prop      | Type        | Default     | Description            |
+| --------- | ----------- | ----------- | ---------------------- |
+| className | `string`    | `undefined` | Additional CSS classes |
+| children  | `ReactNode` | `undefined` | Card body content      |
+
+### CardFooter
+
+Container for card footer content (buttons, actions).
+
+#### Props
+
+| Prop      | Type        | Default     | Description            |
+| --------- | ----------- | ----------- | ---------------------- |
+| className | `string`    | `undefined` | Additional CSS classes |
+| children  | `ReactNode` | `undefined` | Footer content         |
+
+## Notes
+
+- Cards are fully responsive and adapt to their container
+- Use `overflow-hidden` class on Card to clip images at rounded corners
+- Combine with other components like Button, Badge, and icons for rich layouts
+- Based on shadcn/ui Card component with Material Tailwind design enhancements
