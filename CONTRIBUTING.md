@@ -1,6 +1,6 @@
 # Contributing
 
-Thanks for your interest in contributing to ui.elevenlabs.io.
+Thanks for your interest in contributing to ui.creative-tim.com.
 
 Please take a moment to review this document before submitting your first pull request. We also strongly recommend that you check for open issues and pull requests to see if someone else is working on something similar.
 
@@ -24,7 +24,7 @@ apps
     ├── components
     ├── content
     └── registry
-        └── elevenlabs-ui
+        └── creative-tim-ui
             ├── example
             └── ui
 ```
@@ -45,7 +45,7 @@ You can fork this repo by clicking the fork button in the top right corner of th
 ### Clone on your local machine
 
 ```bash
-git clone https://github.com/elevenlabs/ui.git
+git clone https://github.com/creative-tim/ui.git
 ```
 
 ### Navigate to project directory
@@ -95,7 +95,7 @@ We use a registry system for developing components. You can find the source code
 apps
 └── www
     └── registry
-        └── elevenlabs-ui
+        └── creative-tim-ui
             ├── example
             └── ui
 ```

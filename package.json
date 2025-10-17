@@ -26,7 +26,18 @@
     "release": "changeset version",
     "test:dev": "turbo run test --force",
     "test": "start-server-and-test dev http://localhost:4000 test:dev",
-    "validate:registries": "pnpm validate:registries"
+    "validate:registries": "pnpm validate:registries",
+    
+    "dev:web": "pnpm --filter=www dev",       
+    "mock": "pnpm --prefix mock-api run start",        
+    "dev:stack": "concurrently -k -n MOCK,WEB -c magenta,cyan \"pnpm run mock\" \"pnpm run dev:web\"",
+
+    "test:unit": "vitest run --environment jsdom",        
+    "test:e2e": "start-server-and-test dev:stack http://localhost:3000 \"playwright test\"",
+    "test:e2e:headed": "start-server-and-test dev:stack http://localhost:3000 \"playwright test --headed\"",
+    "test:all": "pnpm run test:unit && pnpm run test:e2e",
+
+    "test:e2e:report": "playwright show-report"
   },
   "packageManager": "pnpm@9.0.6",
   "dependencies": {
@@ -37,6 +48,9 @@
     "@commitlint/config-conventional": "^17.6.3",
     "@ianvs/prettier-plugin-sort-imports": "^3.7.2",
     "@manypkg/cli": "^0.20.0",
+    "@playwright/test": "^1.56.0",
+    "@paddle/paddle-js": "^1.4.2",
+    "@react-oauth/google": "^0.12.2",
     "@typescript-eslint/parser": "^5.59.7",
     "autoprefixer": "^10.4.14",
     "concurrently": "^8.0.1",

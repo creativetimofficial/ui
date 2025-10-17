@@ -23,6 +23,10 @@ const nextConfig = {
         protocol: "https",
         hostname: "storage.googleapis.com",
       },
+      {
+        protocol: "https",
+        hostname: "raw.githubusercontent.com",
+      },
     ],
   },
   redirects() {
@@ -84,11 +88,27 @@ const nextConfig = {
       },
     ]
   },
-  rewrites() {
+  async rewrites() {
     return [
       {
         source: "/docs/:path*.md",
         destination: "/llm/:path*",
+      },
+      {
+        source: '/api/:path*',
+        destination: 'http://localhost:3000/api/:path*', // Proxy to Rails API
+      },
+      {
+        source: '/dashboard/:path*',
+        destination: 'http://localhost:3000/downloads/:path*', // Proxy to Rails Dashboard
+      },
+      {
+        source: '/downloads',
+        destination: 'http://localhost:3000/downloads', // Proxy to Rails Dashboard
+      },
+      {
+        source: '/logout',
+        destination: 'http://localhost:3000/logout', // Proxy to Rails Dashboard
       },
     ]
   },

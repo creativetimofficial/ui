@@ -2,6 +2,8 @@ import { NextResponse } from "next/server"
 import type { NextRequest } from "next/server"
 import { track } from "@vercel/analytics/server"
 
+const PRIVATE_COMPONENTS = ["testimonials-03", "testimonials-04"]
+
 export async function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl
 
@@ -18,6 +20,13 @@ export async function middleware(request: NextRequest) {
       referer,
       timestamp: new Date().toISOString(),
     })
+
+    if (PRIVATE_COMPONENTS.includes(componentName)) {
+      const url = request.nextUrl.clone()
+      url.pathname = `/api/r/${componentName}`
+
+      return NextResponse.rewrite(url)
+    }
   }
 
   return NextResponse.next()

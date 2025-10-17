@@ -17,14 +17,14 @@ import * as React from "react"
 export const Index: Record<string, any> = {`
   for (const item of registry.items) {
     const resolveFiles = item.files?.map(
-      (file) => `registry/elevenlabs-ui/${file.path}`
+      (file) => `registry/creative-tim-ui/${file.path}`
     )
     if (!resolveFiles) {
       continue
     }
 
     const componentPath = item.files?.[0]?.path
-      ? `@/registry/elevenlabs-ui/${item.files[0].path}`
+      ? `@/registry/creative-tim-ui/${item.files[0].path}`
       : ""
 
     index += `
@@ -34,7 +34,7 @@ export const Index: Record<string, any> = {`
     type: "${item.type}",
     registryDependencies: ${JSON.stringify(item.registryDependencies)},
     files: [${item.files?.map((file) => {
-      const filePath = `registry/elevenlabs-ui/${typeof file === "string" ? file : file.path}`
+      const filePath = `registry/creative-tim-ui/${typeof file === "string" ? file : file.path}`
       const resolvedFilePath = path.resolve(filePath)
       return typeof file === "string"
         ? `"${resolvedFilePath}"`
@@ -69,14 +69,14 @@ export const Index: Record<string, any> = {`
 }
 
 async function buildRegistryJsonFile() {
-  // 1. Add registry/elevenlabs-ui prefix for the build to work
+  // 1. Add registry/creative-tim-ui prefix for the build to work
   const fixedRegistry = {
     ...registry,
     items: registry.items.map((item) => {
       const files = item.files?.map((file) => {
         return {
           ...file,
-          path: `registry/elevenlabs-ui/${file.path}`,
+          path: `registry/creative-tim-ui/${file.path}`,
         }
       })
 
@@ -125,7 +125,7 @@ async function buildRegistry() {
           console.log(stdout)
         }
 
-        // Post-process the generated JSON files to remove registry/elevenlabs-ui prefix
+        // Post-process the generated JSON files to remove registry/creative-tim-ui prefix
         console.log("📝 Cleaning up paths in generated JSON files...")
         await cleanupGeneratedPaths()
 
@@ -162,7 +162,7 @@ async function cleanupGeneratedPaths() {
 
       json.files = json.files.map((file: any) => {
         if (typeof file === 'object' && file.path) {
-          // Remove registry/elevenlabs-ui/ prefix
+          // Remove registry/creative-tim-ui/ prefix
           let cleanPath = file.path.replace(/^registry\/elevenlabs-ui\//, '')
 
           // For UI components, prepend with components/
@@ -214,19 +214,19 @@ function rewriteImports(content: string, pathMappings: Map<string, string>): str
     }
   })
 
-  // Rewrite imports from @/registry/elevenlabs-ui/ui/... to @/components/ui/...
+  // Rewrite imports from @/registry/creative-tim-ui/ui/... to @/components/ui/...
   content = content.replace(
     /@\/registry\/elevenlabs-ui\/ui\//g,
     '@/components/ui/'
   )
 
-  // Rewrite imports from @/registry/elevenlabs-ui/examples/... to @/components/examples/...
+  // Rewrite imports from @/registry/creative-tim-ui/examples/... to @/components/examples/...
   content = content.replace(
     /@\/registry\/elevenlabs-ui\/examples\//g,
     '@/components/examples/'
   )
 
-  // Rewrite imports from @/registry/elevenlabs-ui/lib/... to @/lib/...
+  // Rewrite imports from @/registry/creative-tim-ui/lib/... to @/lib/...
   content = content.replace(
     /@\/registry\/elevenlabs-ui\/lib\//g,
     '@/lib/'
@@ -263,7 +263,7 @@ async function buildAllJson() {
     // Collect files and read their content
     if (component.files) {
       for (const file of component.files) {
-        const filePath = `registry/elevenlabs-ui/${file.path}`
+        const filePath = `registry/creative-tim-ui/${file.path}`
         const absolutePath = path.join(process.cwd(), filePath)
 
         // Read file content
@@ -272,7 +272,7 @@ async function buildAllJson() {
           content = await fs.readFile(absolutePath, 'utf-8')
         }
 
-        // Clean path - remove registry/elevenlabs-ui/ prefix
+        // Clean path - remove registry/creative-tim-ui/ prefix
         let cleanPath = file.path
         if (cleanPath.startsWith('ui/')) {
           cleanPath = 'components/' + cleanPath

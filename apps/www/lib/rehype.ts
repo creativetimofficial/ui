@@ -73,7 +73,7 @@ export function rehypeComponent() {
           // TODO: Use @swc/core and a visitor to replace this.
           // For now a simple regex should do.
           source = source.replaceAll(
-            `@/registry/elevenlabs-ui/`,
+            `@/registry/creative-tim-ui/`,
             "@/components/"
           )
           source = source.replaceAll("export default", "export")
@@ -125,7 +125,7 @@ export function rehypeComponent() {
           // TODO: Use @swc/core and a visitor to replace this.
           // For now a simple regex should do.
           source = source.replaceAll(
-            `@/registry/elevenlabs-ui/`,
+            `@/registry/creative-tim-ui/`,
             "@/components/"
           )
           source = source.replaceAll("export default", "export")

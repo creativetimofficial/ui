@@ -4,25 +4,25 @@ import {
   Avatar,
   AvatarFallback,
   AvatarImage,
-} from "@/registry/elevenlabs-ui/ui/avatar"
-import { Button } from "@/registry/elevenlabs-ui/ui/button"
+} from "@/registry/creative-tim-ui/ui/avatar"
+import { Button } from "@/registry/creative-tim-ui/ui/button"
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/registry/elevenlabs-ui/ui/card"
-import { Input } from "@/registry/elevenlabs-ui/ui/input"
-import { Label } from "@/registry/elevenlabs-ui/ui/label"
+} from "@/registry/creative-tim-ui/ui/card"
+import { Input } from "@/registry/creative-tim-ui/ui/input"
+import { Label } from "@/registry/creative-tim-ui/ui/label"
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/registry/elevenlabs-ui/ui/select"
-import { Separator } from "@/registry/elevenlabs-ui/ui/separator"
+} from "@/registry/creative-tim-ui/ui/select"
+import { Separator } from "@/registry/creative-tim-ui/ui/separator"
 
 const people = [
   {
