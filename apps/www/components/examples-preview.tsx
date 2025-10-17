@@ -198,52 +198,62 @@ const categories: ExampleCategory[] = [
       {
         name: "FAQs",
         blockCount: 6,
-        category: "faqs"
+        category: "faqs",
+        thumbnail: "https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/faq-thumbnail.jpg"
       },
       {
         name: "Feature Sections",
         blockCount: 18,
-        category: "feature-sections"
+        category: "feature-sections",
+        thumbnail: "https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/features-thumbnail.jpg"
       },
       {
         name: "Stats Sections",
         blockCount: 10,
-        category: "stats-sections"
+        category: "stats-sections",
+        thumbnail: "https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/stats-thumbnail.jpg"
       },
       {
         name: "Content Sections",
         blockCount: 16,
-        category: "content-sections"
+        category: "content-sections",
+        thumbnail: "https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/content-section-thumbnail.jpg"
       },
       {
         name: "Cards",
         blockCount: 5,
-        category: "cards"
+        category: "cards",
+        thumbnail: "https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/cards-thumbnail.jpg"
       },
       {
         name: "Error Sections",
         blockCount: 7,
-        category: "error-sections"
+        category: "error-sections",
+        thumbnail: "https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/Error404-thumbnail.jpg"
       },
       {
         name: "Maintenance Sections",
         blockCount: 4,
-        category: "maintenance-sections"
+        category: "maintenance-sections",
+        thumbnail: "https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/Error500-thumbnail.jpg"
       },
       {
         name: "Blog Sections",
         blockCount: 15,
-        category: "blog-sections"
+        category: "blog-sections",
+        thumbnail: "https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/blog-posts-thumbnail.jpg"
       },
       {
         name: "Logo Sections",
         blockCount: 7,
-        category: "logo-sections"
+        category: "logo-sections",
+        thumbnail: "https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/logo-areas-thumbnail.jpg"
       },
       {
         name: "Calendar Sections",
         blockCount: 3,
-        category: "calendar-sections"
+        category: "calendar-sections",
+        thumbnail: "https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/calendar-thumbnail.jpg"
       }
     ]
   },
