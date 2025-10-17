@@ -58,7 +58,7 @@ export const metadata: Metadata = {
     shortcut: "/favicon-16x16.png",
     apple: "/apple-touch-icon.png",
   },
-  manifest: `${process.env.NEXT_PUBLIC_APP_URL}${}/site.webmanifest`,
+  manifest: `${process.env.NEXT_PUBLIC_APP_URL}${process.env.NEXT_PUBLIC_ASSET_PREFIX}/site.webmanifest`,
 }
 
 export default function RootLayout({
