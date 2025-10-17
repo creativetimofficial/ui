@@ -491,33 +491,35 @@ export function ShowcaseMasonry() {
         {/* Testimonial Card */}
         <div className="break-inside-avoid">
           <Card className="group border-border/50 hover:border-border transition-all hover:shadow-lg">
-            <CardContent className="p-8 text-center">
-              <div className="relative mx-auto mb-6 inline-block">
-                <img
-                  src="https://images.unsplash.com/photo-1716662318479-a9c0f1cd1a0e?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=987"
-                  alt="Sarah Johnson profile"
-                  className="border-border mx-auto h-24 w-24 rounded-full border-4 object-cover transition-transform group-hover:scale-105"
-                />
-                <div className="bg-background absolute -right-2 -bottom-2 rounded-full p-2 shadow-md">
-                  <Quote className="text-primary h-4 w-4" />
+            <CardContent className="p-6">
+              <div className="mb-4 flex items-center gap-4">
+                <div className="relative shrink-0">
+                  <img
+                    src="https://images.unsplash.com/photo-1716662318479-a9c0f1cd1a0e?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=987"
+                    alt="Sarah Johnson profile"
+                    className="border-border h-14 w-14 rounded-full border-2 object-cover transition-transform group-hover:scale-105"
+                  />
+                  <div className="bg-background absolute -right-1 -bottom-1 rounded-full p-1 shadow-md">
+                    <Quote className="text-primary h-3 w-3" />
+                  </div>
+                </div>
+                <div className="min-w-0 flex-1 text-left">
+                  <h3 className="font-semibold">Sarah Johnson</h3>
+                  <p className="text-muted-foreground text-sm">
+                    Product Designer
+                  </p>
+                </div>
+                <div className="flex shrink-0 gap-0.5">
+                  {Array.from({ length: 5 }).map((_, i) => (
+                    <Star
+                      key={i}
+                      className="h-3.5 w-3.5 fill-yellow-400 text-yellow-400"
+                    />
+                  ))}
                 </div>
               </div>
 
-              <h3 className="mb-1 text-xl font-semibold">Sarah Johnson</h3>
-              <p className="text-muted-foreground mb-6 text-sm">
-                Product Designer
-              </p>
-
-              <div className="mb-6 flex items-center justify-center gap-1">
-                {Array.from({ length: 5 }).map((_, i) => (
-                  <Star
-                    key={i}
-                    className="h-4 w-4 fill-yellow-400 text-yellow-400"
-                  />
-                ))}
-              </div>
-
-              <blockquote className="text-foreground/80 text-sm leading-relaxed">
+              <blockquote className="text-muted-foreground text-left text-sm leading-relaxed">
                 &quot;The attention to detail and component quality is
                 outstanding. These UI blocks have significantly accelerated our
                 design workflow.&quot;
