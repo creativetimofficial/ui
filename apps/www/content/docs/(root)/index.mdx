@@ -3,7 +3,9 @@ title: Creative Tim UI
 description: Introduction
 ---
 
-Creative Tim UI is a component library and custom registry built on top of [shadcn/ui](https://ui.shadcn.com/) to help you build multimodal agentic experiences faster. It provides pre-built components for agents, transcription, audio & more.
+Creative Tim UI is a comprehensive component library and custom registry built on top of [shadcn/ui](https://ui.shadcn.com/) to help you build beautiful, modern web applications faster. It provides pre-built, customizable React components and blocks designed for production-ready applications.
+
+## Installation
 
 Components are available via the `@creative-tim/ui` command.
 
@@ -11,38 +13,72 @@ Components are available via the `@creative-tim/ui` command.
 npx @creative-tim/ui@latest components add <component>
 ```
 
-For example, to install the [Orb](/docs/components/orb) component, you can run:
+For example, to install a button component, you can run:
 
 ```bash
-npx @creative-tim/ui@latest components add orb
+npx @creative-tim/ui@latest components add button
 ```
 
-Here are some basic examples of what you can achieve using components from Creative Tim UI.
+Alternatively, you can use the standard shadcn CLI:
 
-[Voice Chat](/blocks#voice-chat-01)
+```bash
+npx shadcn@latest add https://creative-tim.com/ui/r/<component>.json
+```
+
+## Credits
+
+Creative Tim UI is built upon the incredible work of the open source community:
+
+- **[shadcn/ui](https://ui.shadcn.com/)** - The documentation structure, registry system, and foundational (atomic) components are adapted from the open source work in shadcn/ui
+- **[Material Tailwind](https://material-tailwind.com)** by Creative Tim - The blocks and component designs are inspired by and based on Material Tailwind Framework
+- **[Eleven Labs UI](https://github.com/elevenlabs/elevenlabs-ui)** - General inspiration for the documentation structure and approach
+- **[Geist Font](https://vercel.com/font)** by Vercel - The beautiful typeface used throughout the interface
+
+We are grateful to these projects for making their work available under open source licenses.
+
+## Featured Components
+
+Here are some examples of what you can build with Creative Tim UI components:
+
+### Cards
+
+Versatile card components for displaying content in various formats - from simple content cards to blog posts and e-commerce products.
 
 <ComponentPreview
-  name="voice-chat-01"
-  title="Voice Chat"
+  name="card-demo"
+  title="Card Examples"
   hideCode={true}
-  description="A voice chat interface."
+  description="Multiple card variations including plain, blog, and e-commerce styles."
 />
-[Transcriber](/blocks#transcriber-01)
+
+[View Card Documentation](/docs/components/card)
+
+### Accordions
+
+Interactive collapsible sections for organizing and displaying content efficiently.
 
 <ComponentPreview
-  name="transcriber-01"
-  title="Transcriber"
+  name="accordion-demo"
+  title="Accordion Examples"
   hideCode={true}
-  description="A transcriber interface."
+  description="Basic, multiple selection, and styled accordion variations."
 />
 
-[Voice Form](/blocks#voice-form-01)
+[View Accordion Documentation](/docs/components/accordion)
+
+### Modals
+
+Dialog components for focused user interactions and form submissions.
 
 <ComponentPreview
-  name="voice-form-01"
-  title="Voice Form"
+  name="modal-demo"
+  title="Modal Examples"
   hideCode={true}
-  description="A voice form interface."
+  description="Simple confirmation dialogs and form modals."
 />
 
-You can explore more examples [here](/blocks) or view the [source code](https://github.com/creativetimofficial/ui) for all components on GitHub.
+[View Modal Documentation](/docs/components/modal)
+
+## Resources
+
+You can explore all available blocks [here](/blocks), view the [full component library](/docs/components), or check out the [source code](https://github.com/creativetimofficial/ui) on GitHub.

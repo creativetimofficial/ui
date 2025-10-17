@@ -75,9 +75,10 @@ Please read the [contributing guide](/CONTRIBUTING.md).
 
 Creative Tim UI is built upon the incredible work of the open source community. We would like to acknowledge and thank the following projects:
 
-- **[shadcn/ui](https://ui.shadcn.com/)** - The documentation structure, registry system, and base components are based on shadcn/ui's open source work
+- **[shadcn/ui](https://ui.shadcn.com/)** – The documentation structure, registry system, and foundational (atomic) components are adapted from the open source work in shadcn/ui
 - **[Material Tailwind](https://material-tailwind.com)** by Creative Tim - The blocks and component designs are inspired by and based on Material Tailwind Framework
 - **[Eleven Labs UI](https://github.com/elevenlabs/elevenlabs-ui)** - General inspiration for the documentation structure and approach
+- **[Geist Font](https://vercel.com/font)** by Vercel - The beautiful typeface used throughout the interface
 
 We are grateful to these projects for making their work available under open source licenses.
 
