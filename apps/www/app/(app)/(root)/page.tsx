@@ -4,6 +4,7 @@ import { Download, Package, Star, Users } from "lucide-react"
 
 import { ExamplesNav } from "@/components/examples-nav"
 import { ExamplesPreview } from "@/components/examples-preview"
+import { ShowcaseMasonry } from "@/components/showcase-masonry"
 import {
   PageActions,
   PageHeader,
@@ -79,6 +80,9 @@ export default function IndexPage() {
           </PageActions>
         </PageHeader>
       </div>
+
+      {/* Showcase Masonry Section */}
+      <ShowcaseMasonry />
       
       {/* Achievements Section */}
       <section className="container py-12 md:py-20">
