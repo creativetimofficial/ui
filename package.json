@@ -1,12 +1,13 @@
 {
-  "name": "ui",
+  "name": "ct-ui-monorepo",
   "version": "0.0.1",
   "private": true,
   "license": "MIT",
   "type": "module",
   "author": {
-    "name": "Louis Jordan",
-    "url": "https://x.com/louisjoejordan"
+    "name": "Creative Tim",
+    "email": "hello@creative-tim.com",
+    "url": "https://creative-tim.com"
   },
   "workspaces": [
     "apps/*",
@@ -27,16 +28,13 @@
     "test:dev": "turbo run test --force",
     "test": "start-server-and-test dev http://localhost:4000 test:dev",
     "validate:registries": "pnpm validate:registries",
-    
-    "dev:web": "pnpm --filter=www dev",       
-    "mock": "pnpm --prefix mock-api run start",        
+    "dev:web": "pnpm --filter=www dev",
+    "mock": "pnpm --prefix mock-api run start",
     "dev:stack": "concurrently -k -n MOCK,WEB -c magenta,cyan \"pnpm run mock\" \"pnpm run dev:web\"",
-
-    "test:unit": "vitest run --environment jsdom",        
+    "test:unit": "vitest run --environment jsdom",
     "test:e2e": "start-server-and-test dev:stack http://localhost:3000 \"playwright test\"",
     "test:e2e:headed": "start-server-and-test dev:stack http://localhost:3000 \"playwright test --headed\"",
     "test:all": "pnpm run test:unit && pnpm run test:e2e",
-
     "test:e2e:report": "playwright show-report"
   },
   "packageManager": "pnpm@9.0.6",
