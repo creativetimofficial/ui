@@ -113,3 +113,8 @@ Preferred communication style: Simple, everyday language.
 - **clsx + tailwind-merge**: Conditional className composition.
 - **date-fns**: Date manipulation.
 - **class-variance-authority**: Variant-based component APIs.
+### Application & Admin UI Thumbnails
+- **Thumbnail Integration**: All Application & Admin UI category cards now display actual preview images from Creative Tim's public assets repository on GitHub
+- **Images Source**: https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/
+- **Optimized Display**: Using Next.js Image component with responsive sizing for optimal loading performance
+- **Configured Examples**: Widgets, Charts, Tables, Modals, Account, Billing, Tables Headers, Tables Footers, KPI Cards, Sidebars, Dropdowns, and User Profile all have dedicated thumbnail images
