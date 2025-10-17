@@ -24,17 +24,20 @@ const categories: ExampleCategory[] = [
       {
         name: "Web 3.0 Login",
         blockCount: 5,
-        category: "web3"
+        category: "web3",
+        thumbnail: "https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/login-thumbnail.jpg"
       },
       {
         name: "Web 3.0 Charts",
         blockCount: 5,
-        category: "web3"
+        category: "web3",
+        thumbnail: "https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/web3-charts-thumbnail.jpg"
       },
       {
         name: "Web 3.0 Cards",
         blockCount: 5,
-        category: "web3"
+        category: "web3",
+        thumbnail: "https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/collections-thumbnail.jpg"
       }
     ]
   },
