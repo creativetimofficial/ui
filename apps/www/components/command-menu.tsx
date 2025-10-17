@@ -127,7 +127,7 @@ export function CommandMenu({
         <Button
           variant="ghost"
           className={cn(
-            "relative h-8 w-full justify-start pl-2.5 font-normal shadow-none sm:pr-12 md:w-40 lg:w-56 xl:w-64 text-white/70 hover:text-white hover:bg-white/10 border border-white/20"
+            "relative h-8 w-full justify-start rounded-full pl-2.5 font-normal shadow-none sm:pr-12 md:w-40 lg:w-56 xl:w-64 text-white/70 hover:text-white hover:bg-white/10 border border-white/20"
           )}
           onClick={() => setOpen(true)}
           {...props}
