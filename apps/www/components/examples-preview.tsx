@@ -2,6 +2,7 @@ import Image from "next/image"
 import Link from "next/link"
 
 import { Card } from "@/registry/creative-tim-ui/ui/card"
+import { Badge } from "@/registry/creative-tim-ui/ui/badge"
 
 interface ExampleCategory {
   id: string
@@ -12,6 +13,7 @@ interface ExampleCategory {
     blockCount: number
     category: string
     thumbnail?: string
+    comingSoon?: boolean
   }[]
 }
 
@@ -37,7 +39,8 @@ const categories: ExampleCategory[] = [
         name: "Web 3.0 Cards",
         blockCount: 5,
         category: "web3",
-        thumbnail: "https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/collections-thumbnail.jpg"
+        thumbnail: "https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/collections-thumbnail.jpg",
+        comingSoon: true
       }
     ]
   },
@@ -68,19 +71,22 @@ const categories: ExampleCategory[] = [
         name: "Modals",
         blockCount: 5,
         category: "modals",
-        thumbnail: "https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/modals-thumbnail.jpg"
+        thumbnail: "https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/modals-thumbnail.jpg",
+        comingSoon: true
       },
       {
         name: "Account",
         blockCount: 7,
         category: "account",
-        thumbnail: "https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/account-thumbnail.jpg"
+        thumbnail: "https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/account-thumbnail.jpg",
+        comingSoon: true
       },
       {
         name: "Billing",
         blockCount: 5,
         category: "billing",
-        thumbnail: "https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/billing-thumbnail.jpg"
+        thumbnail: "https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/billing-thumbnail.jpg",
+        comingSoon: true
       },
       {
         name: "Tables Headers",
@@ -135,7 +141,8 @@ const categories: ExampleCategory[] = [
         name: "Testimonial Sections",
         blockCount: 17,
         category: "testimonials",
-        thumbnail: "https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/testimonial-thumbnail.jpg"
+        thumbnail: "https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/testimonial-thumbnail.jpg",
+        comingSoon: true
       },
       {
         name: "Popup Sections",
@@ -165,7 +172,8 @@ const categories: ExampleCategory[] = [
         name: "Contact Sections",
         blockCount: 15,
         category: "contact",
-        thumbnail: "https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/contact-us-thumbnail.jpg"
+        thumbnail: "https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/contact-us-thumbnail.jpg",
+        comingSoon: true
       },
       {
         name: "Team Sections",
@@ -183,7 +191,8 @@ const categories: ExampleCategory[] = [
         name: "Footers",
         blockCount: 16,
         category: "footers",
-        thumbnail: "https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/footer-thumbnail.jpg"
+        thumbnail: "https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/footer-thumbnail.jpg",
+        comingSoon: true
       },
       {
         name: "Coming Soon Sections",
@@ -202,7 +211,8 @@ const categories: ExampleCategory[] = [
         name: "FAQs",
         blockCount: 6,
         category: "faqs",
-        thumbnail: "https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/faq-thumbnail.jpg"
+        thumbnail: "https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/faq-thumbnail.jpg",
+        comingSoon: true
       },
       {
         name: "Feature Sections",
@@ -244,7 +254,8 @@ const categories: ExampleCategory[] = [
         name: "Blog Sections",
         blockCount: 15,
         category: "blog-sections",
-        thumbnail: "https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/blog-posts-thumbnail.jpg"
+        thumbnail: "https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/blog-posts-thumbnail.jpg",
+        comingSoon: true
       },
       {
         name: "Logo Sections",
@@ -275,7 +286,8 @@ const categories: ExampleCategory[] = [
         name: "Ecommerce Sections",
         blockCount: 14,
         category: "ecommerce",
-        thumbnail: "https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/ecommerce-thumbnail.jpg"
+        thumbnail: "https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/ecommerce-thumbnail.jpg",
+        comingSoon: true
       },
       {
         name: "Product List Sections",
@@ -326,12 +338,8 @@ export function ExamplesPreview() {
           </div>
           
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            {category.examples.map((example) => (
-              <Link 
-                key={example.name} 
-                href={`/blocks/${example.category}`}
-                className="group"
-              >
+            {category.examples.map((example) => {
+              const CardContent = (
                 <Card className="overflow-hidden border bg-card transition-all hover:shadow-md">
                   <div className="relative aspect-[16/10] overflow-hidden bg-muted/30">
                     {example.thumbnail ? (
@@ -339,11 +347,18 @@ export function ExamplesPreview() {
                         src={example.thumbnail}
                         alt={example.name}
                         fill
-                        className="object-cover"
+                        className={`object-cover ${example.comingSoon ? 'blur-sm' : ''}`}
                         sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                       />
                     ) : (
                       <div className="absolute inset-0 bg-gradient-to-br from-muted/80 to-muted/40" />
+                    )}
+                    {example.comingSoon && (
+                      <div className="absolute inset-0 bg-white/60 dark:bg-black/60 backdrop-blur-sm flex items-center justify-center">
+                        <Badge variant="secondary" className="bg-white dark:bg-black text-foreground font-medium px-4 py-1.5">
+                          Soon
+                        </Badge>
+                      </div>
                     )}
                   </div>
                   <div className="p-4">
@@ -355,8 +370,26 @@ export function ExamplesPreview() {
                     </div>
                   </div>
                 </Card>
-              </Link>
-            ))}
+              )
+
+              if (example.comingSoon) {
+                return (
+                  <div key={example.name} className="cursor-not-allowed">
+                    {CardContent}
+                  </div>
+                )
+              }
+
+              return (
+                <Link 
+                  key={example.name} 
+                  href={`/blocks/${example.category}`}
+                  className="group"
+                >
+                  {CardContent}
+                </Link>
+              )
+            })}
           </div>
         </div>
       ))}
