@@ -33,13 +33,13 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: process.env.NEXT_PUBLIC_APP_URL!,
+    url: process.env.NEXT_PUBLIC_APP_URL! + process.env.NEXT_PUBLIC_ASSET_PREFIX,
     title: siteConfig.name,
     description: siteConfig.description,
     siteName: siteConfig.name,
     images: [
       {
-        url: `${process.env.NEXT_PUBLIC_APP_URL}/opengraph-image.png`,
+        url: `${process.env.NEXT_PUBLIC_APP_URL}${process.env.NEXT_PUBLIC_ASSET_PREFIX}/opengraph-image.png`,
         width: 1200,
         height: 630,
         alt: siteConfig.name,
@@ -54,9 +54,9 @@ export const metadata: Metadata = {
     creator: "@creativetim",
   },
   icons: {
-    icon: "/favicon.ico",
-    shortcut: "/favicon-16x16.png",
-    apple: "/apple-touch-icon.png",
+    icon: `${process.env.NEXT_PUBLIC_APP_URL}${process.env.NEXT_PUBLIC_ASSET_PREFIX}/favicon.ico`,
+    shortcut: `${process.env.NEXT_PUBLIC_APP_URL}${process.env.NEXT_PUBLIC_ASSET_PREFIX}/favicon-16x16.png`,
+    apple: `${process.env.NEXT_PUBLIC_APP_URL}${process.env.NEXT_PUBLIC_ASSET_PREFIX}/apple-touch-icon.png`,
   },
   manifest: `${process.env.NEXT_PUBLIC_APP_URL}${process.env.NEXT_PUBLIC_ASSET_PREFIX}/site.webmanifest`,
 }
