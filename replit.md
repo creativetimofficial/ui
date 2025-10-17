@@ -136,6 +136,18 @@ Preferred communication style: Simple, everyday language.
 - **Configured Examples**: Web 3.0 Login, Web 3.0 Charts, and Web 3.0 Cards all have dedicated thumbnail images
 - **Complete Coverage**: ALL home page example cards (43 total) now feature real preview thumbnails from the Creative Tim public assets repository
 
+### Showcase Masonry Section
+- **Location**: Home page, positioned below CTAs and above Achievements section
+- **Layout**: Responsive masonry grid (1 column mobile, 2 tablet, 3 desktop)
+- **Featured Components**:
+  - Order Summary card with product items and pricing breakdown
+  - Transaction History with calendar dropdown and 2 transaction examples
+  - Third-Party Integrations card with GitHub accordion item
+  - Order Timeline showing order progress steps
+  - Product card (Zegna cardigan) with favorite heart button
+  - Testimonial card with 5-star rating
+- **Purpose**: Visual showcase of real component examples in an attractive masonry layout
+
 ### Coming Soon Cards Feature
 - **Badge UI Component**: Added Badge component import from the registry
 - **Coming Soon Flag**: Added `comingSoon` boolean field to example interface
