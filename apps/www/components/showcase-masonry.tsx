@@ -130,6 +130,50 @@ export function ShowcaseMasonry() {
           </div>
         </div>
 
+        {/* Product Card */}
+        <div className="break-inside-avoid">
+          <div className="group bg-card relative overflow-hidden rounded-lg border transition-all hover:shadow-lg">
+            <Badge
+              variant="secondary"
+              className="absolute top-3 left-3 z-10 bg-white dark:bg-gray-900"
+            >
+              Exclusive
+            </Badge>
+            <button
+              onClick={() => setIsFavorite(!isFavorite)}
+              className="absolute top-3 right-3 z-10 flex h-8 w-8 items-center justify-center rounded-full bg-white/90 backdrop-blur-sm transition-colors hover:bg-white dark:bg-gray-900/90 dark:hover:bg-gray-900"
+            >
+              <Heart
+                className={`h-4 w-4 transition-colors ${
+                  isFavorite
+                    ? "fill-red-500 text-red-500"
+                    : "text-gray-600 dark:text-gray-400"
+                }`}
+              />
+            </button>
+
+            <div className="bg-muted/30 aspect-square overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1574015974293-817f0ebebb74?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=973"
+                alt="Cable-knit cashmere cardigan"
+                className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </div>
+
+            <div className="border-t p-4">
+              <div className="mb-2 flex items-start justify-between gap-2">
+                <div className="flex-1">
+                  <p className="text-sm font-semibold">Zegna</p>
+                  <p className="text-muted-foreground mt-1 text-sm leading-tight">
+                    Cable-knit cashmere cardigan
+                  </p>
+                </div>
+              </div>
+              <p className="mt-2 font-semibold">€3,450</p>
+            </div>
+          </div>
+        </div>
+
         {/* Transaction History Card */}
         <div className="break-inside-avoid">
           <div className="dark:bg-card rounded-xl border bg-white p-6 shadow-sm">
@@ -350,50 +394,6 @@ export function ShowcaseMasonry() {
                   </p>
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Product Card */}
-        <div className="break-inside-avoid">
-          <div className="group bg-card relative overflow-hidden rounded-lg border transition-all hover:shadow-lg">
-            <Badge
-              variant="secondary"
-              className="absolute top-3 left-3 z-10 bg-white dark:bg-gray-900"
-            >
-              Exclusive
-            </Badge>
-            <button
-              onClick={() => setIsFavorite(!isFavorite)}
-              className="absolute top-3 right-3 z-10 flex h-8 w-8 items-center justify-center rounded-full bg-white/90 backdrop-blur-sm transition-colors hover:bg-white dark:bg-gray-900/90 dark:hover:bg-gray-900"
-            >
-              <Heart
-                className={`h-4 w-4 transition-colors ${
-                  isFavorite
-                    ? "fill-red-500 text-red-500"
-                    : "text-gray-600 dark:text-gray-400"
-                }`}
-              />
-            </button>
-
-            <div className="bg-muted/30 aspect-square overflow-hidden">
-              <img
-                src="https://images.unsplash.com/photo-1574015974293-817f0ebebb74?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=973"
-                alt="Cable-knit cashmere cardigan"
-                className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-            </div>
-
-            <div className="border-t p-4">
-              <div className="mb-2 flex items-start justify-between gap-2">
-                <div className="flex-1">
-                  <p className="text-sm font-semibold">Zegna</p>
-                  <p className="text-muted-foreground mt-1 text-sm leading-tight">
-                    Cable-knit cashmere cardigan
-                  </p>
-                </div>
-              </div>
-              <p className="mt-2 font-semibold">€3,450</p>
             </div>
           </div>
         </div>

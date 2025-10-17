@@ -97,12 +97,12 @@ async function buildRegistryJsonFile() {
   // 3. Format the registry.json file.
   await exec(`prettier --write registry.json`)
 
-  // 3. Copy the registry.json to the www/public/r/styles/elevenlabs-ui directory.
+  // 3. Copy the registry.json to the www/public/r/styles/creative-tim-ui directory.
   await fs.cp(
     path.join(process.cwd(), "registry.json"),
     path.join(
       process.cwd(),
-      "../www/public/r/styles/elevenlabs-ui/registry.json"
+      "../www/public/r/styles/creative-tim-ui/registry.json"
     ),
     { recursive: true }
   )
@@ -155,7 +155,7 @@ async function cleanupGeneratedPaths() {
       json.files.forEach((file: any) => {
         if (typeof file === 'object' && file.path && file.target) {
           // Map the source registry path to the target path
-          const sourcePath = file.path.replace(/^registry\/elevenlabs-ui\//, '')
+          const sourcePath = file.path.replace(/^registry\/creative-tim-ui\//, '')
           pathMappings.set(sourcePath, file.target)
         }
       })
@@ -163,7 +163,7 @@ async function cleanupGeneratedPaths() {
       json.files = json.files.map((file: any) => {
         if (typeof file === 'object' && file.path) {
           // Remove registry/creative-tim-ui/ prefix
-          let cleanPath = file.path.replace(/^registry\/elevenlabs-ui\//, '')
+          let cleanPath = file.path.replace(/^registry\/creative-tim-ui\//, '')
 
           // For UI components, prepend with components/
           if (cleanPath.startsWith('ui/')) {
@@ -206,7 +206,7 @@ function rewriteImports(content: string, pathMappings: Map<string, string>): str
       // Create regex to match this specific import path
       const escapedPath = sourcePathNoExt.replace(/\//g, '\\/')
       const importRegex = new RegExp(
-        `@\\/registry\\/elevenlabs-ui\\/${escapedPath}`,
+        `@\\/registry\\/creative-tim-ui\\/${escapedPath}`,
         'g'
       )
 
@@ -216,19 +216,19 @@ function rewriteImports(content: string, pathMappings: Map<string, string>): str
 
   // Rewrite imports from @/registry/creative-tim-ui/ui/... to @/components/ui/...
   content = content.replace(
-    /@\/registry\/elevenlabs-ui\/ui\//g,
+    /@\/registry\/creative-tim-ui\/ui\//g,
     '@/components/ui/'
   )
 
   // Rewrite imports from @/registry/creative-tim-ui/examples/... to @/components/examples/...
   content = content.replace(
-    /@\/registry\/elevenlabs-ui\/examples\//g,
+    /@\/registry\/creative-tim-ui\/examples\//g,
     '@/components/examples/'
   )
 
   // Rewrite imports from @/registry/creative-tim-ui/lib/... to @/lib/...
   content = content.replace(
-    /@\/registry\/elevenlabs-ui\/lib\//g,
+    /@\/registry\/creative-tim-ui\/lib\//g,
     '@/lib/'
   )
 
@@ -305,7 +305,7 @@ async function buildAllJson() {
     "$schema": "https://ui.shadcn.com/schema/registry-item.json",
     name: "all",
     type: "registry:ui",
-    description: "All UI components from ElevenLabs UI",
+    description: "All UI components from Creative Tim UI",
     dependencies: Array.from(allDependencies).sort(),
     registryDependencies: Array.from(allRegistryDependencies).sort(),
     files: allFiles
