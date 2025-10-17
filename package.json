@@ -49,6 +49,7 @@
     "@ianvs/prettier-plugin-sort-imports": "^3.7.2",
     "@manypkg/cli": "^0.20.0",
     "@playwright/test": "^1.56.0",
+    "@paddle/paddle-js": "^1.4.2",
     "@react-oauth/google": "^0.12.2",
     "@typescript-eslint/parser": "^5.59.7",
     "autoprefixer": "^10.4.14",
