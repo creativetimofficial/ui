@@ -20,7 +20,7 @@ export function SiteHeader() {
       <div className="container-wrapper px-6">
         <div className="bg-black/95 backdrop-blur-sm border border-white/10 rounded-full mx-auto max-w-7xl">
           <div className="flex h-12 items-center justify-between px-2">
-            {/* Left: Logo + Brand */}
+            {/* Left: Logo + Brand + Nav */}
             <div className="flex items-center gap-3">
               <MobileNav
                 tree={pageTree}
@@ -33,10 +33,13 @@ export function SiteHeader() {
                   {siteConfig.name}
                 </span>
               </Link>
+              
+              {/* Vertical Line Separator */}
+              <div className="hidden lg:block h-6 w-px bg-white/20" />
+              
+              {/* Navigation Links */}
+              <MainNav items={siteConfig.navItems} className="hidden lg:flex" />
             </div>
-
-            {/* Center: Navigation Links */}
-            <MainNav items={siteConfig.navItems} className="hidden lg:flex" />
 
             {/* Right: Actions */}
             <div className="flex items-center gap-3">
