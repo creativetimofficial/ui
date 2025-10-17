@@ -145,10 +145,10 @@ Preferred communication style: Simple, everyday language.
   - Marketing & Presentation: Contact Sections, Footers, Testimonial Sections
   - Content UI: FAQs, Blog Sections
   - Ecommerce UI: Ecommerce Sections
-- **Disabled Cards**: All other cards (33 cards) marked as "Coming Soon" with blur filter and badge
+- **Disabled Cards**: All other cards (33 cards) marked as "Coming Soon" with overlay and badge
 - **Visual Treatment**: Cards with `comingSoon: true` display:
-  - Blurred thumbnail image
-  - White/black backdrop blur overlay (60% opacity)
+  - Clear thumbnail image (no blur)
+  - Black overlay (40% opacity)
   - "Soon" badge centered on overlay
   - Cursor set to not-allowed
   - Click disabled (no Link wrapper)

@@ -377,7 +377,7 @@ export function ExamplesPreview() {
                       <div className="absolute inset-0 bg-gradient-to-br from-muted/80 to-muted/40" />
                     )}
                     {example.comingSoon && (
-                      <div className="absolute inset-0 bg-white/40 dark:bg-black/40 flex items-center justify-center">
+                      <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
                         <Badge variant="secondary" className="bg-white dark:bg-black text-foreground font-medium px-4 py-1.5">
                           Soon
                         </Badge>
