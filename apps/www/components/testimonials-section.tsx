@@ -8,58 +8,36 @@ import { Button } from "@/registry/creative-tim-ui/ui/button"
 
 const testimonials = [
   {
-    name: "Sarah Johnson",
-    role: "Product Designer",
-    company: "Stripe",
-    image:
-      "https://images.unsplash.com/photo-1716662318479-a9c0f1cd1a0e?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=987",
+    name: "Eugen Tudorache",
+    role: "CTO",
+    company: "Updivision",
+    image: "/eugen_1760710412667.jpg",
     quote:
       "Creative Tim UI has completely transformed how we build interfaces. The components are beautifully designed and incredibly easy to customize.",
   },
   {
-    name: "Michael Chen",
-    role: "Frontend Lead",
-    company: "Vercel",
-    image:
-      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.1.0&auto=format&fit=crop&q=80&w=987",
+    name: "Robert Tatoi",
+    role: "Founder",
+    company: "PlayVertical",
+    image: "/robert_1760710412666.jpg",
     quote:
       "The quality of these components is outstanding. They've saved us countless hours and our product looks better than ever.",
   },
   {
-    name: "Emily Rodriguez",
-    role: "UI/UX Designer",
-    company: "Figma",
-    image:
-      "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.1.0&auto=format&fit=crop&q=80&w=987",
+    name: "Fredy Andrei",
+    role: "CEO",
+    company: "Simmmple",
+    image: "/freddy_1760710412666.jpg",
     quote:
       "Finally, a component library that doesn't compromise on design or flexibility. The attention to detail is exceptional.",
   },
   {
-    name: "David Park",
-    role: "CTO",
-    company: "Linear",
-    image:
-      "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.1.0&auto=format&fit=crop&q=80&w=987",
+    name: "Rares Toma",
+    role: "CEO",
+    company: "Loopple",
+    image: "/rares_1760710412665.jpg",
     quote:
       "Our development velocity has increased significantly. The documentation is clear and the components are production-ready.",
-  },
-  {
-    name: "Jessica Martinez",
-    role: "Design Systems Lead",
-    company: "Shopify",
-    image:
-      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.1.0&auto=format&fit=crop&q=80&w=987",
-    quote:
-      "This is the component library we've been waiting for. Accessible, beautiful, and built with modern best practices.",
-  },
-  {
-    name: "Alex Thompson",
-    role: "Senior Developer",
-    company: "GitHub",
-    image:
-      "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.1.0&auto=format&fit=crop&q=80&w=987",
-    quote:
-      "The TypeScript support is excellent and the components integrate seamlessly with our existing stack. Highly recommended!",
   },
 ]
 
