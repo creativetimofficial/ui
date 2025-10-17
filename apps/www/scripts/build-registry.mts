@@ -162,12 +162,16 @@ async function cleanupGeneratedPaths() {
 
       json.files = json.files.map((file: any) => {
         if (typeof file === 'object' && file.path) {
-          // Remove registry/creative-tim-ui/ prefix
-          let cleanPath = file.path.replace(/^registry\/creative-tim-ui\//, '')
+          // Remove only registry/ prefix, keep creative-tim-ui/ for branding
+          let cleanPath = file.path.replace(/^registry\//, '')
 
           // For UI components, prepend with components/
-          if (cleanPath.startsWith('ui/')) {
-            cleanPath = 'components/' + cleanPath
+          if (cleanPath.startsWith('creative-tim-ui/ui/')) {
+            cleanPath = 'components/' + cleanPath.replace(/^creative-tim-ui\//, '')
+          }
+          // For examples, prepend with components/
+          else if (cleanPath.startsWith('creative-tim-ui/examples/')) {
+            cleanPath = 'components/' + cleanPath.replace(/^creative-tim-ui\//, '')
           }
 
           file.path = cleanPath
