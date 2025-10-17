@@ -4,6 +4,7 @@ import * as React from "react"
 import { format } from "date-fns"
 import {
   Archive,
+  Briefcase,
   CalendarIcon,
   CheckCircle,
   ChevronDown,
@@ -11,10 +12,13 @@ import {
   Github,
   Heart,
   Home,
+  Mail,
+  Phone,
   Quote,
   Shield,
   ShoppingBag,
   Star,
+  User,
 } from "lucide-react"
 
 import { cn } from "@/lib/utils"
@@ -28,7 +32,15 @@ import { Badge } from "@/registry/creative-tim-ui/ui/badge"
 import { Button } from "@/registry/creative-tim-ui/ui/button"
 import { Calendar } from "@/registry/creative-tim-ui/ui/calendar"
 import { Card, CardContent } from "@/registry/creative-tim-ui/ui/card"
+import { Input } from "@/registry/creative-tim-ui/ui/input"
 import { Label } from "@/registry/creative-tim-ui/ui/label"
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/registry/creative-tim-ui/ui/select"
 import {
   Popover,
   PopoverContent,
@@ -384,6 +396,88 @@ export function ShowcaseMasonry() {
               <p className="mt-2 font-semibold">€3,450</p>
             </div>
           </div>
+        </div>
+
+        {/* Personal Information Card */}
+        <div className="break-inside-avoid">
+          <Card className="bg-card border p-6">
+            <div className="mb-6 border-b pb-4">
+              <h3 className="text-lg font-semibold tracking-tight">
+                Personal Information
+              </h3>
+              <p className="text-muted-foreground mt-1 text-sm">
+                Manage your personal details
+              </p>
+            </div>
+            <div className="space-y-4">
+              <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                <div className="space-y-2">
+                  <Label htmlFor="firstName" className="flex items-center gap-2">
+                    <User className="text-muted-foreground h-4 w-4" />
+                    First Name
+                  </Label>
+                  <Input
+                    id="firstName"
+                    placeholder="Emma"
+                    defaultValue="Emma"
+                  />
+                </div>
+                <div className="space-y-2">
+                  <Label htmlFor="lastName" className="flex items-center gap-2">
+                    <User className="text-muted-foreground h-4 w-4" />
+                    Last Name
+                  </Label>
+                  <Input
+                    id="lastName"
+                    placeholder="Roberts"
+                    defaultValue="Roberts"
+                  />
+                </div>
+              </div>
+              <div className="space-y-2">
+                <Label htmlFor="email" className="flex items-center gap-2">
+                  <Mail className="text-muted-foreground h-4 w-4" />
+                  Email Address
+                </Label>
+                <Input
+                  id="email"
+                  type="email"
+                  placeholder="emma@mail.com"
+                  defaultValue="emma@mail.com"
+                />
+              </div>
+              <div className="space-y-2">
+                <Label htmlFor="phone" className="flex items-center gap-2">
+                  <Phone className="text-muted-foreground h-4 w-4" />
+                  Phone Number
+                </Label>
+                <Input
+                  id="phone"
+                  placeholder="+1 (555) 123-4567"
+                  defaultValue="+1 (555) 123-4567"
+                />
+              </div>
+              <div className="space-y-2">
+                <Label htmlFor="profession" className="flex items-center gap-2">
+                  <Briefcase className="text-muted-foreground h-4 w-4" />
+                  Profession
+                </Label>
+                <Select defaultValue="ui-ux">
+                  <SelectTrigger id="profession">
+                    <SelectValue placeholder="Select Profession" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="ui-ux">UI/UX Designer</SelectItem>
+                    <SelectItem value="frontend">Frontend Developer</SelectItem>
+                    <SelectItem value="backend">Backend Developer</SelectItem>
+                    <SelectItem value="fullstack">
+                      Fullstack Developer
+                    </SelectItem>
+                  </SelectContent>
+                </Select>
+              </div>
+            </div>
+          </Card>
         </div>
 
         {/* Testimonial Card */}

@@ -145,6 +145,7 @@ Preferred communication style: Simple, everyday language.
   - Third-Party Integrations card with GitHub accordion item
   - Order Timeline showing order progress steps
   - Product card (Zegna cardigan) with favorite heart button
+  - Personal Information form with name, email, phone, and profession inputs
   - Testimonial card with 5-star rating
 - **Purpose**: Visual showcase of real component examples in an attractive masonry layout
 
