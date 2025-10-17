@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: siteConfig.name,
     description: siteConfig.description,
-    images: [`${process.env.NEXT_PUBLIC_APP_URL}/opengraph-image.png`],
+    images: [`${process.env.NEXT_PUBLIC_APP_URL}${process.env.NEXT_PUBLIC_ASSET_PREFIX}/opengraph-image.png`],
     creator: "@creativetim",
   },
   icons: {
@@ -58,7 +58,7 @@ export const metadata: Metadata = {
     shortcut: "/favicon-16x16.png",
     apple: "/apple-touch-icon.png",
   },
-  manifest: `${siteConfig.url}/site.webmanifest`,
+  manifest: `${process.env.NEXT_PUBLIC_APP_URL}${}/site.webmanifest`,
 }
 
 export default function RootLayout({
