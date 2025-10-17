@@ -2,7 +2,6 @@ import { Metadata } from "next"
 import Link from "next/link"
 import { Download, Package, Star, Users } from "lucide-react"
 
-import { CardsDemo } from "@/components/cards"
 import { ExamplesNav } from "@/components/examples-nav"
 import { ExamplesPreview } from "@/components/examples-preview"
 import {
@@ -138,13 +137,6 @@ export default function IndexPage() {
         <ExamplesNav className="[&>a:first-child]:text-primary flex-1 overflow-hidden" />
         <ThemeSelector className="mr-4 hidden md:flex" />
       </PageNav>
-      <div className="container-wrapper section-soft flex-1 pb-6">
-        <div className="container overflow-hidden">
-          <section className="theme-container">
-            <CardsDemo />
-          </section>
-        </div>
-      </div>
     </div>
   )
 }
