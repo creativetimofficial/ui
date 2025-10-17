@@ -5,6 +5,7 @@ import { Download, Package, Star, Users } from "lucide-react"
 import { ExamplesNav } from "@/components/examples-nav"
 import { ExamplesPreview } from "@/components/examples-preview"
 import { ShowcaseMasonry } from "@/components/showcase-masonry"
+import { TestimonialsSection } from "@/components/testimonials-section"
 import {
   PageActions,
   PageHeader,
@@ -74,7 +75,7 @@ export default function IndexPage() {
             <Button asChild size="sm">
               <Link href="/docs">Get Started</Link>
             </Button>
-            <Button asChild size="sm" variant="ghost">
+            <Button asChild size="sm" variant="outline">
               <Link href="/docs/components">View Components</Link>
             </Button>
           </PageActions>
@@ -144,6 +145,9 @@ export default function IndexPage() {
 
       {/* Examples Preview Section */}
       <ExamplesPreview />
+
+      {/* Testimonials Section */}
+      <TestimonialsSection />
 
       <PageNav className="hidden md:flex">
         <ExamplesNav className="[&>a:first-child]:text-primary flex-1 overflow-hidden" />
