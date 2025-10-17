@@ -446,35 +446,37 @@ export function ShowcaseMasonry() {
                   defaultValue="emma@mail.com"
                 />
               </div>
-              <div className="space-y-2">
-                <Label htmlFor="phone" className="flex items-center gap-2">
-                  <Phone className="text-muted-foreground h-4 w-4" />
-                  Phone Number
-                </Label>
-                <Input
-                  id="phone"
-                  placeholder="+1 (555) 123-4567"
-                  defaultValue="+1 (555) 123-4567"
-                />
-              </div>
-              <div className="space-y-2">
-                <Label htmlFor="profession" className="flex items-center gap-2">
-                  <Briefcase className="text-muted-foreground h-4 w-4" />
-                  Profession
-                </Label>
-                <Select defaultValue="ui-ux">
-                  <SelectTrigger id="profession">
-                    <SelectValue placeholder="Select Profession" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="ui-ux">UI/UX Designer</SelectItem>
-                    <SelectItem value="frontend">Frontend Developer</SelectItem>
-                    <SelectItem value="backend">Backend Developer</SelectItem>
-                    <SelectItem value="fullstack">
-                      Fullstack Developer
-                    </SelectItem>
-                  </SelectContent>
-                </Select>
+              <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                <div className="space-y-2">
+                  <Label htmlFor="phone" className="flex items-center gap-2">
+                    <Phone className="text-muted-foreground h-4 w-4" />
+                    Phone Number
+                  </Label>
+                  <Input
+                    id="phone"
+                    placeholder="+1 (555) 123-4567"
+                    defaultValue="+1 (555) 123-4567"
+                  />
+                </div>
+                <div className="space-y-2">
+                  <Label htmlFor="profession" className="flex items-center gap-2">
+                    <Briefcase className="text-muted-foreground h-4 w-4" />
+                    Profession
+                  </Label>
+                  <Select defaultValue="ui-ux">
+                    <SelectTrigger id="profession">
+                      <SelectValue placeholder="Select Profession" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="ui-ux">UI/UX Designer</SelectItem>
+                      <SelectItem value="frontend">Frontend Developer</SelectItem>
+                      <SelectItem value="backend">Backend Developer</SelectItem>
+                      <SelectItem value="fullstack">
+                        Fullstack Developer
+                      </SelectItem>
+                    </SelectContent>
+                  </Select>
+                </div>
               </div>
             </div>
           </Card>
