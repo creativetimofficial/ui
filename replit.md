@@ -164,7 +164,11 @@ Preferred communication style: Simple, everyday language.
 ### Testimonials Section
 - **Location**: Home page, positioned after blocks section with thumbnails, before page navigation
 - **Design**: Modern carousel with animations focused on quotes
-- **Featured Testimonials**: 6 professional testimonials from developers and designers at leading tech companies (Stripe, Vercel, Figma, Linear, Shopify, GitHub)
+- **Featured Testimonials**: 4 professional testimonials from Creative Tim partners and CEOs:
+  - Eugen Tudorache - CTO @Updivision
+  - Robert Tatoi - Founder @PlayVertical
+  - Fredy Andrei - CEO @Simmmple
+  - Rares Toma - CEO @Loopple
 - **Carousel Features**:
   - Auto-rotating carousel (5-second intervals)
   - Previous/Next navigation buttons
