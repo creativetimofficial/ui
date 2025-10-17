@@ -9,8 +9,10 @@ import { Analytics } from "@/components/analytics"
 import { TailwindIndicator } from "@/components/tailwind-indicator"
 import { ThemeProvider } from "@/components/theme-provider"
 import { Toaster } from "@/registry/creative-tim-ui/ui/sonner"
+import { AuthProvider } from "@/components/auth/AuthProvider";
 
 import "@/styles/globals.css"
+import Script from "next/script"
 
 export const metadata: Metadata = {
   title: {
@@ -66,6 +68,10 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        <Script
+          src="https://accounts.google.com/gsi/client"
+          strategy="afterInteractive"
+        />
         <script
           dangerouslySetInnerHTML={{
             __html: `
@@ -88,16 +94,18 @@ export default function RootLayout({
           fontVariables
         )}
       >
-        <ThemeProvider>
-          <LayoutProvider>
-            <ActiveThemeProvider>
-              {children}
-              <TailwindIndicator />
-              <Toaster position="top-center" />
-              <Analytics />
-            </ActiveThemeProvider>
-          </LayoutProvider>
-        </ThemeProvider>
+        <AuthProvider>
+          <ThemeProvider>
+            <LayoutProvider>
+              <ActiveThemeProvider>
+                {children}
+                <TailwindIndicator />
+                <Toaster position="top-center" />
+                <Analytics />
+              </ActiveThemeProvider>
+            </LayoutProvider>
+          </ThemeProvider>
+        </AuthProvider>
       </body>
     </html>
   )

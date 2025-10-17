@@ -136,6 +136,7 @@ function BlockViewerToolbar() {
   const { copyToClipboard, isCopied } = useCopyToClipboard()
   const isPro = isProComponent(item.name)
   const hasAccess = canAccessComponent(item.name)
+  const viewPath = process.env.NEXT_PUBLIC_VIEW_PATH || "/view"
 
   return (
     <div className="hidden w-full flex-col gap-4 pl-2 md:pr-6 lg:flex">
@@ -210,7 +211,7 @@ function BlockViewerToolbar() {
                 asChild
                 title="Open in New Tab"
               >
-                <Link href={`/view/${item.name}`} target="_blank">
+                <Link href={`${viewPath}/${item.name}`} target="_blank">
                   <span className="sr-only">Open in New Tab</span>
                   <Fullscreen />
                 </Link>
@@ -273,11 +274,12 @@ function BlockViewerToolbar() {
 
 function BlockViewerIframe({ className }: { className?: string }) {
   const { item, iframeKey } = useBlockViewer()
+  const viewPath = process.env.NEXT_PUBLIC_VIEW_PATH || "/view"
 
   return (
     <iframe
       key={iframeKey}
-      src={`/view/${item.name}`}
+      src={`${viewPath}/${item.name}`}
       height={item.meta?.iframeHeight ?? 930}
       loading="lazy"
       className={cn(

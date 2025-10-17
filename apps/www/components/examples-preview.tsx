@@ -15,31 +15,9 @@ interface ExampleCategory {
 
 const categories: ExampleCategory[] = [
   {
-    id: "agents",
-    title: "Agents",
-    description: "Developing for blockchain, crypto, or NFT platforms? These blocks are designed with the unique needs of Web3 applications in mind, from wallet integrations and token charts to secure login flows.",
-    examples: [
-      {
-        name: "Audio",
-        blockCount: 5,
-        category: "agents"
-      },
-      {
-        name: "Images",
-        blockCount: 5,
-        category: "agents"
-      },
-      {
-        name: "Texts",
-        blockCount: 5,
-        category: "agents"
-      }
-    ]
-  },
-  {
     id: "web3",
     title: "Web 3.0",
-    description: "Developing for blockchain, crypto, or NFT platforms? These blocks are designed with the unique needs of Web3 applications in mind, from wallet integrations and token charts to secure login flows.",
+    description: "Innovative sections built for decentralized applications, blockchain projects, and crypto platforms.",
     examples: [
       {
         name: "Web 3.0 Login",
@@ -61,7 +39,7 @@ const categories: ExampleCategory[] = [
   {
     id: "application-ui",
     title: "Application & Admin UI",
-    description: "These blocks are perfect for building SaaS platforms, analytics dashboards, or CRMs. With clean structure and modular design, integrating them into your app is seamless, saving hours of frontend dev time.",
+    description: "Fully coded interface for stunning dashboards, admin panels, and web apps.",
     examples: [
       {
         name: "Widgets",
@@ -82,72 +60,207 @@ const categories: ExampleCategory[] = [
         name: "Modals",
         blockCount: 5,
         category: "modals"
+      },
+      {
+        name: "Account",
+        blockCount: 7,
+        category: "account"
+      },
+      {
+        name: "Billing",
+        blockCount: 5,
+        category: "billing"
+      },
+      {
+        name: "Tables Headers",
+        blockCount: 6,
+        category: "cruds"
+      },
+      {
+        name: "Tables Footers",
+        blockCount: 6,
+        category: "cruds"
+      },
+      {
+        name: "KPI Cards",
+        blockCount: 7,
+        category: "cruds"
+      },
+      {
+        name: "Sidebars",
+        blockCount: 9,
+        category: "sidebars"
+      },
+      {
+        name: "Dropdowns",
+        blockCount: 6,
+        category: "dropdowns"
+      },
+      {
+        name: "User Profile",
+        blockCount: 5,
+        category: "user-profile"
       }
     ]
   },
   {
     id: "marketing",
     title: "Marketing & Presentation",
-    description: "Showcase your brand with stunning testimonials, hero sections, and feature highlights. These blocks help you create impactful landing pages that convert.",
+    description: "Optimized for showcasing products and services, perfect for landing pages and marketing websites.",
     examples: [
       {
-        name: "Testimonials",
+        name: "Hero Sections",
+        blockCount: 18,
+        category: "hero-sections"
+      },
+      {
+        name: "Testimonial Sections",
         blockCount: 17,
         category: "testimonials"
       },
       {
-        name: "Blog Cards",
-        blockCount: 6,
-        category: "blog-sections"
+        name: "Popup Sections",
+        blockCount: 7,
+        category: "popups"
       },
       {
-        name: "Contact Forms",
+        name: "Authentication",
+        blockCount: 6,
+        category: "authentication"
+      },
+      {
+        name: "Onboarding Sections",
+        blockCount: 5,
+        category: "onboarding"
+      },
+      {
+        name: "Navbars",
+        blockCount: 10,
+        category: "navbars"
+      },
+      {
+        name: "Contact Sections",
         blockCount: 15,
         category: "contact"
+      },
+      {
+        name: "Team Sections",
+        blockCount: 17,
+        category: "team-sections"
+      },
+      {
+        name: "Newsletter",
+        blockCount: 17,
+        category: "newsletter"
+      },
+      {
+        name: "Footers",
+        blockCount: 16,
+        category: "footers"
+      },
+      {
+        name: "Coming Soon Sections",
+        blockCount: 4,
+        category: "coming-soon"
       }
     ]
   },
   {
     id: "content-ui",
     title: "Content UI",
-    description: "Build engaging content experiences with blog layouts, FAQ sections, and article displays. Perfect for content-heavy websites and documentation.",
+    description: "Versatile UI sections for blogs, articles, and multimedia-rich content.",
     examples: [
-      {
-        name: "Blog Layouts",
-        blockCount: 6,
-        category: "blog-sections"
-      },
       {
         name: "FAQs",
         blockCount: 6,
         category: "faqs"
       },
       {
-        name: "Footers",
+        name: "Feature Sections",
+        blockCount: 18,
+        category: "feature-sections"
+      },
+      {
+        name: "Stats Sections",
+        blockCount: 10,
+        category: "stats-sections"
+      },
+      {
+        name: "Content Sections",
+        blockCount: 16,
+        category: "content-sections"
+      },
+      {
+        name: "Cards",
+        blockCount: 5,
+        category: "cards"
+      },
+      {
+        name: "Error Sections",
+        blockCount: 7,
+        category: "error-sections"
+      },
+      {
+        name: "Maintenance Sections",
+        blockCount: 4,
+        category: "maintenance-sections"
+      },
+      {
+        name: "Blog Sections",
         blockCount: 15,
-        category: "footers"
+        category: "blog-sections"
+      },
+      {
+        name: "Logo Sections",
+        blockCount: 7,
+        category: "logo-sections"
+      },
+      {
+        name: "Calendar Sections",
+        blockCount: 3,
+        category: "calendar-sections"
       }
     ]
   },
   {
     id: "ecommerce",
     title: "Ecommerce UI",
-    description: "Complete ecommerce blocks for product pages, shopping carts, checkout flows, and order management. Everything you need to build a modern online store.",
+    description: "Ready-to-use blocks for product listings, shopping carts, and checkout flows.",
     examples: [
       {
-        name: "Product Pages",
-        blockCount: 10,
+        name: "Banner Sections",
+        blockCount: 7,
+        category: "banner-sections"
+      },
+      {
+        name: "Ecommerce Sections",
+        blockCount: 14,
         category: "ecommerce"
       },
       {
-        name: "Shopping Cart",
-        blockCount: 8,
-        category: "ecommerce"
-      },
-      {
-        name: "Checkout",
+        name: "Product List Sections",
         blockCount: 5,
-        category: "ecommerce"
+        category: "product-list"
+      },
+      {
+        name: "Customer Overview Sections",
+        blockCount: 3,
+        category: "customer-overview"
+      },
+      {
+        name: "Pricing Sections",
+        blockCount: 12,
+        category: "pricing"
+      },
+      {
+        name: "Categories",
+        blockCount: 5,
+        category: "categories"
+      },
+      {
+        name: "Order Sections",
+        blockCount: 7,
+        category: "order-sections"
       }
     ]
   }
