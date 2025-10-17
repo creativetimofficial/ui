@@ -9,6 +9,11 @@ const nextConfig = {
   outputFileTracingIncludes: {
     "/*": ["./registry/**/*"],
   },
+
+  // Serve the app under /ui — set a base path and ensure assets are served from the same prefix.
+  // You can override the asset prefix with NEXT_PUBLIC_ASSET_PREFIX if needed.
+  basePath: '/ui',
+  assetPrefix: process.env.NEXT_PUBLIC_ASSET_PREFIX || '/ui',
   images: {
     remotePatterns: [
       {
