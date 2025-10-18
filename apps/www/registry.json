@@ -1,6 +1,6 @@
 {
-  "name": "shadcn/ui",
-  "homepage": "https://ui.shadcn.com",
+  "name": "creative-tim/ui",
+  "homepage": "https://creative-tim.com/ui",
   "items": [
     {
       "name": "index",

@@ -14,11 +14,12 @@ import { Button } from "@/registry/creative-tim-ui/ui/button"
 
 export function SiteHeader() {
   const pageTree = source.pageTree
+  const assetPrefix = process.env.NEXT_PUBLIC_ASSET_PREFIX 
 
   return (
     <header className="sticky top-0 z-50 w-full pt-4">
-      <div className="container-wrapper px-6">
-        <div className="bg-black/95 backdrop-blur-sm border border-white/10 rounded-full mx-auto max-w-7xl">
+      <div className="container px-6">
+        <div className="bg-black/80 backdrop-blur-sm border border-white/10 rounded-full mx-auto">
           <div className="flex h-12 items-center justify-between px-2">
             {/* Left: Logo + Brand + Nav */}
             <div className="flex items-center gap-3">
@@ -29,7 +30,7 @@ export function SiteHeader() {
               />
               <Link href="/" className="flex items-center gap-2">
                 <Image 
-                  src="/favicon-32x32.png" 
+                  src={`${assetPrefix}/apple-touch-icon-square.jpg`} 
                   alt="Creative Tim UI" 
                   width={32} 
                   height={32} 
