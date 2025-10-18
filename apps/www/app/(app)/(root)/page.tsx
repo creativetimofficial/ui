@@ -85,13 +85,13 @@ export default function IndexPage() {
 
           {/* Logo Section */}
           <div className="mt-16 flex flex-col items-center gap-6">
-            <div className="flex flex-wrap items-center justify-center gap-8 md:gap-10">
+            <div className="flex flex-wrap items-center justify-center gap-8">
               {/* OpenAI */}
               <div className="opacity-50 grayscale transition-all hover:opacity-100 hover:grayscale-0 dark:invert dark:opacity-60 dark:hover:invert-0">
                 <img
                   src={`${assetPrefix}/logo-open-ai.png`}
                   alt="OpenAI"
-                  className="h-8 w-auto"
+                  className="h-7 w-auto"
                 />
               </div>
 
@@ -100,7 +100,7 @@ export default function IndexPage() {
                 <img
                   src={`${assetPrefix}/logo-claude.png`}
                   alt="Claude"
-                  className="h-8 w-auto"
+                  className="h-7 w-auto"
                 />
               </div>
 
@@ -109,7 +109,7 @@ export default function IndexPage() {
                 <img
                   src={`${assetPrefix}/logo-v0.png`}
                   alt="v0"
-                  className="h-8 w-auto"
+                  className="h-7 w-auto"
                 />
               </div>
 
@@ -118,8 +118,8 @@ export default function IndexPage() {
                 <img
                   src={`${assetPrefix}/logo-replit.png`}
                   alt="Replit"
-                  className="h-8 w-auto"
-                />
+                  className="h-7 w-auto"
+                />  
               </div>
 
               {/* Bolt */}
@@ -127,7 +127,7 @@ export default function IndexPage() {
                 <img
                   src={`${assetPrefix}/logo-bolt.png`}
                   alt="Bolt"
-                  className="h-8 w-auto"
+                  className="h-7 w-auto"
                 />
               </div>
 
@@ -136,7 +136,7 @@ export default function IndexPage() {
                 <img
                   src={`${assetPrefix}/logo-lovable.png`}
                   alt="Lovable"
-                  className="h-8 w-auto"
+                  className="h-7 w-auto"
                 />
               </div>
             </div>
