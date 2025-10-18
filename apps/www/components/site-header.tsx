@@ -23,11 +23,6 @@ export function SiteHeader() {
           <div className="flex h-12 items-center justify-between px-2">
             {/* Left: Logo + Brand + Nav */}
             <div className="flex items-center gap-3">
-              <MobileNav
-                tree={pageTree}
-                items={siteConfig.navItems}
-                className="flex lg:hidden"
-              />
               <Link href="/" className="flex items-center gap-2">
                 <Image 
                   src={`${assetPrefix}/apple-touch-icon-square.jpg`} 
@@ -36,7 +31,7 @@ export function SiteHeader() {
                   height={32} 
                   className="rounded-full"
                 />
-                <span className="hidden sm:inline-block text-white font-semibold text-base">
+                <span className="inline-block text-white font-semibold text-sm md:text-base">
                   {siteConfig.name}
                 </span>
               </Link>
@@ -49,7 +44,7 @@ export function SiteHeader() {
             </div>
 
             {/* Right: Actions */}
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-2">
               <div className="hidden md:flex">
                 <CommandMenu
                   tree={pageTree}
@@ -69,6 +64,11 @@ export function SiteHeader() {
                   <ArrowRight className="h-4 w-4" />
                 </Link>
               </Button>
+              <MobileNav
+                tree={pageTree}
+                items={siteConfig.navItems}
+                className="flex lg:hidden"
+              />
             </div>
           </div>
         </div>
