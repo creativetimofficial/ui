@@ -30,24 +30,24 @@ export function MobileNav({
         <Button
           variant="ghost"
           className={cn(
-            "extend-touch-target h-8 touch-manipulation items-center justify-start gap-2 pl-0 pr-2 hover:bg-transparent focus-visible:bg-transparent focus-visible:ring-0 active:bg-transparent dark:hover:bg-transparent",
+            "extend-touch-target h-8 touch-manipulation items-center justify-start gap-2 pr-2 pl-0 hover:bg-transparent focus-visible:bg-transparent focus-visible:ring-0 active:bg-transparent dark:hover:bg-transparent",
             className
           )}
         >
-          <span className="flex text-white h-8 items-center text-base leading-none font-medium">
+          <span className="flex h-8 items-center text-base leading-none font-medium text-white">
             Menu
           </span>
           <div className="relative flex h-8 w-4 items-center justify-center">
             <div className="relative size-4">
               <span
                 className={cn(
-                  "bg-white absolute left-0 block h-0.5 w-4 transition-all duration-100",
+                  "absolute left-0 block h-0.5 w-4 bg-white transition-all duration-100",
                   open ? "top-[0.4rem] -rotate-45" : "top-1"
                 )}
               />
               <span
                 className={cn(
-                  "bg-white absolute left-0 block h-0.5 w-4 transition-all duration-100",
+                  "absolute left-0 block h-0.5 w-4 bg-white transition-all duration-100",
                   open ? "top-[0.4rem] rotate-45" : "top-2.5"
                 )}
               />

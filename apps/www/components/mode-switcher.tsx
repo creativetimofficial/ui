@@ -22,7 +22,7 @@ export function ModeSwitcher() {
     <Button
       variant="ghost"
       size="icon"
-      className="group/toggle extend-touch-target size-8 text-white/70 hover:text-white hover:bg-white/10"
+      className="group/toggle extend-touch-target size-8 text-white/70 hover:bg-white/10 hover:text-white"
       onClick={toggleTheme}
       title="Toggle theme"
     >

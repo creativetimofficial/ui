@@ -27,8 +27,8 @@ const NEW_YORK_V4_STYLE = {
 }
 
 export const registry = {
-  name: "shadcn/ui",
-  homepage: "https://ui.shadcn.com",
+  name: "creative-tim/ui",
+  homepage: "https://creative-tim.com/ui",
   items: z.array(registryItemSchema).parse(
     [
       {
