@@ -39,6 +39,7 @@ Preferred communication style: Simple, everyday language.
 ### Build & Registry System
 - **Registry Builder**: Custom TypeScript scripts to scan components, generate registry JSON, extract metadata, and rewrite import paths using ts-morph.
 - **Component Organization**: Base shadcn UI components reside in `components/ui/` and are imported via `@/components/ui`, while registry source files remain in `registry/creative-tim/` for distribution. Registry name is "creative-tim" internally, but NPX install uses `@creative-tim/ui`.
+- **Registry Components**: All 47 base shadcn/ui components (accordion, alert, avatar, badge, button, card, etc.) are registered in `registry-ui.ts` with proper NPM dependencies and published as individual JSON files at `/r/[component].json` endpoints for CLI installation.
 
 ### Analytics & Tracking
 - **Analytics Provider**: Vercel Analytics.
