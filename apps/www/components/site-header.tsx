@@ -6,7 +6,6 @@ import { siteConfig } from "@/lib/config"
 import { source } from "@/lib/source"
 import { CommandMenu } from "@/components/command-menu"
 import { GitHubLink } from "@/components/github-link"
-import { Icons } from "@/components/icons"
 import { MainNav } from "@/components/main-nav"
 import { MobileNav } from "@/components/mobile-nav"
 import { ModeSwitcher } from "@/components/mode-switcher"
@@ -15,28 +14,22 @@ import { Button } from "@/registry/creative-tim-ui/ui/button"
 
 export function SiteHeader() {
   const pageTree = source.pageTree
+  const assetPrefix = process.env.NEXT_PUBLIC_ASSET_PREFIX 
 
   return (
     <header className="sticky top-0 z-50 w-full pt-4">
-      <div className="container-wrapper px-6">
-        <div className="bg-black/95 backdrop-blur-sm border border-white/10 rounded-full mx-auto max-w-7xl">
+      <div className="container px-6">
+        <div className="bg-black/80 backdrop-blur-sm border border-white/10 rounded-full mx-auto">
           <div className="flex h-12 items-center justify-between px-2">
             {/* Left: Logo + Brand + Nav */}
             <div className="flex items-center gap-3">
-              <MobileNav
-                tree={pageTree}
-                items={siteConfig.navItems}
-                className="flex lg:hidden"
-              />
               <Link href="/" className="flex items-center gap-2">
-                <Image 
-                  src="/favicon-32x32.png" 
+                <img 
+                  src={`${assetPrefix}/apple-touch-icon-square.jpg`} 
                   alt="Creative Tim UI" 
-                  width={32} 
-                  height={32} 
-                  className="rounded-full"
+                  className="rounded-full w-8 h-8"
                 />
-                <span className="hidden sm:inline-block text-white font-semibold text-base">
+                <span className="inline-block text-white font-semibold text-sm md:text-base">
                   {siteConfig.name}
                 </span>
               </Link>
@@ -49,7 +42,7 @@ export function SiteHeader() {
             </div>
 
             {/* Right: Actions */}
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-2">
               <div className="hidden md:flex">
                 <CommandMenu
                   tree={pageTree}
@@ -69,6 +62,11 @@ export function SiteHeader() {
                   <ArrowRight className="h-4 w-4" />
                 </Link>
               </Button>
+              <MobileNav
+                tree={pageTree}
+                items={siteConfig.navItems}
+                className="flex lg:hidden"
+              />
             </div>
           </div>
         </div>

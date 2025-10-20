@@ -20,6 +20,8 @@ build
 .claude/
 .cursor/
 web-bundles/
+.replit 
+replit.md   
 
 # debug
 npm-debug.log*

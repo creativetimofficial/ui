@@ -19,7 +19,7 @@ import { Card } from "@/registry/creative-tim-ui/ui/card"
 
 const title = "Creative Tim UI"
 const description =
-  "Engineered with open-source components, blocks, AI agents, and a flexible registry powered by MCP and open code for seamless, scalable development."
+  "Open-source components, blocks, and AI agents designed to speed up your workflow. Import them seamlessly into your favorite tools through Registry and MCPs."
 
 export const dynamic = "force-static"
 export const revalidate = false
@@ -49,6 +49,9 @@ export const metadata: Metadata = {
 }
 
 export default function IndexPage() {
+
+  const assetPrefix = process.env.NEXT_PUBLIC_ASSET_PREFIX 
+
   return (
     <div className="bg-stone-50 dark:bg-stone-950 flex flex-1 flex-col">
       <div className="relative overflow-hidden">
@@ -81,62 +84,59 @@ export default function IndexPage() {
           </PageActions>
 
           {/* Logo Section */}
-          <div className="mt-12 flex flex-col items-center gap-6">
-            <p className="text-muted-foreground font-semibold">
-              Ready to be imported in
-            </p>
-            <div className="flex flex-wrap items-center justify-center gap-8 md:gap-10">
+          <div className="mt-16 flex flex-col items-center gap-6">
+            <div className="flex flex-wrap items-center justify-center gap-8">
               {/* OpenAI */}
               <div className="opacity-50 grayscale transition-all hover:opacity-100 hover:grayscale-0 dark:invert dark:opacity-60 dark:hover:invert-0">
                 <img
-                  src="/logo-open-ai_1760714845234.png"
+                  src={`${assetPrefix}/logo-open-ai.png`}
                   alt="OpenAI"
-                  className="h-8 w-auto"
+                  className="h-7 w-auto"
                 />
               </div>
 
               {/* Claude */}
               <div className="opacity-50 grayscale transition-all hover:opacity-100 hover:grayscale-0 dark:invert dark:opacity-60 dark:hover:invert-0">
                 <img
-                  src="/logo-claude_1760714845233.png"
+                  src={`${assetPrefix}/logo-claude.png`}
                   alt="Claude"
-                  className="h-8 w-auto"
+                  className="h-7 w-auto"
                 />
               </div>
 
               {/* v0 */}
               <div className="opacity-50 grayscale transition-all hover:opacity-100 hover:grayscale-0 dark:invert dark:opacity-60 dark:hover:invert-0">
                 <img
-                  src="/logo-v0_1760714845235.png"
+                  src={`${assetPrefix}/logo-v0.png`}
                   alt="v0"
-                  className="h-8 w-auto"
+                  className="h-7 w-auto"
                 />
               </div>
 
               {/* Replit */}
               <div className="opacity-50 grayscale transition-all hover:opacity-100 hover:grayscale-0 dark:invert dark:opacity-60 dark:hover:invert-0">
                 <img
-                  src="/logo-replit_1760714845234.png"
+                  src={`${assetPrefix}/logo-replit.png`}
                   alt="Replit"
-                  className="h-8 w-auto"
-                />
+                  className="h-7 w-auto"
+                />  
               </div>
 
               {/* Bolt */}
               <div className="opacity-50 grayscale transition-all hover:opacity-100 hover:grayscale-0 dark:invert dark:opacity-60 dark:hover:invert-0">
                 <img
-                  src="/logo-bolt_1760714845232.png"
+                  src={`${assetPrefix}/logo-bolt.png`}
                   alt="Bolt"
-                  className="h-8 w-auto"
+                  className="h-7 w-auto"
                 />
               </div>
 
               {/* Lovable */}
               <div className="opacity-50 grayscale transition-all hover:opacity-100 hover:grayscale-0 dark:invert dark:opacity-60 dark:hover:invert-0">
                 <img
-                  src="/logo-lovable_1760714845234.png"
+                  src={`${assetPrefix}/logo-lovable.png`}
                   alt="Lovable"
-                  className="h-8 w-auto"
+                  className="h-7 w-auto"
                 />
               </div>
             </div>
