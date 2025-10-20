@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server"
 import type { NextRequest } from "next/server"
-import { track } from "@vercel/analytics/server"
+//import { track } from "@vercel/analytics/server"
 
 const PRIVATE_COMPONENTS = ["testimonials-03", "testimonials-04"]
 
@@ -13,13 +13,13 @@ export async function middleware(request: NextRequest) {
     const userAgent = request.headers.get("user-agent") || "unknown"
     const referer = request.headers.get("referer") || "direct"
 
-    await track("registry_component_request", {
-      component: componentName,
-      path: pathname,
-      userAgent,
-      referer,
-      timestamp: new Date().toISOString(),
-    })
+    // await track("registry_component_request", {
+    //   component: componentName,
+    //   path: pathname,
+    //   userAgent,
+    //   referer,
+    //   timestamp: new Date().toISOString(),
+    // })
 
     if (PRIVATE_COMPONENTS.includes(componentName)) {
       const url = request.nextUrl.clone()
