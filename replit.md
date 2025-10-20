@@ -38,6 +38,7 @@ Preferred communication style: Simple, everyday language.
 
 ### Build & Registry System
 - **Registry Builder**: Custom TypeScript scripts to scan components, generate registry JSON, extract metadata, and rewrite import paths using ts-morph.
+- **Component Organization**: Base shadcn UI components reside in `components/ui/` and are imported via `@/components/ui`, while registry source files remain in `registry/creative-tim/` for distribution. Registry name is "creative-tim" internally, but NPX install uses `@creative-tim/ui`.
 
 ### Analytics & Tracking
 - **Analytics Provider**: Vercel Analytics.
