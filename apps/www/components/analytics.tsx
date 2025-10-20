@@ -30,7 +30,7 @@ export function Analytics() {
       } else {
         setMode("gtm")
       }
-    } catch (e) {
+    } catch {
       // noop
       setMode("gtm")
     }
