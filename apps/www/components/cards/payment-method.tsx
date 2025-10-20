@@ -1,6 +1,6 @@
 "use client"
 
-import { Button } from "@/registry/creative-tim-ui/ui/button"
+import { Button } from "@/components/ui/button"
 import {
   Card,
   CardContent,
@@ -8,20 +8,20 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/registry/creative-tim-ui/ui/card"
-import { Input } from "@/registry/creative-tim-ui/ui/input"
-import { Label } from "@/registry/creative-tim-ui/ui/label"
+} from "@/components/ui/card"
+import { Input } from "@/components/ui/input"
+import { Label } from "@/components/ui/label"
 import {
   RadioGroup,
   RadioGroupItem,
-} from "@/registry/creative-tim-ui/ui/radio-group"
+} from "@/components/ui/radio-group"
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/registry/creative-tim-ui/ui/select"
+} from "@/components/ui/select"
 
 const plans = [
   {

@@ -1,6 +1,6 @@
 import { source } from "@/lib/source"
 import { DocsSidebar } from "@/components/docs-sidebar"
-import { SidebarProvider } from "@/registry/creative-tim-ui/ui/sidebar"
+import { SidebarProvider } from "@/components/ui/sidebar"
 
 export default function DocsLayout({
   children,

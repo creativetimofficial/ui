@@ -2,7 +2,7 @@
 
 import * as React from "react"
 
-import { cn } from "@/registry/creative-tim-ui/lib/utils"
+import { cn } from "@/registry/creative-tim/lib/utils"
 
 export function ComponentWrapper({
   className,

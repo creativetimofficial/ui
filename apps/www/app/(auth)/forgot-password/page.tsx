@@ -4,9 +4,9 @@
 import * as React from "react";
 import { AuthAPI } from "@/lib/auth/auth";
 import { AuthLayout } from "@/components/auth/AuthLayout";
-import { Input } from "@/registry/creative-tim-ui/ui/input";
-import { Label } from "@/registry/creative-tim-ui/ui/label";
-import { Button } from "@/registry/creative-tim-ui/ui/button";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Button } from "@/components/ui/button";
 
 export default function ForgotPasswordPage() {
   const [email, setEmail] = React.useState("");

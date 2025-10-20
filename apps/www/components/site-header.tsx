@@ -9,7 +9,7 @@ import { MainNav } from "@/components/main-nav"
 import { MobileNav } from "@/components/mobile-nav"
 import { ModeSwitcher } from "@/components/mode-switcher"
 import blocks from "@/registry/__blocks__.json"
-import { Button } from "@/registry/creative-tim-ui/ui/button"
+import { Button } from "@/components/ui/button"
 
 export function SiteHeader() {
   const pageTree = source.pageTree

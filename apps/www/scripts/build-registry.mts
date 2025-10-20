@@ -17,14 +17,14 @@ import * as React from "react"
 export const Index: Record<string, any> = {`
   for (const item of registry.items) {
     const resolveFiles = item.files?.map(
-      (file) => `registry/creative-tim-ui/${file.path}`
+      (file) => `registry/creative-tim/${file.path}`
     )
     if (!resolveFiles) {
       continue
     }
 
     const componentPath = item.files?.[0]?.path
-      ? `@/registry/creative-tim-ui/${item.files[0].path}`
+      ? `@/registry/creative-tim/${item.files[0].path}`
       : ""
 
     index += `
@@ -34,7 +34,7 @@ export const Index: Record<string, any> = {`
     type: "${item.type}",
     registryDependencies: ${JSON.stringify(item.registryDependencies)},
     files: [${item.files?.map((file) => {
-      const filePath = `registry/creative-tim-ui/${typeof file === "string" ? file : file.path}`
+      const filePath = `registry/creative-tim/${typeof file === "string" ? file : file.path}`
       const resolvedFilePath = path.resolve(filePath)
       return typeof file === "string"
         ? `"${resolvedFilePath}"`
@@ -69,14 +69,14 @@ export const Index: Record<string, any> = {`
 }
 
 async function buildRegistryJsonFile() {
-  // 1. Add registry/creative-tim-ui prefix for the build to work
+  // 1. Add registry/creative-tim prefix for the build to work
   const fixedRegistry = {
     ...registry,
     items: registry.items.map((item) => {
       const files = item.files?.map((file) => {
         return {
           ...file,
-          path: `registry/creative-tim-ui/${file.path}`,
+          path: `registry/creative-tim/${file.path}`,
         }
       })
 
@@ -97,12 +97,12 @@ async function buildRegistryJsonFile() {
   // 3. Format the registry.json file.
   await exec(`prettier --write registry.json`)
 
-  // 3. Copy the registry.json to the www/public/r/styles/creative-tim-ui directory.
+  // 3. Copy the registry.json to the www/public/r/styles/creative-tim directory.
   await fs.cp(
     path.join(process.cwd(), "registry.json"),
     path.join(
       process.cwd(),
-      "../www/public/r/styles/creative-tim-ui/registry.json"
+      "../www/public/r/styles/creative-tim/registry.json"
     ),
     { recursive: true }
   )
@@ -125,7 +125,7 @@ async function buildRegistry() {
           console.log(stdout)
         }
 
-        // Post-process the generated JSON files to remove registry/creative-tim-ui prefix
+        // Post-process the generated JSON files to remove registry/creative-tim prefix
         console.log("📝 Cleaning up paths in generated JSON files...")
         await cleanupGeneratedPaths()
 
@@ -155,23 +155,23 @@ async function cleanupGeneratedPaths() {
       json.files.forEach((file: any) => {
         if (typeof file === 'object' && file.path && file.target) {
           // Map the source registry path to the target path
-          const sourcePath = file.path.replace(/^registry\/creative-tim-ui\//, '')
+          const sourcePath = file.path.replace(/^registry\/creative-tim\//, '')
           pathMappings.set(sourcePath, file.target)
         }
       })
 
       json.files = json.files.map((file: any) => {
         if (typeof file === 'object' && file.path) {
-          // Remove only registry/ prefix, keep creative-tim-ui/ for branding
+          // Remove only registry/ prefix, keep creative-tim/ for branding
           let cleanPath = file.path.replace(/^registry\//, '')
 
           // For UI components, prepend with components/
-          if (cleanPath.startsWith('creative-tim-ui/ui/')) {
-            cleanPath = 'components/' + cleanPath.replace(/^creative-tim-ui\//, '')
+          if (cleanPath.startsWith('creative-tim/ui/')) {
+            cleanPath = 'components/' + cleanPath.replace(/^creative-tim\//, '')
           }
           // For examples, prepend with components/
-          else if (cleanPath.startsWith('creative-tim-ui/examples/')) {
-            cleanPath = 'components/' + cleanPath.replace(/^creative-tim-ui\//, '')
+          else if (cleanPath.startsWith('creative-tim/examples/')) {
+            cleanPath = 'components/' + cleanPath.replace(/^creative-tim\//, '')
           }
 
           file.path = cleanPath
@@ -210,7 +210,7 @@ function rewriteImports(content: string, pathMappings: Map<string, string>): str
       // Create regex to match this specific import path
       const escapedPath = sourcePathNoExt.replace(/\//g, '\\/')
       const importRegex = new RegExp(
-        `@\\/registry\\/creative-tim-ui\\/${escapedPath}`,
+        `@\\/registry\\/creative-tim\\/${escapedPath}`,
         'g'
       )
 
@@ -218,21 +218,21 @@ function rewriteImports(content: string, pathMappings: Map<string, string>): str
     }
   })
 
-  // Rewrite imports from @/registry/creative-tim-ui/ui/... to @/components/ui/...
+  // Rewrite imports from @/registry/creative-tim/ui/... to @/components/ui/...
   content = content.replace(
-    /@\/registry\/creative-tim-ui\/ui\//g,
+    /@\/registry\/creative-tim\/ui\//g,
     '@/components/ui/'
   )
 
-  // Rewrite imports from @/registry/creative-tim-ui/examples/... to @/components/examples/...
+  // Rewrite imports from @/registry/creative-tim/examples/... to @/components/examples/...
   content = content.replace(
-    /@\/registry\/creative-tim-ui\/examples\//g,
+    /@\/registry\/creative-tim\/examples\//g,
     '@/components/examples/'
   )
 
-  // Rewrite imports from @/registry/creative-tim-ui/lib/... to @/lib/...
+  // Rewrite imports from @/registry/creative-tim/lib/... to @/lib/...
   content = content.replace(
-    /@\/registry\/creative-tim-ui\/lib\//g,
+    /@\/registry\/creative-tim\/lib\//g,
     '@/lib/'
   )
 
@@ -277,7 +277,7 @@ async function buildPackageJson(
     // Collect files and read their content
     if (component.files) {
       for (const file of component.files) {
-        const filePath = `registry/creative-tim-ui/${file.path}`
+        const filePath = `registry/creative-tim/${file.path}`
         const absolutePath = path.join(process.cwd(), filePath)
 
         // Read file content
@@ -286,7 +286,7 @@ async function buildPackageJson(
           content = await fs.readFile(absolutePath, 'utf-8')
         }
 
-        // Clean path - remove registry/creative-tim-ui/ prefix for UI components
+        // Clean path - remove registry/creative-tim/ prefix for UI components
         let cleanPath = file.path
         if (packageType === "ui") {
           if (cleanPath.startsWith('ui/')) {
@@ -355,7 +355,7 @@ async function buildAllJson() {
 
     if (component.files) {
       for (const file of component.files) {
-        const filePath = `registry/creative-tim-ui/${file.path}`
+        const filePath = `registry/creative-tim/${file.path}`
         const absolutePath = path.join(process.cwd(), filePath)
 
         let content = ""

@@ -68,8 +68,8 @@ function buildPathMappings(
 
   files.forEach((file) => {
     if (file.path && file.target) {
-      // Extract the source path relative to registry/creative-tim-ui/
-      const match = file.path.match(/registry\/creative-tim-ui\/(.+)$/)
+      // Extract the source path relative to registry/creative-tim/
+      const match = file.path.match(/registry\/creative-tim\/(.+)$/)
       if (match) {
         mappings.set(match[1], file.target)
       }
@@ -187,7 +187,7 @@ export function fixImport(content: string, pathMappings: Map<string, string>) {
       // Create regex to match this specific import path
       const escapedPath = sourcePathNoExt.replace(/\//g, "\\/")
       const importRegex = new RegExp(
-        `@\\/registry\\/creative-tim-ui\\/${escapedPath}`,
+        `@\\/registry\\/creative-tim\\/${escapedPath}`,
         "g"
       )
 
@@ -197,21 +197,21 @@ export function fixImport(content: string, pathMappings: Map<string, string>) {
 
   // Fix UI component imports
   content = content.replaceAll(
-    "@/registry/creative-tim-ui/ui/",
+    "@/components/ui/",
     "@/components/ui/"
   )
 
   // Fix example imports
   content = content.replaceAll(
-    "@/registry/creative-tim-ui/examples/",
+    "@/registry/creative-tim/examples/",
     "@/components/examples/"
   )
 
   // Fix hook imports
-  content = content.replaceAll("@/registry/creative-tim-ui/hooks/", "@/hooks/")
+  content = content.replaceAll("@/registry/creative-tim/hooks/", "@/hooks/")
 
   // Fix lib imports
-  content = content.replaceAll("@/registry/creative-tim-ui/lib/", "@/lib/")
+  content = content.replaceAll("@/registry/creative-tim/lib/", "@/lib/")
 
   return content
 }

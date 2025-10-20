@@ -2,8 +2,8 @@
 
 import { addDays } from "date-fns"
 
-import { Calendar } from "@/registry/creative-tim-ui/ui/calendar"
-import { Card, CardContent } from "@/registry/creative-tim-ui/ui/card"
+import { Calendar } from "@/components/ui/calendar"
+import { Card, CardContent } from "@/components/ui/card"
 
 const start = new Date(2025, 5, 5)
 

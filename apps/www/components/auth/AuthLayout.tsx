@@ -4,7 +4,7 @@ import * as React from "react";
 import { useRouter } from "next/navigation";
 import { useAuth } from "@/components/auth/AuthProvider";
 import { HeroTestimonial } from "@/components/auth/HeroTestimonial";
-import { Button } from "@/registry/creative-tim-ui/ui/button";
+import { Button } from "@/components/ui/button";
 import { ClientRedirect } from "./ClientRedirect";
 
 type AuthLayoutProps = {

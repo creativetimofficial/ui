@@ -27,27 +27,27 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/registry/creative-tim-ui/ui/accordion"
-import { Badge } from "@/registry/creative-tim-ui/ui/badge"
-import { Button } from "@/registry/creative-tim-ui/ui/button"
-import { Calendar } from "@/registry/creative-tim-ui/ui/calendar"
-import { Card, CardContent } from "@/registry/creative-tim-ui/ui/card"
-import { Input } from "@/registry/creative-tim-ui/ui/input"
-import { Label } from "@/registry/creative-tim-ui/ui/label"
+} from "@/components/ui/accordion"
+import { Badge } from "@/components/ui/badge"
+import { Button } from "@/components/ui/button"
+import { Calendar } from "@/components/ui/calendar"
+import { Card, CardContent } from "@/components/ui/card"
+import { Input } from "@/components/ui/input"
+import { Label } from "@/components/ui/label"
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/registry/creative-tim-ui/ui/popover"
+} from "@/components/ui/popover"
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/registry/creative-tim-ui/ui/select"
-import { Separator } from "@/registry/creative-tim-ui/ui/separator"
-import { Switch } from "@/registry/creative-tim-ui/ui/switch"
+} from "@/components/ui/select"
+import { Separator } from "@/components/ui/separator"
+import { Switch } from "@/components/ui/switch"
 
 export function ShowcaseMasonry() {
   const [date, setDate] = React.useState<Date>(new Date(2024, 9, 10))

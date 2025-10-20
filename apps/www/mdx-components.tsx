@@ -17,20 +17,20 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/registry/creative-tim-ui/ui/accordion"
+} from "@/components/ui/accordion"
 import {
   Alert,
   AlertDescription,
   AlertTitle,
-} from "@/registry/creative-tim-ui/ui/alert"
-import { AspectRatio } from "@/registry/creative-tim-ui/ui/aspect-ratio"
-import { Button } from "@/registry/creative-tim-ui/ui/button"
+} from "@/components/ui/alert"
+import { AspectRatio } from "@/components/ui/aspect-ratio"
+import { Button } from "@/components/ui/button"
 import {
   Tabs,
   TabsContent,
   TabsList,
   TabsTrigger,
-} from "@/registry/creative-tim-ui/ui/tabs"
+} from "@/components/ui/tabs"
 
 export const mdxComponents = {
   h1: ({ className, ...props }: React.ComponentProps<"h1">) => (

@@ -9,7 +9,7 @@ import { Analytics } from "@/components/analytics"
 import { AuthProvider } from "@/components/auth/AuthProvider"
 import { TailwindIndicator } from "@/components/tailwind-indicator"
 import { ThemeProvider } from "@/components/theme-provider"
-import { Toaster } from "@/registry/creative-tim-ui/ui/sonner"
+import { Toaster } from "@/components/ui/sonner"
 
 import "@/styles/globals.css"
 

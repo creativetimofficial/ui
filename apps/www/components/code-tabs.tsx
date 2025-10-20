@@ -3,7 +3,7 @@
 import * as React from "react"
 
 import { useConfig } from "@/hooks/use-config"
-import { Tabs } from "@/registry/creative-tim-ui/ui/tabs"
+import { Tabs } from "@/components/ui/tabs"
 
 export function CodeTabs({ children }: React.ComponentProps<typeof Tabs>) {
   const [config, setConfig] = useConfig()
