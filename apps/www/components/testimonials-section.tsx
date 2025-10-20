@@ -1,10 +1,10 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import { motion, AnimatePresence } from "motion/react"
-import { Quote, ChevronLeft, ChevronRight } from "lucide-react"
+import { ChevronLeft, ChevronRight, Quote } from "lucide-react"
+import { AnimatePresence, motion } from "motion/react"
 
-import { Button } from "@/registry/creative-tim-ui/ui/button"
+import { Button } from "@/registry/creative-tim/ui/button"
 
 const testimonials = [
   {
@@ -79,8 +79,8 @@ export function TestimonialsSection() {
 
         <div className="relative">
           <div className="border-border/50 bg-muted/30 relative overflow-hidden rounded-3xl border backdrop-blur-sm">
-            <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-primary/5" />
-            
+            <div className="from-primary/5 to-primary/5 absolute inset-0 bg-gradient-to-br via-transparent" />
+
             <div className="relative px-8 py-12 md:px-16 md:py-20">
               <AnimatePresence mode="wait">
                 <motion.div
@@ -104,7 +104,7 @@ export function TestimonialsSection() {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ delay: 0.3 }}
-                    className="mb-10 text-2xl font-medium leading-relaxed md:text-3xl lg:text-4xl"
+                    className="mb-10 text-2xl leading-relaxed font-medium md:text-3xl lg:text-4xl"
                   >
                     {currentTestimonial.quote}
                   </motion.blockquote>
@@ -125,7 +125,8 @@ export function TestimonialsSection() {
                         {currentTestimonial.name}
                       </div>
                       <div className="text-muted-foreground text-sm">
-                        {currentTestimonial.role} at {currentTestimonial.company}
+                        {currentTestimonial.role} at{" "}
+                        {currentTestimonial.company}
                       </div>
                     </div>
                   </motion.div>
@@ -154,7 +155,7 @@ export function TestimonialsSection() {
                   className={`h-2 rounded-full transition-all ${
                     index === currentIndex
                       ? "bg-primary w-8"
-                      : "bg-muted-foreground/30 w-2 hover:bg-muted-foreground/50"
+                      : "bg-muted-foreground/30 hover:bg-muted-foreground/50 w-2"
                   }`}
                   aria-label={`Go to testimonial ${index + 1}`}
                 />

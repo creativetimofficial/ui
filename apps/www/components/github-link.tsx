@@ -2,11 +2,16 @@ import Link from "next/link"
 
 import { siteConfig } from "@/lib/config"
 import { Icons } from "@/components/icons"
-import { Button } from "@/registry/creative-tim-ui/ui/button"
+import { Button } from "@/registry/creative-tim/ui/button"
 
 export function GitHubLink() {
   return (
-    <Button asChild size="sm" variant="ghost" className="h-8 shadow-none text-white/70 hover:text-white hover:bg-white/10">
+    <Button
+      asChild
+      size="sm"
+      variant="ghost"
+      className="h-8 text-white/70 shadow-none hover:bg-white/10 hover:text-white"
+    >
       <Link href={siteConfig.links.github} target="_blank" rel="noreferrer">
         <Icons.gitHub />
         {/* <React.Suspense fallback={<Skeleton className="h-4 w-8" />}>

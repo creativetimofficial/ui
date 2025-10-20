@@ -47,7 +47,7 @@
       ],
       "files": [
         {
-          "path": "registry/creative-tim-ui/ui/software-purchase-card.tsx",
+          "path": "registry/creative-tim/ui/software-purchase-card.tsx",
           "type": "registry:ui"
         }
       ]
@@ -65,7 +65,7 @@
       ],
       "files": [
         {
-          "path": "registry/creative-tim-ui/examples/card-demo.tsx",
+          "path": "registry/creative-tim/examples/card-demo.tsx",
           "type": "registry:ui"
         }
       ]
@@ -78,7 +78,7 @@
       ],
       "files": [
         {
-          "path": "registry/creative-tim-ui/examples/card-plain.tsx",
+          "path": "registry/creative-tim/examples/card-plain.tsx",
           "type": "registry:ui"
         }
       ]
@@ -92,7 +92,7 @@
       ],
       "files": [
         {
-          "path": "registry/creative-tim-ui/examples/card-with-button.tsx",
+          "path": "registry/creative-tim/examples/card-with-button.tsx",
           "type": "registry:ui"
         }
       ]
@@ -109,7 +109,7 @@
       ],
       "files": [
         {
-          "path": "registry/creative-tim-ui/examples/card-blog.tsx",
+          "path": "registry/creative-tim/examples/card-blog.tsx",
           "type": "registry:ui"
         }
       ]
@@ -127,7 +127,7 @@
       ],
       "files": [
         {
-          "path": "registry/creative-tim-ui/examples/card-ecommerce.tsx",
+          "path": "registry/creative-tim/examples/card-ecommerce.tsx",
           "type": "registry:ui"
         }
       ]
@@ -142,7 +142,7 @@
       ],
       "files": [
         {
-          "path": "registry/creative-tim-ui/blocks/software-purchase-01/page.tsx",
+          "path": "registry/creative-tim/blocks/software-purchase-01/page.tsx",
           "type": "registry:page",
           "target": "app/software-purchase/page.tsx"
         }
@@ -167,7 +167,7 @@
       ],
       "files": [
         {
-          "path": "registry/creative-tim-ui/blocks/billing-information-01/page.tsx",
+          "path": "registry/creative-tim/blocks/billing-information-01/page.tsx",
           "type": "registry:page",
           "target": "app/billing-information/page.tsx"
         }
@@ -191,7 +191,7 @@
       ],
       "files": [
         {
-          "path": "registry/creative-tim-ui/blocks/card-display-01/page.tsx",
+          "path": "registry/creative-tim/blocks/card-display-01/page.tsx",
           "type": "registry:page",
           "target": "app/card-display/page.tsx"
         }
@@ -217,7 +217,7 @@
       ],
       "files": [
         {
-          "path": "registry/creative-tim-ui/blocks/payment-method-01/page.tsx",
+          "path": "registry/creative-tim/blocks/payment-method-01/page.tsx",
           "type": "registry:page",
           "target": "app/payment-method/page.tsx"
         }
@@ -247,7 +247,7 @@
       ],
       "files": [
         {
-          "path": "registry/creative-tim-ui/blocks/transaction-history-01/page.tsx",
+          "path": "registry/creative-tim/blocks/transaction-history-01/page.tsx",
           "type": "registry:page",
           "target": "app/transaction-history/page.tsx"
         }
@@ -273,7 +273,7 @@
       ],
       "files": [
         {
-          "path": "registry/creative-tim-ui/blocks/invoices-01/page.tsx",
+          "path": "registry/creative-tim/blocks/invoices-01/page.tsx",
           "type": "registry:page",
           "target": "app/invoices/page.tsx"
         }
@@ -299,7 +299,7 @@
       ],
       "files": [
         {
-          "path": "registry/creative-tim-ui/blocks/simple-blog-content-01/page.tsx",
+          "path": "registry/creative-tim/blocks/simple-blog-content-01/page.tsx",
           "type": "registry:page",
           "target": "app/simple-blog-content/page.tsx"
         }
@@ -325,7 +325,7 @@
       ],
       "files": [
         {
-          "path": "registry/creative-tim-ui/blocks/blog-cards-layout-01/page.tsx",
+          "path": "registry/creative-tim/blocks/blog-cards-layout-01/page.tsx",
           "type": "registry:page",
           "target": "app/blog-cards-layout/page.tsx"
         }
@@ -349,7 +349,7 @@
       ],
       "files": [
         {
-          "path": "registry/creative-tim-ui/blocks/blog-post-preview-tags-01/page.tsx",
+          "path": "registry/creative-tim/blocks/blog-post-preview-tags-01/page.tsx",
           "type": "registry:page",
           "target": "app/blog-post-preview-tags/page.tsx"
         }
@@ -373,7 +373,7 @@
       ],
       "files": [
         {
-          "path": "registry/creative-tim-ui/blocks/highlighted-blog-posts-01/page.tsx",
+          "path": "registry/creative-tim/blocks/highlighted-blog-posts-01/page.tsx",
           "type": "registry:page",
           "target": "app/highlighted-blog-posts/page.tsx"
         }
@@ -397,7 +397,7 @@
       ],
       "files": [
         {
-          "path": "registry/creative-tim-ui/blocks/blog-rectangular-images-01/page.tsx",
+          "path": "registry/creative-tim/blocks/blog-rectangular-images-01/page.tsx",
           "type": "registry:page",
           "target": "app/blog-rectangular-images/page.tsx"
         }
@@ -420,7 +420,7 @@
       ],
       "files": [
         {
-          "path": "registry/creative-tim-ui/blocks/large-blog-preview-01/page.tsx",
+          "path": "registry/creative-tim/blocks/large-blog-preview-01/page.tsx",
           "type": "registry:page",
           "target": "app/large-blog-preview/page.tsx"
         }
@@ -446,7 +446,7 @@
       ],
       "files": [
         {
-          "path": "registry/creative-tim-ui/blocks/simple-product-details-01/page.tsx",
+          "path": "registry/creative-tim/blocks/simple-product-details-01/page.tsx",
           "type": "registry:page",
           "target": "app/simple-product-details/page.tsx"
         }
@@ -471,7 +471,7 @@
       ],
       "files": [
         {
-          "path": "registry/creative-tim-ui/blocks/grid-ecommerce-01/page.tsx",
+          "path": "registry/creative-tim/blocks/grid-ecommerce-01/page.tsx",
           "type": "registry:page",
           "target": "app/grid-ecommerce/page.tsx"
         }
@@ -495,7 +495,7 @@
       ],
       "files": [
         {
-          "path": "registry/creative-tim-ui/blocks/promotional-cards-01/page.tsx",
+          "path": "registry/creative-tim/blocks/promotional-cards-01/page.tsx",
           "type": "registry:page",
           "target": "app/promotional-cards/page.tsx"
         }
@@ -520,7 +520,7 @@
       ],
       "files": [
         {
-          "path": "registry/creative-tim-ui/blocks/order-history-01/page.tsx",
+          "path": "registry/creative-tim/blocks/order-history-01/page.tsx",
           "type": "registry:page",
           "target": "app/order-history/page.tsx"
         }
@@ -543,7 +543,7 @@
       ],
       "files": [
         {
-          "path": "registry/creative-tim-ui/blocks/empty-shopping-cart-01/page.tsx",
+          "path": "registry/creative-tim/blocks/empty-shopping-cart-01/page.tsx",
           "type": "registry:page",
           "target": "app/empty-shopping-cart/page.tsx"
         }
@@ -569,7 +569,7 @@
       ],
       "files": [
         {
-          "path": "registry/creative-tim-ui/blocks/digital-product-overview-01/page.tsx",
+          "path": "registry/creative-tim/blocks/digital-product-overview-01/page.tsx",
           "type": "registry:page",
           "target": "app/digital-product-overview/page.tsx"
         }
@@ -592,7 +592,7 @@
       ],
       "files": [
         {
-          "path": "registry/creative-tim-ui/blocks/product-description-01/page.tsx",
+          "path": "registry/creative-tim/blocks/product-description-01/page.tsx",
           "type": "registry:page",
           "target": "app/product-description/page.tsx"
         }
@@ -617,7 +617,7 @@
       ],
       "files": [
         {
-          "path": "registry/creative-tim-ui/blocks/dark-product-overview-01/page.tsx",
+          "path": "registry/creative-tim/blocks/dark-product-overview-01/page.tsx",
           "type": "registry:page",
           "target": "app/dark-product-overview/page.tsx"
         }
@@ -645,7 +645,7 @@
       ],
       "files": [
         {
-          "path": "registry/creative-tim-ui/blocks/shopping-cart-01/page.tsx",
+          "path": "registry/creative-tim/blocks/shopping-cart-01/page.tsx",
           "type": "registry:page",
           "target": "app/shopping-cart/page.tsx"
         }
@@ -673,7 +673,7 @@
       ],
       "files": [
         {
-          "path": "registry/creative-tim-ui/blocks/checkout-01/page.tsx",
+          "path": "registry/creative-tim/blocks/checkout-01/page.tsx",
           "type": "registry:page",
           "target": "app/checkout/page.tsx"
         }
@@ -697,7 +697,7 @@
       ],
       "files": [
         {
-          "path": "registry/creative-tim-ui/blocks/complex-product-description-01/page.tsx",
+          "path": "registry/creative-tim/blocks/complex-product-description-01/page.tsx",
           "type": "registry:page",
           "target": "app/complex-product-description/page.tsx"
         }
@@ -721,7 +721,7 @@
       ],
       "files": [
         {
-          "path": "registry/creative-tim-ui/blocks/interactive-product-preview-01/page.tsx",
+          "path": "registry/creative-tim/blocks/interactive-product-preview-01/page.tsx",
           "type": "registry:page",
           "target": "app/interactive-product-preview/page.tsx"
         }
@@ -747,7 +747,7 @@
       ],
       "files": [
         {
-          "path": "registry/creative-tim-ui/blocks/order-details-01/page.tsx",
+          "path": "registry/creative-tim/blocks/order-details-01/page.tsx",
           "type": "registry:page",
           "target": "app/order-details/page.tsx"
         }
@@ -771,7 +771,7 @@
       ],
       "files": [
         {
-          "path": "registry/creative-tim-ui/blocks/product-details-01/page.tsx",
+          "path": "registry/creative-tim/blocks/product-details-01/page.tsx",
           "type": "registry:page",
           "target": "app/product-details/page.tsx"
         }
@@ -796,7 +796,7 @@
       ],
       "files": [
         {
-          "path": "registry/creative-tim-ui/blocks/product-listing-filters-01/page.tsx",
+          "path": "registry/creative-tim/blocks/product-listing-filters-01/page.tsx",
           "type": "registry:page",
           "target": "app/product-listing-filters/page.tsx"
         }
@@ -821,7 +821,7 @@
       ],
       "files": [
         {
-          "path": "registry/creative-tim-ui/blocks/ecommerce-sections-01/page.tsx",
+          "path": "registry/creative-tim/blocks/ecommerce-sections-01/page.tsx",
           "type": "registry:page",
           "target": "app/ecommerce-sections/page.tsx"
         }
@@ -845,7 +845,7 @@
       ],
       "files": [
         {
-          "path": "registry/creative-tim-ui/blocks/ecommerce-sections-02/page.tsx",
+          "path": "registry/creative-tim/blocks/ecommerce-sections-02/page.tsx",
           "type": "registry:page",
           "target": "app/ecommerce-sections/page.tsx"
         }
@@ -866,7 +866,7 @@
       "registryDependencies": [],
       "files": [
         {
-          "path": "registry/creative-tim-ui/blocks/simple-faq-01/page.tsx",
+          "path": "registry/creative-tim/blocks/simple-faq-01/page.tsx",
           "type": "registry:page",
           "target": "app/simple-faq/page.tsx"
         }
@@ -889,7 +889,7 @@
       ],
       "files": [
         {
-          "path": "registry/creative-tim-ui/blocks/faqs-list-01/page.tsx",
+          "path": "registry/creative-tim/blocks/faqs-list-01/page.tsx",
           "type": "registry:page",
           "target": "app/faqs-list/page.tsx"
         }
@@ -912,7 +912,7 @@
       ],
       "files": [
         {
-          "path": "registry/creative-tim-ui/blocks/faq-left-title-01/page.tsx",
+          "path": "registry/creative-tim/blocks/faq-left-title-01/page.tsx",
           "type": "registry:page",
           "target": "app/faq-left-title/page.tsx"
         }
@@ -936,7 +936,7 @@
       ],
       "files": [
         {
-          "path": "registry/creative-tim-ui/blocks/faqs-grid-cta-01/page.tsx",
+          "path": "registry/creative-tim/blocks/faqs-grid-cta-01/page.tsx",
           "type": "registry:page",
           "target": "app/faqs-grid-cta/page.tsx"
         }
@@ -960,7 +960,7 @@
       ],
       "files": [
         {
-          "path": "registry/creative-tim-ui/blocks/faqs-cards-icons-01/page.tsx",
+          "path": "registry/creative-tim/blocks/faqs-cards-icons-01/page.tsx",
           "type": "registry:page",
           "target": "app/faqs-cards-icons/page.tsx"
         }
@@ -983,7 +983,7 @@
       ],
       "files": [
         {
-          "path": "registry/creative-tim-ui/blocks/faqs-grid-01/page.tsx",
+          "path": "registry/creative-tim/blocks/faqs-grid-01/page.tsx",
           "type": "registry:page",
           "target": "app/faqs-grid/page.tsx"
         }
@@ -1011,7 +1011,7 @@
       ],
       "files": [
         {
-          "path": "registry/creative-tim-ui/blocks/contact-sections-01/page.tsx",
+          "path": "registry/creative-tim/blocks/contact-sections-01/page.tsx",
           "type": "registry:page",
           "target": "app/contact-sections-01/page.tsx"
         }
@@ -1038,7 +1038,7 @@
       ],
       "files": [
         {
-          "path": "registry/creative-tim-ui/blocks/contact-sections-02/page.tsx",
+          "path": "registry/creative-tim/blocks/contact-sections-02/page.tsx",
           "type": "registry:page",
           "target": "app/contact-sections-02/page.tsx"
         }
@@ -1065,7 +1065,7 @@
       ],
       "files": [
         {
-          "path": "registry/creative-tim-ui/blocks/contact-sections-03/page.tsx",
+          "path": "registry/creative-tim/blocks/contact-sections-03/page.tsx",
           "type": "registry:page",
           "target": "app/contact-sections-03/page.tsx"
         }
@@ -1088,7 +1088,7 @@
       ],
       "files": [
         {
-          "path": "registry/creative-tim-ui/blocks/contact-sections-04/page.tsx",
+          "path": "registry/creative-tim/blocks/contact-sections-04/page.tsx",
           "type": "registry:page",
           "target": "app/contact-sections-04/page.tsx"
         }
@@ -1115,7 +1115,7 @@
       ],
       "files": [
         {
-          "path": "registry/creative-tim-ui/blocks/contact-sections-05/page.tsx",
+          "path": "registry/creative-tim/blocks/contact-sections-05/page.tsx",
           "type": "registry:page",
           "target": "app/contact-sections-05/page.tsx"
         }
@@ -1136,7 +1136,7 @@
       "registryDependencies": [],
       "files": [
         {
-          "path": "registry/creative-tim-ui/blocks/contact-sections-06/page.tsx",
+          "path": "registry/creative-tim/blocks/contact-sections-06/page.tsx",
           "type": "registry:page",
           "target": "app/contact-sections-06/page.tsx"
         }
@@ -1164,7 +1164,7 @@
       ],
       "files": [
         {
-          "path": "registry/creative-tim-ui/blocks/contact-sections-07/page.tsx",
+          "path": "registry/creative-tim/blocks/contact-sections-07/page.tsx",
           "type": "registry:page",
           "target": "app/contact-sections-07/page.tsx"
         }
@@ -1192,7 +1192,7 @@
       ],
       "files": [
         {
-          "path": "registry/creative-tim-ui/blocks/contact-sections-08/page.tsx",
+          "path": "registry/creative-tim/blocks/contact-sections-08/page.tsx",
           "type": "registry:page",
           "target": "app/contact-sections-08/page.tsx"
         }
@@ -1220,7 +1220,7 @@
       ],
       "files": [
         {
-          "path": "registry/creative-tim-ui/blocks/contact-sections-09/page.tsx",
+          "path": "registry/creative-tim/blocks/contact-sections-09/page.tsx",
           "type": "registry:page",
           "target": "app/contact-sections-09/page.tsx"
         }
@@ -1247,7 +1247,7 @@
       ],
       "files": [
         {
-          "path": "registry/creative-tim-ui/blocks/contact-sections-10/page.tsx",
+          "path": "registry/creative-tim/blocks/contact-sections-10/page.tsx",
           "type": "registry:page",
           "target": "app/contact-sections-10/page.tsx"
         }
@@ -1273,7 +1273,7 @@
       ],
       "files": [
         {
-          "path": "registry/creative-tim-ui/blocks/contact-sections-11/page.tsx",
+          "path": "registry/creative-tim/blocks/contact-sections-11/page.tsx",
           "type": "registry:page",
           "target": "app/contact-sections-11/page.tsx"
         }
@@ -1299,7 +1299,7 @@
       ],
       "files": [
         {
-          "path": "registry/creative-tim-ui/blocks/contact-sections-12/page.tsx",
+          "path": "registry/creative-tim/blocks/contact-sections-12/page.tsx",
           "type": "registry:page",
           "target": "app/contact-sections-12/page.tsx"
         }
@@ -1326,7 +1326,7 @@
       ],
       "files": [
         {
-          "path": "registry/creative-tim-ui/blocks/contact-sections-13/page.tsx",
+          "path": "registry/creative-tim/blocks/contact-sections-13/page.tsx",
           "type": "registry:page",
           "target": "app/contact-sections-13/page.tsx"
         }
@@ -1352,7 +1352,7 @@
       ],
       "files": [
         {
-          "path": "registry/creative-tim-ui/blocks/contact-sections-14/page.tsx",
+          "path": "registry/creative-tim/blocks/contact-sections-14/page.tsx",
           "type": "registry:page",
           "target": "app/contact-sections-14/page.tsx"
         }
@@ -1378,7 +1378,7 @@
       ],
       "files": [
         {
-          "path": "registry/creative-tim-ui/blocks/contact-sections-15/page.tsx",
+          "path": "registry/creative-tim/blocks/contact-sections-15/page.tsx",
           "type": "registry:page",
           "target": "app/contact-sections-15/page.tsx"
         }
@@ -1402,7 +1402,7 @@
       ],
       "files": [
         {
-          "path": "registry/creative-tim-ui/blocks/web3-01/page.tsx",
+          "path": "registry/creative-tim/blocks/web3-01/page.tsx",
           "type": "registry:page",
           "target": "app/web3-01/page.tsx"
         }
@@ -1428,7 +1428,7 @@
       ],
       "files": [
         {
-          "path": "registry/creative-tim-ui/blocks/web3-02/page.tsx",
+          "path": "registry/creative-tim/blocks/web3-02/page.tsx",
           "type": "registry:page",
           "target": "app/web3-02/page.tsx"
         }
@@ -1455,7 +1455,7 @@
       ],
       "files": [
         {
-          "path": "registry/creative-tim-ui/blocks/web3-03/page.tsx",
+          "path": "registry/creative-tim/blocks/web3-03/page.tsx",
           "type": "registry:page",
           "target": "app/web3-03/page.tsx"
         }
@@ -1482,7 +1482,7 @@
       ],
       "files": [
         {
-          "path": "registry/creative-tim-ui/blocks/web3-04/page.tsx",
+          "path": "registry/creative-tim/blocks/web3-04/page.tsx",
           "type": "registry:page",
           "target": "app/web3-04/page.tsx"
         }
@@ -1507,7 +1507,7 @@
       ],
       "files": [
         {
-          "path": "registry/creative-tim-ui/blocks/web3-05/page.tsx",
+          "path": "registry/creative-tim/blocks/web3-05/page.tsx",
           "type": "registry:page",
           "target": "app/web3-05/page.tsx"
         }
@@ -1535,7 +1535,7 @@
       ],
       "files": [
         {
-          "path": "registry/creative-tim-ui/blocks/cruds-01/page.tsx",
+          "path": "registry/creative-tim/blocks/cruds-01/page.tsx",
           "type": "registry:page",
           "target": "app/cruds-01/page.tsx"
         }
@@ -1561,7 +1561,7 @@
       ],
       "files": [
         {
-          "path": "registry/creative-tim-ui/blocks/cruds-02/page.tsx",
+          "path": "registry/creative-tim/blocks/cruds-02/page.tsx",
           "type": "registry:page",
           "target": "app/cruds-02/page.tsx"
         }
@@ -1588,7 +1588,7 @@
       ],
       "files": [
         {
-          "path": "registry/creative-tim-ui/blocks/cruds-03/page.tsx",
+          "path": "registry/creative-tim/blocks/cruds-03/page.tsx",
           "type": "registry:page",
           "target": "app/cruds-03/page.tsx"
         }
@@ -1611,7 +1611,7 @@
       ],
       "files": [
         {
-          "path": "registry/creative-tim-ui/blocks/footers-01/page.tsx",
+          "path": "registry/creative-tim/blocks/footers-01/page.tsx",
           "type": "registry:page",
           "target": "app/footers-01/page.tsx"
         }
@@ -1637,7 +1637,7 @@
       ],
       "files": [
         {
-          "path": "registry/creative-tim-ui/blocks/footers-02/page.tsx",
+          "path": "registry/creative-tim/blocks/footers-02/page.tsx",
           "type": "registry:page",
           "target": "app/footers-02/page.tsx"
         }
@@ -1660,7 +1660,7 @@
       ],
       "files": [
         {
-          "path": "registry/creative-tim-ui/blocks/footers-03/page.tsx",
+          "path": "registry/creative-tim/blocks/footers-03/page.tsx",
           "type": "registry:page",
           "target": "app/footers-03/page.tsx"
         }
@@ -1685,7 +1685,7 @@
       ],
       "files": [
         {
-          "path": "registry/creative-tim-ui/blocks/footers-04/page.tsx",
+          "path": "registry/creative-tim/blocks/footers-04/page.tsx",
           "type": "registry:page",
           "target": "app/footers-04/page.tsx"
         }
@@ -1711,7 +1711,7 @@
       ],
       "files": [
         {
-          "path": "registry/creative-tim-ui/blocks/footers-05/page.tsx",
+          "path": "registry/creative-tim/blocks/footers-05/page.tsx",
           "type": "registry:page",
           "target": "app/footers-05/page.tsx"
         }
@@ -1734,7 +1734,7 @@
       ],
       "files": [
         {
-          "path": "registry/creative-tim-ui/blocks/footers-06/page.tsx",
+          "path": "registry/creative-tim/blocks/footers-06/page.tsx",
           "type": "registry:page",
           "target": "app/footers-06/page.tsx"
         }
@@ -1758,7 +1758,7 @@
       ],
       "files": [
         {
-          "path": "registry/creative-tim-ui/blocks/footers-07/page.tsx",
+          "path": "registry/creative-tim/blocks/footers-07/page.tsx",
           "type": "registry:page",
           "target": "app/footers-07/page.tsx"
         }
@@ -1782,7 +1782,7 @@
       ],
       "files": [
         {
-          "path": "registry/creative-tim-ui/blocks/footers-08/page.tsx",
+          "path": "registry/creative-tim/blocks/footers-08/page.tsx",
           "type": "registry:page",
           "target": "app/footers-08/page.tsx"
         }
@@ -1805,7 +1805,7 @@
       ],
       "files": [
         {
-          "path": "registry/creative-tim-ui/blocks/footers-09/page.tsx",
+          "path": "registry/creative-tim/blocks/footers-09/page.tsx",
           "type": "registry:page",
           "target": "app/footers-09/page.tsx"
         }
@@ -1826,7 +1826,7 @@
       "registryDependencies": [],
       "files": [
         {
-          "path": "registry/creative-tim-ui/blocks/footers-10/page.tsx",
+          "path": "registry/creative-tim/blocks/footers-10/page.tsx",
           "type": "registry:page",
           "target": "app/footers-10/page.tsx"
         }
@@ -1847,7 +1847,7 @@
       "registryDependencies": [],
       "files": [
         {
-          "path": "registry/creative-tim-ui/blocks/footers-11/page.tsx",
+          "path": "registry/creative-tim/blocks/footers-11/page.tsx",
           "type": "registry:page",
           "target": "app/footers-11/page.tsx"
         }
@@ -1868,7 +1868,7 @@
       "registryDependencies": [],
       "files": [
         {
-          "path": "registry/creative-tim-ui/blocks/footers-12/page.tsx",
+          "path": "registry/creative-tim/blocks/footers-12/page.tsx",
           "type": "registry:page",
           "target": "app/footers-12/page.tsx"
         }
@@ -1891,7 +1891,7 @@
       ],
       "files": [
         {
-          "path": "registry/creative-tim-ui/blocks/footers-13/page.tsx",
+          "path": "registry/creative-tim/blocks/footers-13/page.tsx",
           "type": "registry:page",
           "target": "app/footers-13/page.tsx"
         }
@@ -1914,7 +1914,7 @@
       ],
       "files": [
         {
-          "path": "registry/creative-tim-ui/blocks/footers-14/page.tsx",
+          "path": "registry/creative-tim/blocks/footers-14/page.tsx",
           "type": "registry:page",
           "target": "app/footers-14/page.tsx"
         }
@@ -1937,7 +1937,7 @@
       ],
       "files": [
         {
-          "path": "registry/creative-tim-ui/blocks/footers-15/page.tsx",
+          "path": "registry/creative-tim/blocks/footers-15/page.tsx",
           "type": "registry:page",
           "target": "app/footers-15/page.tsx"
         }
@@ -1962,7 +1962,7 @@
       ],
       "files": [
         {
-          "path": "registry/creative-tim-ui/blocks/testimonials-01/page.tsx",
+          "path": "registry/creative-tim/blocks/testimonials-01/page.tsx",
           "type": "registry:page",
           "target": "app/testimonials-01/page.tsx"
         }
@@ -1986,7 +1986,7 @@
       ],
       "files": [
         {
-          "path": "registry/creative-tim-ui/blocks/testimonials-02/page.tsx",
+          "path": "registry/creative-tim/blocks/testimonials-02/page.tsx",
           "type": "registry:page",
           "target": "app/testimonials-02/page.tsx"
         }
@@ -2009,7 +2009,7 @@
       ],
       "files": [
         {
-          "path": "registry/creative-tim-ui/blocks/testimonials-03/page.tsx",
+          "path": "registry/creative-tim/blocks/testimonials-03/page.tsx",
           "type": "registry:page",
           "target": "app/testimonials-03/page.tsx"
         }
@@ -2033,7 +2033,7 @@
       ],
       "files": [
         {
-          "path": "registry/creative-tim-ui/blocks/testimonials-04/page.tsx",
+          "path": "registry/creative-tim/blocks/testimonials-04/page.tsx",
           "type": "registry:page",
           "target": "app/testimonials-04/page.tsx"
         }
@@ -2058,7 +2058,7 @@
       ],
       "files": [
         {
-          "path": "registry/creative-tim-ui/blocks/testimonials-05/page.tsx",
+          "path": "registry/creative-tim/blocks/testimonials-05/page.tsx",
           "type": "registry:page",
           "target": "app/testimonials-05/page.tsx"
         }
@@ -2082,7 +2082,7 @@
       ],
       "files": [
         {
-          "path": "registry/creative-tim-ui/blocks/testimonials-06/page.tsx",
+          "path": "registry/creative-tim/blocks/testimonials-06/page.tsx",
           "type": "registry:page",
           "target": "app/testimonials-06/page.tsx"
         }
@@ -2105,7 +2105,7 @@
       ],
       "files": [
         {
-          "path": "registry/creative-tim-ui/blocks/testimonials-07/page.tsx",
+          "path": "registry/creative-tim/blocks/testimonials-07/page.tsx",
           "type": "registry:page",
           "target": "app/testimonials-07/page.tsx"
         }
@@ -2129,7 +2129,7 @@
       ],
       "files": [
         {
-          "path": "registry/creative-tim-ui/blocks/testimonials-08/page.tsx",
+          "path": "registry/creative-tim/blocks/testimonials-08/page.tsx",
           "type": "registry:page",
           "target": "app/testimonials-08/page.tsx"
         }
@@ -2153,7 +2153,7 @@
       ],
       "files": [
         {
-          "path": "registry/creative-tim-ui/blocks/testimonials-09/page.tsx",
+          "path": "registry/creative-tim/blocks/testimonials-09/page.tsx",
           "type": "registry:page",
           "target": "app/testimonials-09/page.tsx"
         }
@@ -2178,7 +2178,7 @@
       ],
       "files": [
         {
-          "path": "registry/creative-tim-ui/blocks/testimonials-10/page.tsx",
+          "path": "registry/creative-tim/blocks/testimonials-10/page.tsx",
           "type": "registry:page",
           "target": "app/testimonials-10/page.tsx"
         }
@@ -2202,7 +2202,7 @@
       ],
       "files": [
         {
-          "path": "registry/creative-tim-ui/blocks/testimonials-11/page.tsx",
+          "path": "registry/creative-tim/blocks/testimonials-11/page.tsx",
           "type": "registry:page",
           "target": "app/testimonials-11/page.tsx"
         }
@@ -2225,7 +2225,7 @@
       ],
       "files": [
         {
-          "path": "registry/creative-tim-ui/blocks/testimonials-12/page.tsx",
+          "path": "registry/creative-tim/blocks/testimonials-12/page.tsx",
           "type": "registry:page",
           "target": "app/testimonials-12/page.tsx"
         }
@@ -2249,7 +2249,7 @@
       ],
       "files": [
         {
-          "path": "registry/creative-tim-ui/blocks/testimonials-13/page.tsx",
+          "path": "registry/creative-tim/blocks/testimonials-13/page.tsx",
           "type": "registry:page",
           "target": "app/testimonials-13/page.tsx"
         }
@@ -2273,7 +2273,7 @@
       ],
       "files": [
         {
-          "path": "registry/creative-tim-ui/blocks/testimonials-14/page.tsx",
+          "path": "registry/creative-tim/blocks/testimonials-14/page.tsx",
           "type": "registry:page",
           "target": "app/testimonials-14/page.tsx"
         }
@@ -2296,7 +2296,7 @@
       ],
       "files": [
         {
-          "path": "registry/creative-tim-ui/blocks/testimonials-15/page.tsx",
+          "path": "registry/creative-tim/blocks/testimonials-15/page.tsx",
           "type": "registry:page",
           "target": "app/testimonials-15/page.tsx"
         }
@@ -2320,7 +2320,7 @@
       ],
       "files": [
         {
-          "path": "registry/creative-tim-ui/blocks/testimonials-16/page.tsx",
+          "path": "registry/creative-tim/blocks/testimonials-16/page.tsx",
           "type": "registry:page",
           "target": "app/testimonials-16/page.tsx"
         }
@@ -2344,7 +2344,7 @@
       ],
       "files": [
         {
-          "path": "registry/creative-tim-ui/blocks/testimonials-17/page.tsx",
+          "path": "registry/creative-tim/blocks/testimonials-17/page.tsx",
           "type": "registry:page",
           "target": "app/testimonials-17/page.tsx"
         }
@@ -2370,7 +2370,7 @@
       ],
       "files": [
         {
-          "path": "registry/creative-tim-ui/blocks/modals-01/page.tsx",
+          "path": "registry/creative-tim/blocks/modals-01/page.tsx",
           "type": "registry:page",
           "target": "app/modals-01/page.tsx"
         }
@@ -2399,7 +2399,7 @@
       ],
       "files": [
         {
-          "path": "registry/creative-tim-ui/blocks/modals-02/page.tsx",
+          "path": "registry/creative-tim/blocks/modals-02/page.tsx",
           "type": "registry:page",
           "target": "app/modals-02/page.tsx"
         }
@@ -2426,7 +2426,7 @@
       ],
       "files": [
         {
-          "path": "registry/creative-tim-ui/blocks/modals-03/page.tsx",
+          "path": "registry/creative-tim/blocks/modals-03/page.tsx",
           "type": "registry:page",
           "target": "app/modals-03/page.tsx"
         }
@@ -2454,7 +2454,7 @@
       ],
       "files": [
         {
-          "path": "registry/creative-tim-ui/blocks/modals-04/page.tsx",
+          "path": "registry/creative-tim/blocks/modals-04/page.tsx",
           "type": "registry:page",
           "target": "app/modals-04/page.tsx"
         }
@@ -2479,7 +2479,7 @@
       ],
       "files": [
         {
-          "path": "registry/creative-tim-ui/blocks/modals-05/page.tsx",
+          "path": "registry/creative-tim/blocks/modals-05/page.tsx",
           "type": "registry:page",
           "target": "app/modals-05/page.tsx"
         }
@@ -2504,7 +2504,7 @@
       ],
       "files": [
         {
-          "path": "registry/creative-tim-ui/blocks/modals-06/page.tsx",
+          "path": "registry/creative-tim/blocks/modals-06/page.tsx",
           "type": "registry:page",
           "target": "app/modals-06/page.tsx"
         }
@@ -2528,7 +2528,7 @@
       ],
       "files": [
         {
-          "path": "registry/creative-tim-ui/blocks/modals-07/page.tsx",
+          "path": "registry/creative-tim/blocks/modals-07/page.tsx",
           "type": "registry:page",
           "target": "app/modals-07/page.tsx"
         }
@@ -2553,7 +2553,7 @@
       ],
       "files": [
         {
-          "path": "registry/creative-tim-ui/blocks/modals-08/page.tsx",
+          "path": "registry/creative-tim/blocks/modals-08/page.tsx",
           "type": "registry:page",
           "target": "app/modals-08/page.tsx"
         }
@@ -2581,7 +2581,7 @@
       ],
       "files": [
         {
-          "path": "registry/creative-tim-ui/blocks/modals-09/page.tsx",
+          "path": "registry/creative-tim/blocks/modals-09/page.tsx",
           "type": "registry:page",
           "target": "app/modals-09/page.tsx"
         }
@@ -2606,7 +2606,7 @@
       ],
       "files": [
         {
-          "path": "registry/creative-tim-ui/blocks/modals-10/page.tsx",
+          "path": "registry/creative-tim/blocks/modals-10/page.tsx",
           "type": "registry:page",
           "target": "app/modals-10/page.tsx"
         }
@@ -2632,7 +2632,7 @@
       ],
       "files": [
         {
-          "path": "registry/creative-tim-ui/blocks/modals-11/page.tsx",
+          "path": "registry/creative-tim/blocks/modals-11/page.tsx",
           "type": "registry:page",
           "target": "app/modals-11/page.tsx"
         }
@@ -2664,7 +2664,7 @@
       ],
       "files": [
         {
-          "path": "registry/creative-tim-ui/blocks/account-basic-info-01/page.tsx",
+          "path": "registry/creative-tim/blocks/account-basic-info-01/page.tsx",
           "type": "registry:page",
           "target": "app/account-basic-info/page.tsx"
         }
@@ -2691,7 +2691,7 @@
       ],
       "files": [
         {
-          "path": "registry/creative-tim-ui/blocks/account-2fa-01/page.tsx",
+          "path": "registry/creative-tim/blocks/account-2fa-01/page.tsx",
           "type": "registry:page",
           "target": "app/account-2fa/page.tsx"
         }
@@ -2718,7 +2718,7 @@
       ],
       "files": [
         {
-          "path": "registry/creative-tim-ui/blocks/account-change-password-01/page.tsx",
+          "path": "registry/creative-tim/blocks/account-change-password-01/page.tsx",
           "type": "registry:page",
           "target": "app/account-change-password/page.tsx"
         }
@@ -2743,7 +2743,7 @@
       ],
       "files": [
         {
-          "path": "registry/creative-tim-ui/blocks/account-notifications-01/page.tsx",
+          "path": "registry/creative-tim/blocks/account-notifications-01/page.tsx",
           "type": "registry:page",
           "target": "app/account-notifications/page.tsx"
         }
@@ -2767,7 +2767,7 @@
       ],
       "files": [
         {
-          "path": "registry/creative-tim-ui/blocks/account-sessions-01/page.tsx",
+          "path": "registry/creative-tim/blocks/account-sessions-01/page.tsx",
           "type": "registry:page",
           "target": "app/account-sessions/page.tsx"
         }
@@ -2791,7 +2791,7 @@
       ],
       "files": [
         {
-          "path": "registry/creative-tim-ui/blocks/account-avatar-upload-01/page.tsx",
+          "path": "registry/creative-tim/blocks/account-avatar-upload-01/page.tsx",
           "type": "registry:page",
           "target": "app/account-avatar-upload/page.tsx"
         }
@@ -2816,7 +2816,7 @@
       ],
       "files": [
         {
-          "path": "registry/creative-tim-ui/blocks/account-integrations-01/page.tsx",
+          "path": "registry/creative-tim/blocks/account-integrations-01/page.tsx",
           "type": "registry:page",
           "target": "app/account-integrations/page.tsx"
         }
@@ -2835,7 +2835,7 @@
       "type": "registry:hook",
       "files": [
         {
-          "path": "registry/creative-tim-ui/hooks/use-mobile.ts",
+          "path": "registry/creative-tim/hooks/use-mobile.ts",
           "type": "registry:hook"
         }
       ]
@@ -2848,7 +2848,7 @@
       ],
       "files": [
         {
-          "path": "registry/creative-tim-ui/examples/software-purchase-card-demo.tsx",
+          "path": "registry/creative-tim/examples/software-purchase-card-demo.tsx",
           "type": "registry:example"
         }
       ]

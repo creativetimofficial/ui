@@ -27,27 +27,27 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/registry/creative-tim-ui/ui/accordion"
-import { Badge } from "@/registry/creative-tim-ui/ui/badge"
-import { Button } from "@/registry/creative-tim-ui/ui/button"
-import { Calendar } from "@/registry/creative-tim-ui/ui/calendar"
-import { Card, CardContent } from "@/registry/creative-tim-ui/ui/card"
-import { Input } from "@/registry/creative-tim-ui/ui/input"
-import { Label } from "@/registry/creative-tim-ui/ui/label"
+} from "@/registry/creative-tim/ui/accordion"
+import { Badge } from "@/registry/creative-tim/ui/badge"
+import { Button } from "@/registry/creative-tim/ui/button"
+import { Calendar } from "@/registry/creative-tim/ui/calendar"
+import { Card, CardContent } from "@/registry/creative-tim/ui/card"
+import { Input } from "@/registry/creative-tim/ui/input"
+import { Label } from "@/registry/creative-tim/ui/label"
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@/registry/creative-tim/ui/popover"
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/registry/creative-tim-ui/ui/select"
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from "@/registry/creative-tim-ui/ui/popover"
-import { Separator } from "@/registry/creative-tim-ui/ui/separator"
-import { Switch } from "@/registry/creative-tim-ui/ui/switch"
+} from "@/registry/creative-tim/ui/select"
+import { Separator } from "@/registry/creative-tim/ui/separator"
+import { Switch } from "@/registry/creative-tim/ui/switch"
 
 export function ShowcaseMasonry() {
   const [date, setDate] = React.useState<Date>(new Date(2024, 9, 10))
@@ -56,7 +56,7 @@ export function ShowcaseMasonry() {
 
   return (
     <section className="container py-12 md:py-20">
-      <div className="columns-1 gap-4 md:columns-2 lg:columns-3 space-y-4">
+      <div className="columns-1 gap-4 space-y-4 md:columns-2 lg:columns-3">
         {/* Order Summary Card */}
         <div className="break-inside-avoid">
           <div className="bg-muted/30 rounded-xl border p-6">
@@ -78,9 +78,7 @@ export function ShowcaseMasonry() {
                 </div>
                 <div className="flex-1 space-y-1">
                   <p className="leading-tight font-semibold">Classic Suit</p>
-                  <p className="text-muted-foreground text-sm">
-                    Silk · Size M
-                  </p>
+                  <p className="text-muted-foreground text-sm">Silk · Size M</p>
                   <p className="text-muted-foreground text-xs">Qty: 1</p>
                 </div>
                 <p className="font-semibold">$1,300</p>
@@ -179,7 +177,9 @@ export function ShowcaseMasonry() {
                     <ChevronDown className="h-4 w-4 text-red-600 sm:h-5 sm:w-5" />
                   </div>
                   <div className="min-w-0 flex-1 space-y-0.5">
-                    <p className="text-sm font-semibold sm:text-base">Netflix</p>
+                    <p className="text-sm font-semibold sm:text-base">
+                      Netflix
+                    </p>
                     <p className="text-muted-foreground truncate text-xs sm:text-sm">
                       27 March 2026, at 12:30 PM
                     </p>
@@ -316,7 +316,7 @@ export function ShowcaseMasonry() {
                     </AccordionTrigger>
                   </div>
                 </div>
-                <AccordionContent className="border-t px-4 pb-4 pt-4">
+                <AccordionContent className="border-t px-4 pt-4 pb-4">
                   <div className="space-y-3">
                     <p className="text-muted-foreground text-xs leading-relaxed">
                       You haven&apos;t added your GitHub account or you
@@ -336,7 +336,7 @@ export function ShowcaseMasonry() {
 
         {/* Order Timeline Card */}
         <div className="break-inside-avoid">
-          <div className="rounded-xl border p-6 bg-card">
+          <div className="bg-card rounded-xl border p-6">
             <h3 className="mb-6 text-lg font-semibold">Order Timeline</h3>
             <div className="space-y-6">
               <div className="flex gap-4">
@@ -424,7 +424,10 @@ export function ShowcaseMasonry() {
             <div className="space-y-4">
               <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                 <div className="space-y-2">
-                  <Label htmlFor="firstName" className="flex items-center gap-2">
+                  <Label
+                    htmlFor="firstName"
+                    className="flex items-center gap-2"
+                  >
                     <User className="text-muted-foreground h-4 w-4" />
                     First Name
                   </Label>
@@ -471,7 +474,10 @@ export function ShowcaseMasonry() {
                   />
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="profession" className="flex items-center gap-2">
+                  <Label
+                    htmlFor="profession"
+                    className="flex items-center gap-2"
+                  >
                     <Briefcase className="text-muted-foreground h-4 w-4" />
                     Profession
                   </Label>
@@ -481,7 +487,9 @@ export function ShowcaseMasonry() {
                     </SelectTrigger>
                     <SelectContent>
                       <SelectItem value="ui-ux">UI/UX Designer</SelectItem>
-                      <SelectItem value="frontend">Frontend Developer</SelectItem>
+                      <SelectItem value="frontend">
+                        Frontend Developer
+                      </SelectItem>
                       <SelectItem value="backend">Backend Developer</SelectItem>
                       <SelectItem value="fullstack">
                         Fullstack Developer

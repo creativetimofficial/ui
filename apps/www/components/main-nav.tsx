@@ -22,9 +22,7 @@ export function MainNav({
           href={item.href}
           className={cn(
             "text-sm font-medium transition-colors hover:text-white",
-            pathname === item.href
-              ? "text-white"
-              : "text-white/70"
+            pathname === item.href ? "text-white" : "text-white/70"
           )}
         >
           {item.label}

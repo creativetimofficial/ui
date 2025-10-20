@@ -1,5 +1,5 @@
 import { CardsActivityGoal } from "@/components/cards/activity-goal"
-import SoftwarePurchase01 from "@/registry/creative-tim-ui/blocks/software-purchase-01/page"
+import SoftwarePurchase01 from "@/registry/creative-tim/blocks/software-purchase-01/page"
 
 export function CardsDemo() {
   return (

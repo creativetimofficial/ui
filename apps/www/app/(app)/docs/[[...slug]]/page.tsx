@@ -13,8 +13,8 @@ import { absoluteUrl } from "@/lib/utils"
 import { DocsCopyPage } from "@/components/docs-copy-page"
 import { DocsSidebarCta } from "@/components/docs-sidebar-cta"
 import { DocsTableOfContents } from "@/components/docs-toc"
-import { Badge } from "@/registry/creative-tim-ui/ui/badge"
-import { Button } from "@/registry/creative-tim-ui/ui/button"
+import { Badge } from "@/registry/creative-tim/ui/badge"
+import { Button } from "@/registry/creative-tim/ui/button"
 
 export const revalidate = false
 export const dynamic = "force-static"

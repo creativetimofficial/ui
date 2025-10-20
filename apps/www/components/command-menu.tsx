@@ -12,7 +12,7 @@ import { useConfig } from "@/hooks/use-config"
 import { useIsMac } from "@/hooks/use-is-mac"
 import { useMutationObserver } from "@/hooks/use-mutation-observer"
 import { copyToClipboardWithMeta } from "@/components/copy-button"
-import { Button } from "@/registry/creative-tim-ui/ui/button"
+import { Button } from "@/registry/creative-tim/ui/button"
 import {
   Command,
   CommandEmpty,
@@ -20,7 +20,7 @@ import {
   CommandInput,
   CommandItem,
   CommandList,
-} from "@/registry/creative-tim-ui/ui/command"
+} from "@/registry/creative-tim/ui/command"
 import {
   Dialog,
   DialogContent,
@@ -28,8 +28,8 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/registry/creative-tim-ui/ui/dialog"
-import { Separator } from "@/registry/creative-tim-ui/ui/separator"
+} from "@/registry/creative-tim/ui/dialog"
+import { Separator } from "@/registry/creative-tim/ui/separator"
 
 export function CommandMenu({
   tree,
@@ -127,7 +127,7 @@ export function CommandMenu({
         <Button
           variant="ghost"
           className={cn(
-            "relative h-8 w-full justify-start rounded-full pl-2.5 font-normal shadow-none sm:pr-12 md:w-40 lg:w-56 xl:w-64 text-white/70 hover:text-white hover:bg-white/10 border border-white/20"
+            "relative h-8 w-full justify-start rounded-full border border-white/20 pl-2.5 font-normal text-white/70 shadow-none hover:bg-white/10 hover:text-white sm:pr-12 md:w-40 lg:w-56 xl:w-64"
           )}
           onClick={() => setOpen(true)}
           {...props}
@@ -332,7 +332,7 @@ function CommandMenuKbd({ className, ...props }: React.ComponentProps<"kbd">) {
   return (
     <kbd
       className={cn(
-        "bg-white/10 text-white/70 pointer-events-none flex h-5 items-center justify-center gap-1 rounded-full border border-white/20 px-1 font-sans text-[0.7rem] font-medium select-none [&_svg:not([class*='size-'])]:size-3",
+        "pointer-events-none flex h-5 items-center justify-center gap-1 rounded-full border border-white/20 bg-white/10 px-1 font-sans text-[0.7rem] font-medium text-white/70 select-none [&_svg:not([class*='size-'])]:size-3",
         className
       )}
       {...props}

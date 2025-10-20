@@ -3,7 +3,7 @@
 import * as React from "react"
 
 import { cn } from "@/lib/utils"
-import { Tabs, TabsList, TabsTrigger } from "@/registry/creative-tim-ui/ui/tabs"
+import { Tabs, TabsList, TabsTrigger } from "@/registry/creative-tim/ui/tabs"
 
 export function ComponentPreviewTabs({
   className,

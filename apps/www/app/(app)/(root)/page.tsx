@@ -14,8 +14,8 @@ import {
 } from "@/components/page-header"
 import { PageNav } from "@/components/page-nav"
 import { ThemeSelector } from "@/components/theme-selector"
-import { Button } from "@/registry/creative-tim-ui/ui/button"
-import { Card } from "@/registry/creative-tim-ui/ui/card"
+import { Button } from "@/registry/creative-tim/ui/button"
+import { Card } from "@/registry/creative-tim/ui/card"
 
 const title = "Creative Tim UI"
 const description =

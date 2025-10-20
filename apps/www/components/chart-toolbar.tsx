@@ -14,7 +14,7 @@ import { cn } from "@/lib/utils"
 import { ChartCodeViewer } from "@/components/chart-code-viewer"
 import { ChartCopyButton } from "@/components/chart-copy-button"
 import { Chart } from "@/components/chart-display"
-import { Separator } from "@/registry/creative-tim-ui/ui/separator"
+import { Separator } from "@/registry/creative-tim/ui/separator"
 
 export function ChartToolbar({
   chart,

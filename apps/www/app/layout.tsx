@@ -9,7 +9,7 @@ import { Analytics } from "@/components/analytics"
 import { AuthProvider } from "@/components/auth/AuthProvider"
 import { TailwindIndicator } from "@/components/tailwind-indicator"
 import { ThemeProvider } from "@/components/theme-provider"
-import { Toaster } from "@/registry/creative-tim-ui/ui/sonner"
+import { Toaster } from "@/registry/creative-tim/ui/sonner"
 
 import "@/styles/globals.css"
 
@@ -33,7 +33,8 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: process.env.NEXT_PUBLIC_APP_URL! + process.env.NEXT_PUBLIC_ASSET_PREFIX,
+    url:
+      process.env.NEXT_PUBLIC_APP_URL! + process.env.NEXT_PUBLIC_ASSET_PREFIX,
     title: siteConfig.name,
     description: siteConfig.description,
     siteName: siteConfig.name,
@@ -50,7 +51,9 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: siteConfig.name,
     description: siteConfig.description,
-    images: [`${process.env.NEXT_PUBLIC_APP_URL}${process.env.NEXT_PUBLIC_ASSET_PREFIX}/opengraph-image.png`],
+    images: [
+      `${process.env.NEXT_PUBLIC_APP_URL}${process.env.NEXT_PUBLIC_ASSET_PREFIX}/opengraph-image.png`,
+    ],
     creator: "@creativetim",
   },
   icons: {
