@@ -24,12 +24,10 @@ export function SiteHeader() {
             {/* Left: Logo + Brand + Nav */}
             <div className="flex items-center gap-3">
               <Link href="/" className="flex items-center gap-2">
-                <Image 
+                <img 
                   src={`${assetPrefix}/apple-touch-icon-square.jpg`} 
                   alt="Creative Tim UI" 
-                  width={32} 
-                  height={32} 
-                  className="rounded-full"
+                  className="rounded-full w-8 h-8"
                 />
                 <span className="inline-block text-white font-semibold text-sm md:text-base">
                   {siteConfig.name}
