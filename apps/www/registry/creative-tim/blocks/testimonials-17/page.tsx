@@ -3,8 +3,8 @@
 import * as React from "react"
 import { ChevronLeft, ChevronRight, Quote } from "lucide-react"
 
-import { Button } from "@/registry/creative-tim/ui/button"
-import { Card, CardContent } from "@/registry/creative-tim/ui/card"
+import { Button } from "@/components/ui/button"
+import { Card, CardContent } from "@/components/ui/card"
 
 const SLIDES = [
   {

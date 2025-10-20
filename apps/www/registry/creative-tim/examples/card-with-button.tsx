@@ -1,6 +1,6 @@
 "use client"
 
-import { Button } from "@/registry/creative-tim/ui/button"
+import { Button } from "@/components/ui/button"
 import {
   Card,
   CardContent,
@@ -8,7 +8,7 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/registry/creative-tim/ui/card"
+} from "@/components/ui/card"
 
 export default function CardWithButton() {
   return (

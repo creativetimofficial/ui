@@ -3,15 +3,15 @@
 import * as React from "react"
 import { CloudUpload, Trash, X } from "lucide-react"
 
-import { Button } from "@/registry/creative-tim/ui/button"
-import { Card, CardContent } from "@/registry/creative-tim/ui/card"
+import { Button } from "@/components/ui/button"
+import { Card, CardContent } from "@/components/ui/card"
 import {
   Dialog,
   DialogContent,
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/registry/creative-tim/ui/dialog"
+} from "@/components/ui/dialog"
 
 const IMAGES = [
   {

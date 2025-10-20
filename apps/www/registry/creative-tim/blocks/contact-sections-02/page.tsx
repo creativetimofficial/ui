@@ -1,10 +1,10 @@
 "use client"
 
-import { Button } from "@/registry/creative-tim/ui/button"
-import { Checkbox } from "@/registry/creative-tim/ui/checkbox"
-import { Input } from "@/registry/creative-tim/ui/input"
-import { Label } from "@/registry/creative-tim/ui/label"
-import { Textarea } from "@/registry/creative-tim/ui/textarea"
+import { Button } from "@/components/ui/button"
+import { Checkbox } from "@/components/ui/checkbox"
+import { Input } from "@/components/ui/input"
+import { Label } from "@/components/ui/label"
+import { Textarea } from "@/components/ui/textarea"
 
 export default function ContactSections02() {
   return (

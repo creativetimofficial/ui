@@ -2,7 +2,7 @@
 
 import { Github, Instagram, Twitter, Youtube } from "lucide-react"
 
-import { Button } from "@/registry/creative-tim/ui/button"
+import { Button } from "@/components/ui/button"
 
 const YEAR = new Date().getFullYear()
 

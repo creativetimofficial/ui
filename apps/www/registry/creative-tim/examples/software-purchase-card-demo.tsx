@@ -1,6 +1,6 @@
 "use client"
 
-import { SoftwarePurchaseCard } from "@/registry/creative-tim/ui/software-purchase-card"
+import { SoftwarePurchaseCard } from "@/components/ui/software-purchase-card"
 
 export default function SoftwarePurchaseCardDemo() {
   const handleApprove = () => {

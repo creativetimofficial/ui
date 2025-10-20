@@ -7,7 +7,7 @@ import { cn } from "@/lib/utils"
 import {
   ScrollArea,
   ScrollBar,
-} from "@/registry/creative-tim/ui/scroll-area"
+} from "@/components/ui/scroll-area"
 
 const links = [
   {

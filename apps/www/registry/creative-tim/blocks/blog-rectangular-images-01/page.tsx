@@ -4,8 +4,8 @@ import {
   Avatar,
   AvatarFallback,
   AvatarImage,
-} from "@/registry/creative-tim/ui/avatar"
-import { Badge } from "@/registry/creative-tim/ui/badge"
+} from "@/components/ui/avatar"
+import { Badge } from "@/components/ui/badge"
 
 const POSTS = [
   {

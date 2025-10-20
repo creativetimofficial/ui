@@ -4,7 +4,7 @@ import {
   Avatar,
   AvatarFallback,
   AvatarImage,
-} from "@/registry/creative-tim/ui/avatar"
+} from "@/components/ui/avatar"
 
 export default function LargeBlogPreview01() {
   return (

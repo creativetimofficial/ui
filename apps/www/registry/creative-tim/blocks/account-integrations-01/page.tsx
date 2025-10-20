@@ -16,12 +16,12 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/registry/creative-tim/ui/accordion"
-import { Badge } from "@/registry/creative-tim/ui/badge"
-import { Button } from "@/registry/creative-tim/ui/button"
-import { Card } from "@/registry/creative-tim/ui/card"
-import { Label } from "@/registry/creative-tim/ui/label"
-import { Switch } from "@/registry/creative-tim/ui/switch"
+} from "@/components/ui/accordion"
+import { Badge } from "@/components/ui/badge"
+import { Button } from "@/components/ui/button"
+import { Card } from "@/components/ui/card"
+import { Label } from "@/components/ui/label"
+import { Switch } from "@/components/ui/switch"
 
 const INTEGRATIONS = [
   {

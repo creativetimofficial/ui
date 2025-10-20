@@ -1,9 +1,9 @@
 "use client"
 
-import { Button } from "@/registry/creative-tim/ui/button"
-import { Input } from "@/registry/creative-tim/ui/input"
-import { Label } from "@/registry/creative-tim/ui/label"
-import { Textarea } from "@/registry/creative-tim/ui/textarea"
+import { Button } from "@/components/ui/button"
+import { Input } from "@/components/ui/input"
+import { Label } from "@/components/ui/label"
+import { Textarea } from "@/components/ui/textarea"
 
 export default function ContactSections12() {
   return (

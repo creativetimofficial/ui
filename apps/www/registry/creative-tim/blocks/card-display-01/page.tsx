@@ -2,7 +2,7 @@
 
 import { Wifi } from "lucide-react"
 
-import { Card } from "@/registry/creative-tim/ui/card"
+import { Card } from "@/components/ui/card"
 
 interface CreditCardProps {
   variant?: "dark" | "light"

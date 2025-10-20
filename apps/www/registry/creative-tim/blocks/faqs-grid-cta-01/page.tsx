@@ -1,5 +1,5 @@
-import { Button } from "@/registry/creative-tim/ui/button"
-import { Card, CardContent, CardHeader } from "@/registry/creative-tim/ui/card"
+import { Button } from "@/components/ui/button"
+import { Card, CardContent, CardHeader } from "@/components/ui/card"
 
 const DATA = [
   {

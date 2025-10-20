@@ -13,23 +13,23 @@ import {
   User,
 } from "lucide-react"
 
-import { Button } from "@/registry/creative-tim/ui/button"
-import { Calendar } from "@/registry/creative-tim/ui/calendar"
-import { Card } from "@/registry/creative-tim/ui/card"
-import { Input } from "@/registry/creative-tim/ui/input"
-import { Label } from "@/registry/creative-tim/ui/label"
+import { Button } from "@/components/ui/button"
+import { Calendar } from "@/components/ui/calendar"
+import { Card } from "@/components/ui/card"
+import { Input } from "@/components/ui/input"
+import { Label } from "@/components/ui/label"
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/registry/creative-tim/ui/popover"
+} from "@/components/ui/popover"
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/registry/creative-tim/ui/select"
+} from "@/components/ui/select"
 
 export default function AccountBasicInfo01() {
   const [birthDate, setBirthDate] = React.useState<Date>()

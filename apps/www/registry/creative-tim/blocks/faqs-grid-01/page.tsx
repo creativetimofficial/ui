@@ -7,7 +7,7 @@ import {
   Truck,
 } from "lucide-react"
 
-import { Card, CardContent, CardHeader } from "@/registry/creative-tim/ui/card"
+import { Card, CardContent, CardHeader } from "@/components/ui/card"
 
 const DATA = [
   {

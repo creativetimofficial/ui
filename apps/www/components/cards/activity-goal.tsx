@@ -4,7 +4,7 @@ import * as React from "react"
 import { MinusIcon, PlusIcon } from "lucide-react"
 import { Bar, BarChart } from "recharts"
 
-import { Button } from "@/registry/creative-tim/ui/button"
+import { Button } from "@/components/ui/button"
 import {
   Card,
   CardContent,
@@ -12,11 +12,11 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/registry/creative-tim/ui/card"
+} from "@/components/ui/card"
 import {
   ChartConfig,
   ChartContainer,
-} from "@/registry/creative-tim/ui/chart"
+} from "@/components/ui/chart"
 
 const data = [
   {

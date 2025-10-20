@@ -2,13 +2,13 @@
 
 import { Globe, Heart, Mic, Puzzle } from "lucide-react"
 
-import { Button } from "@/registry/creative-tim/ui/button"
+import { Button } from "@/components/ui/button"
 import {
   Card,
   CardContent,
   CardFooter,
   CardHeader,
-} from "@/registry/creative-tim/ui/card"
+} from "@/components/ui/card"
 
 const POSTS = [
   {

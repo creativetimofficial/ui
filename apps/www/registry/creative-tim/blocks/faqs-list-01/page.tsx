@@ -3,7 +3,7 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/registry/creative-tim/ui/accordion"
+} from "@/components/ui/accordion"
 
 const DATA = [
   {

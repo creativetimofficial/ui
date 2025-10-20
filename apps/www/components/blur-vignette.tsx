@@ -2,7 +2,7 @@
 
 import React, { useState } from "react"
 
-import { Switch } from "@/registry/creative-tim/ui/switch"
+import { Switch } from "@/components/ui/switch"
 
 interface BlurVignetteProps {
   children: React.ReactNode

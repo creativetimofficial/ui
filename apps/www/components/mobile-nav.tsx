@@ -6,12 +6,12 @@ import { useRouter } from "next/navigation"
 
 import { source } from "@/lib/source"
 import { cn } from "@/lib/utils"
-import { Button } from "@/registry/creative-tim/ui/button"
+import { Button } from "@/components/ui/button"
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/registry/creative-tim/ui/popover"
+} from "@/components/ui/popover"
 
 export function MobileNav({
   tree,

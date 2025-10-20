@@ -2,9 +2,9 @@
 
 import { Bell, Mail, MessageSquare, Smartphone } from "lucide-react"
 
-import { Card } from "@/registry/creative-tim/ui/card"
-import { Label } from "@/registry/creative-tim/ui/label"
-import { Switch } from "@/registry/creative-tim/ui/switch"
+import { Card } from "@/components/ui/card"
+import { Label } from "@/components/ui/label"
+import { Switch } from "@/components/ui/switch"
 
 const TABLE_HEAD = [
   { label: "Activity", icon: Bell },

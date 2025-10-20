@@ -2,9 +2,9 @@
 
 import { Github, Instagram, Twitter, Youtube } from "lucide-react"
 
-import { Button } from "@/registry/creative-tim/ui/button"
-import { Card } from "@/registry/creative-tim/ui/card"
-import { Input } from "@/registry/creative-tim/ui/input"
+import { Button } from "@/components/ui/button"
+import { Card } from "@/components/ui/card"
+import { Input } from "@/components/ui/input"
 
 const LINKS = [
   { title: "About Us", href: "#" },

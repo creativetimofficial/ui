@@ -197,7 +197,7 @@ export function fixImport(content: string, pathMappings: Map<string, string>) {
 
   // Fix UI component imports
   content = content.replaceAll(
-    "@/registry/creative-tim/ui/",
+    "@/components/ui/",
     "@/components/ui/"
   )
 

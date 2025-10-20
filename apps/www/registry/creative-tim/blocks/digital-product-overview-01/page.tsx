@@ -2,13 +2,13 @@
 
 import { Eye, Lock, ShoppingCart, Star } from "lucide-react"
 
-import { Badge } from "@/registry/creative-tim/ui/badge"
-import { Button } from "@/registry/creative-tim/ui/button"
-import { Label } from "@/registry/creative-tim/ui/label"
+import { Badge } from "@/components/ui/badge"
+import { Button } from "@/components/ui/button"
+import { Label } from "@/components/ui/label"
 import {
   RadioGroup,
   RadioGroupItem,
-} from "@/registry/creative-tim/ui/radio-group"
+} from "@/components/ui/radio-group"
 
 const data = [
   {

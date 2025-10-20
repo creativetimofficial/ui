@@ -2,7 +2,7 @@ import Link from "next/link"
 
 import { siteConfig } from "@/lib/config"
 import { Icons } from "@/components/icons"
-import { Button } from "@/registry/creative-tim/ui/button"
+import { Button } from "@/components/ui/button"
 
 export function GitHubLink() {
   return (
