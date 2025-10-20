@@ -2,17 +2,8 @@
 
 import { BadgeCheck, Twitter } from "lucide-react"
 
-import {
-  Avatar,
-  AvatarFallback,
-  AvatarImage,
-} from "@/components/ui/avatar"
-import {
-  Card,
-  CardContent,
-  CardFooter,
-  CardHeader,
-} from "@/components/ui/card"
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
+import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card"
 
 const TESTIMONIALS = [
   {
