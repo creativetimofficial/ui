@@ -1,6 +1,6 @@
 "use client"
 
-import { Button } from "@/registry/creative-tim-ui/ui/button"
+import { Button } from "@/registry/creative-tim/ui/button"
 import {
   Card,
   CardContent,
@@ -8,9 +8,9 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/registry/creative-tim-ui/ui/card"
-import { Label } from "@/registry/creative-tim-ui/ui/label"
-import { Switch } from "@/registry/creative-tim-ui/ui/switch"
+} from "@/registry/creative-tim/ui/card"
+import { Label } from "@/registry/creative-tim/ui/label"
+import { Switch } from "@/registry/creative-tim/ui/switch"
 
 export function CardsCookieSettings() {
   return (

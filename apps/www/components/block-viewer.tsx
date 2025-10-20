@@ -27,19 +27,19 @@ import { cn } from "@/lib/utils"
 import { useCopyToClipboard } from "@/hooks/use-copy-to-clipboard"
 import { getIconForLanguageExtension } from "@/components/icons"
 import { OpenInV0Button } from "@/components/open-in-v0-button"
-import { Badge } from "@/registry/creative-tim-ui/ui/badge"
-import { Button } from "@/registry/creative-tim-ui/ui/button"
+import { Badge } from "@/registry/creative-tim/ui/badge"
+import { Button } from "@/registry/creative-tim/ui/button"
 import {
   Collapsible,
   CollapsibleContent,
   CollapsibleTrigger,
-} from "@/registry/creative-tim-ui/ui/collapsible"
+} from "@/registry/creative-tim/ui/collapsible"
 import {
   ResizableHandle,
   ResizablePanel,
   ResizablePanelGroup,
-} from "@/registry/creative-tim-ui/ui/resizable"
-import { Separator } from "@/registry/creative-tim-ui/ui/separator"
+} from "@/registry/creative-tim/ui/resizable"
+import { Separator } from "@/registry/creative-tim/ui/separator"
 import {
   Sidebar,
   SidebarGroup,
@@ -50,12 +50,12 @@ import {
   SidebarMenuItem,
   SidebarMenuSub,
   SidebarProvider,
-} from "@/registry/creative-tim-ui/ui/sidebar"
-import { Tabs, TabsList, TabsTrigger } from "@/registry/creative-tim-ui/ui/tabs"
+} from "@/registry/creative-tim/ui/sidebar"
+import { Tabs, TabsList, TabsTrigger } from "@/registry/creative-tim/ui/tabs"
 import {
   ToggleGroup,
   ToggleGroupItem,
-} from "@/registry/creative-tim-ui/ui/toggle-group"
+} from "@/registry/creative-tim/ui/toggle-group"
 
 type BlockViewerContext = {
   item: z.infer<typeof registryItemSchema>

@@ -7,9 +7,9 @@ import { setAccessToken } from "@/lib/session";
 import { normalizeAccessToken } from "@/lib/auth/normalizers";
 import { useAuth } from "@/components/auth/AuthProvider";
 import { AuthLayout } from "@/components/auth/AuthLayout";
-import { Input } from "@/registry/creative-tim-ui/ui/input";
-import { Label } from "@/registry/creative-tim-ui/ui/label";
-import { Button } from "@/registry/creative-tim-ui/ui/button";
+import { Input } from "@/registry/creative-tim/ui/input";
+import { Label } from "@/registry/creative-tim/ui/label";
+import { Button } from "@/registry/creative-tim/ui/button";
 import { GoogleLoginButton } from "@/components/auth/GoogleLoginButton";
 
 export default function RegisterPage() {

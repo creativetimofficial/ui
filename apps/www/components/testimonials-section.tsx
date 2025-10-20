@@ -4,7 +4,7 @@ import { useEffect, useState } from "react"
 import { ChevronLeft, ChevronRight, Quote } from "lucide-react"
 import { AnimatePresence, motion } from "motion/react"
 
-import { Button } from "@/registry/creative-tim-ui/ui/button"
+import { Button } from "@/registry/creative-tim/ui/button"
 
 const testimonials = [
   {

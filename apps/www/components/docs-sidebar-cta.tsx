@@ -2,7 +2,7 @@ import Link from "next/link"
 
 import { siteConfig } from "@/lib/config"
 import { cn } from "@/lib/utils"
-import { Button } from "@/registry/creative-tim-ui/ui/button"
+import { Button } from "@/registry/creative-tim/ui/button"
 
 export function DocsSidebarCta({ className }: React.ComponentProps<"div">) {
   return (

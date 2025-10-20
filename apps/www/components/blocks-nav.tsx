@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation"
 import {
   ScrollArea,
   ScrollBar,
-} from "@/registry/creative-tim-ui/ui/scroll-area"
+} from "@/registry/creative-tim/ui/scroll-area"
 import { registryCategories } from "@/registry/registry-categories"
 
 export function BlocksNav() {

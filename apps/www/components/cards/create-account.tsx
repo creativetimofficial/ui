@@ -1,6 +1,6 @@
 "use client"
 
-import { Button } from "@/registry/creative-tim-ui/ui/button"
+import { Button } from "@/registry/creative-tim/ui/button"
 import {
   Card,
   CardContent,
@@ -8,9 +8,9 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/registry/creative-tim-ui/ui/card"
-import { Input } from "@/registry/creative-tim-ui/ui/input"
-import { Label } from "@/registry/creative-tim-ui/ui/label"
+} from "@/registry/creative-tim/ui/card"
+import { Input } from "@/registry/creative-tim/ui/input"
+import { Label } from "@/registry/creative-tim/ui/label"
 
 export function CardsCreateAccount() {
   return (

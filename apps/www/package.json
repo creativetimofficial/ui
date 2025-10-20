@@ -4,9 +4,9 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "next dev --turbopack -p 5001 -H 0.0.0.0",
+    "dev": "next dev --turbopack -p 5000 -H 0.0.0.0",
     "build": "next build",
-    "start": "next start -p 5001 -H 0.0.0.0",
+    "start": "next start -p 5000 -H 0.0.0.0",
     "lint": "next lint",
     "lint:fix": "next lint --fix",
     "typecheck": "tsc --noEmit",

@@ -3,7 +3,7 @@ import {
   Alert,
   AlertDescription,
   AlertTitle,
-} from "@/registry/creative-tim-ui/ui/alert"
+} from "@/registry/creative-tim/ui/alert"
 
 export function Callout({
   title,

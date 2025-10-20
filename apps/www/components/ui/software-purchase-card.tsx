@@ -2,15 +2,15 @@
 
 import { Calendar, CreditCard, DollarSign, Users } from "lucide-react"
 
-import { Badge } from "@/registry/creative-tim-ui/ui/badge"
-import { Button } from "@/registry/creative-tim-ui/ui/button"
+import { Badge } from "@/registry/creative-tim/ui/badge"
+import { Button } from "@/registry/creative-tim/ui/button"
 import {
   Card,
   CardContent,
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/registry/creative-tim-ui/ui/card"
+} from "@/registry/creative-tim/ui/card"
 
 export interface SoftwarePurchaseCardProps {
   softwareName?: string

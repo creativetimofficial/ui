@@ -13,7 +13,7 @@ import {
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
-} from "@/registry/creative-tim-ui/ui/sidebar"
+} from "@/registry/creative-tim/ui/sidebar"
 
 const TOP_LEVEL_SECTIONS = [
   { name: "Introduction", href: "/docs" },
