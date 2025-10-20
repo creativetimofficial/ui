@@ -8,10 +8,10 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/registry/creative-tim/ui/accordion"
-import { Badge } from "@/registry/creative-tim/ui/badge"
-import { Button } from "@/registry/creative-tim/ui/button"
-import { Card, CardContent } from "@/registry/creative-tim/ui/card"
+} from "@/components/ui/accordion"
+import { Badge } from "@/components/ui/badge"
+import { Button } from "@/components/ui/button"
+import { Card, CardContent } from "@/components/ui/card"
 
 const SIZES = ["XS", "S", "M", "L", "XL", "XXL"]
 

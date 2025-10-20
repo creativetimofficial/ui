@@ -9,7 +9,7 @@ import {
   PageHeaderHeading,
 } from "@/components/page-header"
 import { PageNav } from "@/components/page-nav"
-import { Button } from "@/registry/creative-tim/ui/button"
+import { Button } from "@/components/ui/button"
 
 const title = "Examples"
 const description =

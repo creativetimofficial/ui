@@ -3,24 +3,24 @@
 import * as React from "react"
 import { AlertTriangle, X } from "lucide-react"
 
-import { Button } from "@/registry/creative-tim/ui/button"
-import { Card, CardContent } from "@/registry/creative-tim/ui/card"
+import { Button } from "@/components/ui/button"
+import { Card, CardContent } from "@/components/ui/card"
 import {
   Dialog,
   DialogContent,
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/registry/creative-tim/ui/dialog"
-import { Input } from "@/registry/creative-tim/ui/input"
-import { Label } from "@/registry/creative-tim/ui/label"
+} from "@/components/ui/dialog"
+import { Input } from "@/components/ui/input"
+import { Label } from "@/components/ui/label"
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/registry/creative-tim/ui/select"
+} from "@/components/ui/select"
 
 export default function ModalsBlock() {
   const [isOpen, setIsOpen] = React.useState(false)

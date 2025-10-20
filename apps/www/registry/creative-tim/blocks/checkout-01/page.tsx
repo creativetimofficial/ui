@@ -9,12 +9,12 @@ import {
   ShoppingBag,
 } from "lucide-react"
 
-import { Badge } from "@/registry/creative-tim/ui/badge"
-import { Button } from "@/registry/creative-tim/ui/button"
-import { Checkbox } from "@/registry/creative-tim/ui/checkbox"
-import { Input } from "@/registry/creative-tim/ui/input"
-import { Label } from "@/registry/creative-tim/ui/label"
-import { Separator } from "@/registry/creative-tim/ui/separator"
+import { Badge } from "@/components/ui/badge"
+import { Button } from "@/components/ui/button"
+import { Checkbox } from "@/components/ui/checkbox"
+import { Input } from "@/components/ui/input"
+import { Label } from "@/components/ui/label"
+import { Separator } from "@/components/ui/separator"
 
 const OPTIONS = [
   {

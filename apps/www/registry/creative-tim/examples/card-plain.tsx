@@ -1,6 +1,6 @@
 "use client"
 
-import { Card, CardContent } from "@/registry/creative-tim/ui/card"
+import { Card, CardContent } from "@/components/ui/card"
 
 export default function CardPlain() {
   return (

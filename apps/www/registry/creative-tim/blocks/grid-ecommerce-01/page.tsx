@@ -1,7 +1,7 @@
 "use client"
 
-import { Button } from "@/registry/creative-tim/ui/button"
-import { Card } from "@/registry/creative-tim/ui/card"
+import { Button } from "@/components/ui/button"
+import { Card } from "@/components/ui/card"
 
 const CARDS = [
   {

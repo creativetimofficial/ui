@@ -2,14 +2,14 @@
 
 import { Settings } from "lucide-react"
 
-import { Button } from "@/registry/creative-tim/ui/button"
+import { Button } from "@/components/ui/button"
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/registry/creative-tim/ui/select"
+} from "@/components/ui/select"
 
 const YEAR = new Date().getFullYear()
 

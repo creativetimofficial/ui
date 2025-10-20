@@ -3,28 +3,28 @@
 import * as React from "react"
 import { X } from "lucide-react"
 
-import { Button } from "@/registry/creative-tim/ui/button"
-import { Checkbox } from "@/registry/creative-tim/ui/checkbox"
+import { Button } from "@/components/ui/button"
+import { Checkbox } from "@/components/ui/checkbox"
 import {
   Dialog,
   DialogContent,
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/registry/creative-tim/ui/dialog"
-import { Input } from "@/registry/creative-tim/ui/input"
-import { Label } from "@/registry/creative-tim/ui/label"
+} from "@/components/ui/dialog"
+import { Input } from "@/components/ui/input"
+import { Label } from "@/components/ui/label"
 import {
   RadioGroup,
   RadioGroupItem,
-} from "@/registry/creative-tim/ui/radio-group"
+} from "@/components/ui/radio-group"
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/registry/creative-tim/ui/select"
+} from "@/components/ui/select"
 
 const NOTIFICATION = ["Email", "SMS", "Push Notification"]
 const TOOLS = ["React", "Material Tailwind", "TailwindCSS", "Next.js"]

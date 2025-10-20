@@ -4,8 +4,8 @@ import {
   Avatar,
   AvatarFallback,
   AvatarImage,
-} from "@/registry/creative-tim/ui/avatar"
-import { Card, CardContent } from "@/registry/creative-tim/ui/card"
+} from "@/components/ui/avatar"
+import { Card, CardContent } from "@/components/ui/card"
 
 export default function TestimonialsBlock() {
   return (

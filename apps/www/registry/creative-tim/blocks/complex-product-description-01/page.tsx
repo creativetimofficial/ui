@@ -8,9 +8,9 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/registry/creative-tim/ui/accordion"
-import { Badge } from "@/registry/creative-tim/ui/badge"
-import { Button } from "@/registry/creative-tim/ui/button"
+} from "@/components/ui/accordion"
+import { Badge } from "@/components/ui/badge"
+import { Button } from "@/components/ui/button"
 
 const IMAGES = [
   "https://v3.material-tailwind.com/coat-1.png",

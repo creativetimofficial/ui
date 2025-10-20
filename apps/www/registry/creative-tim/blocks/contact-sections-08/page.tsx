@@ -11,15 +11,15 @@ import {
   Twitter,
 } from "lucide-react"
 
-import { Button } from "@/registry/creative-tim/ui/button"
-import { Card } from "@/registry/creative-tim/ui/card"
-import { Input } from "@/registry/creative-tim/ui/input"
-import { Label } from "@/registry/creative-tim/ui/label"
+import { Button } from "@/components/ui/button"
+import { Card } from "@/components/ui/card"
+import { Input } from "@/components/ui/input"
+import { Label } from "@/components/ui/label"
 import {
   RadioGroup,
   RadioGroupItem,
-} from "@/registry/creative-tim/ui/radio-group"
-import { Textarea } from "@/registry/creative-tim/ui/textarea"
+} from "@/components/ui/radio-group"
+import { Textarea } from "@/components/ui/textarea"
 
 const DATA = [
   {

@@ -2,9 +2,9 @@
 
 import { Download } from "lucide-react"
 
-import { Badge } from "@/registry/creative-tim/ui/badge"
-import { Button } from "@/registry/creative-tim/ui/button"
-import { Separator } from "@/registry/creative-tim/ui/separator"
+import { Badge } from "@/components/ui/badge"
+import { Button } from "@/components/ui/button"
+import { Separator } from "@/components/ui/separator"
 
 const DATA = [
   {

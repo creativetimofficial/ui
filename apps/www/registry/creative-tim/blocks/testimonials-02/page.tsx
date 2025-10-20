@@ -6,13 +6,13 @@ import {
   Avatar,
   AvatarFallback,
   AvatarImage,
-} from "@/registry/creative-tim/ui/avatar"
+} from "@/components/ui/avatar"
 import {
   Card,
   CardContent,
   CardFooter,
   CardHeader,
-} from "@/registry/creative-tim/ui/card"
+} from "@/components/ui/card"
 
 const TESTIMONIALS = [
   {

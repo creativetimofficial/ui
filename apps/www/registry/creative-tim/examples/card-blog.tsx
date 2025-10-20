@@ -2,14 +2,14 @@
 
 import { Calendar } from "lucide-react"
 
-import { Button } from "@/registry/creative-tim/ui/button"
+import { Button } from "@/components/ui/button"
 import {
   Card,
   CardDescription,
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/registry/creative-tim/ui/card"
+} from "@/components/ui/card"
 
 export default function CardBlog() {
   return (

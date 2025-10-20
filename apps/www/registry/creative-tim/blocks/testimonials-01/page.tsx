@@ -6,9 +6,9 @@ import {
   Avatar,
   AvatarFallback,
   AvatarImage,
-} from "@/registry/creative-tim/ui/avatar"
-import { Badge } from "@/registry/creative-tim/ui/badge"
-import { Card, CardContent } from "@/registry/creative-tim/ui/card"
+} from "@/components/ui/avatar"
+import { Badge } from "@/components/ui/badge"
+import { Card, CardContent } from "@/components/ui/card"
 
 const TESTIMONIALS = [
   {

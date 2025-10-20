@@ -2,9 +2,9 @@
 
 import { ArrowRight, Sparkles } from "lucide-react"
 
-import { Badge } from "@/registry/creative-tim/ui/badge"
-import { Button } from "@/registry/creative-tim/ui/button"
-import { Card, CardContent } from "@/registry/creative-tim/ui/card"
+import { Badge } from "@/components/ui/badge"
+import { Button } from "@/components/ui/button"
+import { Card, CardContent } from "@/components/ui/card"
 
 const TESTIMONIALS = [
   {

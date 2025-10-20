@@ -3,14 +3,14 @@
 import { useState } from "react"
 import { Heart, Package, Shield, ShoppingCart, Star, Truck } from "lucide-react"
 
-import { Badge } from "@/registry/creative-tim/ui/badge"
-import { Button } from "@/registry/creative-tim/ui/button"
+import { Badge } from "@/components/ui/badge"
+import { Button } from "@/components/ui/button"
 import {
   Tabs,
   TabsContent,
   TabsList,
   TabsTrigger,
-} from "@/registry/creative-tim/ui/tabs"
+} from "@/components/ui/tabs"
 
 const DATA = [
   {

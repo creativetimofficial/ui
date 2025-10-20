@@ -3,10 +3,10 @@
 import * as React from "react"
 import { CheckCircle2, Eye, EyeOff, Lock, Shield, XCircle } from "lucide-react"
 
-import { Button } from "@/registry/creative-tim/ui/button"
-import { Card } from "@/registry/creative-tim/ui/card"
-import { Input } from "@/registry/creative-tim/ui/input"
-import { Label } from "@/registry/creative-tim/ui/label"
+import { Button } from "@/components/ui/button"
+import { Card } from "@/components/ui/card"
+import { Input } from "@/components/ui/input"
+import { Label } from "@/components/ui/label"
 
 function PasswordField({
   id,

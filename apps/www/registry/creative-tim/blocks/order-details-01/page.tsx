@@ -14,10 +14,10 @@ import {
   Truck,
 } from "lucide-react"
 
-import { Badge } from "@/registry/creative-tim/ui/badge"
-import { Button } from "@/registry/creative-tim/ui/button"
-import { Card, CardContent, CardHeader } from "@/registry/creative-tim/ui/card"
-import { Separator } from "@/registry/creative-tim/ui/separator"
+import { Badge } from "@/components/ui/badge"
+import { Button } from "@/components/ui/button"
+import { Card, CardContent, CardHeader } from "@/components/ui/card"
+import { Separator } from "@/components/ui/separator"
 
 const OPTIONS = [
   { title: "Subtotal", value: "$1,780.00" },

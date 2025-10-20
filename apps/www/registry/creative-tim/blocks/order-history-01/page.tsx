@@ -1,8 +1,8 @@
 "use client"
 
-import { Badge } from "@/registry/creative-tim/ui/badge"
-import { Button } from "@/registry/creative-tim/ui/button"
-import { Card, CardContent } from "@/registry/creative-tim/ui/card"
+import { Badge } from "@/components/ui/badge"
+import { Button } from "@/components/ui/button"
+import { Card, CardContent } from "@/components/ui/card"
 import {
   Table,
   TableBody,
@@ -10,7 +10,7 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@/registry/creative-tim/ui/table"
+} from "@/components/ui/table"
 
 const OPTIONS = [
   {

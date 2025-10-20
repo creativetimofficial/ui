@@ -2,18 +2,18 @@
 
 import { Lock, Package, ShoppingBag, Tag, Truck, X } from "lucide-react"
 
-import { Badge } from "@/registry/creative-tim/ui/badge"
-import { Button } from "@/registry/creative-tim/ui/button"
-import { Card, CardContent, CardHeader } from "@/registry/creative-tim/ui/card"
-import { Input } from "@/registry/creative-tim/ui/input"
+import { Badge } from "@/components/ui/badge"
+import { Button } from "@/components/ui/button"
+import { Card, CardContent, CardHeader } from "@/components/ui/card"
+import { Input } from "@/components/ui/input"
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/registry/creative-tim/ui/select"
-import { Separator } from "@/registry/creative-tim/ui/separator"
+} from "@/components/ui/select"
+import { Separator } from "@/components/ui/separator"
 
 const CHECKOUT_PRODUCTS = [
   {

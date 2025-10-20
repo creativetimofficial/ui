@@ -3,20 +3,20 @@
 import * as React from "react"
 import { AlertTriangle, X } from "lucide-react"
 
-import { Button } from "@/registry/creative-tim/ui/button"
+import { Button } from "@/components/ui/button"
 import {
   Card,
   CardContent,
   CardHeader,
   CardTitle,
-} from "@/registry/creative-tim/ui/card"
+} from "@/components/ui/card"
 import {
   Dialog,
   DialogContent,
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/registry/creative-tim/ui/dialog"
+} from "@/components/ui/dialog"
 
 export default function ModalsBlock() {
   const [isOpen, setIsOpen] = React.useState(false)

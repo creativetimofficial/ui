@@ -1,6 +1,6 @@
 "use client"
 
-import { Button } from "@/registry/creative-tim/ui/button"
+import { Button } from "@/components/ui/button"
 
 export default function EmptyShoppingCart01() {
   return (

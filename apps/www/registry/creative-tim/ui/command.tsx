@@ -11,7 +11,7 @@ import {
   DialogDescription,
   DialogHeader,
   DialogTitle,
-} from "@/registry/creative-tim/ui/dialog"
+} from "@/components/ui/dialog"
 
 function Command({
   className,

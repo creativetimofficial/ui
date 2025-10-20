@@ -3,24 +3,24 @@
 import * as React from "react"
 import { Trash, X } from "lucide-react"
 
-import { Button } from "@/registry/creative-tim/ui/button"
+import { Button } from "@/components/ui/button"
 import {
   Dialog,
   DialogContent,
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/registry/creative-tim/ui/dialog"
-import { Input } from "@/registry/creative-tim/ui/input"
-import { Label } from "@/registry/creative-tim/ui/label"
+} from "@/components/ui/dialog"
+import { Input } from "@/components/ui/input"
+import { Label } from "@/components/ui/label"
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/registry/creative-tim/ui/select"
-import { Textarea } from "@/registry/creative-tim/ui/textarea"
+} from "@/components/ui/select"
+import { Textarea } from "@/components/ui/textarea"
 
 export default function ModalsBlock() {
   const [isOpen, setIsOpen] = React.useState(false)

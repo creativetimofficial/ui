@@ -3,14 +3,14 @@
 import * as React from "react"
 import { X } from "lucide-react"
 
-import { Button } from "@/registry/creative-tim/ui/button"
+import { Button } from "@/components/ui/button"
 import {
   Dialog,
   DialogContent,
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/registry/creative-tim/ui/dialog"
+} from "@/components/ui/dialog"
 
 export default function ModalsBlock() {
   const [isOpen, setIsOpen] = React.useState(false)

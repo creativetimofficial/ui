@@ -1,6 +1,6 @@
 "use client"
 
-import { Card, CardContent, CardFooter } from "@/registry/creative-tim/ui/card"
+import { Card, CardContent, CardFooter } from "@/components/ui/card"
 
 export default function TestimonialsBlock() {
   return (

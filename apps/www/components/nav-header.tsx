@@ -8,7 +8,7 @@ import {
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
-} from "@/registry/creative-tim/ui/navigation-menu"
+} from "@/components/ui/navigation-menu"
 
 export function NavHeader() {
   const pathname = usePathname()

@@ -5,14 +5,14 @@ import { format } from "date-fns"
 import { CalendarIcon, ChevronDown, ChevronUp, Clock } from "lucide-react"
 
 import { cn } from "@/lib/utils"
-import { Button } from "@/registry/creative-tim/ui/button"
-import { Calendar } from "@/registry/creative-tim/ui/calendar"
-import { Card } from "@/registry/creative-tim/ui/card"
+import { Button } from "@/components/ui/button"
+import { Calendar } from "@/components/ui/calendar"
+import { Card } from "@/components/ui/card"
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/registry/creative-tim/ui/popover"
+} from "@/components/ui/popover"
 
 const DATA = {
   "March 2023": [

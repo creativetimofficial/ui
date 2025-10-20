@@ -4,25 +4,25 @@ import {
   Avatar,
   AvatarFallback,
   AvatarImage,
-} from "@/registry/creative-tim/ui/avatar"
-import { Button } from "@/registry/creative-tim/ui/button"
+} from "@/components/ui/avatar"
+import { Button } from "@/components/ui/button"
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/registry/creative-tim/ui/card"
-import { Input } from "@/registry/creative-tim/ui/input"
-import { Label } from "@/registry/creative-tim/ui/label"
+} from "@/components/ui/card"
+import { Input } from "@/components/ui/input"
+import { Label } from "@/components/ui/label"
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/registry/creative-tim/ui/select"
-import { Separator } from "@/registry/creative-tim/ui/separator"
+} from "@/components/ui/select"
+import { Separator } from "@/components/ui/separator"
 
 const people = [
   {

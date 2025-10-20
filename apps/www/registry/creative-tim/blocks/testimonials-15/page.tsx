@@ -2,7 +2,7 @@
 
 import { Plus, Quote, Star } from "lucide-react"
 
-import { Card, CardContent } from "@/registry/creative-tim/ui/card"
+import { Card, CardContent } from "@/components/ui/card"
 
 const TESTIMONIALS = [
   {
