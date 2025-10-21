@@ -68,7 +68,7 @@ export default function AccountNotifications01() {
   return (
     <div className="mx-auto max-w-5xl p-6">
       <Card className="bg-card border p-8">
-        <div className="mb-8 border-b pb-6">
+        <div className="border-b pb-6">
           <h2 className="text-2xl font-semibold tracking-tight">
             Notification Preferences
           </h2>

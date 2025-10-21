@@ -5,13 +5,20 @@ import { ArrowDown } from "lucide-react"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card"
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card"
 
 const POSTS = [
   {
     img: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&auto=format&fit=crop",
     tag: "Enterprise",
-    title: "Autodesk looks to future of 3D printing with Project Escher",
+    title: "Autodesk and Figma looks to future of 3D printing with Project Escher",
     desc: "Don't be scared of the truth because we need to restart the human foundation in truth And I love you like Kanye loves Kanye I love Rick Owens bed design but the back is too high for the beams and angle of the ceiling.",
     date: "10 September 2022",
     author: {
@@ -22,7 +29,7 @@ const POSTS = [
   {
     img: "https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=800&auto=format&fit=crop",
     tag: "Startups",
-    title: "Lyft launching cross-platform service this week",
+    title: "Bolt launching cross-platform service this week",
     desc: "Don't be scared of the truth because we need to restart the human foundation in truth And I love you like Kanye loves Kanye I love Rick Owens bed design but the back is too high for the beams and angle of the ceiling.",
     date: "12 September 2022",
     author: {
@@ -33,7 +40,7 @@ const POSTS = [
   {
     img: "https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=800&auto=format&fit=crop",
     tag: "Trending",
-    title: "6 insights into the French Fashion landscape",
+    title: "6 insights into the French Fashion landscape view",
     desc: "Don't be scared of the truth because we need to restart the human foundation in truth And I love you like Kanye loves Kanye I love Rick Owens bed design but the back is too high for the beams and angle of the ceiling.",
     date: "16 September 2022",
     author: {
@@ -91,22 +98,22 @@ export default function BlogCardsLayout01() {
       </div>
       <div className="container mx-auto grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
         {POSTS.map(({ img, tag, title, desc, date, author }) => (
-          <Card key={title} className="overflow-hidden">
-            <CardHeader className="p-3">
+          <Card key={title} className="overflow-hidden py-0">
+            <CardHeader className="p-3 pb-0">
               <img
                 src={img}
                 alt={title}
                 className="h-56 w-full rounded-lg object-cover object-center"
               />
             </CardHeader>
-            <CardContent className="p-6">
+            <CardContent className="px-6">
               <Badge variant="secondary" className="mb-2">
                 {tag}
               </Badge>
-              <h3 className="mb-2 text-xl font-semibold">{title}</h3>
-              <p className="text-muted-foreground text-sm">{desc}</p>
+              <CardTitle className="mb-2 text-xl">{title}</CardTitle>
+              <CardDescription>{desc}</CardDescription>
             </CardContent>
-            <CardFooter className="flex items-center gap-3 px-6 pt-0 pb-6">
+            <CardFooter className="flex items-center gap-3 p-6 pt-0">
               <Avatar className="h-8 w-8">
                 <AvatarImage src={author.img} alt={author.name} />
                 <AvatarFallback>{author.name.charAt(0)}</AvatarFallback>

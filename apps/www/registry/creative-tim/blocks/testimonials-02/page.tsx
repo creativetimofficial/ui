@@ -73,7 +73,7 @@ export default function TestimonialsBlock() {
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
           {TESTIMONIALS.map(({ name, image, username, quote, date }, key) => (
             <Card key={key}>
-              <CardHeader className="flex flex-row items-center gap-4 p-6">
+              <CardHeader className="flex flex-row items-center gap-4 px-6">
                 <Avatar>
                   <AvatarImage src={image} alt={`${name} image`} />
                   <AvatarFallback>
@@ -84,7 +84,7 @@ export default function TestimonialsBlock() {
                   </AvatarFallback>
                 </Avatar>
                 <div className="flex-1">
-                  <div className="mb-1 flex items-center gap-1.5">
+                  <div className="flex items-center gap-1.5">
                     <p className="font-semibold">{name}</p>
                     <BadgeCheck className="h-4 w-4 text-blue-500" />
                   </div>
@@ -96,7 +96,7 @@ export default function TestimonialsBlock() {
                   {quote}
                 </blockquote>
               </CardContent>
-              <CardFooter className="flex items-center justify-between gap-4 p-6">
+              <CardFooter className="flex items-center justify-between gap-4 px-6">
                 <a
                   href="#"
                   className="flex items-center gap-1.5 text-sm font-semibold hover:underline"

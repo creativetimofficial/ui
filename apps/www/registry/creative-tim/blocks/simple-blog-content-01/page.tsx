@@ -2,7 +2,14 @@
 
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Badge } from "@/components/ui/badge"
-import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card"
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card"
 
 const POSTS = [
   {
@@ -45,8 +52,8 @@ export default function SimpleBlogContent01() {
     <section className="py-16">
       <div className="container mx-auto grid grid-cols-1 items-start gap-6 md:grid-cols-2 lg:grid-cols-3">
         {POSTS.map(({ img, tag, title, desc, date, author }) => (
-          <Card key={title} className="overflow-hidden">
-            <CardHeader className="p-4">
+          <Card key={title} className="overflow-hidden py-0">
+            <CardHeader className="p-4 pb-0">
               <div className="relative h-60 w-full overflow-hidden rounded-lg">
                 <img
                   src={img}
@@ -55,14 +62,14 @@ export default function SimpleBlogContent01() {
                 />
               </div>
             </CardHeader>
-            <CardContent className="px-6 pt-2 pb-0">
+            <CardContent className="px-6">
               <Badge variant="secondary" className="mb-2">
                 {tag}
               </Badge>
-              <h3 className="mb-2 text-xl font-semibold">{title}</h3>
-              <p className="text-muted-foreground text-sm">{desc}</p>
+              <CardTitle className="mb-2 text-xl">{title}</CardTitle>
+              <CardDescription>{desc}</CardDescription>
             </CardContent>
-            <CardFooter className="flex items-center gap-3 p-6">
+            <CardFooter className="flex items-center gap-3 p-6 pt-0">
               <Avatar>
                 <AvatarImage src={author.img} alt={author.name} />
                 <AvatarFallback>{author.name.charAt(0)}</AvatarFallback>

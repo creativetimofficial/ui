@@ -8,7 +8,7 @@
   ],
   "files": [
     {
-      "path": "creative-tim/blocks/empty-shopping-cart-01/page.tsx",
+      "path": "registry/creative-tim/blocks/empty-shopping-cart-01/page.tsx",
       "content": "\"use client\"\n\nimport { Button } from \"@/components/ui/button\"\n\nexport default function EmptyShoppingCart01() {\n  return (\n    <section className=\"grid min-h-screen place-items-center justify-center\">\n      <div className=\"container mx-auto py-16\">\n        <div className=\"text-center\">\n          <p className=\"text-primary font-semibold\">Store</p>\n          <h2 className=\"mt-4 text-2xl font-bold\">\n            Your Shopping Cart is Empty\n          </h2>\n          <img\n            src=\"https://v3.material-tailwind.com/cart-illustration.png\"\n            alt=\"Empty cart\"\n            className=\"mx-auto my-8 max-h-[30rem]\"\n          />\n          <Button>Back to Store</Button>\n        </div>\n      </div>\n    </section>\n  )\n}\n",
       "type": "registry:page",
       "target": "app/empty-shopping-cart/page.tsx"

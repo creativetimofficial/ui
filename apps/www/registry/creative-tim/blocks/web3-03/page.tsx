@@ -83,7 +83,7 @@ export default function Web303() {
         </CardHeader>
         <CardContent className="grid grid-cols-1 gap-6 px-6 pt-0 pb-6 md:grid-cols-2 lg:grid-cols-3">
           {DATA.map(({ img, name, desc, profileImg, price, time }, key) => (
-            <Card key={key} className="overflow-hidden">
+            <Card key={key} className="overflow-hidden py-0">
               <CardHeader className="relative p-0">
                 <img
                   src={img}
@@ -108,7 +108,7 @@ export default function Web303() {
                   </div>
                 </Badge>
               </CardHeader>
-              <CardContent className="p-4">
+              <CardContent className="px-4 pb-4">
                 <div className="flex items-center justify-between">
                   <div>
                     <p className="text-muted-foreground text-sm">Current bid</p>

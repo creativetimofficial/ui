@@ -81,8 +81,8 @@ export default function Web305() {
         </CardHeader>
         <CardContent className="grid grid-cols-1 gap-6 px-6 pt-0 pb-6 md:grid-cols-2 lg:grid-cols-3">
           {DATA.map(({ tokenId, profileImg, name, desc, imgs }, key) => (
-            <Card key={key} className="flex flex-col justify-between">
-              <CardHeader className="p-4">
+            <Card key={key} className="flex flex-col justify-between py-4">
+              <CardHeader className="px-4 gap-0">
                 <p className="font-semibold">{tokenId}</p>
                 <div className="mt-4 flex flex-wrap items-start justify-between gap-4">
                   <div className="flex items-start gap-3">
@@ -100,7 +100,7 @@ export default function Web305() {
                   </Button>
                 </div>
               </CardHeader>
-              <CardContent className="grid grid-cols-3 gap-4 p-4">
+              <CardContent className="grid grid-cols-3 gap-4 px-4">
                 {imgs.map((img, idx) => (
                   <img
                     key={idx}
