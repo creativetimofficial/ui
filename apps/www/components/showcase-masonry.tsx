@@ -509,7 +509,7 @@ export function ShowcaseMasonry() {
               <div className="mb-4 flex items-center gap-4">
                 <div className="relative shrink-0">
                   <img
-                    src="https://images.unsplash.com/photo-1716662318479-a9c0f1cd1a0e?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=987"
+                    src="https://images.unsplash.com/photo-1716662318479-a9c0f1cd1a0e?auto=format&fit=crop&q=80&w=400&h=400"
                     alt="Sarah Johnson profile"
                     className="border-border h-14 w-14 rounded-full border-2 object-cover transition-transform group-hover:scale-105"
                   />

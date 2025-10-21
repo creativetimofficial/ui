@@ -72,7 +72,7 @@ const PRODUCTS = [
   {
     id: 4,
     image:
-      "https://images.unsplash.com/photo-1661327930345-9c6714b603b3?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=987",
+      "https://images.unsplash.com/photo-1661327930345-9c6714b603b3?auto=format&fit=crop&q=80&w=400&h=400",
     brand: "Zegna",
     name: "Cashmere sweater",
     price: "€1,950",

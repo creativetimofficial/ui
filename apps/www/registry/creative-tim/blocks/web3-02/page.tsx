@@ -36,7 +36,7 @@ export default function Web302() {
           <div>
             <Avatar className="h-10 w-10">
               <AvatarImage
-                src="https://v3.material-tailwind.com/woman-profile-1.jpg"
+                src="https://images.unsplash.com/photo-1623853434105-8e7a72898180?auto=format&fit=crop&q=80&w=400&h=400"
                 alt="emma"
               />
               <AvatarFallback>EM</AvatarFallback>

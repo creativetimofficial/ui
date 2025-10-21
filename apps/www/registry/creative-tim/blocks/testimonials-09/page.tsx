@@ -10,7 +10,7 @@ export default function TestimonialsBlock() {
         <Card className="grid grid-cols-1 items-center gap-4 border-0 bg-transparent shadow-none md:grid-cols-12 md:gap-6">
           <div className="md:col-span-4">
             <img
-              src="https://images.unsplash.com/photo-1716662318479-a9c0f1cd1a0e?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=987"
+              src="https://images.unsplash.com/photo-1716662318479-a9c0f1cd1a0e?auto=format&fit=crop&q=80&w=400&h=400"
               alt="user profile"
               className="h-40 w-full rounded-lg object-cover md:h-56"
             />
