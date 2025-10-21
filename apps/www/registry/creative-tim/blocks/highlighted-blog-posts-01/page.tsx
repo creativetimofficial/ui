@@ -50,7 +50,7 @@ export default function HighlightedBlogPosts01() {
         </p>
       </div>
       <div className="grid grid-cols-1 gap-x-0 gap-y-6 md:grid-cols-3 md:gap-x-6">
-        <Card className="bg-primary text-primary-foreground flex flex-col justify-between">
+        <Card className="bg-primary text-primary-foreground flex flex-col justify-between py-0">
           <CardHeader className="p-6 sm:p-8">
             <p className="block text-center font-semibold opacity-80">
               Landscape
@@ -79,7 +79,7 @@ export default function HighlightedBlogPosts01() {
           {POSTS.map(({ img, icon: Icon, title, desc }) => (
             <Card
               key={title}
-              className="relative grid min-h-48 w-full overflow-hidden border-0"
+              className="relative grid min-h-48 w-full overflow-hidden border-0 py-0"
             >
               <img
                 src={img}
