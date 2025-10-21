@@ -64,7 +64,7 @@ export default function ShoppingCart01() {
             <div className="grid w-full grid-cols-1 gap-8 lg:grid-cols-3">
               <div className="col-span-2">
                 <Card className="border-2">
-                  <CardHeader>
+                  <CardHeader className="px-6 gap-0 border-b">
                     <div className="flex items-center gap-2">
                       <Package className="text-primary h-5 w-5" />
                       <CardTitle className="text-xl">
@@ -72,7 +72,6 @@ export default function ShoppingCart01() {
                       </CardTitle>
                     </div>
                   </CardHeader>
-                  <Separator />
                   <CardContent className="p-0">
                     {CHECKOUT_PRODUCTS.map(
                       ({ name, price, img, product, size, stock }, index) => (
@@ -158,10 +157,9 @@ export default function ShoppingCart01() {
               <div className="col-span-1">
                 <div className="sticky top-4">
                   <Card className="border-2">
-                    <CardHeader>
+                    <CardHeader className="px-6 gap-0 border-b">
                       <CardTitle className="text-xl">Order Summary</CardTitle>
                     </CardHeader>
-                    <Separator />
                     <CardContent className="p-0">
                       <div className="space-y-4 p-6">
                         <div className="flex items-center justify-between">
