@@ -33,7 +33,7 @@ export default function TestimonialsBlock() {
               <Avatar className="h-12 w-12">
                 <AvatarImage
                   alt="Alexandra Martinez"
-                  src="https://v3.material-tailwind.com/woman-profile-1.jpg"
+                  src="https://images.unsplash.com/photo-1623853434105-8e7a72898180?auto=format&fit=crop&q=80&w=400&h=400"
                 />
                 <AvatarFallback>AM</AvatarFallback>
               </Avatar>

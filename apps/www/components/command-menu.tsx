@@ -127,14 +127,14 @@ export function CommandMenu({
         <Button
           variant="ghost"
           className={cn(
-            "relative h-8 w-full justify-start rounded-full border border-white/20 pl-2.5 font-normal text-white/70 shadow-none hover:bg-white/10 hover:text-white sm:pr-12 md:w-40 lg:w-56 xl:w-64"
+            "relative h-8 w-full justify-start rounded-full border border-white/20 pl-2.5 font-normal text-white/70 shadow-none hover:bg-white/10 hover:text-white sm:pr-12 md:w-40 lg:w-56"
           )}
           onClick={() => setOpen(true)}
           {...props}
         >
-          <span className="hidden lg:inline-flex">Search documentation...</span>
+          <span className="hidden lg:inline-flex">Search doc...</span>
           <span className="inline-flex lg:hidden">Search...</span>
-          <div className="absolute top-1.5 right-1.5 hidden gap-1 sm:flex">
+          <div className="absolute top-1.5 right-1.5 hidden gap-1 sm:flex mt-[-1px]">
             <CommandMenuKbd>{isMac ? "⌘" : "Ctrl"}</CommandMenuKbd>
             <CommandMenuKbd className="aspect-square">K</CommandMenuKbd>
           </div>

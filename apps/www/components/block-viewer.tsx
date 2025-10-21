@@ -161,7 +161,7 @@ function BlockViewerToolbar() {
           )}
         </div>
         {item.meta?.details && (
-          <p className="text-muted-foreground text-sm leading-relaxed">
+          <p className="text-muted-foreground text-sm leading-relaxed max-w-2xl">
             {item.meta.details}
           </p>
         )}
@@ -169,18 +169,39 @@ function BlockViewerToolbar() {
 
       {/* Controllers Section */}
       <div className="flex w-full items-center gap-2">
-        <Tabs
-          value={view}
-          onValueChange={(value) => setView(value as "preview" | "code")}
-        >
-          <TabsList className="grid h-8 grid-cols-2 items-center rounded-md p-1 *:data-[slot=tabs-trigger]:h-6 *:data-[slot=tabs-trigger]:rounded-sm *:data-[slot=tabs-trigger]:px-2 *:data-[slot=tabs-trigger]:text-xs">
-            <TabsTrigger value="preview">Preview</TabsTrigger>
-            <TabsTrigger value="code" disabled={isPro && !hasAccess}>
-              Code
-            </TabsTrigger>
-          </TabsList>
-        </Tabs>
-        <Separator orientation="vertical" className="mx-2 !h-4" />
+          {isPro && !hasAccess ? (
+              <Button
+                variant="outline"
+                className="w-fit cursor-not-allowed gap-1 px-2 opacity-50 shadow-none"
+                size="sm"
+                disabled
+                title="Upgrade to PRO to access this component"
+              >
+                <Terminal />
+                <span>
+                  npx @creative-tim/ui@latest components add {item.name}
+                </span>
+              </Button>
+            ) : (
+              <Button
+                variant="outline"
+                className="w-fit gap-1 px-2 shadow-none"
+                size="sm"
+                onClick={() => {
+                  copyToClipboard(
+                    `npx shadcn@latest add "https://ui.creative-tim.com/r/${item.name}.json"`
+                  )
+                }}
+              >
+                {isCopied ? <Check /> : <Terminal />}
+                <span>
+                  npx @creative-tim/ui@latest components add {item.name}
+                </span>
+              </Button>
+            )}
+            
+        
+        
         <div className="ml-auto flex items-center gap-2">
           <div className="h-8 items-center gap-1.5 rounded-md border p-1 shadow-none">
             <ToggleGroup
@@ -234,36 +255,18 @@ function BlockViewerToolbar() {
             </ToggleGroup>
           </div>
           <Separator orientation="vertical" className="mx-1 !h-4" />
-          {isPro && !hasAccess ? (
-            <Button
-              variant="outline"
-              className="w-fit cursor-not-allowed gap-1 px-2 opacity-50 shadow-none"
-              size="sm"
-              disabled
-              title="Upgrade to PRO to access this component"
-            >
-              <Terminal />
-              <span>
-                npx @creative-tim/ui@latest components add {item.name}
-              </span>
-            </Button>
-          ) : (
-            <Button
-              variant="outline"
-              className="w-fit gap-1 px-2 shadow-none"
-              size="sm"
-              onClick={() => {
-                copyToClipboard(
-                  `npx shadcn@latest add "https://ui.creative-tim.com/r/${item.name}.json"`
-                )
-              }}
-            >
-              {isCopied ? <Check /> : <Terminal />}
-              <span>
-                npx @creative-tim/ui@latest components add {item.name}
-              </span>
-            </Button>
-          )}
+          <Tabs
+            value={view}
+            onValueChange={(value) => setView(value as "preview" | "code")}
+          >
+            <TabsList className="grid h-8 grid-cols-2 items-center rounded-md p-1 *:data-[slot=tabs-trigger]:h-6 *:data-[slot=tabs-trigger]:rounded-sm *:data-[slot=tabs-trigger]:px-2 *:data-[slot=tabs-trigger]:text-xs">
+              <TabsTrigger value="preview">Preview</TabsTrigger>
+              <TabsTrigger value="code" disabled={isPro && !hasAccess}>
+                Code
+              </TabsTrigger>
+            </TabsList>
+          </Tabs>
+         
           <Separator orientation="vertical" className="mx-1 !h-4" />
           <OpenInV0Button name={item.name} />
         </div>

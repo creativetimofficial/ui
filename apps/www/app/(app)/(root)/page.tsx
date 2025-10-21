@@ -75,11 +75,11 @@ export default function IndexPage() {
           </PageHeaderHeading>
           <PageHeaderDescription>{description}</PageHeaderDescription>
           <PageActions>
-            <Button asChild size="sm">
+            <Button asChild size="sm" variant="outline">
               <Link href="/docs">Get Started</Link>
             </Button>
-            <Button asChild size="sm" variant="outline">
-              <Link href="/docs/components">View Components</Link>
+            <Button asChild size="sm">
+              <Link href="/blocks">View Blocks</Link>
             </Button>
           </PageActions>
 
@@ -149,7 +149,7 @@ export default function IndexPage() {
 
       {/* Achievements Section */}
       <section className="container py-12 md:py-20">
-        <div className="mx-auto max-w-6xl text-center">
+        <div className="mx-auto text-center">
           <h2 className="mb-4 text-3xl font-bold tracking-tight sm:text-4xl">
             Remarkable Achievements
           </h2>
@@ -160,7 +160,7 @@ export default function IndexPage() {
           </p>
 
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            <Card className="p-6 text-left">
+            <Card className="p-6 text-left gap-0">
               <Users className="text-muted-foreground mb-4 h-8 w-8" />
               <div className="mb-1 text-3xl font-bold">2.6M+</div>
               <div className="mb-3 text-sm font-medium">Community Members</div>
@@ -169,7 +169,7 @@ export default function IndexPage() {
               </p>
             </Card>
 
-            <Card className="p-6 text-left">
+            <Card className="p-6 text-left gap-0">
               <Download className="text-muted-foreground mb-4 h-8 w-8" />
               <div className="mb-1 text-3xl font-bold">8.6M+</div>
               <div className="mb-3 text-sm font-medium">
@@ -180,7 +180,7 @@ export default function IndexPage() {
               </p>
             </Card>
 
-            <Card className="p-6 text-left">
+            <Card className="p-6 text-left gap-0">
               <Star className="text-muted-foreground mb-4 h-8 w-8" />
               <div className="mb-1 text-3xl font-bold">48,000+</div>
               <div className="mb-3 text-sm font-medium">
@@ -191,7 +191,7 @@ export default function IndexPage() {
               </p>
             </Card>
 
-            <Card className="p-6 text-left">
+            <Card className="p-6 text-left gap-0">
               <Package className="text-muted-foreground mb-4 h-8 w-8" />
               <div className="mb-1 text-3xl font-bold">280,000+</div>
               <div className="mb-3 text-sm font-medium">

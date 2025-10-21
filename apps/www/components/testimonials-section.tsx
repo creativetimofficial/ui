@@ -11,7 +11,7 @@ const testimonials = [
     name: "Eugen Tudorache",
     role: "CTO",
     company: "Updivision",
-    image: "/eugen_1760710412667.jpg",
+    image: "/ui/eugen.jpg",
     quote:
       "Creative Tim UI has completely transformed how we build interfaces. The components are beautifully designed and incredibly easy to customize.",
   },
@@ -19,7 +19,7 @@ const testimonials = [
     name: "Robert Tatoi",
     role: "Founder",
     company: "PlayVertical",
-    image: "/robert_1760710412666.jpg",
+    image: "/ui/robert.jpg",
     quote:
       "The quality of these components is outstanding. They've saved us countless hours and our product looks better than ever.",
   },
@@ -27,7 +27,7 @@ const testimonials = [
     name: "Fredy Andrei",
     role: "CEO",
     company: "Simmmple",
-    image: "/freddy_1760710412666.jpg",
+    image: "/ui/freddy.jpg",
     quote:
       "Finally, a component library that doesn't compromise on design or flexibility. The attention to detail is exceptional.",
   },
@@ -35,7 +35,7 @@ const testimonials = [
     name: "Rares Toma",
     role: "CEO",
     company: "Loopple",
-    image: "/rares_1760710412665.jpg",
+    image: "/ui/rares.jpg",
     quote:
       "Our development velocity has increased significantly. The documentation is clear and the components are production-ready.",
   },
@@ -104,7 +104,7 @@ export function TestimonialsSection() {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ delay: 0.3 }}
-                    className="mb-10 text-2xl leading-relaxed font-medium md:text-3xl lg:text-4xl"
+                    className="mb-10 text-2xl leading-normal font-medium md:text-3xl lg:text-4xl"
                   >
                     {currentTestimonial.quote}
                   </motion.blockquote>

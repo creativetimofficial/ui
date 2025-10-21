@@ -5,21 +5,21 @@ import { Card, CardContent } from "@/components/ui/card"
 
 const TESTIMONIALS = [
   {
-    image: "https://v3.material-tailwind.com/woman-profile-2.jpg",
+    image: "https://images.unsplash.com/photo-1641906840000-4b88f1d44de6?auto=format&fit=crop&q=80&w=400&h=400",
     name: "Jessica Devis",
     role: "CEO @ Marketing Digital LTD",
     quote:
       "The connections you make at Web Summit are unparalleled, we met users all over the world.",
   },
   {
-    image: "https://v3.material-tailwind.com/man-profile-1.jpg",
+    image: "https://images.unsplash.com/photo-1716662318479-a9c0f1cd1a0e?auto=format&fit=crop&q=80&w=400&h=400",
     name: "Mary Joshiash",
     role: "Marketing @ Apple INC",
     quote:
       "Web Summit will increase your appetite, your inspiration, your skills, your motivation and your network.",
   },
   {
-    image: "https://v3.material-tailwind.com/woman-profile-2.jpg",
+    image: "https://images.unsplash.com/photo-1641906840000-4b88f1d44de6?auto=format&fit=crop&q=80&w=400&h=400",
     name: "Marcell Glock",
     role: "CFO @ Apple INC",
     quote:
