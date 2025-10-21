@@ -20,6 +20,8 @@ export const siteConfig = {
   ],
   utm: {
     main: "https://creative-tim.com/ui?utm_source=creativetim_ui&utm_medium=web&utm_campaign=creative_tim_ui",
+    blocks:
+      "https://creative-tim.com/ui/blocks?utm_source=creativetim_ui&utm_medium=web&utm_campaign=creative_tim_ui",
     agents:
       "https://creative-tim.com/ui/agents?utm_source=creativetim_ui&utm_medium=web&utm_campaign=creative_tim_ui",
     sales:
