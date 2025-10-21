@@ -12,6 +12,7 @@ export function ComponentPreviewTabs({
   component,
   source,
   marginOff = false,
+  defaultTab = "preview",
   ...props
 }: React.ComponentProps<"div"> & {
   align?: "center" | "start" | "end"
@@ -19,8 +20,9 @@ export function ComponentPreviewTabs({
   component: React.ReactNode
   source: React.ReactNode
   marginOff?: boolean
+  defaultTab?: "preview" | "code"
 }) {
-  const [tab, setTab] = React.useState("preview")
+  const [tab, setTab] = React.useState<"preview" | "code">(defaultTab)
 
   return (
     <div
@@ -30,7 +32,7 @@ export function ComponentPreviewTabs({
       <Tabs
         className="relative mr-auto w-full"
         value={tab}
-        onValueChange={setTab}
+        onValueChange={(value) => setTab(value as "preview" | "code")}
       >
         <div className="flex items-center justify-between">
           {!hideCode && (
