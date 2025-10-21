@@ -65,7 +65,7 @@ npx @creative-tim/ui@latest add web3-02
 
 ## Documentation
 
-Visit [creative-tim.com/ui](https://creative-tim.com/ui) for complete documentation.
+Visit [creative-tim.com/ui](https://creative-tim.com/ui/docs) for complete documentation.
 
 ## License
 
