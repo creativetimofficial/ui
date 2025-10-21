@@ -15,9 +15,9 @@ import {
 
 export default function CardEcommerce() {
   return (
-    <Card className="w-full max-w-md overflow-hidden">
+    <Card className="w-full max-w-sm overflow-hidden">
       <div className="relative">
-        <div className="aspect-square w-full bg-gradient-to-br from-amber-400 to-orange-500" />
+        <div className="aspect-video w-full bg-gradient-to-br from-amber-400 to-orange-500" />
         <Badge className="absolute top-2 right-2">New</Badge>
       </div>
       <CardHeader>
