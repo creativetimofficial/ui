@@ -58,7 +58,7 @@ export default function OrderHistory01() {
         <p className="text-muted-foreground mt-2">
           See your recent orders, download your invoices.
         </p>
-        <Card className="mt-8 mb-4">
+        <Card className="mt-8 mb-4 py-0">
           <CardContent className="flex flex-wrap items-center justify-between gap-4 p-4">
             <div className="flex gap-10">
               {OPTIONS.map((option, i) => (

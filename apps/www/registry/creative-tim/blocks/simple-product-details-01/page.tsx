@@ -207,7 +207,7 @@ export default function SimpleProductDetails01() {
               {SIMILAR_ITEMS.map((item, index) => (
                 <Card
                   key={index}
-                  className="group cursor-pointer overflow-hidden transition-shadow hover:shadow-lg"
+                  className="group cursor-pointer overflow-hidden transition-shadow hover:shadow-lg py-0"
                 >
                   <CardContent className="p-0">
                     <div className="bg-muted aspect-[4/5] overflow-hidden">
