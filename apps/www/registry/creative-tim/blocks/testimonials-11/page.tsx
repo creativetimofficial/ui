@@ -59,7 +59,7 @@ export default function TestimonialsBlock() {
                     : "bg-transparent"
                 }
               >
-                <CardContent className="px-4">
+                <CardContent className="px-6">
                   <Avatar className="mb-4 h-16 w-16 rounded-lg">
                     <AvatarImage src={image} alt={`${name} image`} />
                     <AvatarFallback>
