@@ -5,41 +5,25 @@
     {
       "name": "index",
       "type": "registry:style",
-      "dependencies": [
-        "class-variance-authority",
-        "lucide-react"
-      ],
-      "devDependencies": [
-        "tw-animate-css"
-      ],
-      "registryDependencies": [
-        "utils"
-      ],
+      "dependencies": ["class-variance-authority", "lucide-react"],
+      "devDependencies": ["tw-animate-css"],
+      "registryDependencies": ["utils"],
       "files": [],
       "cssVars": {}
     },
     {
       "name": "style",
       "type": "registry:style",
-      "dependencies": [
-        "class-variance-authority",
-        "lucide-react"
-      ],
-      "devDependencies": [
-        "tw-animate-css"
-      ],
-      "registryDependencies": [
-        "utils"
-      ],
+      "dependencies": ["class-variance-authority", "lucide-react"],
+      "devDependencies": ["tw-animate-css"],
+      "registryDependencies": ["utils"],
       "files": [],
       "cssVars": {}
     },
     {
       "name": "accordion",
       "type": "registry:ui",
-      "dependencies": [
-        "@radix-ui/react-accordion"
-      ],
+      "dependencies": ["@radix-ui/react-accordion"],
       "files": [
         {
           "path": "registry/creative-tim/ui/accordion.tsx",
@@ -60,12 +44,8 @@
     {
       "name": "alert-dialog",
       "type": "registry:ui",
-      "dependencies": [
-        "@radix-ui/react-alert-dialog"
-      ],
-      "registryDependencies": [
-        "button"
-      ],
+      "dependencies": ["@radix-ui/react-alert-dialog"],
+      "registryDependencies": ["button"],
       "files": [
         {
           "path": "registry/creative-tim/ui/alert-dialog.tsx",
@@ -76,9 +56,7 @@
     {
       "name": "aspect-ratio",
       "type": "registry:ui",
-      "dependencies": [
-        "@radix-ui/react-aspect-ratio"
-      ],
+      "dependencies": ["@radix-ui/react-aspect-ratio"],
       "files": [
         {
           "path": "registry/creative-tim/ui/aspect-ratio.tsx",
@@ -89,9 +67,7 @@
     {
       "name": "avatar",
       "type": "registry:ui",
-      "dependencies": [
-        "@radix-ui/react-avatar"
-      ],
+      "dependencies": ["@radix-ui/react-avatar"],
       "files": [
         {
           "path": "registry/creative-tim/ui/avatar.tsx",
@@ -122,9 +98,7 @@
     {
       "name": "button",
       "type": "registry:ui",
-      "dependencies": [
-        "@radix-ui/react-slot"
-      ],
+      "dependencies": ["@radix-ui/react-slot"],
       "files": [
         {
           "path": "registry/creative-tim/ui/button.tsx",
@@ -135,13 +109,8 @@
     {
       "name": "calendar",
       "type": "registry:ui",
-      "dependencies": [
-        "react-day-picker",
-        "date-fns"
-      ],
-      "registryDependencies": [
-        "button"
-      ],
+      "dependencies": ["react-day-picker", "date-fns"],
+      "registryDependencies": ["button"],
       "files": [
         {
           "path": "registry/creative-tim/ui/calendar.tsx",
@@ -162,12 +131,8 @@
     {
       "name": "carousel",
       "type": "registry:ui",
-      "dependencies": [
-        "embla-carousel-react"
-      ],
-      "registryDependencies": [
-        "button"
-      ],
+      "dependencies": ["embla-carousel-react"],
+      "registryDependencies": ["button"],
       "files": [
         {
           "path": "registry/creative-tim/ui/carousel.tsx",
@@ -178,13 +143,8 @@
     {
       "name": "chart",
       "type": "registry:ui",
-      "dependencies": [
-        "recharts",
-        "lucide-react"
-      ],
-      "registryDependencies": [
-        "card"
-      ],
+      "dependencies": ["recharts", "lucide-react"],
+      "registryDependencies": ["card"],
       "files": [
         {
           "path": "registry/creative-tim/ui/chart.tsx",
@@ -195,9 +155,7 @@
     {
       "name": "checkbox",
       "type": "registry:ui",
-      "dependencies": [
-        "@radix-ui/react-checkbox"
-      ],
+      "dependencies": ["@radix-ui/react-checkbox"],
       "files": [
         {
           "path": "registry/creative-tim/ui/checkbox.tsx",
@@ -208,9 +166,7 @@
     {
       "name": "collapsible",
       "type": "registry:ui",
-      "dependencies": [
-        "@radix-ui/react-collapsible"
-      ],
+      "dependencies": ["@radix-ui/react-collapsible"],
       "files": [
         {
           "path": "registry/creative-tim/ui/collapsible.tsx",
@@ -221,12 +177,8 @@
     {
       "name": "command",
       "type": "registry:ui",
-      "dependencies": [
-        "cmdk"
-      ],
-      "registryDependencies": [
-        "dialog"
-      ],
+      "dependencies": ["cmdk"],
+      "registryDependencies": ["dialog"],
       "files": [
         {
           "path": "registry/creative-tim/ui/command.tsx",
@@ -237,9 +189,7 @@
     {
       "name": "context-menu",
       "type": "registry:ui",
-      "dependencies": [
-        "@radix-ui/react-context-menu"
-      ],
+      "dependencies": ["@radix-ui/react-context-menu"],
       "files": [
         {
           "path": "registry/creative-tim/ui/context-menu.tsx",
@@ -250,9 +200,7 @@
     {
       "name": "dialog",
       "type": "registry:ui",
-      "dependencies": [
-        "@radix-ui/react-dialog"
-      ],
+      "dependencies": ["@radix-ui/react-dialog"],
       "files": [
         {
           "path": "registry/creative-tim/ui/dialog.tsx",
@@ -263,9 +211,7 @@
     {
       "name": "drawer",
       "type": "registry:ui",
-      "dependencies": [
-        "vaul"
-      ],
+      "dependencies": ["vaul"],
       "files": [
         {
           "path": "registry/creative-tim/ui/drawer.tsx",
@@ -276,9 +222,7 @@
     {
       "name": "dropdown-menu",
       "type": "registry:ui",
-      "dependencies": [
-        "@radix-ui/react-dropdown-menu"
-      ],
+      "dependencies": ["@radix-ui/react-dropdown-menu"],
       "files": [
         {
           "path": "registry/creative-tim/ui/dropdown-menu.tsx",
@@ -289,15 +233,8 @@
     {
       "name": "form",
       "type": "registry:ui",
-      "dependencies": [
-        "react-hook-form",
-        "@hookform/resolvers",
-        "zod"
-      ],
-      "registryDependencies": [
-        "button",
-        "label"
-      ],
+      "dependencies": ["react-hook-form", "@hookform/resolvers", "zod"],
+      "registryDependencies": ["button", "label"],
       "files": [
         {
           "path": "registry/creative-tim/ui/form.tsx",
@@ -308,9 +245,7 @@
     {
       "name": "hover-card",
       "type": "registry:ui",
-      "dependencies": [
-        "@radix-ui/react-hover-card"
-      ],
+      "dependencies": ["@radix-ui/react-hover-card"],
       "files": [
         {
           "path": "registry/creative-tim/ui/hover-card.tsx",
@@ -331,12 +266,8 @@
     {
       "name": "input-otp",
       "type": "registry:ui",
-      "dependencies": [
-        "input-otp"
-      ],
-      "registryDependencies": [
-        "input"
-      ],
+      "dependencies": ["input-otp"],
+      "registryDependencies": ["input"],
       "files": [
         {
           "path": "registry/creative-tim/ui/input-otp.tsx",
@@ -347,9 +278,7 @@
     {
       "name": "label",
       "type": "registry:ui",
-      "dependencies": [
-        "@radix-ui/react-label"
-      ],
+      "dependencies": ["@radix-ui/react-label"],
       "files": [
         {
           "path": "registry/creative-tim/ui/label.tsx",
@@ -360,9 +289,7 @@
     {
       "name": "menubar",
       "type": "registry:ui",
-      "dependencies": [
-        "@radix-ui/react-menubar"
-      ],
+      "dependencies": ["@radix-ui/react-menubar"],
       "files": [
         {
           "path": "registry/creative-tim/ui/menubar.tsx",
@@ -373,9 +300,7 @@
     {
       "name": "navigation-menu",
       "type": "registry:ui",
-      "dependencies": [
-        "@radix-ui/react-navigation-menu"
-      ],
+      "dependencies": ["@radix-ui/react-navigation-menu"],
       "files": [
         {
           "path": "registry/creative-tim/ui/navigation-menu.tsx",
@@ -386,9 +311,7 @@
     {
       "name": "pagination",
       "type": "registry:ui",
-      "registryDependencies": [
-        "button"
-      ],
+      "registryDependencies": ["button"],
       "files": [
         {
           "path": "registry/creative-tim/ui/pagination.tsx",
@@ -399,9 +322,7 @@
     {
       "name": "popover",
       "type": "registry:ui",
-      "dependencies": [
-        "@radix-ui/react-popover"
-      ],
+      "dependencies": ["@radix-ui/react-popover"],
       "files": [
         {
           "path": "registry/creative-tim/ui/popover.tsx",
@@ -412,9 +333,7 @@
     {
       "name": "progress",
       "type": "registry:ui",
-      "dependencies": [
-        "@radix-ui/react-progress"
-      ],
+      "dependencies": ["@radix-ui/react-progress"],
       "files": [
         {
           "path": "registry/creative-tim/ui/progress.tsx",
@@ -425,9 +344,7 @@
     {
       "name": "radio-group",
       "type": "registry:ui",
-      "dependencies": [
-        "@radix-ui/react-radio-group"
-      ],
+      "dependencies": ["@radix-ui/react-radio-group"],
       "files": [
         {
           "path": "registry/creative-tim/ui/radio-group.tsx",
@@ -438,9 +355,7 @@
     {
       "name": "resizable",
       "type": "registry:ui",
-      "dependencies": [
-        "react-resizable-panels"
-      ],
+      "dependencies": ["react-resizable-panels"],
       "files": [
         {
           "path": "registry/creative-tim/ui/resizable.tsx",
@@ -451,9 +366,7 @@
     {
       "name": "scroll-area",
       "type": "registry:ui",
-      "dependencies": [
-        "@radix-ui/react-scroll-area"
-      ],
+      "dependencies": ["@radix-ui/react-scroll-area"],
       "files": [
         {
           "path": "registry/creative-tim/ui/scroll-area.tsx",
@@ -464,9 +377,7 @@
     {
       "name": "select",
       "type": "registry:ui",
-      "dependencies": [
-        "@radix-ui/react-select"
-      ],
+      "dependencies": ["@radix-ui/react-select"],
       "files": [
         {
           "path": "registry/creative-tim/ui/select.tsx",
@@ -477,9 +388,7 @@
     {
       "name": "separator",
       "type": "registry:ui",
-      "dependencies": [
-        "@radix-ui/react-separator"
-      ],
+      "dependencies": ["@radix-ui/react-separator"],
       "files": [
         {
           "path": "registry/creative-tim/ui/separator.tsx",
@@ -490,9 +399,7 @@
     {
       "name": "sheet",
       "type": "registry:ui",
-      "dependencies": [
-        "@radix-ui/react-dialog"
-      ],
+      "dependencies": ["@radix-ui/react-dialog"],
       "files": [
         {
           "path": "registry/creative-tim/ui/sheet.tsx",
@@ -503,9 +410,7 @@
     {
       "name": "sidebar",
       "type": "registry:ui",
-      "dependencies": [
-        "@radix-ui/react-slot"
-      ],
+      "dependencies": ["@radix-ui/react-slot"],
       "registryDependencies": [
         "button",
         "separator",
@@ -533,9 +438,7 @@
     {
       "name": "slider",
       "type": "registry:ui",
-      "dependencies": [
-        "@radix-ui/react-slider"
-      ],
+      "dependencies": ["@radix-ui/react-slider"],
       "files": [
         {
           "path": "registry/creative-tim/ui/slider.tsx",
@@ -546,9 +449,7 @@
     {
       "name": "sonner",
       "type": "registry:ui",
-      "dependencies": [
-        "sonner"
-      ],
+      "dependencies": ["sonner"],
       "files": [
         {
           "path": "registry/creative-tim/ui/sonner.tsx",
@@ -559,9 +460,7 @@
     {
       "name": "switch",
       "type": "registry:ui",
-      "dependencies": [
-        "@radix-ui/react-switch"
-      ],
+      "dependencies": ["@radix-ui/react-switch"],
       "files": [
         {
           "path": "registry/creative-tim/ui/switch.tsx",
@@ -582,9 +481,7 @@
     {
       "name": "tabs",
       "type": "registry:ui",
-      "dependencies": [
-        "@radix-ui/react-tabs"
-      ],
+      "dependencies": ["@radix-ui/react-tabs"],
       "files": [
         {
           "path": "registry/creative-tim/ui/tabs.tsx",
@@ -605,9 +502,7 @@
     {
       "name": "toggle",
       "type": "registry:ui",
-      "dependencies": [
-        "@radix-ui/react-toggle"
-      ],
+      "dependencies": ["@radix-ui/react-toggle"],
       "files": [
         {
           "path": "registry/creative-tim/ui/toggle.tsx",
@@ -618,9 +513,7 @@
     {
       "name": "toggle-group",
       "type": "registry:ui",
-      "dependencies": [
-        "@radix-ui/react-toggle-group"
-      ],
+      "dependencies": ["@radix-ui/react-toggle-group"],
       "files": [
         {
           "path": "registry/creative-tim/ui/toggle-group.tsx",
@@ -631,9 +524,7 @@
     {
       "name": "tooltip",
       "type": "registry:ui",
-      "dependencies": [
-        "@radix-ui/react-tooltip"
-      ],
+      "dependencies": ["@radix-ui/react-tooltip"],
       "files": [
         {
           "path": "registry/creative-tim/ui/tooltip.tsx",
@@ -644,14 +535,8 @@
     {
       "name": "software-purchase-card",
       "type": "registry:ui",
-      "dependencies": [
-        "lucide-react"
-      ],
-      "registryDependencies": [
-        "button",
-        "card",
-        "badge"
-      ],
+      "dependencies": ["lucide-react"],
+      "registryDependencies": ["button", "card", "badge"],
       "files": [
         {
           "path": "registry/creative-tim/ui/software-purchase-card.tsx",
@@ -662,14 +547,8 @@
     {
       "name": "card-demo",
       "type": "registry:ui",
-      "dependencies": [
-        "lucide-react"
-      ],
-      "registryDependencies": [
-        "card",
-        "button",
-        "badge"
-      ],
+      "dependencies": ["lucide-react"],
+      "registryDependencies": ["card", "button", "badge"],
       "files": [
         {
           "path": "registry/creative-tim/examples/card-demo.tsx",
@@ -680,9 +559,7 @@
     {
       "name": "card-plain",
       "type": "registry:ui",
-      "registryDependencies": [
-        "card"
-      ],
+      "registryDependencies": ["card"],
       "files": [
         {
           "path": "registry/creative-tim/examples/card-plain.tsx",
@@ -693,10 +570,7 @@
     {
       "name": "card-with-button",
       "type": "registry:ui",
-      "registryDependencies": [
-        "card",
-        "button"
-      ],
+      "registryDependencies": ["card", "button"],
       "files": [
         {
           "path": "registry/creative-tim/examples/card-with-button.tsx",
@@ -707,13 +581,8 @@
     {
       "name": "card-blog",
       "type": "registry:ui",
-      "dependencies": [
-        "lucide-react"
-      ],
-      "registryDependencies": [
-        "card",
-        "button"
-      ],
+      "dependencies": ["lucide-react"],
+      "registryDependencies": ["card", "button"],
       "files": [
         {
           "path": "registry/creative-tim/examples/card-blog.tsx",
@@ -724,14 +593,8 @@
     {
       "name": "card-ecommerce",
       "type": "registry:ui",
-      "dependencies": [
-        "lucide-react"
-      ],
-      "registryDependencies": [
-        "card",
-        "button",
-        "badge"
-      ],
+      "dependencies": ["lucide-react"],
+      "registryDependencies": ["card", "button", "badge"],
       "files": [
         {
           "path": "registry/creative-tim/examples/card-ecommerce.tsx",
@@ -743,10 +606,7 @@
       "name": "software-purchase-01",
       "type": "registry:block",
       "description": "Software purchase approval card",
-      "registryDependencies": [
-        "software-purchase-card",
-        "separator"
-      ],
+      "registryDependencies": ["software-purchase-card", "separator"],
       "files": [
         {
           "path": "registry/creative-tim/blocks/software-purchase-01/page.tsx",
@@ -760,18 +620,13 @@
         "mobile": "component",
         "details": "A comprehensive software purchase approval interface featuring company information, pricing tiers, and detailed cost breakdown with tax calculations."
       },
-      "categories": [
-        "forms"
-      ]
+      "categories": ["forms"]
     },
     {
       "name": "billing-information-01",
       "type": "registry:block",
       "description": "Manage billing contacts and company information",
-      "registryDependencies": [
-        "button",
-        "card"
-      ],
+      "registryDependencies": ["button", "card"],
       "files": [
         {
           "path": "registry/creative-tim/blocks/billing-information-01/page.tsx",
@@ -785,17 +640,13 @@
         "mobile": "component",
         "details": "Easily manage billing contacts and information associated with different companies within one platform. Built with shadcn/ui Card and Button components for a clean, accessible interface. Perfect for multi-company billing management, enterprise dashboards, and SaaS platforms requiring organized billing contact management."
       },
-      "categories": [
-        "billing"
-      ]
+      "categories": ["billing"]
     },
     {
       "name": "card-display-01",
       "type": "registry:block",
       "description": "Credit card display with dark and light themes",
-      "registryDependencies": [
-        "card"
-      ],
+      "registryDependencies": ["card"],
       "files": [
         {
           "path": "registry/creative-tim/blocks/card-display-01/page.tsx",
@@ -809,19 +660,13 @@
         "mobile": "component",
         "details": "Showcases dark and light versions of a card with bank brand logos. Built with shadcn/ui Card component for consistent styling across themes. Ideal for payment forms, checkout processes, wallet sections, financial dashboards, and any interface requiring elegant credit card visualization with theme support."
       },
-      "categories": [
-        "billing"
-      ]
+      "categories": ["billing"]
     },
     {
       "name": "payment-method-01",
       "type": "registry:block",
       "description": "Payment method management with edit and delete",
-      "registryDependencies": [
-        "button",
-        "card",
-        "tooltip"
-      ],
+      "registryDependencies": ["button", "card", "tooltip"],
       "files": [
         {
           "path": "registry/creative-tim/blocks/payment-method-01/page.tsx",
@@ -835,23 +680,14 @@
         "mobile": "component",
         "details": "Manage payment methods with a straightforward UI layout featuring shadcn/ui Card, Button, and Tooltip components. Card brands are clearly identified, sensitive information is partially hidden for security, and editing/deleting functions are easily accessible. Includes a call-to-action button for adding new payment methods. Perfect for account settings, billing pages, and checkout flows."
       },
-      "categories": [
-        "billing"
-      ]
+      "categories": ["billing"]
     },
     {
       "name": "transaction-history-01",
       "type": "registry:block",
       "description": "Financial transaction history with trend indicators",
-      "dependencies": [
-        "date-fns"
-      ],
-      "registryDependencies": [
-        "button",
-        "calendar",
-        "card",
-        "popover"
-      ],
+      "dependencies": ["date-fns"],
+      "registryDependencies": ["button", "calendar", "card", "popover"],
       "files": [
         {
           "path": "registry/creative-tim/blocks/transaction-history-01/page.tsx",
@@ -865,19 +701,13 @@
         "mobile": "component",
         "details": "Provides a detailed record of financial transactions with various service providers, featuring trend arrows indicating whether values are up or down. Built with shadcn/ui Button, Calendar, Card, and Popover components for an interactive filtering experience. Includes date range selection for easy transaction filtering. Ideal for billing dashboards, financial reports, and transaction monitoring interfaces."
       },
-      "categories": [
-        "billing"
-      ]
+      "categories": ["billing"]
     },
     {
       "name": "invoices-01",
       "type": "registry:block",
       "description": "Invoice overview with status badges and download",
-      "registryDependencies": [
-        "badge",
-        "button",
-        "separator"
-      ],
+      "registryDependencies": ["badge", "button", "separator"],
       "files": [
         {
           "path": "registry/creative-tim/blocks/invoices-01/page.tsx",
@@ -891,19 +721,13 @@
         "mobile": "component",
         "details": "Provides an overview of invoices with shadcn/ui Badge components indicating payment status (paid, pending, overdue) and Button components for downloading invoice PDFs. Clean, organized layout with visual separators for easy scanning. Perfect for billing portals, accounting dashboards, and financial management systems requiring clear invoice tracking and download capabilities."
       },
-      "categories": [
-        "billing"
-      ]
+      "categories": ["billing"]
     },
     {
       "name": "simple-blog-content-01",
       "type": "registry:block",
       "description": "Simple blog content cards",
-      "registryDependencies": [
-        "avatar",
-        "badge",
-        "card"
-      ],
+      "registryDependencies": ["avatar", "badge", "card"],
       "files": [
         {
           "path": "registry/creative-tim/blocks/simple-blog-content-01/page.tsx",
@@ -916,20 +740,13 @@
         "container": "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
         "mobile": "component"
       },
-      "categories": [
-        "blog-sections"
-      ]
+      "categories": ["blog-sections"]
     },
     {
       "name": "blog-cards-layout-01",
       "type": "registry:block",
       "description": "Blog cards with view more button",
-      "registryDependencies": [
-        "avatar",
-        "badge",
-        "button",
-        "card"
-      ],
+      "registryDependencies": ["avatar", "badge", "button", "card"],
       "files": [
         {
           "path": "registry/creative-tim/blocks/blog-cards-layout-01/page.tsx",
@@ -942,18 +759,13 @@
         "container": "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
         "mobile": "component"
       },
-      "categories": [
-        "blog-sections"
-      ]
+      "categories": ["blog-sections"]
     },
     {
       "name": "blog-post-preview-tags-01",
       "type": "registry:block",
       "description": "Blog posts with tags",
-      "registryDependencies": [
-        "badge",
-        "button"
-      ],
+      "registryDependencies": ["badge", "button"],
       "files": [
         {
           "path": "registry/creative-tim/blocks/blog-post-preview-tags-01/page.tsx",
@@ -966,18 +778,13 @@
         "container": "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
         "mobile": "component"
       },
-      "categories": [
-        "blog-sections"
-      ]
+      "categories": ["blog-sections"]
     },
     {
       "name": "highlighted-blog-posts-01",
       "type": "registry:block",
       "description": "Highlighted blog posts with icons",
-      "registryDependencies": [
-        "button",
-        "card"
-      ],
+      "registryDependencies": ["button", "card"],
       "files": [
         {
           "path": "registry/creative-tim/blocks/highlighted-blog-posts-01/page.tsx",
@@ -990,18 +797,13 @@
         "container": "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
         "mobile": "component"
       },
-      "categories": [
-        "blog-sections"
-      ]
+      "categories": ["blog-sections"]
     },
     {
       "name": "blog-rectangular-images-01",
       "type": "registry:block",
       "description": "Blog posts with rectangular images",
-      "registryDependencies": [
-        "avatar",
-        "badge"
-      ],
+      "registryDependencies": ["avatar", "badge"],
       "files": [
         {
           "path": "registry/creative-tim/blocks/blog-rectangular-images-01/page.tsx",
@@ -1014,17 +816,13 @@
         "container": "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
         "mobile": "component"
       },
-      "categories": [
-        "blog-sections"
-      ]
+      "categories": ["blog-sections"]
     },
     {
       "name": "large-blog-preview-01",
       "type": "registry:block",
       "description": "Large blog post preview",
-      "registryDependencies": [
-        "avatar"
-      ],
+      "registryDependencies": ["avatar"],
       "files": [
         {
           "path": "registry/creative-tim/blocks/large-blog-preview-01/page.tsx",
@@ -1037,20 +835,13 @@
         "container": "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
         "mobile": "component"
       },
-      "categories": [
-        "blog-sections"
-      ]
+      "categories": ["blog-sections"]
     },
     {
       "name": "simple-product-details-01",
       "type": "registry:block",
       "description": "Simple product details grid",
-      "registryDependencies": [
-        "button",
-        "card",
-        "accordion",
-        "badge"
-      ],
+      "registryDependencies": ["button", "card", "accordion", "badge"],
       "files": [
         {
           "path": "registry/creative-tim/blocks/simple-product-details-01/page.tsx",
@@ -1063,19 +854,13 @@
         "container": "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
         "mobile": "component"
       },
-      "categories": [
-        "ecommerce"
-      ]
+      "categories": ["ecommerce"]
     },
     {
       "name": "grid-ecommerce-01",
       "type": "registry:block",
       "description": "Product grid with filters",
-      "registryDependencies": [
-        "button",
-        "card",
-        "select"
-      ],
+      "registryDependencies": ["button", "card", "select"],
       "files": [
         {
           "path": "registry/creative-tim/blocks/grid-ecommerce-01/page.tsx",
@@ -1088,18 +873,13 @@
         "container": "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
         "mobile": "component"
       },
-      "categories": [
-        "ecommerce"
-      ]
+      "categories": ["ecommerce"]
     },
     {
       "name": "promotional-cards-01",
       "type": "registry:block",
       "description": "Promotional product cards",
-      "registryDependencies": [
-        "button",
-        "card"
-      ],
+      "registryDependencies": ["button", "card"],
       "files": [
         {
           "path": "registry/creative-tim/blocks/promotional-cards-01/page.tsx",
@@ -1112,19 +892,13 @@
         "container": "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
         "mobile": "component"
       },
-      "categories": [
-        "ecommerce"
-      ]
+      "categories": ["ecommerce"]
     },
     {
       "name": "order-history-01",
       "type": "registry:block",
       "description": "Order history table",
-      "registryDependencies": [
-        "badge",
-        "button",
-        "card"
-      ],
+      "registryDependencies": ["badge", "button", "card"],
       "files": [
         {
           "path": "registry/creative-tim/blocks/order-history-01/page.tsx",
@@ -1137,17 +911,13 @@
         "container": "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
         "mobile": "component"
       },
-      "categories": [
-        "ecommerce"
-      ]
+      "categories": ["ecommerce"]
     },
     {
       "name": "empty-shopping-cart-01",
       "type": "registry:block",
       "description": "Empty shopping cart state",
-      "registryDependencies": [
-        "button"
-      ],
+      "registryDependencies": ["button"],
       "files": [
         {
           "path": "registry/creative-tim/blocks/empty-shopping-cart-01/page.tsx",
@@ -1160,20 +930,13 @@
         "container": "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
         "mobile": "component"
       },
-      "categories": [
-        "ecommerce"
-      ]
+      "categories": ["ecommerce"]
     },
     {
       "name": "digital-product-overview-01",
       "type": "registry:block",
       "description": "Digital product with plan options",
-      "registryDependencies": [
-        "button",
-        "label",
-        "radio-group",
-        "badge"
-      ],
+      "registryDependencies": ["button", "label", "radio-group", "badge"],
       "files": [
         {
           "path": "registry/creative-tim/blocks/digital-product-overview-01/page.tsx",
@@ -1186,17 +949,13 @@
         "container": "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
         "mobile": "component"
       },
-      "categories": [
-        "ecommerce"
-      ]
+      "categories": ["ecommerce"]
     },
     {
       "name": "product-description-01",
       "type": "registry:block",
       "description": "Product description with gallery",
-      "registryDependencies": [
-        "button"
-      ],
+      "registryDependencies": ["button"],
       "files": [
         {
           "path": "registry/creative-tim/blocks/product-description-01/page.tsx",
@@ -1209,19 +968,13 @@
         "container": "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
         "mobile": "component"
       },
-      "categories": [
-        "ecommerce"
-      ]
+      "categories": ["ecommerce"]
     },
     {
       "name": "dark-product-overview-01",
       "type": "registry:block",
       "description": "Dark themed product overview",
-      "registryDependencies": [
-        "button",
-        "tabs",
-        "badge"
-      ],
+      "registryDependencies": ["button", "tabs", "badge"],
       "files": [
         {
           "path": "registry/creative-tim/blocks/dark-product-overview-01/page.tsx",
@@ -1234,9 +987,7 @@
         "container": "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
         "mobile": "component"
       },
-      "categories": [
-        "ecommerce"
-      ]
+      "categories": ["ecommerce"]
     },
     {
       "name": "shopping-cart-01",
@@ -1262,9 +1013,7 @@
         "container": "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
         "mobile": "component"
       },
-      "categories": [
-        "ecommerce"
-      ]
+      "categories": ["ecommerce"]
     },
     {
       "name": "checkout-01",
@@ -1290,18 +1039,13 @@
         "container": "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
         "mobile": "component"
       },
-      "categories": [
-        "ecommerce"
-      ]
+      "categories": ["ecommerce"]
     },
     {
       "name": "complex-product-description-01",
       "type": "registry:block",
       "description": "Product description with accordion",
-      "registryDependencies": [
-        "accordion",
-        "button"
-      ],
+      "registryDependencies": ["accordion", "button"],
       "files": [
         {
           "path": "registry/creative-tim/blocks/complex-product-description-01/page.tsx",
@@ -1314,18 +1058,13 @@
         "container": "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
         "mobile": "component"
       },
-      "categories": [
-        "ecommerce"
-      ]
+      "categories": ["ecommerce"]
     },
     {
       "name": "interactive-product-preview-01",
       "type": "registry:block",
       "description": "Interactive room product preview",
-      "registryDependencies": [
-        "button",
-        "badge"
-      ],
+      "registryDependencies": ["button", "badge"],
       "files": [
         {
           "path": "registry/creative-tim/blocks/interactive-product-preview-01/page.tsx",
@@ -1338,20 +1077,13 @@
         "container": "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
         "mobile": "component"
       },
-      "categories": [
-        "ecommerce"
-      ]
+      "categories": ["ecommerce"]
     },
     {
       "name": "order-details-01",
       "type": "registry:block",
       "description": "Order details with timeline",
-      "registryDependencies": [
-        "button",
-        "card",
-        "badge",
-        "separator"
-      ],
+      "registryDependencies": ["button", "card", "badge", "separator"],
       "files": [
         {
           "path": "registry/creative-tim/blocks/order-details-01/page.tsx",
@@ -1364,18 +1096,13 @@
         "container": "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
         "mobile": "component"
       },
-      "categories": [
-        "ecommerce"
-      ]
+      "categories": ["ecommerce"]
     },
     {
       "name": "product-details-01",
       "type": "registry:block",
       "description": "Product details with image carousel",
-      "registryDependencies": [
-        "button",
-        "card"
-      ],
+      "registryDependencies": ["button", "card"],
       "files": [
         {
           "path": "registry/creative-tim/blocks/product-details-01/page.tsx",
@@ -1388,19 +1115,13 @@
         "container": "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
         "mobile": "component"
       },
-      "categories": [
-        "ecommerce"
-      ]
+      "categories": ["ecommerce"]
     },
     {
       "name": "product-listing-filters-01",
       "type": "registry:block",
       "description": "Product listing with filters and sort",
-      "registryDependencies": [
-        "button",
-        "badge",
-        "select"
-      ],
+      "registryDependencies": ["button", "badge", "select"],
       "files": [
         {
           "path": "registry/creative-tim/blocks/product-listing-filters-01/page.tsx",
@@ -1413,19 +1134,13 @@
         "container": "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
         "mobile": "component"
       },
-      "categories": [
-        "ecommerce"
-      ]
+      "categories": ["ecommerce"]
     },
     {
       "name": "ecommerce-sections-01",
       "type": "registry:block",
       "description": "Runway video spotlight with product cards",
-      "registryDependencies": [
-        "badge",
-        "button",
-        "card"
-      ],
+      "registryDependencies": ["badge", "button", "card"],
       "files": [
         {
           "path": "registry/creative-tim/blocks/ecommerce-sections-01/page.tsx",
@@ -1438,18 +1153,13 @@
         "container": "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
         "mobile": "component"
       },
-      "categories": [
-        "ecommerce"
-      ]
+      "categories": ["ecommerce"]
     },
     {
       "name": "ecommerce-sections-02",
       "type": "registry:block",
       "description": "Luxury product detail page with image gallery",
-      "registryDependencies": [
-        "badge",
-        "button"
-      ],
+      "registryDependencies": ["badge", "button"],
       "files": [
         {
           "path": "registry/creative-tim/blocks/ecommerce-sections-02/page.tsx",
@@ -1462,9 +1172,7 @@
         "container": "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
         "mobile": "component"
       },
-      "categories": [
-        "ecommerce"
-      ]
+      "categories": ["ecommerce"]
     },
     {
       "name": "simple-faq-01",
@@ -1483,17 +1191,13 @@
         "container": "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
         "mobile": "component"
       },
-      "categories": [
-        "faqs"
-      ]
+      "categories": ["faqs"]
     },
     {
       "name": "faqs-list-01",
       "type": "registry:block",
       "description": "FAQ list with accordion",
-      "registryDependencies": [
-        "accordion"
-      ],
+      "registryDependencies": ["accordion"],
       "files": [
         {
           "path": "registry/creative-tim/blocks/faqs-list-01/page.tsx",
@@ -1506,17 +1210,13 @@
         "container": "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
         "mobile": "component"
       },
-      "categories": [
-        "faqs"
-      ]
+      "categories": ["faqs"]
     },
     {
       "name": "faq-left-title-01",
       "type": "registry:block",
       "description": "FAQ with left-aligned title and card grid",
-      "registryDependencies": [
-        "card"
-      ],
+      "registryDependencies": ["card"],
       "files": [
         {
           "path": "registry/creative-tim/blocks/faq-left-title-01/page.tsx",
@@ -1529,18 +1229,13 @@
         "container": "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
         "mobile": "component"
       },
-      "categories": [
-        "faqs"
-      ]
+      "categories": ["faqs"]
     },
     {
       "name": "faqs-grid-cta-01",
       "type": "registry:block",
       "description": "FAQ grid with CTA section",
-      "registryDependencies": [
-        "button",
-        "card"
-      ],
+      "registryDependencies": ["button", "card"],
       "files": [
         {
           "path": "registry/creative-tim/blocks/faqs-grid-cta-01/page.tsx",
@@ -1553,18 +1248,13 @@
         "container": "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
         "mobile": "component"
       },
-      "categories": [
-        "faqs"
-      ]
+      "categories": ["faqs"]
     },
     {
       "name": "faqs-cards-icons-01",
       "type": "registry:block",
       "description": "FAQ cards with icons and CTA",
-      "registryDependencies": [
-        "button",
-        "card"
-      ],
+      "registryDependencies": ["button", "card"],
       "files": [
         {
           "path": "registry/creative-tim/blocks/faqs-cards-icons-01/page.tsx",
@@ -1577,17 +1267,13 @@
         "container": "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
         "mobile": "component"
       },
-      "categories": [
-        "faqs"
-      ]
+      "categories": ["faqs"]
     },
     {
       "name": "faqs-grid-01",
       "type": "registry:block",
       "description": "Simple FAQ grid layout",
-      "registryDependencies": [
-        "card"
-      ],
+      "registryDependencies": ["card"],
       "files": [
         {
           "path": "registry/creative-tim/blocks/faqs-grid-01/page.tsx",
@@ -1600,9 +1286,7 @@
         "container": "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
         "mobile": "component"
       },
-      "categories": [
-        "faqs"
-      ]
+      "categories": ["faqs"]
     },
     {
       "name": "contact-sections-01",
@@ -1628,9 +1312,7 @@
         "container": "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
         "mobile": "component"
       },
-      "categories": [
-        "contact"
-      ]
+      "categories": ["contact"]
     },
     {
       "name": "contact-sections-02",
@@ -1655,21 +1337,13 @@
         "container": "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
         "mobile": "component"
       },
-      "categories": [
-        "contact"
-      ]
+      "categories": ["contact"]
     },
     {
       "name": "contact-sections-03",
       "type": "registry:block",
       "description": "Contact form with dark info panel",
-      "registryDependencies": [
-        "button",
-        "card",
-        "input",
-        "label",
-        "textarea"
-      ],
+      "registryDependencies": ["button", "card", "input", "label", "textarea"],
       "files": [
         {
           "path": "registry/creative-tim/blocks/contact-sections-03/page.tsx",
@@ -1682,17 +1356,13 @@
         "container": "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
         "mobile": "component"
       },
-      "categories": [
-        "contact"
-      ]
+      "categories": ["contact"]
     },
     {
       "name": "contact-sections-04",
       "type": "registry:block",
       "description": "Minimalist contact with icon cards",
-      "registryDependencies": [
-        "card"
-      ],
+      "registryDependencies": ["card"],
       "files": [
         {
           "path": "registry/creative-tim/blocks/contact-sections-04/page.tsx",
@@ -1705,21 +1375,13 @@
         "container": "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
         "mobile": "component"
       },
-      "categories": [
-        "contact"
-      ]
+      "categories": ["contact"]
     },
     {
       "name": "contact-sections-05",
       "type": "registry:block",
       "description": "Contact form with map and option selection",
-      "registryDependencies": [
-        "badge",
-        "button",
-        "input",
-        "label",
-        "textarea"
-      ],
+      "registryDependencies": ["badge", "button", "input", "label", "textarea"],
       "files": [
         {
           "path": "registry/creative-tim/blocks/contact-sections-05/page.tsx",
@@ -1732,9 +1394,7 @@
         "container": "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
         "mobile": "component"
       },
-      "categories": [
-        "contact"
-      ]
+      "categories": ["contact"]
     },
     {
       "name": "contact-sections-06",
@@ -1753,9 +1413,7 @@
         "container": "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
         "mobile": "component"
       },
-      "categories": [
-        "contact"
-      ]
+      "categories": ["contact"]
     },
     {
       "name": "contact-sections-07",
@@ -1781,9 +1439,7 @@
         "container": "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
         "mobile": "component"
       },
-      "categories": [
-        "contact"
-      ]
+      "categories": ["contact"]
     },
     {
       "name": "contact-sections-08",
@@ -1809,9 +1465,7 @@
         "container": "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
         "mobile": "component"
       },
-      "categories": [
-        "contact"
-      ]
+      "categories": ["contact"]
     },
     {
       "name": "contact-sections-09",
@@ -1837,21 +1491,13 @@
         "container": "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
         "mobile": "component"
       },
-      "categories": [
-        "contact"
-      ]
+      "categories": ["contact"]
     },
     {
       "name": "contact-sections-10",
       "type": "registry:block",
       "description": "Contact form with info cards",
-      "registryDependencies": [
-        "button",
-        "card",
-        "input",
-        "label",
-        "textarea"
-      ],
+      "registryDependencies": ["button", "card", "input", "label", "textarea"],
       "files": [
         {
           "path": "registry/creative-tim/blocks/contact-sections-10/page.tsx",
@@ -1864,20 +1510,13 @@
         "container": "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
         "mobile": "component"
       },
-      "categories": [
-        "contact"
-      ]
+      "categories": ["contact"]
     },
     {
       "name": "contact-sections-11",
       "type": "registry:block",
       "description": "Dark gradient contact form with backdrop blur",
-      "registryDependencies": [
-        "button",
-        "input",
-        "label",
-        "textarea"
-      ],
+      "registryDependencies": ["button", "input", "label", "textarea"],
       "files": [
         {
           "path": "registry/creative-tim/blocks/contact-sections-11/page.tsx",
@@ -1890,20 +1529,13 @@
         "container": "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
         "mobile": "component"
       },
-      "categories": [
-        "contact"
-      ]
+      "categories": ["contact"]
     },
     {
       "name": "contact-sections-12",
       "type": "registry:block",
       "description": "Contact form with background image overlay",
-      "registryDependencies": [
-        "button",
-        "input",
-        "label",
-        "textarea"
-      ],
+      "registryDependencies": ["button", "input", "label", "textarea"],
       "files": [
         {
           "path": "registry/creative-tim/blocks/contact-sections-12/page.tsx",
@@ -1916,21 +1548,13 @@
         "container": "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
         "mobile": "component"
       },
-      "categories": [
-        "contact"
-      ]
+      "categories": ["contact"]
     },
     {
       "name": "contact-sections-13",
       "type": "registry:block",
       "description": "Contact information cards with form",
-      "registryDependencies": [
-        "button",
-        "card",
-        "input",
-        "label",
-        "textarea"
-      ],
+      "registryDependencies": ["button", "card", "input", "label", "textarea"],
       "files": [
         {
           "path": "registry/creative-tim/blocks/contact-sections-13/page.tsx",
@@ -1943,20 +1567,13 @@
         "container": "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
         "mobile": "component"
       },
-      "categories": [
-        "contact"
-      ]
+      "categories": ["contact"]
     },
     {
       "name": "contact-sections-14",
       "type": "registry:block",
       "description": "Gradient background contact form with asterisk fields",
-      "registryDependencies": [
-        "button",
-        "input",
-        "label",
-        "textarea"
-      ],
+      "registryDependencies": ["button", "input", "label", "textarea"],
       "files": [
         {
           "path": "registry/creative-tim/blocks/contact-sections-14/page.tsx",
@@ -1969,20 +1586,13 @@
         "container": "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
         "mobile": "component"
       },
-      "categories": [
-        "contact"
-      ]
+      "categories": ["contact"]
     },
     {
       "name": "contact-sections-15",
       "type": "registry:block",
       "description": "Contact options with quick contact form",
-      "registryDependencies": [
-        "button",
-        "card",
-        "input",
-        "label"
-      ],
+      "registryDependencies": ["button", "card", "input", "label"],
       "files": [
         {
           "path": "registry/creative-tim/blocks/contact-sections-15/page.tsx",
@@ -1995,18 +1605,13 @@
         "container": "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
         "mobile": "component"
       },
-      "categories": [
-        "contact"
-      ]
+      "categories": ["contact"]
     },
     {
       "name": "web3-01",
       "type": "registry:block",
       "description": "NFT collection preview with pixel art",
-      "registryDependencies": [
-        "avatar",
-        "card"
-      ],
+      "registryDependencies": ["avatar", "card"],
       "files": [
         {
           "path": "registry/creative-tim/blocks/web3-01/page.tsx",
@@ -2019,20 +1624,13 @@
         "container": "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
         "mobile": "component"
       },
-      "categories": [
-        "web3"
-      ]
+      "categories": ["web3"]
     },
     {
       "name": "web3-02",
       "type": "registry:block",
       "description": "NFT creator profile with collection gallery",
-      "registryDependencies": [
-        "avatar",
-        "badge",
-        "button",
-        "card"
-      ],
+      "registryDependencies": ["avatar", "badge", "button", "card"],
       "files": [
         {
           "path": "registry/creative-tim/blocks/web3-02/page.tsx",
@@ -2045,21 +1643,13 @@
         "container": "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
         "mobile": "component"
       },
-      "categories": [
-        "web3"
-      ]
+      "categories": ["web3"]
     },
     {
       "name": "web3-03",
       "type": "registry:block",
       "description": "Top crypto auctions with countdown timer",
-      "registryDependencies": [
-        "avatar",
-        "badge",
-        "button",
-        "card",
-        "select"
-      ],
+      "registryDependencies": ["avatar", "badge", "button", "card", "select"],
       "files": [
         {
           "path": "registry/creative-tim/blocks/web3-03/page.tsx",
@@ -2072,21 +1662,13 @@
         "container": "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
         "mobile": "component"
       },
-      "categories": [
-        "web3"
-      ]
+      "categories": ["web3"]
     },
     {
       "name": "web3-04",
       "type": "registry:block",
       "description": "Trending NFT collections with gradient overlay",
-      "registryDependencies": [
-        "avatar",
-        "badge",
-        "button",
-        "card",
-        "select"
-      ],
+      "registryDependencies": ["avatar", "badge", "button", "card", "select"],
       "files": [
         {
           "path": "registry/creative-tim/blocks/web3-04/page.tsx",
@@ -2099,19 +1681,13 @@
         "container": "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
         "mobile": "component"
       },
-      "categories": [
-        "web3"
-      ]
+      "categories": ["web3"]
     },
     {
       "name": "web3-05",
       "type": "registry:block",
       "description": "Top NFT creators with time filter",
-      "registryDependencies": [
-        "avatar",
-        "button",
-        "card"
-      ],
+      "registryDependencies": ["avatar", "button", "card"],
       "files": [
         {
           "path": "registry/creative-tim/blocks/web3-05/page.tsx",
@@ -2124,9 +1700,7 @@
         "container": "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
         "mobile": "component"
       },
-      "categories": [
-        "web3"
-      ]
+      "categories": ["web3"]
     },
     {
       "name": "cruds-01",
@@ -2152,20 +1726,13 @@
         "container": "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
         "mobile": "component"
       },
-      "categories": [
-        "cruds"
-      ]
+      "categories": ["cruds"]
     },
     {
       "name": "cruds-02",
       "type": "registry:block",
       "description": "Update retail staff profile form",
-      "registryDependencies": [
-        "button",
-        "card",
-        "input",
-        "label"
-      ],
+      "registryDependencies": ["button", "card", "input", "label"],
       "files": [
         {
           "path": "registry/creative-tim/blocks/cruds-02/page.tsx",
@@ -2178,21 +1745,13 @@
         "container": "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
         "mobile": "component"
       },
-      "categories": [
-        "cruds"
-      ]
+      "categories": ["cruds"]
     },
     {
       "name": "cruds-03",
       "type": "registry:block",
       "description": "Stylist account settings with profile photo upload",
-      "registryDependencies": [
-        "button",
-        "card",
-        "input",
-        "label",
-        "select"
-      ],
+      "registryDependencies": ["button", "card", "input", "label", "select"],
       "files": [
         {
           "path": "registry/creative-tim/blocks/cruds-03/page.tsx",
@@ -2205,17 +1764,13 @@
         "container": "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
         "mobile": "component"
       },
-      "categories": [
-        "cruds"
-      ]
+      "categories": ["cruds"]
     },
     {
       "name": "footers-01",
       "type": "registry:block",
       "description": "Simple footer with social links",
-      "registryDependencies": [
-        "button"
-      ],
+      "registryDependencies": ["button"],
       "files": [
         {
           "path": "registry/creative-tim/blocks/footers-01/page.tsx",
@@ -2228,20 +1783,13 @@
         "container": "w-full bg-surface",
         "mobile": "component"
       },
-      "categories": [
-        "footers"
-      ]
+      "categories": ["footers"]
     },
     {
       "name": "footers-02",
       "type": "registry:block",
       "description": "Footer with navigation links and subscription",
-      "registryDependencies": [
-        "button",
-        "checkbox",
-        "input",
-        "label"
-      ],
+      "registryDependencies": ["button", "checkbox", "input", "label"],
       "files": [
         {
           "path": "registry/creative-tim/blocks/footers-02/page.tsx",
@@ -2254,17 +1802,13 @@
         "container": "w-full bg-surface",
         "mobile": "component"
       },
-      "categories": [
-        "footers"
-      ]
+      "categories": ["footers"]
     },
     {
       "name": "footers-03",
       "type": "registry:block",
       "description": "Website footer with CTA",
-      "registryDependencies": [
-        "button"
-      ],
+      "registryDependencies": ["button"],
       "files": [
         {
           "path": "registry/creative-tim/blocks/footers-03/page.tsx",
@@ -2277,19 +1821,13 @@
         "container": "w-full bg-surface",
         "mobile": "component"
       },
-      "categories": [
-        "footers"
-      ]
+      "categories": ["footers"]
     },
     {
       "name": "footers-04",
       "type": "registry:block",
       "description": "Simple dark footer",
-      "registryDependencies": [
-        "button",
-        "card",
-        "input"
-      ],
+      "registryDependencies": ["button", "card", "input"],
       "files": [
         {
           "path": "registry/creative-tim/blocks/footers-04/page.tsx",
@@ -2302,20 +1840,13 @@
         "container": "w-full bg-surface",
         "mobile": "component"
       },
-      "categories": [
-        "footers"
-      ]
+      "categories": ["footers"]
     },
     {
       "name": "footers-05",
       "type": "registry:block",
       "description": "Complex dark footer",
-      "registryDependencies": [
-        "button",
-        "input",
-        "label",
-        "select"
-      ],
+      "registryDependencies": ["button", "input", "label", "select"],
       "files": [
         {
           "path": "registry/creative-tim/blocks/footers-05/page.tsx",
@@ -2328,17 +1859,13 @@
         "container": "w-full bg-surface",
         "mobile": "component"
       },
-      "categories": [
-        "footers"
-      ]
+      "categories": ["footers"]
     },
     {
       "name": "footers-06",
       "type": "registry:block",
       "description": "Advanced light footer",
-      "registryDependencies": [
-        "button"
-      ],
+      "registryDependencies": ["button"],
       "files": [
         {
           "path": "registry/creative-tim/blocks/footers-06/page.tsx",
@@ -2351,18 +1878,13 @@
         "container": "w-full bg-surface",
         "mobile": "component"
       },
-      "categories": [
-        "footers"
-      ]
+      "categories": ["footers"]
     },
     {
       "name": "footers-07",
       "type": "registry:block",
       "description": "Simple footer with country selection",
-      "registryDependencies": [
-        "button",
-        "select"
-      ],
+      "registryDependencies": ["button", "select"],
       "files": [
         {
           "path": "registry/creative-tim/blocks/footers-07/page.tsx",
@@ -2375,18 +1897,13 @@
         "container": "w-full bg-surface",
         "mobile": "component"
       },
-      "categories": [
-        "footers"
-      ]
+      "categories": ["footers"]
     },
     {
       "name": "footers-08",
       "type": "registry:block",
       "description": "Simple footer with version number",
-      "registryDependencies": [
-        "badge",
-        "button"
-      ],
+      "registryDependencies": ["badge", "button"],
       "files": [
         {
           "path": "registry/creative-tim/blocks/footers-08/page.tsx",
@@ -2399,17 +1916,13 @@
         "container": "w-full bg-surface",
         "mobile": "component"
       },
-      "categories": [
-        "footers"
-      ]
+      "categories": ["footers"]
     },
     {
       "name": "footers-09",
       "type": "registry:block",
       "description": "Footer with notification and CTA",
-      "registryDependencies": [
-        "button"
-      ],
+      "registryDependencies": ["button"],
       "files": [
         {
           "path": "registry/creative-tim/blocks/footers-09/page.tsx",
@@ -2422,9 +1935,7 @@
         "container": "w-full bg-surface",
         "mobile": "component"
       },
-      "categories": [
-        "footers"
-      ]
+      "categories": ["footers"]
     },
     {
       "name": "footers-10",
@@ -2443,9 +1954,7 @@
         "container": "w-full bg-surface",
         "mobile": "component"
       },
-      "categories": [
-        "footers"
-      ]
+      "categories": ["footers"]
     },
     {
       "name": "footers-11",
@@ -2464,9 +1973,7 @@
         "container": "w-full bg-surface",
         "mobile": "component"
       },
-      "categories": [
-        "footers"
-      ]
+      "categories": ["footers"]
     },
     {
       "name": "footers-12",
@@ -2485,17 +1992,13 @@
         "container": "w-full bg-surface",
         "mobile": "component"
       },
-      "categories": [
-        "footers"
-      ]
+      "categories": ["footers"]
     },
     {
       "name": "footers-13",
       "type": "registry:block",
       "description": "Simple centered website footer",
-      "registryDependencies": [
-        "button"
-      ],
+      "registryDependencies": ["button"],
       "files": [
         {
           "path": "registry/creative-tim/blocks/footers-13/page.tsx",
@@ -2508,17 +2011,13 @@
         "container": "w-full bg-surface",
         "mobile": "component"
       },
-      "categories": [
-        "footers"
-      ]
+      "categories": ["footers"]
     },
     {
       "name": "footers-14",
       "type": "registry:block",
       "description": "Website footer for apps",
-      "registryDependencies": [
-        "button"
-      ],
+      "registryDependencies": ["button"],
       "files": [
         {
           "path": "registry/creative-tim/blocks/footers-14/page.tsx",
@@ -2531,17 +2030,13 @@
         "container": "w-full bg-surface",
         "mobile": "component"
       },
-      "categories": [
-        "footers"
-      ]
+      "categories": ["footers"]
     },
     {
       "name": "footers-15",
       "type": "registry:block",
       "description": "Website footer with quote",
-      "registryDependencies": [
-        "button"
-      ],
+      "registryDependencies": ["button"],
       "files": [
         {
           "path": "registry/creative-tim/blocks/footers-15/page.tsx",
@@ -2554,19 +2049,13 @@
         "container": "w-full bg-surface",
         "mobile": "component"
       },
-      "categories": [
-        "footers"
-      ]
+      "categories": ["footers"]
     },
     {
       "name": "testimonials-01",
       "type": "registry:block",
       "description": "Simple centered testimonials with avatars",
-      "registryDependencies": [
-        "avatar",
-        "card",
-        "badge"
-      ],
+      "registryDependencies": ["avatar", "card", "badge"],
       "files": [
         {
           "path": "registry/creative-tim/blocks/testimonials-01/page.tsx",
@@ -2579,18 +2068,13 @@
         "container": "w-full bg-surface",
         "mobile": "component"
       },
-      "categories": [
-        "testimonials"
-      ]
+      "categories": ["testimonials"]
     },
     {
       "name": "testimonials-02",
       "type": "registry:block",
       "description": "Testimonial cards with social proof badges",
-      "registryDependencies": [
-        "avatar",
-        "card"
-      ],
+      "registryDependencies": ["avatar", "card"],
       "files": [
         {
           "path": "registry/creative-tim/blocks/testimonials-02/page.tsx",
@@ -2603,17 +2087,13 @@
         "container": "w-full bg-surface",
         "mobile": "component"
       },
-      "categories": [
-        "testimonials"
-      ]
+      "categories": ["testimonials"]
     },
     {
       "name": "testimonials-03",
       "type": "registry:block",
       "description": "Testimonial with statistics and metrics",
-      "registryDependencies": [
-        "card"
-      ],
+      "registryDependencies": ["card"],
       "files": [
         {
           "path": "registry/creative-tim/blocks/testimonials-03/page.tsx",
@@ -2627,17 +2107,13 @@
         "mobile": "component",
         "private": true
       },
-      "categories": [
-        "testimonials"
-      ]
+      "categories": ["testimonials"]
     },
     {
       "name": "testimonials-04",
       "type": "registry:block",
       "description": "Three column testimonials with star ratings",
-      "registryDependencies": [
-        "card"
-      ],
+      "registryDependencies": ["card"],
       "files": [
         {
           "path": "registry/creative-tim/blocks/testimonials-04/page.tsx",
@@ -2651,18 +2127,13 @@
         "mobile": "component",
         "private": true
       },
-      "categories": [
-        "testimonials"
-      ]
+      "categories": ["testimonials"]
     },
     {
       "name": "testimonials-05",
       "type": "registry:block",
       "description": "Dark testimonials with avatar and star ratings",
-      "registryDependencies": [
-        "avatar",
-        "card"
-      ],
+      "registryDependencies": ["avatar", "card"],
       "files": [
         {
           "path": "registry/creative-tim/blocks/testimonials-05/page.tsx",
@@ -2675,18 +2146,13 @@
         "container": "w-full bg-surface",
         "mobile": "component"
       },
-      "categories": [
-        "testimonials"
-      ]
+      "categories": ["testimonials"]
     },
     {
       "name": "testimonials-06",
       "type": "registry:block",
       "description": "Company logo testimonial with large quote",
-      "registryDependencies": [
-        "avatar",
-        "card"
-      ],
+      "registryDependencies": ["avatar", "card"],
       "files": [
         {
           "path": "registry/creative-tim/blocks/testimonials-06/page.tsx",
@@ -2699,17 +2165,13 @@
         "container": "w-full bg-surface",
         "mobile": "component"
       },
-      "categories": [
-        "testimonials"
-      ]
+      "categories": ["testimonials"]
     },
     {
       "name": "testimonials-07",
       "type": "registry:block",
       "description": "Interactive testimonials with profile switcher",
-      "registryDependencies": [
-        "avatar"
-      ],
+      "registryDependencies": ["avatar"],
       "files": [
         {
           "path": "registry/creative-tim/blocks/testimonials-07/page.tsx",
@@ -2722,18 +2184,13 @@
         "container": "w-full bg-surface",
         "mobile": "component"
       },
-      "categories": [
-        "testimonials"
-      ]
+      "categories": ["testimonials"]
     },
     {
       "name": "testimonials-08",
       "type": "registry:block",
       "description": "Light testimonials with star ratings",
-      "registryDependencies": [
-        "avatar",
-        "card"
-      ],
+      "registryDependencies": ["avatar", "card"],
       "files": [
         {
           "path": "registry/creative-tim/blocks/testimonials-08/page.tsx",
@@ -2746,18 +2203,13 @@
         "container": "w-full bg-surface",
         "mobile": "component"
       },
-      "categories": [
-        "testimonials"
-      ]
+      "categories": ["testimonials"]
     },
     {
       "name": "testimonials-09",
       "type": "registry:block",
       "description": "Customer story with large heading and avatar",
-      "registryDependencies": [
-        "avatar",
-        "card"
-      ],
+      "registryDependencies": ["avatar", "card"],
       "files": [
         {
           "path": "registry/creative-tim/blocks/testimonials-09/page.tsx",
@@ -2770,19 +2222,13 @@
         "container": "w-full bg-surface",
         "mobile": "component"
       },
-      "categories": [
-        "testimonials"
-      ]
+      "categories": ["testimonials"]
     },
     {
       "name": "testimonials-10",
       "type": "registry:block",
       "description": "Monochromatic testimonials with company logos",
-      "registryDependencies": [
-        "badge",
-        "card",
-        "button"
-      ],
+      "registryDependencies": ["badge", "card", "button"],
       "files": [
         {
           "path": "registry/creative-tim/blocks/testimonials-10/page.tsx",
@@ -2795,18 +2241,13 @@
         "container": "w-full bg-surface",
         "mobile": "component"
       },
-      "categories": [
-        "testimonials"
-      ]
+      "categories": ["testimonials"]
     },
     {
       "name": "testimonials-11",
       "type": "registry:block",
       "description": "Testimonial cards with focus state",
-      "registryDependencies": [
-        "avatar",
-        "card"
-      ],
+      "registryDependencies": ["avatar", "card"],
       "files": [
         {
           "path": "registry/creative-tim/blocks/testimonials-11/page.tsx",
@@ -2819,17 +2260,13 @@
         "container": "w-full bg-surface",
         "mobile": "component"
       },
-      "categories": [
-        "testimonials"
-      ]
+      "categories": ["testimonials"]
     },
     {
       "name": "testimonials-12",
       "type": "registry:block",
       "description": "Grid layout testimonials with company logos",
-      "registryDependencies": [
-        "card"
-      ],
+      "registryDependencies": ["card"],
       "files": [
         {
           "path": "registry/creative-tim/blocks/testimonials-12/page.tsx",
@@ -2842,18 +2279,13 @@
         "container": "w-full bg-surface",
         "mobile": "component"
       },
-      "categories": [
-        "testimonials"
-      ]
+      "categories": ["testimonials"]
     },
     {
       "name": "testimonials-13",
       "type": "registry:block",
       "description": "Dark card testimonial with rounded avatar",
-      "registryDependencies": [
-        "avatar",
-        "card"
-      ],
+      "registryDependencies": ["avatar", "card"],
       "files": [
         {
           "path": "registry/creative-tim/blocks/testimonials-13/page.tsx",
@@ -2866,18 +2298,13 @@
         "container": "w-full bg-surface",
         "mobile": "component"
       },
-      "categories": [
-        "testimonials"
-      ]
+      "categories": ["testimonials"]
     },
     {
       "name": "testimonials-14",
       "type": "registry:block",
       "description": "Light testimonials with card shadow",
-      "registryDependencies": [
-        "avatar",
-        "card"
-      ],
+      "registryDependencies": ["avatar", "card"],
       "files": [
         {
           "path": "registry/creative-tim/blocks/testimonials-14/page.tsx",
@@ -2890,17 +2317,13 @@
         "container": "w-full bg-surface",
         "mobile": "component"
       },
-      "categories": [
-        "testimonials"
-      ]
+      "categories": ["testimonials"]
     },
     {
       "name": "testimonials-15",
       "type": "registry:block",
       "description": "Testimonials with submit button",
-      "registryDependencies": [
-        "card"
-      ],
+      "registryDependencies": ["card"],
       "files": [
         {
           "path": "registry/creative-tim/blocks/testimonials-15/page.tsx",
@@ -2913,18 +2336,13 @@
         "container": "w-full bg-surface",
         "mobile": "component"
       },
-      "categories": [
-        "testimonials"
-      ]
+      "categories": ["testimonials"]
     },
     {
       "name": "testimonials-16",
       "type": "registry:block",
       "description": "Dark carousel testimonials with navigation",
-      "registryDependencies": [
-        "card",
-        "button"
-      ],
+      "registryDependencies": ["card", "button"],
       "files": [
         {
           "path": "registry/creative-tim/blocks/testimonials-16/page.tsx",
@@ -2937,18 +2355,13 @@
         "container": "w-full bg-surface",
         "mobile": "component"
       },
-      "categories": [
-        "testimonials"
-      ]
+      "categories": ["testimonials"]
     },
     {
       "name": "testimonials-17",
       "type": "registry:block",
       "description": "Background image carousel testimonials",
-      "registryDependencies": [
-        "card",
-        "button"
-      ],
+      "registryDependencies": ["card", "button"],
       "files": [
         {
           "path": "registry/creative-tim/blocks/testimonials-17/page.tsx",
@@ -2961,20 +2374,13 @@
         "container": "w-full bg-surface",
         "mobile": "component"
       },
-      "categories": [
-        "testimonials"
-      ]
+      "categories": ["testimonials"]
     },
     {
       "name": "modals-01",
       "type": "registry:block",
       "description": "Alert modal with confirmation input for reset settings",
-      "registryDependencies": [
-        "dialog",
-        "button",
-        "input",
-        "label"
-      ],
+      "registryDependencies": ["dialog", "button", "input", "label"],
       "files": [
         {
           "path": "registry/creative-tim/blocks/modals-01/page.tsx",
@@ -2987,9 +2393,7 @@
         "container": "w-full bg-surface",
         "mobile": "component"
       },
-      "categories": [
-        "modals"
-      ]
+      "categories": ["modals"]
     },
     {
       "name": "modals-02",
@@ -3016,9 +2420,7 @@
         "container": "w-full bg-surface",
         "mobile": "component"
       },
-      "categories": [
-        "modals"
-      ]
+      "categories": ["modals"]
     },
     {
       "name": "modals-03",
@@ -3043,9 +2445,7 @@
         "container": "w-full bg-surface",
         "mobile": "component"
       },
-      "categories": [
-        "modals"
-      ]
+      "categories": ["modals"]
     },
     {
       "name": "modals-04",
@@ -3071,19 +2471,13 @@
         "container": "w-full bg-surface",
         "mobile": "component"
       },
-      "categories": [
-        "modals"
-      ]
+      "categories": ["modals"]
     },
     {
       "name": "modals-05",
       "type": "registry:block",
       "description": "Upload files modal with drag and drop",
-      "registryDependencies": [
-        "dialog",
-        "button",
-        "card"
-      ],
+      "registryDependencies": ["dialog", "button", "card"],
       "files": [
         {
           "path": "registry/creative-tim/blocks/modals-05/page.tsx",
@@ -3096,19 +2490,13 @@
         "container": "w-full bg-surface",
         "mobile": "component"
       },
-      "categories": [
-        "modals"
-      ]
+      "categories": ["modals"]
     },
     {
       "name": "modals-06",
       "type": "registry:block",
       "description": "Publish capsule collection modal with metadata display",
-      "registryDependencies": [
-        "dialog",
-        "button",
-        "card"
-      ],
+      "registryDependencies": ["dialog", "button", "card"],
       "files": [
         {
           "path": "registry/creative-tim/blocks/modals-06/page.tsx",
@@ -3121,18 +2509,13 @@
         "container": "w-full bg-surface",
         "mobile": "component"
       },
-      "categories": [
-        "modals"
-      ]
+      "categories": ["modals"]
     },
     {
       "name": "modals-07",
       "type": "registry:block",
       "description": "Change collection visibility settings modal",
-      "registryDependencies": [
-        "dialog",
-        "button"
-      ],
+      "registryDependencies": ["dialog", "button"],
       "files": [
         {
           "path": "registry/creative-tim/blocks/modals-07/page.tsx",
@@ -3145,19 +2528,13 @@
         "container": "w-full bg-surface",
         "mobile": "component"
       },
-      "categories": [
-        "modals"
-      ]
+      "categories": ["modals"]
     },
     {
       "name": "modals-08",
       "type": "registry:block",
       "description": "Disable collection lock rules modal with alert and impact list",
-      "registryDependencies": [
-        "dialog",
-        "button",
-        "card"
-      ],
+      "registryDependencies": ["dialog", "button", "card"],
       "files": [
         {
           "path": "registry/creative-tim/blocks/modals-08/page.tsx",
@@ -3170,9 +2547,7 @@
         "container": "w-full bg-surface",
         "mobile": "component"
       },
-      "categories": [
-        "modals"
-      ]
+      "categories": ["modals"]
     },
     {
       "name": "modals-09",
@@ -3198,19 +2573,13 @@
         "container": "w-full bg-surface",
         "mobile": "component"
       },
-      "categories": [
-        "modals"
-      ]
+      "categories": ["modals"]
     },
     {
       "name": "modals-10",
       "type": "registry:block",
       "description": "Permanently remove archive modal with effects list",
-      "registryDependencies": [
-        "dialog",
-        "button",
-        "card"
-      ],
+      "registryDependencies": ["dialog", "button", "card"],
       "files": [
         {
           "path": "registry/creative-tim/blocks/modals-10/page.tsx",
@@ -3223,20 +2592,13 @@
         "container": "w-full bg-surface",
         "mobile": "component"
       },
-      "categories": [
-        "modals"
-      ]
+      "categories": ["modals"]
     },
     {
       "name": "modals-11",
       "type": "registry:block",
       "description": "Confirm vault deletion modal with text input verification",
-      "registryDependencies": [
-        "dialog",
-        "button",
-        "input",
-        "label"
-      ],
+      "registryDependencies": ["dialog", "button", "input", "label"],
       "files": [
         {
           "path": "registry/creative-tim/blocks/modals-11/page.tsx",
@@ -3249,17 +2611,13 @@
         "container": "w-full bg-surface",
         "mobile": "component"
       },
-      "categories": [
-        "modals"
-      ]
+      "categories": ["modals"]
     },
     {
       "name": "account-basic-info-01",
       "type": "registry:block",
       "description": "Personal information management form",
-      "dependencies": [
-        "date-fns"
-      ],
+      "dependencies": ["date-fns"],
       "registryDependencies": [
         "button",
         "card",
@@ -3281,21 +2639,13 @@
         "container": "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
         "mobile": "component"
       },
-      "categories": [
-        "account"
-      ]
+      "categories": ["account"]
     },
     {
       "name": "account-2fa-01",
       "type": "registry:block",
       "description": "Two-factor authentication setup",
-      "registryDependencies": [
-        "button",
-        "card",
-        "input",
-        "label",
-        "switch"
-      ],
+      "registryDependencies": ["button", "card", "input", "label", "switch"],
       "files": [
         {
           "path": "registry/creative-tim/blocks/account-2fa-01/page.tsx",
@@ -3309,20 +2659,13 @@
         "mobile": "component",
         "details": "Secure your account with two-factor authentication. Enable authenticator apps, configure backup codes, and manage security verification methods for enhanced account protection."
       },
-      "categories": [
-        "account"
-      ]
+      "categories": ["account"]
     },
     {
       "name": "account-change-password-01",
       "type": "registry:block",
       "description": "Change password form with validation",
-      "registryDependencies": [
-        "button",
-        "card",
-        "input",
-        "label"
-      ],
+      "registryDependencies": ["button", "card", "input", "label"],
       "files": [
         {
           "path": "registry/creative-tim/blocks/account-change-password-01/page.tsx",
@@ -3335,19 +2678,13 @@
         "container": "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
         "mobile": "component"
       },
-      "categories": [
-        "account"
-      ]
+      "categories": ["account"]
     },
     {
       "name": "account-notifications-01",
       "type": "registry:block",
       "description": "Notification preferences management",
-      "registryDependencies": [
-        "button",
-        "card",
-        "switch"
-      ],
+      "registryDependencies": ["button", "card", "switch"],
       "files": [
         {
           "path": "registry/creative-tim/blocks/account-notifications-01/page.tsx",
@@ -3360,18 +2697,13 @@
         "container": "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
         "mobile": "component"
       },
-      "categories": [
-        "account"
-      ]
+      "categories": ["account"]
     },
     {
       "name": "account-sessions-01",
       "type": "registry:block",
       "description": "Active sessions and devices management",
-      "registryDependencies": [
-        "button",
-        "card"
-      ],
+      "registryDependencies": ["button", "card"],
       "files": [
         {
           "path": "registry/creative-tim/blocks/account-sessions-01/page.tsx",
@@ -3384,18 +2716,13 @@
         "container": "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
         "mobile": "component"
       },
-      "categories": [
-        "account"
-      ]
+      "categories": ["account"]
     },
     {
       "name": "account-avatar-upload-01",
       "type": "registry:block",
       "description": "Profile avatar upload and management",
-      "registryDependencies": [
-        "button",
-        "card"
-      ],
+      "registryDependencies": ["button", "card"],
       "files": [
         {
           "path": "registry/creative-tim/blocks/account-avatar-upload-01/page.tsx",
@@ -3408,19 +2735,13 @@
         "container": "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
         "mobile": "component"
       },
-      "categories": [
-        "account"
-      ]
+      "categories": ["account"]
     },
     {
       "name": "account-integrations-01",
       "type": "registry:block",
       "description": "Third-party integrations management",
-      "registryDependencies": [
-        "button",
-        "card",
-        "switch"
-      ],
+      "registryDependencies": ["button", "card", "switch"],
       "files": [
         {
           "path": "registry/creative-tim/blocks/account-integrations-01/page.tsx",
@@ -3433,9 +2754,7 @@
         "container": "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
         "mobile": "component"
       },
-      "categories": [
-        "account"
-      ]
+      "categories": ["account"]
     },
     {
       "name": "use-mobile",
@@ -3450,9 +2769,7 @@
     {
       "name": "software-purchase-card-demo",
       "type": "registry:example",
-      "registryDependencies": [
-        "software-purchase-card"
-      ],
+      "registryDependencies": ["software-purchase-card"],
       "files": [
         {
           "path": "registry/creative-tim/examples/software-purchase-card-demo.tsx",
