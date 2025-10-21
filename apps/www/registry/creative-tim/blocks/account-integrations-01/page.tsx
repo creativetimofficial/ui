@@ -89,7 +89,7 @@ export default function AccountIntegrations01() {
   return (
     <div className="mx-auto max-w-5xl p-6">
       <Card className="bg-card border p-8">
-        <div className="mb-8 border-b pb-6">
+        <div className="border-b pb-6">
           <div className="flex items-center gap-3">
             <div className="bg-primary/10 flex h-12 w-12 items-center justify-center rounded-lg">
               <Shield className="text-primary h-6 w-6" />

@@ -15,17 +15,17 @@ export function DocsSidebarCta({ className }: React.ComponentProps<"div">) {
       <div className="bg-surface/80 absolute inset-0" />
 
       <div className="relative z-10 text-base leading-tight font-semibold text-balance group-hover:underline">
-        Optimize Token Usage
+        Integrate the blocks in your application or use them in v0, Lovable, Claude, etc.
       </div>
       <div className="text-muted-foreground relative z-10">
-        Speed up your workflow with modular, open-source components that
+        Speed up your workflow with modular, open-source components and blocksthat
         integrate effortlessly through Registries and MCPs.
       </div>
       <Button size="sm" className="relative z-10 mt-2 w-fit">
-        Get Started
+        View Blocks
       </Button>
       <Link
-        href={siteConfig.utm.agents}
+        href={siteConfig.utm.blocks}
         target="_blank"
         rel="noreferrer"
         className="absolute inset-0 z-20"

@@ -1,7 +1,7 @@
 {
   "name": "@creative-tim/ui",
   "version": "0.1.0-beta.0",
-  "description": "A CLI for adding Creative Tim UI components to your project",
+  "description": "A CLI for adding Creative Tim UI components, blocks and AI agents to your project",
   "author": {
     "name": "Creative Tim",
     "email": "hello@creative-tim.com",
