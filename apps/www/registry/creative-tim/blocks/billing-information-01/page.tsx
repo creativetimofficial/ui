@@ -3,7 +3,13 @@
 import { Building2, Pencil, Plus, Trash2 } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
-import { Card } from "@/components/ui/card"
+import {
+  Card,
+  CardAction,
+  CardContent,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card"
 
 interface BillingCardProps {
   company: string
@@ -15,32 +21,34 @@ interface BillingCardProps {
 function BillingCard({ company, contact, email, vat }: BillingCardProps) {
   return (
     <Card className="border">
-      <div className="flex flex-wrap items-start justify-between gap-4 p-4">
+      <CardHeader>
         <div className="flex items-center gap-3">
           <div className="bg-background grid h-12 w-12 shrink-0 place-items-center rounded border">
             <Building2 className="h-6 w-6" />
           </div>
           <div className="space-y-1">
-            <p className="text-sm font-semibold">{company}</p>
+            <CardTitle className="text-sm">{company}</CardTitle>
             <p className="text-muted-foreground text-sm">Company</p>
           </div>
         </div>
-        <div className="flex items-center gap-2">
-          <Button size="sm" variant="ghost">
-            <Pencil className="mr-2 h-4 w-4" />
-            Edit
-          </Button>
-          <Button
-            size="sm"
-            variant="ghost"
-            className="text-destructive hover:text-destructive"
-          >
-            <Trash2 className="mr-2 h-4 w-4" />
-            Delete
-          </Button>
-        </div>
-      </div>
-      <div className="space-y-2 px-4 pt-2 pb-4">
+        <CardAction>
+          <div className="flex items-center gap-2">
+            <Button size="sm" variant="ghost">
+              <Pencil className="mr-2 h-4 w-4" />
+              Edit
+            </Button>
+            <Button
+              size="sm"
+              variant="ghost"
+              className="text-destructive hover:text-destructive"
+            >
+              <Trash2 className="mr-2 h-4 w-4" />
+              Delete
+            </Button>
+          </div>
+        </CardAction>
+      </CardHeader>
+      <CardContent className="space-y-2">
         <div className="text-sm">
           <span className="text-muted-foreground font-semibold">Contact: </span>
           <span className="font-medium">{contact}</span>
@@ -57,7 +65,7 @@ function BillingCard({ company, contact, email, vat }: BillingCardProps) {
           </span>
           <span className="font-medium">{vat}</span>
         </div>
-      </div>
+      </CardContent>
     </Card>
   )
 }

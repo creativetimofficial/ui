@@ -98,7 +98,7 @@ export default function InteractiveProductPreview01() {
                 </div>
               </div>
 
-              <p className="text-muted-foreground mx-auto mb-6 max-w-xs text-center text-sm leading-relaxed">
+              <p className="text-muted-foreground mx-auto max-w-xs text-center text-sm leading-relaxed">
                 Add a touch of sophistication to your home with our handcrafted
                 ceramic vase.
               </p>

@@ -1,4 +1,10 @@
 {
   "title": "Get Started",
-  "pages": ["index", "registry", "setup", "usage", "troubleshooting"]
+  "pages": [
+    "index",
+    "registry",
+    "components",
+    "how-it-works",
+    "debug-logs"
+  ]
 }

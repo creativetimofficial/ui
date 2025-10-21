@@ -4,7 +4,13 @@ import { Lock, Package, ShoppingBag, Tag, Truck, X } from "lucide-react"
 
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardHeader } from "@/components/ui/card"
+import {
+  Card,
+  CardContent,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import {
   Select,
@@ -39,34 +45,33 @@ export default function ShoppingCart01() {
     <section className="py-16">
       <div className="container mx-auto">
         <Card className="rounded-2xl shadow-lg">
-          <CardContent className="p-8 md:p-12">
-            <div className="mb-12 text-center">
-              <div className="mb-4 flex items-center justify-center gap-2">
-                <div className="bg-primary/10 flex h-14 w-14 items-center justify-center rounded-full">
-                  <ShoppingBag className="text-primary h-7 w-7" />
-                </div>
-              </div>
-              <h2 className="text-4xl font-bold">Shopping Cart</h2>
-              <div className="mt-4 inline-flex items-center gap-2 rounded-full bg-green-50 px-5 py-2.5">
-                <Truck className="h-5 w-5 text-green-600" />
-                <p className="text-sm font-semibold text-green-700">
-                  You are eligible for Free Shipping
-                </p>
+          <CardHeader className="text-center">
+            <div className="mb-4 flex items-center justify-center gap-2">
+              <div className="bg-primary/10 flex h-14 w-14 items-center justify-center rounded-full">
+                <ShoppingBag className="text-primary h-7 w-7" />
               </div>
             </div>
+            <CardTitle className="text-4xl">Shopping Cart</CardTitle>
+            <div className="mt-4 inline-flex items-center gap-2 rounded-full bg-green-50 px-5 py-2.5">
+              <Truck className="h-5 w-5 text-green-600" />
+              <p className="text-sm font-semibold text-green-700">
+                You are eligible for Free Shipping
+              </p>
+            </div>
+          </CardHeader>
+          <CardContent>
 
             <div className="grid w-full grid-cols-1 gap-8 lg:grid-cols-3">
               <div className="col-span-2">
                 <Card className="border-2">
-                  <CardHeader className="p-6">
+                  <CardHeader className="px-6 gap-0 border-b">
                     <div className="flex items-center gap-2">
                       <Package className="text-primary h-5 w-5" />
-                      <h3 className="text-xl font-bold">
+                      <CardTitle className="text-xl">
                         Cart Items ({CHECKOUT_PRODUCTS.length})
-                      </h3>
+                      </CardTitle>
                     </div>
                   </CardHeader>
-                  <Separator />
                   <CardContent className="p-0">
                     {CHECKOUT_PRODUCTS.map(
                       ({ name, price, img, product, size, stock }, index) => (
@@ -152,10 +157,9 @@ export default function ShoppingCart01() {
               <div className="col-span-1">
                 <div className="sticky top-4">
                   <Card className="border-2">
-                    <CardHeader className="p-6">
-                      <h3 className="text-xl font-bold">Order Summary</h3>
+                    <CardHeader className="px-6 gap-0 border-b">
+                      <CardTitle className="text-xl">Order Summary</CardTitle>
                     </CardHeader>
-                    <Separator />
                     <CardContent className="p-0">
                       <div className="space-y-4 p-6">
                         <div className="flex items-center justify-between">
@@ -209,23 +213,22 @@ export default function ShoppingCart01() {
                           Proceed to Checkout
                         </Button>
                       </div>
-
-                      <div className="bg-green-50 p-5">
-                        <div className="flex items-start gap-3">
-                          <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-green-100">
-                            <Truck className="h-5 w-5 text-green-600" />
-                          </div>
-                          <div>
-                            <p className="font-semibold text-green-900">
-                              Free Shipping Applied
-                            </p>
-                            <p className="mt-1 text-sm text-green-700">
-                              Estimated delivery: 3-5 business days
-                            </p>
-                          </div>
+                    </CardContent>
+                    <CardFooter className="bg-green-50">
+                      <div className="flex items-start gap-3">
+                        <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-green-100">
+                          <Truck className="h-5 w-5 text-green-600" />
+                        </div>
+                        <div>
+                          <p className="font-semibold text-green-900">
+                            Free Shipping Applied
+                          </p>
+                          <p className="mt-1 text-sm text-green-700">
+                            Estimated delivery: 3-5 business days
+                          </p>
                         </div>
                       </div>
-                    </CardContent>
+                    </CardFooter>
                   </Card>
                 </div>
               </div>

@@ -9,7 +9,7 @@ const PRODUCTS = [
   {
     id: "card-1",
     media: {
-      src: "https://images.unsplash.com/photo-1595777457583-95e059d581b8?q=80&w=400&auto=format&fit=crop",
+      src: "https://images.unsplash.com/photo-1595777457583-95e059d581b8?q=80&w=400&h=400&auto=format&fit=crop",
       alt: "Satin Wrap Dress product thumbnail",
     },
     eyebrow: "Maison Aurore",
@@ -20,7 +20,7 @@ const PRODUCTS = [
   {
     id: "card-2",
     media: {
-      src: "https://images.unsplash.com/photo-1591369822096-ffd140ec948f?q=80&w=400&auto=format&fit=crop",
+      src: "https://images.unsplash.com/photo-1591369822096-ffd140ec948f?q=80&w=400&h=400&auto=format&fit=crop",
       alt: "Structured Blazer product thumbnail",
     },
     eyebrow: "Atelier No. 9",
@@ -31,7 +31,7 @@ const PRODUCTS = [
   {
     id: "card-3",
     media: {
-      src: "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?q=80&w=400&auto=format&fit=crop",
+      src: "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?q=80&w=400&h=400&auto=format&fit=crop",
       alt: "Chunky Chelsea Boots product thumbnail",
     },
     eyebrow: "Linea Forte",

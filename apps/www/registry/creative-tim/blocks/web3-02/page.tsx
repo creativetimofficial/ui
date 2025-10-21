@@ -64,8 +64,8 @@ export default function Web302() {
         </CardHeader>
         <CardContent className="grid grid-cols-1 gap-6 p-6 sm:grid-cols-2 lg:grid-cols-3">
           {DATA.map(({ img, name, tokenId, price }, key) => (
-            <Card key={key}>
-              <CardHeader className="relative p-4">
+            <Card key={key} className="py-4">
+              <CardHeader className="relative px-4 gap-0">
                 <img
                   src={img}
                   alt={name}
@@ -87,7 +87,7 @@ export default function Web302() {
                   </Button>
                 </div>
               </CardHeader>
-              <CardContent className="px-4 pt-0 pb-4">
+              <CardContent className="px-4">
                 <div className="mb-2 flex items-center justify-between gap-4">
                   <p className="text-muted-foreground text-sm">
                     Cosmic creatures

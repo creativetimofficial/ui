@@ -62,7 +62,7 @@ export default function FaqsGrid01() {
               key={key}
               className="group hover:border-primary/50 transition-all hover:shadow-lg"
             >
-              <CardHeader className="pb-4">
+              <CardHeader className="px-6">
                 <div className="bg-primary/10 mb-3 flex h-12 w-12 items-center justify-center rounded-full">
                   <Icon className="text-primary h-6 w-6" />
                 </div>
