@@ -22,7 +22,7 @@ const TOP_LEVEL_SECTIONS = [
     href: "/docs/components",
   },
   { name: "Setup", href: "/docs/setup" },
-  { name: "Usage", href: "/docs/usage" },
+  { name: "How It Works", href: "/docs/usage" },
   { name: "Troubleshooting", href: "/docs/troubleshooting" },
 ]
 
