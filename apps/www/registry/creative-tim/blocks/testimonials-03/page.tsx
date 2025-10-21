@@ -72,7 +72,7 @@ export default function TestimonialsBlock() {
               key={index}
               className="border-border/50 hover:border-border transition-all hover:shadow-lg"
             >
-              <CardContent className="p-6">
+              <CardContent className="px-6">
                 <div className="mb-4 flex items-center gap-1">
                   {Array.from({ length: testimonial.rating }).map((_, i) => (
                     <Star
