@@ -52,10 +52,10 @@ npx @creative-tim/ui@latest components add orb
 You can also install components using the standard shadcn/ui CLI:
 ```bash
 # Install all components
-npx shadcn@latest add https://ui.creative-tim.com/r/all.json
+npx shadcn@latest add https://creative-tim.com/ui/r/all.json
 
 # Install a specific component
-npx shadcn@latest add https://ui.creative-tim.com/r/button.json
+npx shadcn@latest add https://creative-tim.com/ui/r/button.json
 ```
 
 All available components can be found [here](https://ui.creative-tim.com/docs/components) or explore a list of example blocks [here](https://ui.creative-tim.com/blocks).
@@ -71,19 +71,19 @@ If you'd like to contribute to Creative Tim UI, please follow these steps:
 
 Please read the [contributing guide](/CONTRIBUTING.md).
 
-## Credits
+## Copyrights and Licenses
 
-Creative Tim UI is built upon the incredible work of the open source community. We would like to acknowledge and thank the following projects:
+Creative Tim UI is built upon the incredible work of the open source community:
 
-- **[shadcn/ui](https://ui.shadcn.com/)** – The documentation structure, registry system, and foundational (atomic) components are adapted from the open source work in shadcn/ui
-- **[Material Tailwind](https://material-tailwind.com)** by Creative Tim - The blocks and component designs are inspired by and based on Material Tailwind Framework
-- **[Eleven Labs UI](https://github.com/elevenlabs/elevenlabs-ui)** - General inspiration for the documentation structure and approach
-- **[Geist Font](https://vercel.com/font)** by Vercel - The beautiful typeface used throughout the interface
+- **[shadcn/ui](https://ui.shadcn.com/)** - The documentation structure, registry system, and foundational (atomic) components are from the open source work in shadcn/ui. [MIT License](https://github.com/shadcn-ui/ui/blob/main/LICENSE.md)
+- **[Material Tailwind](https://material-tailwind.com/v3)** by Creative Tim - The blocks and component designs are inspired by and based on Material Tailwind Framework. [MIT License](https://github.com/creativetimofficial/material-tailwind/blob/main/LICENSE.md)
+- **[Eleven Labs UI](https://github.com/elevenlabs/elevenlabs-ui)** - General inspiration for the documentation structure and approach of blocks. [MIT License](https://github.com/elevenlabs/ui/blob/main/LICENSE.md)
+- **[Geist Font](https://vercel.com/font)** by Vercel - The beautiful typeface used throughout the interface. [SIL Open Font License 1.1](https://github.com/vercel/geist-font/blob/main/LICENSE.txt)
 
 We are grateful to these projects for making their work available under open source licenses.
 
 ## License
 
-Licensed under the [MIT license](https://github.com/creative-tim/ui/blob/main/LICENSE.md).
+Licensed under the [MIT license](https://github.com/creativetimofficial/ui/blob/main/LICENSE.md).
 
 Made with love by [Creative Tim](https://creative-tim.com).

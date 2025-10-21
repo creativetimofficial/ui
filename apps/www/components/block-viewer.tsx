@@ -211,7 +211,7 @@ function BlockViewerToolbar() {
                 asChild
                 title="Open in New Tab"
               >
-                <Link href={`${viewPath}/${item.name}`} target="_blank">
+                <Link href={`/view/${item.name}`} target="_blank">
                   <span className="sr-only">Open in New Tab</span>
                   <Fullscreen />
                 </Link>
