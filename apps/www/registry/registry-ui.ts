@@ -583,4 +583,15 @@ export const ui: Registry["items"] = [
       },
     ],
   },
+  {
+    name: "form-card-demo",
+    type: "registry:ui",
+    registryDependencies: ["card", "button", "input", "label"],
+    files: [
+      {
+        path: "examples/form-card-demo.tsx",
+        type: "registry:ui",
+      },
+    ],
+  },
 ]

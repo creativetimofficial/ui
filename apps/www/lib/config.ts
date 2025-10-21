@@ -5,7 +5,7 @@ export const siteConfig = {
   description:
     "A collection of Open Source agent and audio components that you can customize, extend, and build on.",
   links: {
-    twitter: "https://twitter.com/creativetim",
+    twitter: "https://x.com/creativetim",
     github: "https://github.com/creativetimofficial/ui",
   },
   navItems: [
@@ -15,7 +15,7 @@ export const siteConfig = {
     },
     {
       href: "/blocks",
-      label: "Examples",
+      label: "Blocks",
     },
   ],
   utm: {

@@ -11,9 +11,9 @@ import {
 import { PageNav } from "@/components/page-nav"
 import { Button } from "@/components/ui/button"
 
-const title = "Examples"
+const title = "Blocks"
 const description =
-  "A collection of building blocks for agents and audio that you can customize and extend."
+  "A collection of building blocks and components made by Creative Tim on top of shadcn/ui."
 
 export const metadata: Metadata = {
   title,
@@ -51,7 +51,7 @@ export default function BlocksLayout({
         <PageHeaderDescription>{description}</PageHeaderDescription>
         <PageActions>
           <Button asChild size="sm">
-            <a href="#blocks">Browse Examples</a>
+            <a href="#blocks">Browse Blocks</a>
           </Button>
           <Button asChild variant="ghost" size="sm">
             <Link href="https://github.com/creativetimofficial/ui">

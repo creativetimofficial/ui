@@ -20,7 +20,7 @@ import { Separator } from "@/components/ui/separator"
 
 function getPromptUrl(baseURL: string, url: string) {
   return `${baseURL}?q=${encodeURIComponent(
-    `I’m looking at this shadcn/ui documentation: ${url}.
+    `I’m looking at this @creative-tim/ui documentation: ${url}.
 Help me understand how to use it. Be ready to explain concepts, give examples, or help debug based on it.
   `
   )}`
@@ -42,7 +42,7 @@ const menuItems = {
   ),
   v0: (url: string) => (
     <a
-      href={getPromptUrl("https://v0.dev", url)}
+      href={getPromptUrl("https://v0.app", url)}
       target="_blank"
       rel="noopener noreferrer"
     >
