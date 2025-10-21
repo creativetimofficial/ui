@@ -1,4 +1,4 @@
-![Creative Tim UI](https://github.com/user-attachments/assets/a5b73bfc-b0a3-4b4e-8915-f90a086c5723)
+![Creative Tim UI](https://raw.githubusercontent.com/creativetimofficial/ui/refs/heads/main/apps/www/public/opengraph-image.png?token=GHSAT0AAAAAADKQMYN66H6UUTMAH55OPEDI2HXPY2A)
 
 # Creative Tim UI
 
