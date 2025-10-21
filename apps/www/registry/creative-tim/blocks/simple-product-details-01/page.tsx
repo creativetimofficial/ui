@@ -128,7 +128,7 @@ export default function SimpleProductDetails01() {
           {/* More Info Section */}
           <div>
             <h3 className="mb-6 text-2xl font-bold">More Info</h3>
-            <Accordion type="single" collapsible className="w-full">
+            <Accordion type="single" collapsible defaultValue="description" className="w-full">
               <AccordionItem value="description">
                 <AccordionTrigger className="text-base font-semibold">
                   Description
