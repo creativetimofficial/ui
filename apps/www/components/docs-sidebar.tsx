@@ -23,7 +23,7 @@ const TOP_LEVEL_SECTIONS = [
   },
   { name: "Setup", href: "/docs/setup" },
   { name: "How It Works", href: "/docs/usage" },
-  { name: "Troubleshooting", href: "/docs/troubleshooting" },
+  { name: "Debug Logs", href: "/docs/troubleshooting" },
 ]
 
 const EXCLUDED_SECTIONS = ["installation", "dark-mode", "(root)"]

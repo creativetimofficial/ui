@@ -1,40 +1,40 @@
 ---
-title: Troubleshooting
-description: Troubleshooting Creative Tim UI components.
+title: Debug Logs
+description: Common issues and debugging steps for Creative Tim UI components.
 ---
 
-## Why are my components not styled?
+## Components appear unstyled
 
-Make sure your project is configured correctly for shadcn/ui in Tailwind 4 - this means having a `globals.css` file that imports Tailwind and includes the shadcn/ui base styles.
+Verify your project has the correct Tailwind CSS configuration for shadcn/ui. Your `globals.css` file should import Tailwind and include shadcn/ui base styles for proper component rendering.
 
 ---
 
-## I ran the Creative Tim UI CLI but nothing was added to my project
+## CLI installation completes but no files appear
 
-Double-check that:
+Check these common issues:
 
-- Your current working directory is the root of your project (where package.json lives).
-- Your components.json file (if using shadcn-style config) is set up correctly.
-- You're using the latest version of the Creative Tim UI CLI:
+- Confirm you're running the command from your project root directory (where `package.json` is located).
+- Verify your `components.json` configuration file has the correct settings if you're using shadcn-style setup.
+- Use the latest CLI version to ensure compatibility:
 
 ```bash
 npx @creative-tim/ui@latest components add orb
 ```
 
-## Theme switching doesn’t work — my app stays in light mode
+## Theme toggle stuck on light mode
 
-Ensure your app is using the same data-theme system that shadcn/ui and AI Elements expect. The default implementation toggles a data-theme attribute on the `<html>` element. Make sure your tailwind.config.js is using class or data- selectors accordingly:
+Your application needs to use the same theme system as shadcn/ui. The components expect a `data-theme` attribute on the `<html>` element. Check your `tailwind.config.js` to ensure it's configured with the appropriate class or data selectors for theme switching.
 
-## The component imports fail with “module not found”
+## Import errors showing "module not found"
 
-Check the file exists. If it does, make sure your tsconfig.json has a proper paths alias for @/ i.e.
+Confirm the component file exists in your project. If it does, check your `tsconfig.json` has the correct path mapping for the `@/` alias:
 
 ```json
 {
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@/_": ["./_"]
+      "@/*": ["./*"]
     }
   }
 }
@@ -42,6 +42,6 @@ Check the file exists. If it does, make sure your tsconfig.json has a proper pat
 
 ---
 
-## Still stuck?
+## Need additional help?
 
-If all else fails, feel free to open an issue on [GitHub](https://github.com/creativetimofficial/ui/issues).
+If you're still experiencing issues, open a support ticket on [GitHub](https://github.com/creativetimofficial/ui/issues) with details about your setup and the problem you're encountering.
