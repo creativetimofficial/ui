@@ -47,22 +47,24 @@ function BillingCard({ company, contact, email, vat }: BillingCardProps) {
           </div>
         </div>
       </CardHeader>
-      <CardContent className="space-y-2">
-        <div className="text-sm">
-          <span className="text-muted-foreground font-semibold">Contact: </span>
-          <span className="font-medium">{contact}</span>
-        </div>
-        <div className="text-sm">
-          <span className="text-muted-foreground font-semibold">
-            Email Address:{" "}
-          </span>
-          <span className="font-medium">{email}</span>
-        </div>
-        <div className="text-sm">
-          <span className="text-muted-foreground font-semibold">
-            VAT Number:{" "}
-          </span>
-          <span className="font-medium">{vat}</span>
+      <CardContent>
+        <div className="space-y-2">
+          <div className="text-sm">
+            <span className="text-muted-foreground font-semibold">Contact: </span>
+            <span className="font-medium">{contact}</span>
+          </div>
+          <div className="text-sm">
+            <span className="text-muted-foreground font-semibold">
+              Email Address:{" "}
+            </span>
+            <span className="font-medium">{email}</span>
+          </div>
+          <div className="text-sm">
+            <span className="text-muted-foreground font-semibold">
+              VAT Number:{" "}
+            </span>
+            <span className="font-medium">{vat}</span>
+          </div>
         </div>
       </CardContent>
     </Card>
