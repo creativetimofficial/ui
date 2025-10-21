@@ -5,7 +5,14 @@ import { ArrowDown } from "lucide-react"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card"
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card"
 
 const POSTS = [
   {
@@ -103,8 +110,8 @@ export default function BlogCardsLayout01() {
               <Badge variant="secondary" className="mb-2">
                 {tag}
               </Badge>
-              <h3 className="mb-2 text-xl font-semibold">{title}</h3>
-              <p className="text-muted-foreground text-sm">{desc}</p>
+              <CardTitle className="mb-2 text-xl">{title}</CardTitle>
+              <CardDescription>{desc}</CardDescription>
             </CardContent>
             <CardFooter className="flex items-center gap-3 px-6 pt-0 pb-6">
               <Avatar className="h-8 w-8">

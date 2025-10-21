@@ -3,7 +3,14 @@
 import { Globe, Heart, Mic, Puzzle } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card"
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card"
 
 const POSTS = [
   {
@@ -50,13 +57,13 @@ export default function HighlightedBlogPosts01() {
             </p>
           </CardHeader>
           <CardContent className="p-6 sm:p-8">
-            <h3 className="text-center text-2xl font-bold">
+            <CardTitle className="text-center text-2xl">
               Nature&apos;s Light
-            </h3>
-            <p className="py-6 text-center opacity-80">
+            </CardTitle>
+            <CardDescription className="py-6 text-center opacity-80">
               It really matters and then like it really doesn&apos;t matter.
               What matters is the people who are sparked by it.
-            </p>
+            </CardDescription>
           </CardContent>
           <CardFooter className="p-6 text-center sm:p-8">
             <Button
@@ -83,8 +90,10 @@ export default function HighlightedBlogPosts01() {
               <CardContent className="relative flex h-full flex-col justify-between p-6">
                 <Icon className="h-8 w-8 stroke-2 text-white" />
                 <div className="space-y-0.5">
-                  <h3 className="text-xl font-semibold text-white">{title}</h3>
-                  <p className="text-sm text-white/80">{desc}</p>
+                  <CardTitle className="text-xl text-white">{title}</CardTitle>
+                  <CardDescription className="text-sm text-white/80">
+                    {desc}
+                  </CardDescription>
                 </div>
               </CardContent>
             </Card>
