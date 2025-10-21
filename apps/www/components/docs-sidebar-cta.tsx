@@ -15,14 +15,14 @@ export function DocsSidebarCta({ className }: React.ComponentProps<"div">) {
       <div className="bg-surface/80 absolute inset-0" />
 
       <div className="relative z-10 text-base leading-tight font-semibold text-balance group-hover:underline">
-        Deploy and Scale Agents with Creative Tim
+        Optimize Token Usage
       </div>
       <div className="text-muted-foreground relative z-10">
-        Creative Tim delivers the infrastructure and developer experience you
-        need to ship reliable audio & agent applications at scale.
+        Speed up your workflow with modular, open-source components that
+        integrate effortlessly through Registries and MCPs.
       </div>
       <Button size="sm" className="relative z-10 mt-2 w-fit">
-        Deploy Now
+        Get Started
       </Button>
       <Link
         href={siteConfig.utm.agents}
