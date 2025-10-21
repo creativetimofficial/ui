@@ -30,7 +30,7 @@ export default function LargeBlogPreview01() {
         <div className="flex items-center gap-3">
           <Avatar>
             <AvatarImage
-              src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&auto=format&fit=crop"
+              src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&auto=format&fit=crop"
               alt="Otto Gonzalez"
             />
             <AvatarFallback>OG</AvatarFallback>

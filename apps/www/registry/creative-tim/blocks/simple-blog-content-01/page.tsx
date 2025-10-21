@@ -12,7 +12,7 @@ const POSTS = [
     desc: "Use border utilities to quickly style the border and border-radius of an element. Great for images, buttons.",
     date: "Posted on 26 May",
     author: {
-      img: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&auto=format&fit=crop",
+      img: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&auto=format&fit=crop",
       name: "Otto Gonzalez",
     },
   },
@@ -23,7 +23,7 @@ const POSTS = [
     desc: "Use border utilities to quickly style the border and border-radius of an element. Great for images, buttons.",
     date: "Posted on 03 May",
     author: {
-      img: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&auto=format&fit=crop",
+      img: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&auto=format&fit=crop",
       name: "Chriss Smahos",
     },
   },
@@ -34,7 +34,7 @@ const POSTS = [
     desc: "Use border utilities to quickly style the border and border-radius of an element. Great for images, buttons.",
     date: "Posted on 12 April",
     author: {
-      img: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&auto=format&fit=crop",
+      img: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&auto=format&fit=crop",
       name: "Elijah Miller",
     },
   },
