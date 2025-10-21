@@ -411,15 +411,13 @@ export function ExamplesPreview() {
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {category.examples.map((example) => {
               const CardContent = (
-                <Card className="bg-card overflow-hidden border transition-all hover:shadow-md">
+                <Card className="bg-card overflow-hidden border transition-all hover:shadow-md py-0 gap-4">
                   <div className="bg-muted/30 relative aspect-[16/10] overflow-hidden">
                     {example.thumbnail ? (
-                      <Image
+                      <img
                         src={example.thumbnail}
                         alt={example.name}
-                        fill
                         className="object-cover"
-                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                       />
                     ) : (
                       <div className="from-muted/80 to-muted/40 absolute inset-0 bg-gradient-to-br" />
@@ -435,7 +433,7 @@ export function ExamplesPreview() {
                       </div>
                     )}
                   </div>
-                  <div className="p-4">
+                  <div className="px-4 pb-4">
                     <div className="flex items-center justify-between">
                       <h4 className="text-sm font-medium">{example.name}</h4>
                       <span className="text-muted-foreground text-xs">
