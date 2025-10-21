@@ -4,14 +4,6 @@ export const dynamic = "force-static"
 export const revalidate = false
 
 const FEATURED_BLOCKS = [
-  "voice-chat-01",
-  "transcriber-01",
-  "speaker-01",
-  "voice-form-01",
-  "music-player-01",
-  "music-player-02",
-  "voice-chat-02",
-  "voice-chat-03",
   "software-purchase-01",
 ]
 
