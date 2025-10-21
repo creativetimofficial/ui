@@ -18,9 +18,9 @@ import {
 const TOP_LEVEL_SECTIONS = [
   { name: "Introduction", href: "/docs" },
   { name: "Registry", href: "/docs/registry" },
-  { name: "Components", href: "/docs/setup" },
-  { name: "How It Works", href: "/docs/usage" },
-  { name: "Debug Logs", href: "/docs/troubleshooting" },
+  { name: "Components", href: "/docs/components" },
+  { name: "How It Works", href: "/docs/how-it-works" },
+  { name: "Debug Logs", href: "/docs/debug-logs" },
 ]
 
 const EXCLUDED_SECTIONS = ["installation", "dark-mode", "(root)"]

@@ -26,6 +26,13 @@ Preferred communication style: Simple, everyday language.
 ### Documentation System
 - **Content Management**: Fumadocs MDX with frontmatter schema.
 - **Code Highlighting**: Shiki with custom transformers.
+- **Documentation Pages**: Organized in `apps/www/content/docs/(root)/` with semantic URLs:
+  - `/docs` → Introduction (index.mdx)
+  - `/docs/registry` → Registry (registry.mdx)
+  - `/docs/components` → Components (components.mdx)
+  - `/docs/how-it-works` → How It Works (how-it-works.mdx)
+  - `/docs/debug-logs` → Debug Logs (debug-logs.mdx)
+- **Page Navigation**: Controlled by `meta.json` file in each documentation section, defining page order and navigation flow.
 
 ### Theme System
 - **Multi-theme Support**: CSS variable-based theming.
