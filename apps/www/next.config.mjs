@@ -101,7 +101,8 @@ const nextConfig = {
       },
       {
         source: '/api/:path*',
-        destination: process.env.NEXT_PUBLIC_APP_URL + '/api/:path*', // Proxy to Rails API
+        destination: 'http://localhost:3000/api/:path*', // Proxy to Rails API
+        basePath: false
       },
       {
         source: '/dashboard/:path*',
