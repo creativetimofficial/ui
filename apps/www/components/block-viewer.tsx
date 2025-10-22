@@ -136,7 +136,7 @@ function BlockViewerToolbar() {
   const { copyToClipboard, isCopied } = useCopyToClipboard()
   const isPro = isProComponent(item.name)
   const hasAccess = canAccessComponent(item.name)
-  const viewPath = process.env.NEXT_PUBLIC_VIEW_PATH || "/view"
+  // const viewPath = process.env.NEXT_PUBLIC_VIEW_PATH || "/view"
 
   return (
     <div className="hidden w-full flex-col gap-4 pl-2 md:pr-6 lg:flex">
