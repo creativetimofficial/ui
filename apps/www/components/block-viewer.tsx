@@ -178,7 +178,7 @@ function BlockViewerToolbar() {
                 size="sm"
                 onClick={() => {
                   copyToClipboard(
-                    `npx @creative-tim/ui@latest add "https://creative-tim.com/ui/r/${item.name}.json"`
+                    `npx @creative-tim/ui@latest add ${item.name}`
                   )
                 }}
               >
@@ -350,7 +350,7 @@ function BlockViewerMobile({ children }: { children: React.ReactNode }) {
 }
 
 function BlockViewerCode() {
-  const { activeFile, highlightedFiles, item } = useBlockViewer()
+  const { activeFile, highlightedFiles } = useBlockViewer()
 
   const file = React.useMemo(() => {
     return highlightedFiles?.find((file) => file.target === activeFile)
