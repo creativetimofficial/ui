@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "software-purchase-card",
+  "type": "registry:ui",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "button",
+    "card",
+    "badge"
+  ],
+  "files": [
+    {
+      "path": "registry/creative-tim/ui/software-purchase-card.tsx",
+      "content": "\"use client\"\n\nimport { Calendar, CreditCard, DollarSign, Users } from \"lucide-react\"\n\nimport { Badge } from \"@/components/ui/badge\"\nimport { Button } from \"@/components/ui/button\"\nimport {\n  Card,\n  CardContent,\n  CardFooter,\n  CardHeader,\n  CardTitle,\n} from \"@/components/ui/card\"\n\nexport interface SoftwarePurchaseCardProps {\n  softwareName?: string\n  startDate?: string\n  seats?: number\n  pricingType?: \"per-seat\" | \"flat-rate\" | \"usage-based\"\n  price?: string\n  onApprove?: () => void\n  onDiscard?: () => void\n}\n\nexport function SoftwarePurchaseCard({\n  softwareName = \"Enterprise Cloud Suite\",\n  startDate = \"2025-01-15\",\n  seats = 50,\n  pricingType = \"per-seat\",\n  price = \"$2,500\",\n  onApprove,\n  onDiscard,\n}: SoftwarePurchaseCardProps) {\n  const pricingTypeLabel = {\n    \"per-seat\": \"Per Seat\",\n    \"flat-rate\": \"Flat Rate\",\n    \"usage-based\": \"Usage Based\",\n  }[pricingType]\n\n  return (\n    <Card className=\"w-full max-w-md\">\n      <CardHeader>\n        <CardTitle className=\"flex items-center justify-between\">\n          {softwareName}\n          <Badge variant=\"secondary\">{pricingTypeLabel}</Badge>\n        </CardTitle>\n      </CardHeader>\n      <CardContent className=\"flex flex-col gap-4\">\n        <div className=\"flex items-center gap-3 text-sm\">\n          <Calendar className=\"text-muted-foreground size-4\" />\n          <div className=\"flex flex-col gap-0.5\">\n            <span className=\"text-muted-foreground text-xs\">Start Date</span>\n            <span className=\"font-medium\">\n              {new Date(startDate).toLocaleDateString(\"en-US\", {\n                month: \"long\",\n                day: \"numeric\",\n                year: \"numeric\",\n              })}\n            </span>\n          </div>\n        </div>\n\n        <div className=\"flex items-center gap-3 text-sm\">\n          <Users className=\"text-muted-foreground size-4\" />\n          <div className=\"flex flex-col gap-0.5\">\n            <span className=\"text-muted-foreground text-xs\">Seats</span>\n            <span className=\"font-medium\">{seats} users</span>\n          </div>\n        </div>\n\n        <div className=\"flex items-center gap-3 text-sm\">\n          <CreditCard className=\"text-muted-foreground size-4\" />\n          <div className=\"flex flex-col gap-0.5\">\n            <span className=\"text-muted-foreground text-xs\">Pricing Type</span>\n            <span className=\"font-medium\">{pricingTypeLabel}</span>\n          </div>\n        </div>\n\n        <div className=\"flex items-center gap-3 text-sm\">\n          <DollarSign className=\"text-muted-foreground size-4\" />\n          <div className=\"flex flex-col gap-0.5\">\n            <span className=\"text-muted-foreground text-xs\">\n              {pricingType === \"per-seat\" ? \"Monthly Cost\" : \"Price\"}\n            </span>\n            <span className=\"text-lg font-semibold\">{price}</span>\n          </div>\n        </div>\n      </CardContent>\n      <CardFooter className=\"flex gap-3\">\n        <Button variant=\"outline\" className=\"flex-1\" onClick={onDiscard}>\n          Discard\n        </Button>\n        <Button className=\"flex-1\" onClick={onApprove}>\n          Approve\n        </Button>\n      </CardFooter>\n    </Card>\n  )\n}\n",
+      "type": "registry:ui"
+    }
+  ]
+}

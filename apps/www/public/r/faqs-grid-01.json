@@ -1,0 +1,25 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "faqs-grid-01",
+  "type": "registry:block",
+  "description": "Simple FAQ grid layout",
+  "registryDependencies": [
+    "card"
+  ],
+  "files": [
+    {
+      "path": "registry/creative-tim/blocks/faqs-grid-01/page.tsx",
+      "content": "import {\n  CreditCard,\n  Package,\n  RefreshCw,\n  ShoppingCart,\n  Store,\n  Truck,\n} from \"lucide-react\"\n\nimport { Card, CardContent, CardHeader } from \"@/components/ui/card\"\n\nconst DATA = [\n  {\n    icon: ShoppingCart,\n    title: \"How do I order?\",\n    desc: \"Browse our collection, add items to your cart, and proceed to checkout. We accept multiple payment methods including credit cards, PayPal, and digital wallets for your convenience.\",\n  },\n  {\n    icon: CreditCard,\n    title: \"How can I make the payment?\",\n    desc: \"We accept all major credit cards, debit cards, PayPal, Apple Pay, and Google Pay. All transactions are secured with industry-standard encryption to protect your information.\",\n  },\n  {\n    icon: Truck,\n    title: \"How much time does it take to receive the order?\",\n    desc: \"Standard shipping takes 3-5 business days. Express shipping is available for 1-2 day delivery. International orders typically arrive within 7-14 business days depending on your location.\",\n  },\n  {\n    icon: Store,\n    title: \"Can I resell the products?\",\n    desc: \"Products purchased for personal use cannot be resold without authorization. For wholesale or reseller inquiries, please contact our business development team at business@example.com.\",\n  },\n  {\n    icon: Package,\n    title: \"Where do I find the shipping details?\",\n    desc: \"Shipping information is available in your account under 'Order History'. You'll receive tracking details via email once your order ships, allowing you to monitor delivery progress.\",\n  },\n  {\n    icon: RefreshCw,\n    title: \"What is your return policy?\",\n    desc: \"We offer a 30-day return policy on most items. Products must be in original condition with tags attached. Refunds are processed within 5-7 business days after we receive your return.\",\n  },\n]\n\nexport default function FaqsGrid01() {\n  return (\n    <section className=\"px-6 py-16\">\n      <div className=\"container mx-auto\">\n        <div className=\"mb-16 text-center\">\n          <h2 className=\"mb-4 text-4xl font-bold\">\n            Frequently Asked Questions\n          </h2>\n          <p className=\"text-muted-foreground mx-auto max-w-2xl text-lg\">\n            Find answers to common questions about our products, shipping, and\n            policies. Can't find what you're looking for? Contact our support\n            team.\n          </p>\n        </div>\n        <div className=\"grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3\">\n          {DATA.map(({ icon: Icon, title, desc }, key) => (\n            <Card\n              key={key}\n              className=\"group hover:border-primary/50 transition-all hover:shadow-lg\"\n            >\n              <CardHeader className=\"pb-4\">\n                <div className=\"bg-primary/10 mb-3 flex h-12 w-12 items-center justify-center rounded-full\">\n                  <Icon className=\"text-primary h-6 w-6\" />\n                </div>\n                <h3 className=\"text-xl leading-tight\">{title}</h3>\n              </CardHeader>\n              <CardContent>\n                <p className=\"text-muted-foreground leading-relaxed\">{desc}</p>\n              </CardContent>\n            </Card>\n          ))}\n        </div>\n      </div>\n    </section>\n  )\n}\n",
+      "type": "registry:page",
+      "target": "app/faqs-grid/page.tsx"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "1000px",
+    "container": "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
+    "mobile": "component"
+  },
+  "categories": [
+    "faqs"
+  ]
+}

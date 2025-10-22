@@ -1,0 +1,28 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "contact-sections-15",
+  "type": "registry:block",
+  "description": "Contact options with quick contact form",
+  "registryDependencies": [
+    "button",
+    "card",
+    "input",
+    "label"
+  ],
+  "files": [
+    {
+      "path": "registry/creative-tim/blocks/contact-sections-15/page.tsx",
+      "content": "\"use client\"\n\nimport { FileText, Headphones, MessageSquare } from \"lucide-react\"\n\nimport { Button } from \"@/components/ui/button\"\nimport { Card } from \"@/components/ui/card\"\nimport { Input } from \"@/components/ui/input\"\nimport { Label } from \"@/components/ui/label\"\n\nconst CONTACT_OPTIONS = [\n  {\n    icon: MessageSquare,\n    title: \"Chat with Sales\",\n    description: \"Speak to our sales team\",\n    action: \"Start Chat\",\n  },\n  {\n    icon: Headphones,\n    title: \"Get Support\",\n    description: \"We're here to help\",\n    action: \"Contact Support\",\n  },\n  {\n    icon: FileText,\n    title: \"Documentation\",\n    description: \"Browse our docs\",\n    action: \"View Docs\",\n  },\n]\n\nexport default function ContactSections15() {\n  return (\n    <section className=\"py-16\">\n      <div className=\"container mx-auto\">\n        <div className=\"grid items-center gap-12 lg:grid-cols-2\">\n          <div>\n            <h2 className=\"mb-4 text-4xl font-bold\">\n              Let's start a conversation\n            </h2>\n            <p className=\"text-muted-foreground mb-8 text-lg\">\n              We're always happy to help with any questions you might have. Get\n              in touch with us and we'll respond as soon as possible.\n            </p>\n            <div className=\"space-y-6\">\n              {CONTACT_OPTIONS.map(\n                ({ icon: Icon, title, description, action }, key) => (\n                  <div key={key} className=\"flex items-start gap-4\">\n                    <div className=\"bg-primary/10 grid h-12 w-12 shrink-0 place-items-center rounded-lg\">\n                      <Icon className=\"text-primary h-6 w-6\" />\n                    </div>\n                    <div className=\"flex-1\">\n                      <h3 className=\"mb-1 font-semibold\">{title}</h3>\n                      <p className=\"text-muted-foreground mb-3 text-sm\">\n                        {description}\n                      </p>\n                      <Button variant=\"link\" className=\"h-auto p-0\">\n                        {action} →\n                      </Button>\n                    </div>\n                  </div>\n                )\n              )}\n            </div>\n          </div>\n          <Card className=\"p-8\">\n            <h3 className=\"mb-6 text-2xl font-bold\">Quick Contact</h3>\n            <form action=\"#\" className=\"space-y-6\">\n              <div className=\"space-y-2\">\n                <Label htmlFor=\"name\">Your Name</Label>\n                <Input id=\"name\" placeholder=\"Enter your name\" />\n              </div>\n              <div className=\"space-y-2\">\n                <Label htmlFor=\"email\">Your Email</Label>\n                <Input id=\"email\" type=\"email\" placeholder=\"Enter your email\" />\n              </div>\n              <div className=\"space-y-2\">\n                <Label htmlFor=\"phone\">Phone Number (Optional)</Label>\n                <Input id=\"phone\" type=\"tel\" placeholder=\"Enter your phone\" />\n              </div>\n              <div className=\"space-y-2\">\n                <Label htmlFor=\"inquiry\">Your Inquiry</Label>\n                <Input id=\"inquiry\" placeholder=\"What can we help you with?\" />\n              </div>\n              <Button className=\"w-full\">Submit</Button>\n            </form>\n          </Card>\n        </div>\n      </div>\n    </section>\n  )\n}\n",
+      "type": "registry:page",
+      "target": "app/contact-sections-15/page.tsx"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "1000px",
+    "container": "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
+    "mobile": "component"
+  },
+  "categories": [
+    "contact"
+  ]
+}

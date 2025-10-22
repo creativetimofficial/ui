@@ -1,0 +1,27 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "modals-05",
+  "type": "registry:block",
+  "description": "Upload files modal with drag and drop",
+  "registryDependencies": [
+    "dialog",
+    "button",
+    "card"
+  ],
+  "files": [
+    {
+      "path": "registry/creative-tim/blocks/modals-05/page.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { CloudUpload, Trash, X } from \"lucide-react\"\n\nimport { Button } from \"@/components/ui/button\"\nimport { Card, CardContent } from \"@/components/ui/card\"\nimport {\n  Dialog,\n  DialogContent,\n  DialogHeader,\n  DialogTitle,\n  DialogTrigger,\n} from \"@/components/ui/dialog\"\n\nconst IMAGES = [\n  {\n    name: \"cover-1.jpg\",\n    size: \"140 KB\",\n  },\n  {\n    name: \"cover-2.jpg\",\n    size: \"288 KB\",\n  },\n]\n\nexport default function ModalsBlock() {\n  const [isOpen, setIsOpen] = React.useState(false)\n\n  return (\n    <div className=\"grid min-h-screen w-full place-items-center\">\n      <Dialog open={isOpen} onOpenChange={setIsOpen}>\n        <DialogTrigger asChild>\n          <Button onClick={() => setIsOpen(true)}>Open Modal</Button>\n        </DialogTrigger>\n        <DialogContent className=\"sm:max-w-[600px]\">\n          <button\n            onClick={() => setIsOpen(false)}\n            className=\"ring-offset-background focus:ring-ring absolute top-4 right-4 rounded-sm opacity-70 transition-opacity hover:opacity-100 focus:ring-2 focus:ring-offset-2 focus:outline-none disabled:pointer-events-none\"\n          >\n            <X className=\"h-4 w-4\" />\n            <span className=\"sr-only\">Close</span>\n          </button>\n          <DialogHeader>\n            <DialogTitle className=\"mb-1 text-xl\">Upload Files</DialogTitle>\n            <p className=\"text-muted-foreground text-sm\">\n              Easily upload files to your account with just a few clicks.\n            </p>\n          </DialogHeader>\n\n          <form className=\"mt-6 space-y-4\">\n            <Card className=\"border-2 border-dashed\">\n              <CardContent className=\"grid min-h-64 place-items-center p-6\">\n                <label htmlFor=\"upload\" className=\"cursor-pointer\">\n                  <input type=\"file\" className=\"hidden\" id=\"upload\" />\n                  <div className=\"mx-auto max-w-md text-center\">\n                    <CloudUpload className=\"text-muted-foreground mx-auto mb-6 h-12 w-12\" />\n                    <p className=\"mb-2 font-semibold\">\n                      Drag and Drop or{\" \"}\n                      <span className=\"underline\">Choose a Local File</span>\n                    </p>\n                    <p className=\"text-muted-foreground text-sm\">\n                      Supported formats: .png, .jpg, .svg\n                    </p>\n                  </div>\n                </label>\n              </CardContent>\n            </Card>\n\n            <div className=\"grid grid-cols-1 gap-4 sm:grid-cols-2\">\n              {IMAGES.map(({ name, size }) => (\n                <Card key={name}>\n                  <CardContent className=\"flex items-start justify-between p-3\">\n                    <div className=\"flex items-center gap-4\">\n                      <img\n                        src=\"https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=100&h=100&fit=crop&crop=center&q=80\"\n                        alt={name}\n                        className=\"h-12 w-12 rounded object-cover object-center\"\n                      />\n                      <div className=\"space-y-1\">\n                        <p className=\"text-sm font-semibold\">{name}</p>\n                        <p className=\"text-muted-foreground text-sm\">{size}</p>\n                      </div>\n                    </div>\n                    <Button\n                      type=\"button\"\n                      variant=\"ghost\"\n                      size=\"sm\"\n                      className=\"shrink-0\"\n                    >\n                      <Trash className=\"h-4 w-4\" />\n                    </Button>\n                  </CardContent>\n                </Card>\n              ))}\n            </div>\n\n            <div className=\"flex items-center justify-end gap-2 pt-4\">\n              <Button\n                type=\"button\"\n                variant=\"outline\"\n                onClick={() => setIsOpen(false)}\n              >\n                Cancel\n              </Button>\n              <Button type=\"submit\">Upload</Button>\n            </div>\n          </form>\n        </DialogContent>\n      </Dialog>\n    </div>\n  )\n}\n",
+      "type": "registry:page",
+      "target": "app/modals-05/page.tsx"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "700px",
+    "container": "w-full bg-surface",
+    "mobile": "component"
+  },
+  "categories": [
+    "modals"
+  ]
+}

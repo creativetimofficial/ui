@@ -1,0 +1,28 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "contact-sections-14",
+  "type": "registry:block",
+  "description": "Gradient background contact form with asterisk fields",
+  "registryDependencies": [
+    "button",
+    "input",
+    "label",
+    "textarea"
+  ],
+  "files": [
+    {
+      "path": "registry/creative-tim/blocks/contact-sections-14/page.tsx",
+      "content": "\"use client\"\n\nimport { Send } from \"lucide-react\"\n\nimport { Button } from \"@/components/ui/button\"\nimport { Input } from \"@/components/ui/input\"\nimport { Label } from \"@/components/ui/label\"\nimport { Textarea } from \"@/components/ui/textarea\"\n\nexport default function ContactSections14() {\n  return (\n    <section className=\"from-background to-muted/20 bg-gradient-to-b py-20\">\n      <div className=\"container mx-auto max-w-4xl\">\n        <div className=\"mb-12 text-center\">\n          <span className=\"text-primary text-sm font-semibold\">\n            GET IN TOUCH\n          </span>\n          <h2 className=\"mt-2 mb-4 text-4xl font-bold\">\n            We'd Love to Hear From You\n          </h2>\n          <p className=\"text-muted-foreground mx-auto max-w-2xl text-lg\">\n            Whether you have a question about features, pricing, or anything\n            else, our team is ready to answer all your questions.\n          </p>\n        </div>\n        <form action=\"#\" className=\"space-y-8\">\n          <div className=\"grid grid-cols-1 gap-6 md:grid-cols-2\">\n            <div className=\"space-y-2\">\n              <Label htmlFor=\"name\">Full Name *</Label>\n              <Input id=\"name\" placeholder=\"John Doe\" required />\n            </div>\n            <div className=\"space-y-2\">\n              <Label htmlFor=\"email\">Email Address *</Label>\n              <Input\n                id=\"email\"\n                type=\"email\"\n                placeholder=\"john@example.com\"\n                required\n              />\n            </div>\n          </div>\n          <div className=\"grid grid-cols-1 gap-6 md:grid-cols-2\">\n            <div className=\"space-y-2\">\n              <Label htmlFor=\"phone\">Phone Number</Label>\n              <Input id=\"phone\" type=\"tel\" placeholder=\"+1 (555) 000-0000\" />\n            </div>\n            <div className=\"space-y-2\">\n              <Label htmlFor=\"subject\">Subject</Label>\n              <Input id=\"subject\" placeholder=\"How can we help?\" />\n            </div>\n          </div>\n          <div className=\"space-y-2\">\n            <Label htmlFor=\"message\">Message *</Label>\n            <Textarea\n              id=\"message\"\n              placeholder=\"Tell us more about your inquiry...\"\n              rows={6}\n              required\n            />\n          </div>\n          <div className=\"flex justify-center\">\n            <Button size=\"lg\" className=\"gap-2\">\n              <Send className=\"h-4 w-4\" />\n              Send Message\n            </Button>\n          </div>\n        </form>\n      </div>\n    </section>\n  )\n}\n",
+      "type": "registry:page",
+      "target": "app/contact-sections-14/page.tsx"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "1100px",
+    "container": "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
+    "mobile": "component"
+  },
+  "categories": [
+    "contact"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "contact-sections-11",
+  "type": "registry:block",
+  "description": "Dark gradient contact form with backdrop blur",
+  "registryDependencies": [
+    "button",
+    "input",
+    "label",
+    "textarea"
+  ],
+  "files": [
+    {
+      "path": "registry/creative-tim/blocks/contact-sections-11/page.tsx",
+      "content": "\"use client\"\n\nimport { Mail, Phone } from \"lucide-react\"\n\nimport { Button } from \"@/components/ui/button\"\nimport { Input } from \"@/components/ui/input\"\nimport { Label } from \"@/components/ui/label\"\nimport { Textarea } from \"@/components/ui/textarea\"\n\nexport default function ContactSections11() {\n  return (\n    <section className=\"grid min-h-screen place-items-center bg-gradient-to-br from-stone-900 to-stone-800 py-16 text-white\">\n      <div className=\"container mx-auto\">\n        <div className=\"mb-12 text-center\">\n          <h2 className=\"mb-4 text-3xl font-bold\">Get In Touch</h2>\n          <p className=\"mx-auto max-w-2xl text-stone-300\">\n            Have a question or want to work together? Leave your details and\n            we'll get back to you as soon as possible.\n          </p>\n        </div>\n        <div className=\"mx-auto max-w-2xl\">\n          <form\n            action=\"#\"\n            className=\"space-y-6 rounded-2xl bg-white/10 p-8 backdrop-blur-sm\"\n          >\n            <div className=\"grid grid-cols-1 gap-6 sm:grid-cols-2\">\n              <div className=\"space-y-2\">\n                <Label htmlFor=\"name\" className=\"text-white\">\n                  Name\n                </Label>\n                <Input\n                  id=\"name\"\n                  placeholder=\"Your name\"\n                  className=\"border-white/30 bg-white/20 text-white placeholder:text-stone-300\"\n                />\n              </div>\n              <div className=\"space-y-2\">\n                <Label htmlFor=\"email\" className=\"text-white\">\n                  Email\n                </Label>\n                <Input\n                  id=\"email\"\n                  type=\"email\"\n                  placeholder=\"your@email.com\"\n                  className=\"border-white/30 bg-white/20 text-white placeholder:text-stone-300\"\n                />\n              </div>\n            </div>\n            <div className=\"space-y-2\">\n              <Label htmlFor=\"subject\" className=\"text-white\">\n                Subject\n              </Label>\n              <Input\n                id=\"subject\"\n                placeholder=\"How can we help?\"\n                className=\"border-white/30 bg-white/20 text-white placeholder:text-stone-300\"\n              />\n            </div>\n            <div className=\"space-y-2\">\n              <Label htmlFor=\"message\" className=\"text-white\">\n                Message\n              </Label>\n              <Textarea\n                id=\"message\"\n                placeholder=\"Your message...\"\n                rows={6}\n                className=\"border-white/30 bg-white/20 text-white placeholder:text-stone-300\"\n              />\n            </div>\n            <Button className=\"w-full\" size=\"lg\">\n              Send Message\n            </Button>\n          </form>\n          <div className=\"mt-12 flex justify-center gap-12\">\n            <div className=\"text-center\">\n              <Phone className=\"mx-auto mb-2 h-6 w-6\" />\n              <p className=\"text-sm text-stone-300\">+1 (424) 535-3523</p>\n            </div>\n            <div className=\"text-center\">\n              <Mail className=\"mx-auto mb-2 h-6 w-6\" />\n              <p className=\"text-sm text-stone-300\">hello@mail.com</p>\n            </div>\n          </div>\n        </div>\n      </div>\n    </section>\n  )\n}\n",
+      "type": "registry:page",
+      "target": "app/contact-sections-11/page.tsx"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "1000px",
+    "container": "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
+    "mobile": "component"
+  },
+  "categories": [
+    "contact"
+  ]
+}

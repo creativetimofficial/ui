@@ -1,0 +1,26 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "footers-07",
+  "type": "registry:block",
+  "description": "Simple footer with country selection",
+  "registryDependencies": [
+    "button",
+    "select"
+  ],
+  "files": [
+    {
+      "path": "registry/creative-tim/blocks/footers-07/page.tsx",
+      "content": "\"use client\"\n\nimport { Settings } from \"lucide-react\"\n\nimport { Button } from \"@/components/ui/button\"\nimport {\n  Select,\n  SelectContent,\n  SelectItem,\n  SelectTrigger,\n  SelectValue,\n} from \"@/components/ui/select\"\n\nconst YEAR = new Date().getFullYear()\n\nconst LINKS = [\n  { title: \"About Us\", href: \"#\" },\n  { title: \"Contact Information\", href: \"#\" },\n  { title: \"Privacy Policy\", href: \"#\" },\n]\n\nconst COUNTRIES = [\n  { name: \"United States\", flag: \"🇺🇸\" },\n  { name: \"United Kingdom\", flag: \"🇬🇧\" },\n  { name: \"Canada\", flag: \"🇨🇦\" },\n  { name: \"Germany\", flag: \"🇩🇪\" },\n  { name: \"France\", flag: \"🇫🇷\" },\n  { name: \"Japan\", flag: \"🇯🇵\" },\n  { name: \"Australia\", flag: \"🇦🇺\" },\n  { name: \"Spain\", flag: \"🇪🇸\" },\n]\n\nexport default function Footers07() {\n  return (\n    <footer className=\"pt-16 pb-8\">\n      <div className=\"container mx-auto\">\n        <div className=\"flex flex-row flex-wrap items-start justify-center gap-4 md:justify-between\">\n          <div className=\"grid gap-3\">\n            <ul className=\"flex flex-wrap items-center justify-center gap-x-6 gap-y-2\">\n              {LINKS.map(({ title, href }, key) => (\n                <li key={key}>\n                  <a\n                    href={href}\n                    className=\"text-foreground hover:text-primary font-semibold\"\n                  >\n                    {title}\n                  </a>\n                </li>\n              ))}\n            </ul>\n            <p className=\"text-foreground text-center text-sm font-medium md:text-left\">\n              All rights reserved. Copyright &copy; {YEAR} Creative Tim\n            </p>\n          </div>\n          <div className=\"flex items-center gap-2\">\n            <Button variant=\"ghost\" size=\"icon\">\n              <Settings className=\"h-5 w-5\" />\n            </Button>\n            <Select>\n              <SelectTrigger className=\"w-64\">\n                <SelectValue placeholder=\"Select Country\" />\n              </SelectTrigger>\n              <SelectContent className=\"max-h-72\">\n                {COUNTRIES.map(({ name, flag }) => (\n                  <SelectItem key={name} value={name}>\n                    <div className=\"flex items-center gap-2\">\n                      <span className=\"text-lg\">{flag}</span>\n                      <span className=\"text-sm\">{name}</span>\n                    </div>\n                  </SelectItem>\n                ))}\n              </SelectContent>\n            </Select>\n          </div>\n        </div>\n      </div>\n    </footer>\n  )\n}\n",
+      "type": "registry:page",
+      "target": "app/footers-07/page.tsx"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "300px",
+    "container": "w-full bg-surface",
+    "mobile": "component"
+  },
+  "categories": [
+    "footers"
+  ]
+}

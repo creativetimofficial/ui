@@ -1,0 +1,28 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "contact-sections-12",
+  "type": "registry:block",
+  "description": "Contact form with background image overlay",
+  "registryDependencies": [
+    "button",
+    "input",
+    "label",
+    "textarea"
+  ],
+  "files": [
+    {
+      "path": "registry/creative-tim/blocks/contact-sections-12/page.tsx",
+      "content": "\"use client\"\n\nimport { Button } from \"@/components/ui/button\"\nimport { Input } from \"@/components/ui/input\"\nimport { Label } from \"@/components/ui/label\"\nimport { Textarea } from \"@/components/ui/textarea\"\n\nexport default function ContactSections12() {\n  return (\n    <section className=\"relative flex min-h-screen items-center py-20\">\n      <div\n        className=\"absolute inset-0 bg-cover bg-center opacity-20\"\n        style={{\n          backgroundImage:\n            \"url('https://images.unsplash.com/photo-1497366216548-37526070297c?w=1200&auto=format&fit=crop')\",\n        }}\n      />\n      <div className=\"relative z-10 container mx-auto\">\n        <div className=\"mx-auto max-w-2xl\">\n          <div className=\"mb-12 text-center\">\n            <h2 className=\"mb-4 text-4xl font-bold\">Let's Talk</h2>\n            <p className=\"text-muted-foreground text-lg\">\n              Fill out the form below and we'll be in touch shortly.\n            </p>\n          </div>\n          <form\n            action=\"#\"\n            className=\"bg-card space-y-6 rounded-2xl p-8 shadow-xl\"\n          >\n            <div className=\"grid grid-cols-1 gap-6 md:grid-cols-2\">\n              <div className=\"space-y-2\">\n                <Label htmlFor=\"first-name\">First Name</Label>\n                <Input id=\"first-name\" placeholder=\"John\" />\n              </div>\n              <div className=\"space-y-2\">\n                <Label htmlFor=\"last-name\">Last Name</Label>\n                <Input id=\"last-name\" placeholder=\"Doe\" />\n              </div>\n            </div>\n            <div className=\"space-y-2\">\n              <Label htmlFor=\"email\">Email</Label>\n              <Input id=\"email\" type=\"email\" placeholder=\"john@example.com\" />\n            </div>\n            <div className=\"space-y-2\">\n              <Label htmlFor=\"company\">Company</Label>\n              <Input id=\"company\" placeholder=\"Your Company\" />\n            </div>\n            <div className=\"space-y-2\">\n              <Label htmlFor=\"message\">How can we help?</Label>\n              <Textarea\n                id=\"message\"\n                placeholder=\"Tell us about your project...\"\n                rows={5}\n              />\n            </div>\n            <Button className=\"w-full\" size=\"lg\">\n              Submit\n            </Button>\n          </form>\n        </div>\n      </div>\n    </section>\n  )\n}\n",
+      "type": "registry:page",
+      "target": "app/contact-sections-12/page.tsx"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "1000px",
+    "container": "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
+    "mobile": "component"
+  },
+  "categories": [
+    "contact"
+  ]
+}

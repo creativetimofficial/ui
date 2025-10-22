@@ -1,0 +1,27 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "web3-05",
+  "type": "registry:block",
+  "description": "Top NFT creators with time filter",
+  "registryDependencies": [
+    "avatar",
+    "button",
+    "card"
+  ],
+  "files": [
+    {
+      "path": "registry/creative-tim/blocks/web3-05/page.tsx",
+      "content": "\"use client\"\n\nimport { useState } from \"react\"\n\nimport { Avatar, AvatarFallback, AvatarImage } from \"@/components/ui/avatar\"\nimport { Button } from \"@/components/ui/button\"\nimport { Card, CardContent, CardHeader } from \"@/components/ui/card\"\n\nconst DATA = [\n  {\n    tokenId: \"#1\",\n    profileImg: \"https://images.unsplash.com/photo-1623853434105-8e7a72898180?auto=format&fit=crop&q=80&w=400&h=400\",\n    name: \"Tina Andrew\",\n    desc: \"Creator\",\n    imgs: [\n      \"https://v3.material-tailwind.com/nft-1.svg\",\n      \"https://v3.material-tailwind.com/nft-2.svg\",\n      \"https://v3.material-tailwind.com/nft-4.svg\",\n    ],\n  },\n  {\n    tokenId: \"#2\",\n    profileImg: \"https://images.unsplash.com/photo-1716662318479-a9c0f1cd1a0e?auto=format&fit=crop&q=80&w=400&h=400\",\n    name: \"Linde Michael\",\n    desc: \"Creator\",\n    imgs: [\n      \"https://v3.material-tailwind.com/pixel-art-1.svg\",\n      \"https://v3.material-tailwind.com/pixel-art-2.svg\",\n      \"https://v3.material-tailwind.com/pixel-art-3.svg\",\n    ],\n  },\n  {\n    tokenId: \"#3\",\n    profileImg: \"https://v3.material-tailwind.com/man-profile-2.jpg\",\n    name: \"Misha Stam\",\n    desc: \"Creator\",\n    imgs: [\n      \"https://v3.material-tailwind.com/nft-3.svg\",\n      \"https://v3.material-tailwind.com/nft-3.svg\",\n      \"https://v3.material-tailwind.com/nft-3.svg\",\n    ],\n  },\n]\n\nexport default function Web305() {\n  const [timeFrame, setTimeFrame] = useState(\"month\")\n\n  return (\n    <section className=\"container mx-auto py-16\">\n      <Card className=\"border shadow-sm\">\n        <CardHeader className=\"flex flex-row flex-wrap items-start justify-between gap-6 p-6\">\n          <div>\n            <h1 className=\"mb-1 text-2xl font-bold\">Top Creators</h1>\n            <p className=\"text-muted-foreground max-w-2xl text-lg\">\n              The most sought-after collections across the entire ecosystem.\n            </p>\n          </div>\n          <div className=\"flex flex-wrap items-center gap-2\">\n            <Button\n              size=\"sm\"\n              variant={timeFrame === \"hour\" ? \"default\" : \"outline\"}\n              onClick={() => setTimeFrame(\"hour\")}\n            >\n              Last 24h\n            </Button>\n            <Button\n              size=\"sm\"\n              variant={timeFrame === \"week\" ? \"default\" : \"outline\"}\n              onClick={() => setTimeFrame(\"week\")}\n            >\n              Last week\n            </Button>\n            <Button\n              size=\"sm\"\n              variant={timeFrame === \"month\" ? \"default\" : \"outline\"}\n              onClick={() => setTimeFrame(\"month\")}\n            >\n              Last month\n            </Button>\n          </div>\n        </CardHeader>\n        <CardContent className=\"grid grid-cols-1 gap-6 px-6 pt-0 pb-6 md:grid-cols-2 lg:grid-cols-3\">\n          {DATA.map(({ tokenId, profileImg, name, desc, imgs }, key) => (\n            <Card key={key} className=\"flex flex-col justify-between\">\n              <CardHeader className=\"p-4\">\n                <p className=\"font-semibold\">{tokenId}</p>\n                <div className=\"mt-4 flex flex-wrap items-start justify-between gap-4\">\n                  <div className=\"flex items-start gap-3\">\n                    <Avatar>\n                      <AvatarImage src={profileImg} alt={name} />\n                      <AvatarFallback>{name[0]}</AvatarFallback>\n                    </Avatar>\n                    <div>\n                      <p className=\"font-semibold\">{name}</p>\n                      <p className=\"text-muted-foreground text-sm\">{desc}</p>\n                    </div>\n                  </div>\n                  <Button size=\"sm\" variant=\"outline\">\n                    See Collection\n                  </Button>\n                </div>\n              </CardHeader>\n              <CardContent className=\"grid grid-cols-3 gap-4 p-4\">\n                {imgs.map((img, idx) => (\n                  <img\n                    key={idx}\n                    src={img}\n                    alt={`nft-${idx}`}\n                    className=\"h-full min-h-24 w-full rounded-lg object-cover object-center\"\n                  />\n                ))}\n              </CardContent>\n            </Card>\n          ))}\n        </CardContent>\n      </Card>\n    </section>\n  )\n}\n",
+      "type": "registry:page",
+      "target": "app/web3-05/page.tsx"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "1000px",
+    "container": "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
+    "mobile": "component"
+  },
+  "categories": [
+    "web3"
+  ]
+}

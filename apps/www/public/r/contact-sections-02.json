@@ -1,0 +1,29 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "contact-sections-02",
+  "type": "registry:block",
+  "description": "Contact form with image background",
+  "registryDependencies": [
+    "button",
+    "checkbox",
+    "input",
+    "label",
+    "textarea"
+  ],
+  "files": [
+    {
+      "path": "registry/creative-tim/blocks/contact-sections-02/page.tsx",
+      "content": "\"use client\"\n\nimport { Button } from \"@/components/ui/button\"\nimport { Checkbox } from \"@/components/ui/checkbox\"\nimport { Input } from \"@/components/ui/input\"\nimport { Label } from \"@/components/ui/label\"\nimport { Textarea } from \"@/components/ui/textarea\"\n\nexport default function ContactSections02() {\n  return (\n    <section className=\"grid min-h-screen w-full grid-cols-1 items-center md:grid-cols-2\">\n      <div className=\"p-6 sm:p-12 lg:p-16\">\n        <div className=\"mb-10\">\n          <h2 className=\"my-4 text-3xl font-bold\">Contact us</h2>\n          <p className=\"text-muted-foreground max-w-lg text-lg\">\n            Whether you have questions or you would just like to say hello,\n            contact us.\n          </p>\n        </div>\n        <form action=\"#\" className=\"space-y-6\">\n          <div className=\"grid grid-cols-1 gap-x-4 gap-y-6 lg:grid-cols-2\">\n            <div className=\"space-y-2\">\n              <Label htmlFor=\"first-name\">First Name</Label>\n              <Input id=\"first-name\" placeholder=\"John\" />\n            </div>\n            <div className=\"space-y-2\">\n              <Label htmlFor=\"last-name\">Last Name</Label>\n              <Input id=\"last-name\" placeholder=\"Doe\" />\n            </div>\n          </div>\n          <div className=\"space-y-2\">\n            <Label htmlFor=\"email\">Email Address</Label>\n            <Input id=\"email\" type=\"email\" placeholder=\"someone@example.com\" />\n          </div>\n          <div className=\"space-y-2\">\n            <Label htmlFor=\"phone\">Phone Number</Label>\n            <Input\n              id=\"phone\"\n              type=\"tel\"\n              maxLength={16}\n              placeholder=\"e.g., +1 123-456-7890\"\n              pattern=\"^\\+\\d{1,3}\\s\\d{1,4}-\\d{1,4}-\\d{4}$\"\n            />\n          </div>\n          <div className=\"space-y-2\">\n            <Label htmlFor=\"message\">Message</Label>\n            <Textarea\n              id=\"message\"\n              placeholder=\"Something about your request.\"\n            />\n          </div>\n          <div className=\"flex items-center gap-2\">\n            <Checkbox id=\"privacy-policy\" />\n            <Label\n              htmlFor=\"privacy-policy\"\n              className=\"cursor-pointer text-sm font-normal\"\n            >\n              You agree to your friendly{\" \"}\n              <a href=\"#\" className=\"text-primary hover:underline\">\n                Privacy Policy\n              </a>\n            </Label>\n          </div>\n          <Button className=\"w-full\">Send Message</Button>\n        </form>\n      </div>\n      <img\n        src=\"https://images.unsplash.com/photo-1658246944389-9e9ac0a85dda?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1064\"\n        alt=\"contact\"\n        className=\"hidden h-full w-full object-cover object-center md:block\"\n      />\n    </section>\n  )\n}\n",
+      "type": "registry:page",
+      "target": "app/contact-sections-02/page.tsx"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "900px",
+    "container": "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
+    "mobile": "component"
+  },
+  "categories": [
+    "contact"
+  ]
+}

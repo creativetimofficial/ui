@@ -1,0 +1,26 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "highlighted-blog-posts-01",
+  "type": "registry:block",
+  "description": "Highlighted blog posts with icons",
+  "registryDependencies": [
+    "button",
+    "card"
+  ],
+  "files": [
+    {
+      "path": "registry/creative-tim/blocks/highlighted-blog-posts-01/page.tsx",
+      "content": "\"use client\"\n\nimport { Globe, Heart, Mic, Puzzle } from \"lucide-react\"\n\nimport { Button } from \"@/components/ui/button\"\nimport {\n  Card,\n  CardContent,\n  CardDescription,\n  CardFooter,\n  CardHeader,\n  CardTitle,\n} from \"@/components/ui/card\"\n\nconst POSTS = [\n  {\n    img: \"https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&auto=format&fit=crop\",\n    icon: Heart,\n    title: \"Cultural\",\n    desc: \"257 spots\",\n  },\n  {\n    img: \"https://images.unsplash.com/photo-1511593358241-7eea1f3c84e5?w=800&auto=format&fit=crop\",\n    icon: Puzzle,\n    title: \"Modern Life\",\n    desc: \"117 spots\",\n  },\n  {\n    img: \"https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=800&auto=format&fit=crop\",\n    icon: Globe,\n    title: \"Popularity\",\n    desc: \"363 spots\",\n  },\n  {\n    img: \"https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=800&auto=format&fit=crop\",\n    icon: Mic,\n    title: \"Good Vibes\",\n    desc: \"215 spots\",\n  },\n]\n\nexport default function HighlightedBlogPosts01() {\n  return (\n    <section className=\"container mx-auto py-16\">\n      <div className=\"mb-16 grid place-items-center text-center\">\n        <h2 className=\"my-4 text-3xl font-bold\">Check out what&apos;s new</h2>\n        <p className=\"text-muted-foreground mx-auto max-w-xl\">\n          We get insulted by others, lose trust for those others. We get back\n          freezes every winter\n        </p>\n      </div>\n      <div className=\"grid grid-cols-1 gap-x-0 gap-y-6 md:grid-cols-3 md:gap-x-6\">\n        <Card className=\"bg-primary text-primary-foreground flex flex-col justify-between py-0\">\n          <CardHeader className=\"p-6 sm:p-8\">\n            <p className=\"block text-center font-semibold opacity-80\">\n              Landscape\n            </p>\n          </CardHeader>\n          <CardContent className=\"p-6 sm:p-8\">\n            <CardTitle className=\"text-center text-2xl\">\n              Nature&apos;s Light\n            </CardTitle>\n            <CardDescription className=\"py-6 text-center opacity-80\">\n              It really matters and then like it really doesn&apos;t matter.\n              What matters is the people who are sparked by it.\n            </CardDescription>\n          </CardContent>\n          <CardFooter className=\"p-6 text-center sm:p-8\">\n            <Button\n              size=\"sm\"\n              variant=\"secondary\"\n              className=\"bg-background text-foreground hover:bg-background/90\"\n            >\n              Read More\n            </Button>\n          </CardFooter>\n        </Card>\n        <div className=\"col-span-2 grid grid-cols-1 gap-6 sm:grid-cols-2\">\n          {POSTS.map(({ img, icon: Icon, title, desc }) => (\n            <Card\n              key={title}\n              className=\"relative grid min-h-48 w-full overflow-hidden border-0 py-0\"\n            >\n              <img\n                src={img}\n                alt={title}\n                className=\"absolute inset-0 h-full w-full object-cover object-center\"\n              />\n              <div className=\"absolute inset-0 h-full w-full bg-black/60\" />\n              <CardContent className=\"relative flex h-full flex-col justify-between p-6\">\n                <Icon className=\"h-8 w-8 stroke-2 text-white\" />\n                <div className=\"space-y-0.5\">\n                  <CardTitle className=\"text-xl text-white\">{title}</CardTitle>\n                  <CardDescription className=\"text-sm text-white/80\">\n                    {desc}\n                  </CardDescription>\n                </div>\n              </CardContent>\n            </Card>\n          ))}\n        </div>\n      </div>\n    </section>\n  )\n}\n",
+      "type": "registry:page",
+      "target": "app/highlighted-blog-posts/page.tsx"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "800px",
+    "container": "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
+    "mobile": "component"
+  },
+  "categories": [
+    "blog-sections"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "web3-04",
+  "type": "registry:block",
+  "description": "Trending NFT collections with gradient overlay",
+  "registryDependencies": [
+    "avatar",
+    "badge",
+    "button",
+    "card",
+    "select"
+  ],
+  "files": [
+    {
+      "path": "registry/creative-tim/blocks/web3-04/page.tsx",
+      "content": "\"use client\"\n\nimport { Cuboid, Grid3x3, Menu } from \"lucide-react\"\n\nimport { Avatar, AvatarFallback, AvatarImage } from \"@/components/ui/avatar\"\nimport { Badge } from \"@/components/ui/badge\"\nimport { Button } from \"@/components/ui/button\"\nimport { Card, CardContent } from \"@/components/ui/card\"\nimport {\n  Select,\n  SelectContent,\n  SelectItem,\n  SelectTrigger,\n  SelectValue,\n} from \"@/components/ui/select\"\n\nconst DATA = [\n  {\n    price: \"9,999 NFTs\",\n    img: \"https://v3.material-tailwind.com/nft-1.svg\",\n    name: \"@thedreamytrees\",\n    title: \"Dreamy Trees\",\n    profileImg: \"https://images.unsplash.com/photo-1623853434105-8e7a72898180?auto=format&fit=crop&q=80&w=400&h=400\",\n    desc: \"Website visitors today demand a frictionless user experience.\",\n  },\n  {\n    price: \"3,000 NFTs\",\n    img: \"https://v3.material-tailwind.com/nft-2.svg\",\n    name: \"@3dfaces\",\n    title: \"Face NFTs\",\n    profileImg: \"https://images.unsplash.com/photo-1716662318479-a9c0f1cd1a0e?auto=format&fit=crop&q=80&w=400&h=400\",\n    desc: \"Website visitors today demand a frictionless user experience.\",\n  },\n  {\n    price: \"9,999 NFTs\",\n    img: \"https://v3.material-tailwind.com/nft-3.svg\",\n    name: \"@theplanetsoftheuniverse\",\n    title: \"The Planets Of The Universe\",\n    profileImg: \"https://v3.material-tailwind.com/man-profile-2.jpg\",\n    desc: \"Website visitors today demand a frictionless user experience.\",\n  },\n]\n\nexport default function Web304() {\n  return (\n    <section className=\"container mx-auto py-16\">\n      <Card className=\"border shadow-sm\">\n        <CardContent className=\"p-6\">\n          <div className=\"mb-6 flex flex-wrap items-start justify-between gap-6\">\n            <div>\n              <h1 className=\"mb-1 text-2xl font-bold\">Trending Collections</h1>\n              <p className=\"text-muted-foreground max-w-2xl text-lg\">\n                The most sought-after collections across the entire ecosystem.\n              </p>\n            </div>\n            <div className=\"flex flex-wrap items-center gap-2\">\n              <Select defaultValue=\"Last 24H\">\n                <SelectTrigger className=\"w-max\">\n                  <SelectValue placeholder=\"Select Date\" />\n                </SelectTrigger>\n                <SelectContent>\n                  <SelectItem value=\"Last 6H\">Last 6H</SelectItem>\n                  <SelectItem value=\"Last 12H\">Last 12H</SelectItem>\n                  <SelectItem value=\"Last 24H\">Last 24H</SelectItem>\n                </SelectContent>\n              </Select>\n              <Button variant=\"outline\" size=\"icon\">\n                <Menu className=\"h-4 w-4\" />\n              </Button>\n              <Button variant=\"outline\" size=\"icon\">\n                <Grid3x3 className=\"h-4 w-4\" />\n              </Button>\n            </div>\n          </div>\n          <div className=\"grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3\">\n            {DATA.map(({ price, img, name, title, profileImg, desc }, key) => (\n              <Card key={key} className=\"relative overflow-hidden\">\n                <img\n                  src={img}\n                  alt={name}\n                  className=\"absolute inset-0 h-full w-full object-cover object-center\"\n                />\n                <div className=\"absolute inset-0 h-full w-full bg-gradient-to-t from-black/80 to-black/20\" />\n                <CardContent className=\"relative z-10 flex h-[28rem] flex-col justify-between p-6\">\n                  <Badge\n                    variant=\"secondary\"\n                    className=\"w-fit border-white/30 bg-white/20 text-white backdrop-blur\"\n                  >\n                    <Cuboid className=\"mr-1 h-4 w-4\" />\n                    Collection\n                  </Badge>\n                  <div>\n                    <h3 className=\"mb-1 flex items-center gap-2 text-xl font-semibold text-white\">\n                      {title}\n                      <Badge\n                        variant=\"outline\"\n                        className=\"border-blue-400 text-blue-400\"\n                      >\n                        ✓\n                      </Badge>\n                    </h3>\n                    <p className=\"mb-4 text-sm text-gray-300\">{desc}</p>\n                    <div className=\"flex items-center justify-between\">\n                      <div className=\"flex items-center gap-2\">\n                        <Avatar className=\"h-8 w-8\">\n                          <AvatarImage src={profileImg} alt={name} />\n                          <AvatarFallback>{name[1]}</AvatarFallback>\n                        </Avatar>\n                        <p className=\"text-sm text-white\">{name}</p>\n                      </div>\n                      <p className=\"text-sm font-semibold text-white\">\n                        {price}\n                      </p>\n                    </div>\n                  </div>\n                </CardContent>\n              </Card>\n            ))}\n          </div>\n        </CardContent>\n      </Card>\n    </section>\n  )\n}\n",
+      "type": "registry:page",
+      "target": "app/web3-04/page.tsx"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "1100px",
+    "container": "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
+    "mobile": "component"
+  },
+  "categories": [
+    "web3"
+  ]
+}

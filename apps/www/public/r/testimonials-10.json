@@ -1,0 +1,27 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "testimonials-10",
+  "type": "registry:block",
+  "description": "Monochromatic testimonials with company logos",
+  "registryDependencies": [
+    "badge",
+    "card",
+    "button"
+  ],
+  "files": [
+    {
+      "path": "registry/creative-tim/blocks/testimonials-10/page.tsx",
+      "content": "\"use client\"\n\nimport { ArrowRight, Sparkles } from \"lucide-react\"\n\nimport { Badge } from \"@/components/ui/badge\"\nimport { Button } from \"@/components/ui/button\"\nimport { Card, CardContent } from \"@/components/ui/card\"\n\nconst TESTIMONIALS = [\n  {\n    image: \"https://v3.material-tailwind.com/logo/spotify.svg\",\n    name: \"Alexandra Martinez\",\n    role: \"Head of Design\",\n    quote:\n      \"This component library has revolutionized our design system. The quality and consistency have dramatically improved our product development workflow.\",\n  },\n  {\n    image: \"https://v3.material-tailwind.com/logo/netflix.svg\",\n    name: \"David Kim\",\n    role: \"Engineering Lead\",\n    quote:\n      \"Outstanding components with excellent TypeScript support. The documentation is thorough and implementation is seamless across our platforms.\",\n  },\n  {\n    image: \"https://v3.material-tailwind.com/logo/coinbase.svg\",\n    name: \"Marcus Johnson\",\n    role: \"Product Director\",\n    quote:\n      \"A game-changer for our development team. These production-ready components have reduced our time-to-market by 50% while maintaining exceptional quality.\",\n  },\n]\n\nexport default function TestimonialsBlock() {\n  return (\n    <section className=\"py-20\">\n      <div className=\"container mx-auto px-4\">\n        <div className=\"mb-16 text-center\">\n          <Badge variant=\"outline\" className=\"mx-auto mb-8 w-max\">\n            <Sparkles className=\"mr-2 h-4 w-4\" />\n            Testimonials\n          </Badge>\n          <h2 className=\"mb-4 text-3xl font-bold md:text-4xl\">\n            Trusted by Industry Leaders\n          </h2>\n          <p className=\"text-muted-foreground mx-auto max-w-2xl text-lg\">\n            See how leading companies are building exceptional products with our\n            component library\n          </p>\n        </div>\n        <div className=\"grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3\">\n          {TESTIMONIALS.map(({ name, image, quote, role }, key) => (\n            <Card key={key} className=\"border-0 bg-transparent shadow-none\">\n              <CardContent className=\"p-0 text-center\">\n                <img\n                  src={image}\n                  alt=\"company logo\"\n                  className=\"mx-auto mb-6 h-20\"\n                />\n                <blockquote className=\"text-muted-foreground mx-auto mb-6 max-w-sm text-sm leading-relaxed\">\n                  &quot;{quote}&quot;\n                </blockquote>\n                <div className=\"mb-6\">\n                  <p className=\"font-semibold\">{name}</p>\n                  <p className=\"text-muted-foreground text-sm\">{role}</p>\n                </div>\n                <Button variant=\"link\" className=\"group\">\n                  Read More\n                  <ArrowRight className=\"ml-2 h-4 w-4 transition-transform group-hover:translate-x-1\" />\n                </Button>\n              </CardContent>\n            </Card>\n          ))}\n        </div>\n      </div>\n    </section>\n  )\n}\n",
+      "type": "registry:page",
+      "target": "app/testimonials-10/page.tsx"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "700px",
+    "container": "w-full bg-surface",
+    "mobile": "component"
+  },
+  "categories": [
+    "testimonials"
+  ]
+}

@@ -1,0 +1,542 @@
+[
+  {
+    "name": "software-purchase-01",
+    "description": "Software purchase approval card",
+    "categories": ["forms"]
+  },
+  {
+    "name": "billing-information-01",
+    "description": "Manage billing contacts and company information",
+    "categories": ["billing"]
+  },
+  {
+    "name": "card-display-01",
+    "description": "Credit card display with dark and light themes",
+    "categories": ["billing"]
+  },
+  {
+    "name": "payment-method-01",
+    "description": "Payment method management with edit and delete",
+    "categories": ["billing"]
+  },
+  {
+    "name": "transaction-history-01",
+    "description": "Financial transaction history with trend indicators",
+    "categories": ["billing"]
+  },
+  {
+    "name": "invoices-01",
+    "description": "Invoice overview with status badges and download",
+    "categories": ["billing"]
+  },
+  {
+    "name": "simple-blog-content-01",
+    "description": "Simple blog content cards",
+    "categories": ["blog-sections"]
+  },
+  {
+    "name": "blog-cards-layout-01",
+    "description": "Blog cards with view more button",
+    "categories": ["blog-sections"]
+  },
+  {
+    "name": "blog-post-preview-tags-01",
+    "description": "Blog posts with tags",
+    "categories": ["blog-sections"]
+  },
+  {
+    "name": "highlighted-blog-posts-01",
+    "description": "Highlighted blog posts with icons",
+    "categories": ["blog-sections"]
+  },
+  {
+    "name": "blog-rectangular-images-01",
+    "description": "Blog posts with rectangular images",
+    "categories": ["blog-sections"]
+  },
+  {
+    "name": "large-blog-preview-01",
+    "description": "Large blog post preview",
+    "categories": ["blog-sections"]
+  },
+  {
+    "name": "simple-product-details-01",
+    "description": "Simple product details grid",
+    "categories": ["ecommerce"]
+  },
+  {
+    "name": "grid-ecommerce-01",
+    "description": "Product grid with filters",
+    "categories": ["ecommerce"]
+  },
+  {
+    "name": "promotional-cards-01",
+    "description": "Promotional product cards",
+    "categories": ["ecommerce"]
+  },
+  {
+    "name": "order-history-01",
+    "description": "Order history table",
+    "categories": ["ecommerce"]
+  },
+  {
+    "name": "empty-shopping-cart-01",
+    "description": "Empty shopping cart state",
+    "categories": ["ecommerce"]
+  },
+  {
+    "name": "digital-product-overview-01",
+    "description": "Digital product with plan options",
+    "categories": ["ecommerce"]
+  },
+  {
+    "name": "product-description-01",
+    "description": "Product description with gallery",
+    "categories": ["ecommerce"]
+  },
+  {
+    "name": "dark-product-overview-01",
+    "description": "Dark themed product overview",
+    "categories": ["ecommerce"]
+  },
+  {
+    "name": "shopping-cart-01",
+    "description": "Shopping cart with summary",
+    "categories": ["ecommerce"]
+  },
+  {
+    "name": "checkout-01",
+    "description": "Checkout form with order summary",
+    "categories": ["ecommerce"]
+  },
+  {
+    "name": "complex-product-description-01",
+    "description": "Product description with accordion",
+    "categories": ["ecommerce"]
+  },
+  {
+    "name": "interactive-product-preview-01",
+    "description": "Interactive room product preview",
+    "categories": ["ecommerce"]
+  },
+  {
+    "name": "order-details-01",
+    "description": "Order details with timeline",
+    "categories": ["ecommerce"]
+  },
+  {
+    "name": "product-details-01",
+    "description": "Product details with image carousel",
+    "categories": ["ecommerce"]
+  },
+  {
+    "name": "product-listing-filters-01",
+    "description": "Product listing with filters and sort",
+    "categories": ["ecommerce"]
+  },
+  {
+    "name": "ecommerce-sections-01",
+    "description": "Runway video spotlight with product cards",
+    "categories": ["ecommerce"]
+  },
+  {
+    "name": "ecommerce-sections-02",
+    "description": "Luxury product detail page with image gallery",
+    "categories": ["ecommerce"]
+  },
+  {
+    "name": "simple-faq-01",
+    "description": "Simple FAQ with dividers",
+    "categories": ["faqs"]
+  },
+  {
+    "name": "faqs-list-01",
+    "description": "FAQ list with accordion",
+    "categories": ["faqs"]
+  },
+  {
+    "name": "faq-left-title-01",
+    "description": "FAQ with left-aligned title and card grid",
+    "categories": ["faqs"]
+  },
+  {
+    "name": "faqs-grid-cta-01",
+    "description": "FAQ grid with CTA section",
+    "categories": ["faqs"]
+  },
+  {
+    "name": "faqs-cards-icons-01",
+    "description": "FAQ cards with icons and CTA",
+    "categories": ["faqs"]
+  },
+  {
+    "name": "faqs-grid-01",
+    "description": "Simple FAQ grid layout",
+    "categories": ["faqs"]
+  },
+  {
+    "name": "contact-sections-01",
+    "description": "Simple contact form with contact info",
+    "categories": ["contact"]
+  },
+  {
+    "name": "contact-sections-02",
+    "description": "Contact form with image background",
+    "categories": ["contact"]
+  },
+  {
+    "name": "contact-sections-03",
+    "description": "Contact form with dark info panel",
+    "categories": ["contact"]
+  },
+  {
+    "name": "contact-sections-04",
+    "description": "Minimalist contact with icon cards",
+    "categories": ["contact"]
+  },
+  {
+    "name": "contact-sections-05",
+    "description": "Contact form with map and option selection",
+    "categories": ["contact"]
+  },
+  {
+    "name": "contact-sections-06",
+    "description": "Centered contact with circular icon badges",
+    "categories": ["contact"]
+  },
+  {
+    "name": "contact-sections-07",
+    "description": "Contact form with office location details",
+    "categories": ["contact"]
+  },
+  {
+    "name": "contact-sections-08",
+    "description": "Contact form with area of interest selection",
+    "categories": ["contact"]
+  },
+  {
+    "name": "contact-sections-09",
+    "description": "Dark background contact with detailed info",
+    "categories": ["contact"]
+  },
+  {
+    "name": "contact-sections-10",
+    "description": "Contact form with info cards",
+    "categories": ["contact"]
+  },
+  {
+    "name": "contact-sections-11",
+    "description": "Dark gradient contact form with backdrop blur",
+    "categories": ["contact"]
+  },
+  {
+    "name": "contact-sections-12",
+    "description": "Contact form with background image overlay",
+    "categories": ["contact"]
+  },
+  {
+    "name": "contact-sections-13",
+    "description": "Contact information cards with form",
+    "categories": ["contact"]
+  },
+  {
+    "name": "contact-sections-14",
+    "description": "Gradient background contact form with asterisk fields",
+    "categories": ["contact"]
+  },
+  {
+    "name": "contact-sections-15",
+    "description": "Contact options with quick contact form",
+    "categories": ["contact"]
+  },
+  {
+    "name": "web3-01",
+    "description": "NFT collection preview with pixel art",
+    "categories": ["web3"]
+  },
+  {
+    "name": "web3-02",
+    "description": "NFT creator profile with collection gallery",
+    "categories": ["web3"]
+  },
+  {
+    "name": "web3-03",
+    "description": "Top crypto auctions with countdown timer",
+    "categories": ["web3"]
+  },
+  {
+    "name": "web3-04",
+    "description": "Trending NFT collections with gradient overlay",
+    "categories": ["web3"]
+  },
+  {
+    "name": "web3-05",
+    "description": "Top NFT creators with time filter",
+    "categories": ["web3"]
+  },
+  {
+    "name": "cruds-01",
+    "description": "Edit apparel item form with product details",
+    "categories": ["cruds"]
+  },
+  {
+    "name": "cruds-02",
+    "description": "Update retail staff profile form",
+    "categories": ["cruds"]
+  },
+  {
+    "name": "cruds-03",
+    "description": "Stylist account settings with profile photo upload",
+    "categories": ["cruds"]
+  },
+  {
+    "name": "footers-01",
+    "description": "Simple footer with social links",
+    "categories": ["footers"]
+  },
+  {
+    "name": "footers-02",
+    "description": "Footer with navigation links and subscription",
+    "categories": ["footers"]
+  },
+  {
+    "name": "footers-03",
+    "description": "Website footer with CTA",
+    "categories": ["footers"]
+  },
+  {
+    "name": "footers-04",
+    "description": "Simple dark footer",
+    "categories": ["footers"]
+  },
+  {
+    "name": "footers-05",
+    "description": "Complex dark footer",
+    "categories": ["footers"]
+  },
+  {
+    "name": "footers-06",
+    "description": "Advanced light footer",
+    "categories": ["footers"]
+  },
+  {
+    "name": "footers-07",
+    "description": "Simple footer with country selection",
+    "categories": ["footers"]
+  },
+  {
+    "name": "footers-08",
+    "description": "Simple footer with version number",
+    "categories": ["footers"]
+  },
+  {
+    "name": "footers-09",
+    "description": "Footer with notification and CTA",
+    "categories": ["footers"]
+  },
+  {
+    "name": "footers-10",
+    "description": "Footer with page links",
+    "categories": ["footers"]
+  },
+  {
+    "name": "footers-11",
+    "description": "Website footer with statement",
+    "categories": ["footers"]
+  },
+  {
+    "name": "footers-12",
+    "description": "Website footer with navigation",
+    "categories": ["footers"]
+  },
+  {
+    "name": "footers-13",
+    "description": "Simple centered website footer",
+    "categories": ["footers"]
+  },
+  {
+    "name": "footers-14",
+    "description": "Website footer for apps",
+    "categories": ["footers"]
+  },
+  {
+    "name": "footers-15",
+    "description": "Website footer with quote",
+    "categories": ["footers"]
+  },
+  {
+    "name": "testimonials-01",
+    "description": "Simple centered testimonials with avatars",
+    "categories": ["testimonials"]
+  },
+  {
+    "name": "testimonials-02",
+    "description": "Testimonial cards with social proof badges",
+    "categories": ["testimonials"]
+  },
+  {
+    "name": "testimonials-03",
+    "description": "Testimonial with statistics and metrics",
+    "categories": ["testimonials"]
+  },
+  {
+    "name": "testimonials-04",
+    "description": "Three column testimonials with star ratings",
+    "categories": ["testimonials"]
+  },
+  {
+    "name": "testimonials-05",
+    "description": "Dark testimonials with avatar and star ratings",
+    "categories": ["testimonials"]
+  },
+  {
+    "name": "testimonials-06",
+    "description": "Company logo testimonial with large quote",
+    "categories": ["testimonials"]
+  },
+  {
+    "name": "testimonials-07",
+    "description": "Interactive testimonials with profile switcher",
+    "categories": ["testimonials"]
+  },
+  {
+    "name": "testimonials-08",
+    "description": "Light testimonials with star ratings",
+    "categories": ["testimonials"]
+  },
+  {
+    "name": "testimonials-09",
+    "description": "Customer story with large heading and avatar",
+    "categories": ["testimonials"]
+  },
+  {
+    "name": "testimonials-10",
+    "description": "Monochromatic testimonials with company logos",
+    "categories": ["testimonials"]
+  },
+  {
+    "name": "testimonials-11",
+    "description": "Testimonial cards with focus state",
+    "categories": ["testimonials"]
+  },
+  {
+    "name": "testimonials-12",
+    "description": "Grid layout testimonials with company logos",
+    "categories": ["testimonials"]
+  },
+  {
+    "name": "testimonials-13",
+    "description": "Dark card testimonial with rounded avatar",
+    "categories": ["testimonials"]
+  },
+  {
+    "name": "testimonials-14",
+    "description": "Light testimonials with card shadow",
+    "categories": ["testimonials"]
+  },
+  {
+    "name": "testimonials-15",
+    "description": "Testimonials with submit button",
+    "categories": ["testimonials"]
+  },
+  {
+    "name": "testimonials-16",
+    "description": "Dark carousel testimonials with navigation",
+    "categories": ["testimonials"]
+  },
+  {
+    "name": "testimonials-17",
+    "description": "Background image carousel testimonials",
+    "categories": ["testimonials"]
+  },
+  {
+    "name": "modals-01",
+    "description": "Alert modal with confirmation input for reset settings",
+    "categories": ["modals"]
+  },
+  {
+    "name": "modals-02",
+    "description": "Edit profile modal with form inputs and preferences",
+    "categories": ["modals"]
+  },
+  {
+    "name": "modals-03",
+    "description": "Invite members modal with team management",
+    "categories": ["modals"]
+  },
+  {
+    "name": "modals-04",
+    "description": "Update product modal with image gallery and form",
+    "categories": ["modals"]
+  },
+  {
+    "name": "modals-05",
+    "description": "Upload files modal with drag and drop",
+    "categories": ["modals"]
+  },
+  {
+    "name": "modals-06",
+    "description": "Publish capsule collection modal with metadata display",
+    "categories": ["modals"]
+  },
+  {
+    "name": "modals-07",
+    "description": "Change collection visibility settings modal",
+    "categories": ["modals"]
+  },
+  {
+    "name": "modals-08",
+    "description": "Disable collection lock rules modal with alert and impact list",
+    "categories": ["modals"]
+  },
+  {
+    "name": "modals-09",
+    "description": "Transfer showroom ownership modal with form fields and warning",
+    "categories": ["modals"]
+  },
+  {
+    "name": "modals-10",
+    "description": "Permanently remove archive modal with effects list",
+    "categories": ["modals"]
+  },
+  {
+    "name": "modals-11",
+    "description": "Confirm vault deletion modal with text input verification",
+    "categories": ["modals"]
+  },
+  {
+    "name": "account-basic-info-01",
+    "description": "Personal information management form",
+    "categories": ["account"]
+  },
+  {
+    "name": "account-2fa-01",
+    "description": "Two-factor authentication setup",
+    "categories": ["account"]
+  },
+  {
+    "name": "account-change-password-01",
+    "description": "Change password form with validation",
+    "categories": ["account"]
+  },
+  {
+    "name": "account-notifications-01",
+    "description": "Notification preferences management",
+    "categories": ["account"]
+  },
+  {
+    "name": "account-sessions-01",
+    "description": "Active sessions and devices management",
+    "categories": ["account"]
+  },
+  {
+    "name": "account-avatar-upload-01",
+    "description": "Profile avatar upload and management",
+    "categories": ["account"]
+  },
+  {
+    "name": "account-integrations-01",
+    "description": "Third-party integrations management",
+    "categories": ["account"]
+  }
+]

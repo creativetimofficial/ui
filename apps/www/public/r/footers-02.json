@@ -1,0 +1,28 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "footers-02",
+  "type": "registry:block",
+  "description": "Footer with navigation links and subscription",
+  "registryDependencies": [
+    "button",
+    "checkbox",
+    "input",
+    "label"
+  ],
+  "files": [
+    {
+      "path": "registry/creative-tim/blocks/footers-02/page.tsx",
+      "content": "\"use client\"\n\nimport { Button } from \"@/components/ui/button\"\nimport { Checkbox } from \"@/components/ui/checkbox\"\nimport { Input } from \"@/components/ui/input\"\nimport { Label } from \"@/components/ui/label\"\n\nconst LINKS = [\n  {\n    title: \"Company\",\n    items: [\n      { title: \"About Us\", href: \"#\" },\n      { title: \"Careers\", href: \"#\" },\n      { title: \"Premium Tools\", href: \"#\" },\n      { title: \"Blogs\", href: \"#\" },\n    ],\n  },\n  {\n    title: \"Pages\",\n    items: [\n      { title: \"Login\", href: \"#\" },\n      { title: \"Register\", href: \"#\" },\n      { title: \"Add List\", href: \"#\" },\n      { title: \"Contact\", href: \"#\" },\n    ],\n  },\n  {\n    title: \"Legal\",\n    items: [\n      { title: \"Terms\", href: \"#\" },\n      { title: \"Privacy\", href: \"#\" },\n      { title: \"Teams\", href: \"#\" },\n      { title: \"About Us\", href: \"#\" },\n    ],\n  },\n]\n\nconst YEAR = new Date().getFullYear()\n\nexport default function Footers02() {\n  return (\n    <footer className=\"pt-16 pb-8\">\n      <div className=\"container mx-auto\">\n        <div className=\"grid grid-cols-1 justify-between gap-10 md:grid-cols-2\">\n          <div className=\"grid grid-cols-3 justify-between gap-x-6 gap-y-4\">\n            {LINKS.map(({ title, items }) => (\n              <ul key={title}>\n                <p className=\"mb-2 font-semibold\">{title}</p>\n                {items.map(({ title, href }) => (\n                  <li key={title} className=\"mb-1\">\n                    <a\n                      href={href}\n                      className=\"text-foreground hover:text-primary\"\n                    >\n                      {title}\n                    </a>\n                  </li>\n                ))}\n              </ul>\n            ))}\n          </div>\n          <div className=\"lg:ml-auto\">\n            <p className=\"mb-2 font-semibold\">Subscribe</p>\n            <p className=\"text-foreground max-w-sm [text-wrap:_balance]\">\n              Get access to subscriber exclusive deals and be the first who gets\n              informed about fresh sales.\n            </p>\n            <div className=\"mt-4 flex w-full max-w-sm items-end gap-2\">\n              <div className=\"w-full\">\n                <Label\n                  htmlFor=\"email\"\n                  className=\"mb-2 inline-block text-sm font-semibold\"\n                >\n                  Your Email\n                </Label>\n                <Input\n                  type=\"email\"\n                  id=\"email\"\n                  placeholder=\"someone@example.com\"\n                />\n              </div>\n              <Button className=\"shrink-0\">Subscribe</Button>\n            </div>\n            <div className=\"mt-3 flex items-center gap-2\">\n              <Checkbox id=\"checkbox-link\" />\n              <Label\n                htmlFor=\"checkbox-link\"\n                className=\"text-foreground flex gap-1 select-none\"\n              >\n                I agree with the\n                <a href=\"#\" className=\"text-primary\">\n                  terms and conditions\n                </a>\n              </Label>\n            </div>\n          </div>\n        </div>\n        <p className=\"text-foreground mt-10 text-center\">\n          &copy; {YEAR} Creative Tim. All Rights Reserved.\n        </p>\n      </div>\n    </footer>\n  )\n}\n",
+      "type": "registry:page",
+      "target": "app/footers-02/page.tsx"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "500px",
+    "container": "w-full bg-surface",
+    "mobile": "component"
+  },
+  "categories": [
+    "footers"
+  ]
+}

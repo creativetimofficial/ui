@@ -1,0 +1,25 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "testimonials-07",
+  "type": "registry:block",
+  "description": "Interactive testimonials with profile switcher",
+  "registryDependencies": [
+    "avatar"
+  ],
+  "files": [
+    {
+      "path": "registry/creative-tim/blocks/testimonials-07/page.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport { Avatar, AvatarFallback, AvatarImage } from \"@/components/ui/avatar\"\n\nconst TESTIMONIALS = [\n  {\n    image:\n      \"https://images.unsplash.com/photo-1716662318479-a9c0f1cd1a0e?auto=format&fit=crop&q=80&w=400&h=400\",\n    name: \"Sarah Johnson\",\n    role: \"Product Designer\",\n    quote:\n      \"The attention to detail and component quality is outstanding. These UI blocks have significantly accelerated our design workflow and improved consistency across our products.\",\n  },\n  {\n    image:\n      \"https://images.unsplash.com/photo-1623853434105-8e7a72898180?auto=format&fit=crop&q=80&w=400&h=400\",\n    name: \"Michael Chen\",\n    role: \"Tech Lead at Stripe\",\n    quote:\n      \"Exceptional component library with excellent documentation. The customization options and TypeScript support make it perfect for enterprise applications. Highly recommend!\",\n  },\n  {\n    image:\n      \"https://images.unsplash.com/photo-1641906840000-4b88f1d44de6?auto=format&fit=crop&q=80&w=400&h=400\",\n    name: \"Emma Rodriguez\",\n    role: \"Frontend Developer\",\n    quote:\n      \"A game-changer for rapid prototyping and production. The components are production-ready, well-tested, and the design system is incredibly cohesive. Love it!\",\n  },\n]\n\nexport default function TestimonialsBlock() {\n  const [selectedTestimonial, setSelectedTestimonial] = React.useState(0)\n\n  return (\n    <section className=\"py-16\">\n      <div className=\"container mx-auto grid grid-cols-12 items-center gap-y-8 px-4\">\n        <div className=\"col-span-full row-start-2 md:col-span-8 md:row-start-auto\">\n          <h2 className=\"text-3xl font-bold\">What Developers Say</h2>\n          <p className=\"text-muted-foreground my-4 max-w-lg\">\n            {TESTIMONIALS[selectedTestimonial].quote}\n          </p>\n          <div>\n            <p className=\"font-semibold\">\n              {TESTIMONIALS[selectedTestimonial].name}\n            </p>\n            <p className=\"text-muted-foreground text-sm\">\n              {TESTIMONIALS[selectedTestimonial].role}\n            </p>\n          </div>\n          <div className=\"divide-border mt-8 flex items-center divide-x\">\n            {TESTIMONIALS.map((testimonial, index) => (\n              <div className={index !== 0 ? \"px-4\" : \"pr-4\"} key={index}>\n                <Avatar\n                  role=\"button\"\n                  className=\"h-12 w-12 cursor-pointer rounded-lg\"\n                  onClick={() => setSelectedTestimonial(index)}\n                >\n                  <AvatarImage src={testimonial.image} />\n                  <AvatarFallback>\n                    {testimonial.name\n                      .split(\" \")\n                      .map((n) => n[0])\n                      .join(\"\")}\n                  </AvatarFallback>\n                </Avatar>\n              </div>\n            ))}\n          </div>\n        </div>\n        <div className=\"col-span-full md:col-span-4\">\n          <img\n            src={TESTIMONIALS[selectedTestimonial].image}\n            alt=\"user profile\"\n            className=\"h-full max-h-96 w-full max-w-96 rounded-xl object-cover object-center\"\n          />\n        </div>\n      </div>\n    </section>\n  )\n}\n",
+      "type": "registry:page",
+      "target": "app/testimonials-07/page.tsx"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "600px",
+    "container": "w-full bg-surface",
+    "mobile": "component"
+  },
+  "categories": [
+    "testimonials"
+  ]
+}

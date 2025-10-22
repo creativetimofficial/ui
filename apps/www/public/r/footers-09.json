@@ -1,0 +1,25 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "footers-09",
+  "type": "registry:block",
+  "description": "Footer with notification and CTA",
+  "registryDependencies": [
+    "button"
+  ],
+  "files": [
+    {
+      "path": "registry/creative-tim/blocks/footers-09/page.tsx",
+      "content": "\"use client\"\n\nimport { Button } from \"@/components/ui/button\"\n\nconst YEAR = new Date().getFullYear()\n\nconst LINKS = [\n  { title: \"About Us\", href: \"#\" },\n  { title: \"Contact Information\", href: \"#\" },\n  { title: \"Privacy Policy\", href: \"#\" },\n]\n\nexport default function Footers09() {\n  return (\n    <footer className=\"pt-20 pb-8\">\n      <div className=\"container mx-auto\">\n        <div className=\"flex flex-col items-start justify-between gap-8 md:flex-row md:items-center\">\n          <div className=\"space-y-3\">\n            <p className=\"text-lg font-semibold\">\n              New Features available! Upgrade to v3.0.0\n            </p>\n            <Button size=\"default\" className=\"w-full md:w-auto\">\n              Upgrade Now\n            </Button>\n          </div>\n          <div className=\"flex flex-col gap-4 md:items-end\">\n            <ul className=\"flex flex-wrap items-center gap-x-8 gap-y-2\">\n              {LINKS.map(({ title, href }, key) => (\n                <li key={key}>\n                  <a\n                    href={href}\n                    className=\"text-muted-foreground hover:text-foreground transition-colors\"\n                  >\n                    {title}\n                  </a>\n                </li>\n              ))}\n            </ul>\n            <p className=\"text-muted-foreground text-sm\">\n              &copy; {YEAR} Creative Tim. All rights reserved.\n            </p>\n          </div>\n        </div>\n      </div>\n    </footer>\n  )\n}\n",
+      "type": "registry:page",
+      "target": "app/footers-09/page.tsx"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "350px",
+    "container": "w-full bg-surface",
+    "mobile": "component"
+  },
+  "categories": [
+    "footers"
+  ]
+}

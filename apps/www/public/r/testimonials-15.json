@@ -1,0 +1,25 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "testimonials-15",
+  "type": "registry:block",
+  "description": "Testimonials with submit button",
+  "registryDependencies": [
+    "card"
+  ],
+  "files": [
+    {
+      "path": "registry/creative-tim/blocks/testimonials-15/page.tsx",
+      "content": "\"use client\"\n\nimport { Plus, Quote, Star } from \"lucide-react\"\n\nimport { Card, CardContent } from \"@/components/ui/card\"\n\nconst TESTIMONIALS = [\n  {\n    image: \"https://images.unsplash.com/photo-1641906840000-4b88f1d44de6?auto=format&fit=crop&q=80&w=400&h=400\",\n    name: \"Lucian Eurel\",\n    role: \"CEO Discord\",\n    quote:\n      \"Web Summit will increase your appetite, your inspiration, your skills, your motivation and your network.\",\n    rating: 4,\n  },\n  {\n    image: \"https://images.unsplash.com/photo-1716662318479-a9c0f1cd1a0e?auto=format&fit=crop&q=80&w=400&h=400\",\n    name: \"Linde Michel\",\n    role: \"CFO Slack\",\n    quote:\n      \"Do not go where the path may lead, go instead where there is no path and leave a trail. You will succeed on it.\",\n    rating: 4,\n  },\n  {\n    image: \"https://v3.material-tailwind.com/man-profile-2.jpg\",\n    name: \"Misha Stam\",\n    role: \"COO Dribbble\",\n    quote:\n      \"The pessimist complains about the wind; the optimist expects it to change; the realist adjusts the sails.\",\n    rating: 5,\n  },\n]\n\nexport default function TestimonialsBlock() {\n  return (\n    <section className=\"py-20\">\n      <div className=\"container mx-auto px-4\">\n        <div className=\"grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4\">\n          {TESTIMONIALS.map(({ name, image, role, quote, rating }, key) => (\n            <Card\n              key={key}\n              className=\"group border-border/50 hover:border-border transition-all hover:shadow-lg\"\n            >\n              <CardContent className=\"p-6 text-center\">\n                <div className=\"relative mx-auto mb-4 inline-block\">\n                  <img\n                    src={image}\n                    alt={`${name} profile`}\n                    className=\"border-border mx-auto h-20 w-20 rounded-full border-4 object-cover transition-transform group-hover:scale-105\"\n                  />\n                  <div className=\"bg-primary absolute -right-1 -bottom-1 rounded-full p-1.5 shadow-lg\">\n                    <Quote className=\"text-primary-foreground h-3 w-3\" />\n                  </div>\n                </div>\n\n                <h3 className=\"mb-1 text-lg font-semibold\">{name}</h3>\n                <p className=\"text-muted-foreground mb-4 text-sm\">{role}</p>\n\n                <blockquote className=\"text-muted-foreground mb-4 text-sm leading-relaxed\">\n                  &quot;{quote}&quot;\n                </blockquote>\n\n                <div className=\"flex items-center justify-center gap-1\">\n                  {Array.from({ length: 5 }).map((_, i) => (\n                    <Star\n                      key={i}\n                      className={`h-4 w-4 ${\n                        i < rating\n                          ? \"fill-yellow-400 text-yellow-400\"\n                          : \"fill-muted text-muted\"\n                      }`}\n                    />\n                  ))}\n                </div>\n              </CardContent>\n            </Card>\n          ))}\n          <Card className=\"group border-border/50 hover:border-border hover:bg-muted/50 cursor-pointer border-2 border-dashed transition-all\">\n            <CardContent className=\"grid h-full min-h-[280px] w-full place-items-center p-6\">\n              <div className=\"text-center\">\n                <div className=\"bg-muted group-hover:bg-muted/80 mx-auto mb-3 flex h-16 w-16 items-center justify-center rounded-full transition-colors\">\n                  <Plus className=\"text-muted-foreground h-8 w-8\" />\n                </div>\n                <p className=\"text-muted-foreground text-sm font-medium\">\n                  Add Testimonial\n                </p>\n              </div>\n            </CardContent>\n          </Card>\n        </div>\n      </div>\n    </section>\n  )\n}\n",
+      "type": "registry:page",
+      "target": "app/testimonials-15/page.tsx"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "600px",
+    "container": "w-full bg-surface",
+    "mobile": "component"
+  },
+  "categories": [
+    "testimonials"
+  ]
+}

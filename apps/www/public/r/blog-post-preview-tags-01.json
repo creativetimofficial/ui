@@ -1,0 +1,26 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "blog-post-preview-tags-01",
+  "type": "registry:block",
+  "description": "Blog posts with tags",
+  "registryDependencies": [
+    "badge",
+    "button"
+  ],
+  "files": [
+    {
+      "path": "registry/creative-tim/blocks/blog-post-preview-tags-01/page.tsx",
+      "content": "\"use client\"\n\nimport { Badge } from \"@/components/ui/badge\"\nimport { Button } from \"@/components/ui/button\"\n\nconst POSTS = [\n  {\n    img: \"https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&auto=format&fit=crop\",\n    category: \"Otto Gonzalez\",\n    title: \"Autodesk looks to future of 3D printing with Project\",\n    desc: \"Don't be scared of the truth because we need to restart the human foundation in truth And I love you like Kanye loves Kanye I love Rick Owens bed design but the back is too high for the beams and angle of the ceiling.\",\n    tags: [\"Product\", \"Design\", \"UX\"],\n  },\n  {\n    img: \"https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=800&auto=format&fit=crop\",\n    category: \"Ryan Samuel\",\n    title: \"Lyft launching cross-platform service this week\",\n    desc: \"Don't be scared of the truth because we need to restart the human foundation in truth And I love you like Kanye loves Kanye I love Rick Owens bed design but the back is too high for the beams and angle of the ceiling.\",\n    tags: [\"Product\", \"Design\", \"UX\"],\n  },\n  {\n    img: \"https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=800&auto=format&fit=crop\",\n    category: \"Nora Hazel\",\n    title: \"6 insights into the French Fashion landscape\",\n    desc: \"Don't be scared of the truth because we need to restart the human foundation in truth And I love you like Kanye loves Kanye I love Rick Owens bed design but the back is too high for the beams and angle of the ceiling.\",\n    tags: [\"Product\", \"Design\", \"UX\"],\n  },\n]\n\nexport default function BlogPostPreviewTags01() {\n  return (\n    <section className=\"py-16\">\n      <div className=\"container mx-auto mb-16 text-center\">\n        <p className=\"text-primary mb-2 text-sm font-semibold\">\n          Latest Blog Posts\n        </p>\n        <h2 className=\"my-4 text-3xl font-bold\">Explore Our Places</h2>\n        <p className=\"text-muted-foreground mx-auto max-w-3xl text-lg\">\n          This is the paragraph where you can write more details about blogs.\n          Keep you user engaged by providing meaningful information.\n        </p>\n      </div>\n      <div className=\"container mx-auto grid grid-cols-1 items-start gap-16 md:grid-cols-2 lg:grid-cols-3\">\n        {POSTS.map(({ img, category, title, desc, tags }) => (\n          <div key={title} className=\"space-y-6\">\n            <div className=\"relative h-56 w-full overflow-hidden rounded-lg shadow-lg\">\n              <img\n                src={img}\n                alt={title}\n                className=\"h-full w-full object-cover object-center\"\n              />\n            </div>\n            <div className=\"space-y-4\">\n              <p className=\"text-primary text-sm font-semibold\">{category}</p>\n              <h3 className=\"text-2xl font-bold\">{title}</h3>\n              <p className=\"text-muted-foreground\">{desc}</p>\n            </div>\n            <div className=\"flex flex-wrap items-center gap-2\">\n              {tags.map((tag) => (\n                <Badge key={tag} variant=\"secondary\">\n                  {tag}\n                </Badge>\n              ))}\n            </div>\n          </div>\n        ))}\n      </div>\n      <div className=\"mt-24 text-center\">\n        <Button>View More</Button>\n      </div>\n    </section>\n  )\n}\n",
+      "type": "registry:page",
+      "target": "app/blog-post-preview-tags/page.tsx"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "1100px",
+    "container": "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
+    "mobile": "component"
+  },
+  "categories": [
+    "blog-sections"
+  ]
+}

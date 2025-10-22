@@ -1,0 +1,10 @@
+{
+  "title": "Get Started",
+  "pages": [
+    "index",
+    "registry",
+    "components",
+    "how-it-works",
+    "debug-logs"
+  ]
+}

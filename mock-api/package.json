@@ -1,0 +1,23 @@
+{
+  "name": "mock-auth-api",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "start:watch": "NODE_ENV=development nodemon server.js"
+  },
+  "dependencies": {
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "dayjs": "^1.11.10",
+    "dotenv": "^16.4.5",
+    "json-server": "^0.17.4",
+    "jsonwebtoken": "^9.0.2",
+    "lodash-es": "^4.17.21",
+    "lowdb": "^6.1.1",
+    "nanoid": "^5.0.7"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}

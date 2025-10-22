@@ -1,0 +1,26 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "testimonials-05",
+  "type": "registry:block",
+  "description": "Dark testimonials with avatar and star ratings",
+  "registryDependencies": [
+    "avatar",
+    "card"
+  ],
+  "files": [
+    {
+      "path": "registry/creative-tim/blocks/testimonials-05/page.tsx",
+      "content": "\"use client\"\n\nimport { Quote, Star } from \"lucide-react\"\n\nimport { Avatar, AvatarFallback, AvatarImage } from \"@/components/ui/avatar\"\nimport { Card, CardContent } from \"@/components/ui/card\"\n\nconst TESTIMONIALS = [\n  {\n    image:\n      \"https://images.unsplash.com/photo-1716662318479-a9c0f1cd1a0e?auto=format&fit=crop&q=80&w=400&h=400\",\n    name: \"Sarah Johnson\",\n    role: \"Product Designer\",\n    quote:\n      \"The component library has transformed our design process. The quality and attention to detail in every component is exceptional.\",\n    rating: 5,\n  },\n  {\n    image:\n      \"https://images.unsplash.com/photo-1623853434105-8e7a72898180?auto=format&fit=crop&q=80&w=400&h=400\",\n    name: \"Michael Chen\",\n    role: \"Tech Lead at Stripe\",\n    quote:\n      \"Outstanding documentation and TypeScript support. These components integrate seamlessly into our enterprise applications.\",\n    rating: 5,\n  },\n  {\n    image:\n      \"https://images.unsplash.com/photo-1641906840000-4b88f1d44de6?auto=format&fit=crop&q=80&w=400&h=400\",\n    name: \"Emma Rodriguez\",\n    role: \"Frontend Developer\",\n    quote:\n      \"Production-ready components with excellent customization. The design system is cohesive and well-thought-out.\",\n    rating: 5,\n  },\n]\n\nexport default function TestimonialsBlock() {\n  return (\n    <section className=\"bg-black py-20\">\n      <div className=\"container mx-auto px-4\">\n        <div className=\"mb-16 text-center\">\n          <h2 className=\"mb-4 text-3xl font-bold text-white md:text-4xl\">\n            Trusted by Professionals\n          </h2>\n          <p className=\"mx-auto max-w-2xl text-lg text-white/70\">\n            Hear what developers and designers say about our component library\n          </p>\n        </div>\n        <div className=\"grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3\">\n          {TESTIMONIALS.map(({ name, image, role, quote, rating }, key) => (\n            <Card\n              key={key}\n              className=\"border-white/10 bg-white/5 backdrop-blur-sm transition-all hover:border-white/20 hover:bg-white/10\"\n            >\n              <CardContent className=\"p-8 text-center\">\n                <div className=\"relative mx-auto mb-6 inline-block\">\n                  <Avatar className=\"h-20 w-20 border-4 border-white/20\">\n                    <AvatarImage src={image} alt={`${name} profile`} />\n                    <AvatarFallback className=\"bg-white/10 text-white\">\n                      {name\n                        .split(\" \")\n                        .map((n) => n[0])\n                        .join(\"\")}\n                    </AvatarFallback>\n                  </Avatar>\n                  <div className=\"bg-primary absolute -right-1 -bottom-1 rounded-full p-1.5 shadow-lg\">\n                    <Quote className=\"text-primary-foreground h-3 w-3\" />\n                  </div>\n                </div>\n\n                <h3 className=\"mb-1 text-lg font-semibold text-white\">\n                  {name}\n                </h3>\n                <p className=\"mb-6 text-sm text-white/60\">{role}</p>\n\n                <div className=\"mb-6 flex items-center justify-center gap-1\">\n                  {Array.from({ length: 5 }).map((_, i) => (\n                    <Star\n                      key={i}\n                      className={`h-4 w-4 ${\n                        i < rating\n                          ? \"fill-yellow-400 text-yellow-400\"\n                          : \"fill-white/20 text-white/20\"\n                      }`}\n                    />\n                  ))}\n                </div>\n\n                <blockquote className=\"text-sm leading-relaxed text-white/80\">\n                  &quot;{quote}&quot;\n                </blockquote>\n              </CardContent>\n            </Card>\n          ))}\n        </div>\n      </div>\n    </section>\n  )\n}\n",
+      "type": "registry:page",
+      "target": "app/testimonials-05/page.tsx"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "700px",
+    "container": "w-full bg-surface",
+    "mobile": "component"
+  },
+  "categories": [
+    "testimonials"
+  ]
+}

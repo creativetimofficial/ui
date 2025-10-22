@@ -1,0 +1,30 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "contact-sections-01",
+  "type": "registry:block",
+  "description": "Simple contact form with contact info",
+  "registryDependencies": [
+    "button",
+    "card",
+    "checkbox",
+    "input",
+    "label",
+    "textarea"
+  ],
+  "files": [
+    {
+      "path": "registry/creative-tim/blocks/contact-sections-01/page.tsx",
+      "content": "\"use client\"\n\nimport { Mail, Phone, Ticket } from \"lucide-react\"\n\nimport { Button } from \"@/components/ui/button\"\nimport { Card } from \"@/components/ui/card\"\nimport { Checkbox } from \"@/components/ui/checkbox\"\nimport { Input } from \"@/components/ui/input\"\nimport { Label } from \"@/components/ui/label\"\nimport { Textarea } from \"@/components/ui/textarea\"\n\nconst OPTIONS = [\n  {\n    icon: Phone,\n    info: \"+1(424) 535 3523\",\n  },\n  {\n    icon: Mail,\n    info: \"hello@mail.com\",\n  },\n  {\n    icon: Ticket,\n    info: \"Open Support Ticket\",\n  },\n]\n\nexport default function ContactSections01() {\n  return (\n    <section className=\"grid min-h-screen place-items-center py-16\">\n      <div className=\"container mx-auto grid grid-cols-1 items-center gap-10 lg:grid-cols-2\">\n        <Card className=\"mx-auto p-6 lg:max-w-lg lg:p-12\">\n          <h3 className=\"mb-6 text-2xl font-semibold\">Contact us</h3>\n          <form action=\"#\" className=\"space-y-6\">\n            <div className=\"grid grid-cols-1 gap-x-4 gap-y-6 lg:grid-cols-2\">\n              <div className=\"space-y-2\">\n                <Label htmlFor=\"first-name\">First Name</Label>\n                <Input id=\"first-name\" placeholder=\"John\" />\n              </div>\n              <div className=\"space-y-2\">\n                <Label htmlFor=\"last-name\">Last Name</Label>\n                <Input id=\"last-name\" placeholder=\"Doe\" />\n              </div>\n            </div>\n            <div className=\"space-y-2\">\n              <Label htmlFor=\"email\">Email Address</Label>\n              <Input\n                id=\"email\"\n                type=\"email\"\n                placeholder=\"someone@example.com\"\n              />\n            </div>\n            <div className=\"space-y-2\">\n              <Label htmlFor=\"message\">Message</Label>\n              <Textarea\n                id=\"message\"\n                placeholder=\"Something about your request.\"\n              />\n            </div>\n            <div className=\"flex items-center gap-2\">\n              <Checkbox id=\"privacy-policy\" />\n              <Label\n                htmlFor=\"privacy-policy\"\n                className=\"cursor-pointer text-sm font-normal\"\n              >\n                You agree to your friendly{\" \"}\n                <a href=\"#\" className=\"text-primary hover:underline\">\n                  Privacy Policy\n                </a>\n              </Label>\n            </div>\n            <Button className=\"w-full\">Send Message</Button>\n          </form>\n        </Card>\n        <div className=\"mx-auto lg:max-w-lg\">\n          <h2 className=\"mb-4 text-3xl font-bold\">Get in Touch</h2>\n          <p className=\"text-muted-foreground text-lg lg:max-w-lg\">\n            You need more information? Check what other persons are saying about\n            our product. They are very happy with their purchase.\n          </p>\n          <div className=\"mt-14 space-y-4\">\n            {OPTIONS.map(({ icon: Icon, info }, key) => (\n              <div key={key} className=\"flex items-center gap-4\">\n                <Icon className=\"h-5 w-5\" />\n                <span>{info}</span>\n              </div>\n            ))}\n          </div>\n        </div>\n      </div>\n    </section>\n  )\n}\n",
+      "type": "registry:page",
+      "target": "app/contact-sections-01/page.tsx"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "900px",
+    "container": "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
+    "mobile": "component"
+  },
+  "categories": [
+    "contact"
+  ]
+}

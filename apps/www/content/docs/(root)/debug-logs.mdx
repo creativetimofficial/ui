@@ -1,0 +1,47 @@
+---
+title: Debug Logs
+description: Common issues and debugging steps for Creative Tim UI components.
+---
+
+## Components appear unstyled
+
+Verify your project has the correct Tailwind CSS configuration for shadcn/ui. Your `globals.css` file should import Tailwind and include shadcn/ui base styles for proper component rendering.
+
+---
+
+## CLI installation completes but no files appear
+
+Check these common issues:
+
+- Confirm you're running the command from your project root directory (where `package.json` is located).
+- Verify your `components.json` configuration file has the correct settings if you're using shadcn-style setup.
+- Use the latest CLI version to ensure compatibility:
+
+```bash
+npx @creative-tim/ui@latest components add card
+```
+
+## Theme toggle stuck on light mode
+
+Your application needs to use the same theme system as shadcn/ui. The components expect a `data-theme` attribute on the `<html>` element. Check your `tailwind.config.js` to ensure it's configured with the appropriate class or data selectors for theme switching.
+
+## Import errors showing "module not found"
+
+Confirm the component file exists in your project. If it does, check your `tsconfig.json` has the correct path mapping for the `@/` alias:
+
+```json
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./*"]
+    }
+  }
+}
+```
+
+---
+
+## Need additional help?
+
+If you're still experiencing issues, open a support ticket on [GitHub](https://github.com/creativetimofficial/ui/issues) with details about your setup and the problem you're encountering.

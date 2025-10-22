@@ -1,0 +1,28 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "footers-05",
+  "type": "registry:block",
+  "description": "Complex dark footer",
+  "registryDependencies": [
+    "button",
+    "input",
+    "label",
+    "select"
+  ],
+  "files": [
+    {
+      "path": "registry/creative-tim/blocks/footers-05/page.tsx",
+      "content": "\"use client\"\n\nimport { Button } from \"@/components/ui/button\"\nimport { Input } from \"@/components/ui/input\"\nimport { Label } from \"@/components/ui/label\"\nimport {\n  Select,\n  SelectContent,\n  SelectItem,\n  SelectTrigger,\n  SelectValue,\n} from \"@/components/ui/select\"\n\nconst LINKS = [\n  {\n    title: \"Company\",\n    items: [\n      { title: \"About Us\", href: \"#\" },\n      { title: \"Careers\", href: \"#\" },\n      { title: \"Premium Tools\", href: \"#\" },\n      { title: \"Blogs\", href: \"#\" },\n    ],\n  },\n  {\n    title: \"Pages\",\n    items: [\n      { title: \"Login\", href: \"#\" },\n      { title: \"Register\", href: \"#\" },\n      { title: \"Add List\", href: \"#\" },\n      { title: \"Contact\", href: \"#\" },\n    ],\n  },\n  {\n    title: \"Legal\",\n    items: [\n      { title: \"Terms\", href: \"#\" },\n      { title: \"Privacy\", href: \"#\" },\n      { title: \"Teams\", href: \"#\" },\n      { title: \"About Us\", href: \"#\" },\n    ],\n  },\n  {\n    title: \"Resources\",\n    items: [\n      { title: \"Blog\", href: \"#\" },\n      { title: \"Services\", href: \"#\" },\n      { title: \"Products\", href: \"#\" },\n      { title: \"Pricing\", href: \"#\" },\n    ],\n  },\n]\n\nconst YEAR = new Date().getFullYear()\n\nexport default function Footers05() {\n  return (\n    <footer className=\"bg-primary pt-16 pb-8\">\n      <div className=\"container mx-auto\">\n        <div className=\"grid grid-cols-1 justify-between gap-10 sm:grid-cols-2\">\n          <div className=\"row-start-2 grid grid-cols-2 justify-between gap-6 sm:row-auto lg:grid-cols-4\">\n            {LINKS.map(({ title, items }) => (\n              <ul key={title} className=\"space-y-2\">\n                <p className=\"text-secondary mb-2 font-semibold\">{title}</p>\n                {items.map(({ title, href }) => (\n                  <li key={title}>\n                    <a\n                      href={href}\n                      className=\"text-secondary hover:text-secondary\"\n                    >\n                      {title}\n                    </a>\n                  </li>\n                ))}\n              </ul>\n            ))}\n          </div>\n          <div className=\"lg:ml-auto\">\n            <p className=\"text-secondary mb-4 flex font-semibold lg:justify-end\">\n              Language & Currency\n            </p>\n            <Select>\n              <SelectTrigger className=\"mb-4 border-white/20 bg-white/10 text-white placeholder:text-white/60 lg:w-72\">\n                <SelectValue placeholder=\"Select Language\" />\n              </SelectTrigger>\n              <SelectContent>\n                <SelectItem value=\"english\">English</SelectItem>\n                <SelectItem value=\"spanish\">Spanish</SelectItem>\n                <SelectItem value=\"hindi\">Hindi</SelectItem>\n              </SelectContent>\n            </Select>\n            <Select>\n              <SelectTrigger className=\"border-white/20 bg-white/10 text-white placeholder:text-white/60 lg:w-72\">\n                <SelectValue placeholder=\"Select Currency\" />\n              </SelectTrigger>\n              <SelectContent>\n                <SelectItem value=\"usd\">USD</SelectItem>\n                <SelectItem value=\"euro\">Euro</SelectItem>\n                <SelectItem value=\"rupee\">Rupee</SelectItem>\n              </SelectContent>\n            </Select>\n          </div>\n        </div>\n        <div className=\"border-surface/50 mt-10 flex flex-col justify-between gap-4 border-t border-b pt-6 pb-8 md:flex-row lg:items-end\">\n          <div>\n            <p className=\"text-secondary mb-2 font-semibold\">\n              Subscribe to our newsletters\n            </p>\n            <p className=\"text-secondary\">\n              The latest news, articles and resources sent to your inbox weekly.\n            </p>\n          </div>\n          <div className=\"flex w-full items-end gap-2 md:max-w-sm\">\n            <div className=\"w-full\">\n              <Label\n                htmlFor=\"email\"\n                className=\"text-secondary mb-2 inline-block text-sm font-semibold\"\n              >\n                Your Email\n              </Label>\n              <Input\n                type=\"email\"\n                id=\"email\"\n                placeholder=\"someone@example.com\"\n                className=\"border-white/20 bg-white/10 text-white placeholder:text-white/60\"\n              />\n            </div>\n            <Button variant=\"secondary\" className=\"shrink-0\">\n              subscribe\n            </Button>\n          </div>\n        </div>\n        <p className=\"text-secondary mt-8\">\n          All rights reserved. &copy; {YEAR} Creative Tim\n        </p>\n      </div>\n    </footer>\n  )\n}\n",
+      "type": "registry:page",
+      "target": "app/footers-05/page.tsx"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "700px",
+    "container": "w-full bg-surface",
+    "mobile": "component"
+  },
+  "categories": [
+    "footers"
+  ]
+}

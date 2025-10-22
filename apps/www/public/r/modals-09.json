@@ -1,0 +1,30 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "modals-09",
+  "type": "registry:block",
+  "description": "Transfer showroom ownership modal with form fields and warning",
+  "registryDependencies": [
+    "dialog",
+    "button",
+    "input",
+    "label",
+    "select",
+    "card"
+  ],
+  "files": [
+    {
+      "path": "registry/creative-tim/blocks/modals-09/page.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { AlertTriangle, X } from \"lucide-react\"\n\nimport { Button } from \"@/components/ui/button\"\nimport { Card, CardContent } from \"@/components/ui/card\"\nimport {\n  Dialog,\n  DialogContent,\n  DialogHeader,\n  DialogTitle,\n  DialogTrigger,\n} from \"@/components/ui/dialog\"\nimport { Input } from \"@/components/ui/input\"\nimport { Label } from \"@/components/ui/label\"\nimport {\n  Select,\n  SelectContent,\n  SelectItem,\n  SelectTrigger,\n  SelectValue,\n} from \"@/components/ui/select\"\n\nexport default function ModalsBlock() {\n  const [isOpen, setIsOpen] = React.useState(false)\n\n  return (\n    <div className=\"grid min-h-screen w-full place-items-center\">\n      <Dialog open={isOpen} onOpenChange={setIsOpen}>\n        <DialogTrigger asChild>\n          <Button onClick={() => setIsOpen(true)}>Open Modal</Button>\n        </DialogTrigger>\n        <DialogContent className=\"sm:max-w-[550px]\">\n          <button\n            onClick={() => setIsOpen(false)}\n            className=\"ring-offset-background focus:ring-ring absolute top-4 right-4 rounded-sm opacity-70 transition-opacity hover:opacity-100 focus:ring-2 focus:ring-offset-2 focus:outline-none disabled:pointer-events-none\"\n          >\n            <X className=\"h-4 w-4\" />\n            <span className=\"sr-only\">Close</span>\n          </button>\n          <DialogHeader>\n            <DialogTitle className=\"mb-2 text-xl\">\n              Transfer Showroom Ownership\n            </DialogTitle>\n          </DialogHeader>\n          <p className=\"text-muted-foreground mt-2 text-sm\">\n            Switch control of this fashion showroom space to another user or\n            organization.\n          </p>\n\n          <form className=\"mt-6 space-y-6\">\n            <div className=\"space-y-2\">\n              <Label htmlFor=\"owner\" className=\"font-semibold\">\n                Select new owner\n              </Label>\n              <Select>\n                <SelectTrigger id=\"owner\" className=\"w-full\">\n                  <SelectValue placeholder=\"Choose owner\" />\n                </SelectTrigger>\n                <SelectContent>\n                  <SelectItem value=\"styling-team\">Styling Team</SelectItem>\n                  <SelectItem value=\"content-studio\">Content Studio</SelectItem>\n                  <SelectItem value=\"retail-partner\">Retail Partner</SelectItem>\n                </SelectContent>\n              </Select>\n            </div>\n\n            <div className=\"space-y-2\">\n              <Label htmlFor=\"handle\" className=\"font-semibold\">\n                Confirm collection handle\n              </Label>\n              <Input id=\"handle\" placeholder=\"resort-collection-2026\" />\n            </div>\n\n            <Card className=\"border-yellow-500/50 bg-yellow-500/5\">\n              <CardContent className=\"p-4\">\n                <div className=\"flex items-start gap-3\">\n                  <AlertTriangle className=\"mt-0.5 h-5 w-5 shrink-0 text-yellow-600\" />\n                  <p className=\"text-muted-foreground text-sm\">\n                    Transferring ownership will revoke your access to draft\n                    sets, unpublished campaigns, and internal analytics.\n                  </p>\n                </div>\n              </CardContent>\n            </Card>\n\n            <div className=\"flex items-center justify-end gap-2 pt-4\">\n              <Button\n                type=\"button\"\n                variant=\"outline\"\n                onClick={() => setIsOpen(false)}\n              >\n                Cancel\n              </Button>\n              <Button type=\"submit\" variant=\"destructive\">\n                Transfer Access\n              </Button>\n            </div>\n          </form>\n        </DialogContent>\n      </Dialog>\n    </div>\n  )\n}\n",
+      "type": "registry:page",
+      "target": "app/modals-09/page.tsx"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "750px",
+    "container": "w-full bg-surface",
+    "mobile": "component"
+  },
+  "categories": [
+    "modals"
+  ]
+}

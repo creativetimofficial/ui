@@ -1,0 +1,79 @@
+---
+title: Registry
+description: Learn about the Creative Tim UI component registry system.
+---
+
+## What is the Registry?
+
+The Creative Tim UI registry is a centralized catalog system that enables CLI-based component installation based on shadcn/ui. Unlike traditional npm packages where components are locked in external dependencies, our registry delivers components as source code directly into your project.
+
+## How the Registry Works
+
+When you run the installation command, the CLI:
+
+1. **Fetches Component Metadata**: Retrieves the component definition from our registry endpoint
+2. **Downloads Dependencies**: Identifies and installs required npm packages
+3. **Copies Source Files**: Places component files directly into your codebase
+4. **Manages Imports**: Automatically configures path aliases and imports
+
+## Registry Structure
+
+Each component in the registry includes:
+
+- **Component Source Code**: The actual React component files
+- **Type Definitions**: Full TypeScript support with strict types
+- **Dependencies**: List of required npm packages (Radix UI, etc.)
+- **Files Metadata**: Information about where files should be placed
+- **Registry Dependencies**: Other registry components it depends on
+
+## Installation Endpoints
+
+Components are available through JSON endpoints:
+
+```bash
+# Base UI Components
+/r/button.json
+/r/card.json
+/r/avatar.json
+
+# Custom Blocks
+/r/testimonials-09.json
+```
+
+These endpoints return structured JSON that the CLI uses to install components.
+
+## Registry vs NPM
+
+| Feature | Registry (Source Code) | NPM Package |
+|---------|----------------------|-------------|
+| **Customization** | Full control, edit directly | Limited to props/config |
+| **Updates** | Manual, opt-in | Automatic via package manager |
+| **Bundle Size** | Only what you use | Entire package included |
+| **Version Control** | Part of your codebase | External dependency |
+| **Flexibility** | Modify, extend freely | Constrained by package API |
+
+## Registry Components
+
+The Creative Tim UI registry currently includes:
+
+- **47 Base UI Components**: All shadcn/ui components (button, card, avatar, etc.)
+- **100+ Custom Blocks**: Pre-built sections like testimonials, forms, and more
+- **Full TypeScript Support**: Type-safe component definitions
+- **Dark Mode Ready**: Built-in theme support with CSS variables
+
+## Private Components
+
+The registry supports private components with API key authentication for PRO features:
+
+- Access control via Bearer tokens or API keys
+- Gated installation for premium components
+- Environment variable support for CI/CD workflows
+
+
+
+## Best Practices
+
+1. **Install Only What You Need**: Each component is standalone, no bloat
+2. **Customize After Install**: Treat installed components as your own code
+3. **Version Control**: Commit installed components to your repository
+4. **Update Selectively**: Re-run install commands to update specific components

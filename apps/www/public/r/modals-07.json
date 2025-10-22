@@ -1,0 +1,26 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "modals-07",
+  "type": "registry:block",
+  "description": "Change collection visibility settings modal",
+  "registryDependencies": [
+    "dialog",
+    "button"
+  ],
+  "files": [
+    {
+      "path": "registry/creative-tim/blocks/modals-07/page.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { X } from \"lucide-react\"\n\nimport { Button } from \"@/components/ui/button\"\nimport {\n  Dialog,\n  DialogContent,\n  DialogHeader,\n  DialogTitle,\n  DialogTrigger,\n} from \"@/components/ui/dialog\"\n\nexport default function ModalsBlock() {\n  const [isOpen, setIsOpen] = React.useState(false)\n\n  return (\n    <div className=\"grid min-h-screen w-full place-items-center\">\n      <Dialog open={isOpen} onOpenChange={setIsOpen}>\n        <DialogTrigger asChild>\n          <Button onClick={() => setIsOpen(true)}>Open Modal</Button>\n        </DialogTrigger>\n        <DialogContent className=\"sm:max-w-[500px]\">\n          <button\n            onClick={() => setIsOpen(false)}\n            className=\"ring-offset-background focus:ring-ring absolute top-4 right-4 rounded-sm opacity-70 transition-opacity hover:opacity-100 focus:ring-2 focus:ring-offset-2 focus:outline-none disabled:pointer-events-none\"\n          >\n            <X className=\"h-4 w-4\" />\n            <span className=\"sr-only\">Close</span>\n          </button>\n          <DialogHeader>\n            <DialogTitle className=\"mb-2 text-xl\">\n              Visibility Settings\n            </DialogTitle>\n          </DialogHeader>\n          <p className=\"text-muted-foreground mt-2 text-sm\">\n            This collection is currently restricted to internal collaborators.\n            You can modify who can view or access it from this setting.\n          </p>\n\n          <div className=\"flex items-center justify-end gap-2 pt-6\">\n            <Button\n              type=\"button\"\n              variant=\"outline\"\n              onClick={() => setIsOpen(false)}\n            >\n              Cancel\n            </Button>\n            <Button variant=\"destructive\">Change Visibility</Button>\n          </div>\n        </DialogContent>\n      </Dialog>\n    </div>\n  )\n}\n",
+      "type": "registry:page",
+      "target": "app/modals-07/page.tsx"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "500px",
+    "container": "w-full bg-surface",
+    "mobile": "component"
+  },
+  "categories": [
+    "modals"
+  ]
+}

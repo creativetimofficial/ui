@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "software-purchase-card-demo",
+  "type": "registry:example",
+  "registryDependencies": [
+    "software-purchase-card"
+  ],
+  "files": [
+    {
+      "path": "registry/creative-tim/examples/software-purchase-card-demo.tsx",
+      "content": "\"use client\"\n\nimport { SoftwarePurchaseCard } from \"@/components/ui/software-purchase-card\"\n\nexport default function SoftwarePurchaseCardDemo() {\n  const handleApprove = () => {\n    console.log(\"Purchase approved\")\n  }\n\n  const handleDiscard = () => {\n    console.log(\"Purchase discarded\")\n  }\n\n  return (\n    <div className=\"flex items-center justify-center p-6\">\n      <SoftwarePurchaseCard\n        softwareName=\"Enterprise Cloud Suite\"\n        startDate=\"2025-01-15\"\n        seats={50}\n        pricingType=\"per-seat\"\n        price=\"$2,500\"\n        onApprove={handleApprove}\n        onDiscard={handleDiscard}\n      />\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

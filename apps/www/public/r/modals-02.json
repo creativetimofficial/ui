@@ -1,0 +1,31 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "modals-02",
+  "type": "registry:block",
+  "description": "Edit profile modal with form inputs and preferences",
+  "registryDependencies": [
+    "dialog",
+    "button",
+    "input",
+    "label",
+    "select",
+    "checkbox",
+    "radio-group"
+  ],
+  "files": [
+    {
+      "path": "registry/creative-tim/blocks/modals-02/page.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { X } from \"lucide-react\"\n\nimport { Button } from \"@/components/ui/button\"\nimport { Checkbox } from \"@/components/ui/checkbox\"\nimport {\n  Dialog,\n  DialogContent,\n  DialogHeader,\n  DialogTitle,\n  DialogTrigger,\n} from \"@/components/ui/dialog\"\nimport { Input } from \"@/components/ui/input\"\nimport { Label } from \"@/components/ui/label\"\nimport { RadioGroup, RadioGroupItem } from \"@/components/ui/radio-group\"\nimport {\n  Select,\n  SelectContent,\n  SelectItem,\n  SelectTrigger,\n  SelectValue,\n} from \"@/components/ui/select\"\n\nconst NOTIFICATION = [\"Email\", \"SMS\", \"Push Notification\"]\nconst TOOLS = [\"React\", \"Material Tailwind\", \"TailwindCSS\", \"Next.js\"]\n\nexport default function ModalsBlock() {\n  const [isOpen, setIsOpen] = React.useState(false)\n\n  return (\n    <div className=\"grid min-h-screen w-full place-items-center\">\n      <Dialog open={isOpen} onOpenChange={setIsOpen}>\n        <DialogTrigger asChild>\n          <Button onClick={() => setIsOpen(true)}>Open Modal</Button>\n        </DialogTrigger>\n        <DialogContent className=\"sm:max-w-[600px]\">\n          <button\n            onClick={() => setIsOpen(false)}\n            className=\"ring-offset-background focus:ring-ring absolute top-4 right-4 rounded-sm opacity-70 transition-opacity hover:opacity-100 focus:ring-2 focus:ring-offset-2 focus:outline-none disabled:pointer-events-none\"\n          >\n            <X className=\"h-4 w-4\" />\n            <span className=\"sr-only\">Close</span>\n          </button>\n          <DialogHeader>\n            <DialogTitle className=\"mb-1 text-xl\">Edit Profile</DialogTitle>\n            <p className=\"text-muted-foreground text-sm\">\n              Update your profile information below.\n            </p>\n          </DialogHeader>\n\n          <form className=\"mt-6 space-y-6\">\n            <div className=\"grid grid-cols-1 gap-4 sm:grid-cols-2\">\n              <div className=\"space-y-2\">\n                <Label htmlFor=\"name\" className=\"font-semibold\">\n                  My Name\n                </Label>\n                <Input id=\"name\" placeholder=\"Emma Roberts\" />\n              </div>\n              <div className=\"space-y-2\">\n                <Label htmlFor=\"profession\" className=\"font-semibold\">\n                  I&apos;m\n                </Label>\n                <Select>\n                  <SelectTrigger id=\"profession\" className=\"w-full\">\n                    <SelectValue placeholder=\"Select Profession\" />\n                  </SelectTrigger>\n                  <SelectContent>\n                    <SelectItem value=\"ui-ux\">UI/UX Designer</SelectItem>\n                    <SelectItem value=\"frontend\">Frontend Developer</SelectItem>\n                    <SelectItem value=\"backend\">Backend Developer</SelectItem>\n                    <SelectItem value=\"fullstack\">\n                      Fullstack Developer\n                    </SelectItem>\n                  </SelectContent>\n                </Select>\n              </div>\n            </div>\n\n            <div className=\"space-y-2 border-y py-6\">\n              <p className=\"font-semibold\">\n                Interested in the following technologies\n              </p>\n              <p className=\"text-muted-foreground text-sm\">\n                Choose the frameworks you work on\n              </p>\n              <div className=\"mt-4 flex flex-wrap items-center gap-6\">\n                {TOOLS.map((tool) => (\n                  <div key={tool} className=\"flex items-center gap-2\">\n                    <Checkbox id={tool} />\n                    <Label\n                      htmlFor={tool}\n                      className=\"text-muted-foreground cursor-pointer text-sm\"\n                    >\n                      {tool}\n                    </Label>\n                  </div>\n                ))}\n              </div>\n            </div>\n\n            <div className=\"space-y-2\">\n              <p className=\"font-semibold\">Notification preferences</p>\n              <p className=\"text-muted-foreground text-sm\">\n                Select where you want to be notified\n              </p>\n              <RadioGroup className=\"mt-4 flex items-center gap-6\">\n                {NOTIFICATION.map((notify) => (\n                  <div key={notify} className=\"flex items-center gap-2\">\n                    <RadioGroupItem value={notify} id={notify} />\n                    <Label\n                      htmlFor={notify}\n                      className=\"text-muted-foreground text-sm\"\n                    >\n                      {notify}\n                    </Label>\n                  </div>\n                ))}\n              </RadioGroup>\n            </div>\n\n            <div className=\"flex items-center justify-end gap-2 pt-4\">\n              <Button\n                type=\"button\"\n                variant=\"outline\"\n                onClick={() => setIsOpen(false)}\n              >\n                Cancel\n              </Button>\n              <Button type=\"submit\">Update Profile</Button>\n            </div>\n          </form>\n        </DialogContent>\n      </Dialog>\n    </div>\n  )\n}\n",
+      "type": "registry:page",
+      "target": "app/modals-02/page.tsx"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "700px",
+    "container": "w-full bg-surface",
+    "mobile": "component"
+  },
+  "categories": [
+    "modals"
+  ]
+}

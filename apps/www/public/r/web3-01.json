@@ -1,0 +1,26 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "web3-01",
+  "type": "registry:block",
+  "description": "NFT collection preview with pixel art",
+  "registryDependencies": [
+    "avatar",
+    "card"
+  ],
+  "files": [
+    {
+      "path": "registry/creative-tim/blocks/web3-01/page.tsx",
+      "content": "\"use client\"\n\nimport { Avatar, AvatarFallback, AvatarImage } from \"@/components/ui/avatar\"\nimport { Card, CardContent, CardHeader } from \"@/components/ui/card\"\n\nconst DATA = [\n  {\n    img: \"https://v3.material-tailwind.com/pixel-art-1.svg\",\n    name: \"yqaw...09v\",\n    tokenId: \"475\",\n    profession: \"trader\",\n    profileImg: \"https://images.unsplash.com/photo-1623853434105-8e7a72898180?auto=format&fit=crop&q=80&w=400&h=400\",\n  },\n  {\n    img: \"https://v3.material-tailwind.com/pixel-art-2.svg\",\n    name: \"yqaw...09v\",\n    tokenId: \"476\",\n    profession: \"owner\",\n    profileImg: \"https://images.unsplash.com/photo-1716662318479-a9c0f1cd1a0e?auto=format&fit=crop&q=80&w=400&h=400\",\n  },\n  {\n    img: \"https://v3.material-tailwind.com/pixel-art-3.svg\",\n    name: \"yqaw...09v\",\n    tokenId: \"477\",\n    profession: \"trader\",\n    profileImg: \"https://images.unsplash.com/photo-1716662318479-a9c0f1cd1a0e?auto=format&fit=crop&q=80&w=400&h=400\",\n  },\n]\n\nexport default function Web301() {\n  return (\n    <section className=\"container mx-auto py-16\">\n      <Card className=\"border shadow-sm\">\n        <CardHeader className=\"p-6\">\n          <Avatar className=\"h-12 w-12\">\n            <AvatarImage\n              src=\"https://v3.material-tailwind.com/pixel-art-1.svg\"\n              alt=\"pixel art collection\"\n            />\n            <AvatarFallback>PA</AvatarFallback>\n          </Avatar>\n          <h1 className=\"mt-4 mb-1 text-2xl font-bold\">Pixelated Art</h1>\n          <p className=\"text-muted-foreground max-w-2xl text-lg\">\n            These NFTs capture the essence of imagination and innovation,\n            offering a glimpse into the boundless potential of the digital\n            world.\n          </p>\n        </CardHeader>\n        <CardContent className=\"grid grid-cols-1 gap-6 p-6 sm:grid-cols-2 lg:grid-cols-3\">\n          {DATA.map(({ img, name, tokenId, profession, profileImg }, key) => (\n            <Card key={key}>\n              <CardHeader className=\"p-4\">\n                <img\n                  src={img}\n                  alt={name}\n                  className=\"h-64 w-full rounded-md object-cover object-center\"\n                />\n              </CardHeader>\n              <CardContent className=\"px-6 pt-0 pb-4\">\n                <p className=\"text-muted-foreground mb-1 text-sm\">\n                  Pixelated Art\n                </p>\n                <h3 className=\"text-lg font-semibold\">Picture #{tokenId}</h3>\n                <div className=\"mt-4 flex items-center justify-between\">\n                  <div className=\"flex items-center gap-4\">\n                    <Avatar className=\"h-6 w-6\">\n                      <AvatarImage src={profileImg} alt={name} />\n                      <AvatarFallback>{name[0]}</AvatarFallback>\n                    </Avatar>\n                    <p className=\"text-muted-foreground text-sm\">{name}</p>\n                  </div>\n                  <p className=\"text-primary text-sm capitalize\">\n                    {profession}\n                  </p>\n                </div>\n              </CardContent>\n            </Card>\n          ))}\n        </CardContent>\n      </Card>\n    </section>\n  )\n}\n",
+      "type": "registry:page",
+      "target": "app/web3-01/page.tsx"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "900px",
+    "container": "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
+    "mobile": "component"
+  },
+  "categories": [
+    "web3"
+  ]
+}

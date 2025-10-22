@@ -1,0 +1,26 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "testimonials-16",
+  "type": "registry:block",
+  "description": "Dark carousel testimonials with navigation",
+  "registryDependencies": [
+    "card",
+    "button"
+  ],
+  "files": [
+    {
+      "path": "registry/creative-tim/blocks/testimonials-16/page.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { ChevronLeft, ChevronRight } from \"lucide-react\"\n\nimport { Button } from \"@/components/ui/button\"\nimport { Card, CardContent } from \"@/components/ui/card\"\n\nconst SLIDES = [\n  {\n    image: \"https://images.unsplash.com/photo-1641906840000-4b88f1d44de6?auto=format&fit=crop&q=80&w=400&h=400\",\n    companyLogo: \"https://v3.material-tailwind.com/logo/netflix.svg\",\n    name: \"Linde Michel\",\n    role: \"Social Media Executive, Netflix\",\n    quote:\n      \"We're not always in the position that we want to be at. We're constantly growing. We're constantly making mistakes. We're constantly trying to express ourselves and actualize our dreams.\",\n  },\n  {\n    image: \"https://images.unsplash.com/photo-1716662318479-a9c0f1cd1a0e?auto=format&fit=crop&q=80&w=400&h=400\",\n    companyLogo: \"https://v3.material-tailwind.com/logo/coinbase.svg\",\n    name: \"John Down\",\n    role: \"Visionary, Coinbase\",\n    quote:\n      \"We're not always in the position that we want to be at. We're constantly growing. We're constantly making mistakes. We're constantly trying to express ourselves and actualize our dreams.\",\n  },\n  {\n    image: \"https://images.unsplash.com/photo-1623853434105-8e7a72898180?auto=format&fit=crop&q=80&w=400&h=400\",\n    companyLogo: \"https://v3.material-tailwind.com/logo/spotify.svg\",\n    name: \"Marcell Glock\",\n    role: \"Chief Executive, Spotify\",\n    quote:\n      \"We're not always in the position that we want to be at. We're constantly growing. We're constantly making mistakes. We're constantly trying to express ourselves and actualize our dreams.\",\n  },\n]\n\nexport default function TestimonialsBlock() {\n  const [currentSlide, setCurrentSlide] = React.useState(0)\n\n  const nextSlide = () => {\n    setCurrentSlide((prev) => (prev + 1) % SLIDES.length)\n  }\n\n  const prevSlide = () => {\n    setCurrentSlide((prev) => (prev - 1 + SLIDES.length) % SLIDES.length)\n  }\n\n  return (\n    <section className=\"grid min-h-screen place-items-center bg-black py-16\">\n      <div className=\"relative container mx-auto px-4\">\n        <div className=\"pb-16\">\n          <img\n            src={SLIDES[currentSlide].companyLogo}\n            alt=\"company logo\"\n            className=\"mx-auto mb-8 h-24\"\n          />\n          <blockquote className=\"mx-auto mb-16 max-w-2xl text-center text-xl font-medium text-white\">\n            &quot;{SLIDES[currentSlide].quote}&quot;\n          </blockquote>\n          <p className=\"text-center font-medium text-white\">\n            {SLIDES[currentSlide].name}\n          </p>\n          <p className=\"text-center text-sm text-white/80\">\n            {SLIDES[currentSlide].role}\n          </p>\n        </div>\n\n        <div className=\"mt-8 flex items-center justify-center gap-2\">\n          {SLIDES.map((slide, index) => (\n            <button\n              key={index}\n              onClick={() => setCurrentSlide(index)}\n              className={`h-8 w-8 rounded object-cover object-center transition-opacity ${\n                index === currentSlide ? \"opacity-100\" : \"opacity-50\"\n              }`}\n            >\n              <img\n                src={slide.image}\n                alt={slide.name}\n                className=\"h-full w-full rounded object-cover\"\n              />\n            </button>\n          ))}\n        </div>\n\n        <Button\n          size=\"icon\"\n          variant=\"ghost\"\n          onClick={prevSlide}\n          className=\"!absolute top-1/2 left-2 z-10 hidden -translate-y-1/2 text-white sm:inline-flex\"\n        >\n          <ChevronLeft className=\"h-7 w-7\" />\n        </Button>\n        <Button\n          size=\"icon\"\n          variant=\"ghost\"\n          onClick={nextSlide}\n          className=\"!absolute top-1/2 right-2 z-10 hidden -translate-y-1/2 text-white sm:inline-flex\"\n        >\n          <ChevronRight className=\"h-7 w-7\" />\n        </Button>\n      </div>\n    </section>\n  )\n}\n",
+      "type": "registry:page",
+      "target": "app/testimonials-16/page.tsx"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "600px",
+    "container": "w-full bg-surface",
+    "mobile": "component"
+  },
+  "categories": [
+    "testimonials"
+  ]
+}

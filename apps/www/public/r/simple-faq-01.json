@@ -1,0 +1,23 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "simple-faq-01",
+  "type": "registry:block",
+  "description": "Simple FAQ with dividers",
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "registry/creative-tim/blocks/simple-faq-01/page.tsx",
+      "content": "export default function SimpleFaq01() {\n  return (\n    <section className=\"px-6 py-16\">\n      <div className=\"mx-auto max-w-3xl\">\n        <div className=\"mb-20 text-center\">\n          <h2 className=\"mb-4 text-3xl font-bold\">\n            Frequently asked questions\n          </h2>\n          <p className=\"text-muted-foreground mx-auto max-w-2xl text-lg\">\n            A lot of people don&apos;t appreciate the moment until it&apos;s\n            passed. I&apos;m not trying my hardest, and I&apos;m not trying to\n            do\n          </p>\n        </div>\n        <div className=\"mb-6\">\n          <h3 className=\"border-b py-6 text-lg font-semibold\">\n            How do I order?\n          </h3>\n          <p className=\"text-muted-foreground py-6 leading-relaxed\">\n            We&apos;re not always in the position that we want to be at.\n            We&apos;re constantly growing. We&apos;re constantly making\n            mistakes. We&apos;re constantly trying to express ourselves and\n            actualize our dreams. If you have the opportunity to play this game\n            of life you need to appreciate every moment. A lot of people\n            don&apos;t appreciate the moment until it&apos;s passed.\n          </p>\n        </div>\n        <div className=\"mb-6\">\n          <h3 className=\"border-b py-6 text-lg font-semibold\">\n            How can i make the payment?\n          </h3>\n          <p className=\"text-muted-foreground py-6 leading-relaxed\">\n            It really matters and then like it really doesn&apos;t matter. What\n            matters is the people who are sparked by it. And the people who are\n            like offended by it, it doesn&apos;t matter. Because it&apos;s about\n            motivating the doers. Because I&apos;m here to follow my dreams and\n            inspire other people to follow their dreams, too. We&apos;re not\n            always in the position that we want to be at. We&apos;re constantly\n            growing. We&apos;re constantly making mistakes. We&apos;re\n            constantly trying to express ourselves and actualize our dreams. If\n            you have the opportunity to play this game of life you need to\n            appreciate every moment. A lot of people don&apos;t appreciate the\n            moment until it&apos;s passed.\n          </p>\n        </div>\n      </div>\n    </section>\n  )\n}\n",
+      "type": "registry:page",
+      "target": "app/simple-faq/page.tsx"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "800px",
+    "container": "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
+    "mobile": "component"
+  },
+  "categories": [
+    "faqs"
+  ]
+}

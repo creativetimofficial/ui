@@ -1,0 +1,29 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "contact-sections-10",
+  "type": "registry:block",
+  "description": "Contact form with info cards",
+  "registryDependencies": [
+    "button",
+    "card",
+    "input",
+    "label",
+    "textarea"
+  ],
+  "files": [
+    {
+      "path": "registry/creative-tim/blocks/contact-sections-10/page.tsx",
+      "content": "\"use client\"\n\nimport { Mail, MapPin, Phone } from \"lucide-react\"\n\nimport { Button } from \"@/components/ui/button\"\nimport { Card } from \"@/components/ui/card\"\nimport { Input } from \"@/components/ui/input\"\nimport { Label } from \"@/components/ui/label\"\nimport { Textarea } from \"@/components/ui/textarea\"\n\nconst OPTIONS = [\n  {\n    icon: MapPin,\n    info: \"12124 First Street, nr 54\",\n  },\n  {\n    icon: Phone,\n    info: \"+1(424) 535 3523\",\n  },\n  {\n    icon: Mail,\n    info: \"hello@mail.com\",\n  },\n]\n\nexport default function ContactSections10() {\n  return (\n    <section className=\"py-16\">\n      <div className=\"container mx-auto\">\n        <h2 className=\"mb-16 text-center text-3xl font-bold\">Contact Us</h2>\n        <div className=\"grid grid-cols-1 gap-10 lg:grid-cols-2\">\n          <Card className=\"p-8\">\n            <h3 className=\"mb-6 text-2xl font-semibold\">Send us a message</h3>\n            <form action=\"#\" className=\"space-y-6\">\n              <div className=\"grid grid-cols-1 gap-x-4 gap-y-6 sm:grid-cols-2\">\n                <div className=\"space-y-2\">\n                  <Label htmlFor=\"first-name\">First Name</Label>\n                  <Input id=\"first-name\" placeholder=\"John\" />\n                </div>\n                <div className=\"space-y-2\">\n                  <Label htmlFor=\"last-name\">Last Name</Label>\n                  <Input id=\"last-name\" placeholder=\"Doe\" />\n                </div>\n              </div>\n              <div className=\"space-y-2\">\n                <Label htmlFor=\"email\">Email</Label>\n                <Input\n                  id=\"email\"\n                  type=\"email\"\n                  placeholder=\"someone@example.com\"\n                />\n              </div>\n              <div className=\"space-y-2\">\n                <Label htmlFor=\"phone\">Phone Number</Label>\n                <Input id=\"phone\" type=\"tel\" placeholder=\"+1 123-456-7890\" />\n              </div>\n              <div className=\"space-y-2\">\n                <Label htmlFor=\"message\">Message</Label>\n                <Textarea\n                  id=\"message\"\n                  placeholder=\"Write your message here...\"\n                />\n              </div>\n              <Button className=\"w-full\">Send Message</Button>\n            </form>\n          </Card>\n          <div className=\"space-y-8\">\n            <div>\n              <h3 className=\"mb-4 text-2xl font-semibold\">Get in touch</h3>\n              <p className=\"text-muted-foreground\">\n                We&apos;re here to help and answer any question you might have.\n                We look forward to hearing from you.\n              </p>\n            </div>\n            <div className=\"space-y-6\">\n              {OPTIONS.map(({ icon: Icon, info }, key) => (\n                <div key={key} className=\"flex items-start gap-4\">\n                  <div className=\"bg-primary/10 grid h-10 w-10 shrink-0 place-items-center rounded-lg\">\n                    <Icon className=\"text-primary h-5 w-5\" />\n                  </div>\n                  <div className=\"pt-2\">\n                    <p className=\"font-medium\">{info}</p>\n                  </div>\n                </div>\n              ))}\n            </div>\n          </div>\n        </div>\n      </div>\n    </section>\n  )\n}\n",
+      "type": "registry:page",
+      "target": "app/contact-sections-10/page.tsx"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "1000px",
+    "container": "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
+    "mobile": "component"
+  },
+  "categories": [
+    "contact"
+  ]
+}

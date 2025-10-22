@@ -1,0 +1,30 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "contact-sections-09",
+  "type": "registry:block",
+  "description": "Dark background contact with detailed info",
+  "registryDependencies": [
+    "button",
+    "card",
+    "checkbox",
+    "input",
+    "label",
+    "textarea"
+  ],
+  "files": [
+    {
+      "path": "registry/creative-tim/blocks/contact-sections-09/page.tsx",
+      "content": "\"use client\"\n\nimport { Mail, Phone } from \"lucide-react\"\n\nimport { Button } from \"@/components/ui/button\"\nimport { Card } from \"@/components/ui/card\"\nimport { Checkbox } from \"@/components/ui/checkbox\"\nimport { Input } from \"@/components/ui/input\"\nimport { Label } from \"@/components/ui/label\"\nimport { Textarea } from \"@/components/ui/textarea\"\n\nconst DATA = [\n  {\n    icon: Mail,\n    title: \"Find us at the office\",\n    options: [\"Bld Mihail Kogalniceanu, nr. 8,\", \"7652 Bucharest,\", \"Romania\"],\n  },\n  {\n    icon: Phone,\n    title: \"+1(424) 535 3523\",\n    options: [\"Michael Jordan\", \"+40 762 321 762\", \"Mon - Fri, 8:00-22:00\"],\n  },\n]\n\nexport default function ContactSections09() {\n  return (\n    <section className=\"p-6\">\n      <div className=\"grid items-center gap-6 rounded-xl bg-black p-4 lg:grid-cols-2 lg:p-8\">\n        <div className=\"p-8 lg:mx-auto lg:max-w-lg lg:p-0\">\n          <h2 className=\"mb-4 text-3xl font-bold text-white\">Get in Touch</h2>\n          <p className=\"text-lg text-white lg:max-w-xl\">\n            You need more information? Check what other persons are saying about\n            our product. They are very happy with their purchase.\n          </p>\n          {DATA.map(({ icon: Icon, title, options }, key) => (\n            <div key={key} className=\"mt-12\">\n              <div className=\"mb-6 flex items-center gap-3\">\n                <Icon className=\"h-7 w-7 text-white\" />\n                <h4 className=\"text-lg font-semibold text-white\">{title}</h4>\n              </div>\n              <div className=\"ml-10 space-y-2\">\n                {options.map((option, idx) => (\n                  <p key={idx} className=\"text-white\">\n                    {option}\n                  </p>\n                ))}\n              </div>\n            </div>\n          ))}\n        </div>\n        <Card className=\"p-6 lg:p-8\">\n          <h3 className=\"mb-6 text-2xl font-semibold\">Contact us</h3>\n          <form action=\"#\" className=\"space-y-6\">\n            <div className=\"grid grid-cols-1 gap-x-4 gap-y-6 lg:grid-cols-2\">\n              <div className=\"space-y-2\">\n                <Label htmlFor=\"first-name\">First Name</Label>\n                <Input id=\"first-name\" placeholder=\"John\" />\n              </div>\n              <div className=\"space-y-2\">\n                <Label htmlFor=\"last-name\">Last Name</Label>\n                <Input id=\"last-name\" placeholder=\"Doe\" />\n              </div>\n            </div>\n            <div className=\"space-y-2\">\n              <Label htmlFor=\"email\">Email Address</Label>\n              <Input\n                id=\"email\"\n                type=\"email\"\n                placeholder=\"someone@example.com\"\n              />\n            </div>\n            <div className=\"space-y-2\">\n              <Label htmlFor=\"message\">Message</Label>\n              <Textarea\n                id=\"message\"\n                placeholder=\"Something about your request.\"\n              />\n            </div>\n            <div className=\"flex items-center gap-2\">\n              <Checkbox id=\"privacy-policy\" />\n              <Label\n                htmlFor=\"privacy-policy\"\n                className=\"cursor-pointer text-sm font-normal\"\n              >\n                You agree to your friendly{\" \"}\n                <a href=\"#\" className=\"text-primary hover:underline\">\n                  Privacy Policy\n                </a>\n              </Label>\n            </div>\n            <Button className=\"w-full\">Send Message</Button>\n          </form>\n        </Card>\n      </div>\n    </section>\n  )\n}\n",
+      "type": "registry:page",
+      "target": "app/contact-sections-09/page.tsx"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "900px",
+    "container": "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
+    "mobile": "component"
+  },
+  "categories": [
+    "contact"
+  ]
+}

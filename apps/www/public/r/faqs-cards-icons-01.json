@@ -1,0 +1,26 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "faqs-cards-icons-01",
+  "type": "registry:block",
+  "description": "FAQ cards with icons and CTA",
+  "registryDependencies": [
+    "button",
+    "card"
+  ],
+  "files": [
+    {
+      "path": "registry/creative-tim/blocks/faqs-cards-icons-01/page.tsx",
+      "content": "import { CreditCard, ShoppingCart, Users } from \"lucide-react\"\n\nimport { Button } from \"@/components/ui/button\"\nimport { Card, CardContent, CardHeader } from \"@/components/ui/card\"\n\nconst DATA = [\n  {\n    icon: ShoppingCart,\n    title: \"How do I order?\",\n    desc: \"We're not always in the position that we want to be at. We're constantly growing. We're constantly making mistakes. We're constantly trying to express ourselves and actualize our dreams. If you have the opportunity to play this game of life you need to appreciate every moment. A lot of people don't appreciate the moment until it's passed.\",\n  },\n  {\n    icon: CreditCard,\n    title: \"How can i make the payment?\",\n    desc: \"It really matters and then like it really doesn't matter. What matters is the people who are sparked by it. And the people who are like offended by it, it doesn't matter. Because it's about motivating the doers. Because I'm here to follow my dreams and inspire other people to follow their dreams, too. We're not always in the position that we want to be at.\",\n  },\n  {\n    icon: Users,\n    title: \"How much time does it take to receive the order?\",\n    desc: \"The time is now for it to be okay to be great. People in this world shun people for being great. For being a bright color. For standing out. But the time is now to be okay to be the greatest you. Would you believe in what you believe in, if you were the only one who believed it?\",\n  },\n]\n\nexport default function FaqsCardsIcons01() {\n  return (\n    <section className=\"px-6 py-16\">\n      <div className=\"container mx-auto\">\n        <div className=\"text-center\">\n          <h2 className=\"mb-4 text-3xl font-bold\">\n            Frequently asked questions\n          </h2>\n          <p className=\"text-muted-foreground mx-auto max-w-xl text-lg\">\n            A lot of people don&apos;t appreciate the moment until it&apos;s\n            passed. I&apos;m not trying my hardest, and I&apos;m not trying to\n            do\n          </p>\n        </div>\n        <div className=\"my-20 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3\">\n          {DATA.map(({ icon: Icon, title, desc }, key) => (\n            <Card key={key}>\n              <CardHeader className=\"border-b pb-6\">\n                <div className=\"bg-primary mb-6 grid h-12 w-12 place-items-center rounded-lg\">\n                  <Icon className=\"text-primary-foreground h-6 w-6\" />\n                </div>\n                <h3 className=\"text-base font-semibold\">{title}</h3>\n              </CardHeader>\n              <CardContent className=\"pt-6\">\n                <p className=\"text-muted-foreground\">{desc}</p>\n              </CardContent>\n            </Card>\n          ))}\n        </div>\n        <div className=\"text-center\">\n          <h3 className=\"text-2xl font-bold\">Need more help?</h3>\n          <p className=\"text-muted-foreground mx-auto mt-4 mb-6 text-lg\">\n            Send us an email with more details about your specific needs.\n          </p>\n          <Button size=\"lg\">Submit a Request</Button>\n        </div>\n      </div>\n    </section>\n  )\n}\n",
+      "type": "registry:page",
+      "target": "app/faqs-cards-icons/page.tsx"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "1100px",
+    "container": "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
+    "mobile": "component"
+  },
+  "categories": [
+    "faqs"
+  ]
+}

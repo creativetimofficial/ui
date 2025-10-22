@@ -1,0 +1,26 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "promotional-cards-01",
+  "type": "registry:block",
+  "description": "Promotional product cards",
+  "registryDependencies": [
+    "button",
+    "card"
+  ],
+  "files": [
+    {
+      "path": "registry/creative-tim/blocks/promotional-cards-01/page.tsx",
+      "content": "\"use client\"\n\nimport { useState } from \"react\"\n\nconst PRODUCTS = [\n  {\n    name: \"Active toning essence\",\n    price: \"$59.00\",\n    image:\n      \"https://images.unsplash.com/photo-1620916566398-39f1143ab7be?ixlib=rb-4.1.0&auto=format&fit=crop&q=80&w=800\",\n  },\n  {\n    name: \"Hydrating face serum\",\n    price: \"$49.00\",\n    image:\n      \"https://images.unsplash.com/photo-1571781926291-c477ebfd024b?ixlib=rb-4.1.0&auto=format&fit=crop&q=80&w=800\",\n  },\n  {\n    name: \"Vitamin C moisturizer\",\n    price: \"$65.00\",\n    image:\n      \"https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?ixlib=rb-4.1.0&auto=format&fit=crop&q=80&w=800\",\n  },\n]\n\nexport default function PromotionalCards01() {\n  const [currentProduct, setCurrentProduct] = useState(0)\n\n  return (\n    <section className=\"py-16\">\n      <div className=\"container mx-auto\">\n        <div className=\"grid grid-cols-1 overflow-hidden rounded-2xl shadow-xl lg:grid-cols-2\">\n          {/* Left: Product Showcase */}\n          <div className=\"flex flex-col items-center justify-center bg-[#e8e3dc] p-16\">\n            <div className=\"mb-8 flex h-80 w-80 items-center justify-center\">\n              <img\n                src={PRODUCTS[currentProduct].image}\n                alt={PRODUCTS[currentProduct].name}\n                className=\"h-full w-full object-contain drop-shadow-2xl transition-all duration-500\"\n              />\n            </div>\n            <h3 className=\"mb-2 text-center text-lg font-medium text-gray-800\">\n              {PRODUCTS[currentProduct].name}\n            </h3>\n            <p className=\"mb-6 text-center text-xl font-semibold text-gray-900\">\n              {PRODUCTS[currentProduct].price}\n            </p>\n            <div className=\"flex gap-2\">\n              {PRODUCTS.map((_, index) => (\n                <button\n                  key={index}\n                  onClick={() => setCurrentProduct(index)}\n                  className={`h-2.5 w-2.5 rounded-full transition-all ${\n                    currentProduct === index\n                      ? \"w-8 bg-gray-800\"\n                      : \"bg-gray-400 hover:bg-gray-600\"\n                  }`}\n                  aria-label={`View product ${index + 1}`}\n                />\n              ))}\n            </div>\n          </div>\n\n          {/* Right: Hero Image with Text */}\n          <div className=\"relative flex min-h-[500px] items-center justify-center lg:min-h-[600px]\">\n            <img\n              src=\"https://images.unsplash.com/photo-1581182815808-b6eb627a8798?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1065\"\n              alt=\"Beauty model\"\n              className=\"absolute inset-0 h-full w-full object-cover\"\n            />\n            <div className=\"relative z-10 px-8 text-center lg:px-16\">\n              <h2 className=\"font-serif text-5xl leading-tight font-light text-white drop-shadow-lg lg:text-6xl\">\n                Glow up with\n                <br />\n                nature\n              </h2>\n            </div>\n          </div>\n        </div>\n      </div>\n    </section>\n  )\n}\n",
+      "type": "registry:page",
+      "target": "app/promotional-cards/page.tsx"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "800px",
+    "container": "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
+    "mobile": "component"
+  },
+  "categories": [
+    "ecommerce"
+  ]
+}

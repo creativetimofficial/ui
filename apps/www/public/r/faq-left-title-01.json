@@ -1,0 +1,25 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "faq-left-title-01",
+  "type": "registry:block",
+  "description": "FAQ with left-aligned title and card grid",
+  "registryDependencies": [
+    "card"
+  ],
+  "files": [
+    {
+      "path": "registry/creative-tim/blocks/faq-left-title-01/page.tsx",
+      "content": "import { Card, CardContent, CardHeader } from \"@/components/ui/card\"\n\nconst DATA = [\n  {\n    title: \"How do I order?\",\n    desc: \"We're not always in the position that we want to be at. We're constantly growing. We're constantly making mistakes. We're constantly trying to express ourselves and actualize our dreams. If you have the opportunity to play this game of life you need to appreciate every moment. A lot of people don't appreciate the moment until it's passed.\",\n  },\n  {\n    title: \"How can i make the payment?\",\n    desc: \"It really matters and then like it really doesn't matter. What matters is the people who are sparked by it. And the people who are like offended by it, it doesn't matter. Because it's about motivating the doers. Because I'm here to follow my dreams and inspire other people to follow their dreams, too. We're not always in the position that we want to be at.\",\n  },\n  {\n    title: \"How much time does it take to receive the order?\",\n    desc: \"The time is now for it to be okay to be great. People in this world shun people for being great. For being a bright color. For standing out. But the time is now to be okay to be the greatest you. Would you believe in what you believe in, if you were the only one who believed it?\",\n  },\n  {\n    title: \"Can I resell the products?\",\n    desc: \"I always felt like I could do anything. That's the main thing people are controlled by! Thoughts- their perception of themselves! They're slowed down by their perception of themselves. If you're taught you can't do anything, you won't do anything. I was taught I could do everything.\",\n  },\n]\n\nexport default function FaqLeftTitle01() {\n  return (\n    <section className=\"px-6 py-16\">\n      <div className=\"container mx-auto grid justify-between gap-6 lg:grid-cols-5\">\n        <div className=\"col-span-2\">\n          <h2 className=\"mb-4 text-3xl leading-snug font-bold\">\n            Frequently asked questions\n          </h2>\n          <p className=\"text-muted-foreground max-w-sm text-lg\">\n            A lot of people don&apos;t appreciate the moment until it&apos;s\n            passed. I&apos;m not trying my hardest, and I&apos;m not trying to\n            do\n          </p>\n        </div>\n        <div className=\"col-span-3 grid grid-cols-1 gap-6 md:grid-cols-2\">\n          {DATA.map(({ title, desc }, key) => (\n            <Card key={key} className=\"border-none shadow-none\">\n              <CardHeader className=\"p-6\">\n                <h3 className=\"text-lg font-semibold\">{title}</h3>\n              </CardHeader>\n              <CardContent className=\"p-6\">\n                <p className=\"text-muted-foreground\">{desc}</p>\n              </CardContent>\n            </Card>\n          ))}\n        </div>\n      </div>\n    </section>\n  )\n}\n",
+      "type": "registry:page",
+      "target": "app/faq-left-title/page.tsx"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "800px",
+    "container": "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
+    "mobile": "component"
+  },
+  "categories": [
+    "faqs"
+  ]
+}
