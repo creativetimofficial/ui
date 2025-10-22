@@ -6,7 +6,6 @@ import { cn } from "@/lib/utils"
 import { LayoutProvider } from "@/hooks/use-layout"
 import { ActiveThemeProvider } from "@/components/active-theme"
 import { Analytics } from "@/components/analytics"
-import { AuthProvider } from "@/components/auth/AuthProvider"
 import { TailwindIndicator } from "@/components/tailwind-indicator"
 import { ThemeProvider } from "@/components/theme-provider"
 import { Toaster } from "@/components/ui/sonner"
@@ -98,18 +97,16 @@ export default function RootLayout({
           fontVariables
         )}
       >
-        <AuthProvider>
-          <ThemeProvider>
-            <LayoutProvider>
-              <ActiveThemeProvider>
-                {children}
-                <TailwindIndicator />
-                <Toaster position="top-center" />
-                <Analytics />
-              </ActiveThemeProvider>
-            </LayoutProvider>
-          </ThemeProvider>
-        </AuthProvider>
+        <ThemeProvider>
+          <LayoutProvider>
+            <ActiveThemeProvider>
+              {children}
+              <TailwindIndicator />
+              <Toaster position="top-center" />
+              <Analytics />
+            </ActiveThemeProvider>
+          </LayoutProvider>
+        </ThemeProvider>
       </body>
     </html>
   )
