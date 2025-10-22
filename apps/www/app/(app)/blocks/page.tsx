@@ -5,6 +5,11 @@ export const revalidate = false
 
 const FEATURED_BLOCKS = [
   "software-purchase-01",
+  "dark-product-overview-01",
+  "web3-04",
+  "account-basic-info-01",
+  "cruds-01",
+  "testimonials-03",
 ]
 
 export default async function BlocksPage() {
