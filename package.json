@@ -68,7 +68,7 @@
     "tailwindcss-animate": "^1.0.5",
     "tsx": "^4.1.4",
     "turbo": "^2.5.8",
-    "vite": "^5.4.15",
+    "vite": "^5.4.21",
     "vite-tsconfig-paths": "^4.2.0",
     "vitest": "^2.1.9"
   },
