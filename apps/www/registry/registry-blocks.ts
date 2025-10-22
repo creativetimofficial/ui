@@ -2223,4 +2223,96 @@ export const blocks: Registry["items"] = [
     },
     categories: ["account"],
   },
+  {
+    name: "ai-chat-streaming-01",
+    description: "AI chat with streaming responses and thinking process",
+    type: "registry:block",
+    registryDependencies: [
+      "button",
+      "card",
+      "input",
+      "label",
+      "select",
+      "scroll-area",
+      "avatar",
+    ],
+    files: [
+      {
+        path: "blocks/ai-chat-streaming-01/page.tsx",
+        type: "registry:page",
+        target: "app/ai-chat-streaming/page.tsx",
+      },
+    ],
+    meta: {
+      iframeHeight: "800px",
+      container:
+        "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
+      mobile: "component",
+      details:
+        "Interactive AI chat interface with real-time streaming responses and optional thinking process visualization. Features API provider selection from top 5 AI services, configurable API keys, and smooth message animations. Perfect for AI-powered chat applications, customer support bots, and conversational interfaces.",
+    },
+    categories: ["ai-agents"],
+  },
+  {
+    name: "ai-image-generator-01",
+    description: "AI image generator with upload and editor capabilities",
+    type: "registry:block",
+    registryDependencies: [
+      "button",
+      "card",
+      "input",
+      "label",
+      "select",
+      "slider",
+      "tabs",
+      "textarea",
+    ],
+    files: [
+      {
+        path: "blocks/ai-image-generator-01/page.tsx",
+        type: "registry:page",
+        target: "app/ai-image-generator/page.tsx",
+      },
+    ],
+    meta: {
+      iframeHeight: "1000px",
+      container:
+        "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
+      mobile: "component",
+      details:
+        "Comprehensive AI image generation tool with built-in editor. Generate images from text prompts using top AI providers, upload existing images, and edit with real-time adjustments for brightness, contrast, and saturation. Includes image size selection, download functionality, and intuitive tabbed interface. Ideal for creative applications, content generation, and image manipulation tools.",
+    },
+    categories: ["ai-agents"],
+  },
+  {
+    name: "ai-video-generator-01",
+    description: "AI video generation agent with preview",
+    type: "registry:block",
+    registryDependencies: [
+      "button",
+      "card",
+      "input",
+      "label",
+      "select",
+      "textarea",
+      "progress",
+      "badge",
+    ],
+    files: [
+      {
+        path: "blocks/ai-video-generator-01/page.tsx",
+        type: "registry:page",
+        target: "app/ai-video-generator/page.tsx",
+      },
+    ],
+    meta: {
+      iframeHeight: "1100px",
+      container:
+        "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
+      mobile: "component",
+      details:
+        "Advanced AI video generation interface with progress tracking and gallery view. Generate videos from text descriptions using leading AI providers like Runway, Pika, and OpenAI Sora. Features customizable duration, style selection, real-time progress indicators, video preview with playback controls, and generation history. Perfect for video content creation, marketing materials, and AI-powered media platforms.",
+    },
+    categories: ["ai-agents"],
+  },
 ]

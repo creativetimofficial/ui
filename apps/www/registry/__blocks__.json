@@ -538,5 +538,20 @@
     "name": "account-integrations-01",
     "description": "Third-party integrations management",
     "categories": ["account"]
+  },
+  {
+    "name": "ai-chat-streaming-01",
+    "description": "AI chat with streaming responses and thinking process",
+    "categories": ["ai-agents"]
+  },
+  {
+    "name": "ai-image-generator-01",
+    "description": "AI image generator with upload and editor capabilities",
+    "categories": ["ai-agents"]
+  },
+  {
+    "name": "ai-video-generator-01",
+    "description": "AI video generation agent with preview",
+    "categories": ["ai-agents"]
   }
 ]

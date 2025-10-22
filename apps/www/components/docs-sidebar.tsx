@@ -24,18 +24,18 @@ const TOP_LEVEL_SECTIONS = [
 ]
 
 const BLOCKS_SECTIONS = [
-  { name: "Featured", href: "/blocks/featured" },
   { name: "Account", href: "/blocks/account" },
+  { name: "AI Agents", href: "/blocks/ai-agents" },
   { name: "Billing", href: "/blocks/billing" },
   { name: "Blog Sections", href: "/blocks/blog-sections" },
+  { name: "Contact", href: "/blocks/contact" },
+  { name: "CRUDs", href: "/blocks/cruds" },
   { name: "Ecommerce", href: "/blocks/ecommerce" },
   { name: "FAQs", href: "/blocks/faqs" },
-  { name: "Contact", href: "/blocks/contact" },
-  { name: "Web3", href: "/blocks/web3" },
-  { name: "CRUDs", href: "/blocks/cruds" },
   { name: "Footers", href: "/blocks/footers" },
-  { name: "Testimonials", href: "/blocks/testimonials" },
   { name: "Modals", href: "/blocks/modals" },
+  { name: "Testimonials", href: "/blocks/testimonials" },
+  { name: "Web3", href: "/blocks/web3" },
 ]
 
 const EXCLUDED_SECTIONS = ["installation", "dark-mode", "(root)"]

@@ -5,6 +5,11 @@ export const registryCategories = [
     hidden: false,
   },
   {
+    name: "AI Agents",
+    slug: "ai-agents",
+    hidden: false,
+  },
+  {
     name: "Billing",
     slug: "billing",
     hidden: false,
@@ -12,6 +17,16 @@ export const registryCategories = [
   {
     name: "Blog Sections",
     slug: "blog-sections",
+    hidden: false,
+  },
+  {
+    name: "Contact",
+    slug: "contact",
+    hidden: false,
+  },
+  {
+    name: "CRUDs",
+    slug: "cruds",
     hidden: false,
   },
   {
@@ -25,23 +40,13 @@ export const registryCategories = [
     hidden: false,
   },
   {
-    name: "Contact",
-    slug: "contact",
-    hidden: false,
-  },
-  {
-    name: "Web3",
-    slug: "web3",
-    hidden: false,
-  },
-  {
-    name: "CRUDs",
-    slug: "cruds",
-    hidden: false,
-  },
-  {
     name: "Footers",
     slug: "footers",
+    hidden: false,
+  },
+  {
+    name: "Modals",
+    slug: "modals",
     hidden: false,
   },
   {
@@ -50,8 +55,8 @@ export const registryCategories = [
     hidden: false,
   },
   {
-    name: "Modals",
-    slug: "modals",
+    name: "Web3",
+    slug: "web3",
     hidden: false,
   },
 ]
