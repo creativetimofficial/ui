@@ -178,13 +178,13 @@ function BlockViewerToolbar() {
                 size="sm"
                 onClick={() => {
                   copyToClipboard(
-                    `npx shadcn@latest add "https://ui.creative-tim.com/r/${item.name}.json"`
+                    `npx @creative-tim/ui@latest add "https://creative-tim.com/ui/r/${item.name}.json"`
                   )
                 }}
               >
                 {isCopied ? <Check /> : <Terminal />}
                 <span>
-                  npx @creative-tim/ui@latest components add {item.name}
+                  npx @creative-tim/ui@latest add {item.name}
                 </span>
               </Button>
             {/* )} */}
