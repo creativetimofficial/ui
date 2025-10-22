@@ -1,0 +1,26 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "testimonials-09",
+  "type": "registry:block",
+  "description": "Customer story with large heading and avatar",
+  "registryDependencies": [
+    "avatar",
+    "card"
+  ],
+  "files": [
+    {
+      "path": "registry/creative-tim/blocks/testimonials-09/page.tsx",
+      "content": "\"use client\"\n\nimport { Avatar, AvatarFallback, AvatarImage } from \"@/components/ui/avatar\"\nimport { Card, CardContent } from \"@/components/ui/card\"\n\nexport default function TestimonialsBlock() {\n  return (\n    <section className=\"py-4 md:py-6\">\n      <div className=\"container mx-auto px-4\">\n        <Card className=\"grid grid-cols-1 items-center gap-4 border-0 bg-transparent shadow-none md:grid-cols-12 md:gap-6\">\n          <div className=\"md:col-span-4\">\n            <img\n              src=\"https://images.unsplash.com/photo-1716662318479-a9c0f1cd1a0e?auto=format&fit=crop&q=80&w=400&h=400\"\n              alt=\"user profile\"\n              className=\"h-40 w-full rounded-lg object-cover md:h-56\"\n            />\n          </div>\n          <CardContent className=\"px-0 py-0 md:col-span-8 md:px-4 lg:px-8\">\n            <p className=\"text-primary mb-1.5 text-xs font-semibold md:text-sm\">\n              Customer Story\n            </p>\n            <h2 className=\"mb-2 text-lg font-bold md:text-xl lg:text-2xl\">\n              Revolutionary component library for modern design\n            </h2>\n            <blockquote className=\"text-muted-foreground mb-3 text-sm leading-relaxed font-normal md:text-base\">\n              &quot;This component library has transformed how our design team\n              works. The attention to detail, seamless integration, and\n              production-ready components have accelerated our development\n              workflow by 10x.&quot;\n            </blockquote>\n            <div className=\"flex items-center gap-2.5\">\n              <Avatar className=\"h-9 w-9 md:h-10 md:w-10\">\n                <AvatarImage\n                  alt=\"spotify\"\n                  src=\"https://v3.material-tailwind.com/icon/spotify.svg\"\n                />\n                <AvatarFallback>SP</AvatarFallback>\n              </Avatar>\n              <div>\n                <p className=\"text-sm font-semibold md:text-base\">\n                  Sarah Johnson\n                </p>\n                <p className=\"text-muted-foreground text-xs\">\n                  Design Director, Spotify\n                </p>\n              </div>\n            </div>\n          </CardContent>\n        </Card>\n      </div>\n    </section>\n  )\n}\n",
+      "type": "registry:page",
+      "target": "app/testimonials-09/page.tsx"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "500px",
+    "container": "w-full bg-surface",
+    "mobile": "component"
+  },
+  "categories": [
+    "testimonials"
+  ]
+}

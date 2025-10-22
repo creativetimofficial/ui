@@ -1,0 +1,27 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "modals-06",
+  "type": "registry:block",
+  "description": "Publish capsule collection modal with metadata display",
+  "registryDependencies": [
+    "dialog",
+    "button",
+    "card"
+  ],
+  "files": [
+    {
+      "path": "registry/creative-tim/blocks/modals-06/page.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { Unlock, X } from \"lucide-react\"\n\nimport { Button } from \"@/components/ui/button\"\nimport { Card, CardContent } from \"@/components/ui/card\"\nimport {\n  Dialog,\n  DialogContent,\n  DialogHeader,\n  DialogTitle,\n  DialogTrigger,\n} from \"@/components/ui/dialog\"\n\nexport default function ModalsBlock() {\n  const [isOpen, setIsOpen] = React.useState(false)\n\n  return (\n    <div className=\"grid min-h-screen w-full place-items-center\">\n      <Dialog open={isOpen} onOpenChange={setIsOpen}>\n        <DialogTrigger asChild>\n          <Button onClick={() => setIsOpen(true)}>Open Modal</Button>\n        </DialogTrigger>\n        <DialogContent className=\"sm:max-w-[500px]\">\n          <button\n            onClick={() => setIsOpen(false)}\n            className=\"ring-offset-background focus:ring-ring absolute top-4 right-4 rounded-sm opacity-70 transition-opacity hover:opacity-100 focus:ring-2 focus:ring-offset-2 focus:outline-none disabled:pointer-events-none\"\n          >\n            <X className=\"h-4 w-4\" />\n            <span className=\"sr-only\">Close</span>\n          </button>\n          <div className=\"flex items-start gap-4\">\n            <div className=\"flex-1\">\n              <Unlock className=\"text-primary mb-6 h-12 w-12\" />\n              <DialogHeader>\n                <DialogTitle className=\"mb-2 text-xl\">\n                  Publish Capsule Collection\n                </DialogTitle>\n              </DialogHeader>\n              <p className=\"text-muted-foreground mt-2 text-sm\">\n                This action will expose your private capsule collection to\n                public viewing across all fashion storefronts.\n              </p>\n            </div>\n          </div>\n\n          <Card className=\"my-6\">\n            <CardContent className=\"space-y-3 p-4\">\n              <div className=\"flex items-center justify-between\">\n                <span className=\"text-muted-foreground text-sm\">\n                  Collection\n                </span>\n                <span className=\"text-sm font-medium\">fall-winter-vault</span>\n              </div>\n              <div className=\"flex items-center justify-between\">\n                <span className=\"text-muted-foreground text-sm\">Views</span>\n                <span className=\"text-sm font-medium\">0</span>\n              </div>\n              <div className=\"flex items-center justify-between\">\n                <span className=\"text-muted-foreground text-sm\">Likes</span>\n                <span className=\"text-sm font-medium\">0</span>\n              </div>\n            </CardContent>\n          </Card>\n\n          <div className=\"flex items-center justify-end gap-2 pt-4\">\n            <Button\n              type=\"button\"\n              variant=\"outline\"\n              onClick={() => setIsOpen(false)}\n            >\n              Cancel\n            </Button>\n            <Button type=\"submit\">Make Collection Public</Button>\n          </div>\n        </DialogContent>\n      </Dialog>\n    </div>\n  )\n}\n",
+      "type": "registry:page",
+      "target": "app/modals-06/page.tsx"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "650px",
+    "container": "w-full bg-surface",
+    "mobile": "component"
+  },
+  "categories": [
+    "modals"
+  ]
+}

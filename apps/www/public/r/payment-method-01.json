@@ -1,0 +1,28 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "payment-method-01",
+  "type": "registry:block",
+  "description": "Payment method management with edit and delete",
+  "registryDependencies": [
+    "button",
+    "card",
+    "tooltip"
+  ],
+  "files": [
+    {
+      "path": "registry/creative-tim/blocks/payment-method-01/page.tsx",
+      "content": "\"use client\"\n\nimport { Check, Pencil, Plus, Trash2 } from \"lucide-react\"\n\nimport { Badge } from \"@/components/ui/badge\"\nimport { Button } from \"@/components/ui/button\"\nimport { Card } from \"@/components/ui/card\"\nimport {\n  Tooltip,\n  TooltipContent,\n  TooltipProvider,\n  TooltipTrigger,\n} from \"@/components/ui/tooltip\"\n\ninterface PaymentMethodProps {\n  type: \"visa\" | \"mastercard\"\n  number: string\n  isDefault?: boolean\n}\n\nfunction PaymentMethod({ type, number, isDefault }: PaymentMethodProps) {\n  const cardImg =\n    type === \"visa\"\n      ? \"https://v3.material-tailwind.com/visa.webp\"\n      : \"https://v3.material-tailwind.com/mastercard.webp\"\n\n  return (\n    <Card className=\"group hover:border-primary/50 relative flex flex-col gap-4 border p-6 transition-all hover:shadow-md\">\n      {isDefault && (\n        <div className=\"bg-primary absolute -top-px -right-px rounded-tr-lg rounded-bl-lg px-3 py-1\">\n          <div className=\"flex items-center gap-1.5 text-xs font-semibold text-white\">\n            <Check className=\"h-3 w-3\" />\n            Default\n          </div>\n        </div>\n      )}\n\n      <div className=\"flex items-center gap-3\">\n        <div className=\"flex h-12 w-16 items-center justify-center rounded-lg bg-gray-50 p-2\">\n          <img\n            src={cardImg}\n            alt={type}\n            className=\"h-full w-auto object-contain\"\n          />\n        </div>\n\n        <div className=\"flex flex-1 flex-col gap-1\">\n          <p className=\"text-base font-bold tracking-wider\">\n            **** **** **** {number}\n          </p>\n          <p className=\"text-muted-foreground text-sm capitalize\">\n            {type} Card\n          </p>\n        </div>\n      </div>\n\n      <div className=\"flex items-center gap-1\">\n        <TooltipProvider>\n          <Tooltip>\n            <TooltipTrigger asChild>\n              <Button size=\"icon\" variant=\"ghost\" className=\"h-9 w-9\">\n                <Pencil className=\"h-4 w-4\" />\n              </Button>\n            </TooltipTrigger>\n            <TooltipContent>\n              <p>Edit Card</p>\n            </TooltipContent>\n          </Tooltip>\n        </TooltipProvider>\n\n        <TooltipProvider>\n          <Tooltip>\n            <TooltipTrigger asChild>\n              <Button\n                size=\"icon\"\n                variant=\"ghost\"\n                className=\"text-destructive hover:bg-destructive/10 hover:text-destructive h-9 w-9\"\n              >\n                <Trash2 className=\"h-4 w-4\" />\n              </Button>\n            </TooltipTrigger>\n            <TooltipContent>\n              <p>Remove Card</p>\n            </TooltipContent>\n          </Tooltip>\n        </TooltipProvider>\n      </div>\n    </Card>\n  )\n}\n\nexport default function PaymentMethod01() {\n  return (\n    <div className=\"mx-auto max-w-4xl p-6\">\n      <div className=\"flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-center\">\n        <div>\n          <h2 className=\"text-2xl font-bold\">Payment Methods</h2>\n          <p className=\"text-muted-foreground mt-1 text-sm\">\n            Manage your preferred payment methods securely and conveniently.\n          </p>\n        </div>\n        <Button className=\"w-full sm:w-auto\">\n          <Plus className=\"mr-2 h-4 w-4\" /> Add New Card\n        </Button>\n      </div>\n\n      <div className=\"mt-8 grid grid-cols-1 gap-4 md:grid-cols-2\">\n        <PaymentMethod type=\"mastercard\" number=\"7852\" isDefault />\n        <PaymentMethod type=\"visa\" number=\"9831\" />\n        <PaymentMethod type=\"visa\" number=\"8362\" />\n        <PaymentMethod type=\"mastercard\" number=\"0098\" />\n      </div>\n    </div>\n  )\n}\n",
+      "type": "registry:page",
+      "target": "app/payment-method/page.tsx"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "500px",
+    "container": "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
+    "mobile": "component",
+    "details": "Manage payment methods with a straightforward UI layout featuring shadcn/ui Card, Button, and Tooltip components. Card brands are clearly identified, sensitive information is partially hidden for security, and editing/deleting functions are easily accessible. Includes a call-to-action button for adding new payment methods. Perfect for account settings, billing pages, and checkout flows."
+  },
+  "categories": [
+    "billing"
+  ]
+}

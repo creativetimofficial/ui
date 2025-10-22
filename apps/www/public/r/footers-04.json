@@ -1,0 +1,27 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "footers-04",
+  "type": "registry:block",
+  "description": "Simple dark footer",
+  "registryDependencies": [
+    "button",
+    "card",
+    "input"
+  ],
+  "files": [
+    {
+      "path": "registry/creative-tim/blocks/footers-04/page.tsx",
+      "content": "\"use client\"\n\nimport { Github, Instagram, Twitter, Youtube } from \"lucide-react\"\n\nimport { Button } from \"@/components/ui/button\"\nimport { Card } from \"@/components/ui/card\"\nimport { Input } from \"@/components/ui/input\"\n\nconst LINKS = [\n  { title: \"About Us\", href: \"#\" },\n  { title: \"Careers\", href: \"#\" },\n  { title: \"Press\", href: \"#\" },\n  { title: \"Blog\", href: \"#\" },\n  { title: \"Pricing\", href: \"#\" },\n]\n\nconst YEAR = new Date().getFullYear()\n\nexport default function Footers04() {\n  return (\n    <section className=\"pt-16 pb-8\">\n      <div className=\"container mx-auto text-center\">\n        <Card className=\"bg-primary border-primary grid justify-center px-6 py-12 text-center shadow-none\">\n          <h2 className=\"text-secondary text-2xl font-semibold\">\n            Be the first who see the news\n          </h2>\n          <p className=\"text-secondary mt-4 max-w-lg [text-wrap:_balance]\">\n            Your company may not be in the software business, but eventually, a\n            software company will be in your business.\n          </p>\n          <div className=\"mx-auto mt-10 flex w-full max-w-sm flex-col gap-x-2 gap-y-4 sm:flex-row\">\n            <Input\n              type=\"email\"\n              id=\"email\"\n              placeholder=\"someone@example.com\"\n              className=\"border-white/20 bg-white/10 text-white placeholder:text-white/60\"\n            />\n            <Button variant=\"secondary\" className=\"shrink-0\">\n              Subscribe\n            </Button>\n          </div>\n        </Card>\n        <div className=\"mt-16 mb-6 flex flex-col items-center !justify-center gap-x-10 gap-y-3 lg:flex-row lg:!justify-between\">\n          <p className=\"font-semibold\">Creative Tim</p>\n          <ul className=\"flex flex-wrap items-center justify-center gap-x-6 gap-y-2\">\n            {LINKS.map(({ title, href }, key) => (\n              <li key={key}>\n                <a href={href} className=\"text-foreground hover:text-primary\">\n                  {title}\n                </a>\n              </li>\n            ))}\n          </ul>\n          <div className=\"flex gap-1\">\n            <Button asChild variant=\"ghost\" size=\"icon\" className=\"h-8 w-8\">\n              <a href=\"#\" aria-label=\"Twitter\">\n                <Twitter className=\"h-5 w-5\" />\n              </a>\n            </Button>\n            <Button asChild variant=\"ghost\" size=\"icon\" className=\"h-8 w-8\">\n              <a href=\"#\" aria-label=\"YouTube\">\n                <Youtube className=\"h-5 w-5\" />\n              </a>\n            </Button>\n            <Button asChild variant=\"ghost\" size=\"icon\" className=\"h-8 w-8\">\n              <a href=\"#\" aria-label=\"Instagram\">\n                <Instagram className=\"h-5 w-5\" />\n              </a>\n            </Button>\n            <Button asChild variant=\"ghost\" size=\"icon\" className=\"h-8 w-8\">\n              <a href=\"#\" aria-label=\"GitHub\">\n                <Github className=\"h-5 w-5\" />\n              </a>\n            </Button>\n          </div>\n        </div>\n        <p className=\"text-foreground text-sm\">\n          All rights reserved. Copyright &copy; {YEAR} Creative Tim\n        </p>\n      </div>\n    </section>\n  )\n}\n",
+      "type": "registry:page",
+      "target": "app/footers-04/page.tsx"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "600px",
+    "container": "w-full bg-surface",
+    "mobile": "component"
+  },
+  "categories": [
+    "footers"
+  ]
+}

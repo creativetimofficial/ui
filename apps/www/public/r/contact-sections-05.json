@@ -1,0 +1,29 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "contact-sections-05",
+  "type": "registry:block",
+  "description": "Contact form with map and option selection",
+  "registryDependencies": [
+    "badge",
+    "button",
+    "input",
+    "label",
+    "textarea"
+  ],
+  "files": [
+    {
+      "path": "registry/creative-tim/blocks/contact-sections-05/page.tsx",
+      "content": "\"use client\"\n\nimport { useState } from \"react\"\n\nimport { Badge } from \"@/components/ui/badge\"\nimport { Button } from \"@/components/ui/button\"\nimport { Input } from \"@/components/ui/input\"\nimport { Label } from \"@/components/ui/label\"\nimport { Textarea } from \"@/components/ui/textarea\"\n\nconst OPTIONS = [\"General Inquiry\", \"Product Support\"]\n\nexport default function ContactSections05() {\n  const [selectedOption, setSelectedOption] = useState(\"\")\n\n  return (\n    <section className=\"bg-white py-16\">\n      <div className=\"container mx-auto\">\n        <div className=\"mb-20 text-center\">\n          <Badge variant=\"secondary\">Customer Care</Badge>\n          <h2 className=\"mt-8 mb-4 text-3xl font-bold\">\n            We&apos;re Here to Help\n          </h2>\n          <p className=\"text-muted-foreground mx-auto max-w-2xl text-lg\">\n            Whether it&apos;s a question about our services, a request for\n            technical assistance, or suggestions for improvement, our team is\n            eager to hear from you.\n          </p>\n        </div>\n        <div className=\"grid grid-cols-1 gap-x-16 gap-y-10 lg:grid-cols-2\">\n          <img\n            src=\"https://images.unsplash.com/photo-1638438134099-a91e5373aaf0?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2070\"\n            alt=\"Contact\"\n            className=\"h-full min-h-[400px] w-full rounded-2xl object-cover\"\n          />\n          <form\n            action=\"#\"\n            className=\"mx-auto max-w-lg space-y-6 lg:mx-0 lg:py-2\"\n          >\n            <div className=\"space-y-4\">\n              <Label>Select Options for Business Engagement</Label>\n              <div className=\"flex flex-wrap gap-2\">\n                {OPTIONS.map((option) => (\n                  <Button\n                    key={option}\n                    type=\"button\"\n                    variant={selectedOption === option ? \"default\" : \"outline\"}\n                    onClick={() =>\n                      setSelectedOption((cur) => (cur === option ? \"\" : option))\n                    }\n                  >\n                    {option}\n                  </Button>\n                ))}\n              </div>\n            </div>\n            <div className=\"grid grid-cols-1 gap-x-4 gap-y-6 sm:grid-cols-2\">\n              <div className=\"space-y-2\">\n                <Label htmlFor=\"first-name\">First Name</Label>\n                <Input id=\"first-name\" placeholder=\"John\" />\n              </div>\n              <div className=\"space-y-2\">\n                <Label htmlFor=\"last-name\">Last Name</Label>\n                <Input id=\"last-name\" placeholder=\"Doe\" />\n              </div>\n            </div>\n            <div className=\"space-y-2\">\n              <Label htmlFor=\"email\">Email Address</Label>\n              <Input\n                id=\"email\"\n                type=\"email\"\n                placeholder=\"someone@example.com\"\n              />\n            </div>\n            <div className=\"space-y-2\">\n              <Label htmlFor=\"message\">Message</Label>\n              <Textarea\n                id=\"message\"\n                placeholder=\"Something about your request.\"\n              />\n            </div>\n            <Button className=\"w-full\">Send Message</Button>\n          </form>\n        </div>\n      </div>\n    </section>\n  )\n}\n",
+      "type": "registry:page",
+      "target": "app/contact-sections-05/page.tsx"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "1000px",
+    "container": "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
+    "mobile": "component"
+  },
+  "categories": [
+    "contact"
+  ]
+}

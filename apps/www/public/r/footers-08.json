@@ -1,0 +1,26 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "footers-08",
+  "type": "registry:block",
+  "description": "Simple footer with version number",
+  "registryDependencies": [
+    "badge",
+    "button"
+  ],
+  "files": [
+    {
+      "path": "registry/creative-tim/blocks/footers-08/page.tsx",
+      "content": "\"use client\"\n\nimport { Settings } from \"lucide-react\"\n\nimport { Badge } from \"@/components/ui/badge\"\nimport { Button } from \"@/components/ui/button\"\n\nconst YEAR = new Date().getFullYear()\n\nexport default function Footers08() {\n  return (\n    <footer className=\"pt-20 pb-8\">\n      <div className=\"container mx-auto\">\n        <div className=\"flex flex-col items-center justify-between gap-6 md:flex-row\">\n          <p className=\"text-muted-foreground text-center text-sm md:text-left\">\n            &copy; {YEAR} Creative Tim. All rights reserved.\n          </p>\n          <div className=\"flex items-center gap-3\">\n            <Badge variant=\"secondary\" className=\"px-3 py-1\">\n              v3.0.0\n            </Badge>\n            <Button variant=\"ghost\" size=\"icon\" aria-label=\"Settings\">\n              <Settings className=\"h-5 w-5\" />\n            </Button>\n          </div>\n        </div>\n      </div>\n    </footer>\n  )\n}\n",
+      "type": "registry:page",
+      "target": "app/footers-08/page.tsx"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "300px",
+    "container": "w-full bg-surface",
+    "mobile": "component"
+  },
+  "categories": [
+    "footers"
+  ]
+}

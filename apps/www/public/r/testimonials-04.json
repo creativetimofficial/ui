@@ -1,0 +1,26 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "testimonials-04",
+  "type": "registry:block",
+  "description": "Three column testimonials with star ratings",
+  "registryDependencies": [
+    "card"
+  ],
+  "files": [
+    {
+      "path": "registry/creative-tim/blocks/testimonials-04/page.tsx",
+      "content": "\"use client\"\n\nimport { Quote, Star } from \"lucide-react\"\n\nimport { Card, CardContent } from \"@/components/ui/card\"\n\nconst TESTIMONIALS = [\n  {\n    image:\n      \"https://images.unsplash.com/photo-1716662318479-a9c0f1cd1a0e?auto=format&fit=crop&q=80&w=400&h=400\",\n    name: \"Sarah Johnson\",\n    role: \"Product Designer\",\n    quote:\n      \"The attention to detail and component quality is outstanding. These UI blocks have significantly accelerated our design workflow and improved consistency across our products.\",\n    rating: 5,\n  },\n  {\n    image:\n      \"https://images.unsplash.com/photo-1623853434105-8e7a72898180?auto=format&fit=crop&q=80&w=400&h=400\",\n    name: \"Michael Chen\",\n    role: \"Tech Lead at Stripe\",\n    quote:\n      \"Exceptional component library with excellent documentation. The customization options and TypeScript support make it perfect for enterprise applications. Highly recommend!\",\n    rating: 5,\n  },\n  {\n    image:\n      \"https://images.unsplash.com/photo-1641906840000-4b88f1d44de6?auto=format&fit=crop&q=80&w=400&h=400\",\n    name: \"Emma Rodriguez\",\n    role: \"Frontend Developer\",\n    quote:\n      \"A game-changer for rapid prototyping and production. The components are production-ready, well-tested, and the design system is incredibly cohesive. Love it!\",\n    rating: 5,\n  },\n]\n\nexport default function TestimonialsBlock() {\n  return (\n    <section className=\"py-20\">\n      <div className=\"container mx-auto px-4\">\n        <div className=\"mb-16 text-center\">\n          <h2 className=\"mb-4 text-3xl font-bold md:text-4xl\">\n            What Our Users Say\n          </h2>\n          <p className=\"text-muted-foreground mx-auto max-w-2xl text-lg\">\n            Trusted by thousands of developers and designers worldwide\n          </p>\n        </div>\n\n        <div className=\"grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3\">\n          {TESTIMONIALS.map(({ name, image, role, quote, rating }, key) => (\n            <Card\n              key={key}\n              className=\"group border-border/50 hover:border-border transition-all hover:shadow-lg\"\n            >\n              <CardContent className=\"p-8 text-center\">\n                <div className=\"relative mx-auto mb-6 inline-block\">\n                  <img\n                    src={image}\n                    alt={`${name} profile`}\n                    className=\"border-border mx-auto h-24 w-24 rounded-full border-4 object-cover transition-transform group-hover:scale-105\"\n                  />\n                  <div className=\"bg-background absolute -right-2 -bottom-2 rounded-full p-2 shadow-md\">\n                    <Quote className=\"text-primary h-4 w-4\" />\n                  </div>\n                </div>\n\n                <h3 className=\"mb-1 text-xl font-semibold\">{name}</h3>\n                <p className=\"text-muted-foreground mb-6 text-sm\">{role}</p>\n\n                <div className=\"mb-6 flex items-center justify-center gap-1\">\n                  {Array.from({ length: 5 }).map((_, i) => (\n                    <Star\n                      key={i}\n                      className={`h-4 w-4 ${\n                        i < rating\n                          ? \"fill-yellow-400 text-yellow-400\"\n                          : \"fill-muted text-muted\"\n                      }`}\n                    />\n                  ))}\n                </div>\n\n                <blockquote className=\"text-foreground/80 text-sm leading-relaxed\">\n                  &quot;{quote}&quot;\n                </blockquote>\n              </CardContent>\n            </Card>\n          ))}\n        </div>\n      </div>\n    </section>\n  )\n}\n",
+      "type": "registry:page",
+      "target": "app/testimonials-04/page.tsx"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "700px",
+    "container": "w-full bg-surface",
+    "mobile": "component",
+    "private": true
+  },
+  "categories": [
+    "testimonials"
+  ]
+}

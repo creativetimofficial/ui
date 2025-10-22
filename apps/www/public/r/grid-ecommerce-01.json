@@ -1,0 +1,27 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "grid-ecommerce-01",
+  "type": "registry:block",
+  "description": "Product grid with filters",
+  "registryDependencies": [
+    "button",
+    "card",
+    "select"
+  ],
+  "files": [
+    {
+      "path": "registry/creative-tim/blocks/grid-ecommerce-01/page.tsx",
+      "content": "\"use client\"\n\nimport { Button } from \"@/components/ui/button\"\nimport { Card } from \"@/components/ui/card\"\n\nconst CARDS = [\n  {\n    image:\n      \"https://images.unsplash.com/photo-1574015974293-817f0ebebb74?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=973\",\n    title: \"New\",\n    subtitle: \"Urban Chick Collection\",\n  },\n  {\n    image:\n      \"https://images.unsplash.com/photo-1661327930345-9c6714b603b3?auto=format&fit=crop&q=80&w=400&h=400\",\n    title: \"Shop Sales\",\n    subtitle: \"Urban Chick Collection\",\n  },\n  {\n    image:\n      \"https://images.unsplash.com/photo-1535220459927-c8428851fd45?auto=format&fit=crop&q=80&w=400&h=400\",\n    title: \"50% off\",\n    subtitle: \"Urban Chick Collection\",\n  },\n]\n\nexport default function GridEcommerce01() {\n  return (\n    <section className=\"py-16\">\n      <div className=\"container mx-auto\">\n        <p className=\"mb-8 font-semibold\">\n          Gear Up and Enjoy Savings | Get up to 50% off on select items\n        </p>\n        <div className=\"grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3\">\n          {CARDS.map(({ image, title, subtitle }, index) => (\n            <Card\n              key={index}\n              className=\"group relative h-96 overflow-hidden border-0 p-0 shadow-lg transition-all hover:shadow-xl\"\n            >\n              <img\n                src={image}\n                alt={title}\n                className=\"h-full w-full object-cover object-center transition-transform duration-500 group-hover:scale-105\"\n              />\n              <div className=\"absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent\" />\n              <div className=\"absolute inset-x-0 bottom-0 p-6 text-white\">\n                <p className=\"mb-2 text-sm font-semibold tracking-wider text-white/90 uppercase\">\n                  {title}\n                </p>\n                <h3 className=\"mb-4 text-2xl font-bold\">{subtitle}</h3>\n                <Button variant=\"link\" className=\"p-0 text-white\">\n                  Read More\n                </Button>\n              </div>\n            </Card>\n          ))}\n        </div>\n        <Card className=\"group relative mt-6 h-96 overflow-hidden border-0 p-0 shadow-lg transition-all hover:shadow-xl\">\n          <img\n            src=\"https://images.unsplash.com/photo-1559745482-57bfa9ca5a8a?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1481\"\n            alt=\"Formal Elegance\"\n            className=\"h-full w-full object-cover object-center transition-transform duration-500 group-hover:scale-105\"\n          />\n          <div className=\"absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent\" />\n          <div className=\"absolute inset-0 flex items-center justify-center p-8 text-white\">\n            <div className=\"text-center\">\n              <p className=\"mb-3 text-lg font-bold tracking-wider uppercase\">\n                UP TO 70%\n              </p>\n              <h3 className=\"mb-6 text-3xl font-bold md:text-4xl\">\n                Formal Elegance Series\n              </h3>\n              <Button variant=\"link\" size=\"lg\" className=\"p-0 text-white\">\n                Discover\n              </Button>\n            </div>\n          </div>\n        </Card>\n      </div>\n    </section>\n  )\n}\n",
+      "type": "registry:page",
+      "target": "app/grid-ecommerce/page.tsx"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "1200px",
+    "container": "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
+    "mobile": "component"
+  },
+  "categories": [
+    "ecommerce"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "footers-15",
+  "type": "registry:block",
+  "description": "Website footer with quote",
+  "registryDependencies": [
+    "button"
+  ],
+  "files": [
+    {
+      "path": "registry/creative-tim/blocks/footers-15/page.tsx",
+      "content": "\"use client\"\n\nimport { Github, Instagram, Twitter, Youtube } from \"lucide-react\"\n\nimport { Button } from \"@/components/ui/button\"\n\nconst YEAR = new Date().getFullYear()\n\nconst LINKS = [\n  { title: \"About Us\", href: \"#\" },\n  { title: \"Careers\", href: \"#\" },\n  { title: \"Press\", href: \"#\" },\n  { title: \"Blog\", href: \"#\" },\n  { title: \"Pricing\", href: \"#\" },\n]\n\nexport default function Footers15() {\n  return (\n    <footer className=\"pt-16 pb-8\">\n      <div className=\"container mx-auto\">\n        <div className=\"mb-4 flex flex-col justify-between gap-4 md:flex-row\">\n          <div>\n            <h6 className=\"text-xl font-semibold\">Creative Tim</h6>\n            <ul className=\"mt-4 flex flex-wrap items-center gap-x-6 gap-y-2\">\n              {LINKS.map(({ title, href }, key) => (\n                <li key={key}>\n                  <a\n                    href={href}\n                    className=\"text-foreground hover:text-primary font-medium\"\n                  >\n                    {title}\n                  </a>\n                </li>\n              ))}\n            </ul>\n          </div>\n          <div className=\"md:text-right\">\n            <p className=\"font-semibold\">\n              The reward for getting on the stage is fame.\n            </p>\n            <p className=\"mb-4 font-semibold\">\n              The price of fame is you can&apos;t get off the stage.\n            </p>\n            <div className=\"flex gap-1 md:justify-end\">\n              <Button asChild variant=\"ghost\" size=\"icon\">\n                <a href=\"#\" aria-label=\"Twitter\">\n                  <Twitter className=\"h-5 w-5\" />\n                </a>\n              </Button>\n              <Button asChild variant=\"ghost\" size=\"icon\">\n                <a href=\"#\" aria-label=\"YouTube\">\n                  <Youtube className=\"h-5 w-5\" />\n                </a>\n              </Button>\n              <Button asChild variant=\"ghost\" size=\"icon\">\n                <a href=\"#\" aria-label=\"Instagram\">\n                  <Instagram className=\"h-5 w-5\" />\n                </a>\n              </Button>\n              <Button asChild variant=\"ghost\" size=\"icon\">\n                <a href=\"#\" aria-label=\"GitHub\">\n                  <Github className=\"h-5 w-5\" />\n                </a>\n              </Button>\n            </div>\n          </div>\n        </div>\n        <p className=\"text-foreground\">\n          All rights reserved. &copy; {YEAR} Creative Tim\n        </p>\n      </div>\n    </footer>\n  )\n}\n",
+      "type": "registry:page",
+      "target": "app/footers-15/page.tsx"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "400px",
+    "container": "w-full bg-surface",
+    "mobile": "component"
+  },
+  "categories": [
+    "footers"
+  ]
+}

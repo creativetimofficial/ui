@@ -1,0 +1,28 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "invoices-01",
+  "type": "registry:block",
+  "description": "Invoice overview with status badges and download",
+  "registryDependencies": [
+    "badge",
+    "button",
+    "separator"
+  ],
+  "files": [
+    {
+      "path": "registry/creative-tim/blocks/invoices-01/page.tsx",
+      "content": "\"use client\"\n\nimport { Download } from \"lucide-react\"\n\nimport { Badge } from \"@/components/ui/badge\"\nimport { Button } from \"@/components/ui/button\"\nimport { Separator } from \"@/components/ui/separator\"\n\nconst DATA = [\n  {\n    name: \"INV-24 #MS-415646\",\n    date: \"October 15, 2024\",\n    amount: 2500,\n    badge: \"24 Days\",\n    isOverdue: false,\n  },\n  {\n    name: \"INV-23 #MS-415740\",\n    date: \"October 10, 2024\",\n    amount: 1750,\n    badge: \"20 Days\",\n    isOverdue: false,\n  },\n  {\n    name: \"INV-22 #MS-946285\",\n    date: \"September 15, 2024\",\n    amount: 1500,\n    badge: \"18 Days\",\n    isOverdue: false,\n  },\n  {\n    name: \"INV-21 #MS-739734\",\n    date: \"September 10, 2024\",\n    amount: 2990,\n    badge: \"3 Days Overdue\",\n    isOverdue: true,\n  },\n  {\n    name: \"INV-20 #MS-848649\",\n    date: \"August 15, 2024\",\n    amount: 3500,\n    badge: \"3 Days Overdue\",\n    isOverdue: true,\n  },\n]\n\nexport default function Invoices01() {\n  return (\n    <div className=\"mx-auto max-w-xl p-6\">\n      <div className=\"dark:bg-card rounded-xl border bg-white p-6 shadow-sm\">\n        <div className=\"flex items-start justify-between gap-4\">\n          <div>\n            <h2 className=\"font-semibold\">Invoices</h2>\n            <p className=\"text-muted-foreground text-sm\">\n              Track and monitor your financial activity.\n            </p>\n          </div>\n          <Button size=\"sm\" variant=\"outline\">\n            Export\n          </Button>\n        </div>\n        <div className=\"mt-6\">\n          {DATA.map(({ name, date, amount, badge, isOverdue }, index) => (\n            <div key={name}>\n              <div className=\"flex flex-wrap items-center justify-between gap-6 py-6\">\n                <div className=\"basis-full space-y-0.5 sm:basis-auto\">\n                  <p className=\"text-lg font-semibold\">{name}</p>\n                  <p className=\"text-muted-foreground text-sm\">{date}</p>\n                </div>\n                <Badge\n                  variant={isOverdue ? \"destructive\" : \"default\"}\n                  className={\n                    isOverdue\n                      ? \"w-max sm:ml-auto\"\n                      : \"w-max bg-green-100 text-green-800 hover:bg-green-100 sm:ml-auto\"\n                  }\n                >\n                  {badge}\n                </Badge>\n                <p className=\"text-end text-sm font-semibold\">\n                  {new Intl.NumberFormat(\"en-US\", {\n                    style: \"currency\",\n                    currency: \"USD\",\n                  }).format(amount)}\n                </p>\n                <Button size=\"icon\" variant=\"ghost\" className=\"h-8 w-8\">\n                  <Download className=\"h-5 w-5\" />\n                </Button>\n              </div>\n              {index < DATA.length - 1 && <Separator />}\n            </div>\n          ))}\n        </div>\n      </div>\n    </div>\n  )\n}\n",
+      "type": "registry:page",
+      "target": "app/invoices/page.tsx"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "700px",
+    "container": "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
+    "mobile": "component",
+    "details": "Provides an overview of invoices with shadcn/ui Badge components indicating payment status (paid, pending, overdue) and Button components for downloading invoice PDFs. Clean, organized layout with visual separators for easy scanning. Perfect for billing portals, accounting dashboards, and financial management systems requiring clear invoice tracking and download capabilities."
+  },
+  "categories": [
+    "billing"
+  ]
+}

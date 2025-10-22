@@ -1,0 +1,28 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "modals-01",
+  "type": "registry:block",
+  "description": "Alert modal with confirmation input for reset settings",
+  "registryDependencies": [
+    "dialog",
+    "button",
+    "input",
+    "label"
+  ],
+  "files": [
+    {
+      "path": "registry/creative-tim/blocks/modals-01/page.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { TriangleAlert, X } from \"lucide-react\"\n\nimport { Button } from \"@/components/ui/button\"\nimport {\n  Dialog,\n  DialogContent,\n  DialogHeader,\n  DialogTitle,\n  DialogTrigger,\n} from \"@/components/ui/dialog\"\nimport { Input } from \"@/components/ui/input\"\nimport { Label } from \"@/components/ui/label\"\n\nexport default function ModalsBlock() {\n  const [isOpen, setIsOpen] = React.useState(false)\n\n  return (\n    <div className=\"grid min-h-screen w-full place-items-center\">\n      <Dialog open={isOpen} onOpenChange={setIsOpen}>\n        <DialogTrigger asChild>\n          <Button onClick={() => setIsOpen(true)}>Open Modal</Button>\n        </DialogTrigger>\n        <DialogContent className=\"sm:max-w-[500px]\">\n          <button\n            onClick={() => setIsOpen(false)}\n            className=\"ring-offset-background focus:ring-ring data-[state=open]:bg-accent data-[state=open]:text-muted-foreground absolute top-4 right-4 rounded-sm opacity-70 transition-opacity hover:opacity-100 focus:ring-2 focus:ring-offset-2 focus:outline-none disabled:pointer-events-none\"\n          >\n            <X className=\"h-4 w-4\" />\n            <span className=\"sr-only\">Close</span>\n          </button>\n          <div className=\"flex items-start gap-4\">\n            <div className=\"flex-1\">\n              <TriangleAlert className=\"text-destructive mb-6 h-14 w-14\" />\n              <DialogHeader>\n                <DialogTitle className=\"mb-1 text-xl\">\n                  Reset Settings\n                </DialogTitle>\n              </DialogHeader>\n              <p className=\"text-muted-foreground mt-2 max-w-xl text-sm\">\n                Are you sure you want to reset all settings to their default\n                values? This action cannot be undone.\n              </p>\n            </div>\n          </div>\n\n          <form className=\"mt-6 space-y-4\">\n            <div className=\"space-y-2\">\n              <Label htmlFor=\"reset\" className=\"text-sm\">\n                Please type{\" \"}\n                <span className=\"text-foreground font-semibold\">\n                  &quot;Reset settings&quot;\n                </span>{\" \"}\n                to confirm.\n              </Label>\n              <div className=\"flex w-full flex-col items-center gap-2 sm:flex-row\">\n                <Input\n                  id=\"reset\"\n                  placeholder=\"Reset settings\"\n                  className=\"flex-1\"\n                />\n                <Button type=\"submit\" className=\"w-full shrink-0 sm:w-auto\">\n                  I understand, reset settings\n                </Button>\n              </div>\n            </div>\n          </form>\n        </DialogContent>\n      </Dialog>\n    </div>\n  )\n}\n",
+      "type": "registry:page",
+      "target": "app/modals-01/page.tsx"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "600px",
+    "container": "w-full bg-surface",
+    "mobile": "component"
+  },
+  "categories": [
+    "modals"
+  ]
+}

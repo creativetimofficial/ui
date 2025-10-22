@@ -1,0 +1,29 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "contact-sections-03",
+  "type": "registry:block",
+  "description": "Contact form with dark info panel",
+  "registryDependencies": [
+    "button",
+    "card",
+    "input",
+    "label",
+    "textarea"
+  ],
+  "files": [
+    {
+      "path": "registry/creative-tim/blocks/contact-sections-03/page.tsx",
+      "content": "\"use client\"\n\nimport {\n  Dribbble,\n  Facebook,\n  Linkedin,\n  Mail,\n  Phone,\n  Ticket,\n  Twitter,\n} from \"lucide-react\"\n\nimport { Button } from \"@/components/ui/button\"\nimport { Card } from \"@/components/ui/card\"\nimport { Input } from \"@/components/ui/input\"\nimport { Label } from \"@/components/ui/label\"\nimport { Textarea } from \"@/components/ui/textarea\"\n\nconst DATA = [\n  {\n    icon: Phone,\n    info: \"+1(424) 535 3523\",\n  },\n  {\n    icon: Mail,\n    info: \"hello@mail.com\",\n  },\n  {\n    icon: Ticket,\n    info: \"Open Support Ticket\",\n  },\n]\n\nexport default function ContactSections03() {\n  return (\n    <section className=\"py-16\">\n      <div className=\"container mx-auto\">\n        <div className=\"mb-16 text-center\">\n          <h2 className=\"text-4xl font-bold\">Contact Us</h2>\n          <p className=\"text-muted-foreground mx-auto mt-4 max-w-lg text-lg\">\n            Any questions or remarks? Just write us a message!\n          </p>\n        </div>\n        <Card className=\"grid grid-cols-1 gap-10 rounded-2xl p-8 shadow-xl lg:grid-cols-2 lg:p-10\">\n          <form action=\"#\" className=\"space-y-6\">\n            <div className=\"grid grid-cols-1 gap-x-4 gap-y-6 sm:grid-cols-2\">\n              <div className=\"space-y-2\">\n                <Label htmlFor=\"first-name\" className=\"text-base\">\n                  First Name\n                </Label>\n                <Input id=\"first-name\" placeholder=\"John\" className=\"h-11\" />\n              </div>\n              <div className=\"space-y-2\">\n                <Label htmlFor=\"last-name\" className=\"text-base\">\n                  Last Name\n                </Label>\n                <Input id=\"last-name\" placeholder=\"Doe\" className=\"h-11\" />\n              </div>\n            </div>\n            <div className=\"space-y-2\">\n              <Label htmlFor=\"email\" className=\"text-base\">\n                Email Address\n              </Label>\n              <Input\n                id=\"email\"\n                type=\"email\"\n                placeholder=\"someone@example.com\"\n                className=\"h-11\"\n              />\n            </div>\n            <div className=\"space-y-2\">\n              <Label htmlFor=\"message\" className=\"text-base\">\n                Message\n              </Label>\n              <Textarea\n                id=\"message\"\n                placeholder=\"Something about your request.\"\n                rows={5}\n                className=\"resize-none\"\n              />\n            </div>\n            <Button className=\"w-full sm:w-auto sm:min-w-[150px]\" size=\"lg\">\n              Send Message\n            </Button>\n          </form>\n          <div className=\"flex flex-col justify-between rounded-xl bg-gradient-to-br from-gray-900 to-black p-8 lg:p-12\">\n            <div>\n              <h3 className=\"mb-4 text-2xl font-bold text-white\">\n                Contact Information\n              </h3>\n              <p className=\"mb-12 max-w-lg text-gray-300\">\n                Fill up the form and our Team will get back to you within 24\n                hours.\n              </p>\n              <div className=\"space-y-6\">\n                {DATA.map(({ icon: Icon, info }, key) => (\n                  <div key={key} className=\"flex items-center gap-4\">\n                    <div className=\"flex h-10 w-10 items-center justify-center rounded-full bg-white/10\">\n                      <Icon className=\"h-5 w-5 text-white\" />\n                    </div>\n                    <span className=\"text-gray-200\">{info}</span>\n                  </div>\n                ))}\n              </div>\n            </div>\n            <div className=\"mt-12 flex items-center gap-6\">\n              <a\n                href=\"#\"\n                className=\"flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-gray-300 transition-all hover:bg-white/20 hover:text-white\"\n              >\n                <Twitter className=\"h-5 w-5\" />\n              </a>\n              <a\n                href=\"#\"\n                className=\"flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-gray-300 transition-all hover:bg-white/20 hover:text-white\"\n              >\n                <Linkedin className=\"h-5 w-5\" />\n              </a>\n              <a\n                href=\"#\"\n                className=\"flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-gray-300 transition-all hover:bg-white/20 hover:text-white\"\n              >\n                <Dribbble className=\"h-5 w-5\" />\n              </a>\n              <a\n                href=\"#\"\n                className=\"flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-gray-300 transition-all hover:bg-white/20 hover:text-white\"\n              >\n                <Facebook className=\"h-5 w-5\" />\n              </a>\n            </div>\n          </div>\n        </Card>\n      </div>\n    </section>\n  )\n}\n",
+      "type": "registry:page",
+      "target": "app/contact-sections-03/page.tsx"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "900px",
+    "container": "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
+    "mobile": "component"
+  },
+  "categories": [
+    "contact"
+  ]
+}

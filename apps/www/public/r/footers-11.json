@@ -1,0 +1,23 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "footers-11",
+  "type": "registry:block",
+  "description": "Website footer with statement",
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "registry/creative-tim/blocks/footers-11/page.tsx",
+      "content": "\"use client\"\n\nconst LINKS = [\n  {\n    title: \"Company\",\n    items: [\n      { title: \"About Us\", href: \"#\" },\n      { title: \"Careers\", href: \"#\" },\n    ],\n  },\n  {\n    title: \"Pages\",\n    items: [\n      { title: \"Login\", href: \"#\" },\n      { title: \"Register\", href: \"#\" },\n    ],\n  },\n  {\n    title: \"Legal\",\n    items: [\n      { title: \"Terms\", href: \"#\" },\n      { title: \"Privacy\", href: \"#\" },\n    ],\n  },\n]\n\nconst YEAR = new Date().getFullYear()\n\nexport default function Footers11() {\n  return (\n    <footer className=\"pt-20 pb-8\">\n      <div className=\"container mx-auto\">\n        <div className=\"mb-12 grid grid-cols-1 items-start justify-between gap-8 md:grid-cols-2 lg:gap-12\">\n          <div>\n            <h6 className=\"text-2xl font-semibold\">Creative Tim</h6>\n            <p className=\"text-muted-foreground mt-3 max-w-md\">\n              The reward for getting on the stage is fame.\n            </p>\n          </div>\n          <div className=\"grid grid-cols-3 gap-x-8 gap-y-6 md:ml-auto\">\n            {LINKS.map(({ title, items }) => (\n              <ul key={title} className=\"space-y-3\">\n                <p className=\"mb-3 font-semibold\">{title}</p>\n                {items.map(({ title, href }) => (\n                  <li key={title}>\n                    <a\n                      href={href}\n                      className=\"text-muted-foreground hover:text-foreground transition-colors\"\n                    >\n                      {title}\n                    </a>\n                  </li>\n                ))}\n              </ul>\n            ))}\n          </div>\n        </div>\n        <div className=\"border-border flex flex-col items-start justify-between gap-6 border-t pt-8 md:flex-row md:items-center\">\n          <p className=\"text-muted-foreground max-w-2xl text-sm\">\n            The price of fame is you can&apos;t get off the stage.\n          </p>\n          <p className=\"text-muted-foreground text-sm whitespace-nowrap\">\n            &copy; {YEAR} Creative Tim. All Rights Reserved.\n          </p>\n        </div>\n      </div>\n    </footer>\n  )\n}\n",
+      "type": "registry:page",
+      "target": "app/footers-11/page.tsx"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "450px",
+    "container": "w-full bg-surface",
+    "mobile": "component"
+  },
+  "categories": [
+    "footers"
+  ]
+}

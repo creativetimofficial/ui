@@ -1,0 +1,30 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "cruds-01",
+  "type": "registry:block",
+  "description": "Edit apparel item form with product details",
+  "registryDependencies": [
+    "button",
+    "card",
+    "input",
+    "label",
+    "select",
+    "textarea"
+  ],
+  "files": [
+    {
+      "path": "registry/creative-tim/blocks/cruds-01/page.tsx",
+      "content": "\"use client\"\n\nimport { Button } from \"@/components/ui/button\"\nimport { Card } from \"@/components/ui/card\"\nimport { Input } from \"@/components/ui/input\"\nimport { Label } from \"@/components/ui/label\"\nimport {\n  Select,\n  SelectContent,\n  SelectItem,\n  SelectTrigger,\n  SelectValue,\n} from \"@/components/ui/select\"\nimport { Textarea } from \"@/components/ui/textarea\"\n\nexport default function Cruds01() {\n  return (\n    <section className=\"grid min-h-screen place-items-center py-16\">\n      <Card className=\"mx-auto w-full max-w-2xl p-6 lg:p-8\">\n        <div className=\"mb-6\">\n          <h3 className=\"text-2xl font-semibold\">Edit Apparel Item</h3>\n          <p className=\"text-muted-foreground mt-1 text-sm\">\n            Update product information, pricing, and categorization for your\n            fashion inventory.\n          </p>\n        </div>\n        <form action=\"#\" className=\"space-y-6\">\n          <div className=\"space-y-2\">\n            <Label htmlFor=\"productName\">Product Name</Label>\n            <Input\n              id=\"productName\"\n              name=\"productName\"\n              type=\"text\"\n              placeholder=\"e.g. Slim Fit Denim Jacket\"\n            />\n          </div>\n\n          <div className=\"space-y-2\">\n            <Label htmlFor=\"brand\">Designer Brand</Label>\n            <Input\n              id=\"brand\"\n              name=\"brand\"\n              type=\"text\"\n              placeholder=\"e.g. Balenciaga\"\n            />\n          </div>\n\n          <div className=\"space-y-2\">\n            <Label htmlFor=\"price\">Retail Price ($)</Label>\n            <Input\n              id=\"price\"\n              name=\"price\"\n              type=\"number\"\n              placeholder=\"e.g. 199\"\n            />\n          </div>\n\n          <div className=\"space-y-2\">\n            <Label htmlFor=\"category\">Category</Label>\n            <Select name=\"category\">\n              <SelectTrigger id=\"category\" className=\"w-full\">\n                <SelectValue placeholder=\"Select a category\" />\n              </SelectTrigger>\n              <SelectContent>\n                <SelectItem value=\"outerwear\">Outerwear</SelectItem>\n                <SelectItem value=\"tops\">Tops</SelectItem>\n                <SelectItem value=\"bottoms\">Bottoms</SelectItem>\n                <SelectItem value=\"footwear\">Footwear</SelectItem>\n                <SelectItem value=\"accessories\">Accessories</SelectItem>\n              </SelectContent>\n            </Select>\n          </div>\n\n          <div className=\"space-y-2\">\n            <Label htmlFor=\"description\">Product Details</Label>\n            <Textarea\n              id=\"description\"\n              name=\"description\"\n              placeholder=\"Material, fit, washing instructions...\"\n              rows={4}\n            />\n          </div>\n\n          <div className=\"flex gap-4\">\n            <Button type=\"submit\" className=\"flex-1\">\n              Save Changes\n            </Button>\n            <Button type=\"button\" variant=\"destructive\" className=\"flex-1\">\n              Remove Item\n            </Button>\n          </div>\n        </form>\n      </Card>\n    </section>\n  )\n}\n",
+      "type": "registry:page",
+      "target": "app/cruds-01/page.tsx"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "1000px",
+    "container": "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
+    "mobile": "component"
+  },
+  "categories": [
+    "cruds"
+  ]
+}

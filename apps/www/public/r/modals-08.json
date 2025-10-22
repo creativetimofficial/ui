@@ -1,0 +1,27 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "modals-08",
+  "type": "registry:block",
+  "description": "Disable collection lock rules modal with alert and impact list",
+  "registryDependencies": [
+    "dialog",
+    "button",
+    "card"
+  ],
+  "files": [
+    {
+      "path": "registry/creative-tim/blocks/modals-08/page.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { AlertTriangle, X } from \"lucide-react\"\n\nimport { Button } from \"@/components/ui/button\"\nimport { Card, CardContent, CardHeader, CardTitle } from \"@/components/ui/card\"\nimport {\n  Dialog,\n  DialogContent,\n  DialogHeader,\n  DialogTitle,\n  DialogTrigger,\n} from \"@/components/ui/dialog\"\n\nexport default function ModalsBlock() {\n  const [isOpen, setIsOpen] = React.useState(false)\n\n  return (\n    <div className=\"grid min-h-screen w-full place-items-center\">\n      <Dialog open={isOpen} onOpenChange={setIsOpen}>\n        <DialogTrigger asChild>\n          <Button onClick={() => setIsOpen(true)}>Open Modal</Button>\n        </DialogTrigger>\n        <DialogContent className=\"sm:max-w-[550px]\">\n          <button\n            onClick={() => setIsOpen(false)}\n            className=\"ring-offset-background focus:ring-ring absolute top-4 right-4 rounded-sm opacity-70 transition-opacity hover:opacity-100 focus:ring-2 focus:ring-offset-2 focus:outline-none disabled:pointer-events-none\"\n          >\n            <X className=\"h-4 w-4\" />\n            <span className=\"sr-only\">Close</span>\n          </button>\n          <DialogHeader>\n            <DialogTitle className=\"mb-2 text-xl\">\n              Disable Collection Lock Rules\n            </DialogTitle>\n          </DialogHeader>\n          <p className=\"text-muted-foreground mt-2 text-sm\">\n            Removing edit rules will allow unrestricted changes to your seasonal\n            campaign folders and product groups.\n          </p>\n\n          <Card className=\"border-destructive/50 bg-destructive/5 my-6\">\n            <CardHeader className=\"pb-3\">\n              <CardTitle className=\"flex items-center gap-2 text-base\">\n                <AlertTriangle className=\"text-destructive h-4 w-4\" />\n                Access Restrictions Will Be Removed\n              </CardTitle>\n            </CardHeader>\n            <CardContent>\n              <p className=\"text-muted-foreground text-sm\">\n                Disabling these rules unlocks direct edits to sensitive assets\n                and might affect internal syncs.\n              </p>\n            </CardContent>\n          </Card>\n\n          <div className=\"mb-6 space-y-3\">\n            <p className=\"text-sm font-semibold\">This will impact:</p>\n            <ul className=\"text-muted-foreground space-y-2 text-sm\">\n              <li className=\"flex items-start gap-2\">\n                <span className=\"text-destructive mt-1\">•</span>\n                <span>Designer review checkpoints</span>\n              </li>\n              <li className=\"flex items-start gap-2\">\n                <span className=\"text-destructive mt-1\">•</span>\n                <span>Version freeze policies</span>\n              </li>\n            </ul>\n          </div>\n\n          <p className=\"text-muted-foreground mb-6 text-xs\">\n            Note: 0 edit lock rules currently active\n          </p>\n\n          <div className=\"flex items-center justify-end gap-2 pt-4\">\n            <Button\n              type=\"button\"\n              variant=\"outline\"\n              onClick={() => setIsOpen(false)}\n            >\n              Cancel\n            </Button>\n            <Button variant=\"destructive\">Disable Edit Locks</Button>\n          </div>\n        </DialogContent>\n      </Dialog>\n    </div>\n  )\n}\n",
+      "type": "registry:page",
+      "target": "app/modals-08/page.tsx"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "750px",
+    "container": "w-full bg-surface",
+    "mobile": "component"
+  },
+  "categories": [
+    "modals"
+  ]
+}

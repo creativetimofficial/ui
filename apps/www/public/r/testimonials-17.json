@@ -1,0 +1,26 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "testimonials-17",
+  "type": "registry:block",
+  "description": "Background image carousel testimonials",
+  "registryDependencies": [
+    "card",
+    "button"
+  ],
+  "files": [
+    {
+      "path": "registry/creative-tim/blocks/testimonials-17/page.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { ChevronLeft, ChevronRight, Quote } from \"lucide-react\"\n\nimport { Button } from \"@/components/ui/button\"\nimport { Card, CardContent } from \"@/components/ui/card\"\n\nconst SLIDES = [\n  {\n    image: \"https://v3.material-tailwind.com/logo/netflix.svg\",\n    name: \"Louis Miriam\",\n    role: \"COO @ Netflix\",\n    quote:\n      \"Knowledge is either from direct experience or from verifiable, falsifiable science. There is knowledge that is transmitted but not verifiable / falsifiable. They're slowed down by their perception of themselves.\",\n  },\n  {\n    image: \"https://v3.material-tailwind.com/logo/coinbase.svg\",\n    name: \"John Down\",\n    role: \"CEO @ Coinbase\",\n    quote:\n      \"Knowledge is either from direct experience or from verifiable, falsifiable science. There is knowledge that is transmitted but not verifiable / falsifiable. They're slowed down by their perception of themselves.\",\n  },\n]\n\nexport default function TestimonialsBlock() {\n  const [currentSlide, setCurrentSlide] = React.useState(0)\n\n  const nextSlide = () => {\n    setCurrentSlide((prev) => (prev + 1) % SLIDES.length)\n  }\n\n  const prevSlide = () => {\n    setCurrentSlide((prev) => (prev - 1 + SLIDES.length) % SLIDES.length)\n  }\n\n  return (\n    <section className=\"py-20\">\n      <div className=\"container mx-auto px-4\">\n        <Card className=\"relative overflow-hidden rounded-2xl bg-[url('https://images.unsplash.com/photo-1638438134099-a91e5373aaf0?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2070')] bg-cover bg-center p-6\">\n          <span className=\"absolute inset-0 h-full w-full bg-gradient-to-br from-black/80 to-black/60 backdrop-blur-sm\" />\n\n          <CardContent className=\"relative grid w-full grid-cols-1 items-center gap-8 px-6 py-12 md:grid-cols-12 md:px-12 md:py-16\">\n            <div className=\"col-span-full md:col-span-8\">\n              <Quote className=\"mb-6 h-12 w-12 text-white/30\" />\n              <blockquote className=\"mb-8 text-xl leading-relaxed font-medium text-white md:text-2xl\">\n                &quot;{SLIDES[currentSlide].quote}&quot;\n              </blockquote>\n              <div className=\"flex flex-col gap-2 md:flex-row md:items-center md:gap-3\">\n                <p className=\"text-lg font-semibold text-white\">\n                  {SLIDES[currentSlide].name}\n                </p>\n                <span className=\"hidden text-white/50 md:inline\">•</span>\n                <p className=\"text-sm text-white/70\">\n                  {SLIDES[currentSlide].role}\n                </p>\n              </div>\n            </div>\n\n            <div className=\"col-span-full flex items-center justify-center md:col-span-4\">\n              <div className=\"rounded-xl bg-white/10 p-8 backdrop-blur-sm\">\n                <img\n                  src={SLIDES[currentSlide].image}\n                  alt=\"company logo\"\n                  className=\"h-16 md:h-20\"\n                />\n              </div>\n            </div>\n          </CardContent>\n\n          <div className=\"absolute bottom-8 left-1/2 flex -translate-x-1/2 items-center gap-3\">\n            {SLIDES.map((_, index) => (\n              <button\n                key={index}\n                onClick={() => setCurrentSlide(index)}\n                aria-label={`Go to slide ${index + 1}`}\n                className={`h-2 rounded-full transition-all ${\n                  index === currentSlide\n                    ? \"w-8 bg-white\"\n                    : \"w-2 bg-white/50 hover:bg-white/75\"\n                }`}\n              />\n            ))}\n          </div>\n\n          <Button\n            size=\"icon\"\n            variant=\"ghost\"\n            onClick={prevSlide}\n            aria-label=\"Previous testimonial\"\n            className=\"!absolute top-1/2 left-4 z-10 -translate-y-1/2 text-white transition-all hover:bg-white/20 hover:text-white\"\n          >\n            <ChevronLeft className=\"h-8 w-8\" />\n          </Button>\n          <Button\n            size=\"icon\"\n            variant=\"ghost\"\n            onClick={nextSlide}\n            aria-label=\"Next testimonial\"\n            className=\"!absolute top-1/2 right-4 z-10 -translate-y-1/2 text-white transition-all hover:bg-white/20 hover:text-white\"\n          >\n            <ChevronRight className=\"h-8 w-8\" />\n          </Button>\n        </Card>\n      </div>\n    </section>\n  )\n}\n",
+      "type": "registry:page",
+      "target": "app/testimonials-17/page.tsx"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "600px",
+    "container": "w-full bg-surface",
+    "mobile": "component"
+  },
+  "categories": [
+    "testimonials"
+  ]
+}

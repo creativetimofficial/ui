@@ -1,0 +1,26 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "testimonials-02",
+  "type": "registry:block",
+  "description": "Testimonial cards with social proof badges",
+  "registryDependencies": [
+    "avatar",
+    "card"
+  ],
+  "files": [
+    {
+      "path": "registry/creative-tim/blocks/testimonials-02/page.tsx",
+      "content": "\"use client\"\n\nimport { BadgeCheck, Twitter } from \"lucide-react\"\n\nimport { Avatar, AvatarFallback, AvatarImage } from \"@/components/ui/avatar\"\nimport { Card, CardContent, CardFooter, CardHeader } from \"@/components/ui/card\"\n\nconst TESTIMONIALS = [\n  {\n    image: \"https://images.unsplash.com/photo-1641906840000-4b88f1d44de6?auto=format&fit=crop&q=80&w=400&h=400\",\n    name: \"Jessica Devis\",\n    username: \"@jessicadevis\",\n    quote:\n      \"The utility-first approach and extensive component library make it a breeze to create beautiful and responsive interfaces. 🎉\",\n    date: \"Jan 17, 2024\",\n  },\n  {\n    image: \"https://images.unsplash.com/photo-1716662318479-a9c0f1cd1a0e?auto=format&fit=crop&q=80&w=400&h=400\",\n    name: \"Lucian Eurel\",\n    username: \"@lucianeurel\",\n    quote:\n      \"It's like having a superpower in your toolkit. The ability to craft custom designs quickly and efficiently with simple classes is unparalleled.\",\n    date: \"Jan 18, 2024\",\n  },\n  {\n    image: \"https://images.unsplash.com/photo-1623853434105-8e7a72898180?auto=format&fit=crop&q=80&w=400&h=400\",\n    name: \"Marcell Glock\",\n    username: \"@marcelglock\",\n    quote:\n      \"The utility-first approach and extensive component library make it a breeze to create beautiful and responsive interfaces. 😍\",\n    date: \"Jan 19, 2024\",\n  },\n  {\n    image: \"https://v3.material-tailwind.com/man-profile-2.jpg\",\n    name: \"Linde Michele\",\n    username: \"@lindemichele\",\n    quote:\n      \"With its clear and concise classes, I can easily communicate design intentions to my colleagues. It's a must-have tool for any web developer. 👨🏻‍💻\",\n    date: \"Jan 20, 2024\",\n  },\n  {\n    image: \"https://v3.material-tailwind.com/man-profile-3.jpg\",\n    name: \"Mary Joshiash\",\n    username: \"@maryjoshiash\",\n    quote:\n      \"I've tried several CSS frameworks, but this is on a whole different level. It strikes the perfect balance between flexibility and design.\",\n    date: \"Jan 21, 2024\",\n  },\n  {\n    image: \"https://v3.material-tailwind.com/woman-profile-3.jpg\",\n    name: \"Misha Stam\",\n    username: \"@mishastam\",\n    quote:\n      \"Active community support make it easy to get started. It's the ideal framework for achieving design excellence in web applications.\",\n    date: \"Jan 22, 2024\",\n  },\n]\n\nexport default function TestimonialsBlock() {\n  return (\n    <section className=\"py-16\">\n      <div className=\"container mx-auto px-4\">\n        <div className=\"mb-16\">\n          <p className=\"mb-2 text-sm font-semibold tracking-wide uppercase\">\n            Testimonials\n          </p>\n          <h2 className=\"mb-4 text-3xl font-bold\">Think about us</h2>\n          <p className=\"text-muted-foreground max-w-lg text-lg\">\n            That&apos;s the main thing people are controlled by! Thoughts -\n            their perception of themselves!\n          </p>\n        </div>\n        <div className=\"grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3\">\n          {TESTIMONIALS.map(({ name, image, username, quote, date }, key) => (\n            <Card key={key}>\n              <CardHeader className=\"flex flex-row items-center gap-4 p-6\">\n                <Avatar>\n                  <AvatarImage src={image} alt={`${name} image`} />\n                  <AvatarFallback>\n                    {name\n                      .split(\" \")\n                      .map((n) => n[0])\n                      .join(\"\")}\n                  </AvatarFallback>\n                </Avatar>\n                <div className=\"flex-1\">\n                  <div className=\"mb-1 flex items-center gap-1.5\">\n                    <p className=\"font-semibold\">{name}</p>\n                    <BadgeCheck className=\"h-4 w-4 text-blue-500\" />\n                  </div>\n                  <p className=\"text-muted-foreground text-sm\">{username}</p>\n                </div>\n              </CardHeader>\n              <CardContent className=\"px-6\">\n                <blockquote className=\"text-muted-foreground\">\n                  {quote}\n                </blockquote>\n              </CardContent>\n              <CardFooter className=\"flex items-center justify-between gap-4 p-6\">\n                <a\n                  href=\"#\"\n                  className=\"flex items-center gap-1.5 text-sm font-semibold hover:underline\"\n                >\n                  See on <Twitter className=\"h-3.5 w-3.5\" />\n                </a>\n                <p className=\"text-muted-foreground text-sm\">{date}</p>\n              </CardFooter>\n            </Card>\n          ))}\n        </div>\n      </div>\n    </section>\n  )\n}\n",
+      "type": "registry:page",
+      "target": "app/testimonials-02/page.tsx"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "900px",
+    "container": "w-full bg-surface",
+    "mobile": "component"
+  },
+  "categories": [
+    "testimonials"
+  ]
+}

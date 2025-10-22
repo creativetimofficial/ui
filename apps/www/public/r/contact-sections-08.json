@@ -1,0 +1,30 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "contact-sections-08",
+  "type": "registry:block",
+  "description": "Contact form with area of interest selection",
+  "registryDependencies": [
+    "button",
+    "card",
+    "input",
+    "label",
+    "radio-group",
+    "textarea"
+  ],
+  "files": [
+    {
+      "path": "registry/creative-tim/blocks/contact-sections-08/page.tsx",
+      "content": "\"use client\"\n\nimport { useState } from \"react\"\nimport {\n  Dribbble,\n  Facebook,\n  Linkedin,\n  Mail,\n  Phone,\n  Ticket,\n  Twitter,\n} from \"lucide-react\"\n\nimport { Button } from \"@/components/ui/button\"\nimport { Card } from \"@/components/ui/card\"\nimport { Input } from \"@/components/ui/input\"\nimport { Label } from \"@/components/ui/label\"\nimport { RadioGroup, RadioGroupItem } from \"@/components/ui/radio-group\"\nimport { Textarea } from \"@/components/ui/textarea\"\n\nconst DATA = [\n  {\n    icon: Phone,\n    info: \"+1(424) 535 3523\",\n  },\n  {\n    icon: Mail,\n    info: \"hello@mail.com\",\n  },\n  {\n    icon: Ticket,\n    info: \"Open Support Ticket\",\n  },\n]\n\nconst OPTIONS = [\"Design\", \"Development\", \"Support\", \"Other\"]\n\nexport default function ContactSections08() {\n  const [selectedOption, setSelectedOption] = useState(\"\")\n\n  return (\n    <section className=\"py-16\">\n      <div className=\"container mx-auto\">\n        <div className=\"mb-16 text-center\">\n          <h2 className=\"text-3xl font-bold\">Contact Us</h2>\n          <p className=\"text-muted-foreground mx-auto mt-4 max-w-lg text-lg\">\n            Any questions or remarks? Just write us a message!\n          </p>\n        </div>\n        <Card className=\"grid grid-cols-1 gap-10 rounded-2xl p-4 lg:grid-cols-2 lg:p-6\">\n          <div className=\"grid rounded-lg bg-black p-8 lg:place-items-center lg:p-16\">\n            <div>\n              <h2 className=\"mb-4 text-2xl font-bold text-white\">\n                Contact Information\n              </h2>\n              <p className=\"mb-16 max-w-lg text-gray-400\">\n                Fill up the form and our Team will get back to you within 24\n                hours.\n              </p>\n              {DATA.map(({ icon: Icon, info }, key) => (\n                <div key={key} className=\"mb-4 flex items-center gap-4\">\n                  <Icon className=\"h-5 w-5 text-gray-400\" />\n                  <span className=\"text-gray-400\">{info}</span>\n                </div>\n              ))}\n              <div className=\"mt-12 flex items-center gap-6\">\n                <a href=\"#\" className=\"text-gray-400 hover:text-white\">\n                  <Twitter className=\"h-6 w-6\" />\n                </a>\n                <a href=\"#\" className=\"text-gray-400 hover:text-white\">\n                  <Linkedin className=\"h-6 w-6\" />\n                </a>\n                <a href=\"#\" className=\"text-gray-400 hover:text-white\">\n                  <Dribbble className=\"h-6 w-6\" />\n                </a>\n                <a href=\"#\" className=\"text-gray-400 hover:text-white\">\n                  <Facebook className=\"h-6 w-6\" />\n                </a>\n              </div>\n            </div>\n          </div>\n          <form action=\"#\" className=\"space-y-6 px-2 py-0 lg:py-2\">\n            <div className=\"grid grid-cols-1 gap-x-4 gap-y-6 sm:grid-cols-2\">\n              <div className=\"space-y-2\">\n                <Label htmlFor=\"first-name\">First Name</Label>\n                <Input id=\"first-name\" placeholder=\"John\" />\n              </div>\n              <div className=\"space-y-2\">\n                <Label htmlFor=\"last-name\">Last Name</Label>\n                <Input id=\"last-name\" placeholder=\"Doe\" />\n              </div>\n            </div>\n            <div className=\"space-y-2\">\n              <Label htmlFor=\"email\">Email Address</Label>\n              <Input\n                id=\"email\"\n                type=\"email\"\n                placeholder=\"someone@example.com\"\n              />\n            </div>\n            <div className=\"space-y-2\">\n              <Label>Area of Interest</Label>\n              <RadioGroup\n                value={selectedOption}\n                onValueChange={setSelectedOption}\n              >\n                <div className=\"grid grid-cols-2 gap-4\">\n                  {OPTIONS.map((option) => (\n                    <div key={option} className=\"flex items-center space-x-2\">\n                      <RadioGroupItem value={option} id={option} />\n                      <Label\n                        htmlFor={option}\n                        className=\"cursor-pointer font-normal\"\n                      >\n                        {option}\n                      </Label>\n                    </div>\n                  ))}\n                </div>\n              </RadioGroup>\n            </div>\n            <div className=\"space-y-2\">\n              <Label htmlFor=\"message\">Message</Label>\n              <Textarea\n                id=\"message\"\n                placeholder=\"Something about your request.\"\n              />\n            </div>\n            <Button className=\"ml-auto flex max-w-fit\">Send Message</Button>\n          </form>\n        </Card>\n      </div>\n    </section>\n  )\n}\n",
+      "type": "registry:page",
+      "target": "app/contact-sections-08/page.tsx"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "1000px",
+    "container": "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
+    "mobile": "component"
+  },
+  "categories": [
+    "contact"
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "footers-12",
+  "type": "registry:block",
+  "description": "Website footer with navigation",
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "registry/creative-tim/blocks/footers-12/page.tsx",
+      "content": "\"use client\"\n\nconst YEAR = new Date().getFullYear()\n\nconst LINKS = [\n  { title: \"About Us\", href: \"#\" },\n  { title: \"Contact Information\", href: \"#\" },\n  { title: \"Privacy Policy\", href: \"#\" },\n  { title: \"Terms & Conditions\", href: \"#\" },\n  { title: \"FAQ\", href: \"#\" },\n]\n\nexport default function Footers12() {\n  return (\n    <footer className=\"pt-16 pb-8\">\n      <div className=\"container mx-auto text-center\">\n        <div className=\"flex flex-row flex-wrap items-center !justify-center gap-6 lg:!justify-between\">\n          <ul className=\"flex flex-wrap items-center justify-center gap-x-6 gap-y-2\">\n            {LINKS.map(({ title, href }, key) => (\n              <li key={key}>\n                <a\n                  href={href}\n                  className=\"text-foreground hover:text-primary font-semibold\"\n                >\n                  {title}\n                </a>\n              </li>\n            ))}\n          </ul>\n          <p className=\"text-foreground text-sm font-medium\">\n            All rights reserved. Copyright &copy; {YEAR} Creative Tim\n          </p>\n        </div>\n      </div>\n    </footer>\n  )\n}\n",
+      "type": "registry:page",
+      "target": "app/footers-12/page.tsx"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "300px",
+    "container": "w-full bg-surface",
+    "mobile": "component"
+  },
+  "categories": [
+    "footers"
+  ]
+}

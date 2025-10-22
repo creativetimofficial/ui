@@ -1,0 +1,26 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "card-display-01",
+  "type": "registry:block",
+  "description": "Credit card display with dark and light themes",
+  "registryDependencies": [
+    "card"
+  ],
+  "files": [
+    {
+      "path": "registry/creative-tim/blocks/card-display-01/page.tsx",
+      "content": "\"use client\"\n\nimport { Wifi } from \"lucide-react\"\n\nimport { Card } from \"@/components/ui/card\"\n\ninterface CreditCardProps {\n  variant?: \"dark\" | \"light\"\n  number: string\n  holder: string\n  expires: string\n}\n\nfunction CreditCard({\n  variant = \"light\",\n  number,\n  holder,\n  expires,\n}: CreditCardProps) {\n  const isDark = variant === \"dark\"\n\n  return (\n    <Card\n      className={`group relative overflow-hidden transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl ${\n        isDark\n          ? \"bg-black text-white\"\n          : \"border-border/50 bg-white text-black shadow-lg\"\n      }`}\n    >\n      <div className=\"absolute inset-0 bg-gradient-to-tr from-transparent via-white/5 to-white/10 opacity-0 transition-opacity duration-300 group-hover:opacity-100\" />\n\n      <div className=\"relative m-0 flex w-full items-center justify-between p-6\">\n        <div\n          className={`rounded-lg p-2 ${isDark ? \"bg-white/10\" : \"bg-gray-100\"}`}\n        >\n          <Wifi className=\"h-6 w-6\" />\n        </div>\n        <div\n          className={`h-10 w-14 rounded ${isDark ? \"bg-gradient-to-br from-yellow-400 to-yellow-600\" : \"bg-gradient-to-br from-yellow-300 to-yellow-500\"}`}\n        >\n          <div className=\"h-full w-full rounded bg-gradient-to-tr from-transparent via-white/20 to-white/40\" />\n        </div>\n      </div>\n\n      <div className=\"relative px-6 py-4\">\n        <p className=\"text-lg font-bold tracking-[0.2em]\">\n          {String(number)\n            .match(/.{1,4}/g)\n            ?.join(\"  \")}\n        </p>\n      </div>\n\n      <div className=\"relative flex items-end justify-between gap-6 p-6 pt-2\">\n        <div className=\"flex gap-6\">\n          <div className=\"space-y-1\">\n            <p\n              className={`text-xs font-semibold tracking-wider uppercase ${isDark ? \"text-gray-400\" : \"text-gray-500\"}`}\n            >\n              Card Holder\n            </p>\n            <p className=\"text-sm font-bold\">{holder}</p>\n          </div>\n          <div className=\"space-y-1\">\n            <p\n              className={`text-xs font-semibold tracking-wider uppercase ${isDark ? \"text-gray-400\" : \"text-gray-500\"}`}\n            >\n              Expires\n            </p>\n            <p className=\"text-sm font-bold\">{expires}</p>\n          </div>\n        </div>\n        <div className=\"flex items-center\">\n          <img\n            src=\"https://v3.material-tailwind.com/mastercard.webp\"\n            alt=\"mastercard logo\"\n            className=\"h-10 w-auto transition-transform group-hover:scale-110\"\n          />\n        </div>\n      </div>\n    </Card>\n  )\n}\n\nexport default function CardDisplay01() {\n  return (\n    <div className=\"mx-auto grid max-w-5xl grid-cols-1 gap-8 p-6 md:grid-cols-2\">\n      <CreditCard\n        variant=\"dark\"\n        expires=\"10/25\"\n        holder=\"Jack Peterson\"\n        number=\"4562112245947852\"\n      />\n      <CreditCard\n        variant=\"light\"\n        expires=\"10/26\"\n        holder=\"Jack Peterson\"\n        number=\"4562112245948844\"\n      />\n    </div>\n  )\n}\n",
+      "type": "registry:page",
+      "target": "app/card-display/page.tsx"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "400px",
+    "container": "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
+    "mobile": "component",
+    "details": "Showcases dark and light versions of a card with bank brand logos. Built with shadcn/ui Card component for consistent styling across themes. Ideal for payment forms, checkout processes, wallet sections, financial dashboards, and any interface requiring elegant credit card visualization with theme support."
+  },
+  "categories": [
+    "billing"
+  ]
+}

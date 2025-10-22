@@ -1,0 +1,47 @@
+---
+title: Components
+description: Getting started with Creative Tim UI
+---
+
+Installing Creative Tim UI components is straightforward and can be done in a couple of ways. You can use the dedicated CLI command for the fastest setup, or integrate via the standard shadcn/ui CLI if you've already adopted shadcn's workflow.
+
+<Tabs defaultValue="creative-tim">
+
+<TabsList>
+  <TabsTrigger value="creative-tim">Creative Tim CLI</TabsTrigger>
+  <TabsTrigger value="shadcn">shadcn</TabsTrigger>
+</TabsList>
+
+<TabsContent value="creative-tim">
+
+```bash
+npx @creative-tim/ui@latest components add button
+```
+
+</TabsContent>
+
+<TabsContent value="shadcn">
+
+```bash
+npx shadcn@latest add https://creative-tim.com/ui/r/button.json
+```
+
+</TabsContent>
+
+</Tabs>
+
+## Prerequisites
+
+Before installing Creative Tim UI, make sure your environment meets the following requirements:
+
+- [Node.js](https://nodejs.org/) version 18 or later
+- A [Next.js](https://nextjs.org/) project
+- [shadcn/ui](https://ui.shadcn.com/) setup in your project. If you don't have it setup, running any install command will set it up for you.
+
+## Installing components
+
+You can install Creative Tim UI components using either the `@creative-tim/ui` CLI or the `shadcn/ui` CLI. Both achieve the same result: adding the selected component’s code and any needed dependencies to your project.
+
+The CLI will download the component's code and integrate it into your project's directory (usually under your components folder).
+
+After running the command, you should see a confirmation in your terminal that the files were added. You can then proceed to use the component in your code.

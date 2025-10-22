@@ -1,0 +1,79 @@
+---
+title: Introduction
+description: Introduction
+---
+
+Creative Tim UI is a comprehensive component library and custom registry built on top of [shadcn/ui](https://ui.shadcn.com/) to help you build beautiful, modern web applications faster. It provides pre-built, customizable React components and blocks designed for production-ready applications.
+
+## Installation
+
+Components are available via the `@creative-tim/ui` command.
+
+```bash
+npx @creative-tim/ui@latest components add <component>
+```
+
+For example, to install a button component, you can run:
+
+```bash
+npx @creative-tim/ui@latest components add button
+```
+
+Alternatively, you can use the standard shadcn CLI:
+
+```bash
+npx shadcn@latest add https://creative-tim.com/ui/r/<component>.json
+```
+
+## Copyrights and Licenses
+
+Creative Tim UI is built upon the incredible work of the open source community:
+
+- **[shadcn/ui](https://ui.shadcn.com/)** - The documentation structure, registry system, and foundational (atomic) components are from the open source work in shadcn/ui. [MIT License](https://github.com/shadcn-ui/ui/blob/main/LICENSE.md) 
+- **[Material Tailwind](https://material-tailwind.com/v3)** by Creative Tim - The blocks and component designs are inspired by and based on Material Tailwind Framework. [MIT License](https://github.com/creativetimofficial/material-tailwind/blob/main/LICENSE.md) 
+- **[Eleven Labs UI](https://github.com/elevenlabs/elevenlabs-ui)** - General inspiration for the documentation structure and approach of blocks. [MIT License](https://github.com/elevenlabs/ui/blob/main/LICENSE.md)
+- **[Geist Font](https://vercel.com/font)** by Vercel - The beautiful typeface used throughout the interface.  [SIL Open Font License 1.1](https://github.com/vercel/geist-font/blob/main/LICENSE.txt)
+
+We are grateful to these projects for making their work available under open source licenses.
+
+## Featured Components
+
+Here are some examples of what you can build with Creative Tim UI components:
+
+### Cards
+
+Versatile card components for displaying content in various formats - from simple content cards to blog posts and e-commerce products.
+
+<ComponentPreview
+  name="card-plain"
+  title="Plain Card"
+  hideCode={true}
+  description="A simple card with basic content."
+/>
+
+<ComponentPreview
+  name="card-with-button"
+  title="Card with Button"
+  hideCode={true}
+  description="Card with header, description, and action button."
+/>
+
+<ComponentPreview
+  name="card-blog"
+  title="Blog Card"
+  hideCode={true}
+  description="Card optimized for blog posts with image and metadata."
+/>
+
+<ComponentPreview
+  name="card-ecommerce"
+  title="E-commerce Card"
+  hideCode={true}
+  description="Product card with ratings, price, and cart actions."
+/>
+
+[View Card Documentation](/docs/components/card)
+
+## Resources
+
+You can explore all available blocks [here](/blocks), view the [full component library](/docs/components), or check out the [source code](https://github.com/creativetimofficial/ui) on GitHub.

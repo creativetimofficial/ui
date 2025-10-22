@@ -1,0 +1,27 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "testimonials-01",
+  "type": "registry:block",
+  "description": "Simple centered testimonials with avatars",
+  "registryDependencies": [
+    "avatar",
+    "card",
+    "badge"
+  ],
+  "files": [
+    {
+      "path": "registry/creative-tim/blocks/testimonials-01/page.tsx",
+      "content": "\"use client\"\n\nimport { Sparkles } from \"lucide-react\"\n\nimport { Avatar, AvatarFallback, AvatarImage } from \"@/components/ui/avatar\"\nimport { Badge } from \"@/components/ui/badge\"\nimport { Card, CardContent } from \"@/components/ui/card\"\n\nconst TESTIMONIALS = [\n  {\n    image:\n      \"https://images.unsplash.com/photo-1716662318479-a9c0f1cd1a0e?auto=format&fit=crop&q=80&w=400&h=400\",\n    name: \"Sarah Johnson\",\n    role: \"Product Designer\",\n    quote:\n      \"The attention to detail and component quality is outstanding. These UI blocks have significantly accelerated our design workflow and improved consistency across our products.\",\n  },\n  {\n    image:\n      \"https://images.unsplash.com/photo-1623853434105-8e7a72898180?auto=format&fit=crop&q=80&w=400&h=400\",\n    name: \"Michael Chen\",\n    role: \"Tech Lead at Stripe\",\n    quote:\n      \"Exceptional component library with excellent documentation. The customization options and TypeScript support make it perfect for enterprise applications. Highly recommend!\",\n  },\n  {\n    image:\n      \"https://images.unsplash.com/photo-1641906840000-4b88f1d44de6?auto=format&fit=crop&q=80&w=400&h=400\",\n    name: \"Emma Rodriguez\",\n    role: \"Frontend Developer\",\n    quote:\n      \"A game-changer for rapid prototyping and production. The components are production-ready, well-tested, and the design system is incredibly cohesive. Love it!\",\n  },\n]\n\nexport default function TestimonialsBlock() {\n  return (\n    <section className=\"py-16\">\n      <div className=\"container mx-auto px-4\">\n        <div className=\"mb-20 text-center\">\n          <Badge variant=\"outline\" className=\"mx-auto mb-8 w-max\">\n            <Sparkles className=\"mr-2 h-4 w-4\" />\n            Testimonials\n          </Badge>\n          <h2 className=\"mb-4 text-3xl font-bold\">What Clients Say</h2>\n          <p className=\"text-muted-foreground mx-auto max-w-lg text-lg\">\n            We&apos;re constantly trying to express ourselves and actualize our\n            dreams. If you have the opportunity to play.\n          </p>\n        </div>\n        <div className=\"grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3\">\n          {TESTIMONIALS.map(({ name, image, role, quote }, key) => (\n            <Card key={key} className=\"border-0 bg-transparent shadow-none\">\n              <CardContent className=\"p-0 text-center\">\n                <Avatar className=\"mx-auto mb-4 h-20 w-20\">\n                  <AvatarImage src={image} alt={`${name} image`} />\n                  <AvatarFallback>\n                    {name\n                      .split(\" \")\n                      .map((n) => n[0])\n                      .join(\"\")}\n                  </AvatarFallback>\n                </Avatar>\n                <p className=\"mb-1 text-lg font-semibold\">{name}</p>\n                <p className=\"text-muted-foreground mb-4 text-sm\">{role}</p>\n                <blockquote className=\"text-muted-foreground mx-auto max-w-lg\">\n                  &quot;{quote}&quot;\n                </blockquote>\n              </CardContent>\n            </Card>\n          ))}\n        </div>\n      </div>\n    </section>\n  )\n}\n",
+      "type": "registry:page",
+      "target": "app/testimonials-01/page.tsx"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "700px",
+    "container": "w-full bg-surface",
+    "mobile": "component"
+  },
+  "categories": [
+    "testimonials"
+  ]
+}

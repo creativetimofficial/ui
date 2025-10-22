@@ -1,0 +1,26 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "testimonials-11",
+  "type": "registry:block",
+  "description": "Testimonial cards with focus state",
+  "registryDependencies": [
+    "avatar",
+    "card"
+  ],
+  "files": [
+    {
+      "path": "registry/creative-tim/blocks/testimonials-11/page.tsx",
+      "content": "\"use client\"\n\nimport { Star } from \"lucide-react\"\n\nimport { Avatar, AvatarFallback, AvatarImage } from \"@/components/ui/avatar\"\nimport { Card, CardContent } from \"@/components/ui/card\"\n\nconst TESTIMONIALS = [\n  {\n    image: \"https://images.unsplash.com/photo-1716662318479-a9c0f1cd1a0e?auto=format&fit=crop&q=80&w=400&h=400\",\n    name: \"Lucian Eurel\",\n    date: \"Posted on 27 February\",\n    quote:\n      \"Success is not final, failure is not fatal: it is the courage to continue that counts.\",\n    rating: 4,\n    isHighlighted: false,\n  },\n  {\n    image: \"https://images.unsplash.com/photo-1623853434105-8e7a72898180?auto=format&fit=crop&q=80&w=400&h=400\",\n    name: \"Lucian Eurel\",\n    date: \"Posted on 28 February\",\n    quote:\n      \"If you have the opportunity to play this game of life you need to appreciate every moment.\",\n    rating: 4,\n    isHighlighted: true,\n  },\n  {\n    image: \"https://images.unsplash.com/photo-1641906840000-4b88f1d44de6?auto=format&fit=crop&q=80&w=400&h=400\",\n    name: \"Mathew Glock\",\n    date: \"Posted on 29 February\",\n    quote:\n      \"Artist is a term applied to a person who engages in an activity deemed to be an art.\",\n    rating: 5,\n    isHighlighted: false,\n  },\n]\n\nexport default function TestimonialsBlock() {\n  return (\n    <section className=\"py-16\">\n      <div className=\"container mx-auto px-4\">\n        <div className=\"mb-16 text-center\">\n          <h2 className=\"mb-4 text-center text-3xl font-bold\">\n            Think about us\n          </h2>\n          <p className=\"text-muted-foreground mx-auto max-w-lg text-center text-lg\">\n            That&apos;s the main thing people are controlled by! Thoughts -\n            their perception of themselves!\n          </p>\n        </div>\n        <div className=\"grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3\">\n          {TESTIMONIALS.map(\n            ({ name, image, date, quote, rating, isHighlighted }, key) => (\n              <Card\n                key={key}\n                className={\n                  isHighlighted\n                    ? \"bg-primary text-primary-foreground\"\n                    : \"bg-transparent\"\n                }\n              >\n                <CardContent className=\"p-4\">\n                  <Avatar className=\"mb-4 h-16 w-16 rounded-lg\">\n                    <AvatarImage src={image} alt={`${name} image`} />\n                    <AvatarFallback>\n                      {name\n                        .split(\" \")\n                        .map((n) => n[0])\n                        .join(\"\")}\n                    </AvatarFallback>\n                  </Avatar>\n                  <p\n                    className={`text-lg font-semibold ${isHighlighted ? \"text-primary-foreground\" : \"\"}`}\n                  >\n                    {name}\n                  </p>\n                  <p\n                    className={`text-sm ${isHighlighted ? \"opacity-80\" : \"text-muted-foreground\"}`}\n                  >\n                    {date}\n                  </p>\n                  <blockquote\n                    className={`my-4 max-w-lg ${isHighlighted ? \"opacity-80\" : \"text-muted-foreground\"}`}\n                  >\n                    &quot;{quote}&quot;\n                  </blockquote>\n                  <div className=\"flex items-center gap-1\">\n                    {Array.from({ length: 5 }).map((_, i) => (\n                      <Star\n                        key={i}\n                        className={`h-5 w-5 ${\n                          i < rating\n                            ? \"fill-yellow-500 text-yellow-500\"\n                            : isHighlighted\n                              ? \"fill-white/30 text-white/30\"\n                              : \"fill-gray-300 text-gray-300\"\n                        }`}\n                      />\n                    ))}\n                  </div>\n                </CardContent>\n              </Card>\n            )\n          )}\n        </div>\n      </div>\n    </section>\n  )\n}\n",
+      "type": "registry:page",
+      "target": "app/testimonials-11/page.tsx"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "700px",
+    "container": "w-full bg-surface",
+    "mobile": "component"
+  },
+  "categories": [
+    "testimonials"
+  ]
+}

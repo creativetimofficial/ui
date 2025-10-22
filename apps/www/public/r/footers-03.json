@@ -1,0 +1,25 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "footers-03",
+  "type": "registry:block",
+  "description": "Website footer with CTA",
+  "registryDependencies": [
+    "button"
+  ],
+  "files": [
+    {
+      "path": "registry/creative-tim/blocks/footers-03/page.tsx",
+      "content": "\"use client\"\n\nimport { Button } from \"@/components/ui/button\"\n\nconst YEAR = new Date().getFullYear()\n\nconst LINKS = [\n  { title: \"Home\", href: \"#\" },\n  { title: \"About Us\", href: \"#\" },\n  { title: \"Blog\", href: \"#\" },\n  { title: \"Service\", href: \"#\" },\n]\n\nexport default function Footers03() {\n  return (\n    <footer className=\"pt-16 pb-8\">\n      <div className=\"container mx-auto\">\n        <div className=\"border-surface flex flex-row flex-wrap items-center !justify-center gap-x-10 gap-y-3 border-t pt-8 text-center md:!justify-between\">\n          <p className=\"text-foreground\">\n            Copyright &copy; {YEAR} Creative Tim\n          </p>\n          <ul className=\"flex flex-wrap items-center justify-center gap-6\">\n            {LINKS.map(({ title, href }, key) => (\n              <li key={key}>\n                <a href={href} className=\"text-foreground hover:text-primary\">\n                  {title}\n                </a>\n              </li>\n            ))}\n            <Button className=\"w-full sm:max-w-fit\">Sign in</Button>\n          </ul>\n        </div>\n      </div>\n    </footer>\n  )\n}\n",
+      "type": "registry:page",
+      "target": "app/footers-03/page.tsx"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "300px",
+    "container": "w-full bg-surface",
+    "mobile": "component"
+  },
+  "categories": [
+    "footers"
+  ]
+}

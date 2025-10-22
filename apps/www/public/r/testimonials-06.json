@@ -1,0 +1,26 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "testimonials-06",
+  "type": "registry:block",
+  "description": "Company logo testimonial with large quote",
+  "registryDependencies": [
+    "avatar",
+    "card"
+  ],
+  "files": [
+    {
+      "path": "registry/creative-tim/blocks/testimonials-06/page.tsx",
+      "content": "\"use client\"\n\nimport { Avatar, AvatarFallback, AvatarImage } from \"@/components/ui/avatar\"\nimport { Card, CardContent } from \"@/components/ui/card\"\n\nexport default function TestimonialsBlock() {\n  return (\n    <section className=\"py-16\">\n      <div className=\"container mx-auto px-4\">\n        <Card className=\"grid grid-cols-12 items-center border-0 bg-transparent shadow-none\">\n          <div className=\"col-span-full md:col-span-4\">\n            <img\n              src=\"https://v3.material-tailwind.com/logo/spotify.svg\"\n              alt=\"user profile\"\n              className=\"h-full max-h-96 w-full max-w-96 rounded-xl object-cover lg:max-h-[30rem] lg:max-w-full\"\n            />\n          </div>\n          <CardContent className=\"col-span-full px-0 py-6 md:col-span-8 md:px-8 lg:px-12\">\n            <p className=\"mb-2 text-sm font-semibold tracking-wide uppercase lg:mb-4\">\n              Client Success Story\n            </p>\n            <h2 className=\"mb-6 text-3xl font-bold\">\n              Transforming Our Design System\n            </h2>\n            <blockquote className=\"text-muted-foreground mb-8 text-lg font-normal lg:mb-12\">\n              &quot;This component library has revolutionized how we build\n              products at scale. The quality, consistency, and developer\n              experience are exceptional. We've reduced our\n              design-to-development time by 60% and our entire team loves\n              working with these components.&quot;\n            </blockquote>\n            <div className=\"flex items-center gap-4\">\n              <Avatar className=\"h-12 w-12\">\n                <AvatarImage\n                  alt=\"Alexandra Martinez\"\n                  src=\"https://images.unsplash.com/photo-1623853434105-8e7a72898180?auto=format&fit=crop&q=80&w=400&h=400\"\n                />\n                <AvatarFallback>AM</AvatarFallback>\n              </Avatar>\n              <div>\n                <p className=\"text-lg font-semibold\">Alexandra Martinez</p>\n                <p className=\"text-muted-foreground text-sm\">\n                  Head of Design, Spotify\n                </p>\n              </div>\n            </div>\n          </CardContent>\n        </Card>\n      </div>\n    </section>\n  )\n}\n",
+      "type": "registry:page",
+      "target": "app/testimonials-06/page.tsx"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "500px",
+    "container": "w-full bg-surface",
+    "mobile": "component"
+  },
+  "categories": [
+    "testimonials"
+  ]
+}

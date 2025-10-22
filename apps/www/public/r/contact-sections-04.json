@@ -1,0 +1,25 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "contact-sections-04",
+  "type": "registry:block",
+  "description": "Minimalist contact with icon cards",
+  "registryDependencies": [
+    "card"
+  ],
+  "files": [
+    {
+      "path": "registry/creative-tim/blocks/contact-sections-04/page.tsx",
+      "content": "\"use client\"\n\nimport { Mail, MapPin, Phone, User } from \"lucide-react\"\n\nconst OPTIONS = [\n  {\n    icon: MapPin,\n    title: \"Address\",\n    description: \"12124 First Street, nr 54\",\n  },\n  {\n    icon: Mail,\n    title: \"Email\",\n    description: \"hello@email.com\",\n  },\n  {\n    icon: Phone,\n    title: \"Phone\",\n    description: \"+1 (424) 535-3523\",\n  },\n  {\n    icon: User,\n    title: \"Contact\",\n    description: \"Andrew Samian\",\n  },\n]\n\nexport default function ContactSections04() {\n  return (\n    <section className=\"relative min-h-[70vh] w-full bg-cover bg-center\">\n      <img\n        src=\"https://images.unsplash.com/photo-1635700193352-80564c35434c?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2532\"\n        alt=\"Background\"\n        className=\"absolute inset-0 h-full w-full object-cover\"\n      />\n      <div className=\"absolute inset-0 bg-black/50\" />\n      <div className=\"relative flex min-h-[70vh] flex-col items-center justify-center px-4 py-16 text-center\">\n        <h2 className=\"mb-6 text-5xl font-bold text-white\">Got a Question?</h2>\n        <p className=\"mx-auto mb-12 max-w-xl text-xl text-white/80\">\n          We'd like to talk more about what you need\n        </p>\n        <div className=\"grid grid-cols-1 justify-items-center gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-4\">\n          {OPTIONS.map(({ icon: Icon, title, description }, key) => (\n            <div\n              key={key}\n              className=\"group text-center transition-transform hover:scale-105\"\n            >\n              <div className=\"mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-xl bg-white/10 shadow-lg transition-all group-hover:bg-white/20 group-hover:shadow-xl\">\n                <Icon className=\"h-8 w-8 text-white\" />\n              </div>\n              <p className=\"mb-2 text-xl font-bold text-white\">{title}</p>\n              <p className=\"text-base text-gray-300\">{description}</p>\n            </div>\n          ))}\n        </div>\n      </div>\n    </section>\n  )\n}\n",
+      "type": "registry:page",
+      "target": "app/contact-sections-04/page.tsx"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "800px",
+    "container": "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
+    "mobile": "component"
+  },
+  "categories": [
+    "contact"
+  ]
+}
