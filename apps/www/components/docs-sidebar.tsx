@@ -23,6 +23,21 @@ const TOP_LEVEL_SECTIONS = [
   { name: "Debug Logs", href: "/docs/debug-logs" },
 ]
 
+const BLOCKS_SECTIONS = [
+  { name: "Featured", href: "/blocks/featured" },
+  { name: "Account", href: "/blocks/account" },
+  { name: "Billing", href: "/blocks/billing" },
+  { name: "Blog Sections", href: "/blocks/blog-sections" },
+  { name: "Ecommerce", href: "/blocks/ecommerce" },
+  { name: "FAQs", href: "/blocks/faqs" },
+  { name: "Contact", href: "/blocks/contact" },
+  { name: "Web3", href: "/blocks/web3" },
+  { name: "CRUDs", href: "/blocks/cruds" },
+  { name: "Footers", href: "/blocks/footers" },
+  { name: "Testimonials", href: "/blocks/testimonials" },
+  { name: "Modals", href: "/blocks/modals" },
+]
+
 const EXCLUDED_SECTIONS = ["installation", "dark-mode", "(root)"]
 const EXCLUDED_PAGES: string[] = []
 
@@ -53,6 +68,35 @@ export function DocsSidebar({
                       asChild
                       isActive={
                         href === "/docs" || href === "/docs/components"
+                          ? pathname === href
+                          : pathname.startsWith(href)
+                      }
+                      className="data-[active=true]:bg-accent data-[active=true]:border-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md"
+                    >
+                      <Link href={href}>
+                        <span className="absolute inset-0 flex w-(--sidebar-width) bg-transparent" />
+                        {name}
+                      </Link>
+                    </SidebarMenuButton>
+                  </SidebarMenuItem>
+                )
+              })}
+            </SidebarMenu>
+          </SidebarGroupContent>
+        </SidebarGroup>
+        <SidebarGroup>
+          <SidebarGroupLabel className="text-muted-foreground font-medium">
+            Blocks
+          </SidebarGroupLabel>
+          <SidebarGroupContent>
+            <SidebarMenu>
+              {BLOCKS_SECTIONS.map(({ name, href }) => {  
+                return (
+                  <SidebarMenuItem key={name}>
+                    <SidebarMenuButton
+                      asChild
+                      isActive={
+                        href === "/blocks" || href === "/blocks/featured"
                           ? pathname === href
                           : pathname.startsWith(href)
                       }
