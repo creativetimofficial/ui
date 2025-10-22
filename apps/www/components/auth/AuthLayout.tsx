@@ -27,7 +27,7 @@ export function AuthLayout({
   subtitle,
   children,
   footerLink,
-  dashboardHref = "/dashboard",
+  dashboardHref = "/ui/dashboard",
   showForgotPasswordLink = false,
 }: AuthLayoutProps) {
   const router = useRouter();
