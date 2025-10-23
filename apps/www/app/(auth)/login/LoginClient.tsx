@@ -3,7 +3,7 @@
 
 import * as React from "react";
 import { AuthAPI } from "@/lib/auth/auth";
-import { setAccessToken } from "@/lib/session";
+import { setAccessToken } from "@/lib/auth/session";
 import { normalizeAccessToken } from "@/lib/auth/normalizers";
 import { useAuth } from "@/components/auth/AuthProvider";
 import { AuthLayout } from "@/components/auth/AuthLayout";
