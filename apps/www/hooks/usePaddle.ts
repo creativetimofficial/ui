@@ -44,7 +44,7 @@ export function usePaddle() {
       const checkoutOptions: PaddleCheckoutOptions = {
         items: [{ priceId, quantity: 1 }],
         settings: {
-          successUrl: `${process.env.NEXT_PUBLIC_APP_URL}/thank-you`,
+          successUrl: `${process.env.NEXT_PUBLIC_APP_URL}/ui/thank-you`,
         },
       };
 
