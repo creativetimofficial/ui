@@ -29,23 +29,31 @@ export async function middleware(request: NextRequest) {
     }
   }
 
-  // --- guard dashboard routes
-  if (!pathname.startsWith('/dashboard')) {
-    return NextResponse.next();
-  }
-
   const hasMarker = request.cookies.get("rt_present")?.value === "1";
 
-  if (!hasMarker) {
-    // No session marker → call the /api/auth/bootstrap API endpoint
+  // Auth routes
+  const isAuthRoute = pathname === "/login" || pathname === "/register" || pathname === "/forgot-password";
+
+  // If user has marker and is on /login, /register, or /forgot-password, redirect to /dashboard
+  if (isAuthRoute && hasMarker) {
     const url = request.nextUrl.clone();
-    url.pathname = `/api/auth/bootstrap`;
+    url.pathname = "/dashboard";
     return NextResponse.redirect(url);
+  }
+
+  // --- guard dashboard routes
+  if (pathname.startsWith('/dashboard')) {
+    if (!hasMarker) {
+      // No session marker → call the /api/auth/bootstrap API endpoint
+      const url = request.nextUrl.clone();
+      url.pathname = `/api/auth/bootstrap`;
+      return NextResponse.redirect(url);
+    }
   }
 
   return NextResponse.next();
 }
 
 export const config = {
-  matcher: ["/r/:path*.json", "/dashboard/:path*"],
+  matcher: ["/r/:path*.json", "/dashboard/:path*", "/login", "/register", "/forgot-password"],
 }
