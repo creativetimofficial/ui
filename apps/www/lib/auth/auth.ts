@@ -3,7 +3,7 @@ import { api } from "./api";
 import type {
   AuthLoginResponse,
   AuthMeResponse,
-  AuthTokens,
+  AuthResponse,
   MessageResponse,
 } from "@/lib/auth/auth.types";
 
@@ -38,7 +38,7 @@ export const AuthAPI = {
 
   // Cookie-based refresh; skip is optional (guard already blocks)
   refresh: () =>
-    api<AuthTokens>("/auth/refresh", { method: "POST", skipRefresh: true }),
+    api<AuthResponse>("/auth/refresh", { method: "POST", skipRefresh: true }),
 
   // Non-protected action; be safe and skip
   logout: () =>
