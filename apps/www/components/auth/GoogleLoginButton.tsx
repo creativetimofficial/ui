@@ -23,7 +23,7 @@ export function GoogleLoginButton() {
 
         // 2) Send id_token to Rails
         const res = await fetch(
-          `${process.env.NEXT_PUBLIC_RAILS_BASE_URL}/api/v1/auth/google`,
+          `${process.env.NEXT_PUBLIC_SERVER_APP_URL}/api/v1/auth/google`,
           {
             method: "POST",
             credentials: "include", // ⬅️ important for cookies
