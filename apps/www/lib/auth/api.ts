@@ -1,5 +1,5 @@
 // lib/api.ts
-import { getAccessToken, setAccessToken, clearAccessToken } from "@/lib/session";
+import { getAccessToken, setAccessToken, clearAccessToken } from "@/lib/auth/session";
 import { hasRefreshMarker } from "./cookies";
 
 const API_BASE = process.env.NEXT_PUBLIC_API_URL || "";
