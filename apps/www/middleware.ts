@@ -29,20 +29,21 @@ export async function middleware(request: NextRequest) {
     }
   }
 
-  // Only guard dashboard routes
-  if (!pathname.startsWith("/dashboard")) return NextResponse.next();
+  // --- guard dashboard routes
+  if (!pathname.startsWith('/dashboard')) {
+    return NextResponse.next();
+  }
 
-  // Use a non-sensitive marker
-  const hasSessionMarker = request.cookies.get("rt_present")?.value === "1";
+  const hasMarker = request.cookies.get("rt_present")?.value === "1";
 
-  if (!hasSessionMarker) {
+  if (!hasMarker) {
+    // No session marker → call the /api/auth/bootstrap API endpoint
     const url = request.nextUrl.clone();
-    url.pathname = "/login";
-    url.searchParams.set("next", pathname); // optional: for post-login redirect
+    url.pathname = `/api/auth/bootstrap`;
     return NextResponse.redirect(url);
   }
 
-  return NextResponse.next()
+  return NextResponse.next();
 }
 
 export const config = {
