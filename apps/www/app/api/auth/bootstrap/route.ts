@@ -7,7 +7,7 @@ export async function GET(req: Request) {
   const successRedirect = new URL(`${process.env.NEXT_PUBLIC_APP_URL}/ui/dashboard`, req.url);
   const loginRedirect = new URL(`${process.env.NEXT_PUBLIC_APP_URL}/ui/login`, req.url);
 
-  const res = await fetch("http://localhost:3000/api/v1/auth/refresh", {
+  const res = await fetch(`${process.env.NEXT_PUBLIC_SERVER_APP_URL}/api/v1/auth/refresh`, {
     method: "POST",
     credentials: "include",
     headers: { "Content-Type": "application/json" },
