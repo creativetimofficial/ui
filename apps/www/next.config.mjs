@@ -107,6 +107,7 @@ const nextConfig = {
       {
         source: '/dashboard/:path*',
         destination: process.env.NEXT_PUBLIC_APP_URL + '/dashboard/:path*', // Proxy to Rails Dashboard
+        basePath: false
       },
       {
         source: '/downloads',
