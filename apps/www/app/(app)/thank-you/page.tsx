@@ -1,12 +1,14 @@
 // app/thank-you/page.tsx (or /ui/thank-you)
 "use client";
 import { useEffect } from "react";
+import { useRouter } from "next/navigation";
 import { useAuth } from "@/components/auth/AuthProvider";
 import { AuthAPI } from "@/lib/auth/auth";
 import { setAccessToken } from "@/lib/auth/session";
 
 export default function ThankYou() {
   const { setUser } = useAuth();
+  const router = useRouter();
 
   useEffect(() => {
     let cancelled = false;
@@ -22,6 +24,9 @@ export default function ThankYou() {
         setUser(data.user);
       } catch (err) {
         console.warn("License refresh failed:", err);
+      } finally {
+        // Redirect after 8 seconds regardless of success/failure
+        router.push("/dashboard");
       }
     };
 
@@ -29,7 +34,7 @@ export default function ThankYou() {
     return () => {
       cancelled = true;
     };
-  }, [setUser]);
+  }, [setUser, router]);
 
 
   return (
