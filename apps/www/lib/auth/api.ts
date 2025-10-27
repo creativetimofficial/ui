@@ -1,5 +1,5 @@
 // lib/api.ts
-import { getAccessToken, setAccessToken, clearAccessToken } from "@/lib/auth/session";
+import { setAccessToken, clearAccessToken, getAccessToken } from "@/lib/auth/session";
 import { hasRefreshMarker } from "./cookies";
 
 const API_BASE = process.env.NEXT_PUBLIC_API_URL || "";
@@ -33,19 +33,18 @@ function extractMessage(data: unknown, fallback = ""): string {
 }
 
 // ---- JWT helper to skip unnecessary refresh ----
-function isTokenFresh(token: string, leewaySec = 60): boolean {
-  try {
-    const payload = JSON.parse(atob(token.split(".")[1] || ""));
-    const exp: number = payload?.exp ?? 0;
-    return exp - Math.floor(Date.now() / 1000) > leewaySec;
-  } catch {
-    return false;
-  }
-}
+// function isTokenFresh(token: string, leewaySec = 60): boolean {
+//   try {
+//     const payload = JSON.parse(atob(token.split(".")[1] || ""));
+//     const exp: number = payload?.exp ?? 0;
+//     return exp - Math.floor(Date.now() / 1000) > leewaySec;
+//   } catch {
+//     return false;
+//   }
+// }
 
-// ---- Singleton refresh to avoid duplicate refresh calls ----
+// ---- Singleton refresh (unchanged) ----
 let refreshInFlight: Promise<string | null> | null = null;
-
 async function tryRefresh(): Promise<string | null> {
   if (!hasRefreshMarker()) return null;
   if (!refreshInFlight) {
@@ -57,17 +56,9 @@ async function tryRefresh(): Promise<string | null> {
       const data = await safeJson<{ access_token?: string; accessToken?: string }>(res);
       if (!res.ok) return null;
       return data?.access_token ?? data?.accessToken ?? null;
-    })().finally(() => {
-      refreshInFlight = null;
-    });
+    })().finally(() => { refreshInFlight = null; });
   }
   return refreshInFlight;
-}
-
-// ---- Optional: in-flight de-dupe for identical concurrent API calls ----
-const inflight = new Map<string, Promise<Response>>();
-function reqKey(url: string, init: RequestInit) {
-  return `${url}::${(init.method || "GET").toUpperCase()}::${typeof init.body === "string" ? init.body : ""}`;
 }
 
 // ---- Main API helper ----
@@ -77,44 +68,19 @@ export async function api<T>(url: string, init: ApiInit = {}): Promise<T> {
   if (!headers.has("Content-Type")) headers.set("Content-Type", "application/json");
 
   const at = getAccessToken();
-  const hadBearer = !!at;
-  if (at && !headers.has("Authorization")) {
-    headers.set("Authorization", `Bearer ${at}`);
-  }
+  if (at && !headers.has("Authorization")) headers.set("Authorization", `Bearer ${at}`);
 
   const reqInit: RequestInit = { ...init, credentials: "include", headers };
-  const key = reqKey(absUrl, reqInit);
 
-  // De-dupe identical concurrent requests
-  if (inflight.has(key)) {
-    const existing = inflight.get(key)!;
-    const clone = await existing.then(r => r.clone());
-    return (await clone.json()) as T;
-  }
+  let res = await fetch(absUrl, reqInit);
 
-  const fetchPromise = fetch(absUrl, reqInit);
-  inflight.set(key, fetchPromise);
-  let res = await fetchPromise.finally(() => inflight.delete(key));
-
-  // Refresh logic: only for protected endpoints, no skip, no auth routes, and token not fresh
-  if (
-    res.status === 401 &&
-    hadBearer &&
-    !init.skipRefresh &&
-    !isAuthRoute(absUrl) &&
-    at &&
-    !isTokenFresh(at) &&
-    hasRefreshMarker()   
-  ) {
+  // 🔁 Refresh on any protected 401, retry once
+  if (res.status === 401 && !init.skipRefresh && !isAuthRoute(absUrl) && hasRefreshMarker()) {
     const newAT = await tryRefresh();
     if (newAT) {
       setAccessToken(newAT);
       headers.set("Authorization", `Bearer ${newAT}`);
-      const retryInit: RequestInit = { ...init, credentials: "include", headers };
-      const retryKey = reqKey(absUrl, retryInit);
-      const retryPromise = fetch(absUrl, retryInit);
-      inflight.set(retryKey, retryPromise);
-      res = await retryPromise.finally(() => inflight.delete(retryKey));
+      res = await fetch(absUrl, { ...init, credentials: "include", headers });
     } else {
       clearAccessToken();
     }
