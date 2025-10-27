@@ -10,6 +10,8 @@ import {
 import type { AuthUser } from "@/lib/auth/auth.types";
 import { GoogleOAuthProvider } from "@react-oauth/google";
 import { hasRefreshMarker } from "@/lib/auth/cookies";
+import SessionDashboard from "./SessionDashboard";
+import { ReactQueryProvider } from "../providers/ReactQueryProvider";
 
 /** Context shape */
 type Ctx = {
@@ -77,7 +79,12 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
 
   return (
     <AuthContext.Provider value={{ user, setUser, logout, bootstrapDone }}>
-      <GoogleAuthClientProvider>{children}</GoogleAuthClientProvider>
+      <GoogleAuthClientProvider>
+        <ReactQueryProvider>
+        {bootstrapDone && user ? <SessionDashboard /> : null}
+        {children}
+        </ReactQueryProvider>
+      </GoogleAuthClientProvider>
     </AuthContext.Provider>
   );
 }
