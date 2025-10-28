@@ -18,13 +18,15 @@ import {
 } from "@/components/ui/table";
 import { DashboardData } from "@/lib/api/dashboard";
 import { useQuery } from "@tanstack/react-query";
-import { Calendar, CreditCard, CheckCircle2, Key } from "lucide-react";
+import { Calendar, CreditCard, Key } from "lucide-react";
 import { formatMoney } from "@/lib/api/formatMoney";
-import { StatusBadge } from "@/components/dashboard/StatusBadge";
 import { formatDate } from "@/lib/api/formatDate";
 import { useAuth } from "@/components/auth/AuthProvider";
+import { Badge } from "@/components/ui/badge";
 import { LicenseItem, LicenseSubscription } from "@/lib/auth/auth.types";
 import Link from "next/link";
+import CancelSubscriptionDialog from "@/components/dashboard/CancelSubscriptionDialog";
+import { StatusBadge } from "@/components/dashboard/StatusBadge";
 
 function toInt(value: unknown): number | null {
   const n = Number(value);
@@ -50,6 +52,28 @@ function aggregateTxTaxTotals(taxRatesUsed: unknown): TaxTotals {
   }
   return saw ? { subtotal, tax, discount, total } : { subtotal: null, tax: null, discount: null, total: null };
 }
+
+// NOTE: This function is defined but not used. That is not an error, but here's a corrected implementation
+// which properly checks the type of `urls` before accessing `.update_payment_method`.
+async function goToUpdatePaymentMethod(sub: { id: string }) {
+  // Dynamically import to avoid top-level import restriction
+  const { getSubscriptionManagementUrls } = await import("@/lib/actions/managementURLs");
+  if (!sub?.id) return;
+  const urls = await getSubscriptionManagementUrls(sub.id);
+  // If an error occurred, don't redirect
+  if (typeof urls === "object" && urls !== null) {
+    if ("error" in urls && urls.error) {
+      console.error("Error fetching management URLs:", urls.error);
+      return;
+    }
+    if ("update_payment_method" in urls && urls.update_payment_method) {
+      window.location.href = urls.update_payment_method;
+      return;
+    }
+  }
+  console.error("No update payment method URL found for subscription", sub.id, urls);
+}
+
 
 
 export default function SubscriptionDetailClient({ id }: { id: string }) {  
@@ -91,6 +115,7 @@ export default function SubscriptionDetailClient({ id }: { id: string }) {
     return matching
       .sort((a, b) => new Date(b.created_at).getTime() - new Date(a.created_at).getTime())[0];
   }, [txs, id]);
+  const lastTxAmount = formatMoney(lastTx?.amount, lastTx?.currency, { amountIsMinorUnits: false });
 
   const currency = sub?.currency ?? "USD";
   const priceStr = formatMoney(sub?.unit_price_amount, currency);
@@ -123,35 +148,27 @@ export default function SubscriptionDetailClient({ id }: { id: string }) {
               <div className="grid h-10 w-10 place-content-center rounded-lg bg-gradient-to-br from-green-400 to-blue-500">
                 <div className="h-5 w-5 rounded-sm bg-white" />
               </div>
-              <div>
-                <h1 className="text-2xl font-semibold tracking-tight">
-                  {sub?.plan || "Subscription"}
+
+              <div className="flex items-center">
+                <h1 className="text-2xl font-semibold tracking-tight mr-2">
+                  {sub?.plan || "Subscription"} 
                 </h1>
-                <div className="mt-1 flex items-center gap-3 text-sm text-muted-foreground">
-                  <span className="text-2xl font-semibold leading-none text-foreground">
-                    {priceStr}
-                  </span>
-                  <span className="text-muted-foreground">{cycle}</span>
-                  <StatusBadge status={sub?.status} />
-                </div>
+                <StatusBadge status={sub?.status} />
               </div>
             </div>
 
             <div className="flex items-center gap-2">
-              <Button
-                variant="ghost"
-                className="rounded-full border px-4 text-sm"
-                disabled={!(sub && sub.status === "active")}
-                onClick={() => {/* TODO: open cancel flow */}}
-              >
-                Cancel subscription
-              </Button>
+              <CancelSubscriptionDialog
+                subscriptionId={sub?.id ?? ""}
+                planLabel={sub?.plan || "this subscription"}
+                disabled={!sub || sub.status !== "active"}
+              />
 
               {subs.length > 1 && (
                 <Link href="/dashboard/subscriptions">
                   <Button
                     variant="outline"
-                    className="rounded-full px-4 text-sm"
+                    className="cursor-pointer"
                   >
                     See all subscriptions
                   </Button>
@@ -160,21 +177,33 @@ export default function SubscriptionDetailClient({ id }: { id: string }) {
               
             </div>
           </div>
+          
+          <div className="flex flex-col gap4 sm:flex-row sm:justify-between sm:items-center">
+            <div className="flex-1">
+              <p className="mt-4 flex flex-wrap items-center gap-2 text-sm text-gray-400">
+                <Calendar className="h-4 w-4" />
+                Started on:
+                <span className="font-medium text-foreground">
+                  {formatDate(sub?.created_at, "MMM d, yyyy")}
+                </span>
+              </p>
+              <p className="mt-2.5 flex flex-row items-center gap-2 text-sm text-gray-400">
+                <Key className="h-4 w-4" />
+                License:
+                <span className="font-medium text-foreground">
+                  {matchingLicenseItem?.license_key || 'No license'}
+                </span>
+              </p>
+            </div>
 
-          <p className="mt-4 flex items-center gap-2 text-sm text-muted-foreground">
-            <Calendar className="h-4 w-4" />
-            Started on:
-            <span className="font-medium text-foreground">
-              {formatDate(sub?.created_at, "MMM d, yyyy")}
-            </span>
-          </p>
-          <p className="mt-4 flex items-center gap-2 text-sm text-muted-foreground">
-            <Key className="h-4 w-4" />
-            License Key:
-            <span className="font-medium text-foreground">
-              {matchingLicenseItem?.license_key || 'No license'}
-            </span>
-          </p>
+            <div className="mt-2 sm:mt-1 flex items-center gap-1 text-sm text-gray-400 justify-start sm:justify-end">
+              <span className="text-2xl font-semibold leading-none text-foreground">
+                {priceStr}
+              </span>
+              /<span className="text-gray-400">{cycle}</span>
+            </div>
+          </div>
+          
         </div>
       </div>
 
@@ -191,7 +220,7 @@ export default function SubscriptionDetailClient({ id }: { id: string }) {
                 <div className="text-2xl font-semibold">
                   {priceStr}
                 </div>
-                <div className="text-sm text-muted-foreground">
+                <div className="text-sm text-gray-400">
                   due <span className="font-medium text-foreground">
                     {formatDate(sub?.next_billed_at, "MMM d, yyyy")}
                   </span>
@@ -205,45 +234,54 @@ export default function SubscriptionDetailClient({ id }: { id: string }) {
                     <div className="grid h-8 w-8 place-content-center rounded-md bg-muted">
                       <CreditCard className="h-4 w-4" />
                     </div>
-                    <div className="text-sm text-muted-foreground">
-                      {/* Placeholder; wire actual PM info if/when API exposes it */}
-                      **** •••• 
+                    <div className="text-sm text-gray-400">
+                      **** **** **** ****
                     </div>
                   </div>
-                  <Button size="sm" variant="outline">Update</Button>
+                  <Button
+                    size="sm"
+                    variant="outline"
+                    className="cursor-pointer"
+                    onClick={() => goToUpdatePaymentMethod({ id: sub?.id ?? "" })}
+                  >
+                    Update
+                  </Button>
                 </div>
               </div>
             </CardContent>
           </Card>
 
           <Card className="bg-card/60 shadow-none">
-            <CardHeader className="flex-row items-center justify-between space-y-0">
+            <CardHeader className="flex flex-row justify-between">
               <CardTitle className="text-lg">Payments</CardTitle>
-              <Button variant="ghost" size="sm" className="text-primary">
+              <Button variant="outline" size="sm" className="cursor-pointer">
                 View all
               </Button>
             </CardHeader>
             <CardContent className="space-y-4">
-              {/* If you later pass transactions for this subscription, render a few here.
-                  For now we keep the shell, or you can remove this card entirely. */}
-              <div className="text-sm text-muted-foreground">
-                {sub ? formatDate(sub?.created_at, "MMM d, yyyy") : "—"}
-              </div>
-
               <div className="rounded-lg border p-4">
-                <div className="mb-2 flex items-center justify-between">
+                <div className="mb-4 flex items-center justify-between">
                   <div className="text-sm font-medium">
-                    {sub?.status ? sub.status.replace("_", " ") : "—"}
+                    {sub?.plan}
                   </div>
-                  <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                    <span>{sub?.plan || "—"}</span>
+                  <div className="flex items-center gap-2 text-sm text-gray-400">
+                    {lastTx
+                    ? formatDate(lastTx.created_at, "MMM d, yyyy")
+                    : "—"}
                   </div>
                 </div>
                 <div className="flex items-center justify-between">
-                  <div className="text-lg font-semibold">{priceStr}</div>
-                  <div className="flex items-center gap-2 rounded-lg border px-2 py-1 text-xs">
-                    <CheckCircle2 className="h-4 w-4" /> Completed
+                  <div className="text-lg font-semibold">
+                    {lastTxAmount}
                   </div>
+                  <Badge
+                    variant="secondary"
+                    className="text-emerald-500 bg-emerald-600/10 gap-2 py-1"
+                  >
+                    {lastTx?.status
+                      ? lastTx.status.charAt(0).toUpperCase() + lastTx.status.slice(1)
+                      : "—"}
+                  </Badge>
                 </div>
               </div>
             </CardContent>
@@ -276,7 +314,7 @@ export default function SubscriptionDetailClient({ id }: { id: string }) {
                           </div>
                           <div>
                             <div className="font-medium">{sub?.plan || "—"}</div>
-                            <div className="text-sm text-muted-foreground">
+                            <div className="text-sm text-gray-400">
                               {sub?.product_description || "—"}
                             </div>
                           </div>
@@ -297,20 +335,20 @@ export default function SubscriptionDetailClient({ id }: { id: string }) {
               {/* Totals with taxes/discounts if available from last transaction; else per-cycle amount */}
               <div className="space-y-2">
                 <div className="flex items-center justify-end gap-6 text-sm">
-                  <div className="text-muted-foreground">Subtotal</div>
+                  <div className="text-gray-400">Subtotal</div>
                   <div className="w-28 text-right font-medium">{fmtSubtotal}</div>
                 </div>
 
                 {fmtTax && (
                   <div className="flex items-center justify-end gap-6 text-sm">
-                    <div className="text-muted-foreground">Tax</div>
+                    <div className="text-gray-400">Tax</div>
                     <div className="w-28 text-right font-medium">{fmtTax}</div>
                   </div>
                 )}
 
                 {fmtDiscount && Number(totals.discount) !== 0 && (
                   <div className="flex items-center justify-end gap-6 text-sm">
-                    <div className="text-muted-foreground">Discount</div>
+                    <div className="text-gray-400">Discount</div>
                     <div className="w-28 text-right font-medium">-{fmtDiscount}</div>
                   </div>
                 )}
