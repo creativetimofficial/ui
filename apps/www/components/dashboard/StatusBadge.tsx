@@ -30,12 +30,12 @@ export function StatusBadge({ status }: StatusBadgeProps) {
     switch (s) {
       case "active":
       case "trialing":
-        return "text-emerald-500 bg-emerald-600/15";
+        return "text-emerald-500 bg-emerald-600/10";
       case "paused":
       case "past_due":
-        return "text-amber-500 bg-amber-600/15";
+        return "text-amber-500 bg-amber-600/10";
       case "canceled":
-        return "text-red-500 bg-red-600/15";
+        return "text-red-500 bg-red-600/10";
       default:
         return "text-muted-foreground bg-muted/40";
     }
