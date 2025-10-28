@@ -38,7 +38,7 @@ export default function CancelSubscriptionDialog({
 
   const defaultTrigger = (
     <Button
-      variant="ghost"
+      variant="outline"
       disabled={disabled}
       className="cursor-pointer"
     >
