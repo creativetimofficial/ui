@@ -1,6 +1,8 @@
 export type Provider = "email" | "google";
 
-export type LicenseItem = { id: number; code: string; exp?: number };
+export type LicenseItem = { id: number; code: string; exp?: number, license_key: string, product_code: string, transaction: LicenseTransaction[], subscriptions: LicenseSubscription[] };
+export type LicenseTransaction = { transaction_id: string };
+export type LicenseSubscription= { subscription_id: string, status: string };
 export type LicensePayload = {
   status: "active" | "none";
   features: string[];
