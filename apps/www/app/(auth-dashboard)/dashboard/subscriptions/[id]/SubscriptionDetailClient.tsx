@@ -24,7 +24,6 @@ import { formatDate } from "@/lib/api/formatDate";
 import { useAuth } from "@/components/auth/AuthProvider";
 import { Badge } from "@/components/ui/badge";
 import { LicenseItem, LicenseSubscription } from "@/lib/auth/auth.types";
-import Link from "next/link";
 import CancelSubscriptionDialog from "@/components/dashboard/CancelSubscriptionDialog";
 import { StatusBadge } from "@/components/dashboard/StatusBadge";
 
@@ -145,8 +144,10 @@ export default function SubscriptionDetailClient({ id }: { id: string }) {
           <div className="flex flex-col gap-5 md:flex-row md:items-center md:justify-between">
             {/* Title + Brand */}
             <div className="flex items-center gap-4">
-              <div className="grid h-10 w-10 place-content-center rounded-lg bg-gradient-to-br from-green-400 to-blue-500">
-                <div className="h-5 w-5 rounded-sm bg-white" />
+              <div className="grid h-10 w-10 place-content-center rounded-xl bg-gradient-to-br from-green-400 to-blue-500">
+                <div className="h-5 w-5 rounded-md bg-black/10">
+                  <div className="h-full w-full rounded-md bg-white/90 mix-blend-overlay" />
+                </div>
               </div>
 
               <div className="flex items-center">
@@ -162,19 +163,7 @@ export default function SubscriptionDetailClient({ id }: { id: string }) {
                 subscriptionId={sub?.id ?? ""}
                 planLabel={sub?.plan || "this subscription"}
                 disabled={!sub || sub.status !== "active"}
-              />
-
-              {subs.length > 1 && (
-                <Link href="/dashboard/subscriptions">
-                  <Button
-                    variant="outline"
-                    className="cursor-pointer"
-                  >
-                    See all subscriptions
-                  </Button>
-                </Link>
-              )}
-              
+              />              
             </div>
           </div>
           
@@ -309,8 +298,10 @@ export default function SubscriptionDetailClient({ id }: { id: string }) {
                     <TableRow className="hover:bg-muted/40">
                       <TableCell>
                         <div className="flex items-start gap-3">
-                          <div className="mt-1 grid h-8 w-8 place-content-center rounded-md bg-gradient-to-br from-green-400 to-blue-500">
-                            <div className="h-4 w-4 rounded-[2px] bg-white" />
+                          <div className="grid h-10 w-10 place-content-center rounded-xl bg-gradient-to-br from-green-400 to-blue-500">
+                            <div className="h-5 w-5 rounded-md bg-black/10">
+                              <div className="h-full w-full rounded-md bg-white/90 mix-blend-overlay" />
+                            </div>
                           </div>
                           <div>
                             <div className="font-medium">{sub?.plan || "—"}</div>
