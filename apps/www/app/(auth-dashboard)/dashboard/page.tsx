@@ -7,7 +7,8 @@ import { Button } from "@/components/ui/button";
 import { 
   ArrowRight,
 } from "lucide-react";
-import { useQuery, useQueryClient } from "@tanstack/react-query";
+import { useQuery } from "@tanstack/react-query";
+import { DashboardSubscription } from "@/lib/api/dashboard";
 export interface Subscription {
   id: string;
   plan: string;
@@ -18,22 +19,12 @@ export interface Subscription {
 
 export default function DashboardPage() {
   const { user } = useAuth();
-  const queryClient = useQueryClient();
 
-  const cachedSubs = queryClient.getQueryData<Subscription[]>(["subscriptions"]);
-
-  const { data: subs } = useQuery<Subscription[]>({
+    const { data: subs } = useQuery<DashboardSubscription[]>({
     queryKey: ["subscriptions"],
-    queryFn: async () => cachedSubs ?? [], // satisfies v5 requirement; won’t run because enabled:false
-    initialData: cachedSubs,     // ← use cached data from bootstrap
-    enabled: false,              // ← no automatic fetch
-    staleTime: 5 * 60 * 1000,    // ← consider fresh for 5 minutes
+    queryFn: () => Promise.reject("cache only"),
+    enabled: false, // Do not auto-fetch, only read from cache
   });
-
-  // Console log the subs variable
-  React.useEffect(() => {
-    console.log('subs', subs);
-  }, [subs]);
 
   // If there's no user, show a white window spinner.
   if (!user) {
@@ -49,9 +40,6 @@ export default function DashboardPage() {
       </main>
     );
   }
-
-  // 5️⃣ Render
-  if (!subs) return <p>No subscriptions found.</p>;
 
   return (
     <div>
@@ -69,17 +57,63 @@ export default function DashboardPage() {
             </div>
           </CardHeader>
           <CardContent>
-            
-            <div className="flex items-center gap-4 p-4 border rounded-lg hover:bg-sidebar-accent cursor-pointer">
-              <div className="w-12 h-12 bg-gradient-to-br from-green-400 to-blue-500 rounded-lg flex items-center justify-center">
-                <div className="w-6 h-6 bg-white rounded-sm"></div>
+            {(!subs || subs.length === 0) ? (
+              <div className="text-gray-500 text-center py-8">
+                There are no active subscriptions.
               </div>
-              <div className="flex-1">
-                <div className="font-semibold text-gray-900 dark:text-white">AeroEdit Pro</div>
-                <div className="text-sm text-gray-500">Enhanced design tools for scaling teams who...</div>
+            ) : subs.length === 1 ? (
+              <div className="flex flex-row gap-4">
+                <div
+                  key={subs[0].id}
+                  className="flex items-center gap-4 p-4 border rounded-lg hover:bg-sidebar-accent cursor-pointer min-w-[270px] w-full"
+                  style={{ maxWidth: "100%" }}
+                >
+                  <div className="grid h-10 w-10 place-content-center rounded-xl bg-gradient-to-br from-green-400 to-blue-500">
+                    <div className="h-5 w-5 rounded-md bg-black/10">
+                      <div className="h-full w-full rounded-md bg-white/90 mix-blend-overlay" />
+                    </div>
+                  </div>
+                  <div className="flex-1">
+                    <div className="font-semibold text-gray-900 dark:text-white">{subs[0].plan}</div>
+                    <div className="text-sm text-gray-500">
+                      {subs[0].status === "active"
+                        ? "Subscription is active"
+                        : subs[0].status === "canceled"
+                        ? "Canceled"
+                        : subs[0].status}
+                    </div>
+                  </div>
+                  <ArrowRight className="w-4 h-4 text-gray-400" />
+                </div>
               </div>
-              <ArrowRight className="w-4 h-4 text-gray-400" />
-            </div>
+            ) : (
+              <div className="flex flex-row gap-4">
+                {subs.slice(0, 2).map((sub) => (
+                  <div
+                    key={sub.id}
+                    className="flex items-center gap-4 p-4 border rounded-lg hover:bg-sidebar-accent cursor-pointer flex-1"
+                    style={{ maxWidth: "100%" }}
+                  >
+                    <div className="grid h-10 w-10 place-content-center rounded-xl bg-gradient-to-br from-green-400 to-blue-500">
+                      <div className="h-5 w-5 rounded-md bg-black/10">
+                        <div className="h-full w-full rounded-md bg-white/90 mix-blend-overlay" />
+                      </div>
+                    </div>
+                    <div className="flex-1">
+                      <div className="font-semibold text-gray-900 dark:text-white">{sub.plan}</div>
+                      <div className="text-sm text-gray-500">
+                        {sub.status === "active"
+                          ? "Subscription is active"
+                          : sub.status === "canceled"
+                          ? "Canceled"
+                          : sub.status}
+                      </div>
+                    </div>
+                    <ArrowRight className="w-4 h-4 text-gray-400" />
+                  </div>
+                ))}
+              </div>
+            )}
           </CardContent>
         </Card>
       </div>
