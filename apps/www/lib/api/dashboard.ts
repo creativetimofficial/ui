@@ -7,13 +7,17 @@ import { AuthUser } from "../auth/auth.types";
 export type DashboardSubscription = {
   id: string; // subscription_id
   status: string;
-  plan: string | null; // product_name || price_description
-  renews_at: string | null; // next_billed_at
+  plan: string | null; // product_name 
+  next_billed_at: string | null; 
   canceled_at: string | null;
-  currency: string | null;
+  currency: string;
+  product_description: string;
+  product_code: string;
+  unit_price_amount: number;
   team: boolean;
   team_size: number;
   created_at: string;
+  billing_cycle: string;
 };
 
 export type DashboardTransaction = {
@@ -29,6 +33,8 @@ export type DashboardTransaction = {
   refund_status: string | null;
   refund_reason: string | null;
   subscription_id: string | null;
+  tax_rates_used?: unknown; // jsonb column; can contain array or object
+
 };
 
 export type DashboardLicense = {
@@ -36,6 +42,16 @@ export type DashboardLicense = {
   features: string[];
   items: unknown[];
   expires_at: string | null;
+};
+
+export type DashboardData = {
+  subscriptions: DashboardSubscription[];
+  transactions: {
+    items: DashboardTransaction[];
+    has_more: boolean;
+    next_cursor: string | null;
+    version?: string;
+  };
 };
 
 export type DashboardResponse = {
@@ -52,6 +68,7 @@ export type DashboardResponse = {
     active_subscriptions: number;
   };
   license: DashboardLicense;
+  dashboardData: DashboardData;
 };
 
 export async function fetchDashboard() {
