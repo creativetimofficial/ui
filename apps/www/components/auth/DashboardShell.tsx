@@ -13,8 +13,9 @@ import {
   SidebarProvider,
   SidebarInset,
 } from "@/components/ui/sidebar";
-import { AuthProvider } from "@/components/auth/AuthProvider";
 import type { ReactNode } from "react";
+import { DashboardSubscription, fetchDashboard } from "@/lib/api/dashboard";
+import { useQuery } from "@tanstack/react-query";
 
 // Helper: strip basePath (/ui) from pathname so your checks work in dev & prod
 function normalizePath(pathname: string) {
@@ -30,87 +31,102 @@ export default function DashboardShell({ children }: { children: ReactNode }) {
   const isPaymentsActive = path.startsWith("/dashboard/payments");
   const isApiKeysActive = path.startsWith("/dashboard/keys");
 
+  // Read subscriptions from the React Query cache (do not fetch on mount)
+  const { data: subs = [] } = useQuery<DashboardSubscription[]>({
+    queryKey: ["subscriptions"],
+    queryFn: async () => (await fetchDashboard()).subscriptions,
+    enabled: false, // Disabled auto re-fetch: only retrieve from cache
+  });
+
   return (
-    <AuthProvider>
-      <div className="h-screen flex flex-col bg-background p-6">
-        <div className="flex flex-1 overflow-hidden">
-          <SidebarProvider>
-            <Sidebar className="w-64 text-white">
-              <SidebarHeader className="p-6">
-                <div className="flex items-center gap-3">
-                  <div className="w-8 h-8 rounded-lg flex items-center justify-center bg-black/80">
-                    <div className="w-4 h-4 rounded-sm bg-white" />
-                  </div>
-                  <span className="flex items-baseline gap-2 text-lg font-semibold text-foreground">
-                    <span className="font-geist-bold leading-[0.95] font-bold tracking-[-0.03em]">
-                      Creative Tim
-                    </span>
-                    <span className="font-geist font-normal tracking-[-0.02em] opacity-90">
-                      UI
-                    </span>
-                  </span>
+    <div className="h-screen flex flex-col bg-background p-6">
+      <div className="flex flex-1 overflow-hidden">
+        <SidebarProvider>
+          <Sidebar className="w-64 text-white">
+            <SidebarHeader className="p-6">
+              <div className="flex items-center gap-3">
+                <div className="w-8 h-8 rounded-lg flex items-center justify-center bg-black/80">
+                  <div className="w-4 h-4 rounded-sm bg-white" />
                 </div>
-              </SidebarHeader>
+                <span className="flex items-baseline gap-2 text-lg font-semibold text-foreground">
+                  <span className="font-geist-bold leading-[0.95] font-bold tracking-[-0.03em]">
+                    Creative Tim
+                  </span>
+                  <span className="font-geist font-normal tracking-[-0.02em] opacity-90">
+                    UI
+                  </span>
+                </span>
+              </div>
+            </SidebarHeader>
 
-              <SidebarContent className="px-4">
-                <SidebarMenu>
-                  <SidebarMenuItem>
-                    <Link href="/dashboard">
-                      <SidebarMenuButton
-                        className="text-gray-400 cursor-pointer transition-colors duration-100"
-                        isActive={isDashboardActive}
-                      >
-                        <Home className="w-4 h-4" />
-                        <span>Dashboard</span>
-                      </SidebarMenuButton>
-                    </Link>
-                  </SidebarMenuItem>
+            <SidebarContent className="px-4">
+              <SidebarMenu>
+                <SidebarMenuItem>
+                  <Link href="/dashboard">
+                    <SidebarMenuButton
+                      className="text-gray-400 cursor-pointer transition-colors duration-100"
+                      isActive={isDashboardActive}
+                    >
+                      <Home className="w-4 h-4" />
+                      <span>Dashboard</span>
+                    </SidebarMenuButton>
+                  </Link>
+                </SidebarMenuItem>
 
-                  <SidebarMenuItem>
-                    <Link href="/dashboard/subscriptions">
-                      <SidebarMenuButton
-                        className="text-gray-400 cursor-pointer transition-colors duration-100"
-                        isActive={isSubscriptionsActive}
-                      >
-                        <CreditCard className="w-4 h-4" />
-                        <span>Subscriptions</span>
-                      </SidebarMenuButton>
-                    </Link>
-                  </SidebarMenuItem>
+                <SidebarMenuItem>
+                  {(() => {
+                    // Count active subscriptions
+                    const activeSubs = subs.filter(s => s.status === "active");
+                    let linkHref = "/dashboard/subscriptions";
+                    if (activeSubs.length === 1) {
+                      linkHref = `/dashboard/subscriptions/${activeSubs[0].id}`;
+                    }
+                    return (
+                      <Link href={linkHref}>
+                        <SidebarMenuButton
+                          className="text-gray-400 cursor-pointer transition-colors duration-100"
+                          isActive={isSubscriptionsActive}
+                        >
+                          <CreditCard className="w-4 h-4" />
+                          <span>Subscriptions</span>
+                        </SidebarMenuButton>
+                      </Link>
+                    );
+                  })()}
+                </SidebarMenuItem>
 
-                  <SidebarMenuItem>
-                    <Link href="/dashboard/payments">
-                      <SidebarMenuButton
-                        className="text-gray-400 cursor-pointer transition-colors duration-100"
-                        isActive={isPaymentsActive}
-                      >
-                        <Banknote className="w-4 h-4" />
-                        <span>Payments</span>
-                      </SidebarMenuButton>
-                    </Link>
-                  </SidebarMenuItem>
+                <SidebarMenuItem>
+                  <Link href="/dashboard/payments">
+                    <SidebarMenuButton
+                      className="text-gray-400 cursor-pointer transition-colors duration-100"
+                      isActive={isPaymentsActive}
+                    >
+                      <Banknote className="w-4 h-4" />
+                      <span>Payments</span>
+                    </SidebarMenuButton>
+                  </Link>
+                </SidebarMenuItem>
 
-                  <SidebarMenuItem>
-                    <Link href="/dashboard/keys">
-                      <SidebarMenuButton
-                        className="text-gray-400 cursor-pointer transition-colors duration-100"
-                        isActive={isApiKeysActive}
-                      >
-                        <Key className="w-4 h-4" />
-                        <span>API Keys</span>
-                      </SidebarMenuButton>
-                    </Link>
-                  </SidebarMenuItem>
-                </SidebarMenu>
-              </SidebarContent>
-            </Sidebar>
+                <SidebarMenuItem>
+                  <Link href="/dashboard/keys">
+                    <SidebarMenuButton
+                      className="text-gray-400 cursor-pointer transition-colors duration-100"
+                      isActive={isApiKeysActive}
+                    >
+                      <Key className="w-4 h-4" />
+                      <span>API Keys</span>
+                    </SidebarMenuButton>
+                  </Link>
+                </SidebarMenuItem>
+              </SidebarMenu>
+            </SidebarContent>
+          </Sidebar>
 
-            <SidebarInset className="flex-1 overflow-auto bg-background">
-              {children}
-            </SidebarInset>
-          </SidebarProvider>
-        </div>
+          <SidebarInset className="flex-1 overflow-auto bg-background">
+            {children}
+          </SidebarInset>
+        </SidebarProvider>
       </div>
-    </AuthProvider>
+    </div>
   );
 }
