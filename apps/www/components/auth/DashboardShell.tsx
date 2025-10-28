@@ -2,7 +2,7 @@
 
 import { usePathname } from "next/navigation";
 import Link from "next/link";
-import { Home, CreditCard, Banknote, Key } from "lucide-react";
+import { Home, CreditCard, Banknote, Key, LogOut } from "lucide-react";
 import {
   Sidebar,
   SidebarContent,
@@ -16,6 +16,8 @@ import {
 import type { ReactNode } from "react";
 import { DashboardSubscription, fetchDashboard } from "@/lib/api/dashboard";
 import { useQuery } from "@tanstack/react-query";
+import { useAuth } from "@/components/auth/AuthProvider";
+import { Button } from "../ui/button";
 
 // Helper: strip basePath (/ui) from pathname so your checks work in dev & prod
 function normalizePath(pathname: string) {
@@ -38,11 +40,13 @@ export default function DashboardShell({ children }: { children: ReactNode }) {
     enabled: false, // Disabled auto re-fetch: only retrieve from cache
   });
 
+  const { user } = useAuth();
+
   return (
     <div className="h-screen flex flex-col bg-background p-6">
       <div className="flex flex-1 overflow-hidden">
         <SidebarProvider>
-          <Sidebar className="w-64 text-white">
+          <Sidebar className="w-64 text-white flex flex-col">
             <SidebarHeader className="p-6">
               <div className="flex items-center gap-3">
                 <div className="w-8 h-8 rounded-lg flex items-center justify-center bg-black/80">
@@ -59,7 +63,7 @@ export default function DashboardShell({ children }: { children: ReactNode }) {
               </div>
             </SidebarHeader>
 
-            <SidebarContent className="px-4">
+            <SidebarContent className="px-4 flex-1">
               <SidebarMenu>
                 <SidebarMenuItem>
                   <Link href="/dashboard">
@@ -120,6 +124,22 @@ export default function DashboardShell({ children }: { children: ReactNode }) {
                 </SidebarMenuItem>
               </SidebarMenu>
             </SidebarContent>
+
+            {/* User email and logout at the bottom */}
+            <div className="mt-auto px-6 pb-6 pt-4">
+              {user && (
+                <div className="flex items-center justify-between gap-3 bg-card/60 border rounded-lg px-3 py-2">
+                  <span className="truncate text-sm text-foreground">{user.email}</span>
+                  <Button
+                    variant="ghost"
+                    size="sm"
+                    className="cursor-pointer"
+                  >
+                    <LogOut className="text-muted-foreground" />
+                  </Button>
+                </div>
+              )}
+            </div>
           </Sidebar>
 
           <SidebarInset className="flex-1 overflow-auto bg-background">
