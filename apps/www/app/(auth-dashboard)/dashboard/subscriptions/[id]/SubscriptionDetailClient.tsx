@@ -22,7 +22,6 @@ import { Calendar, CreditCard, Key } from "lucide-react";
 import { formatMoney } from "@/lib/api/formatMoney";
 import { formatDate } from "@/lib/api/formatDate";
 import { useAuth } from "@/components/auth/AuthProvider";
-import { Badge } from "@/components/ui/badge";
 import { LicenseItem, LicenseSubscription } from "@/lib/auth/auth.types";
 import CancelSubscriptionDialog from "@/components/dashboard/CancelSubscriptionDialog";
 import { StatusBadge } from "@/components/dashboard/StatusBadge";
@@ -192,14 +191,7 @@ export default function SubscriptionDetailClient({ id }: { id: string }) {
                 disabled={!sub || sub.status !== "active"}
               />              
             </div>
-          </div>
-{/*           
-          <div className="flex flex-col gap4 sm:flex-row sm:justify-between sm:items-center">
-            <div className="flex-1">
-              
-            </div>
-          </div> */}
-          
+          </div>          
         </div>
       </div>
 
@@ -269,14 +261,7 @@ export default function SubscriptionDetailClient({ id }: { id: string }) {
                   <div className="text-lg font-semibold">
                     {lastTxAmount}
                   </div>
-                  <Badge
-                    variant="secondary"
-                    className="text-emerald-500 bg-emerald-600/10 gap-2 py-1"
-                  >
-                    {lastTx?.status
-                      ? lastTx.status.charAt(0).toUpperCase() + lastTx.status.slice(1)
-                      : "—"}
-                  </Badge>
+                  <StatusBadge status={lastTx?.status} />
                 </div>
               </div>
             </CardContent>
