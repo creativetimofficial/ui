@@ -71,6 +71,12 @@ export type DashboardResponse = {
   dashboardData: DashboardData;
 };
 
+export type TxMeta = {
+  has_more: boolean;
+  next_cursor: string | null;
+  version?: string;
+};
+
 export async function fetchDashboard() {
   return api<DashboardResponse>("/dashboard");
 }
