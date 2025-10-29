@@ -25,7 +25,7 @@ export function SubscriptionCard({
     <Link href={href} className="block group">
       <Card className="group relative bg-card/60 px-6 shadow-none transition-colors cursor-pointer hover:border-primary/30">
         {/* top-right arrow */}
-        <ArrowRight className="absolute right-6 top-6 h-5 w-5 text-muted-foreground transition-transform group-hover:translate-x-1" />
+        <ArrowRight className="absolute right-6 top-6 h-5 w-5 text-gray-400 transition-transform group-hover:translate-x-1" />
 
         {/* logo */}
         <div className="grid h-10 w-10 place-content-center rounded-xl bg-gradient-to-br from-green-400 to-blue-500">
@@ -36,7 +36,7 @@ export function SubscriptionCard({
 
         <CardContent className="p-0">
           <h3 className="mb-4 text-lg font-semibold text-foreground">{name}</h3>
-          <p className="mb-6 max-w-md leading-relaxed text-muted-foreground">
+          <p className="mb-6 max-w-md leading-relaxed text-gray-400">
             {description}
           </p>
           <div className="flex items-center justify-between">
@@ -77,7 +77,7 @@ export default function SubscriptionsCards() {
               />
             ))
           ) : (
-            <p className="text-muted-foreground text-center col-span-full py-10">
+            <p className="text-gray-400 text-center col-span-full py-10">
               No active subscriptions found.
             </p>
           )}
