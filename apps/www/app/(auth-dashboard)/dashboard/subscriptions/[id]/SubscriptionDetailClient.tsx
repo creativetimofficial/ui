@@ -142,33 +142,32 @@ export default function SubscriptionDetailClient({ id }: { id: string }) {
       <div className="border-b pb-6">
         <div className="mx-auto">
           <div className="flex flex-col gap-5 md:flex-row md:items-center md:justify-between">
-            {/* Title + Brand */}
-            <div className="flex items-center gap-4">
-              <div className="grid h-10 w-10 place-content-center rounded-xl bg-gradient-to-br from-green-400 to-blue-500">
-                <div className="h-5 w-5 rounded-md bg-black/10">
-                  <div className="h-full w-full rounded-md bg-white/90 mix-blend-overlay" />
+            <div>
+              {/* Title + Brand */}
+              <div className="flex items-center gap-4">
+                <div className="grid h-10 w-10 place-content-center rounded-xl bg-gradient-to-br from-green-400 to-blue-500">
+                  <div className="h-5 w-5 rounded-md bg-black/10">
+                    <div className="h-full w-full rounded-md bg-white/90 mix-blend-overlay" />
+                  </div>
+                </div>
+
+                <div className="flex items-center">
+                  <h1 className="text-2xl font-semibold tracking-tight mr-2">
+                    {sub?.plan || "Subscription"} 
+                  </h1>
                 </div>
               </div>
 
-              <div className="flex items-center">
-                <h1 className="text-2xl font-semibold tracking-tight mr-2">
-                  {sub?.plan || "Subscription"} 
-                </h1>
-                <StatusBadge status={sub?.status} />
-              </div>
-            </div>
+              <div className="mt-5 flex items-center gap-1 text-sm text-gray-400">
+                <span className="text-2xl font-semibold leading-none text-foreground">
+                  {priceStr}
+                </span>
+                /<span className="text-gray-400">{cycle}</span>
 
-            <div className="flex items-center gap-2">
-              <CancelSubscriptionDialog
-                subscriptionId={sub?.id ?? ""}
-                planLabel={sub?.plan || "this subscription"}
-                disabled={!sub || sub.status !== "active"}
-              />              
-            </div>
-          </div>
-          
-          <div className="flex flex-col gap4 sm:flex-row sm:justify-between sm:items-center">
-            <div className="flex-1">
+                <div className="flex items-center ml-2">
+                  <StatusBadge status={sub?.status} />
+                </div>
+              </div>
               <p className="mt-4 flex flex-wrap items-center gap-2 text-sm text-gray-400">
                 <Calendar className="h-4 w-4" />
                 Started on:
@@ -184,14 +183,22 @@ export default function SubscriptionDetailClient({ id }: { id: string }) {
                 </span>
               </p>
             </div>
+            
 
-            <div className="mt-2 sm:mt-1 flex items-center gap-1 text-sm text-gray-400 justify-start sm:justify-end">
-              <span className="text-2xl font-semibold leading-none text-foreground">
-                {priceStr}
-              </span>
-              /<span className="text-gray-400">{cycle}</span>
+            <div className="flex items-center gap-2">
+              <CancelSubscriptionDialog
+                subscriptionId={sub?.id ?? ""}
+                planLabel={sub?.plan || "this subscription"}
+                disabled={!sub || sub.status !== "active"}
+              />              
             </div>
           </div>
+{/*           
+          <div className="flex flex-col gap4 sm:flex-row sm:justify-between sm:items-center">
+            <div className="flex-1">
+              
+            </div>
+          </div> */}
           
         </div>
       </div>
@@ -200,22 +207,21 @@ export default function SubscriptionDetailClient({ id }: { id: string }) {
       <div className="mx-auto grid gap-6 py-6 lg:grid-cols-3">
         {/* Left column */}
         <div className="space-y-6 lg:col-span-1">
-          <Card className="bg-card/60 shadow-none">
+          <Card className="bg-card/60 gap-4 shadow-none">
             <CardHeader>
               <CardTitle className="text-lg">Next payment</CardTitle>
-            </CardHeader>
-            <CardContent className="space-y-6">
-              <div>
+              <div className="flex items-center border-b pb-4">
                 <div className="text-2xl font-semibold">
                   {priceStr}
                 </div>
-                <div className="text-sm text-gray-400">
+                <div className="text-gray-400 ml-1">
                   due <span className="font-medium text-foreground">
                     {formatDate(sub?.next_billed_at, "MMM d, yyyy")}
                   </span>
                 </div>
               </div>
-
+            </CardHeader>
+            <CardContent className="space-y-6">
               <div className="space-y-3">
                 <div className="text-sm font-medium">Payment method</div>
                 <div className="flex items-center justify-between rounded-lg border p-3">
@@ -295,7 +301,7 @@ export default function SubscriptionDetailClient({ id }: { id: string }) {
                     </TableRow>
                   </TableHeader>
                   <TableBody>
-                    <TableRow className="hover:bg-muted/40">
+                    <TableRow>
                       <TableCell>
                         <div className="flex items-start gap-3">
                           <div className="grid h-10 w-10 place-content-center rounded-xl bg-gradient-to-br from-green-400 to-blue-500">
