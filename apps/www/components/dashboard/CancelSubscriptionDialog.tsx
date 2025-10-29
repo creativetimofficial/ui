@@ -42,7 +42,7 @@ export default function CancelSubscriptionDialog({
       disabled={disabled}
       className="cursor-pointer"
     >
-      Cancel
+      Cancel subscription
     </Button>
   );
 
