@@ -25,6 +25,7 @@ import { useAuth } from "@/components/auth/AuthProvider";
 import { LicenseItem, LicenseSubscription } from "@/lib/auth/auth.types";
 import CancelSubscriptionDialog from "@/components/dashboard/CancelSubscriptionDialog";
 import { StatusBadge } from "@/components/dashboard/StatusBadge";
+import Link from "next/link";
 
 function toInt(value: unknown): number | null {
   const n = Number(value);
@@ -241,9 +242,11 @@ export default function SubscriptionDetailClient({ id }: { id: string }) {
           <Card className="bg-card/60 shadow-none">
             <CardHeader className="flex flex-row justify-between">
               <CardTitle className="text-lg">Payments</CardTitle>
-              <Button variant="outline" size="sm" className="cursor-pointer">
-                View all
-              </Button>
+              <Link href={`/dashboard/payments/${id}`}>
+                <Button variant="outline" size="sm" className="cursor-pointer">
+                  View all
+                </Button>
+              </Link>
             </CardHeader>
             <CardContent className="space-y-4">
               <div className="rounded-lg border p-4">
