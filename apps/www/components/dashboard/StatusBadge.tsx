@@ -29,6 +29,7 @@ export function StatusBadge({ status }: StatusBadgeProps) {
   const getStatusClass = (s: string) => {
     switch (s) {
       case "active":
+      case "completed": // for transactions
       case "trialing":
         return "text-emerald-500 bg-emerald-600/10";
       case "paused":
