@@ -50,7 +50,7 @@ export type DashboardData = {
     items: DashboardTransaction[];
     has_more: boolean;
     next_cursor: string | null;
-    version?: string;
+    version?: string | null;
   };
 };
 
@@ -60,8 +60,8 @@ export type DashboardResponse = {
   transactions: {
     items: DashboardTransaction[];
     has_more: boolean;
-    next_cursor?: string;
-    version?: string;
+    next_cursor: string | null;
+    version?: string | null;
   };
   counts: {
     transactions: number;
@@ -74,7 +74,7 @@ export type DashboardResponse = {
 export type TxMeta = {
   has_more: boolean;
   next_cursor: string | null;
-  version?: string;
+  version?: string | null;
 };
 
 export async function fetchDashboard() {
