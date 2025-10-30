@@ -32,25 +32,26 @@ export default function PaymentsDetailsClient({ id: subscriptionId }: { id: stri
 
   // 🧩 fetch the first page for this subscription if not already cached
   useEffect(() => {
-    const cached = qc.getQueryData<DashboardTransaction[]>(["transactions", "page", 1, scope]);
+    const firstPageKey = ["transactions", "page", 1, scope];
+    const cached = qc.getQueryData<DashboardTransaction[]>(firstPageKey);
     if (!cached) {
       fetchTransactionsPage({
         limit: 15,
         subscription_id: subscriptionId ?? undefined,
-      })
-        .then((res) => {
-          qc.setQueryData(["transactions", "page", 1, scope], res.items);
-          qc.setQueryData(["transactions", "meta", scope], {
-            has_more: res.has_more,
-            next_cursor: res.next_cursor,
-            version: res.version,
-            page_size: res.page_size,
-            total_count: res.total_count,
-          });
-        })
-        .catch((err) => console.error("Failed to fetch first page:", err));
+      }).then((res) => {
+        qc.setQueryData(firstPageKey, res.items);
+        qc.setQueryData(["transactions", "meta", scope], {
+          has_more: res.has_more,
+          next_cursor: res.next_cursor,
+          version: res.version,
+          page_size: res.page_size,
+          total_count: res.total_count,
+        });
+      });
+      // 🔇 no catch => no console noise for the "expired token then refresh" flow
     }
-  }, [qc, scope, subscriptionId]); // 🧩 added
+  }, [qc, scope, subscriptionId]);
+
 
   // 🧩 no need to filter globally anymore — transactions are already scoped
   const visibleTransactions = transactions;
@@ -73,36 +74,38 @@ export default function PaymentsDetailsClient({ id: subscriptionId }: { id: stri
     const nextPageKey = ["transactions", "page", nextPage, scope];
     const nextMetaKey = ["transactions", "meta", scope];
 
-    // 🧩 1️⃣ Check if we already have this page cached
     const cachedPage = qc.getQueryData<DashboardTransaction[]>(nextPageKey);
     const cachedMeta = qc.getQueryData<TxMeta>(nextMetaKey);
 
     if (cachedPage && cachedMeta) {
-      // 🧩 Already cached → just switch page, skip fetch
       setPage(nextPage);
       return;
     }
 
-    // 🧩 2️⃣ Otherwise, fetch it
-    const res = await fetchTransactionsPage({
-      cursor: meta?.next_cursor,
-      limit: pageSize,
-      subscription_id: subscriptionId ?? undefined,
-    });
+    try {
+      const res = await fetchTransactionsPage({
+        cursor: meta?.next_cursor,
+        limit: pageSize,
+        subscription_id: subscriptionId ?? undefined,
+      });
 
-    // 🧩 3️⃣ Cache new results
-    qc.setQueryData(nextPageKey, res.items);
-    qc.setQueryData<TxMeta>(nextMetaKey, {
-      has_more: res.has_more,
-      next_cursor: res.next_cursor,
-      version: res.version,
-      page_size: res.page_size,
-      total_count: res.total_count,
-    });
+      qc.setQueryData(nextPageKey, res.items);
+      qc.setQueryData<TxMeta>(nextMetaKey, {
+        has_more: res.has_more,
+        next_cursor: res.next_cursor,
+        version: res.version,
+        page_size: res.page_size,
+        total_count: res.total_count,
+      });
 
-    // 🧩 4️⃣ Advance page
-    setPage(nextPage);
+      setPage(nextPage);
+    } catch {
+      // User is probably actually logged out / refresh failed.
+      // You can choose not to console.error here if you don't want noise:
+      // console.error("Pagination failed:", err);
+    }
   };
+
 
   return (
     <PaymentsTable
