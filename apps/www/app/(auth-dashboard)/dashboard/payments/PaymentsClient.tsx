@@ -31,7 +31,7 @@ export default function PaymentsClient() {
   useEffect(() => {
     const cached = qc.getQueryData<DashboardTransaction[]>(["transactions", "page", 1, scope]);
     if (!cached) {
-      fetchTransactionsPage({ limit: 25 }).then((res) => {
+      fetchTransactionsPage({ limit: 15 }).then((res) => {
         qc.setQueryData(["transactions", "page", 1, scope], res.items);
         qc.setQueryData(["transactions", "meta", scope], {
           has_more: res.has_more,
@@ -44,7 +44,7 @@ export default function PaymentsClient() {
     }
   }, [qc, scope]);
 
-  const pageSize = meta?.page_size ?? 25;
+  const pageSize = meta?.page_size ?? 15;
   const totalCount = meta?.total_count ?? 0;
   const totalPages = Math.max(1, Math.ceil(totalCount / pageSize));
 
