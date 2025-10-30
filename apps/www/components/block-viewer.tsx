@@ -168,7 +168,7 @@ function BlockViewerToolbar() {
               >
                 <Terminal />
                 <span>
-                  npx @creative-tim/ui@latest components add {item.name}
+                  npx @creative-tim/ui@latest add {item.name}
                 </span>
               </Button>
             ) : ( */}
