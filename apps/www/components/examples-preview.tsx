@@ -304,9 +304,9 @@ const categories: ExampleCategory[] = [
         comingSoon: true,
       },
       {
-        name: "Blog Sections",
+        name: "Blog",
         blockCount: 15,
-        category: "blog-sections",
+        category: "blog",
         thumbnail:
           "https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/blog-posts-thumbnail.jpg",
       },

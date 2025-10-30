@@ -27,7 +27,7 @@ const BLOCKS_SECTIONS = [
   { name: "Account", href: "/blocks/account" },
   { name: "AI Agents", href: "/blocks/ai-agents" },
   { name: "Billing", href: "/blocks/billing" },
-  { name: "Blog Sections", href: "/blocks/blog-sections" },
+  { name: "Blog", href: "/blocks/blog" },
   { name: "Contact", href: "/blocks/contact" },
   { name: "CRUDs", href: "/blocks/cruds" },
   { name: "Ecommerce", href: "/blocks/ecommerce" },

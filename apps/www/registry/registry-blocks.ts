@@ -152,7 +152,7 @@ export const blocks: Registry["items"] = [
         "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
       mobile: "component",
     },
-    categories: ["blog-sections"],
+    categories: ["blog"],
   },
   {
     name: "blog-cards-layout-01",
@@ -172,7 +172,7 @@ export const blocks: Registry["items"] = [
         "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
       mobile: "component",
     },
-    categories: ["blog-sections"],
+    categories: ["blog"],
   },
   {
     name: "blog-post-preview-tags-01",
@@ -192,7 +192,7 @@ export const blocks: Registry["items"] = [
         "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
       mobile: "component",
     },
-    categories: ["blog-sections"],
+    categories: ["blog"],
   },
   {
     name: "highlighted-blog-posts-01",
@@ -212,7 +212,7 @@ export const blocks: Registry["items"] = [
         "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
       mobile: "component",
     },
-    categories: ["blog-sections"],
+    categories: ["blog"],
   },
   {
     name: "blog-rectangular-images-01",
@@ -232,7 +232,7 @@ export const blocks: Registry["items"] = [
         "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
       mobile: "component",
     },
-    categories: ["blog-sections"],
+    categories: ["blog"],
   },
   {
     name: "large-blog-preview-01",
@@ -252,7 +252,7 @@ export const blocks: Registry["items"] = [
         "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
       mobile: "component",
     },
-    categories: ["blog-sections"],
+    categories: ["blog"],
   },
   {
     name: "simple-product-details-01",

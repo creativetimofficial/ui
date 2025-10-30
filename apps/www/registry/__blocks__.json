@@ -32,32 +32,32 @@
   {
     "name": "simple-blog-content-01",
     "description": "Simple blog content cards",
-    "categories": ["blog-sections"]
+    "categories": ["blog"]
   },
   {
     "name": "blog-cards-layout-01",
     "description": "Blog cards with view more button",
-    "categories": ["blog-sections"]
+    "categories": ["blog"]
   },
   {
     "name": "blog-post-preview-tags-01",
     "description": "Blog posts with tags",
-    "categories": ["blog-sections"]
+    "categories": ["blog"]
   },
   {
     "name": "highlighted-blog-posts-01",
     "description": "Highlighted blog posts with icons",
-    "categories": ["blog-sections"]
+    "categories": ["blog"]
   },
   {
     "name": "blog-rectangular-images-01",
     "description": "Blog posts with rectangular images",
-    "categories": ["blog-sections"]
+    "categories": ["blog"]
   },
   {
     "name": "large-blog-preview-01",
     "description": "Large blog post preview",
-    "categories": ["blog-sections"]
+    "categories": ["blog"]
   },
   {
     "name": "simple-product-details-01",
