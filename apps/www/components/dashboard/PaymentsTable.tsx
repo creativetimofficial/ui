@@ -25,6 +25,7 @@ type PaymentsTableProps = {
   /** new prop */
   page?: number;
   className?: string;
+  totalPages: number | undefined;
 };
 
 export function PaymentsTable({
@@ -35,6 +36,7 @@ export function PaymentsTable({
   onNext,
   page = 1,
   className,
+  totalPages = 1,
 }: PaymentsTableProps) {
   return (
     <Card
@@ -121,7 +123,10 @@ export function PaymentsTable({
           </Button>
 
           {/* ✅ Current page indicator */}
-          <span className="text-sm text-gray-500">Page {page}</span>
+          <span className="text-sm text-gray-500">
+            Page {page}
+            {typeof totalPages === "number" ? ` of ${totalPages}` : ""}
+          </span>
 
           <Button
             variant="outline"
