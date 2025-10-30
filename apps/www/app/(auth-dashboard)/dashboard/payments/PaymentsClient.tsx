@@ -41,6 +41,8 @@ export default function PaymentsMainClient() {
       has_more: res.has_more,
       next_cursor: res.next_cursor,
       version: res.version,
+      total_count: res.total_count,
+      page_size: res.page_size,
     });
     setPage((p) => p + 1);
   };
