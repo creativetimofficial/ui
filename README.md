@@ -45,7 +45,7 @@ npx @creative-tim/ui@latest add <component-name>
 Examples:
 ```bash
 # Install the orb component
-npx @creative-tim/ui@latest add orb
+npx @creative-tim/ui@latest add card
 ```
 
 ### Alternative: Use with shadcn CLI
