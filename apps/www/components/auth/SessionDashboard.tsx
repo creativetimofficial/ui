@@ -1,4 +1,3 @@
-// components/auth/SessionDashboard.tsx
 "use client";
 import { useEffect } from "react";
 import { useQueryClient } from "@tanstack/react-query";
@@ -12,21 +11,25 @@ export default function SessionDashboard() {
   useEffect(() => {
     if (!user) return;
 
-    // Prime the cache once; no UI flicker.
     fetchDashboard()
       .then((data) => {
+        // Global cache entries
         qc.setQueryData(["dashboardData"], data);
         qc.setQueryData(["subscriptions"], data.subscriptions);
-        qc.setQueryData(["transactions", "page", 1], data.transactions.items);
-        qc.setQueryData(["transactions", "meta"], {
+
+        // 💡 Mark this page as the "global" transactions feed
+        qc.setQueryData(["transactions", "page", 1, "global"], data.transactions.items);
+
+        qc.setQueryData(["transactions", "meta", "global"], {
           has_more: data.transactions.has_more,
           next_cursor: data.transactions.next_cursor,
           version: data.transactions.version,
-          total_count: data.transactions.total_count
+          total_count: data.transactions.total_count,
+          page_size: data.transactions.page_size,
         });
       })
-      .catch(() => {
-        // Optional: surface a non-blocking toast
+      .catch((err) => {
+        console.error("Failed to prefetch dashboard", err);
       });
   }, [qc, user]);
 
