@@ -34,7 +34,10 @@ export default function PaymentsMainClient() {
 
   const onNext = async () => {
     if (!hasNext) return;
-    const res = await fetchTransactionsPage(meta?.next_cursor || undefined);
+    const res = await fetchTransactionsPage({
+      cursor: meta?.next_cursor,
+      include_subs: false,  // only transactions
+    });
     // Cache the next page and updated meta
     qc.setQueryData(["transactions", "page", page + 1], res.items);
     qc.setQueryData<TxMeta>(["transactions", "meta"], {
@@ -47,6 +50,10 @@ export default function PaymentsMainClient() {
     setPage((p) => p + 1);
   };
 
+  const pageSize    = meta?.page_size ?? 25;
+  const totalCount  = meta?.total_count ?? 0;
+  const totalPages  = Math.max(1, Math.ceil(totalCount / pageSize));
+
   return (
     <PaymentsTable
       transactions={transactions}
@@ -54,6 +61,7 @@ export default function PaymentsMainClient() {
       hasNext={hasNext}
       onPrev={onPrev}
       onNext={onNext}
+      totalPages={totalPages}
     />
   );
 }
