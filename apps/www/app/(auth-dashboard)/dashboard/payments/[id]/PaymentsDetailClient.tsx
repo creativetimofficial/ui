@@ -35,7 +35,7 @@ export default function PaymentsDetailsClient({ id: subscriptionId }: { id: stri
     const cached = qc.getQueryData<DashboardTransaction[]>(["transactions", "page", 1, scope]);
     if (!cached) {
       fetchTransactionsPage({
-        limit: 25,
+        limit: 15,
         subscription_id: subscriptionId ?? undefined,
       })
         .then((res) => {
@@ -55,7 +55,7 @@ export default function PaymentsDetailsClient({ id: subscriptionId }: { id: stri
   // 🧩 no need to filter globally anymore — transactions are already scoped
   const visibleTransactions = transactions;
 
-  const pageSize = meta?.page_size ?? 25;
+  const pageSize = meta?.page_size ?? 15;
   const totalCount = meta?.total_count ?? 0;
   const totalPages = Math.max(1, Math.ceil(totalCount / pageSize));
 
