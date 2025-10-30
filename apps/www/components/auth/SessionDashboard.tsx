@@ -22,6 +22,7 @@ export default function SessionDashboard() {
           has_more: data.transactions.has_more,
           next_cursor: data.transactions.next_cursor,
           version: data.transactions.version,
+          total_count: data.transactions.total_count
         });
       })
       .catch(() => {
