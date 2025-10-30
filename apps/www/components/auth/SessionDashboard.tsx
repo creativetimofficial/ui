@@ -6,10 +6,11 @@ import { useAuth } from "./AuthProvider";
 
 export default function SessionDashboard() {
   const qc = useQueryClient();
-  const { user } = useAuth();
+  const { user, bootstrapDone } = useAuth();
 
   useEffect(() => {
     if (!user) return;
+    if (!bootstrapDone) return;
 
     fetchDashboard()
       .then((data) => {
@@ -29,7 +30,7 @@ export default function SessionDashboard() {
         });
       })
       .catch(() => {});
-  }, [qc, user]);
+  }, [bootstrapDone, qc, user]);
 
   return null;
 }
