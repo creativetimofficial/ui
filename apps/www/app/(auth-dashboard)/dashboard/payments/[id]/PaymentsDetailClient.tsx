@@ -7,11 +7,14 @@ import { useQuery, useQueryClient } from "@tanstack/react-query";
 import { fetchTransactionsPage } from "@/lib/api/transactions";
 import type { DashboardTransaction, TxMeta } from "@/lib/api/dashboard";
 import { PaymentsTable } from "@/components/dashboard/PaymentsTable";
+import { useAuth } from "@/components/auth/AuthProvider";
 
 export default function PaymentsDetailsClient({ id: subscriptionId }: { id: string }) {
 
   const qc = useQueryClient();
   const [page, setPage] = useState(1);
+
+  const { user, bootstrapDone } = useAuth();
 
   // 🧩 define a scope key: use subscriptionId or "global" for the default feed
   const scope = subscriptionId || "global";
@@ -32,6 +35,10 @@ export default function PaymentsDetailsClient({ id: subscriptionId }: { id: stri
 
   // 🧩 fetch the first page for this subscription if not already cached
   useEffect(() => {
+    // 🛑 block until auth is settled AND we know if user exists
+    if (!bootstrapDone) return;
+    if (!user) return; // not logged in → don't hit protected endpoints
+    
     const firstPageKey = ["transactions", "page", 1, scope];
     const cached = qc.getQueryData<DashboardTransaction[]>(firstPageKey);
     if (!cached) {
@@ -50,7 +57,7 @@ export default function PaymentsDetailsClient({ id: subscriptionId }: { id: stri
       });
       // 🔇 no catch => no console noise for the "expired token then refresh" flow
     }
-  }, [qc, scope, subscriptionId]);
+  }, [bootstrapDone, qc, scope, subscriptionId, user]);
 
 
   // 🧩 no need to filter globally anymore — transactions are already scoped
