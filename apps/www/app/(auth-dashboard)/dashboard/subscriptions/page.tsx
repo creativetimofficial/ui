@@ -35,7 +35,7 @@ export function SubscriptionCard({
         </div>
 
         <CardContent className="p-0">
-          <h3 className="mb-4 text-lg font-semibold text-foreground">{name}</h3>
+          <h3 className="text-lg font-semibold text-foreground">{name}</h3>
           <p className="mb-6 max-w-md leading-relaxed text-gray-400">
             {description}
           </p>
