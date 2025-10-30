@@ -6,10 +6,13 @@ import { useQuery, useQueryClient } from "@tanstack/react-query";
 import { fetchTransactionsPage } from "@/lib/api/transactions";
 import type { DashboardTransaction, TxMeta } from "@/lib/api/dashboard";
 import { PaymentsTable } from "@/components/dashboard/PaymentsTable";
+import { useAuth } from "@/components/auth/AuthProvider";
 
 export default function PaymentsClient() {
   const qc = useQueryClient();
   const [page, setPage] = useState(1);
+
+  const { user, bootstrapDone } = useAuth();
 
   // 🧩 fixed scope for the global feed
   const scope = "global";
@@ -29,6 +32,11 @@ export default function PaymentsClient() {
 
   // 🧩 prefetch first page if not already cached (e.g. user refresh)
   useEffect(() => {
+    // ⛔ do nothing until auth is initialized
+    if (!bootstrapDone) return;
+    // ⛔ if user is actually logged out, don't hit a protected endpoint
+    if (!user) return;
+
     const cached = qc.getQueryData<DashboardTransaction[]>(["transactions", "page", 1, scope]);
     if (!cached) {
       fetchTransactionsPage({ limit: 15 }).then((res) => {
@@ -42,7 +50,7 @@ export default function PaymentsClient() {
         });
       });
     }
-  }, [qc, scope]);
+  }, [bootstrapDone, qc, scope, user]);
 
   const pageSize = meta?.page_size ?? 15;
   const totalCount = meta?.total_count ?? 0;
