@@ -28,9 +28,7 @@ export default function SessionDashboard() {
           page_size: data.transactions.page_size,
         });
       })
-      .catch((err) => {
-        console.error("Failed to prefetch dashboard", err);
-      });
+      .catch(() => {});
   }, [qc, user]);
 
   return null;
