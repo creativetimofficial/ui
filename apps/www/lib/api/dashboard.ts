@@ -1,14 +1,14 @@
-// lib/dashboard.ts
 import { api } from "@/lib/auth/api";
 import { AuthUser } from "../auth/auth.types";
 
-// Based on payment_subscriptions and payment_transactions from schema.rb
-
+/**
+ * Subscription row displayed in dashboard
+ */
 export type DashboardSubscription = {
   id: string; // subscription_id
   status: string;
-  plan: string | null; // product_name 
-  next_billed_at: string | null; 
+  plan: string | null; // product_name
+  next_billed_at: string | null;
   canceled_at: string | null;
   currency: string;
   product_description: string;
@@ -20,9 +20,12 @@ export type DashboardSubscription = {
   billing_cycle: string;
 };
 
+/**
+ * Transaction row displayed in dashboard
+ */
 export type DashboardTransaction = {
   id: string; // transaction_id
-  amount: string; // usually returned as string with decimal (precision: 12, scale: 2)
+  amount: string; // decimal as string
   currency: string | null;
   status: string;
   created_at: string;
@@ -33,10 +36,34 @@ export type DashboardTransaction = {
   refund_status: string | null;
   refund_reason: string | null;
   subscription_id: string | null;
-  tax_rates_used?: unknown; // jsonb column; can contain array or object
-
+  // Raw jsonb from DB, could be object or array depending on tax config
+  tax_rates_used?: unknown;
 };
 
+/**
+ * Pagination / cursor metadata for transactions
+ * (this is what you were calling TxMeta)
+ */
+export type TxMeta = {
+  has_more: boolean;
+  next_cursor: string | null;
+  version?: string | null;
+  total_count: number;
+  page_size: number;
+};
+
+/**
+ * Full "transactions" payload that the backend returns:
+ * - list of items
+ * - plus meta / paging info
+ */
+export type TransactionsPage = TxMeta & {
+  items: DashboardTransaction[];
+};
+
+/**
+ * License info for the current user/org
+ */
 export type DashboardLicense = {
   status: string;
   features: string[];
@@ -44,37 +71,23 @@ export type DashboardLicense = {
   expires_at: string | null;
 };
 
+/**
+ * Data block the frontend actually renders in the dashboard UI
+ */
 export type DashboardData = {
   subscriptions: DashboardSubscription[];
-  transactions: {
-    items: DashboardTransaction[];
-    has_more: boolean;
-    next_cursor: string | null;
-    version?: string | null;
-  };
+  transactions: TransactionsPage;
 };
 
+/**
+ * Raw /dashboard API response
+ */
 export type DashboardResponse = {
   user: AuthUser;
   subscriptions: DashboardSubscription[];
-  transactions: {
-    items: DashboardTransaction[];
-    has_more: boolean;
-    next_cursor: string | null;
-    version?: string | null;
-  };
-  counts: {
-    transactions: number;
-    active_subscriptions: number;
-  };
+  transactions: TransactionsPage;
   license: DashboardLicense;
   dashboardData: DashboardData;
-};
-
-export type TxMeta = {
-  has_more: boolean;
-  next_cursor: string | null;
-  version?: string | null;
 };
 
 export async function fetchDashboard() {
