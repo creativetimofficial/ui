@@ -1,6 +1,6 @@
-import PaymentDetailClient from "./PaymentDetailClient";
+import PaymentsDetailClient from "./PaymentsDetailClient";
 
 export default async function PaymentDetailPage({ params }: { params: { id: string } }) {
   const awaitedParams = await params;
-  return <PaymentDetailClient id={awaitedParams.id} />;
+  return <PaymentsDetailClient id={awaitedParams.id} />;
 }
