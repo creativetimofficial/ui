@@ -1,4 +1,4 @@
-import PaymentsClient from "./PaymentsMainClient";
+import PaymentsClient from "./PaymentsClient";
 
 export default async function PaymentsPage() {
   return (
