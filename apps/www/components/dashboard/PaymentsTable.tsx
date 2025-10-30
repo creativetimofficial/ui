@@ -123,7 +123,7 @@ export function PaymentsTable({
           </Button>
 
           {/* ✅ Current page indicator */}
-          <span className="text-sm text-gray-500">
+          <span className="text-sm text-gray-400">
             Page {page}
             {typeof totalPages === "number" ? ` of ${totalPages}` : ""}
           </span>
