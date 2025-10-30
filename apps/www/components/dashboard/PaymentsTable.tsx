@@ -1,4 +1,3 @@
-// PaymentsTable.tsx
 "use client";
 
 import * as React from "react";
@@ -23,6 +22,8 @@ type PaymentsTableProps = {
   hasNext: boolean;
   onPrev: () => void;
   onNext: () => void;
+  /** new prop */
+  page?: number;
   className?: string;
 };
 
@@ -32,10 +33,15 @@ export function PaymentsTable({
   hasNext,
   onPrev,
   onNext,
+  page = 1,
   className,
 }: PaymentsTableProps) {
   return (
-    <Card className={["mt-6 rounded-2xl border bg-card/60 shadow-none", className].filter(Boolean).join(" ")}>
+    <Card
+      className={["mt-6 rounded-2xl border bg-card/60 shadow-none", className]
+        .filter(Boolean)
+        .join(" ")}
+    >
       <CardContent>
         <Table>
           <TableHeader>
@@ -51,7 +57,10 @@ export function PaymentsTable({
           <TableBody>
             {transactions.length === 0 ? (
               <TableRow>
-                <TableCell colSpan={5} className="py-10 text-center text-sm text-gray-400">
+                <TableCell
+                  colSpan={5}
+                  className="py-10 text-center text-sm text-gray-400"
+                >
                   No transactions yet.
                 </TableCell>
               </TableRow>
@@ -72,7 +81,9 @@ export function PaymentsTable({
 
                   {/* Amount */}
                   <TableCell>
-                    {formatMoney(t.amount, t.currency, { amountIsMinorUnits: false })}
+                    {formatMoney(t.amount, t.currency, {
+                      amountIsMinorUnits: false,
+                    })}
                   </TableCell>
 
                   {/* Status */}
@@ -108,6 +119,10 @@ export function PaymentsTable({
           >
             Previous
           </Button>
+
+          {/* ✅ Current page indicator */}
+          <span className="text-sm text-gray-500">Page {page}</span>
+
           <Button
             variant="outline"
             size="sm"
