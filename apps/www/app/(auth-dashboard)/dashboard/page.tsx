@@ -9,6 +9,7 @@ import {
 } from "lucide-react";
 import { useQuery } from "@tanstack/react-query";
 import { DashboardSubscription } from "@/lib/api/dashboard";
+import DashboardShell from "@/components/auth/DashboardShell";
 export interface Subscription {
   id: string;
   plan: string;
@@ -42,8 +43,7 @@ export default function DashboardPage() {
   }
 
   return (
-    <div>
-      <h1 className="text-3xl font-bold mb-8 text-foreground border-b pb-6">Dashboard</h1>
+    <DashboardShell title="Dashboard">
       {/* Bottom Section */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         {/* Active Subscriptions */}
@@ -117,6 +117,6 @@ export default function DashboardPage() {
           </CardContent>
         </Card>
       </div>
-    </div>
+    </DashboardShell>
   );
 }
