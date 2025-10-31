@@ -1,28 +1,40 @@
-"use client"
+"use client";
 
-import * as React from "react"
-import { useTheme } from "next-themes"
+import * as React from "react";
+import { useTheme } from "next-themes";
+import { useMetaColor } from "@/hooks/use-meta-color";
+import { Button } from "@/components/ui/button";
 
-import { useMetaColor } from "@/hooks/use-meta-color"
-import { Button } from "@/components/ui/button"
+type ModeSwitcherProps = {
+  /** 
+   * When true, applies white text / hover styles for dark backgrounds.
+   * Default: true
+   */
+  needColorSvg?: boolean;
+};
 
-export function ModeSwitcher() {
-  const { setTheme, resolvedTheme } = useTheme()
-  const { setMetaColor, metaColor } = useMetaColor()
+export function ModeSwitcher({ needColorSvg = true }: ModeSwitcherProps) {
+  const { setTheme, resolvedTheme } = useTheme();
+  const { setMetaColor, metaColor } = useMetaColor();
 
   React.useEffect(() => {
-    setMetaColor(metaColor)
-  }, [metaColor, setMetaColor])
+    setMetaColor(metaColor);
+  }, [metaColor, setMetaColor]);
 
   const toggleTheme = React.useCallback(() => {
-    setTheme(resolvedTheme === "dark" ? "light" : "dark")
-  }, [resolvedTheme, setTheme])
+    setTheme(resolvedTheme === "dark" ? "light" : "dark");
+  }, [resolvedTheme, setTheme]);
+
+  // Conditional classes
+  const colorClasses = needColorSvg
+    ? "text-white/70 hover:bg-white/10 hover:text-white"
+    : "";
 
   return (
     <Button
       variant="ghost"
       size="icon"
-      className="group/toggle extend-touch-target size-8 text-white/70 hover:bg-white/10 hover:text-white"
+      className={`group/toggle extend-touch-target size-8 cursor-pointer ${colorClasses}`}
       onClick={toggleTheme}
       title="Toggle theme"
     >
@@ -47,5 +59,5 @@ export function ModeSwitcher() {
       </svg>
       <span className="sr-only">Toggle theme</span>
     </Button>
-  )
+  );
 }
