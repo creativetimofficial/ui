@@ -159,7 +159,7 @@ export default function DashboardShell({ title, children }: DashboardShellProps)
                     <SidebarTrigger className="cursor-pointer" />
                   </div>
 
-                  <h1 className="text-3xl font-bold text-foreground">{title}</h1>
+                  <h1 className="text-2xl font-bold text-foreground">{title}</h1>
                 </div>
 
                 {/* Right side: GitHub + theme switch */}
