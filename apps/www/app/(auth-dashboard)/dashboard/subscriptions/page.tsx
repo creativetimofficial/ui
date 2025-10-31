@@ -7,6 +7,7 @@ import { useQuery } from "@tanstack/react-query";
 import { fetchDashboard, type DashboardSubscription } from "@/lib/api/dashboard";
 import { formatMoney } from "@/lib/api/formatMoney";
 import { StatusBadge } from "@/components/dashboard/StatusBadge";
+import DashboardShell from "@/components/auth/DashboardShell";
 
 export function SubscriptionCard({
   name,
@@ -58,12 +59,8 @@ export default function SubscriptionsCards() {
   });
 
   return (
-    <div>
-      <h1 className="text-3xl font-bold text-foreground border-b pb-6">
-        Subscriptions
-      </h1>
-
-      <div className="w-full bg-background py-6">
+    <DashboardShell title="Subscriptions">
+      <div className="w-full bg-background pb-6">
         <div className="mx-auto grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {subs.length > 0 ? (
             subs.map((sub) => (
@@ -83,6 +80,6 @@ export default function SubscriptionsCards() {
           )}
         </div>
       </div>
-    </div>
+    </DashboardShell>
   );
 }
