@@ -12,6 +12,7 @@ import {
   SidebarMenuButton,
   SidebarProvider,
   SidebarInset,
+  SidebarTrigger,
 } from "@/components/ui/sidebar";
 import { DashboardSubscription, fetchDashboard } from "@/lib/api/dashboard";
 import { useQuery } from "@tanstack/react-query";
@@ -55,8 +56,8 @@ export default function DashboardShell({ title, children }: DashboardShellProps)
           <Sidebar className="w-64 text-white flex flex-col">
             <SidebarHeader className="p-6">
               <div className="flex items-center gap-3">
-                <div className="w-8 h-8 rounded-lg flex items-center justify-center bg-black/80">
-                  <div className="w-4 h-4 rounded-sm bg-white" />
+                <div className="w-8 h-8 rounded-lg flex items-center justify-center bg-black/80 dark:bg-white">
+                  <div className="w-4 h-4 rounded-sm dark:bg-black/80 bg-white" />
                 </div>
                 <span className="flex items-baseline gap-2 text-lg font-semibold text-foreground">
                   <span className="font-geist-bold leading-[0.95] font-bold tracking-[-0.03em]">
@@ -151,10 +152,18 @@ export default function DashboardShell({ title, children }: DashboardShellProps)
           <SidebarInset className="flex-1 overflow-auto bg-background">
             {title && (
               <div className="border-b pb-4 mb-6 flex items-center justify-between">
-                <div>
+                {/* Left side: title + menu trigger (visible only on mobile) */}
+                <div className="flex items-center gap-2">
+                  {/* Hamburger trigger (hidden on desktop) */}
+                  <div className="md:hidden">
+                    <SidebarTrigger className="cursor-pointer" />
+                  </div>
+
                   <h1 className="text-3xl font-bold text-foreground">{title}</h1>
                 </div>
-                <div>
+
+                {/* Right side: GitHub + theme switch */}
+                <div className="flex items-center gap-2">
                   <GitHubLink needWhiteSvg={false}/>
                   <ModeSwitcher needWhiteSvg={false}/>
                 </div>
