@@ -40,7 +40,7 @@ export function PaymentsTable({
 }: PaymentsTableProps) {
   return (
     <Card
-      className={["mt-6 rounded-2xl border bg-card/60 shadow-none", className]
+      className={["rounded-2xl border bg-card/60 shadow-none", className]
         .filter(Boolean)
         .join(" ")}
     >
