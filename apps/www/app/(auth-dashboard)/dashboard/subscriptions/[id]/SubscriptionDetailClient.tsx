@@ -26,6 +26,8 @@ import { LicenseItem, LicenseSubscription } from "@/lib/auth/auth.types";
 import CancelSubscriptionDialog from "@/components/dashboard/CancelSubscriptionDialog";
 import { StatusBadge } from "@/components/dashboard/StatusBadge";
 import Link from "next/link";
+import { GitHubLink } from "@/components/github-link";
+import { ModeSwitcher } from "@/components/mode-switcher";
 
 function toInt(value: unknown): number | null {
   const n = Number(value);
@@ -141,7 +143,7 @@ export default function SubscriptionDetailClient({ id }: { id: string }) {
       {/* Top bar */}
       <div className="border-b pb-6">
         <div className="mx-auto">
-          <div className="flex flex-col gap-5 md:flex-row md:items-center md:justify-between">
+          <div className="flex flex-col gap-5 md:flex-row md:items-start md:justify-between">
             <div>
               {/* Title + Brand */}
               <div className="flex items-center gap-4">
@@ -185,7 +187,12 @@ export default function SubscriptionDetailClient({ id }: { id: string }) {
             </div>
             
 
-            <div className="flex items-center gap-2">
+            <div className="flex flex-col h-full items-between gap-2">
+              <div className="mb-4 text-end">
+                <GitHubLink />
+                <ModeSwitcher />
+              </div>
+
               <CancelSubscriptionDialog
                 subscriptionId={sub?.id ?? ""}
                 planLabel={sub?.plan || "this subscription"}
