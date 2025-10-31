@@ -10,10 +10,10 @@ type ModeSwitcherProps = {
    * When true, applies white text / hover styles for dark backgrounds.
    * Default: true
    */
-  needColorSvg?: boolean;
+  needWhiteSvg?: boolean;
 };
 
-export function ModeSwitcher({ needColorSvg = true }: ModeSwitcherProps) {
+export function ModeSwitcher({ needWhiteSvg = true }: ModeSwitcherProps) {
   const { setTheme, resolvedTheme } = useTheme();
   const { setMetaColor, metaColor } = useMetaColor();
 
@@ -26,7 +26,7 @@ export function ModeSwitcher({ needColorSvg = true }: ModeSwitcherProps) {
   }, [resolvedTheme, setTheme]);
 
   // Conditional classes
-  const colorClasses = needColorSvg
+  const colorClasses = needWhiteSvg
     ? "text-white/70 hover:bg-white/10 hover:text-white"
     : "";
 
