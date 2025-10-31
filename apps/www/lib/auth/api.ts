@@ -1,15 +1,17 @@
-// lib/api.ts
 import { setAccessToken, clearAccessToken, getAccessToken } from "@/lib/auth/session";
 import { hasRefreshMarker } from "./cookies";
 
 const API_BASE = process.env.NEXT_PUBLIC_API_URL || "";
-const joinUrl = (p: string) => `${API_BASE.replace(/\/+$/, "")}/${p.replace(/^\/+/, "")}`;
+const joinUrl = (p: string) =>
+  `${API_BASE.replace(/\/+$/, "")}/${p.replace(/^\/+/, "")}`;
 
 type ErrorLike = { message?: unknown };
 export type ApiInit = RequestInit & { skipRefresh?: boolean };
 
 const isAuthRoute = (u: string) =>
-  /\/auth\/(login|register|forgot-password|reset-password|google|refresh|logout)\b/i.test(u);
+  /\/auth\/(login|register|forgot-password|reset-password|google|refresh|logout)\b/i.test(
+    u
+  );
 
 function isJsonResponse(res: Response) {
   const ct = res.headers.get("content-type") || "";
@@ -32,56 +34,96 @@ function extractMessage(data: unknown, fallback = ""): string {
   return fallback;
 }
 
-// ---- JWT helper to skip unnecessary refresh ----
-// function isTokenFresh(token: string, leewaySec = 60): boolean {
-//   try {
-//     const payload = JSON.parse(atob(token.split(".")[1] || ""));
-//     const exp: number = payload?.exp ?? 0;
-//     return exp - Math.floor(Date.now() / 1000) > leewaySec;
-//   } catch {
-//     return false;
-//   }
-// }
+// ------------------------
+// REFRESH HELPERS
+// ------------------------
 
-// ---- Singleton refresh (unchanged) ----
 let refreshInFlight: Promise<string | null> | null = null;
+
 async function tryRefresh(): Promise<string | null> {
-  if (!hasRefreshMarker()) return null;
+  const isDev = process.env.NODE_ENV === "development";
+
+  // In production: only bother refreshing if we *think* there's a session
+  // (hasRefreshMarker() checks the rt_present cookie).
+  // In dev: always try, because cookies may be cross-origin and unreadable.
+  if (!isDev && !hasRefreshMarker()) {
+    return null;
+  }
+
   if (!refreshInFlight) {
     refreshInFlight = (async () => {
       const res = await fetch(joinUrl("/auth/refresh"), {
         method: "POST",
-        credentials: "include",
+        credentials: "include", // send cookies (refresh_token, user_id)
       });
-      const data = await safeJson<{ access_token?: string; accessToken?: string }>(res);
-      if (!res.ok) return null;
+
+      const data = await safeJson<{ access_token?: string; accessToken?: string }>(
+        res
+      );
+
+      if (!res.ok) {
+        return null;
+      }
+
+      // Rails returns "access_token"
+      // (we also fall back to accessToken just in case)
       return data?.access_token ?? data?.accessToken ?? null;
-    })().finally(() => { refreshInFlight = null; });
+    })().finally(() => {
+      refreshInFlight = null;
+    });
   }
+
   return refreshInFlight;
 }
 
-// ---- Main API helper ----
+// ------------------------
+// MAIN API WRAPPER
+// ------------------------
+
 export async function api<T>(url: string, init: ApiInit = {}): Promise<T> {
   const absUrl = joinUrl(url);
+
   const headers = new Headers(init.headers);
-  if (!headers.has("Content-Type")) headers.set("Content-Type", "application/json");
+  if (!headers.has("Content-Type")) {
+    headers.set("Content-Type", "application/json");
+  }
 
+  // attach current access token if we have one in memory
   const at = getAccessToken();
-  if (at && !headers.has("Authorization")) headers.set("Authorization", `Bearer ${at}`);
+  if (at && !headers.has("Authorization")) {
+    headers.set("Authorization", `Bearer ${at}`);
+  }
 
-  const reqInit: RequestInit = { ...init, credentials: "include", headers };
+  const reqInit: RequestInit = {
+    ...init,
+    credentials: "include", // VERY important for refresh flow
+    headers,
+  };
 
+  // 1st attempt
   let res = await fetch(absUrl, reqInit);
 
-  // 🔁 Refresh on any protected 401, retry once
-  if (res.status === 401 && !init.skipRefresh && !isAuthRoute(absUrl) && hasRefreshMarker()) {
+  // If unauthorized, try to refresh the session ONCE and retry the same request
+  if (
+    res.status === 401 &&
+    !init.skipRefresh &&
+    !isAuthRoute(absUrl) // never recurse on /auth/*
+  ) {
     const newAT = await tryRefresh();
+
     if (newAT) {
+      // store new token in memory for future calls
       setAccessToken(newAT);
+
+      // retry the original request with the new Authorization header
       headers.set("Authorization", `Bearer ${newAT}`);
-      res = await fetch(absUrl, { ...init, credentials: "include", headers });
+      res = await fetch(absUrl, {
+        ...init,
+        credentials: "include",
+        headers,
+      });
     } else {
+      // refresh failed, kill whatever token we had
       clearAccessToken();
     }
   }
