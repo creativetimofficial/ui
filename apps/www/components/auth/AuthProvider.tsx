@@ -81,12 +81,17 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     <AuthContext.Provider value={{ user, setUser, logout, bootstrapDone }}>
       <GoogleAuthClientProvider>
         <ReactQueryProvider>
-        {bootstrapDone && user ? <SessionDashboard /> : null}
-        {children}
+          {bootstrapDone && user ? (
+            <>
+              <SessionDashboard />
+              {children}
+            </>
+          ) : null}
         </ReactQueryProvider>
       </GoogleAuthClientProvider>
     </AuthContext.Provider>
   );
+
 }
 
 /** Safe hook */
