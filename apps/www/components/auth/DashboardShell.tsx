@@ -20,6 +20,7 @@ import { useAuth } from "@/components/auth/AuthProvider";
 import { Button } from "../ui/button";
 import { GitHubLink } from "../github-link";
 import { ModeSwitcher } from "../mode-switcher";
+import { CreativeTimIcon } from "../creative-tim-icon";
 
 // Helper: strip basePath (/ui) from pathname so your checks work in dev & prod
 function normalizePath(pathname: string) {
@@ -38,7 +39,7 @@ export default function DashboardShell({ title, children }: DashboardShellProps)
   const isDashboardActive = path === "/dashboard" || path === "/dashboard/";
   const isSubscriptionsActive = path.startsWith("/dashboard/subscriptions");
   const isPaymentsActive = path.startsWith("/dashboard/payments");
-  const isApiKeysActive = path.startsWith("/dashboard/keys");
+  const isApiKeysActive = path.startsWith("/dashboard/api-keys");
 
   // Read subscriptions from the React Query cache (do not fetch on mount)
   const { data: subs = [] } = useQuery<DashboardSubscription[]>({
@@ -56,9 +57,7 @@ export default function DashboardShell({ title, children }: DashboardShellProps)
           <Sidebar className="w-64 text-white flex flex-col">
             <SidebarHeader className="p-6">
               <div className="flex items-center gap-3">
-                <div className="w-8 h-8 rounded-lg flex items-center justify-center bg-black/80 dark:bg-white">
-                  <div className="w-4 h-4 rounded-sm dark:bg-black/80 bg-white" />
-                </div>
+                <CreativeTimIcon size={32} className="text-foreground" />
                 <span className="flex items-baseline gap-2 text-lg font-semibold text-foreground">
                   <span className="font-geist-bold leading-[0.95] font-bold tracking-[-0.03em]">
                     Creative Tim
@@ -119,7 +118,7 @@ export default function DashboardShell({ title, children }: DashboardShellProps)
                 </SidebarMenuItem>
 
                 <SidebarMenuItem>
-                  <Link href="/dashboard/keys">
+                  <Link href="/dashboard/api-keys">
                     <SidebarMenuButton
                       className="text-gray-400 cursor-pointer transition-colors duration-100"
                       isActive={isApiKeysActive}
