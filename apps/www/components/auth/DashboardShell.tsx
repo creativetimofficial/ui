@@ -155,8 +155,8 @@ export default function DashboardShell({ title, children }: DashboardShellProps)
                   <h1 className="text-3xl font-bold text-foreground">{title}</h1>
                 </div>
                 <div>
-                  <GitHubLink />
-                  <ModeSwitcher needColorSvg={false}/>
+                  <GitHubLink needWhiteSvg={false}/>
+                  <ModeSwitcher needWhiteSvg={false}/>
                 </div>
               </div>
             )}
