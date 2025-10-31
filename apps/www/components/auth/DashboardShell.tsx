@@ -156,7 +156,7 @@ export default function DashboardShell({ title, children }: DashboardShellProps)
                 </div>
                 <div>
                   <GitHubLink />
-                  <ModeSwitcher />
+                  <ModeSwitcher needColorSvg={false}/>
                 </div>
               </div>
             )}
