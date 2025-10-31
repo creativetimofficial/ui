@@ -13,18 +13,24 @@ import {
   SidebarProvider,
   SidebarInset,
 } from "@/components/ui/sidebar";
-import type { ReactNode } from "react";
 import { DashboardSubscription, fetchDashboard } from "@/lib/api/dashboard";
 import { useQuery } from "@tanstack/react-query";
 import { useAuth } from "@/components/auth/AuthProvider";
 import { Button } from "../ui/button";
+import { GitHubLink } from "../github-link";
+import { ModeSwitcher } from "../mode-switcher";
 
 // Helper: strip basePath (/ui) from pathname so your checks work in dev & prod
 function normalizePath(pathname: string) {
   return pathname.replace(/^\/ui(?=\/|$)/, "");
 }
 
-export default function DashboardShell({ children }: { children: ReactNode }) {
+type DashboardShellProps = {
+  title?: string;
+  children: React.ReactNode;
+};
+
+export default function DashboardShell({ title, children }: DashboardShellProps) {
   const pathname = usePathname();
   const path = normalizePath(pathname);
 
@@ -143,6 +149,18 @@ export default function DashboardShell({ children }: { children: ReactNode }) {
           </Sidebar>
 
           <SidebarInset className="flex-1 overflow-auto bg-background">
+            {title && (
+              <div className="border-b pb-4 mb-6 flex items-center justify-between">
+                <div>
+                  <h1 className="text-3xl font-bold text-foreground">{title}</h1>
+                </div>
+                <div>
+                  <GitHubLink />
+                  <ModeSwitcher />
+                </div>
+              </div>
+            )}
+
             {children}
           </SidebarInset>
         </SidebarProvider>
