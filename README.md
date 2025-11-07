@@ -60,6 +60,122 @@ npx shadcn@latest add https://creative-tim.com/ui/r/button.json
 
 All available components can be found [here](https://creative-tim.com/ui/docs/components) or explore a list of example blocks [here](https://creative-tim.com/ui/blocks).
 
+## Blocks
+
+Explore our collection of ready-to-use blocks organized by category. Each block is fully customizable and can be added to your project with a single command.
+
+### Application UI
+
+<table>
+<tr>
+<td width="25%">
+<a href="https://creative-tim.com/ui/blocks/modals">
+<img src="https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/modals-thumbnail.jpg" alt="Modals" />
+<br/>
+<strong>Modals</strong><br/>
+<em>5 Blocks</em>
+</a>
+</td>
+<td width="25%">
+<a href="https://creative-tim.com/ui/blocks/account">
+<img src="https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/account-thumbnail.jpg" alt="Account" />
+<br/>
+<strong>Account</strong><br/>
+<em>7 Blocks</em>
+</a>
+</td>
+<td width="25%">
+<a href="https://creative-tim.com/ui/blocks/billing">
+<img src="https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/billing-thumbnail.jpg" alt="Billing" />
+<br/>
+<strong>Billing</strong><br/>
+<em>5 Blocks</em>
+</a>
+</td>
+</tr>
+</table>
+
+### Marketing
+
+<table>
+<tr>
+<td width="25%">
+<a href="https://creative-tim.com/ui/blocks/testimonials">
+<img src="https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/testimonial-thumbnail.jpg" alt="Testimonial Sections" />
+<br/>
+<strong>Testimonial Sections</strong><br/>
+<em>17 Blocks</em>
+</a>
+</td>
+<td width="25%">
+<a href="https://creative-tim.com/ui/blocks/contact">
+<img src="https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/contact-us-thumbnail.jpg" alt="Contact Sections" />
+<br/>
+<strong>Contact Sections</strong><br/>
+<em>15 Blocks</em>
+</a>
+</td>
+<td width="25%">
+<a href="https://creative-tim.com/ui/blocks/footers">
+<img src="https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/footer-thumbnail.jpg" alt="Footers" />
+<br/>
+<strong>Footers</strong><br/>
+<em>16 Blocks</em>
+</a>
+</td>
+</tr>
+<tr>
+<td width="25%">
+<a href="https://creative-tim.com/ui/blocks/faqs">
+<img src="https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/faq-thumbnail.jpg" alt="FAQs" />
+<br/>
+<strong>FAQs</strong><br/>
+<em>6 Blocks</em>
+</a>
+</td>
+<td width="25%">
+<a href="https://creative-tim.com/ui/blocks/blog">
+<img src="https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/blog-posts-thumbnail.jpg" alt="Blog" />
+<br/>
+<strong>Blog</strong><br/>
+<em>15 Blocks</em>
+</a>
+</td>
+</tr>
+</table>
+
+### Ecommerce UI
+Ready-to-use blocks for product listings, shopping carts, and checkout flows.
+
+<table>
+<tr>
+<td width="25%">
+<a href="https://creative-tim.com/ui/blocks/ecommerce">
+<img src="https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/ecommerce-thumbnail.jpg" alt="Ecommerce Sections" />
+<br/>
+<strong>Ecommerce Sections</strong><br/>
+<em>14 Blocks</em>
+</a>
+</td>
+</tr>
+</table>
+
+### Web 3.0
+Innovative sections built for decentralized applications, blockchain projects, and crypto platforms.
+
+<table>
+<tr>
+<td width="25%">
+<a href="https://creative-tim.com/ui/blocks/web3">
+<img src="https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/david-ui/thumbs/collections-thumbnail.jpg" alt="Web 3.0 Cards" />
+<br/>
+<strong>Web 3.0 Cards</strong><br/>
+<em>5 Blocks</em>
+</a>
+</td>
+</tr>
+</table>
+
 ## Contributing
 
 If you'd like to contribute to Creative Tim UI, please follow these steps:
