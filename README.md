@@ -1,4 +1,4 @@
-![Creative Tim UI](https://raw.githubusercontent.com/creativetimofficial/ui/refs/heads/main/apps/www/public/opengraph-image.png)
+[![Creative Tim UI](https://raw.githubusercontent.com/creativetimofficial/ui/refs/heads/main/apps/www/public/opengraph-image.png)](https://creative-tim.com/ui)
 
 # Creative Tim UI
 
