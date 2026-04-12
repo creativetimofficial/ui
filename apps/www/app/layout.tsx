@@ -1,64 +1,55 @@
 import type { Metadata } from "next"
 
-import { META_THEME_COLORS, siteConfig } from "@/lib/config"
+import { siteConfig } from "@/lib/config"
 import { fontVariables } from "@/lib/fonts"
 import { cn } from "@/lib/utils"
-import { LayoutProvider } from "@/hooks/use-layout"
-import { ActiveThemeProvider } from "@/components/active-theme"
-import { Analytics } from "@/components/analytics"
-import { TailwindIndicator } from "@/components/tailwind-indicator"
 import { ThemeProvider } from "@/components/theme-provider"
 import { Toaster } from "@/components/ui/sonner"
+import { JsonLd } from "@/components/seo/json-ld"
 
 import "@/styles/globals.css"
 
 export const metadata: Metadata = {
   title: {
-    default: siteConfig.name,
+    default: "Thread Meditation | Handmade Crochet Born from Stillness",
     template: `%s | ${siteConfig.name}`,
   },
-  metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL!),
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_APP_URL || "https://threadmeditation.com"
+  ),
   description: siteConfig.description,
-  keywords: ["Creative Tim", "UI", "shadcn", "Components", "agents"],
-  authors: [
-    {
-      name: "Creative Tim",
-      url: "https://creative-tim.com",
-    },
-  ],
-  creator: "creative-tim",
+  keywords: siteConfig.keywords,
+  authors: [{ name: "Thread Meditation" }],
+  creator: "Thread Meditation",
   openGraph: {
     type: "website",
     locale: "en_US",
-    url:
-      process.env.NEXT_PUBLIC_APP_URL! + process.env.NEXT_PUBLIC_ASSET_PREFIX,
-    title: siteConfig.name,
+    url: process.env.NEXT_PUBLIC_APP_URL || "https://threadmeditation.com",
+    title: "Thread Meditation | Handmade Crochet Born from Stillness",
     description: siteConfig.description,
     siteName: siteConfig.name,
     images: [
       {
-        url: `${process.env.NEXT_PUBLIC_APP_URL}${process.env.NEXT_PUBLIC_ASSET_PREFIX}/opengraph-image.png`,
+        url: "/opengraph-image.png",
         width: 1200,
         height: 630,
-        alt: siteConfig.name,
+        alt: "Thread Meditation - Handmade Crochet Art",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: siteConfig.name,
+    title: "Thread Meditation | Handmade Crochet Born from Stillness",
     description: siteConfig.description,
-    images: [
-      `${process.env.NEXT_PUBLIC_APP_URL}${process.env.NEXT_PUBLIC_ASSET_PREFIX}/opengraph-image.png`,
-    ],
-    creator: "@creativetim",
+    images: ["/opengraph-image.png"],
+    creator: "@threadmeditation",
   },
   icons: {
-    icon: `${process.env.NEXT_PUBLIC_APP_URL}${process.env.NEXT_PUBLIC_ASSET_PREFIX}/favicon.ico`,
-    shortcut: `${process.env.NEXT_PUBLIC_APP_URL}${process.env.NEXT_PUBLIC_ASSET_PREFIX}/favicon-16x16.png`,
-    apple: `${process.env.NEXT_PUBLIC_APP_URL}${process.env.NEXT_PUBLIC_ASSET_PREFIX}/apple-touch-icon.png`,
+    icon: "/favicon.ico",
+    shortcut: "/favicon-16x16.png",
+    apple: "/apple-touch-icon.png",
   },
-  manifest: `${process.env.NEXT_PUBLIC_APP_URL}${process.env.NEXT_PUBLIC_ASSET_PREFIX}/site.webmanifest`,
+  manifest: "/site.webmanifest",
 }
 
 export default function RootLayout({
@@ -69,37 +60,21 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              try {
-                if (localStorage.theme === 'dark' || ((!('theme' in localStorage) || localStorage.theme === 'system') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-                  document.querySelector('meta[name="theme-color"]').setAttribute('content', '${META_THEME_COLORS.dark}')
-                }
-                if (localStorage.layout) {
-                  document.documentElement.classList.add('layout-' + localStorage.layout)
-                }
-              } catch (_) {}
-            `,
-          }}
+        <link
+          href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap"
+          rel="stylesheet"
         />
-        <meta name="theme-color" content={META_THEME_COLORS.light} />
       </head>
-      <body
-        className={cn(
-          "text-foreground group/body overscroll-none font-sans antialiased [--footer-height:calc(var(--spacing)*14)] [--header-height:calc(var(--spacing)*14)] xl:[--footer-height:calc(var(--spacing)*24)]",
-          fontVariables
-        )}
-      >
-        <ThemeProvider>
-          <LayoutProvider>
-            <ActiveThemeProvider>
-              {children}
-              <TailwindIndicator />
-              <Toaster position="top-center" />
-              <Analytics />
-            </ActiveThemeProvider>
-          </LayoutProvider>
+      <body className={cn("min-h-svh font-sans antialiased", fontVariables)}>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="light"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <JsonLd />
+          {children}
+          <Toaster />
         </ThemeProvider>
       </body>
     </html>

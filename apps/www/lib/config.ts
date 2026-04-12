@@ -1,35 +1,39 @@
 export const siteConfig = {
-  name: "Creative Tim UI",
-  url: "https://creative-tim.com/ui",
-  ogImage: "https://creative-tim.com/ui/og.jpg",
+  name: "Thread Meditation",
+  url: "https://threadmeditation.com",
+  ogImage: "https://threadmeditation.com/opengraph-image.png",
   description:
-    "A collection of Open Source agent and audio components that you can customize, extend, and build on.",
+    "Handmade crochet pieces born from meditation. Each stitch carries intention. Unique, limited-edition crochet art crafted with mindfulness.",
+  keywords: [
+    "handmade crochet",
+    "crochet art",
+    "meditation crochet",
+    "handmade blankets",
+    "crochet gifts",
+    "yarn art",
+    "mindful crafting",
+    "thread meditation",
+    "amigurumi",
+    "crochet patterns",
+  ],
   links: {
-    twitter: "https://x.com/creativetim",
-    github: "https://github.com/creativetimofficial/ui",
+    instagram: "https://instagram.com/threadmeditation",
+    tiktok: "https://tiktok.com/@threadmeditation",
+    pinterest: "https://pinterest.com/threadmeditation",
+    youtube: "https://youtube.com/@threadmeditation",
+  },
+  contact: {
+    email: "hello@threadmeditation.com",
   },
   navItems: [
-    {
-      href: "/docs",
-      label: "Docs",
-    },
-    {
-      href: "/blocks",
-      label: "Blocks",
-    },
+    { href: "/#collection", label: "Shop" },
+    { href: "/about", label: "About" },
+    { href: "/faq", label: "FAQ" },
+    { href: "/contact", label: "Contact" },
   ],
-  utm: {
-    main: "https://creative-tim.com/ui?utm_source=creativetim_ui&utm_medium=web&utm_campaign=creative_tim_ui",
-    blocks:
-      "https://creative-tim.com/ui/blocks?utm_source=creativetim_ui&utm_medium=web&utm_campaign=creative_tim_ui",
-    agents:
-      "https://creative-tim.com/ui/agents?utm_source=creativetim_ui&utm_medium=web&utm_campaign=creative_tim_ui",
-    sales:
-      "https://creative-tim.com/contact?utm_source=creativetim_ui&utm_medium=web&utm_campaign=creative_tim_ui",
-  },
 }
 
 export const META_THEME_COLORS = {
-  light: "#ffffff",
-  dark: "#09090b",
+  light: "#FAF7F2",
+  dark: "#1a1412",
 }
