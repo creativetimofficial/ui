@@ -1,5 +1,6 @@
 "use client"
 
+import Image from "next/image"
 import { Instagram } from "lucide-react"
 
 import { useIntersection } from "@/hooks/use-intersection"
@@ -8,34 +9,28 @@ import { Button } from "@/components/ui/button"
 
 const INSTAGRAM_POSTS = [
   {
+    src: "https://images.unsplash.com/photo-1615486511484-92e172cc4fe0?q=80&w=600&auto=format&fit=crop",
     alt: "Crochet flower bouquet with pink lily, purple and red roses",
-    gradient: "from-rose-200 to-pink-300",
-    emoji: "&#128144;",
   },
   {
-    alt: "Colorful crochet butterflies - purple, pink, red, orange",
-    gradient: "from-violet-200 to-fuchsia-300",
-    emoji: "&#129419;",
+    src: "https://images.unsplash.com/photo-1582562124811-c09040d0a901?q=80&w=600&auto=format&fit=crop",
+    alt: "Colorful handmade crochet butterflies",
   },
   {
-    alt: "Pink crochet flower keychain with yarn and hook",
-    gradient: "from-pink-200 to-rose-300",
-    emoji: "&#127800;",
+    src: "https://images.unsplash.com/photo-1544967082-d9d25d867d66?q=80&w=600&auto=format&fit=crop",
+    alt: "Pink crochet flower keychain with yarn",
   },
   {
-    alt: "Mini crochet potted flower in magenta",
-    gradient: "from-fuchsia-200 to-pink-300",
-    emoji: "&#127802;",
+    src: "https://images.unsplash.com/photo-1563241527-3004b7be0ffd?q=80&w=600&auto=format&fit=crop",
+    alt: "Mini crochet potted flower arrangement",
   },
   {
+    src: "https://images.unsplash.com/photo-1490750967868-88aa4f44baee?q=80&w=600&auto=format&fit=crop",
     alt: "Collection of crochet sunflowers and daisies",
-    gradient: "from-amber-200 to-yellow-300",
-    emoji: "&#127803;",
   },
   {
+    src: "https://images.unsplash.com/photo-1452587925148-ce544e77e70d?q=80&w=600&auto=format&fit=crop",
     alt: "Crochet hearts and bows in vibrant colors",
-    gradient: "from-red-200 to-rose-300",
-    emoji: "&#128155;",
   },
 ]
 
@@ -77,18 +72,12 @@ export function InstagramSection() {
               )}
               style={{ animationDelay: `${0.1 * i}s` }}
             >
-              {/* Placeholder gradient - replace with actual images */}
-              <div
-                className={cn(
-                  "flex h-full items-center justify-center bg-gradient-to-br",
-                  post.gradient
-                )}
-              >
-                <span
-                  className="text-5xl transition-transform duration-300 group-hover:scale-110"
-                  dangerouslySetInnerHTML={{ __html: post.emoji }}
-                />
-              </div>
+              <Image
+                src={post.src}
+                alt={post.alt}
+                fill
+                className="object-cover transition-transform duration-500 group-hover:scale-110"
+              />
               {/* Hover overlay */}
               <div className="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
                 <Instagram className="h-8 w-8 text-white" />

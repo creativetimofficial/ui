@@ -1,5 +1,6 @@
 "use client"
 
+import Image from "next/image"
 import { ChevronDown } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
@@ -7,19 +8,27 @@ import { Button } from "@/components/ui/button"
 export function HeroSection() {
   return (
     <section className="relative flex min-h-svh items-center justify-center overflow-hidden">
-      {/* Background - soft gradient with decorative elements */}
-      <div className="absolute inset-0 bg-gradient-to-br from-pink-50 via-rose-50 to-amber-50" />
+      {/* Background image - soft crochet workspace */}
+      <div className="absolute inset-0">
+        <Image
+          src="https://images.unsplash.com/photo-1585412459212-8def26f7f14e?q=80&w=2000&auto=format&fit=crop"
+          alt="Soft yarn and crochet background"
+          fill
+          className="object-cover"
+          priority
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-rose-50/85 via-pink-50/70 to-white/90" />
+      </div>
 
       {/* Decorative blurred circles */}
-      <div className="absolute top-20 left-10 h-72 w-72 rounded-full bg-pink-200/40 blur-3xl" />
-      <div className="absolute right-10 bottom-20 h-96 w-96 rounded-full bg-amber-200/30 blur-3xl" />
-      <div className="absolute top-1/2 left-1/2 h-64 w-64 -translate-x-1/2 -translate-y-1/2 rounded-full bg-rose-200/30 blur-3xl" />
+      <div className="absolute top-20 left-10 h-72 w-72 rounded-full bg-pink-200/30 blur-3xl" />
+      <div className="absolute right-10 bottom-20 h-96 w-96 rounded-full bg-amber-200/20 blur-3xl" />
 
       <div className="container relative z-10 text-center">
         <div className="mx-auto max-w-3xl space-y-8">
           {/* Badge */}
           <div
-            className="animate-fade-in inline-flex items-center gap-2 rounded-full border border-pink-200/60 bg-white/60 px-4 py-1.5 text-sm backdrop-blur-sm"
+            className="animate-fade-in inline-flex items-center gap-2 rounded-full border border-pink-200/60 bg-white/70 px-4 py-1.5 text-sm shadow-sm backdrop-blur-sm"
             style={{ animationDelay: "0.1s" }}
           >
             <span className="text-primary">&#10043;</span>

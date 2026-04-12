@@ -1,5 +1,7 @@
 "use client"
 
+import Image from "next/image"
+
 import { useIntersection } from "@/hooks/use-intersection"
 import { cn } from "@/lib/utils"
 
@@ -17,14 +19,13 @@ export function StorySection() {
               isVisible && "animate-fade-in"
             )}
           >
-            <div className="relative aspect-[4/5] overflow-hidden rounded-2xl bg-gradient-to-br from-pink-100 to-rose-100">
-              {/* Placeholder - will be replaced with actual photo */}
-              <div className="flex h-full flex-col items-center justify-center p-8 text-center">
-                <div className="mb-6 text-6xl">&#127800;</div>
-                <p className="text-muted-foreground text-sm">
-                  Your photo of hands crocheting goes here
-                </p>
-              </div>
+            <div className="relative aspect-[4/5] overflow-hidden rounded-2xl">
+              <Image
+                src="https://images.unsplash.com/photo-1596464716127-f2a82984de30?q=80&w=800&auto=format&fit=crop"
+                alt="Colorful yarn skeins and crochet hooks in warm light"
+                fill
+                className="object-cover"
+              />
             </div>
             {/* Decorative element */}
             <div className="bg-accent/30 absolute -right-4 -bottom-4 -z-10 h-full w-full rounded-2xl" />
@@ -46,8 +47,8 @@ export function StorySection() {
             <div className="text-muted-foreground space-y-4 text-base leading-relaxed md:text-lg">
               <p>
                 Thread Meditation began with a simple crochet hook and a need
-                for quiet. In a world that never stops buzzing, we found
-                peace in the rhythmic pull of yarn through loops.
+                for quiet. In a world that never stops buzzing, we found peace
+                in the rhythmic pull of yarn through loops.
               </p>
               <p>
                 Each piece we create &mdash; from delicate flower keychains to

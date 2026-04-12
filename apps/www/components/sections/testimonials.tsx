@@ -1,12 +1,12 @@
 "use client"
 
 import * as React from "react"
+import Image from "next/image"
 import { ChevronLeft, ChevronRight, Star } from "lucide-react"
 
 import { useIntersection } from "@/hooks/use-intersection"
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
 
 const TESTIMONIALS = [
   {
@@ -48,8 +48,19 @@ export function TestimonialsSection() {
   }, [])
 
   return (
-    <section className="bg-secondary/50 py-24 md:py-32" ref={ref}>
-      <div className="container">
+    <section className="relative overflow-hidden py-24 md:py-32" ref={ref}>
+      {/* Background image */}
+      <div className="absolute inset-0">
+        <Image
+          src="https://images.unsplash.com/photo-1544967082-d9d25d867d66?q=80&w=2000&auto=format&fit=crop"
+          alt="Soft yarn texture background"
+          fill
+          className="object-cover"
+        />
+        <div className="absolute inset-0 bg-white/85 backdrop-blur-sm" />
+      </div>
+
+      <div className="container relative z-10">
         {/* Header */}
         <div
           className={cn(
@@ -73,73 +84,71 @@ export function TestimonialsSection() {
           )}
           style={{ animationDelay: "0.2s" }}
         >
-          <Card className="border-0 shadow-lg">
-            <CardContent className="p-8 text-center md:p-12">
-              {/* Stars */}
-              <div className="mb-6 flex items-center justify-center gap-1">
-                {Array.from({ length: TESTIMONIALS[current].rating }).map(
-                  (_, i) => (
-                    <Star
-                      key={i}
-                      className="text-accent fill-accent h-5 w-5"
-                    />
-                  )
-                )}
-              </div>
+          <div className="rounded-2xl border-0 bg-white/80 p-8 shadow-lg backdrop-blur-sm md:p-12">
+            {/* Stars */}
+            <div className="mb-6 flex items-center justify-center gap-1">
+              {Array.from({ length: TESTIMONIALS[current].rating }).map(
+                (_, i) => (
+                  <Star
+                    key={i}
+                    className="text-accent fill-accent h-5 w-5"
+                  />
+                )
+              )}
+            </div>
 
-              {/* Quote */}
-              <blockquote className="text-foreground mb-8 text-lg leading-relaxed md:text-xl">
-                &ldquo;{TESTIMONIALS[current].text}&rdquo;
-              </blockquote>
+            {/* Quote */}
+            <blockquote className="text-foreground mb-8 text-center text-lg leading-relaxed md:text-xl">
+              &ldquo;{TESTIMONIALS[current].text}&rdquo;
+            </blockquote>
 
-              {/* Author */}
-              <div>
-                <p className="font-serif text-lg font-semibold">
-                  {TESTIMONIALS[current].name}
-                </p>
-                <p className="text-muted-foreground mt-1 text-sm">
-                  Verified Buyer
-                </p>
-              </div>
+            {/* Author */}
+            <div className="text-center">
+              <p className="font-serif text-lg font-semibold">
+                {TESTIMONIALS[current].name}
+              </p>
+              <p className="text-muted-foreground mt-1 text-sm">
+                Verified Buyer
+              </p>
+            </div>
 
-              {/* Navigation */}
-              <div className="mt-8 flex items-center justify-center gap-4">
-                <Button
-                  variant="outline"
-                  size="icon"
-                  className="h-10 w-10 rounded-full"
-                  onClick={prev}
-                  aria-label="Previous testimonial"
-                >
-                  <ChevronLeft className="h-4 w-4" />
-                </Button>
-                <div className="flex gap-2">
-                  {TESTIMONIALS.map((_, i) => (
-                    <button
-                      key={i}
-                      onClick={() => setCurrent(i)}
-                      className={cn(
-                        "h-2 rounded-full transition-all",
-                        i === current
-                          ? "bg-primary w-6"
-                          : "bg-border hover:bg-muted-foreground/30 w-2"
-                      )}
-                      aria-label={`Go to testimonial ${i + 1}`}
-                    />
-                  ))}
-                </div>
-                <Button
-                  variant="outline"
-                  size="icon"
-                  className="h-10 w-10 rounded-full"
-                  onClick={next}
-                  aria-label="Next testimonial"
-                >
-                  <ChevronRight className="h-4 w-4" />
-                </Button>
+            {/* Navigation */}
+            <div className="mt-8 flex items-center justify-center gap-4">
+              <Button
+                variant="outline"
+                size="icon"
+                className="h-10 w-10 rounded-full"
+                onClick={prev}
+                aria-label="Previous testimonial"
+              >
+                <ChevronLeft className="h-4 w-4" />
+              </Button>
+              <div className="flex gap-2">
+                {TESTIMONIALS.map((_, i) => (
+                  <button
+                    key={i}
+                    onClick={() => setCurrent(i)}
+                    className={cn(
+                      "h-2 rounded-full transition-all",
+                      i === current
+                        ? "bg-primary w-6"
+                        : "bg-border hover:bg-muted-foreground/30 w-2"
+                    )}
+                    aria-label={`Go to testimonial ${i + 1}`}
+                  />
+                ))}
               </div>
-            </CardContent>
-          </Card>
+              <Button
+                variant="outline"
+                size="icon"
+                className="h-10 w-10 rounded-full"
+                onClick={next}
+                aria-label="Next testimonial"
+              >
+                <ChevronRight className="h-4 w-4" />
+              </Button>
+            </div>
+          </div>
         </div>
       </div>
     </section>

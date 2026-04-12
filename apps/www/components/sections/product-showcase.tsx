@@ -1,5 +1,7 @@
 "use client"
 
+import Image from "next/image"
+
 import { useIntersection } from "@/hooks/use-intersection"
 import { cn } from "@/lib/utils"
 import { Badge } from "@/components/ui/badge"
@@ -9,45 +11,45 @@ import { Card, CardContent } from "@/components/ui/card"
 const PRODUCTS = [
   {
     title: "Crochet Flower Bouquet",
-    description: "A stunning arrangement of handmade roses, lilies, and baby's breath tied with a dusty pink ribbon.",
+    description:
+      "A stunning arrangement of handmade roses, lilies, and baby's breath tied with a dusty pink ribbon.",
     badge: "Best Seller",
-    gradient: "from-rose-100 to-pink-200",
-    emoji: "&#128144;",
+    src: "https://images.unsplash.com/photo-1487530811176-3780de880c2d?q=80&w=600&auto=format&fit=crop",
   },
   {
     title: "Butterfly Collection",
-    description: "Vibrant crochet butterflies in purple, magenta, red, and orange. Perfect as brooches or decor.",
+    description:
+      "Vibrant crochet butterflies in purple, magenta, red, and orange. Perfect as brooches or decor.",
     badge: "Limited Edition",
-    gradient: "from-violet-100 to-fuchsia-200",
-    emoji: "&#129419;",
+    src: "https://images.unsplash.com/photo-1596464716127-f2a82984de30?q=80&w=600&auto=format&fit=crop",
   },
   {
     title: "Flower Keychain",
-    description: "Adorable pink daisy keychain with golden hardware. A tiny bloom that goes everywhere with you.",
+    description:
+      "Adorable pink daisy keychain with golden hardware. A tiny bloom that goes everywhere with you.",
     badge: "Popular",
-    gradient: "from-pink-100 to-rose-200",
-    emoji: "&#127800;",
+    src: "https://images.unsplash.com/photo-1615486511484-92e172cc4fe0?q=80&w=600&auto=format&fit=crop",
   },
   {
     title: "Mini Potted Flower",
-    description: "A magenta crochet flower in a tiny crocheted pot. Sits perfectly on any desk or shelf.",
+    description:
+      "A magenta crochet flower in a tiny crocheted pot. Sits perfectly on any desk or shelf.",
     badge: "New",
-    gradient: "from-fuchsia-100 to-pink-200",
-    emoji: "&#127802;",
+    src: "https://images.unsplash.com/photo-1563241527-3004b7be0ffd?q=80&w=600&auto=format&fit=crop",
   },
   {
     title: "Sunflower Coasters",
-    description: "Bright, cheerful sunflower coasters hand-crocheted with cotton yarn. Set of 3.",
+    description:
+      "Bright, cheerful sunflower coasters hand-crocheted with cotton yarn. Set of 3.",
     badge: "Handmade",
-    gradient: "from-amber-100 to-yellow-200",
-    emoji: "&#127803;",
+    src: "https://images.unsplash.com/photo-1490750967868-88aa4f44baee?q=80&w=600&auto=format&fit=crop",
   },
   {
     title: "Heart & Bow Set",
-    description: "A red crochet heart keychain paired with a matching pink bow. The perfect gift duo.",
+    description:
+      "A red crochet heart keychain paired with a matching pink bow. The perfect gift duo.",
     badge: "Gift Ready",
-    gradient: "from-red-100 to-rose-200",
-    emoji: "&#128155;",
+    src: "https://images.unsplash.com/photo-1582562124811-c09040d0a901?q=80&w=600&auto=format&fit=crop",
   },
 ]
 
@@ -89,17 +91,12 @@ export function ProductShowcase() {
             >
               {/* Image area */}
               <div className="relative aspect-[4/5] overflow-hidden">
-                <div
-                  className={cn(
-                    "flex h-full items-center justify-center bg-gradient-to-br transition-transform duration-500 group-hover:scale-105",
-                    product.gradient
-                  )}
-                >
-                  <span
-                    className="text-7xl"
-                    dangerouslySetInnerHTML={{ __html: product.emoji }}
-                  />
-                </div>
+                <Image
+                  src={product.src}
+                  alt={product.title}
+                  fill
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                />
                 {/* Badge */}
                 <Badge className="absolute top-4 left-4 bg-white/90 text-foreground shadow-sm backdrop-blur-sm hover:bg-white/90">
                   {product.badge}
